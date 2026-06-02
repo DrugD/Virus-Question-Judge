@@ -127,9 +127,10 @@ class CodexCLIAgent(AgentRunner):
             "sandbox - do not look for it.\n\n"
             "CRITICAL: agent_questions.json MUST contain exactly 5 distinct "
             "candidate questions (rank 1..5, no duplicates). The judge scores "
-            "Pass@1 (rank-1 only, 100% / 0%) and Pass@5 (position-weighted: "
-            "rank-i pass adds 1+w_i where w=(5,4,3,2,1), divide by 20). Put "
-            "your strongest answer at rank 1, plausible alternatives at 2..5.\n\n"
+            "Pass@1 (rank-1 only, 100% / 0%) and Pass@5 (count-based: each of "
+            "the 5 candidates that passes adds +0.2, i.e. pass_count / 5, with "
+            "no rank weighting). Put your strongest answer at rank 1, but make "
+            "all 5 distinct and grounded — every one counts equally for Pass@5.\n\n"
             "Stop only when both output files exist on disk."
         )
         argv = [

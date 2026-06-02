@@ -64,7 +64,7 @@ def _bootstrap_env() -> None:
 _bootstrap_env()
 JUDGE_CFG = yaml.safe_load(JUDGE_CONFIG_PATH.read_text())
 
-app = FastAPI(title="Virus-Question-Judge", version="0.2.0")
+app = FastAPI(title="Virus-Question-Judge", version="0.3.0")
 _runs: dict[tuple[str, str], dict[str, Any]] = {}
 
 

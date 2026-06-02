@@ -10,6 +10,10 @@ data.ZIP
 # Local sandboxes
 .sandboxes/
 
+# Per-run agent sandbox data copies (regenerated each run; never persisted —
+# the pipeline prunes them after the run, this keeps stragglers out of git)
+webapp_runs/**/sandboxes/**/data/
+
 # Claude Code local settings (user-specific)
 .claude/settings.local.json
 

@@ -138,12 +138,12 @@ async def rejudge_one_agent(judge: JudgeLLM, threshold: float, qset: str,
     (target_dir / "judge_scores_all_candidates.json").write_text(
         json.dumps(all_scores, ensure_ascii=False, indent=2))
 
-    # Pass@k stats
+    # Pass@k stats — Pass@5 is COUNT-based: each of the 5 candidates that
+    # passes adds a flat +0.2 (pass_count / 5), with no rank weighting.
     passes = [c.get("passed", False) for c in sorted(all_scores, key=lambda x: x.get("rank", 99))]
-    weights = [5, 4, 3, 2, 1]
-    weighted_num = sum((1 + weights[i]) for i, p in enumerate(passes[:5]) if p)
+    pass_count = sum(1 for p in passes[:5] if p)
     p1 = 1.0 if (passes and passes[0]) else 0.0
-    p5 = weighted_num / 20.0
+    p5 = min(pass_count, 5) / 5.0
 
     return {
         "agent_id": agent, "ok": True,

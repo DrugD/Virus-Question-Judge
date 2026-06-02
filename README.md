@@ -18,6 +18,20 @@ agent (Qwen3.6-Plus | Codex CLI | Claude Code | …)
    judge_scores.json
 ```
 
+## 版本更新记录 / Changelog
+
+> 远程仓库：<https://github.com/DrugD/Virus-Question-Judge>（账号 `likun9876543210@163.com`）。
+> 后续改动统一同步到 **`sync-test`** 分支。
+
+### v0.3.0 — 2026-06-02
+
+- **数据脱敏（文件名为主）.** 上传数据进入 workspace 时被拍平并重命名为 `1.csv`、`2.json`、`3.tsv` …（只保留扩展名，丢弃目录名），原名映射写入 judge-only 的 `workspace/filename_map.json`。这样 agent 无法仅靠引用 `43059586_RdRp_motif_collection.xlsx` 之类的“暗示性文件名”白拿 data_grounding 分。详见 `webapp/pipeline_runner.py::_desensitize_data`。
+- **data_grounding 评分收紧.** 仅引用文件名/变量名/accession/figure 标签视为表层引用，**不再**给高分；高分要求从数据中真正推导出统计量、分布或关系。锚点与定义见 `eval/metrics/gold_rubric_metric.py`（UI 与 judge prompt 同步）。
+- **数据有效性检查.** 上传校验新增有效性检查：空文件、只有表头无数据行的表格、空 FASTA、无法解析的 JSON 会被标记为 warning，并在 `valid_file_count` 汇总；若全部文件无效则直接拒绝（`webapp/validator.py`）。
+- **Pass@5 改为计数式.** 5 条候选每通过 1 条记 **+0.2**（`pass_count / 5`），与排名无关：全对 = 1.0，全错 = 0.0。取代原“位置加权 / 20”算法。涉及 `webapp/pipeline_runner.py`、`eval/rejudge.py` 及所有 agent/UI 文案。
+- **不再持久化 sandbox 数据.** 每次 run 结束后自动删除 `webapp_runs/.../sandboxes/<agent>/<ts>/data/`（成功与失败路径都清理），仅保留 agent 输出与 `_debug/`。一次性清理了历史遗留的 ~1.5 GB 拷贝，并在 `.gitignore` 中排除该路径。
+- **judge model 默认最强模型.** 默认 judge 固定为 **Claude Opus 4.7**（`eval/config.yaml`，当前最强档；后续可扩展为最强 n 个 LLM 的集成评审）。
+
 ## Layout
 
 ```
@@ -118,7 +132,7 @@ The base class handles sandbox creation (only agent-visible files copied — `ta
   ],
   "candidate": { /* the agent's top question */ },
   "agent_id": "qwen3.6-plus",
-  "judge_model": "gpt-5",
+  "judge_model": "claude-opus-4-7",
   "judge_provider": "openai"
 }
 ```

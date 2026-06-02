@@ -25,8 +25,8 @@ class CandidateQuestion(BaseModel):
 
 # Pass@5 contract: every agent submits EXACTLY 5 candidate questions, all
 # distinct (case-insensitive, whitespace-collapsed). The Pass@5 metric is
-# position-weighted (rank 1..5 weights 5,4,3,2,1 plus +1 base per pass,
-# normalised to /20), so duplicates would be cheating.
+# count-based (each of the 5 candidates that passes adds a flat +0.2,
+# i.e. pass_count / 5, with no rank weighting), so duplicates would be cheating.
 _PASS_AT_K = 5
 
 
@@ -73,7 +73,7 @@ class AgentOutput(BaseModel):
 
         Used by the Pass@5 judge loop: each candidate is scored independently
         and the agent's leaderboard row reflects per-question scores plus the
-        position-weighted Pass@5 metric.
+        count-based Pass@5 metric (pass_count / 5).
         """
         ordered = sorted(self.questions, key=lambda q: q.rank)
         return [

@@ -44,8 +44,12 @@ DIMENSION_DEFS: dict[str, str] = {
         "Distance from the gold's acceptable / unacceptable variants. Closer to "
         "an `acceptable_variant` → higher; closer to an `unacceptable_variant` → lower.",
     "data_grounding":
-        "Does the candidate reference real data features that exist in the "
-        "uploaded files? Generic phrasing (e.g. 'this dataset') scores low.",
+        "Is the question DERIVED from analysing the data, or merely decorated "
+        "with data references? Surface name-dropping — quoting a filename, "
+        "column/variable name, accession, or figure label — does NOT count as "
+        "grounding. High scores require evidence the agent computed something "
+        "from the files: a statistic, distribution, count, or relationship that "
+        "motivates the question. Generic phrasing (e.g. 'this dataset') scores low.",
 }
 
 # Anchor descriptions for each integer 0..5 score, per dimension.
@@ -77,11 +81,17 @@ DIMENSION_ANCHORS: dict[str, dict[int, str]] = {
     },
     "data_grounding": {
         0: "No reference to any data feature.",
-        1: "Vague mention of 'the data' with no specifics.",
-        2: "References one feature non-specifically.",
-        3: "References one feature with concrete framing.",
-        4: "References multiple specific features / files.",
-        5: "Concrete framing across multiple files/columns + numerical evidence.",
+        1: "Only vague mention of 'the data', OR merely repeats a file / column "
+           "/ accession / figure name with no derived insight (surface name-drop).",
+        2: "Names a real feature but treats it as a label only — no statistic, "
+           "count, or relationship derived from it.",
+        3: "Uses one concrete data feature with a derived observation (a count, "
+           "distribution, or relationship), not just its name.",
+        4: "Integrates multiple real features with derived statistics or "
+           "relationships that genuinely motivate the question.",
+        5: "Question is demonstrably derived from analysing the files — multiple "
+           "features + quantitative evidence + a relationship that could only "
+           "come from actually working the data, not name-dropping.",
     },
 }
 

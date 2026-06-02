@@ -39,6 +39,7 @@ class DataReport:
     extracted_to: str
     data_root: str
     file_count: int = 0
+    valid_file_count: int = 0
     total_size_bytes: int = 0
     extension_histogram: dict[str, int] = field(default_factory=dict)
     files: list[FileNode] = field(default_factory=list)   # capped to 200
@@ -52,6 +53,7 @@ class DataReport:
             "extracted_to": self.extracted_to,
             "data_root": self.data_root,
             "file_count": self.file_count,
+            "valid_file_count": self.valid_file_count,
             "total_size_bytes": self.total_size_bytes,
             "extension_histogram": self.extension_histogram,
             "files": [f.to_json() for f in self.files],
@@ -126,7 +128,47 @@ def _summarise(target_dir: Path, data_root: Path) -> DataReport:
         report.truncated = True
         report.warnings.append(f"file list truncated at {cap} (total {len(all_files)})")
 
+    _check_validity(report)
     return report
+
+
+def _check_validity(report: DataReport) -> None:
+    """Flag files that are unlikely to carry usable signal.
+
+    Non-fatal by default (recorded as warnings) so a partly-malformed upload can
+    still run, but the operator sees exactly which files are empty, unparseable,
+    or content-free. If EVERY sampled file is invalid the upload is rejected.
+    """
+    invalid: list[str] = []
+    for node in report.files:
+        reason = None
+        if node.size_bytes == 0:
+            reason = "empty file (0 bytes)"
+        else:
+            s = node.sample
+            if s.get("parse_error") or s.get("sample_error"):
+                reason = f"unparseable ({s.get('parse_error') or s.get('sample_error')})"
+            elif "sample_rows" in s and s["sample_rows"] <= 1:
+                reason = "tabular file has a header but no data rows"
+            elif "sequence_count" in s and s["sequence_count"] == 0:
+                reason = "FASTA file contains no sequences"
+            elif s.get("array_len") == 0:
+                reason = "JSON array is empty"
+        node.sample["valid"] = reason is None
+        if reason is not None:
+            node.sample["validity_issue"] = reason
+            invalid.append(f"{node.path}: {reason}")
+
+    report.valid_file_count = sum(1 for n in report.files if n.sample.get("valid", True))
+    if invalid:
+        report.warnings.append(
+            f"{len(invalid)} file(s) failed validity checks: " + "; ".join(invalid[:10])
+            + (" …" if len(invalid) > 10 else "")
+        )
+    # Reject only if nothing usable survived.
+    if report.files and report.valid_file_count == 0:
+        report.ok = False
+        report.errors.append("no valid data files: every uploaded file is empty or unparseable.")
 
 
 def _sample(path: Path) -> dict[str, Any]:

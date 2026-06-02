@@ -227,7 +227,7 @@
                 <th data-tip="按 Pass@5 排序后的位次（1 = 最高）。">Rank</th>
                 <th data-tip="生成这 5 个候选 question 的 agent / 模型 ID。">Agent</th>
                 <th data-tip="rank-1 候选是否通过阈值。100% = 通过，0% = 没过。">Pass@1</th>
-                <th data-tip="位置加权得分。第 i 条通过加 (1 + w_i)，w=(5,4,3,2,1)，分母 20。例：rank-1 only = 30%，全过 = 100%。">Pass@5</th>
+                <th data-tip="计数式得分。5 条候选每通过 1 条 +0.2（pass_count / 5），与排名无关。例：1 条过 = 20%，全过 = 100%。">Pass@5</th>
                 <th data-tip="该 agent 5 条候选的 Composite 平均值 (0..1)。">Avg Comp</th>
                 <th data-tip="该 agent 5 条候选的 Raw /5 平均值 (0..5)。">Avg Raw</th>
                 <th data-tip="5 个候选里通过的命中分布：first-hit 是最先通过的 rank；P=primary，S=secondary。">Hit detail</th>
@@ -320,7 +320,7 @@
                 <th data-tip="按 Pass@5 排序的位次。">Rank</th>
                 <th>Agent</th>
                 <th data-tip="rank-1 是否通过。">Pass@1</th>
-                <th data-tip="位置加权得分（1+w_i 之和 / 20）。">Pass@5</th>
+                <th data-tip="计数式得分（pass_count / 5，每通过一条 +0.2）。">Pass@5</th>
                 <th>Avg Comp</th>
                 <th>Avg Raw</th>
                 <th data-tip="first-hit + P/S 命中分布">Hit detail</th>

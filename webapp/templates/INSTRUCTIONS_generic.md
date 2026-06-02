@@ -48,8 +48,8 @@ A short technical report (~300–600 words) with these sections:
 
 - You MUST provide **exactly 5 distinct candidates** (rank 1..5). Duplicates fail validation. The judge scores all 5 and reports:
   - **Pass@1** = 100% if `questions[0]` passes else 0%.
-  - **Pass@5** = position-weighted score: passing rank `i` adds `(1 + w_i)` where `w = (5,4,3,2,1)`. Numerator divided by 20. Examples: rank-1 only → 30%, ranks 1+2 → 55%, all 5 → 100%.
-- Put your **strongest** answer at rank 1 and progressively-weaker but still grounded alternatives at ranks 2-5; this maximises Pass@5 even if rank 1 misses.
+  - **Pass@5** = count-based score: each of your 5 candidates that passes adds a flat **+0.2** (pass_count / 5), regardless of its rank. Examples: 1 of 5 passes → 20%, 3 of 5 → 60%, all 5 → 100%.
+- Put your **strongest** answer at rank 1 (it drives Pass@1), but every candidate counts equally toward Pass@5 — make all 5 grounded and distinct.
 - Each `question` must be a single sentence ending with `?`.
 - `data_support` items must reference files or features that **actually exist** in the uploaded data.
 

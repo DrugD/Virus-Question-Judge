@@ -90,13 +90,12 @@ _SYSTEM_PROMPT = textwrap.dedent("""\
 
     Pass@5 metric (read carefully — this is how you are scored):
       - Pass@1 = 100% if rank-1 passes the threshold, else 0%.
-      - Pass@5 = position-weighted: passing rank `i` adds `(1 + w_i)` to the
-        numerator where `w = (5, 4, 3, 2, 1)`; numerator / 20.
-        Per-rank contributions: rank-1=6, rank-2=5, rank-3=4, rank-4=3, rank-5=2.
-        rank-1 only → 30%; ranks 1+2 → 55%; all 5 → 100%.
-      - Strategy: put your STRONGEST guess at rank 1, then progressively
-        plausible alternatives at rank 2..5 — they still earn weight even
-        when rank 1 misses.
+      - Pass@5 = count-based: each of your 5 candidates that passes adds a flat
+        +0.2 (pass_count / 5), independent of its rank.
+        1 of 5 → 20%; 3 of 5 → 60%; all 5 → 100%.
+      - Strategy: put your STRONGEST guess at rank 1 (it drives Pass@1), but
+        EVERY candidate counts equally toward Pass@5 — make all 5 distinct,
+        grounded, and plausible.
       - DUPLICATES ARE FORBIDDEN. The schema validator rejects them.
 
     Be concise in your assistant turns. Plan your reads, then write the

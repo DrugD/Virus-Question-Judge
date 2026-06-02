@@ -34,6 +34,52 @@ def _now() -> float:
     return time.time()
 
 
+def _prune_sandbox_data(sandbox: Path) -> None:
+    """Delete the bulky `data/` copy from a finished sandbox.
+
+    Every agent run materialises a private copy of the uploaded `data/` tree
+    into its sandbox so the model can read it. Once the agent has produced its
+    outputs (or finally failed) that copy is dead weight — it bloats
+    `webapp_runs/.../sandboxes/<agent>/<ts>/data/` with a full duplicate of the
+    upload per run. We keep the agent's outputs and `_debug/` artefacts for
+    post-mortem but drop `data/`. Best-effort: never let cleanup failures break
+    a run.
+    """
+    try:
+        data_dir = Path(sandbox) / "data"
+        if data_dir.exists():
+            shutil.rmtree(data_dir, ignore_errors=True)
+    except Exception:
+        pass
+
+
+def _desensitize_data(src_root: Path, dst_data: Path) -> dict[str, str]:
+    """Copy uploaded files into `dst_data` under anonymised sequential names.
+
+    The tree is flattened and every file is renamed to `<N>.<ext>` (1.csv,
+    2.json, 3.tsv, …) in sorted-path order, preserving only the extension so
+    the agent still knows each file's format. Files with no extension become
+    `<N>.dat`. Directory names — which can also leak intent — are dropped.
+
+    Returns {anonymised_name: original_relative_path} so an operator or the
+    judge can de-anonymise later via the workspace's filename_map.json.
+    """
+    src_root = Path(src_root)
+    dst_data = Path(dst_data)
+    dst_data.mkdir(parents=True, exist_ok=True)
+    files = sorted(
+        p for p in src_root.rglob("*")
+        if p.is_file() and "__MACOSX" not in p.parts
+    )
+    mapping: dict[str, str] = {}
+    for i, p in enumerate(files, start=1):
+        ext = p.suffix.lower()
+        new_name = f"{i}{ext}" if ext else f"{i}.dat"
+        shutil.copy2(p, dst_data / new_name)
+        mapping[new_name] = str(p.relative_to(src_root))
+    return mapping
+
+
 def _pass_at_k_stats(
     candidates: list[dict[str, Any]],
     candidate_results: list[Any],
@@ -42,19 +88,18 @@ def _pass_at_k_stats(
 
     Pass@1 = 1.0 (100%) if rank-1 candidate passes else 0.0.
 
-    Pass@5 = position-weighted score, normalised to [0, 1]:
-        numerator = Σ_{i=1..5} (1 + w_i) × passed_i
-        denominator = 20  (max when all 5 pass)
-        weights w = (5, 4, 3, 2, 1)  — earlier ranks count more
-    Effective per-rank contributions are (6, 5, 4, 3, 2). Each pass contributes
-    a constant +1 ("which one passed at all" floor) plus a rank-weighted bonus
-    that rewards getting the strongest answer at rank 1.
+    Pass@5 = COUNT-based score, normalised to [0, 1]:
+        pass_at_5_value = pass_count / 5
+    i.e. each of the 5 candidates that passes contributes a flat +0.2, with NO
+    rank weighting — all five questions right → 1.0, all five wrong → 0.0, one
+    right → 0.2, and so on. Rank position no longer changes the score; only how
+    many of the five candidates pass.
 
     Examples:
-        only rank 1 passes  → 6/20 = 0.30
-        ranks 1+2 pass      → 11/20 = 0.55
-        all 5 pass          → 20/20 = 1.00
-        only rank 5 passes  → 2/20  = 0.10
+        0 of 5 pass  → 0.0
+        1 of 5 pass  → 0.2
+        3 of 5 pass  → 0.6
+        all 5 pass   → 1.0
 
     first_hit_rank = lowest rank whose candidate passed (None if no hit).
     primary_hit_count = passed-and-matched-primary; secondary_hit_count likewise.
@@ -71,19 +116,11 @@ def _pass_at_k_stats(
     pass_count = sum(1 for _, r in pairs if r.passed)
     k = len(pairs)
 
-    # Pass@5 weighted score: weights w=(5,4,3,2,1), per-rank contribution = 1 + w_i
-    # When agents emit fewer than 5 candidates the metric is still well-defined
-    # (missing ranks contribute 0); the schema validator enforces k=5 at the
-    # contract layer so this branch is mostly belt-and-suspenders.
-    weights = [5, 4, 3, 2, 1]
-    weighted_num = 0
-    for c, r in pairs:
-        rank = c.get("rank")
-        if rank is None or not (1 <= rank <= 5):
-            continue
-        if r.passed:
-            weighted_num += 1 + weights[rank - 1]
-    pass_at_5_value = weighted_num / 20.0  # 0.0 .. 1.0
+    # Pass@5 count-based score: each passing candidate adds a flat +0.2 (= 1/5),
+    # independent of its rank. Denominator is fixed at 5 so the score is always
+    # on the same scale even if an agent emits fewer than 5 candidates (the
+    # schema validator enforces k=5 at the contract layer anyway).
+    pass_at_5_value = min(pass_count, 5) / 5.0  # 0.0 .. 1.0
 
     # Agent-level averages across the 5 candidates — the leaderboard headline
     # number when you want a single "how good is this agent overall" score.
@@ -189,11 +226,13 @@ def hydrate_workspace(
     Layout:
       dst/INSTRUCTIONS.md         ← templates/INSTRUCTIONS_generic.md
       dst/info.json               ← schema-less data manifest (sizes, ext hist)
-      dst/data/                   ← uploaded data
+      dst/data/                   ← uploaded data, DESENSITIZED (renamed 1.ext…)
+      dst/filename_map.json       ← {anonymised → original} (judge-only, not in sandbox)
       dst/gold/gold_questions.json  ← judge-only normalised gold
 
     Returns (workspace_root, available_features). The features list is what
-    the judge uses for the data_grounding dimension.
+    the judge uses for the data_grounding dimension — it holds the anonymised
+    names so an agent can't earn grounding by quoting an evocative filename.
     """
     dst = Path(dst).resolve()
     if dst.exists():
@@ -203,9 +242,16 @@ def hydrate_workspace(
     # 1. INSTRUCTIONS.md
     shutil.copy2(TEMPLATES_DIR / "INSTRUCTIONS_generic.md", dst / "INSTRUCTIONS.md")
 
-    # 2. data/ (copy uploaded contents)
+    # 2. data/ — copy uploaded contents under anonymised, format-only names.
+    #    Evocative filenames (e.g. 43059586_RdRp_motif_collection.xlsx) leak the
+    #    answer: an agent can score data_grounding just by quoting them. We
+    #    flatten the tree and rename every file to <N>.<ext> (1.csv, 2.json, …),
+    #    keeping only the extension so the format is still discoverable.
     data_dst = dst / "data"
-    shutil.copytree(data_dir, data_dst)
+    filename_map = _desensitize_data(Path(data_dir), data_dst)
+    (dst / "filename_map.json").write_text(
+        json.dumps(filename_map, ensure_ascii=False, indent=2)
+    )
 
     # 3. info.json (data manifest)
     files: list[dict[str, Any]] = []
@@ -451,6 +497,9 @@ class PipelineRunner:
                             f"per_attempt:\n" +
                             "\n".join(f"  #{a['attempt']}: {'ok' if a['ok'] else a.get('error','?')}" for a in attempts)
                         )
+                    # drop bulky data/ copies from every attempt's sandbox
+                    for sb in sandboxes:
+                        _prune_sandbox_data(sb)
                 except Exception:
                     pass
                 self._emit(
@@ -474,6 +523,8 @@ class PipelineRunner:
         if debug_src.exists():
             shutil.copytree(debug_src, target / "_debug", dirs_exist_ok=True)
         (target / "_logs.txt").write_text(run_result.raw_logs)
+        # drop the bulky per-run data/ copy now that outputs are salvaged
+        _prune_sandbox_data(run_result.sandbox)
 
         agent_finished = _now()
         agent_payload = json.loads((target / "agent_questions.json").read_text())
