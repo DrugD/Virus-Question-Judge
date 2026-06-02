@@ -12,9 +12,13 @@ Differences from the original eval/run_pipeline.py:
 from __future__ import annotations
 
 import asyncio
+import bz2
+import gzip
 import json
 import shutil
+import tarfile
 import time
+import zipfile
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, AsyncIterator
@@ -61,14 +65,32 @@ def _desensitize_data(src_root: Path, dst_data: Path) -> dict[str, str]:
     the agent still knows each file's format. Files with no extension become
     `<N>.dat`. Directory names — which can also leak intent — are dropped.
 
+    Nested archives are expanded recursively BEFORE flattening: a `.zip` /
+    `.tar(.gz/.bz2)` in the upload would otherwise let an agent unzip it and
+    read the original, intent-leaking filenames inside (e.g.
+    `43059586_RdRp_motif_collection.xlsx`). We extract every archive in place,
+    delete the archive itself, and anonymise the extracted members too. The
+    original relative path (including the `archive!member` provenance) is kept
+    in the returned map so the judge can still de-anonymise.
+
     Returns {anonymised_name: original_relative_path} so an operator or the
     judge can de-anonymise later via the workspace's filename_map.json.
     """
     src_root = Path(src_root)
     dst_data = Path(dst_data)
     dst_data.mkdir(parents=True, exist_ok=True)
+
+    # Stage 1: copy the upload into a scratch tree we can mutate, then expand
+    # nested archives in place (recursively) so their members are anonymised
+    # like any other file.
+    scratch = dst_data.parent / "_desensitize_scratch"
+    if scratch.exists():
+        shutil.rmtree(scratch, ignore_errors=True)
+    shutil.copytree(src_root, scratch)
+    _expand_archives_in_place(scratch)
+
     files = sorted(
-        p for p in src_root.rglob("*")
+        p for p in scratch.rglob("*")
         if p.is_file() and "__MACOSX" not in p.parts
     )
     mapping: dict[str, str] = {}
@@ -76,8 +98,70 @@ def _desensitize_data(src_root: Path, dst_data: Path) -> dict[str, str]:
         ext = p.suffix.lower()
         new_name = f"{i}{ext}" if ext else f"{i}.dat"
         shutil.copy2(p, dst_data / new_name)
-        mapping[new_name] = str(p.relative_to(src_root))
+        mapping[new_name] = str(p.relative_to(scratch)).replace("\\", "/")
+
+    shutil.rmtree(scratch, ignore_errors=True)
     return mapping
+
+
+# Archive extensions we recursively unpack during desensitization.
+_ARCHIVE_SUFFIXES = (".zip", ".tar", ".tar.gz", ".tgz", ".tar.bz2", ".tbz2", ".gz", ".bz2")
+
+
+def _expand_archives_in_place(root: Path, _depth: int = 0) -> None:
+    """Extract every nested archive under `root`, deleting the archive after.
+
+    Recurses so an archive-inside-an-archive is also expanded. Bounded depth
+    guards against zip-bomb-style infinite nesting. Extraction is path-safe:
+    members with absolute paths or `..` traversal are skipped. Archives that
+    fail to open are left as-is (still anonymised as opaque blobs upstream).
+    """
+    if _depth > 8:
+        return
+    found_archive = False
+    for p in sorted(root.rglob("*")):
+        if not p.is_file():
+            continue
+        name = p.name.lower()
+        if not any(name.endswith(s) for s in _ARCHIVE_SUFFIXES):
+            continue
+        out_dir = p.parent / (p.name + "__extracted")
+        try:
+            if name.endswith(".zip"):
+                with zipfile.ZipFile(p) as zf:
+                    if any(n.startswith("/") or ".." in Path(n).parts for n in zf.namelist()):
+                        continue  # unsafe archive — leave it as an opaque blob
+                    out_dir.mkdir(parents=True, exist_ok=True)
+                    zf.extractall(out_dir)
+            elif name.endswith((".tar", ".tar.gz", ".tgz", ".tar.bz2", ".tbz2")):
+                with tarfile.open(p) as tf:
+                    members = tf.getmembers()
+                    if any(m.name.startswith("/") or ".." in Path(m.name).parts for m in members):
+                        continue
+                    out_dir.mkdir(parents=True, exist_ok=True)
+                    tf.extractall(out_dir)
+            elif name.endswith((".gz", ".bz2")):
+                # single-stream compressed file → decompress to the inner name
+                opener = gzip.open if name.endswith(".gz") else bz2.open
+                inner = out_dir / p.stem  # strip the .gz/.bz2 suffix
+                out_dir.mkdir(parents=True, exist_ok=True)
+                with opener(p, "rb") as src, open(inner, "wb") as dst:
+                    shutil.copyfileobj(src, dst)
+            else:
+                continue
+        except Exception:
+            # corrupt / unsupported archive: keep the original blob, skip expand
+            shutil.rmtree(out_dir, ignore_errors=True)
+            continue
+        # archive expanded successfully — drop the archive itself
+        found_archive = True
+        try:
+            p.unlink()
+        except Exception:
+            pass
+    # Newly-extracted dirs may themselves contain archives — recurse.
+    if found_archive:
+        _expand_archives_in_place(root, _depth + 1)
 
 
 def _pass_at_k_stats(
