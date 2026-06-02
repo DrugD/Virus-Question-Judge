@@ -11,7 +11,7 @@
 judge:
   provider: openai                                          # OpenAI SDK path; gateway is OpenAI-compatible (routes Claude transparently)
   model: claude-opus-4-7                                    # default — strongest rubric judge; the gateway forwards to Anthropic
-  api_key_env: NEWAPI_KEY                                   # set in .env
+  api_key_env: NEWAPI_KEY                                   # env-var NAME (set in .env), not the key itself
   base_url: http://35.220.164.252:3888/v1
   temperature: null                                         # Bedrock Opus 4.7 rejects `temperature`; null = omit the field
   max_tokens: 4096
