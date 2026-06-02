@@ -1,0 +1,4 @@
+LLM Judge: GPT-5.1 (provider: openai)
+
+这些 run 的 judge_scores.json 中 judge_model="gpt-5.1"。
+Pass@5 为旧版位置加权口径（(1+w_i)/20, w=5,4,3,2,1），与 v0.3.0 计数式不可比较。

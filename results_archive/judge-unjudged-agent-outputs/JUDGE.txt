@@ -1,0 +1,4 @@
+LLM Judge: 无（这些 run 从未经过 judge 打分）
+
+20 个 upl_* 上传只跑了 agent，产出 report.md + transcript，没有 judge_scores.json / leaderboard.json。
+仅作 agent 输出留存，无 Pass@k 分数。

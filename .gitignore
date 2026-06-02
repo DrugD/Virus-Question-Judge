@@ -43,3 +43,4 @@ __pycache__/
 
 # Virtual environment (too large / machine-specific)
 .venv/
+.venv-win/

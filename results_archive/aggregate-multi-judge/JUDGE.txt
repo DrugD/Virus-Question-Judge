@@ -1,0 +1,4 @@
+LLM Judge: 多 judge 汇总（非单一 judge）
+
+STATS.md / STATS_eval_v1.xlsx / STATS_matrix.xlsx 是跨 judge、跨题集合并的统计矩阵。
+各单元格的 judge 见对应 judge-* 目录。Pass@5 为旧版位置加权口径。

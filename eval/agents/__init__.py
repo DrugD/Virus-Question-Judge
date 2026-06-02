@@ -9,7 +9,7 @@ from .llm_tool_agent import (
     GEMINI_PRO_TOOL, GEMINI_FLAS_TOOL,
     GLM_5_TOOL,
     DEEPSEEK_V4_PRO_TOOL,
-    INTERN_S1_TOOL, INTERN_S1_PRO_TOOL, INTERN_S1_MINI_TOOL, INTERN_S2_TOOL,
+    INTERN_S1_TOOL, INTERN_S1_PRO_TOOL, INTERN_S2_TOOL,
 )
 
 # Public registry — id ↔ runner class.
@@ -37,7 +37,6 @@ REGISTRY: dict[str, type[AgentRunner]] = {
     # InternLM (Shanghai AI Lab) — generic ReAct tool loop · own endpoint
     "intern-s1":              INTERN_S1_TOOL,
     "intern-s1-pro":          INTERN_S1_PRO_TOOL,
-    "intern-s1-mini":         INTERN_S1_MINI_TOOL,
     "intern-s2-preview":      INTERN_S2_TOOL,
 }
 
@@ -52,7 +51,6 @@ AGENT_META: dict[str, dict[str, str]] = {
     "deepseek-v4-pro":        {"family": "DeepSeek",        "kind": "tool-using ReAct loop", "desc": "DeepSeek V4 Pro + tool loop"},
     "intern-s1":              {"family": "InternLM (浦语)", "kind": "tool-using ReAct loop", "desc": "Intern-S1 · 32K · 多模态科学 · 需 INTERN_AI_KEY"},
     "intern-s1-pro":          {"family": "InternLM (浦语)", "kind": "tool-using ReAct loop", "desc": "Intern-S1 Pro · 256K · 科学推理+联网 · 需 INTERN_AI_KEY"},
-    "intern-s1-mini":         {"family": "InternLM (浦语)", "kind": "tool-using ReAct loop", "desc": "Intern-S1 Mini · 32K · 轻量科学推理 · 需 INTERN_AI_KEY"},
     "intern-s2-preview":      {"family": "InternLM (浦语)", "kind": "tool-using ReAct loop", "desc": "Intern-S2 Preview · 256K · 35B-A3B · 需 INTERN_AI_KEY"},
 }
 

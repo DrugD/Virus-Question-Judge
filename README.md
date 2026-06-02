@@ -2,6 +2,22 @@
 
 Rubric-based DeepEval judge for the **Life_Virus_001** task: an autonomous research agent reads an anonymized blind subset of a petabase-scale public-sequencing RdRP search and proposes the single most important scientific question the dataset can answer. The judge LLM scores the agent's top-1 question against a 6-dimension weighted rubric.
 
+## 网站操作流程 / Web Console Walkthrough
+
+可视化控制台把整条流水线拆成 5 步，下图按顺序展示每一步的界面：
+
+![网站操作流程](webapp/static/demo.gif)
+
+| 步骤 | 操作 |
+|---|---|
+| ① 上传 | 拖入研究数据(`.zip` 或文件夹)+ 你标注的 gold 科学问题(`.json`)，可选填题集 id |
+| ② 选 Agent | 勾选一个或多个 Agent(Claude / GPT / Gemini / Qwen / GLM …)，它们并行阅读数据并各自提问 |
+| ③ 设 Judge | 选择 Judge LLM，查看 6 维加权 rubric(每维 0–5 锚点，与 judge prompt 同源) |
+| ④ 实时进度 | SSE 推送 `agent_started / agent_finished / judge_finished`，时间线区分 agent 时间与 judge 时间 |
+| ⑤ 看结果 | 排行榜 · 六维雷达 · 维度对比 · required_elements 覆盖 · 候选问题对比 · 时间分解 |
+
+> GIF 由 [`webapp/make_demo_gif.py`](webapp/make_demo_gif.py) 用 Playwright 自动逐步截图合成；重新生成见下方「本地运行 webapp」。
+
 ```
 agent (Qwen3.6-Plus | Codex CLI | Claude Code | …)
         │  reads
@@ -31,6 +47,8 @@ agent (Qwen3.6-Plus | Codex CLI | Claude Code | …)
 - **Pass@5 改为计数式.** 5 条候选每通过 1 条记 **+0.2**（`pass_count / 5`），与排名无关：全对 = 1.0，全错 = 0.0。取代原“位置加权 / 20”算法。涉及 `webapp/pipeline_runner.py`、`eval/rejudge.py` 及所有 agent/UI 文案。
 - **不再持久化 sandbox 数据.** 每次 run 结束后自动删除 `webapp_runs/.../sandboxes/<agent>/<ts>/data/`（成功与失败路径都清理），仅保留 agent 输出与 `_debug/`。一次性清理了历史遗留的 ~1.5 GB 拷贝，并在 `.gitignore` 中排除该路径。
 - **judge model 默认最强模型.** 默认 judge 固定为 **Claude Opus 4.7**（`eval/config.yaml`，当前最强档；后续可扩展为最强 n 个 LLM 的集成评审）。
+- **历史结果归档（按 judge 标注）.** v0.3.0 之前的所有结果移入 `results_archive/`，并按评测所用 LLM Judge 分目录：`judge-gpt-5.1/`（旧 `results/`）、`judge-gpt-5-mini/`、`judge-gemini-2.5-flash/`、`aggregate-multi-judge/`（`STATS*` 汇总）、`judge-unjudged-agent-outputs/`（20 个仅跑 agent、未评测的 `upl_*`）。每个目录含 `JUDGE.txt` 标注 judge 模型 + 旧版 Pass@5 口径。详见 `results_archive/README.md`。旧分数为位置加权口径，**不可**与新计数式混比。
+- **移除 intern-s1-mini.** 该 agent 从 `eval/agents/__init__.py` 的 `REGISTRY` / `AGENT_META` 下线，不再出现在可选 agent 列表。
 
 ## Layout
 
@@ -96,6 +114,26 @@ python -m eval.run_judge \
   --agent-output results/qwen3.6-plus/20260516T101010 \
   --judge-config eval/config.yaml
 ```
+
+## 本地运行 webapp / Run the Web Console
+
+```bash
+# 1. 建虚拟环境并装依赖
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install -r requirements.txt   # Windows
+# source .venv/bin/activate && pip install -r requirements.txt # macOS/Linux
+
+# 2. 启动服务器(Windows 必须加 PYTHONUTF8=1，否则 GBK 解码 UTF-8 配置会崩)
+PYTHONUTF8=1 .venv/Scripts/python.exe -m uvicorn webapp.server:app --host 127.0.0.1 --port 8765
+
+# 3. 浏览器打开
+#    http://127.0.0.1:8765/
+
+# 4. (可选) 重新生成操作流程 GIF —— 需服务器已在 :8765 运行
+PYTHONUTF8=1 .venv/Scripts/python.exe webapp/make_demo_gif.py
+```
+
+> 真正跑评测需要 `.env` 里有有效的 `NEWAPI_KEY`(裁判 LLM 密钥)；若为占位符 `sk-xxx`，界面可浏览但 run 会失败。
 
 ## Adding a new agent
 

@@ -1,0 +1,4 @@
+LLM Judge: Gemini 2.5 Flash
+
+STATS_eval-v1_judge-gemini-2.5-flash.{md,xlsx} 及 webapp_runs/ 下 eval-v1 题集的 gemini-2.5-flash 评测。
+Pass@5 为旧版位置加权口径（(1+w_i)/20），与 v0.3.0 计数式不可比较。
