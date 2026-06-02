@@ -1,0 +1,9 @@
+Both output files are saved and validated:
+
+- **`report/report.md`** — ~600-word technical report covering the data inventory (single supplementary `.docx` from a 2022 herptile viral-discovery paper), three derived statistics (234 unique SRA accessions; 156 reptile vs 79 amphibian; tissue/platform/country distributions and the 40 poly(A)-flagged libraries), reasoning, the top question, and testability.
+- **`agent_questions.json`** — 5 distinct ranked questions all grounded in actual features of Supplementary Table 1 / Figures 1–5:
+  1. Joint bias of poly(A) chemistry × tissue × host clade on recoverable virome (esp. negative-sense RNA viruses) — strongest, most general, surveillance-relevant.
+  2. Phylogenetic placement of alligator-associated rabies lyssavirus → non-mammalian Lyssavirus reservoir.
+  3. Common recombination breakpoint between novel herptile *Astroviridae* and *Hepeviridae* (Fig. 3).
+  4. Newt orthomyxovirus (Fig. 4) host-range expansion to Caudata.
+  5. Discovery yield vs sequencing platform / biogeography.

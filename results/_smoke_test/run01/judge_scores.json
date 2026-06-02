@@ -1,0 +1,93 @@
+{
+  "composite_score": 1.0,
+  "composite_score_raw": 5.0,
+  "passed": true,
+  "threshold": 0.6,
+  "dimensions": [
+    {
+      "id": "question_matching",
+      "weight": 0.4,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The candidate question matches all core pillars: petabase-scale mining of public sequencing archives, explicit focus on translated RdRP search, hidden RNA-virus diversity, and absence from curated viral reference databases. It closely parallels the example for score 5, differing only in minor wording while retaining the full scientific intent and scope of the groundtruth question."
+    },
+    {
+      "id": "novelty",
+      "weight": 0.15,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The candidate clearly targets a major unexplored RNA virome and a systematic reference-database limitation at petabase scale. It explicitly frames a vast hidden RNA-virus diversity, uses RdRP as a marker, and emphasizes absence from curated viral databases. This goes beyond generic novelty, specifying a large discovery frontier and database blind spot. It is closely aligned with the highest-novelty anchor, not merely identifying new sequences but a large, unexplored virome space."
+    },
+    {
+      "id": "importance",
+      "weight": 0.15,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question focuses on petabase-scale mining of public data, RdRP-based RNA virus discovery, and gaps in curated reference databases. This directly concerns uncovering hidden global RNA-virome diversity and improving viral reference resources, with implications for large-scale surveillance and understanding viral evolution. Its scope is archive-wide and not limited to a small subset of sequences, aligning best with broad significance for viral evolution and global virome characterization."
+    },
+    {
+      "id": "testability",
+      "weight": 0.1,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question is directly testable with the described data and analyses: petabase-scale translated RdRP search, per-run coverage, sOTU clustering, identity to curated RdRP references, and distribution of hits across public sequencing runs. The candidate explicitly cites large-scale search results, clustering of RdRP sOTUs, and comparison to curated reference databases. This aligns with the highest anchor, which involves comprehensive coverage, clustering, reference comparison, and source-distribution style analyses."
+    },
+    {
+      "id": "data_support",
+      "weight": 0.1,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question is tightly grounded in multiple concrete data cues: petabase-scale (5.7M-run / 10.2 PB) archive mining, translated RdRP search, a large number of candidate novel sOTUs, low identity (<0.40) to curated references, and explicit reference-database gaps. This combination directly matches the strongest anchor, showing thorough use of scale, marker choice, novelty, and database-coverage evidence."
+    },
+    {
+      "id": "specificity",
+      "weight": 0.1,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The candidate explicitly specifies petabase-scale mining of public sequencing archives, uses RdRP as the marker (translated search), focuses on hidden RNA-virus diversity, emphasizes absence from curated viral reference databases, and implies scientific significance by suggesting a systematic blind spot. This matches all key elements of the score-5 anchor, with clear scope and implication."
+    }
+  ],
+  "refusal_triggered": false,
+  "flags_hit": [],
+  "candidate": {
+    "agent_id": "smoke-test",
+    "question": "Can petabase-scale mining of public sequencing archives via translated RdRP search reveal a vast hidden RNA-virus diversity that is absent from curated viral reference databases?",
+    "rationale": "The 5.7M-run / 10.2 PB upstream search yields ~131,957 candidate novel sOTUs whose representatives drop below the 0.40 identity threshold against curated references, suggesting a systematic blind spot in current databases rather than a tooling artefact.",
+    "data_support": [
+      "candidate_unique_novel_rdrp_sotus",
+      "translated_runs_screened",
+      "candidate_sotu_clusters",
+      "alignment_hits",
+      "rdrp_aa_fragments"
+    ],
+    "expected_test": "Quantify the fraction of cluster representatives below the curated-reference identity threshold across the full 5.7M-run search; compare cluster count to the size of curated RdRP reference families.",
+    "scope_keywords": [
+      "petabase-scale",
+      "RdRP",
+      "RNA virus",
+      "reference-database gap"
+    ]
+  },
+  "agent_id": "smoke-test",
+  "workspace_id": "Life_Virus_001",
+  "judge_model": "gpt-5.1",
+  "judge_provider": "openai"
+}

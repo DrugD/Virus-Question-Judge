@@ -1,0 +1,18 @@
+Both files are saved. Here's a summary of what was produced:
+
+---
+
+**Data discovered:**
+- `5905698_all_virus_genomes.fasta` — 2,339 sequences from 1,886 distinct invertebrate RNA virus genomes/segments spanning 22 RNA virus family-level supergroups (Picorna-Calici, Tombus-Noda, Bunya-Arena, etc.), plus 5 putative novel families (New-Weivirus, New-Qinvirus, etc.)
+- `5905695_alignments_and_phylogenies.zip` — 20 RdRp PhyML phylogenies + a `RdRp_versus_structural/` subdirectory with 6 paired RdRp/structural-protein alignments and trees for testing modular evolution
+
+**Outputs written:**
+
+**`report/report.md`** — covers data summary, three derived statistics (family distribution across 22 groups, invertebrate host breadth across 5+ phyla, and observed RdRp/structural-protein phylogenetic incongruence), reasoning, and the top question.
+
+**`agent_questions.json`** — 5 ranked questions:
+1. **(Rank 1 — best)** Topological incongruence between RdRp and capsid (S-domain/A6/A21/Alverna) phylogenies across Tombus-Noda, Hepe-Virga, Narna-Levi — testing modular/independent capsid acquisition
+2. Host-phylogeny congruence vs. host-switching patterns across the 22 supergroups
+3. Phylogenetic placement of 5 novel "New-" families within established supergroups
+4. Mono- vs. multi-segmented genome architecture in Flavi-group (Jingmen-like) viruses
+5. Monophyly and host-association of ciliate-codon-usage RNA viruses within the dataset

@@ -1,0 +1,121 @@
+{
+  "agent_id": "intern-s2-preview",
+  "model": "intern-s2-preview",
+  "base_url": "https://chat.intern-ai.org.cn/api/v1",
+  "max_iters": 30,
+  "iters": 13,
+  "tool_call_count": 15,
+  "files_written": [
+    "agent_questions.json",
+    "report/report.md"
+  ],
+  "iters_history": [
+    {
+      "iter": 1,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "list_files"
+      ],
+      "content_len": 4
+    },
+    {
+      "iter": 2,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "read_file",
+        "list_files"
+      ],
+      "content_len": 7
+    },
+    {
+      "iter": 3,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "read_file"
+      ],
+      "content_len": 4
+    },
+    {
+      "iter": 4,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "read_file"
+      ],
+      "content_len": 4
+    },
+    {
+      "iter": 5,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "read_file"
+      ],
+      "content_len": 4
+    },
+    {
+      "iter": 6,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "read_file"
+      ],
+      "content_len": 4
+    },
+    {
+      "iter": 7,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "read_file"
+      ],
+      "content_len": 4
+    },
+    {
+      "iter": 8,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "read_file"
+      ],
+      "content_len": 4
+    },
+    {
+      "iter": 9,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "write_file"
+      ],
+      "content_len": 210
+    },
+    {
+      "iter": 10,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "write_file"
+      ],
+      "content_len": 4
+    },
+    {
+      "iter": 11,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "list_files",
+        "list_files"
+      ],
+      "content_len": 7
+    },
+    {
+      "iter": 12,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "read_file"
+      ],
+      "content_len": 4
+    },
+    {
+      "iter": 13,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "done"
+      ],
+      "content_len": 4
+    }
+  ],
+  "terminated_via_done": true
+}

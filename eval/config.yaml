@@ -1,0 +1,70 @@
+# =============================================================================
+# Single new-api gateway powers everything.
+# Endpoint is OpenAI-compatible:
+#   POST  http://35.220.164.252:3111/v1/chat/completions
+#   Header: Authorization: Bearer sk-xxxxxx
+# Model routing is done by the `model` field; the gateway dispatches to OpenAI /
+# Qwen / Claude backends automatically based on the model name you registered
+# with your sk key on http://35.220.164.252:3111.
+# =============================================================================
+
+judge:
+  provider: openai                                          # OpenAI SDK path; gateway is OpenAI-compatible (routes Claude transparently)
+  model: claude-opus-4-7                                    # default — strongest rubric judge; the gateway forwards to Anthropic
+  api_key_env: NEWAPI_KEY                                   # set in .env
+  base_url: http://35.220.164.252:3888/v1
+  temperature: null                                         # Bedrock Opus 4.7 rejects `temperature`; null = omit the field
+  max_tokens: 4096
+  timeout: 300
+  max_retries: 2
+
+# User-selectable judge alternatives shown in the UI. Each entry is a
+# `judge:` block that overrides the default when chosen. base_url and
+# api_key_env inherit from `judge:` if omitted.
+judge_options:
+  - id: claude-opus-4-7
+    label: "Claude Opus 4.7 · top-tier reasoning"
+    provider: openai
+    model: claude-opus-4-7
+    temperature: null                                       # required: Bedrock rejects temperature for this model
+    max_tokens: 4096
+    timeout: 300
+    description: "Anthropic Claude Opus 4.7 — strongest rubric adherence + nuance; ~10–20s per call. Default judge."
+  - id: gpt-5-mini
+    label: "GPT-5 mini · fast reasoning"
+    provider: openai
+    model: gpt-5-mini
+    max_tokens: 4096
+    timeout: 240
+    description: "OpenAI GPT-5 mini — reasoning model, ~5–10s per call, strong on rubric instructions."
+  - id: gemini-2.5-flash
+    label: "Gemini 2.5 Flash · fastest"
+    provider: openai
+    model: gemini-2.5-flash
+    max_tokens: 4096
+    timeout: 180
+    description: "Google Gemini 2.5 Flash — fastest path (~3–5s per call); slightly less rubric-strict than GPT-5-mini."
+
+# Per-agent overrides. run_pipeline.py forwards these as constructor kwargs to
+# eval.agents.REGISTRY[<agent_id>](**kwargs).
+agents:
+  qwen3.6-plus:
+    model: qwen3.6-plus                                     # ✓ verified through gateway
+    base_url: http://35.220.164.252:3888/v1
+    api_key_env: NEWAPI_KEY
+    temperature: 0.2
+    max_tokens: 4096
+    timeout: 240
+
+  codex-cli:
+    # codex CLI not installed yet (`npm i -g @openai/codex`); kept here for later.
+    model: gpt-5.1-codex
+    timeout: 1800
+
+  claude-code:
+    # Use sonnet — claude-opus-4-1 currently returns 502 from this gateway.
+    model: claude-sonnet-4-5-20250929
+    timeout: 1800
+    permission_mode: bypassPermissions
+
+threshold: 0.6

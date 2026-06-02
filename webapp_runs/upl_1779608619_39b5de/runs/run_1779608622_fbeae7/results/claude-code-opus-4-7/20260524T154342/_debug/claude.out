@@ -1,0 +1,13 @@
+Both files are saved and validated.
+
+**Summary:**
+
+- `report/report.md` — ~550-word technical report with Data summary, Analysis (4 derived statistics: 8.06×10¹¹ bp across 126 libraries; 270 viruses across 31 families; 6 host classes with bony fish dominating at 138 hits; mean 38.4% BLASTx aa identity with 87% below 50%), Reasoning, the verbatim top question, and testability justification.
+- `agent_questions.json` — 5 distinct ranked questions:
+  1. **(top)** Co-divergence vs cross-class host-switching across Chordata for 8 named viral families — directly aligned with the Jane4/BaTS pipeline declared in the Reporting Summary.
+  2. Rooting of mammalian-pathogen families (Influenza, Hanta, Arena, Hepacivirus) in basal vertebrates.
+  3. Tissue-tropism structure of viral diversity (gut/gill/liver/lung).
+  4. Stratified divergence as a measure of "viral dark matter" by host class.
+  5. Whether divergent/unknown contigs define new viral families.
+
+The dataset is the supplementary materials to Shi et al. 2018 Nature ("The evolutionary history of vertebrate RNA viruses"), and rank-1 targets the paper's central evolutionary question.

@@ -1,0 +1,5 @@
+Both files are saved and validated.
+
+**Summary:**
+- `report/report.md` — ~600-word technical report covering data summary (170 KM817593–KM817764 viral sequences from the Li et al. eLife e05378 arthropod virome study), three derived statistics (length bimodality, marker-gene composition implying ≥3 negative-sense RNA virus lineages, host/geography crosstab), reasoning, and the top question with testability justification.
+- `agent_questions.json` — 5 distinct ranked entries. Rank 1: RdRp-anchored variance partitioning of host order vs. Chinese sampling locality, with placement of orthomyxo-/bunya-like clades against vertebrate pathogens. Ranks 2–5 progressively cover genome-architecture vs. host clades, tick-virus phenui-/SFTS-relative phylogeography, mosquito-virus arbovirus relatedness, and ICTV-style taxonomic clustering. All `data_support` items reference real FASTA features.

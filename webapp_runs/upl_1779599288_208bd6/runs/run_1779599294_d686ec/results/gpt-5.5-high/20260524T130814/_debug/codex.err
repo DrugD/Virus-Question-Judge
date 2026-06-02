@@ -1,0 +1,1269 @@
+Reading additional input from stdin...
+2026-05-24T05:08:17.582707Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-05-24T05:08:17.583361Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:17.589003Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:17.592820Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:18.181208Z ERROR codex_models_manager::manager: failed to refresh available models: stream disconnected before completion: failed to decode models response: missing field `models` at line 1 column 75988; body: {"data":[{"id":"dall-e-3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-3.5-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-0125","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-instruct","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-05-13","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-08-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-11-20","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-2024-07-18","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-tts","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-2025-11-13","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-max","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-mini","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-mini","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-nano","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-none","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-image-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-1.5","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-realtime","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-2025-08-28","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-mini-2024-09-12","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-preview-2024-09-12","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-2025-04-16","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"sora-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-large","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-small","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-ada-002","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"whisper-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gemini-2.5-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-preview-09-2025","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-pro-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-32768","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"claude-haiku-4-5-20251001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-haiku-4-5-20251001-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"dall-e-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gemini-2.0-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-thinking-exp","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gpt-3.5-turbo-16k","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-2024-04-09","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-transcribe","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-transcribe-diarize","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-2026-03-05","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-3-fast-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4-0709","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4.20-0309-reasoning","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4.3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"imagen-4.0-fast-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-ultra-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"o1-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-pro-2025-03-19","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-pro-2025-06-10","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-2025-04-16-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"omni-moderation-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-r1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-v3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"veo-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-fast-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"bailian/deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"bailian/deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-r1","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-0528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-v3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax/MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qvq-72b-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-edit-plus-2025-12-15","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"qwen-max-0403","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-longcontext","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0112","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1125","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1127","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1220","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-12-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-1101","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-2025-02-11","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1119","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1230","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-08","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-ocr-2025-11-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct-1m","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-omni-7b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-32b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-480b-a35b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-07-22","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2026-01-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-embedding","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-397b-a17b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash-2026-02-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus-2026-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.7-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.7-max-2026-05-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwq-32b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwq-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"text-embedding-v4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.0-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"ascend-tribe/pangu-pro-moe","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-en-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-zh-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"ByteDance-Seed/Seed-OSS-36B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-OCR","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-0528-Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-mini-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ring-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-embedding-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-reranker-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/MiniMaxAI/MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-VL-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-4.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-14B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct-128K","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-480B-A35B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-235B-A22B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-35B-A3B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-397B-A17B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-9B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/QwQ-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun-ai/Step-3.5-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-A13B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-MT-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4.1V-9B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5-Air","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5V","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-250528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-1-terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-2-251201","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-250324","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-m-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-lite-250315","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-lite-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-240915","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-250515","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-text-240715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-251215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-pro-32k-character-241215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250828","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250715","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-vision-250815","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-8-251228","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-code-preview-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-lite-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-mini-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-pro-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-code-preview-251028","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-250528","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-fast-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-3-0-t2i-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-0-250828","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-5-251128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-5-0-260128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"M2-her","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.1","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-Text-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4-voice","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.6","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.6v","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.7-FlashX","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5v-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-120b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0711-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0905-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking-turbo","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-turbo-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.5","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-thinking-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Kling-Video-O1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-omni","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-128k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-32k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-8k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"step-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"alibaba/tongyi-deepresearch-30b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek/deepseek-v3.2-speciale","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemini-embedding-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-3-27b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-26b-a4b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-31b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-coder","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionai/ling-2.6-1t","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.2-11b-vision-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-405b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.3-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-2-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-4-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4-multimodal-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-24b-instruct-2501","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-3.1-24b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2:online","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-120b","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-14b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-2b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"or/qwen3.5-9b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"perplexity/sonar-reasoning-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus-preview:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/hy3-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-vision-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-mini-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4-fast","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"xiaomi/mimo-v2-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]}],"object":"list","success":true}
+2026-05-24T05:08:18.184207Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:18.252102Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:18.254101Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+OpenAI Codex v0.130.0
+--------
+workdir: /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+model: gpt-5.5-high
+provider: newapi
+approval: never
+sandbox: danger-full-access
+reasoning effort: none
+reasoning summaries: none
+session id: 019e5862-4e87-7561-b5c0-ccae43898fb8
+--------
+user
+Read INSTRUCTIONS.md in the current working directory. Read the agent-visible files under data/. Produce exactly two files in the working directory: report/report.md and agent_questions.json (schema in info.json). target_study/ does not exist in this sandbox - do not look for it.
+
+CRITICAL: agent_questions.json MUST contain exactly 5 distinct candidate questions (rank 1..5, no duplicates). The judge scores Pass@1 (rank-1 only, 100% / 0%) and Pass@5 (position-weighted: rank-i pass adds 1+w_i where w=(5,4,3,2,1), divide by 20). Put your strongest answer at rank 1, plausible alternatives at 2..5.
+
+Stop only when both output files exist on disk.
+2026-05-24T05:08:18.265871Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:18.266534Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:18.266671Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:18.266801Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+codex
+I’ll read the task instructions and available data first, then use the schema in `info.json` to shape the outputs. After that I’ll write only the requested two files in the working directory.
+exec
+/bin/zsh -lc "sed -n '1,240p' info.json" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+ succeeded in 0ms:
+{
+  "workspace_kind": "user_uploaded",
+  "data_root": "data/",
+  "files": [
+    {
+      "path": "nuccore_reported_viral_sequences.fasta",
+      "size_bytes": 320534
+    }
+  ],
+  "agent_output_contract": {
+    "report_path": "report/report.md",
+    "scientific_question_output_path": "agent_questions.json"
+  },
+  "agent_output_schema": {
+    "type": "object",
+    "required": [
+      "agent_id",
+      "questions"
+    ],
+    "properties": {
+      "agent_id": {
+        "type": "string"
+      },
+      "questions": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "required": [
+            "rank",
+            "question",
+            "rationale"
+          ],
+          "properties": {
+            "rank": {
+              "type": "integer"
+            },
+            "question": {
+              "type": "string"
+            },
+            "rationale": {
+              "type": "string"
+            },
+            "data_support": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "expected_test": {
+              "type": "string"
+            },
+            "scope_keywords": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+2026-05-24T05:08:22.958557Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+exec
+/bin/zsh -lc "sed -n '1,240p' INSTRUCTIONS.md" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+ succeeded in 0ms:
+# INSTRUCTIONS — Scientific Question Generation
+
+You are an autonomous research agent. Read every file under `data/`, perform analysis, and propose **the single most important scientific question** that the data could be used to answer.
+
+A separate judge LLM will score your top-1 question against a hidden gold rubric. **You will NOT see the gold rubric.** Frame your question purely from the data you observe.
+
+---
+
+## What you have
+
+| Path | Description | Read? |
+|---|---|---|
+| `data/` | Whatever the user uploaded. Could be tables, FASTA, JSON, images, PDFs, …. Make no assumption about schema — discover the structure by listing and sampling files. | ✅ |
+| `info.json` | Data-side metadata: file inventory, sizes, derived statistics. | ✅ |
+| `gold/` | Gold rubric used by the judge. **MUST NOT be opened.** | ❌ |
+
+---
+
+## What you must produce (exact paths)
+
+### `report/report.md`
+
+A short technical report (~300–600 words) with these sections:
+
+1. **Data summary** — what files you found, structure, scale, key columns / fields.
+2. **Analysis** — at least three derived statistics, distributions, or relationships you computed from the data.
+3. **Reasoning** — why these observations motivate the scientific question you will pose.
+4. **Top scientific question** — copied verbatim from `agent_questions.json[0].question`.
+5. **Why this question is testable on the provided dataset.**
+
+### `agent_questions.json`
+
+```json
+{
+  "agent_id": "<your model + harness identifier>",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "<one English sentence ending with '?'>",
+      "rationale": "<2-4 sentences linking the question to specific data evidence>",
+      "data_support": ["<actual file or feature names you used>", "..."],
+      "expected_test": "<how the question is answerable using the kind of data described>",
+      "scope_keywords": ["<3-8 short keywords>"]
+    }
+  ]
+}
+```
+
+- You MUST provide **exactly 5 distinct candidates** (rank 1..5). Duplicates fail validation. The judge scores all 5 and reports:
+  - **Pass@1** = 100% if `questions[0]` passes else 0%.
+  - **Pass@5** = position-weighted score: passing rank `i` adds `(1 + w_i)` where `w = (5,4,3,2,1)`. Numerator divided by 20. Examples: rank-1 only → 30%, ranks 1+2 → 55%, all 5 → 100%.
+- Put your **strongest** answer at rank 1 and progressively-weaker but still grounded alternatives at ranks 2-5; this maximises Pass@5 even if rank 1 misses.
+- Each `question` must be a single sentence ending with `?`.
+- `data_support` items must reference files or features that **actually exist** in the uploaded data.
+
+---
+
+## How to think about the rubric (informally)
+
+The judge looks for questions that:
+
+- **target a non-trivial scientific opportunity**, not a routine ETL or data-cleaning task;
+- have **biomedical / ecological / surveillance / engineering significance**;
+- are **testable using the data in front of you** (you should be able to outline the analysis);
+- are **specifically grounded** — name the dataset's actual features instead of generic phrases like "this data";
+- are **precisely phrased** — clear scientific object, scope, marker, and expected implication.
+
+A question like *"Are there interesting patterns in the data?"* will score very low. A question that names the specific dataset modality, the specific marker / variable of interest, the scale at which the question operates, and the scientific implication will score high.
+
+---
+
+## What NOT to do
+
+- Do not fabricate file names, statistics, or features that aren't in the upload.
+- Do not propose questions that require wet-lab experiments not derivable from the data.
+- Do not open `gold/`.
+- Do not generate ten generic questions hoping one hits — only `questions[0]` is scored.
+
+When `report/report.md` and `agent_questions.json` both exist on disk, your run is complete.
+
+exec
+/bin/zsh -lc 'pwd && rg --files -n .' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+ succeeded in 0ms:
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+./checklist.json
+./INSTRUCTIONS.md
+./data/nuccore_reported_viral_sequences.fasta
+./info.json
+./_debug/codex.err
+./_debug/codex.out
+
+2026-05-24T05:08:23.002903Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:23.003326Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:23.003509Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:23.003986Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:23.309481Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:23.622062Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+codex
+The upload is a single FASTA file, so I’m going to parse headers and sequence content rather than assume any tabular schema. I’ll compute scale, header field patterns, length/ambiguous-base distributions, and accession/taxon signals from the actual records.
+exec
+/bin/zsh -lc "sed -n '1,80p' data/nuccore_reported_viral_sequences.fasta" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+ succeeded in 0ms:
+>KR902709.1 Wuhan cricket virus strain WHXS-1 segment 1, complete sequence
+TATAAATTGTTATTTTAGCTAATTGTTGGACACTATGGACGACGACGAGCTATTGATGACTCGTGTTTAT
+ACAGGAGTATTATGCATATTAGCATTGATAATACCACCATGGTTATGGATGGAGATGAATTCTGGTAATC
+ATAATAGTGGCTTGGATGCCATGATAAGCAGGTTGATTTCCAAACTGGTGACAACTGAACTACCTAGATG
+GGCTGGGATGATCAGTGATTTCTCAAAACAGCTAGGATCGCAACAATATGATAAATTCAAATTACGTGGA
+ATAAATATAGCGAAGAAAACCAAAACTCTGGCTAGCAGACAGGGTTTTGCTAAATTGCAAGATGTTCTGA
+TGCAATCAAGACTGCATCCGTCAGGATTTTGTCTGAATTTGGCAGCAGGAGCAGGCGGTTGGGGGCAGTT
+ATTATGCGGATTACCAACTGTCACTTTAGTTGAAAGTTTTACACTAGGAAAAGGACCTGGTCATGAGGGG
+CATGAACAACACCGGATGATATCATATGAAGGGCGAGAGAAACATGTTTTCCACTACGCAGATATCAAAG
+GTTTACCACCCATGAAATGTGACTGGTTGTTTTTTGATGGAGGGGAGGAAAAGAAGACCCCTGAGGAAAC
+TCGGGATAAATTTAATGATCTGCTCATCAGAGGGGTCCTCCCACACGTTGGCTTTCACCTGAAAGGTTTC
+ATAATCAGAGTTTTAACACCTACCGACACGTACACCCTGCAAGTACTGGAAGATATCCAGAAATTGACAG
+GTAGAGGAAATTTTGTTAGATCAACTTATTCTAGGAACACGACCCAGGAACTTTACTTTGTGTCAGGTCA
+AATAGGCGCACTAAAACATCAAGCGCACTATCTACTAATTGACATGTTTAAGAGAAGCTTGATCAGTACT
+AAACCCACTAGGATTGTTGACTTAGCTGTGAGAAGAGTGCGCGAAGTAGTCGGTATGGAACGTTTTGTAG
+AACCACTAACTCCACTGGATATGTCTGCGAGCATAGAAGAGTTGCTTAGACCTATCCACGTGAGTAAGCG
+TGAATTTAGGCATTGGGAGAGTCTTGGTGTATACCCTGTTGGTAGCAAAGGAAGTAAAGCAACCCAACGA
+AATCCCTATGCTATTAAAGTAACAAGCAGATTGCGAGACACATTGACAGAATATGAAGATTGGAAGGCTA
+CTGACACGACTCCAGAGGGGTTTATGCAAGTTTTCAACACTAAAATTGACACCACACCTATTGAAAACAG
+TCCCTATGATGAGATGTTATTCCATGTTTATAACTGGAAAGCTAAACATTATCTAAAGAAAGGAATTCGC
+TTAAAACCACTGAGTTGGGATGAAGTCAGGGAATTGGCCAATAAACAGGGAGCAGCAGGACATACAGACT
+TTGGTATCCGGAATATGGCTGACTTCTTCATGAATCCTAAGTGGAAAGAAGAATGTGAAAAAGTGGAAAA
+TGAATTACTAGGAGAAGACCCAAGACCAATAAAAGCAATCTTTAACACCATGGGAAAAAGGGAAAAAAAG
+AAGAGCAAGGGAGTTAAGGGCAGCAGAATGGTTGCTTATCTACCCATCCCTATGCGATTGATAGAACTCA
+AGTACTTGTACAGATGCATGGAGATGACTAAAATGAAAAACAACCCATTTGCAGTAGGAGGATTAGGCTT
+ACACGACCTAGGAGAAAGGATAAGAGAAGTTTGGAAAGGAGCAGCAACAAGCTCAGATATAGCAGGGTTT
+GACACAAGAATAGGAATAAGGATTAGAGAATTAGAACACCATCTTGTCCAAAACCTGATGAGAGACGAAA
+GTGTTCAATCACAACAGATAGTGAGAAACCTGTTTAGAGTTTATGCATACCCTCATTTATTGATCCCATA
+CCCAGGAGAGAATGTACGATCTGAGTTGATCCACGGTAGAGGACAGCGAATGTCAGGAGAGTTTGGAACA
+TATAGCTTGAACACTGAGACAAGATCTAACTTAGCAGCAATACAGTTCTTGGTGACCATGGGTATTGATG
+GGAGTAGTCCCAACCTTAAGGAGAGAATTTACCAACTTATGGATCACTTATACCATTCTGGAAAGTACGG
+AGGTGGGGTGAGCGGAGACGATGAGTTCTTCACATCTGACGAGAAATTCATTGAACACTTCAGAAGGCAA
+AGTGGTTGCCTAGATATCATGGGTTTTCCAAGGAAAGATGTGCCGCCTACAATGCATTCAGTGATGCATA
+CAGCGATAGATGAAGTCAGTTTCTGTTCTCACAACTACACTAAGGTGAGTTACAGAGATGACTATAATGG
+TACAACTACGACAAGATACATGCCTATTAGAGATATGGGAGAGATAGTAGCAAAGACAACCATTTGGTTG
+GGACACTCAGGAGAAGGATTGGATGCTCTAGCCTGGTTGTCAGCACAAGGAAACAACTTATTAGTGAATT
+ACGCTCACCTAAGGACAGCTAGGCAATTAGGGTTGGCTTACAAAGCCATTCCACCACCTAATTTAACCAT
+AGTCGGCACCAGACCAGGATTTTTACCTAAACCATGGATGCGTGATGGAGAAATATTAGATGTCATCAAT
+GATGTCCTCTTCGGTGAGTCAACCAATTACCCAGTTCCTGGCTTTCGAGTAAGGAAATTCCATCATCTTG
+GGTATGTGAGTATGCAAATCGAAATGCGATTTGATAGAAACTTCCACCACAAAGGTAGAGTAGATTTCAG
+AAGAGGATTGATAAAGCTGGTTAATGCTATAATAATAGGCGAAAATACAGGAGGCGATATCACCATAATG
+GTACATGCTCGTAAAGACCACAACATATATCAAGGACCAGAAGGACTCGGATTGATAAATTTATGATGAA
+TGTTGATTATTATGCATACTATATGACGAACACTGCTATGAACTATTGACTACGATGTTAACAGATATGA
+AATAAGATTTTTCGGGAAACCGGTTAGTACAAGACACTGAGGTCGGAGACACGGGACACAACACTACAAA
+TCACAAAATTTACACGCTTTGCTGATATTCCCTTGTCCTTGCCAAATACTGGGCTACATCTACTGGGGGC
+AATGGAATACAGTGTATAATACAAATAAACACACACACACACAATAGAGACCTCT
+
+>KR902710.1 Wuhan cricket virus strain WHXS-1 segment 2, complete sequence
+TATAAATTGATATATAAGATAGTGTTATTTCAGTATTGAATATTATAGAAAGCAAAACATTATTTTTTTA
+CATCTCAACATGAACATTACAAAGGTGCTCCTGGTTGCCCTAGTTGGCATCCATTTCGGAGGCACCGCGT
+ATGCCGCTACCAATACCGGAGCGTCAGTTGCTAAATTGACTGATATCTGGAGTATTGGTTCTGTTTCTAA
+GTCTTGGAACCCGTCGGACTGGTCCGATGATTTTAAATTGCGTGTATATCAATCCCTCACCCTGGTTATT
+GCGATCGCTTTTTTAGGAGGTACAATGGCTCATATGATAGTAGGATTTGTAGTTGGTATAGGACTCGTGC
+ACAACACATGGGTTCTTACTGGTGCTCTAATTTTGCTCTATTATGGGTACAAAAGAGGTCATCCCATAGC
+TATGATATTAGGTGCTGTTTGTTCCTATGTCTTAGCCTTTGGACAGAGTTTAGCCAAGCTGGGGATTTAG
+AATATCTGTCCAGGGGATTGAAGGACGTTAGGGGGTTTATGACTACGGACAATGTTTACATCAATACTAC
+AACTCGTGTACAGGATTTCTCTGAATCAAGATATGAAGTGTTAGTGCATAACATCACTGAGAAAATGTTG
+ACACCAACTGAATTTATGGTTTATGATACTGATGCAGGTGATCCCTTTTGTACTGATTATCTGACATATG
+ATGTGGGATGGTTCAGTAAGAACAACCCGACAAAAGAGTGTGTGAATTCATTGGCTAGATCCAACTGTTT
+TTATTTATGGCATAACCATGATGATTATGAGATTTCTTGGTTTGAGAATGTTCACACTCTAGTATGTGTG
+GGAATCAGGTATTCAAAGAGTCAGATAACATCGAGGAAGAATAGCCACTGGAGTAGATGGTATAGTTTAA
+CAAGAGCTGAACCTACTTCCATATTACAATATGGTATGATCTTTAAAAATGGTGAATATCATCTTATGTC
+TCCTATGGCCTTGGAATTTGGACTTGTATACGATCTAAGTAGGAATGATTTTTATGGCTATGCAACTAAC
+ATCACTCATGCTTTGGTATTAGAACATCGCAACCTTATAATAGGTTCCTCACCAACACTACCAGCAGAAT
+TCAAGCACATCACTTACACAACTTTAGGAAAGAAAACTGTGTTCTGTAATGATAGAATTGTGGGCAATCC
+GATTGATGATAATGAATCCGATGAAGTAATTGCAACAGACTTCAATTGTGATCCACACCAGGTTTTGGGT
+GTGATTCAACGACCGAACGGAGATTTATTACCAGTCTATTGGTGTCTACAGTGGAATTGTGTGAACACAA
+AGTCATTCGGAGATCTGTTTACAACTGAATTGAACAGAAAGTTTGAGGATGATGAACATGAGAATTTTGC
+AGTGAGAATACTACTTATTATAAGAAGTTTGATCGTGAAAGCGACTCTCTATATCACTCAATCAATTAAT
+TTGAGGGTGTTTTCACTTAGTGTCTGGGGTATATTCACAACCATCATGGTCATCAGACTCACTGGATCAT
+GGATAGCAGGAACAATCATGGGTTTGTACGTAGTCGTTCTACTCTCTGATTAATTATGACGAATAGGATT
+ATGGTAGCATTGGCTTGACCGCCCGTGCAACAGGATTATGATTTTGGAAAATGATAGCGGTAATACTCGG
+GTGCATATTTTAGTAAACTTAATTATGTTTCTACAGACTTGGCTGTCAATTTGTCCCTCTGATTTGCCAA
+CTACTGGGTCACAATTACTGGGTTGGATGGGCATCTTGTTAGGTCACCTTTTGTAAACCATGTTATATTA
+TTAAAAGCCGTAACGGTATTACTCT
+
+>KR902711.1 Wuhan cricket virus strain WHXS-1 segment 3, complete sequence
+TATAAAAAATTATTACATCTGATTGTGATATAGGCAGTAGTCTTAATAATCAATTTGTAATTCGTTAAAG
+AAAGTAATACATATAGGTGAACGAAGCGTAGCATGGAGGAGCTTTTAGGTTTCTTACATGTTAGTGCTAC
+ACCAGCTAGCTCAAGAGTATTCTTGAGCTACATCACAGCAACAACATTATGCATAGCTGCTAGCAAGTTG
+
+2026-05-24T05:08:30.360686Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+exec
+/bin/zsh -lc "rg -n '"'^>'"' data/nuccore_reported_viral_sequences.fasta | sed -n '1,120p'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+exec
+/bin/zsh -lc "rg -n '"'^>'"' data/nuccore_reported_viral_sequences.fasta | wc -l" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+ succeeded in 0ms:
+      33
+
+ succeeded in 0ms:
+1:>KR902709.1 Wuhan cricket virus strain WHXS-1 segment 1, complete sequence
+48:>KR902710.1 Wuhan cricket virus strain WHXS-1 segment 2, complete sequence
+77:>KR902711.1 Wuhan cricket virus strain WHXS-1 segment 3, complete sequence
+119:>KR902712.1 Wuhan cricket virus strain WHXS-1 segment 4, complete sequence
+161:>KR902713.1 Wuhan flea virus strain WHZM segment 1, complete sequence
+209:>KR902714.1 Wuhan flea virus strain WHZM segment 2, complete sequence
+243:>KR902715.1 Wuhan flea virus strain WHZM segment 3, complete sequence
+286:>KR902716.1 Wuhan flea virus strain WHZM segment 4, complete sequence
+327:>KR902717.1 Shuangao insect virus 7 strain SKC segment 1, complete sequence
+373:>KR902718.1 Shuangao insect virus 7 strain SKC segment 2, complete sequence
+403:>KR902719.1 Shuangao insect virus 7 strain SKC segment 3, complete sequence
+445:>KR902720.1 Shuangao insect virus 7 strain SKC segment 4, complete sequence
+486:>KR902721.1 Wuhan aphid virus 1 strain WHYC-1 segment 1, complete sequence
+534:>KR902722.1 Wuhan aphid virus 1 strain WHYC-1 segment 2, complete sequence
+567:>KR902723.1 Wuhan aphid virus 1 strain WHYC-1 segment 3, complete sequence
+610:>KR902724.1 Wuhan aphid virus 1 strain WHYC-1 segment 4, complete sequence
+653:>KR902725.1 Wuhan aphid virus 2 strain WHYC-2 segment 1, complete sequence
+699:>KR902726.1 Wuhan aphid virus 2 strain WHYC-2 segment 2, complete sequence
+732:>KR902727.1 Wuhan aphid virus 2 strain WHYC-2 segment 3, complete sequence
+775:>KR902728.1 Wuhan aphid virus 2 strain WHYC-2 segment 4, complete sequence
+818:>KR902729.1 Wenling shark virus strain MHS-2 polyprotein gene, complete cds
+958:>KR902730.1 Xinzhou spider virus 3 strain XZZZ-3 polyprotein gene, complete cds
+1252:>KR902731.1 Beihai barnacle viurs 1 strain BHGZ polyprotein gene, complete cds
+1522:>KR902732.1 Shayang fly virus 4 strain SYCY polyprotein gene, complete cds
+1754:>KR902733.1 Gamboa mosquito virus strain GW polyprotein gene, complete cds
+2132:>KR902734.1 Shuangao lacewing virus 2 strain SCL polyprotein gene, complete cds
+2400:>KR902735.1 Xinzhou spider virus 2 strain XZZZ-7 polyprotein gene, complete cds
+2753:>KR902736.1 Bole tick virus 4 strain BLP-1 polyprotein gene, complete cds
+2988:>KR902737.1 Wuhan centipede virus strain WHWG-11 polyprotein gene, complete cds
+3329:>KR902738.1 Xingshan cricket virus strain XSXS-2 polyprotein gene, complete cds
+3643:>KR902739.1 Shayang spider virus 4 strain SYZZ-1 polyprotein gene, complete cds
+3951:>KR902740.1 Sanxia water strider virus 6 strain SYSZZ-2 polyprotein gene, complete cds
+4280:>KR902741.1 Tacheng tick virus 8 strain TCP-2 polyprotein gene, complete cds
+
+2026-05-24T05:08:30.388964Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:30.389635Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:30.389928Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:30.390250Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:32.094970Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:33.431671Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from collections import Counter, defaultdict
+p=Path('data/nuccore_reported_viral_sequences.fasta')
+records=[]
+h=None; seq=[]
+for line in p.read_text().splitlines():
+    if line.startswith('>'):
+        if h is not None:
+            s=''.join(seq).upper(); records.append((h,s))
+        h=line[1:].strip(); seq=[]
+    elif line.strip(): seq.append(line.strip())
+if h is not None:
+    s=''.join(seq).upper(); records.append((h,s))
+print('records',len(records))
+print('total_nt',sum(len(s) for h,s in records))
+lengths=[len(s) for h,s in records]
+print('min max mean median',min(lengths),max(lengths),sum(lengths)/len(lengths),sorted(lengths)[len(lengths)//2])
+print('lengths sorted',sorted(lengths))
+for i,(h,s) in enumerate(records,1):
+    gc=(s.count('G')+s.count('C'))/len(s)*100
+    n=sum(1 for c in s if c not in 'ACGT')
+    print(f'{i:02d}\\t{len(s):5d}\\tGC={gc:5.2f}\\tN={n}\\t{h}')
+print('ambiguous total',sum(sum(1 for c in s if c not in 'ACGT') for h,s in records))
+# group by virus before strain
+for h,s in records:
+    name=h.split(' strain ')[0].split(' polyprotein ')[0]
+    # remove accession
+    name=' '.join(name.split()[1:])
+    # for headers without strain? none
+    print('GROUPKEY', name)
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+ succeeded in 0ms:
+records 33
+total_nt 313499
+min max mean median 1845 26315 9499.969696969696 3053
+lengths sorted [1845, 1940, 2166, 2169, 2236, 2670, 2698, 2735, 2756, 2770, 2818, 2829, 2841, 2850, 2863, 3040, 3053, 3135, 3156, 3170, 9653, 16053, 16248, 18554, 18697, 19537, 20433, 21414, 21779, 22879, 23676, 24521, 26315]
+01	 3135	GC=41.05	N=0	KR902709.1 Wuhan cricket virus strain WHXS-1 segment 1, complete sequence
+02	 1845	GC=38.43	N=0	KR902710.1 Wuhan cricket virus strain WHXS-1 segment 2, complete sequence
+03	 2770	GC=40.94	N=0	KR902711.1 Wuhan cricket virus strain WHXS-1 segment 3, complete sequence
+04	 2735	GC=40.73	N=0	KR902712.1 Wuhan cricket virus strain WHXS-1 segment 4, complete sequence
+05	 3170	GC=44.29	N=0	KR902713.1 Wuhan flea virus strain WHZM segment 1, complete sequence
+06	 2236	GC=45.17	N=0	KR902714.1 Wuhan flea virus strain WHZM segment 2, complete sequence
+07	 2863	GC=47.15	N=0	KR902715.1 Wuhan flea virus strain WHZM segment 3, complete sequence
+08	 2698	GC=46.11	N=0	KR902716.1 Wuhan flea virus strain WHZM segment 4, complete sequence
+09	 3040	GC=46.78	N=0	KR902717.1 Shuangao insect virus 7 strain SKC segment 1, complete sequence
+10	 1940	GC=46.13	N=0	KR902718.1 Shuangao insect virus 7 strain SKC segment 2, complete sequence
+11	 2756	GC=45.32	N=0	KR902719.1 Shuangao insect virus 7 strain SKC segment 3, complete sequence
+12	 2670	GC=45.32	N=0	KR902720.1 Shuangao insect virus 7 strain SKC segment 4, complete sequence
+13	 3156	GC=42.90	N=0	KR902721.1 Wuhan aphid virus 1 strain WHYC-1 segment 1, complete sequence
+14	 2166	GC=42.84	N=4	KR902722.1 Wuhan aphid virus 1 strain WHYC-1 segment 2, complete sequence
+15	 2841	GC=41.50	N=0	KR902723.1 Wuhan aphid virus 1 strain WHYC-1 segment 3, complete sequence
+16	 2829	GC=42.95	N=0	KR902724.1 Wuhan aphid virus 1 strain WHYC-1 segment 4, complete sequence
+17	 3053	GC=42.38	N=0	KR902725.1 Wuhan aphid virus 2 strain WHYC-2 segment 1, complete sequence
+18	 2169	GC=40.02	N=0	KR902726.1 Wuhan aphid virus 2 strain WHYC-2 segment 2, complete sequence
+19	 2818	GC=42.26	N=0	KR902727.1 Wuhan aphid virus 2 strain WHYC-2 segment 3, complete sequence
+20	 2850	GC=40.84	N=0	KR902728.1 Wuhan aphid virus 2 strain WHYC-2 segment 4, complete sequence
+21	 9653	GC=55.16	N=0	KR902729.1 Wenling shark virus strain MHS-2 polyprotein gene, complete cds
+22	20433	GC=35.82	N=0	KR902730.1 Xinzhou spider virus 3 strain XZZZ-3 polyprotein gene, complete cds
+23	18697	GC=42.97	N=0	KR902731.1 Beihai barnacle viurs 1 strain BHGZ polyprotein gene, complete cds
+24	16053	GC=42.16	N=0	KR902732.1 Shayang fly virus 4 strain SYCY polyprotein gene, complete cds
+25	26315	GC=39.56	N=0	KR902733.1 Gamboa mosquito virus strain GW polyprotein gene, complete cds
+26	18554	GC=38.24	N=1	KR902734.1 Shuangao lacewing virus 2 strain SCL polyprotein gene, complete cds
+27	24521	GC=42.29	N=0	KR902735.1 Xinzhou spider virus 2 strain XZZZ-7 polyprotein gene, complete cds
+28	16248	GC=56.12	N=0	KR902736.1 Bole tick virus 4 strain BLP-1 polyprotein gene, complete cds
+29	23676	GC=35.19	N=0	KR902737.1 Wuhan centipede virus strain WHWG-11 polyprotein gene, complete cds
+30	21779	GC=51.18	N=0	KR902738.1 Xingshan cricket virus strain XSXS-2 polyprotein gene, complete cds
+31	21414	GC=36.56	N=0	KR902739.1 Shayang spider virus 4 strain SYZZ-1 polyprotein gene, complete cds
+32	22879	GC=34.26	N=0	KR902740.1 Sanxia water strider virus 6 strain SYSZZ-2 polyprotein gene, complete cds
+33	19537	GC=44.12	N=10	KR902741.1 Tacheng tick virus 8 strain TCP-2 polyprotein gene, complete cds
+ambiguous total 15
+GROUPKEY Wuhan cricket virus
+GROUPKEY Wuhan cricket virus
+GROUPKEY Wuhan cricket virus
+GROUPKEY Wuhan cricket virus
+GROUPKEY Wuhan flea virus
+GROUPKEY Wuhan flea virus
+GROUPKEY Wuhan flea virus
+GROUPKEY Wuhan flea virus
+GROUPKEY Shuangao insect virus 7
+GROUPKEY Shuangao insect virus 7
+GROUPKEY Shuangao insect virus 7
+GROUPKEY Shuangao insect virus 7
+GROUPKEY Wuhan aphid virus 1
+GROUPKEY Wuhan aphid virus 1
+GROUPKEY Wuhan aphid virus 1
+GROUPKEY Wuhan aphid virus 1
+GROUPKEY Wuhan aphid virus 2
+GROUPKEY Wuhan aphid virus 2
+GROUPKEY Wuhan aphid virus 2
+GROUPKEY Wuhan aphid virus 2
+GROUPKEY Wenling shark virus
+GROUPKEY Xinzhou spider virus 3
+GROUPKEY Beihai barnacle viurs 1
+GROUPKEY Shayang fly virus 4
+GROUPKEY Gamboa mosquito virus
+GROUPKEY Shuangao lacewing virus 2
+GROUPKEY Xinzhou spider virus 2
+GROUPKEY Bole tick virus 4
+GROUPKEY Wuhan centipede virus
+GROUPKEY Xingshan cricket virus
+GROUPKEY Shayang spider virus 4
+GROUPKEY Sanxia water strider virus 6
+GROUPKEY Tacheng tick virus 8
+
+2026-05-24T05:08:44.579201Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:44.579542Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:44.579939Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:44.580121Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:08:44.580263Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+codex
+The records split cleanly into two structural classes: 20 complete segment records from five four-segment viruses, and 13 much longer polyprotein CDS records. I’m checking whether the segmented records have conserved terminal motifs or other genome-architecture signals that would make a sharper, testable question than just “compare lengths.”
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from collections import defaultdict, Counter
+records=[]; h=None; seq=[]
+for line in Path('data/nuccore_reported_viral_sequences.fasta').read_text().splitlines():
+    if line.startswith('>'):
+        if h: records.append((h,''.join(seq).upper()))
+        h=line[1:].strip(); seq=[]
+    elif line.strip(): seq.append(line.strip())
+if h: records.append((h,''.join(seq).upper()))
+
+def virus_name(h):
+    rest=' '.join(h.split()[1:])
+    if ' strain ' in rest: return rest.split(' strain ')[0]
+    if ' polyprotein ' in rest: return rest.split(' polyprotein ')[0]
+    return rest
+seg=[]; poly=[]
+for h,s in records:
+    (seg if ' segment ' in h else poly).append((h,s))
+print('segmented records',len(seg),'polyprotein records',len(poly))
+by=defaultdict(list)
+for h,s in seg: by[virus_name(h)].append((h,s))
+for v,rs in by.items():
+    lens=[len(s) for h,s in rs]
+    gcs=[(s.count('G')+s.count('C'))/len(s)*100 for h,s in rs]
+    print('\\n',v,'n',len(rs),'total_len',sum(lens),'lens',lens,'meanGC',round(sum(gcs)/len(gcs),2),'rangeGC',round(min(gcs),2),round(max(gcs),2))
+    for h,s in rs:
+        segno=h.split(' segment ')[1].split(',')[0]
+        print('  seg',segno,'len',len(s),'5p',s[:12],'3p',s[-12:])
+print('\\n5p terminal 8 counts segmented')
+print(Counter(s[:8] for h,s in seg))
+print('3p terminal 8 counts segmented')
+print(Counter(s[-8:] for h,s in seg))
+print('\\npoly stats by host-ish label')
+for h,s in poly:
+    name=virus_name(h)
+    gc=(s.count('G')+s.count('C'))/len(s)*100
+    print(len(s),round(gc,2),name)
+# infer hosts from names before virus; last word before virus?
+host_words=[]
+for h,s in records:
+    name=virus_name(h)
+    before=name.split(' virus')[0]
+    host=before.split()[-1]
+    host_words.append(host)
+print('\\nhost word counts',Counter(host_words))
+# length/gc class summaries
+for label,rs in [('segment',seg),('polyprotein',poly)]:
+    lens=[len(s) for h,s in rs]
+    gcs=[(s.count('G')+s.count('C'))/len(s)*100 for h,s in rs]
+    print(label,'n',len(rs),'len_mean',round(sum(lens)/len(lens),1),'len_med',sorted(lens)[len(lens)//2], 'gc_mean',round(sum(gcs)/len(gcs),2),'gc_minmax',round(min(gcs),2),round(max(gcs),2))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+ succeeded in 0ms:
+segmented records 20 polyprotein records 13
+
+ Wuhan cricket virus n 4 total_len 10485 lens [3135, 1845, 2770, 2735] meanGC 40.29 rangeGC 38.43 41.05
+  seg 1 len 3135 5p TATAAATTGTTA 3p ATAGAGACCTCT
+  seg 2 len 1845 5p TATAAATTGATA 3p CGGTATTACTCT
+  seg 3 len 2770 5p TATAAAAAATTA 3p TTATCGACACCC
+  seg 4 len 2735 5p TATAAAAATTCA 3p TCATACACATCT
+
+ Wuhan flea virus n 4 total_len 10967 lens [3170, 2236, 2863, 2698] meanGC 45.68 rangeGC 44.29 47.15
+  seg 1 len 3170 5p TGTATTGCGCTA 3p AAGAAGTGCCCA
+  seg 2 len 2236 5p TGTAAAGTGAAT 3p CCCCACGGGGTG
+  seg 3 len 2863 5p GTGTATTGTGCT 3p GGACAACCGGCT
+  seg 4 len 2698 5p GTGTTAAGTGAT 3p GAACAATGACCC
+
+ Shuangao insect virus 7 n 4 total_len 10406 lens [3040, 1940, 2756, 2670] meanGC 45.89 rangeGC 45.32 46.78
+  seg 1 len 3040 5p GGTGACTTAGGA 3p AGAAACAGGGCC
+  seg 2 len 1940 5p CATCGTCATCTT 3p ATGAAACGAGGC
+  seg 3 len 2756 5p TGGCCTGATTTT 3p AGAAACGGGGCG
+  seg 4 len 2670 5p GCGGTGATTTGA 3p AAACGACTCCCC
+
+ Wuhan aphid virus 1 n 4 total_len 10992 lens [3156, 2166, 2841, 2829] meanGC 42.55 rangeGC 41.5 42.95
+  seg 1 len 3156 5p CCCCGCTTTACA 3p CGAAAACCCGGC
+  seg 2 len 2166 5p CTGCGACTTTAC 3p ATTGTTGGCCGA
+  seg 3 len 2841 5p CTGCGACTTTAC 3p CGAAAAACCGGC
+  seg 4 len 2829 5p GCGACTTTTCAC 3p AAAAAACGACCC
+
+ Wuhan aphid virus 2 n 4 total_len 10890 lens [3053, 2169, 2818, 2850] meanGC 41.38 rangeGC 40.02 42.38
+  seg 1 len 3053 5p TATTGATTTACT 3p AGAAAAACGGCC
+  seg 2 len 2169 5p ATTTGTGATTGC 3p TGACTCAAGGTC
+  seg 3 len 2818 5p GTTGCTTGTTGC 3p AGGAATAACGAC
+  seg 4 len 2850 5p TGCATGTGCTTA 3p AACACTTACGGG
+
+5p terminal 8 counts segmented
+Counter({'TATAAATT': 2, 'TATAAAAA': 2, 'CTGCGACT': 2, 'TGTATTGC': 1, 'TGTAAAGT': 1, 'GTGTATTG': 1, 'GTGTTAAG': 1, 'GGTGACTT': 1, 'CATCGTCA': 1, 'TGGCCTGA': 1, 'GCGGTGAT': 1, 'CCCCGCTT': 1, 'GCGACTTT': 1, 'TATTGATT': 1, 'ATTTGTGA': 1, 'GTTGCTTG': 1, 'TGCATGTG': 1})
+3p terminal 8 counts segmented
+Counter({'AGACCTCT': 1, 'ATTACTCT': 1, 'CGACACCC': 1, 'ACACATCT': 1, 'AGTGCCCA': 1, 'ACGGGGTG': 1, 'AACCGGCT': 1, 'AATGACCC': 1, 'ACAGGGCC': 1, 'AACGAGGC': 1, 'ACGGGGCG': 1, 'GACTCCCC': 1, 'AACCCGGC': 1, 'TTGGCCGA': 1, 'AAACCGGC': 1, 'AACGACCC': 1, 'AAACGGCC': 1, 'TCAAGGTC': 1, 'ATAACGAC': 1, 'CTTACGGG': 1})
+
+poly stats by host-ish label
+9653 55.16 Wenling shark virus
+20433 35.82 Xinzhou spider virus 3
+18697 42.97 Beihai barnacle viurs 1
+16053 42.16 Shayang fly virus 4
+26315 39.56 Gamboa mosquito virus
+18554 38.24 Shuangao lacewing virus 2
+24521 42.29 Xinzhou spider virus 2
+16248 56.12 Bole tick virus 4
+23676 35.19 Wuhan centipede virus
+21779 51.18 Xingshan cricket virus
+21414 36.56 Shayang spider virus 4
+22879 34.26 Sanxia water strider virus 6
+19537 44.12 Tacheng tick virus 8
+
+host word counts Counter({'aphid': 8, 'cricket': 5, 'flea': 4, 'insect': 4, 'spider': 3, 'tick': 2, 'shark': 1, '1': 1, 'fly': 1, 'mosquito': 1, 'lacewing': 1, 'centipede': 1, 'strider': 1})
+segment n 20 len_mean 2687.0 len_med 2818 gc_mean 43.16 gc_minmax 38.43 47.15
+polyprotein n 13 len_mean 19981.5 len_med 20433 gc_mean 42.59 gc_minmax 34.26 56.12
+
+2026-05-24T05:09:08.449115Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:09:08.449692Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:09:08.450100Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:09:08.450403Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:09:08.450578Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+exec
+/bin/zsh -lc "sed -n '1,240p' checklist.json" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+ succeeded in 0ms:
+[]
+2026-05-24T05:09:20.812655Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:09:20.815119Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:09:20.815596Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:09:20.815791Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:09:20.815968Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+codex
+I have the core evidence now: record count, total bases, the segmented/polyprotein split, segment-length regularity, GC range, and ambiguous-base counts. I’m creating the report and JSON with the rank-1 question focused on whether the complete four-segment arthropod-virus records represent a conserved genome architecture distinct from the long polyprotein viruses.
+exec
+/bin/zsh -lc 'mkdir -p report' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+ succeeded in 0ms:
+2026-05-24T05:09:49.999998Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:09:50.009126Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:09:50.009879Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:09:50.010161Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:09:50.010425Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+apply patch
+patch: completed
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814/agent_questions.json
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814/report/report.md
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..6034e506a75aaa8bd064c38c03eb94b48b841209
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,119 @@
++{
++  "agent_id": "gpt-5.5-codex-harness",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "Do the complete four-segment arthropod viral genomes in `nuccore_reported_viral_sequences.fasta` share a conserved segment-length and nucleotide-composition architecture that distinguishes them from the long polyprotein CDS viruses?",
++      "rationale": "The FASTA contains 20 complete segment records from five viruses, and each of those viruses has exactly four segments with similar total lengths of about 10.4-11.0 kb. Those records contrast with 13 much longer `polyprotein gene, complete cds` records whose lengths span 9.7-26.3 kb and whose GC content is more variable. This makes genome architecture a central, testable biological feature of the upload rather than a metadata-only distinction.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "segment 1",
++        "segment 2",
++        "segment 3",
++        "segment 4",
++        "polyprotein gene, complete cds",
++        "sequence length",
++        "GC content"
++      ],
++      "expected_test": "Parse the FASTA headers to classify records as segmented or polyprotein CDS, compute length and GC content for each sequence, group segment records by virus name and segment number, and compare within-group conservation against the distribution of polyprotein CDS records.",
++      "scope_keywords": [
++        "segmented viruses",
++        "polyprotein CDS",
++        "genome architecture",
++        "GC content",
++        "arthropod viruses"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Are the five complete four-segment viruses in `nuccore_reported_viral_sequences.fasta` consistent with a shared segmented RNA-virus lineage based on conserved segment number, segment-size ordering, and terminal nucleotide patterns?",
++      "rationale": "Wuhan cricket virus, Wuhan flea virus, Shuangao insect virus 7, Wuhan aphid virus 1, and Wuhan aphid virus 2 all appear as complete four-segment genomes. Their segment sizes follow a similar ordering, with segment 1 usually the largest or near-largest, segment 2 the smallest, and segments 3-4 intermediate. The raw sequences also allow direct comparison of 5-prime and 3-prime terminal motifs as potential replication signals.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Wuhan cricket virus",
++        "Wuhan flea virus",
++        "Shuangao insect virus 7",
++        "Wuhan aphid virus 1",
++        "Wuhan aphid virus 2",
++        "5-prime terminal sequence",
++        "3-prime terminal sequence"
++      ],
++      "expected_test": "Group the 20 segment records by virus, compare segment counts and segment-length profiles, extract terminal nucleotides from each segment, and assess whether within- and between-virus terminal motifs are more conserved than expected from the sequence background.",
++      "scope_keywords": [
++        "four-segment genomes",
++        "terminal motifs",
++        "segment sizes",
++        "RNA virus lineage",
++        "replication signals"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Do host-associated virus names in `nuccore_reported_viral_sequences.fasta` correspond to systematic differences in viral genome size, segmentation status, or GC content?",
++      "rationale": "The headers contain host-associated names including cricket, flea, aphid, spider, tick, shark, mosquito, barnacle, fly, centipede, lacewing, and water strider. The sequence records show both short segmented genomes and long polyprotein CDS records across these names. Testing whether host labels align with architecture or composition would help determine whether host ecology is reflected in the reported viral genomes.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "virus names",
++        "strain labels",
++        "segment annotations",
++        "polyprotein gene, complete cds",
++        "sequence length",
++        "GC content"
++      ],
++      "expected_test": "Extract host-associated terms from FASTA headers, assign each record to segmented or polyprotein status, compute per-record and per-virus length and GC metrics, and compare those metrics across host-associated groups.",
++      "scope_keywords": [
++        "host association",
++        "genome size",
++        "segmentation",
++        "GC content",
++        "viral ecology"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are the long polyprotein CDS viruses in `nuccore_reported_viral_sequences.fasta` separable into compositionally distinct groups that may reflect different viral lineages or host-associated evolutionary pressures?",
++      "rationale": "The 13 polyprotein CDS records range from 9,653 nt to 26,315 nt and show a wide GC range from 34.26% to 56.12%. Outliers include high-GC Bole tick virus 4 and Wenling shark virus, and low-GC Sanxia water strider virus 6 and Wuhan centipede virus. This spread is large enough to support a focused composition-based comparison within the polyprotein subset.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "polyprotein gene, complete cds",
++        "Wenling shark virus",
++        "Bole tick virus 4",
++        "Sanxia water strider virus 6",
++        "Wuhan centipede virus",
++        "sequence length",
++        "GC content"
++      ],
++      "expected_test": "Filter records annotated as `polyprotein gene, complete cds`, compute length and nucleotide composition metrics, cluster or rank records by GC content and size, and compare resulting groups with virus names and host-associated terms in the headers.",
++      "scope_keywords": [
++        "polyprotein viruses",
++        "composition clusters",
++        "GC outliers",
++        "viral lineages",
++        "host pressure"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Can ambiguous nucleotides and compositional outliers in `nuccore_reported_viral_sequences.fasta` identify specific viral records that need targeted validation before comparative evolutionary analysis?",
++      "rationale": "Only 15 non-ACGT bases occur across 313,499 total bases, making ambiguity rare but localized. The affected records include Wuhan aphid virus 1 segment 2, Shuangao lacewing virus 2, and Tacheng tick virus 8, while GC-content extremes occur in Sanxia water strider virus 6 and Bole tick virus 4. These quality and composition signals can flag records whose influence on downstream comparative analysis should be tested.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Wuhan aphid virus 1 segment 2",
++        "Shuangao lacewing virus 2",
++        "Tacheng tick virus 8",
++        "Sanxia water strider virus 6",
++        "Bole tick virus 4",
++        "ambiguous bases",
++        "GC content"
++      ],
++      "expected_test": "Scan each FASTA sequence for non-ACGT characters, compute per-record ambiguity rates and GC content, identify outliers, and repeat key length/composition comparisons with and without flagged records.",
++      "scope_keywords": [
++        "sequence quality",
++        "ambiguous bases",
++        "GC outliers",
++        "validation",
++        "comparative genomics"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..01969c18357eb88b79a0893ab2b6ba203a09c7c7
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,23 @@
++# Scientific Question Report
++
++## Data summary
++
++The uploaded data consist of one FASTA file, `data/nuccore_reported_viral_sequences.fasta`, with 33 NCBI-style nucleotide records totaling 313,499 bases. Each header contains an accession, virus name, strain label, and either a segment annotation or a polyprotein CDS annotation. Twenty records are complete genomic segments from five named four-segment viruses: Wuhan cricket virus, Wuhan flea virus, Shuangao insect virus 7, Wuhan aphid virus 1, and Wuhan aphid virus 2. The remaining 13 records are long `polyprotein gene, complete cds` entries from viruses named after diverse hosts such as shark, spider, barnacle, fly, mosquito, lacewing, tick, centipede, cricket, and water strider.
++
++## Analysis
++
++The dataset has a strongly bimodal length distribution. The 20 segmented records are short, with a mean length of 2,687 nt and range of 1,845-3,170 nt, whereas the 13 polyprotein CDS records have a mean length of 19,981.5 nt and range of 9,653-26,315 nt. The five segmented viruses all have exactly four records, and their total assembled segment lengths are similar: 10,406-10,992 nt. Segment-length profiles are also ordered similarly across viruses, with segment 1 near 3.0-3.2 kb, segment 2 near 1.8-2.2 kb, and segments 3 and 4 near 2.7-2.9 kb.
++
++Base composition provides another comparison. Across all records, GC content ranges from 34.26% in Sanxia water strider virus 6 to 56.12% in Bole tick virus 4. Segmented records are narrower in GC content, spanning 38.43-47.15% with virus-level means of 40.29-45.89%, while polyprotein records span 34.26-56.12%. Sequence ambiguity is minimal: only 15 non-ACGT bases occur in the full FASTA, concentrated in Wuhan aphid virus 1 segment 2, Shuangao lacewing virus 2, and Tacheng tick virus 8.
++
++## Reasoning
++
++The most scientifically informative contrast is not simply that the dataset contains viral sequences, but that it juxtaposes complete multi-segment arthropod-virus genomes with much longer unsegmented polyprotein CDS records. The five four-segment viruses show a repeated genome architecture despite coming from different named hosts, while the polyprotein records show far broader genome length and GC variation. This suggests the dataset can be used to test whether conserved segmentation patterns distinguish one coherent viral genome strategy from the diverse long-polyprotein viruses.
++
++## Top scientific question
++
++Do the complete four-segment arthropod viral genomes in `nuccore_reported_viral_sequences.fasta` share a conserved segment-length and nucleotide-composition architecture that distinguishes them from the long polyprotein CDS viruses?
++
++## Why this question is testable on the provided dataset
++
++The FASTA headers directly label segment numbers and polyprotein CDS records, allowing records to be grouped without external metadata. The nucleotide sequences allow segment lengths, total genome sizes, GC content, ambiguous-base counts, and terminal sequence patterns to be computed for every record. These features are sufficient to compare within-virus segment architecture, between-virus conservation among the five segmented genomes, and the contrast between segmented complete sequences and long polyprotein CDS entries.
+
+2026-05-24T05:10:26.133876Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..6034e506a75aaa8bd064c38c03eb94b48b841209
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,119 @@
++{
++  "agent_id": "gpt-5.5-codex-harness",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "Do the complete four-segment arthropod viral genomes in `nuccore_reported_viral_sequences.fasta` share a conserved segment-length and nucleotide-composition architecture that distinguishes them from the long polyprotein CDS viruses?",
++      "rationale": "The FASTA contains 20 complete segment records from five viruses, and each of those viruses has exactly four segments with similar total lengths of about 10.4-11.0 kb. Those records contrast with 13 much longer `polyprotein gene, complete cds` records whose lengths span 9.7-26.3 kb and whose GC content is more variable. This makes genome architecture a central, testable biological feature of the upload rather than a metadata-only distinction.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "segment 1",
++        "segment 2",
++        "segment 3",
++        "segment 4",
++        "polyprotein gene, complete cds",
++        "sequence length",
++        "GC content"
++      ],
++      "expected_test": "Parse the FASTA headers to classify records as segmented or polyprotein CDS, compute length and GC content for each sequence, group segment records by virus name and segment number, and compare within-group conservation against the distribution of polyprotein CDS records.",
++      "scope_keywords": [
++        "segmented viruses",
++        "polyprotein CDS",
++        "genome architecture",
++        "GC content",
++        "arthropod viruses"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Are the five complete four-segment viruses in `nuccore_reported_viral_sequences.fasta` consistent with a shared segmented RNA-virus lineage based on conserved segment number, segment-size ordering, and terminal nucleotide patterns?",
++      "rationale": "Wuhan cricket virus, Wuhan flea virus, Shuangao insect virus 7, Wuhan aphid virus 1, and Wuhan aphid virus 2 all appear as complete four-segment genomes. Their segment sizes follow a similar ordering, with segment 1 usually the largest or near-largest, segment 2 the smallest, and segments 3-4 intermediate. The raw sequences also allow direct comparison of 5-prime and 3-prime terminal motifs as potential replication signals.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Wuhan cricket virus",
++        "Wuhan flea virus",
++        "Shuangao insect virus 7",
++        "Wuhan aphid virus 1",
++        "Wuhan aphid virus 2",
++        "5-prime terminal sequence",
++        "3-prime terminal sequence"
++      ],
++      "expected_test": "Group the 20 segment records by virus, compare segment counts and segment-length profiles, extract terminal nucleotides from each segment, and assess whether within- and between-virus terminal motifs are more conserved than expected from the sequence background.",
++      "scope_keywords": [
++        "four-segment genomes",
++        "terminal motifs",
++        "segment sizes",
++        "RNA virus lineage",
++        "replication signals"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Do host-associated virus names in `nuccore_reported_viral_sequences.fasta` correspond to systematic differences in viral genome size, segmentation status, or GC content?",
++      "rationale": "The headers contain host-associated names including cricket, flea, aphid, spider, tick, shark, mosquito, barnacle, fly, centipede, lacewing, and water strider. The sequence records show both short segmented genomes and long polyprotein CDS records across these names. Testing whether host labels align with architecture or composition would help determine whether host ecology is reflected in the reported viral genomes.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "virus names",
++        "strain labels",
++        "segment annotations",
++        "polyprotein gene, complete cds",
++        "sequence length",
++        "GC content"
++      ],
++      "expected_test": "Extract host-associated terms from FASTA headers, assign each record to segmented or polyprotein status, compute per-record and per-virus length and GC metrics, and compare those metrics across host-associated groups.",
++      "scope_keywords": [
++        "host association",
++        "genome size",
++        "segmentation",
++        "GC content",
++        "viral ecology"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are the long polyprotein CDS viruses in `nuccore_reported_viral_sequences.fasta` separable into compositionally distinct groups that may reflect different viral lineages or host-associated evolutionary pressures?",
++      "rationale": "The 13 polyprotein CDS records range from 9,653 nt to 26,315 nt and show a wide GC range from 34.26% to 56.12%. Outliers include high-GC Bole tick virus 4 and Wenling shark virus, and low-GC Sanxia water strider virus 6 and Wuhan centipede virus. This spread is large enough to support a focused composition-based comparison within the polyprotein subset.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "polyprotein gene, complete cds",
++        "Wenling shark virus",
++        "Bole tick virus 4",
++        "Sanxia water strider virus 6",
++        "Wuhan centipede virus",
++        "sequence length",
++        "GC content"
++      ],
++      "expected_test": "Filter records annotated as `polyprotein gene, complete cds`, compute length and nucleotide composition metrics, cluster or rank records by GC content and size, and compare resulting groups with virus names and host-associated terms in the headers.",
++      "scope_keywords": [
++        "polyprotein viruses",
++        "composition clusters",
++        "GC outliers",
++        "viral lineages",
++        "host pressure"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Can ambiguous nucleotides and compositional outliers in `nuccore_reported_viral_sequences.fasta` identify specific viral records that need targeted validation before comparative evolutionary analysis?",
++      "rationale": "Only 15 non-ACGT bases occur across 313,499 total bases, making ambiguity rare but localized. The affected records include Wuhan aphid virus 1 segment 2, Shuangao lacewing virus 2, and Tacheng tick virus 8, while GC-content extremes occur in Sanxia water strider virus 6 and Bole tick virus 4. These quality and composition signals can flag records whose influence on downstream comparative analysis should be tested.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Wuhan aphid virus 1 segment 2",
++        "Shuangao lacewing virus 2",
++        "Tacheng tick virus 8",
++        "Sanxia water strider virus 6",
++        "Bole tick virus 4",
++        "ambiguous bases",
++        "GC content"
++      ],
++      "expected_test": "Scan each FASTA sequence for non-ACGT characters, compute per-record ambiguity rates and GC content, identify outliers, and repeat key length/composition comparisons with and without flagged records.",
++      "scope_keywords": [
++        "sequence quality",
++        "ambiguous bases",
++        "GC outliers",
++        "validation",
++        "comparative genomics"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..01969c18357eb88b79a0893ab2b6ba203a09c7c7
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,23 @@
++# Scientific Question Report
++
++## Data summary
++
++The uploaded data consist of one FASTA file, `data/nuccore_reported_viral_sequences.fasta`, with 33 NCBI-style nucleotide records totaling 313,499 bases. Each header contains an accession, virus name, strain label, and either a segment annotation or a polyprotein CDS annotation. Twenty records are complete genomic segments from five named four-segment viruses: Wuhan cricket virus, Wuhan flea virus, Shuangao insect virus 7, Wuhan aphid virus 1, and Wuhan aphid virus 2. The remaining 13 records are long `polyprotein gene, complete cds` entries from viruses named after diverse hosts such as shark, spider, barnacle, fly, mosquito, lacewing, tick, centipede, cricket, and water strider.
++
++## Analysis
++
++The dataset has a strongly bimodal length distribution. The 20 segmented records are short, with a mean length of 2,687 nt and range of 1,845-3,170 nt, whereas the 13 polyprotein CDS records have a mean length of 19,981.5 nt and range of 9,653-26,315 nt. The five segmented viruses all have exactly four records, and their total assembled segment lengths are similar: 10,406-10,992 nt. Segment-length profiles are also ordered similarly across viruses, with segment 1 near 3.0-3.2 kb, segment 2 near 1.8-2.2 kb, and segments 3 and 4 near 2.7-2.9 kb.
++
++Base composition provides another comparison. Across all records, GC content ranges from 34.26% in Sanxia water strider virus 6 to 56.12% in Bole tick virus 4. Segmented records are narrower in GC content, spanning 38.43-47.15% with virus-level means of 40.29-45.89%, while polyprotein records span 34.26-56.12%. Sequence ambiguity is minimal: only 15 non-ACGT bases occur in the full FASTA, concentrated in Wuhan aphid virus 1 segment 2, Shuangao lacewing virus 2, and Tacheng tick virus 8.
++
++## Reasoning
++
++The most scientifically informative contrast is not simply that the dataset contains viral sequences, but that it juxtaposes complete multi-segment arthropod-virus genomes with much longer unsegmented polyprotein CDS records. The five four-segment viruses show a repeated genome architecture despite coming from different named hosts, while the polyprotein records show far broader genome length and GC variation. This suggests the dataset can be used to test whether conserved segmentation patterns distinguish one coherent viral genome strategy from the diverse long-polyprotein viruses.
++
++## Top scientific question
++
++Do the complete four-segment arthropod viral genomes in `nuccore_reported_viral_sequences.fasta` share a conserved segment-length and nucleotide-composition architecture that distinguishes them from the long polyprotein CDS viruses?
++
++## Why this question is testable on the provided dataset
++
++The FASTA headers directly label segment numbers and polyprotein CDS records, allowing records to be grouped without external metadata. The nucleotide sequences allow segment lengths, total genome sizes, GC content, ambiguous-base counts, and terminal sequence patterns to be computed for every record. These features are sufficient to compare within-virus segment architecture, between-virus conservation among the five segmented genomes, and the contrast between segmented complete sequences and long polyprotein CDS entries.
+
+2026-05-24T05:10:26.163299Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:10:26.164539Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:10:26.165023Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:10:26.165481Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+exec
+/bin/zsh -lc 'find . -maxdepth 2 -type f | sort' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+ succeeded in 0ms:
+./INSTRUCTIONS.md
+./_debug/codex.err
+./_debug/codex.out
+./agent_questions.json
+./checklist.json
+./data/nuccore_reported_viral_sequences.fasta
+./info.json
+./report/report.md
+
+2026-05-24T05:10:34.931853Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+exec
+/bin/zsh -lc "python3 -m json.tool agent_questions.json >/dev/null && python3 - <<'PY'
+import json
+from pathlib import Path
+obj=json.loads(Path('agent_questions.json').read_text())
+qs=obj['questions']
+print('question_count',len(qs))
+print('ranks',[q['rank'] for q in qs])
+print('distinct_questions',len({q['question'] for q in qs}))
+print('all_end_question_mark',all(q['question'].endswith('?') for q in qs))
+report=Path('report/report.md').read_text()
+print('rank1_in_report',qs[0]['question'] in report)
+print('report_words',len(report.split()))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814
+ succeeded in 0ms:
+question_count 5
+ranks [1, 2, 3, 4, 5]
+distinct_questions 5
+all_end_question_mark True
+rank1_in_report True
+report_words 462
+
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..6034e506a75aaa8bd064c38c03eb94b48b841209
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,119 @@
++{
++  "agent_id": "gpt-5.5-codex-harness",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "Do the complete four-segment arthropod viral genomes in `nuccore_reported_viral_sequences.fasta` share a conserved segment-length and nucleotide-composition architecture that distinguishes them from the long polyprotein CDS viruses?",
++      "rationale": "The FASTA contains 20 complete segment records from five viruses, and each of those viruses has exactly four segments with similar total lengths of about 10.4-11.0 kb. Those records contrast with 13 much longer `polyprotein gene, complete cds` records whose lengths span 9.7-26.3 kb and whose GC content is more variable. This makes genome architecture a central, testable biological feature of the upload rather than a metadata-only distinction.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "segment 1",
++        "segment 2",
++        "segment 3",
++        "segment 4",
++        "polyprotein gene, complete cds",
++        "sequence length",
++        "GC content"
++      ],
++      "expected_test": "Parse the FASTA headers to classify records as segmented or polyprotein CDS, compute length and GC content for each sequence, group segment records by virus name and segment number, and compare within-group conservation against the distribution of polyprotein CDS records.",
++      "scope_keywords": [
++        "segmented viruses",
++        "polyprotein CDS",
++        "genome architecture",
++        "GC content",
++        "arthropod viruses"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Are the five complete four-segment viruses in `nuccore_reported_viral_sequences.fasta` consistent with a shared segmented RNA-virus lineage based on conserved segment number, segment-size ordering, and terminal nucleotide patterns?",
++      "rationale": "Wuhan cricket virus, Wuhan flea virus, Shuangao insect virus 7, Wuhan aphid virus 1, and Wuhan aphid virus 2 all appear as complete four-segment genomes. Their segment sizes follow a similar ordering, with segment 1 usually the largest or near-largest, segment 2 the smallest, and segments 3-4 intermediate. The raw sequences also allow direct comparison of 5-prime and 3-prime terminal motifs as potential replication signals.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Wuhan cricket virus",
++        "Wuhan flea virus",
++        "Shuangao insect virus 7",
++        "Wuhan aphid virus 1",
++        "Wuhan aphid virus 2",
++        "5-prime terminal sequence",
++        "3-prime terminal sequence"
++      ],
++      "expected_test": "Group the 20 segment records by virus, compare segment counts and segment-length profiles, extract terminal nucleotides from each segment, and assess whether within- and between-virus terminal motifs are more conserved than expected from the sequence background.",
++      "scope_keywords": [
++        "four-segment genomes",
++        "terminal motifs",
++        "segment sizes",
++        "RNA virus lineage",
++        "replication signals"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Do host-associated virus names in `nuccore_reported_viral_sequences.fasta` correspond to systematic differences in viral genome size, segmentation status, or GC content?",
++      "rationale": "The headers contain host-associated names including cricket, flea, aphid, spider, tick, shark, mosquito, barnacle, fly, centipede, lacewing, and water strider. The sequence records show both short segmented genomes and long polyprotein CDS records across these names. Testing whether host labels align with architecture or composition would help determine whether host ecology is reflected in the reported viral genomes.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "virus names",
++        "strain labels",
++        "segment annotations",
++        "polyprotein gene, complete cds",
++        "sequence length",
++        "GC content"
++      ],
++      "expected_test": "Extract host-associated terms from FASTA headers, assign each record to segmented or polyprotein status, compute per-record and per-virus length and GC metrics, and compare those metrics across host-associated groups.",
++      "scope_keywords": [
++        "host association",
++        "genome size",
++        "segmentation",
++        "GC content",
++        "viral ecology"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are the long polyprotein CDS viruses in `nuccore_reported_viral_sequences.fasta` separable into compositionally distinct groups that may reflect different viral lineages or host-associated evolutionary pressures?",
++      "rationale": "The 13 polyprotein CDS records range from 9,653 nt to 26,315 nt and show a wide GC range from 34.26% to 56.12%. Outliers include high-GC Bole tick virus 4 and Wenling shark virus, and low-GC Sanxia water strider virus 6 and Wuhan centipede virus. This spread is large enough to support a focused composition-based comparison within the polyprotein subset.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "polyprotein gene, complete cds",
++        "Wenling shark virus",
++        "Bole tick virus 4",
++        "Sanxia water strider virus 6",
++        "Wuhan centipede virus",
++        "sequence length",
++        "GC content"
++      ],
++      "expected_test": "Filter records annotated as `polyprotein gene, complete cds`, compute length and nucleotide composition metrics, cluster or rank records by GC content and size, and compare resulting groups with virus names and host-associated terms in the headers.",
++      "scope_keywords": [
++        "polyprotein viruses",
++        "composition clusters",
++        "GC outliers",
++        "viral lineages",
++        "host pressure"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Can ambiguous nucleotides and compositional outliers in `nuccore_reported_viral_sequences.fasta` identify specific viral records that need targeted validation before comparative evolutionary analysis?",
++      "rationale": "Only 15 non-ACGT bases occur across 313,499 total bases, making ambiguity rare but localized. The affected records include Wuhan aphid virus 1 segment 2, Shuangao lacewing virus 2, and Tacheng tick virus 8, while GC-content extremes occur in Sanxia water strider virus 6 and Bole tick virus 4. These quality and composition signals can flag records whose influence on downstream comparative analysis should be tested.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Wuhan aphid virus 1 segment 2",
++        "Shuangao lacewing virus 2",
++        "Tacheng tick virus 8",
++        "Sanxia water strider virus 6",
++        "Bole tick virus 4",
++        "ambiguous bases",
++        "GC content"
++      ],
++      "expected_test": "Scan each FASTA sequence for non-ACGT characters, compute per-record ambiguity rates and GC content, identify outliers, and repeat key length/composition comparisons with and without flagged records.",
++      "scope_keywords": [
++        "sequence quality",
++        "ambiguous bases",
++        "GC outliers",
++        "validation",
++        "comparative genomics"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..01969c18357eb88b79a0893ab2b6ba203a09c7c7
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,23 @@
++# Scientific Question Report
++
++## Data summary
++
++The uploaded data consist of one FASTA file, `data/nuccore_reported_viral_sequences.fasta`, with 33 NCBI-style nucleotide records totaling 313,499 bases. Each header contains an accession, virus name, strain label, and either a segment annotation or a polyprotein CDS annotation. Twenty records are complete genomic segments from five named four-segment viruses: Wuhan cricket virus, Wuhan flea virus, Shuangao insect virus 7, Wuhan aphid virus 1, and Wuhan aphid virus 2. The remaining 13 records are long `polyprotein gene, complete cds` entries from viruses named after diverse hosts such as shark, spider, barnacle, fly, mosquito, lacewing, tick, centipede, cricket, and water strider.
++
++## Analysis
++
++The dataset has a strongly bimodal length distribution. The 20 segmented records are short, with a mean length of 2,687 nt and range of 1,845-3,170 nt, whereas the 13 polyprotein CDS records have a mean length of 19,981.5 nt and range of 9,653-26,315 nt. The five segmented viruses all have exactly four records, and their total assembled segment lengths are similar: 10,406-10,992 nt. Segment-length profiles are also ordered similarly across viruses, with segment 1 near 3.0-3.2 kb, segment 2 near 1.8-2.2 kb, and segments 3 and 4 near 2.7-2.9 kb.
++
++Base composition provides another comparison. Across all records, GC content ranges from 34.26% in Sanxia water strider virus 6 to 56.12% in Bole tick virus 4. Segmented records are narrower in GC content, spanning 38.43-47.15% with virus-level means of 40.29-45.89%, while polyprotein records span 34.26-56.12%. Sequence ambiguity is minimal: only 15 non-ACGT bases occur in the full FASTA, concentrated in Wuhan aphid virus 1 segment 2, Shuangao lacewing virus 2, and Tacheng tick virus 8.
++
++## Reasoning
++
++The most scientifically informative contrast is not simply that the dataset contains viral sequences, but that it juxtaposes complete multi-segment arthropod-virus genomes with much longer unsegmented polyprotein CDS records. The five four-segment viruses show a repeated genome architecture despite coming from different named hosts, while the polyprotein records show far broader genome length and GC variation. This suggests the dataset can be used to test whether conserved segmentation patterns distinguish one coherent viral genome strategy from the diverse long-polyprotein viruses.
++
++## Top scientific question
++
++Do the complete four-segment arthropod viral genomes in `nuccore_reported_viral_sequences.fasta` share a conserved segment-length and nucleotide-composition architecture that distinguishes them from the long polyprotein CDS viruses?
++
++## Why this question is testable on the provided dataset
++
++The FASTA headers directly label segment numbers and polyprotein CDS records, allowing records to be grouped without external metadata. The nucleotide sequences allow segment lengths, total genome sizes, GC content, ambiguous-base counts, and terminal sequence patterns to be computed for every record. These features are sufficient to compare within-virus segment architecture, between-virus conservation among the five segmented genomes, and the contrast between segmented complete sequences and long polyprotein CDS entries.
+
+2026-05-24T05:10:35.000322Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:10:35.000750Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:10:35.002012Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:10:35.002185Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-05-24T05:10:36.282964Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+codex
+Done. Created both required outputs:
+
+- [report/report.md](/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814/report/report.md)
+- [agent_questions.json](/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T130814/agent_questions.json)
+
+Validated `agent_questions.json` as JSON with exactly 5 distinct questions, ranks `1..5`, all ending in `?`, and confirmed the report includes the rank-1 question verbatim.
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..6034e506a75aaa8bd064c38c03eb94b48b841209
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,119 @@
++{
++  "agent_id": "gpt-5.5-codex-harness",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "Do the complete four-segment arthropod viral genomes in `nuccore_reported_viral_sequences.fasta` share a conserved segment-length and nucleotide-composition architecture that distinguishes them from the long polyprotein CDS viruses?",
++      "rationale": "The FASTA contains 20 complete segment records from five viruses, and each of those viruses has exactly four segments with similar total lengths of about 10.4-11.0 kb. Those records contrast with 13 much longer `polyprotein gene, complete cds` records whose lengths span 9.7-26.3 kb and whose GC content is more variable. This makes genome architecture a central, testable biological feature of the upload rather than a metadata-only distinction.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "segment 1",
++        "segment 2",
++        "segment 3",
++        "segment 4",
++        "polyprotein gene, complete cds",
++        "sequence length",
++        "GC content"
++      ],
++      "expected_test": "Parse the FASTA headers to classify records as segmented or polyprotein CDS, compute length and GC content for each sequence, group segment records by virus name and segment number, and compare within-group conservation against the distribution of polyprotein CDS records.",
++      "scope_keywords": [
++        "segmented viruses",
++        "polyprotein CDS",
++        "genome architecture",
++        "GC content",
++        "arthropod viruses"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Are the five complete four-segment viruses in `nuccore_reported_viral_sequences.fasta` consistent with a shared segmented RNA-virus lineage based on conserved segment number, segment-size ordering, and terminal nucleotide patterns?",
++      "rationale": "Wuhan cricket virus, Wuhan flea virus, Shuangao insect virus 7, Wuhan aphid virus 1, and Wuhan aphid virus 2 all appear as complete four-segment genomes. Their segment sizes follow a similar ordering, with segment 1 usually the largest or near-largest, segment 2 the smallest, and segments 3-4 intermediate. The raw sequences also allow direct comparison of 5-prime and 3-prime terminal motifs as potential replication signals.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Wuhan cricket virus",
++        "Wuhan flea virus",
++        "Shuangao insect virus 7",
++        "Wuhan aphid virus 1",
++        "Wuhan aphid virus 2",
++        "5-prime terminal sequence",
++        "3-prime terminal sequence"
++      ],
++      "expected_test": "Group the 20 segment records by virus, compare segment counts and segment-length profiles, extract terminal nucleotides from each segment, and assess whether within- and between-virus terminal motifs are more conserved than expected from the sequence background.",
++      "scope_keywords": [
++        "four-segment genomes",
++        "terminal motifs",
++        "segment sizes",
++        "RNA virus lineage",
++        "replication signals"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Do host-associated virus names in `nuccore_reported_viral_sequences.fasta` correspond to systematic differences in viral genome size, segmentation status, or GC content?",
++      "rationale": "The headers contain host-associated names including cricket, flea, aphid, spider, tick, shark, mosquito, barnacle, fly, centipede, lacewing, and water strider. The sequence records show both short segmented genomes and long polyprotein CDS records across these names. Testing whether host labels align with architecture or composition would help determine whether host ecology is reflected in the reported viral genomes.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "virus names",
++        "strain labels",
++        "segment annotations",
++        "polyprotein gene, complete cds",
++        "sequence length",
++        "GC content"
++      ],
++      "expected_test": "Extract host-associated terms from FASTA headers, assign each record to segmented or polyprotein status, compute per-record and per-virus length and GC metrics, and compare those metrics across host-associated groups.",
++      "scope_keywords": [
++        "host association",
++        "genome size",
++        "segmentation",
++        "GC content",
++        "viral ecology"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are the long polyprotein CDS viruses in `nuccore_reported_viral_sequences.fasta` separable into compositionally distinct groups that may reflect different viral lineages or host-associated evolutionary pressures?",
++      "rationale": "The 13 polyprotein CDS records range from 9,653 nt to 26,315 nt and show a wide GC range from 34.26% to 56.12%. Outliers include high-GC Bole tick virus 4 and Wenling shark virus, and low-GC Sanxia water strider virus 6 and Wuhan centipede virus. This spread is large enough to support a focused composition-based comparison within the polyprotein subset.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "polyprotein gene, complete cds",
++        "Wenling shark virus",
++        "Bole tick virus 4",
++        "Sanxia water strider virus 6",
++        "Wuhan centipede virus",
++        "sequence length",
++        "GC content"
++      ],
++      "expected_test": "Filter records annotated as `polyprotein gene, complete cds`, compute length and nucleotide composition metrics, cluster or rank records by GC content and size, and compare resulting groups with virus names and host-associated terms in the headers.",
++      "scope_keywords": [
++        "polyprotein viruses",
++        "composition clusters",
++        "GC outliers",
++        "viral lineages",
++        "host pressure"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Can ambiguous nucleotides and compositional outliers in `nuccore_reported_viral_sequences.fasta` identify specific viral records that need targeted validation before comparative evolutionary analysis?",
++      "rationale": "Only 15 non-ACGT bases occur across 313,499 total bases, making ambiguity rare but localized. The affected records include Wuhan aphid virus 1 segment 2, Shuangao lacewing virus 2, and Tacheng tick virus 8, while GC-content extremes occur in Sanxia water strider virus 6 and Bole tick virus 4. These quality and composition signals can flag records whose influence on downstream comparative analysis should be tested.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Wuhan aphid virus 1 segment 2",
++        "Shuangao lacewing virus 2",
++        "Tacheng tick virus 8",
++        "Sanxia water strider virus 6",
++        "Bole tick virus 4",
++        "ambiguous bases",
++        "GC content"
++      ],
++      "expected_test": "Scan each FASTA sequence for non-ACGT characters, compute per-record ambiguity rates and GC content, identify outliers, and repeat key length/composition comparisons with and without flagged records.",
++      "scope_keywords": [
++        "sequence quality",
++        "ambiguous bases",
++        "GC outliers",
++        "validation",
++        "comparative genomics"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..01969c18357eb88b79a0893ab2b6ba203a09c7c7
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,23 @@
++# Scientific Question Report
++
++## Data summary
++
++The uploaded data consist of one FASTA file, `data/nuccore_reported_viral_sequences.fasta`, with 33 NCBI-style nucleotide records totaling 313,499 bases. Each header contains an accession, virus name, strain label, and either a segment annotation or a polyprotein CDS annotation. Twenty records are complete genomic segments from five named four-segment viruses: Wuhan cricket virus, Wuhan flea virus, Shuangao insect virus 7, Wuhan aphid virus 1, and Wuhan aphid virus 2. The remaining 13 records are long `polyprotein gene, complete cds` entries from viruses named after diverse hosts such as shark, spider, barnacle, fly, mosquito, lacewing, tick, centipede, cricket, and water strider.
++
++## Analysis
++
++The dataset has a strongly bimodal length distribution. The 20 segmented records are short, with a mean length of 2,687 nt and range of 1,845-3,170 nt, whereas the 13 polyprotein CDS records have a mean length of 19,981.5 nt and range of 9,653-26,315 nt. The five segmented viruses all have exactly four records, and their total assembled segment lengths are similar: 10,406-10,992 nt. Segment-length profiles are also ordered similarly across viruses, with segment 1 near 3.0-3.2 kb, segment 2 near 1.8-2.2 kb, and segments 3 and 4 near 2.7-2.9 kb.
++
++Base composition provides another comparison. Across all records, GC content ranges from 34.26% in Sanxia water strider virus 6 to 56.12% in Bole tick virus 4. Segmented records are narrower in GC content, spanning 38.43-47.15% with virus-level means of 40.29-45.89%, while polyprotein records span 34.26-56.12%. Sequence ambiguity is minimal: only 15 non-ACGT bases occur in the full FASTA, concentrated in Wuhan aphid virus 1 segment 2, Shuangao lacewing virus 2, and Tacheng tick virus 8.
++
++## Reasoning
++
++The most scientifically informative contrast is not simply that the dataset contains viral sequences, but that it juxtaposes complete multi-segment arthropod-virus genomes with much longer unsegmented polyprotein CDS records. The five four-segment viruses show a repeated genome architecture despite coming from different named hosts, while the polyprotein records show far broader genome length and GC variation. This suggests the dataset can be used to test whether conserved segmentation patterns distinguish one coherent viral genome strategy from the diverse long-polyprotein viruses.
++
++## Top scientific question
++
++Do the complete four-segment arthropod viral genomes in `nuccore_reported_viral_sequences.fasta` share a conserved segment-length and nucleotide-composition architecture that distinguishes them from the long polyprotein CDS viruses?
++
++## Why this question is testable on the provided dataset
++
++The FASTA headers directly label segment numbers and polyprotein CDS records, allowing records to be grouped without external metadata. The nucleotide sequences allow segment lengths, total genome sizes, GC content, ambiguous-base counts, and terminal sequence patterns to be computed for every record. These features are sufficient to compare within-virus segment architecture, between-virus conservation among the five segmented genomes, and the contrast between segmented complete sequences and long polyprotein CDS entries.
+
+2026-05-24T05:10:39.559517Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+tokens used
+42,615

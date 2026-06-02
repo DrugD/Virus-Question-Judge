@@ -1,0 +1,18 @@
+Both files are saved. Here's a summary of what was produced:
+
+---
+
+## Summary
+
+**Data analysed:**
+- `MOESM1_ESM.pdf` — Life Sciences Reporting Summary confirming this is a Chordata-wide metatranscriptomic virus-discovery study (PI: Yong-Zhen Zhang, Nature 2018)
+- `MOESM2_ESM.xlsx` — 126 sequencing libraries (~806 Gbp total) from 186+ vertebrate species across 6 host classes
+- `MOESM3_ESM.xlsx` — 270 novel/divergent viral sequences across 20+ virus families
+
+**Key statistics computed:**
+1. Astroviridae (65) > Picornaviridae (46) > Caliciviridae (24) > Influenza (18) > Hepacivirus (15) by count
+2. 67% of viruses share <40% aa identity with known viruses (mean 38.4%) — deeply novel
+3. Three influenza-like viruses in fish (complete 8-segment genome), frog, and hagfish — unprecedented host range
+4. All 15 hepaciviruses are exclusively liver-tropic across 450+ Myr of host evolution
+
+**Top question (rank 1):** Whether the complete 8-segment influenza-like virus in spiny eel + partial genomes in toad and hagfish (accessions MG600037–MG600054) resolve the aquatic vertebrate origin of Orthomyxoviridae and the ancestral segment-count history — directly testable via phylogenomic analysis of the provided accessions.

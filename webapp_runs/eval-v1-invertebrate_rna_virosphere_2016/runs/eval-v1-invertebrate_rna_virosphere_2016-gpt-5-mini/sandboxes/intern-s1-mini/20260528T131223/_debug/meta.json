@@ -1,0 +1,28 @@
+{
+  "agent_id": "intern-s1-mini",
+  "model": "intern-s1-mini",
+  "base_url": "https://chat.intern-ai.org.cn/api/v1",
+  "max_iters": 30,
+  "iters": 3,
+  "tool_call_count": 2,
+  "files_written": [],
+  "iters_history": [
+    {
+      "iter": 1,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "list_files"
+      ],
+      "content_len": 78
+    },
+    {
+      "iter": 2,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "read_file"
+      ],
+      "content_len": 2
+    }
+  ],
+  "fatal_error": "BadRequestError: Error code: 400 - {'error': {'type': 'invalid_request_error', 'code': '-20009', 'message': 'Failed to parse fc related info to json format!', 'param': None}}"
+}

@@ -1,0 +1,20 @@
+Both files are saved. Here's a summary of what was produced:
+
+---
+
+## Summary
+
+### Dataset
+The data is from the paper *"Cryptic and abundant marine viruses at the evolutionary origins of Earth's RNA virome"* — a Tara Oceans RNA virome study with:
+- **44,779 RdRP-bearing contigs** from 121 sampling sites (2009–2013)
+- **5,504 vOTU clusters** (90% ANI, 80% coverage)
+- **209,588 RdRP footprint sequences** (Tara + Genbank + Wolf 2020)
+- **20,578 domain annotations** across 5,122 unique contigs, 3 depth layers (SUR/DCM/MES)
+
+### Key analytical findings
+1. **Depth stratification**: Picorna-like viruses (RdRP_3) are 2.25× more abundant at the DCM (4.26%) than at the surface (1.89%); Birna-like viruses show the inverse pattern
+2. **Novelty**: Tara sequences represent 55.8% of 50%-identity RdRP centroids despite being only 21.4% of the raw sequences — indicating novel sequence space
+3. **Genome completeness**: 641 contigs (12.5%) encode both RdRP and capsid domains, enabling taxonomic placement
+
+### Top question (rank 1)
+Whether depth-layer gradients (SUR/DCM/MES) predict the relative abundance of Picorna-like vs. Birna-like RNA virus lineages across the 5,504 Tara Oceans vOTUs, independent of geographic region — directly testable with the functional annotation table and vOTU metadata.

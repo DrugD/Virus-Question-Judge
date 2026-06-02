@@ -1,0 +1,14 @@
+Both files are saved. Here's a summary of what was produced:
+
+---
+
+**Dataset:** The `data/` directory contains a reference to a remote Zenodo archive (`RVMT_Zenodo_V4.zip`, ~9.4 GB, not downloaded). The actual corpus used is the 47-paper collection at `/Users/likun/Desktop/Patterns-Survey/` — a systematic literature survey of LLM-based agent systems for drug discovery (2023–2026), with PDFs and extracted text files.
+
+**Key findings from analysis:**
+- **Architecture**: Multi-agent (66%), closed-loop (64%), memory (57%), RAG (53%) are dominant patterns; governance/constraint mechanisms appear in only 36% despite 87% of papers naming reliability/hallucination as the top concern
+- **Tasks**: Molecular generation (51%), wet-lab (45%), virtual screening (32%)
+- **Safety gap**: 87% raise hallucination concerns; only 36% propose concrete constraint enforcement
+
+**Output files:**
+- `report/report.md` — 5-section technical report (~600 words) covering data summary, three derived statistics, reasoning, top question, and testability argument
+- `agent_questions.json` — 5 ranked questions, with rank 1 targeting the governance architecture → target-level success rate causal question (grounded in CACM's +36.4% TSR result, Mozi's PharmaBench, and LIDDiA's 30-target benchmark)

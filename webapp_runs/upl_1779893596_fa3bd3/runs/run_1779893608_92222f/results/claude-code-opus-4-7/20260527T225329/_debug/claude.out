@@ -1,0 +1,11 @@
+Both files are saved and validated.
+
+**Summary**
+
+- `report/report.md` — technical report (Data summary, Analysis with 235 libraries, 66% reptile / 41% liver / French Guiana-China-USA dominance, Reasoning, Top scientific question, Testability section).
+- `agent_questions.json` — 5 distinct ranked candidates:
+  1. Joint effect of host class × tissue × geography on recoverable virus diversity/composition (strongest, multivariate, uses entire table).
+  2. Cryptic Rhabdoviridae / mammal-reptile lyssavirus host jumps (builds on Suppl. Fig. 2).
+  3. Recombination breakpoint homology between herptile Hepeviridae and Astroviridae (Suppl. Fig. 3).
+  4. Newt influenza PB1 phylogenetic placement and amphibian ancestry of Orthomyxoviridae (Suppl. Fig. 4).
+  5. Tissue-compartmentalisation of viruses across the controlled French Guiana caecilian multi-tissue sub-cohort.

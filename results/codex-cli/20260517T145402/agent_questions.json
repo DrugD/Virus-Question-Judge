@@ -1,0 +1,24 @@
+{
+  "agent_id": "gpt-5.2-codex",
+  "workspace_id": "Life_Virus_001",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "How does petabase-scale mining of RdRP fragments reveal geographically concentrated yet taxonomically unassigned RNA virus diversity that falls below 40% identity to curated references?",
+      "rationale": "Across 53 fragments, 86.8% align below 40% identity and a plurality (10/53) only map to unclassified RdRP profiles, indicating a persistent reference gap. Three quarters (24/32) of candidate clusters flag as novel, with low-identity clusters distributed across arthropod transcriptomes, plant metatranscriptomes, and aquatic viromes, particularly from North America and metadata-poor runs. Given the upstream screen spans ~5.7M runs and 131k candidate novel sOTUs, these signals imply that viral polymerase novelty concentrates in specific sources and regions that curated databases do not yet cover.",
+      "data_support": [
+        "alignment_hits",
+        "candidate_sotu_clusters",
+        "runinfo_subset"
+      ],
+      "expected_test": "Intersect run-level sources and regions with RdRP alignment identity and sOTU novelty flags to quantify which sampling contexts drive the <40% identity fraction.",
+      "scope_keywords": [
+        "RdRP",
+        "RNA virus",
+        "petabase-scale",
+        "novelty",
+        "public sequencing"
+      ]
+    }
+  ]
+}

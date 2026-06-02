@@ -1,0 +1,18 @@
+Both files are saved and validated. Here's a summary of what was produced:
+
+---
+
+## Summary
+
+**Data analyzed:** `data/43705_2022_180_MOESM1_ESM.docx` — supplementary materials from a herpetofauna viral metagenomics study. Contains:
+- **Supplementary Table 1**: 235 RNA-Seq samples across 122 species (40 amphibian, 82 reptile) from 29 countries
+- **Supplementary Figures 1–5**: Phylogenetic trees for 6 novel viral families discovered by BLAST mining of herptile transcriptomes (Bunyavirales, Lyssavirus/Rhabdoviridae, Hepeviridae, Astroviridae, Orthomyxoviridae, Caliciviridae)
+
+**Key statistics computed:**
+- 79 amphibian samples / 156 reptile samples; liver is dominant tissue (97/235 = 41%)
+- 39/235 samples (17%) used polyA selection — a technical confounder for viral detection
+- *Alligator mississippiensis* liver (SRR629636) yielded an alligator-associated **rabies lyssavirus** — the study's most exceptional finding (rabies lyssaviruses were previously considered mammal-restricted)
+
+**Files written:**
+- `report/report.md` — ~600-word technical report with data summary, 5 derived statistics, reasoning, top question, and testability rationale
+- `agent_questions.json` — 5 ranked questions; rank 1 (best) asks whether the alligator-associated rabies lyssavirus represents a novel species below the ICTV 80% nucleoprotein identity threshold and whether related sequences exist in other crocodilian transcriptomes in the dataset

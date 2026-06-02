@@ -1,0 +1,4 @@
+Both files are saved and validated. Summary:
+
+- **`report/report.md`** — Data summary, three derived statistics (8,176 contigs across 388 pools / 5 organs / 5 bat families; 40-fold `tvs` variance across a clear climate gradient; 14 IQ-TREE order-level phylogenies with the standard mafft→trimAl→IQ-TREE pipeline), reasoning, the verbatim top-1 question, and a testability paragraph.
+- **`agent_questions.json`** — 5 distinct ranked questions, all referencing actual files (`Meta_data_for_ecological_modeling/{total,intestine,lung}.txt`, `BtCN-Virome_full_spectrum.fna`, `ML_Phylo/*.tar.gz`, `Bats/CYTB.fasta`, `Bats/COI.fasta`, diet barcode FASTAs, and `RdRp_motif_collection.xlsx`). Rank 1 is the integrative climate × host-family × organ-stratified virome-richness + phylogenetic-placement question; ranks 2–5 cover lung-specific mammal-tropic clade enrichment, gut diet–virus links, motif-based novel-order discovery, and ZOVER vs BtCN codiversification.

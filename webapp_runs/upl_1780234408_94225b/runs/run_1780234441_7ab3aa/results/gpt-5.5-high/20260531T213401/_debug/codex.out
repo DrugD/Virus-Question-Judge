@@ -1,0 +1,6 @@
+Done. Created and validated:
+
+- `report/report.md`
+- `agent_questions.json`
+
+`agent_questions.json` has exactly 5 distinct ranked questions, ranks 1 through 5, and the report includes the rank-1 question verbatim.

@@ -1,0 +1,9 @@
+Both files are saved. Here's a summary of what was produced:
+
+---
+
+**Dataset:** `nuccore_reported_viral_sequences.fasta` — 1,801 metagenomically assembled viral genome sequences from 145 tick pools (TIGMIC isolates) sampled across ≥50 Chinese cities. The file spans 362 unique virus species across 14+ families, with 12.4 viruses per pool on average and extreme co-infection in some pools (up to 179 viruses in one pool).
+
+**Top question (rank 1):** Whether TIGMIC pools carrying **Phenuiviridae** sequences show non-random co-occurrence with Nairoviridae, Flaviviridae, and Orthomyxoviridae — testing for co-vectoring of multiple medically important tick-borne virus families in the same individual ticks. This is directly computable from the FASTA headers linking viruses to shared TIGMIC pool IDs.
+
+**Ranks 2–5** cover: latitudinal gradient in tick virome richness, phylogenetic classification of novel Flaviviridae toward TBE vs. insect-specific clades, regional virome community divergence (Hulunbuir vs. Zhangzhou), and geographic risk distribution of Nairoviridae (CCHF-family) sequences.

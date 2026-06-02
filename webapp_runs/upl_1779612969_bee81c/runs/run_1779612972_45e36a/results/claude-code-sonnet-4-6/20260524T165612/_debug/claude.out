@@ -1,0 +1,26 @@
+Both files are written. Here's a summary of what was done:
+
+---
+
+## Run complete
+
+**Files produced:**
+- `report/report.md` (~5.7 KB)
+- `agent_questions.json` (~8.0 KB)
+
+**Dataset summary (5 files):**
+| File | Content |
+|---|---|
+| `BtCN-Virome_full_spectrum_contigs.tar.gz` | 8,176 viral metagenomic contigs from 405 bat pool samples across China |
+| `RdRp_motif_collection.xlsx` | Conserved RdRp motifs A–E across 13 viral orders |
+| `CytB-COI-ITS.tar.gz` | >700,000 host barcode sequences (bat CytB/COI, arthropods, plants) |
+| `Meta_data_for_ecological_modeling.zip` | 98-sample ecological table: viral richness (tvs) + 9 climate/land covariates + bat family/tissue |
+| `ML_Phylo.zip` | IQ-TREE maximum-likelihood RdRp trees for 13 viral orders (99–1,250 seqs each) |
+
+**Key findings driving the questions:**
+1. **Landscape heterogeneity (H10) is the strongest positive predictor of bat viral richness** (r = +0.228 overall; r = 0.595 in intestine, 0.827 in brain samples)
+2. **Rhinolophidae** show the highest mean tvs (2.543 vs. 1.607–2.196 for other families)
+3. **Intestinal tissue** consistently has highest viral richness (mean tvs = 2.664 vs. 1.356 in brain)
+4. 13 established viral-order phylogenies + 8,176 novel contigs enable evolutionary placement of novel bat viruses
+
+**Rank-1 question** targets the H10–tvs relationship with multi-way controls (family, tissue, pool size), including an explicit test in Rhinolophidae intestinal pools—the most data-dense and epidemiologically relevant stratum.

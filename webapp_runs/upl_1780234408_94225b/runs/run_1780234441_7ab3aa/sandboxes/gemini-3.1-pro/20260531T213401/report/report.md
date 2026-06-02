@@ -1,0 +1,16 @@
+# Report
+
+## Data summary
+The provided dataset consists of a single FASTA file, `data/nuccore_reported_viral_sequences.fasta`, which contains the complete nucleotide sequences of several newly identified, multi-segmented insect viruses. Specifically, the dataset includes the genomic segments of the Wuhan cricket virus strain WHXS-1 (segments 1-4), Wuhan flea virus strain WHZM (segments 1-4), Shuangao insect virus 7 strain SKC (segments 1-4), Wuhan aphid virus 1 strain WHYC-1 (segments 1-4), and Wuhan aphid virus 2 strain WHYC-2 (segments 1-2). These sequences represent the full genomic complement (or partial, in the case of WHYC-2) of these viruses, isolated from diverse arthropod hosts including crickets, fleas, and aphids.
+
+## Analysis
+An initial examination of the FASTA file reveals that these viruses possess multi-segmented genomes, a characteristic feature of several viral families (e.g., *Orthomyxoviridae*, *Bunyavirales*). The availability of complete sequences for multiple segments across different viral species provides a rich resource for comparative genomics. The sequences can be analyzed to identify open reading frames (ORFs), predict protein products, and examine non-coding regions. Furthermore, the presence of multiple viral species from different hosts allows for the investigation of evolutionary relationships, host adaptation, and potential reassortment events. The terminal ends of the segments are of particular interest, as they often contain conserved regulatory elements essential for viral replication and packaging.
+
+## Reasoning
+Given the multi-segmented nature of these genomes, one of the most critical aspects of their viral life cycle is the coordinated packaging of all necessary segments into a single virion to ensure infectivity. In many multi-segmented RNA viruses, this process is mediated by specific packaging signals located in the untranslated regions (UTRs) at the 5' and 3' termini of the genomic segments. By comparing the terminal sequences of the different segments within a single virus (e.g., segments 1-4 of the Wuhan cricket virus), it is possible to identify conserved sequence motifs or secondary RNA structures that serve as these packaging signals. This is a fundamental biological question that can be directly addressed using the provided sequence data.
+
+## Top scientific question
+Do the terminal untranslated regions (UTRs) of the different genomic segments within a single multi-segmented insect virus (e.g., Wuhan cricket virus) share conserved secondary structures or sequence motifs that could serve as segment-specific packaging signals?
+
+## Why testable on this dataset
+This question is highly testable on the provided dataset because the FASTA file contains the complete, full-length sequences of all segments for several of the viruses (e.g., Wuhan cricket virus, Wuhan flea virus). This completeness ensures that the extreme 5' and 3' terminal UTRs are present in the data. A researcher can extract these terminal sequences, perform multiple sequence alignments to identify conserved nucleotide motifs, and use RNA folding algorithms to predict conserved secondary structures across the different segments of a given virus.

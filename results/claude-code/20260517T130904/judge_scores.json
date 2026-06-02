@@ -1,0 +1,103 @@
+{
+  "composite_score": 1.0,
+  "composite_score_raw": 5.0,
+  "passed": true,
+  "threshold": 0.6,
+  "dimensions": [
+    {
+      "id": "question_matching",
+      "weight": 0.4,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The candidate question matches all core pillars: petabase-scale mining of public sequencing archives, explicit RdRP-targeted search, uncovering extensive hidden RNA-virus diversity, and emphasizing absence from curated viral reference databases. Wording and scientific focus are essentially equivalent to the groundtruth, with no shift in scope or intent. This aligns precisely with anchor 5."
+    },
+    {
+      "id": "novelty",
+      "weight": 0.15,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The candidate explicitly frames a massive, largely unexplored RNA virome in public archives, emphasizes petabase-scale scope, and highlights that this diversity is absent from curated reference databases. It clearly identifies a systematic reference-database limitation and a large-scale viral discovery frontier, matching the highest novelty anchor. The question goes beyond routine data processing to articulate a major unexplored RNA virome and database blind spot."
+    },
+    {
+      "id": "importance",
+      "weight": 0.15,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question directly targets petabase-scale mining of public sequencing archives, focusing on hidden RNA-virus/RdRP diversity missing from curated references. This has clear implications for global virome characterization, viral evolution, and improving pathogen surveillance and databases. It is not limited to a narrow lineage or small subset of samples but instead concerns the large, undiscovered RNA virosphere in public data, aligning best with the broadest significance anchor."
+    },
+    {
+      "id": "testability",
+      "weight": 0.1,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question is directly testable with the blind dataset: it centers on RdRP-based detection, petabase-scale archive mining, novelty relative to reference databases, and source distribution. The candidate’s own expected tests match available analyses: coverage of translated search, RdRP hit validation (motifs), sOTU clustering, similarity to references, and source/host metadata. This aligns exactly with the capabilities implied by the blind-data features and analysis framework."
+    },
+    {
+      "id": "data_support",
+      "weight": 0.1,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question is tightly grounded in the data: it explicitly invokes petabase-scale mining, RdRP-targeted translated search, extensive hidden RNA-virus diversity, and absence from curated reference databases. The rationale further references low percent identity to nearest references, high novelty flags, large candidate sOTU counts, and archive-scale data volume and sources. This matches the strongest anchor, combining scale, RdRP evidence, novelty metrics, and reference gaps."
+    },
+    {
+      "id": "specificity",
+      "weight": 0.1,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The candidate explicitly specifies petabase-scale mining of public sequencing archives, focuses on RdRP as the marker, and aims to reveal hidden RNA-virus diversity absent from curated viral reference databases. It clearly matches all core pillars of the groundtruth, including archive scale, marker, hidden virome, and reference-database gap, with clear scientific implications. This aligns best with the level-5 anchor."
+    }
+  ],
+  "refusal_triggered": false,
+  "flags_hit": [],
+  "candidate": {
+    "agent_id": "claude-sonnet-4.5-20250929",
+    "question": "Can systematic petabase-scale RdRP-targeted mining of public sequencing archives reveal extensive hidden RNA-virus diversity that is absent from curated viral reference databases?",
+    "rationale": "The blind data shows 86.8% of RdRP fragments exhibit <40% identity to nearest references, and 78.1% of candidate sOTU clusters are flagged as novel. When extrapolated to the full upstream search (5.7M runs, 10.2 petabases, 131,957 candidate novel sOTUs), this indicates that public sequencing archives contain a massive hidden RNA virome that curated databases have not captured. RdRP provides a universal marker enabling systematic detection across divergent lineages.",
+    "data_support": [
+      "percent_identity_to_nearest_reference",
+      "novelty_flag",
+      "nearest_reference_family",
+      "candidate_unique_novel_rdrp_sotus",
+      "searched_data_volume",
+      "translated_runs_screened",
+      "motif_strength",
+      "sample_source",
+      "host_or_environment"
+    ],
+    "expected_test": "The question is testable by quantifying: (1) the fraction of RdRP-containing sOTUs that fall below standard similarity thresholds to curated viral references, (2) the absolute scale of novel candidates discovered across petabase-scale translated search, (3) the distribution of novel diversity across diverse biological sources and environments captured in public archives, and (4) the validation of RdRP catalytic motifs confirming genuine polymerase fragments rather than false positives.",
+    "scope_keywords": [
+      "RdRP",
+      "RNA virus",
+      "petabase-scale",
+      "public sequencing archives",
+      "hidden diversity",
+      "reference database gap",
+      "translated search",
+      "sOTU",
+      "viral discovery",
+      "metagenomics"
+    ]
+  },
+  "agent_id": "claude-sonnet-4.5-20250929",
+  "workspace_id": "Life_Virus_001",
+  "judge_model": "gpt-5.1",
+  "judge_provider": "openai"
+}

@@ -1,0 +1,21 @@
+Both output files have been saved. Here's a summary of what was produced:
+
+---
+
+## Summary
+
+### Data findings
+
+The dataset is from a study of the RNA virome of the Pacific oyster *Magallana gigas* sampled at Luchao Port, Shanghai across 13 months (June 2016 – July 2017). Key findings:
+
+- **156 viral RNA contigs** across 14 taxonomic groups; **Marnaviridae dominates** (68 contigs, 60.9% of TPM) followed by Picobirnaviridae (24 contigs, 28.2%)
+- **2 universal core viruses** — k141_147375 (Picobirna) and k141_94377 (Marna) — detected in all 17 individual oyster libraries
+- **31/156 oyster viruses also detected in adjacent Yangshan harbor seawater**, with mean oyster TPM ~72% higher for seawater-shared vs. seawater-absent viruses
+- RdRp BLAST: median best-hit identity = 0.64; 39/146 contigs <50% identity (potentially novel species)
+- 9 RNA virus orders/families represented in phylogenetic alignment FASTAs
+
+### Top question (rank 1)
+
+> Do the high-abundance Marnaviridae and Picobirnaviridae RNA viruses detected in Yangshan harbor seawater serve as the environmental reservoir driving persistent, near-universal infection of *Magallana gigas* at Luchao Port across 13 months of seasonal sampling?
+
+This was chosen because it ties together the core observation (two universally prevalent viruses), the environmental compartment data (seawater TPM), and the longitudinal design — and has direct aquaculture/food-safety significance.

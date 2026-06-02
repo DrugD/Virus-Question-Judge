@@ -1,0 +1,4 @@
+Both files are saved and validated:
+
+- **`report/report.md`** — Technical report covering data summary (RVMT V4 Zenodo pointer, 9.4 GB), three derived observations (scale, modality balance, taxonomic coverage), reasoning, the verbatim top question, and testability justification.
+- **`agent_questions.json`** — 5 distinct ranked entries. Rank 1 targets the ecological predictors of RNA bacteriophage clades (the central novel claim of the underlying RVMT publication); ranks 2–5 cover diversity saturation, recombination at phylum boundaries, codon-usage host inference, and biome-stratified accessory-gene enrichment — all grounded in features actually packaged in the V4 archive.

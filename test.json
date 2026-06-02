@@ -1,0 +1,46 @@
+{
+  "agent_id": "test",
+  "workspace_id": "user_uploaded",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "Does xxx AI cat in this dataset?",
+      "rationale": "Two-to-four sentences citing specific files / fields ...",
+      "data_support": ["data/foo.csv"],
+      "expected_test": "How this is answerable from the data",
+      "scope_keywords": ["cat","girl","boy","AI"]
+    },
+    {
+      "rank": 2,
+      "question": "Does xxx AI 2 cat in this dataset?",
+      "rationale": "Two-to-four sentences citing specific files / fields ...",
+      "data_support": ["data/foo.csv"],
+      "expected_test": "How this is answerable from the data",
+      "scope_keywords": ["cat","girl","boy","AI"]
+    },
+    {
+      "rank": 3,
+      "question": "Does xxx AI 3 cat in this dataset?",
+      "rationale": "Two-to-four sentences citing specific files / fields ...",
+      "data_support": ["data/foo.csv"],
+      "expected_test": "How this is answerable from the data",
+      "scope_keywords": ["cat","girl","boy","AI"]
+    },
+    {
+      "rank": 4,
+      "question": "Does xxx AI 4 cat in this dataset?",
+      "rationale": "Two-to-four sentences citing specific files / fields ...",
+      "data_support": ["data/foo.csv"],
+      "expected_test": "How this is answerable from the data",
+      "scope_keywords": ["cat","girl","boy","AI"]
+    },
+    {
+      "rank": 5,
+      "question": "Does xxx AI 5 cat in this dataset?",
+      "rationale": "Two-to-four sentences citing specific files / fields ...",
+      "data_support": ["data/foo.csv"],
+      "expected_test": "How this is answerable from the data",
+      "scope_keywords": ["cat","girl","boy","AI"]
+    }
+  ]
+}

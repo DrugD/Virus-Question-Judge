@@ -1,0 +1,11 @@
+Both output files have been saved. Here's a summary of what was produced:
+
+---
+
+**Data found:** 10 FASTA files from a fungal/invertebrate viral metagenome ("Hirai", deposited 2021 as LC651635–LC651651). The dataset contains:
+- **194 RdRp-bearing contigs** annotated across 16 virus lineages, dominated by Partiti-like (42.3%) and Toti-like (19.1%) — consistent with a fungal host
+- **7 multi-sequence phylogenetic alignments** placing 33 Hirai contigs among 205 known reference sequences across Chrysoviridae, Narnaviridae, Picornavirales, Partitiviridae, Pocobirnaviridae, Reoviridae, and Totiviridae
+- **37 no-BLAST-hit contigs** with no family assignment, including two with identifiable viral proteins (capsid + hypothetical protein)
+- **17 NCBI-deposited complete sequences** as quality benchmarks
+
+**Top question (rank 1):** Whether the 37 no-hit contigs represent genuinely novel RNA virus families phylogenetically outside all 16 known lineages in the sample — directly testable by inserting these sequences into the 7 provided reference alignments and computing placement vs. exclusion.

@@ -1,0 +1,1607 @@
+Reading additional input from stdin...
+2026-05-24T07:27:27.425848Z ERROR codex_models_manager::manager: failed to refresh available models: stream disconnected before completion: failed to decode models response: missing field `models` at line 1 column 74891; body: {"data":[{"id":"gpt-4.1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-05-13","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-08-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-11-20","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-2024-07-18","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-tts","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-max","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-mini","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.2","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-mini","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-nano","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-none","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-image-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-realtime","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-2025-08-28","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-large","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-small","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-ada-002","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"whisper-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gemini-2.5-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-preview-09-2025","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-pro-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-32768","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"claude-haiku-4-5-20251001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-haiku-4-5-20251001-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"dall-e-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"dall-e-3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gemini-2.0-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-thinking-exp","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gpt-3.5-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-0125","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-16k","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-instruct","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-2024-04-09","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-transcribe","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-transcribe-diarize","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-2026-03-05","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-image-1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-3-fast-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4-0709","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4.20-0309-reasoning","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4.3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"imagen-4.0-fast-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-ultra-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"o1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-pro-2025-03-19","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-pro-2025-06-10","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-2025-04-16","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"omni-moderation-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"sora-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-r1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-v3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"veo-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-fast-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"bailian/deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"bailian/deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-r1","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-0528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-v3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax/MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qvq-72b-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-edit-plus-2025-12-15","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"qwen-max-0403","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-longcontext","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0112","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1125","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1127","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1220","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-12-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-1101","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-2025-02-11","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1119","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1230","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-08","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-ocr-2025-11-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct-1m","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-omni-7b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-32b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-480b-a35b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-07-22","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2026-01-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-embedding","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-397b-a17b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash-2026-02-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus-2026-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.7-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.7-max-2026-05-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwq-32b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwq-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"text-embedding-v4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.0-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"ascend-tribe/pangu-pro-moe","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-en-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-zh-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"ByteDance-Seed/Seed-OSS-36B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-OCR","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-0528-Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-mini-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ring-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-embedding-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-reranker-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/MiniMaxAI/MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-VL-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-4.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-14B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct-128K","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-480B-A35B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-235B-A22B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-35B-A3B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-397B-A17B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-9B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/QwQ-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun-ai/Step-3.5-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-A13B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-MT-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4.1V-9B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5-Air","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5V","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-250528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-1-terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-2-251201","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-250324","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-m-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-lite-250315","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-lite-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-240915","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-250515","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-text-240715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-251215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-pro-32k-character-241215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250828","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250715","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-vision-250815","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-8-251228","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-code-preview-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-lite-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-mini-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-pro-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-code-preview-251028","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-250528","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-fast-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-3-0-t2i-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-0-250828","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-5-251128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-5-0-260128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"M2-her","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.1","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-Text-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4-voice","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.6","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.6v","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.7-FlashX","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5v-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-120b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0711-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0905-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking-turbo","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-turbo-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.5","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-thinking-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Kling-Video-O1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-omni","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-128k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-32k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-8k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"step-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"alibaba/tongyi-deepresearch-30b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek/deepseek-v3.2-speciale","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemini-embedding-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-3-27b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-26b-a4b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-31b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-coder","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionai/ling-2.6-1t","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.2-11b-vision-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-405b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.3-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-2-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-4-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4-multimodal-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-24b-instruct-2501","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-3.1-24b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2:online","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-120b","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-14b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-2b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"or/qwen3.5-9b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"perplexity/sonar-reasoning-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus-preview:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/hy3-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-vision-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-mini-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4-fast","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"xiaomi/mimo-v2-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]}],"object":"list","success":true}
+OpenAI Codex v0.130.0
+--------
+workdir: /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+model: gpt-5.5-high
+provider: newapi
+approval: never
+sandbox: danger-full-access
+reasoning effort: none
+reasoning summaries: none
+session id: 019e58e1-b4c4-78e3-aa94-d8dd7a8262cb
+--------
+user
+Read INSTRUCTIONS.md in the current working directory. Read the agent-visible files under data/. Produce exactly two files in the working directory: report/report.md and agent_questions.json (schema in info.json). target_study/ does not exist in this sandbox - do not look for it.
+
+CRITICAL: agent_questions.json MUST contain exactly 5 distinct candidate questions (rank 1..5, no duplicates). The judge scores Pass@1 (rank-1 only, 100% / 0%) and Pass@5 (position-weighted: rank-i pass adds 1+w_i where w=(5,4,3,2,1), divide by 20). Put your strongest answer at rank 1, plausible alternatives at 2..5.
+
+Stop only when both output files exist on disk.
+codex
+I’ll read the task instructions and the visible data files first, then write the two requested outputs in place.
+exec
+/bin/zsh -lc 'ls -la && find data -maxdepth 2 -type f -print' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+ succeeded in 0ms:
+total 24
+drwxr-xr-x@  7 likun  wheel   224 May 24 15:27 .
+drwxr-xr-x@ 13 likun  wheel   416 May 24 15:27 ..
+-rw-r--r--@  1 likun  wheel  3868 May 23 17:46 INSTRUCTIONS.md
+drwxr-xr-x@  4 likun  wheel   128 May 24 15:27 _debug
+-rw-r--r--@  1 likun  wheel     2 May 24 15:27 checklist.json
+drwxr-xr-x@  3 likun  wheel    96 May 24 15:27 data
+-rw-r--r--@  1 likun  wheel  1400 May 24 15:27 info.json
+data/nuccore_reported_viral_sequences.fasta
+
+exec
+/bin/zsh -lc "pwd && rg --files -g 'INSTRUCTIONS.md' -g 'info.json' -g 'data/**'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+ succeeded in 0ms:
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+INSTRUCTIONS.md
+data/nuccore_reported_viral_sequences.fasta
+info.json
+
+codex
+I found the instruction file, schema, and one agent-visible FASTA under `data/`. I’m reading those now and will avoid touching anything under `target_study/`.
+exec
+/bin/zsh -lc "sed -n '1,220p' INSTRUCTIONS.md" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+exec
+/bin/zsh -lc 'cat info.json' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+ succeeded in 0ms:
+{
+  "workspace_kind": "user_uploaded",
+  "data_root": "data/",
+  "files": [
+    {
+      "path": "nuccore_reported_viral_sequences.fasta",
+      "size_bytes": 11888536
+    }
+  ],
+  "agent_output_contract": {
+    "report_path": "report/report.md",
+    "scientific_question_output_path": "agent_questions.json"
+  },
+  "agent_output_schema": {
+    "type": "object",
+    "required": [
+      "agent_id",
+      "questions"
+    ],
+    "properties": {
+      "agent_id": {
+        "type": "string"
+      },
+      "questions": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "required": [
+            "rank",
+            "question",
+            "rationale"
+          ],
+          "properties": {
+            "rank": {
+              "type": "integer"
+            },
+            "question": {
+              "type": "string"
+            },
+            "rationale": {
+              "type": "string"
+            },
+            "data_support": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "expected_test": {
+              "type": "string"
+            },
+            "scope_keywords": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+ succeeded in 0ms:
+# INSTRUCTIONS — Scientific Question Generation
+
+You are an autonomous research agent. Read every file under `data/`, perform analysis, and propose **the single most important scientific question** that the data could be used to answer.
+
+A separate judge LLM will score your top-1 question against a hidden gold rubric. **You will NOT see the gold rubric.** Frame your question purely from the data you observe.
+
+---
+
+## What you have
+
+| Path | Description | Read? |
+|---|---|---|
+| `data/` | Whatever the user uploaded. Could be tables, FASTA, JSON, images, PDFs, …. Make no assumption about schema — discover the structure by listing and sampling files. | ✅ |
+| `info.json` | Data-side metadata: file inventory, sizes, derived statistics. | ✅ |
+| `gold/` | Gold rubric used by the judge. **MUST NOT be opened.** | ❌ |
+
+---
+
+## What you must produce (exact paths)
+
+### `report/report.md`
+
+A short technical report (~300–600 words) with these sections:
+
+1. **Data summary** — what files you found, structure, scale, key columns / fields.
+2. **Analysis** — at least three derived statistics, distributions, or relationships you computed from the data.
+3. **Reasoning** — why these observations motivate the scientific question you will pose.
+4. **Top scientific question** — copied verbatim from `agent_questions.json[0].question`.
+5. **Why this question is testable on the provided dataset.**
+
+### `agent_questions.json`
+
+```json
+{
+  "agent_id": "<your model + harness identifier>",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "<one English sentence ending with '?'>",
+      "rationale": "<2-4 sentences linking the question to specific data evidence>",
+      "data_support": ["<actual file or feature names you used>", "..."],
+      "expected_test": "<how the question is answerable using the kind of data described>",
+      "scope_keywords": ["<3-8 short keywords>"]
+    }
+  ]
+}
+```
+
+- You MUST provide **exactly 5 distinct candidates** (rank 1..5). Duplicates fail validation. The judge scores all 5 and reports:
+  - **Pass@1** = 100% if `questions[0]` passes else 0%.
+  - **Pass@5** = position-weighted score: passing rank `i` adds `(1 + w_i)` where `w = (5,4,3,2,1)`. Numerator divided by 20. Examples: rank-1 only → 30%, ranks 1+2 → 55%, all 5 → 100%.
+- Put your **strongest** answer at rank 1 and progressively-weaker but still grounded alternatives at ranks 2-5; this maximises Pass@5 even if rank 1 misses.
+- Each `question` must be a single sentence ending with `?`.
+- `data_support` items must reference files or features that **actually exist** in the uploaded data.
+
+---
+
+## How to think about the rubric (informally)
+
+The judge looks for questions that:
+
+- **target a non-trivial scientific opportunity**, not a routine ETL or data-cleaning task;
+- have **biomedical / ecological / surveillance / engineering significance**;
+- are **testable using the data in front of you** (you should be able to outline the analysis);
+- are **specifically grounded** — name the dataset's actual features instead of generic phrases like "this data";
+- are **precisely phrased** — clear scientific object, scope, marker, and expected implication.
+
+A question like *"Are there interesting patterns in the data?"* will score very low. A question that names the specific dataset modality, the specific marker / variable of interest, the scale at which the question operates, and the scientific implication will score high.
+
+---
+
+## What NOT to do
+
+- Do not fabricate file names, statistics, or features that aren't in the upload.
+- Do not propose questions that require wet-lab experiments not derivable from the data.
+- Do not open `gold/`.
+- Do not generate ten generic questions hoping one hits — only `questions[0]` is scored.
+
+When `report/report.md` and `agent_questions.json` both exist on disk, your run is complete.
+
+exec
+/bin/zsh -lc "wc -l data/nuccore_reported_viral_sequences.fasta && sed -n '1,120p' data/nuccore_reported_viral_sequences.fasta" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+ succeeded in 0ms:
+  169938 data/nuccore_reported_viral_sequences.fasta
+>ON746331.1 MAG: Nanning Botou tick virus 1 isolate TIGMIC 2 genomic sequence
+CATTTTAAGCCCAAAGGCTCAAAAAGCTGGTTCACTAGAGAGGACTCATGCCGACTTTGTCAGCTACCTC
+AAGCGTTAGTGATCTATCTTGTCAAGGGTGTGGCCACCCTCTCCCTTCGCGGCAAAAGAAAAAATGCCGC
+GCCTTCGCCAAGAGAACCGTGTCTGTCGTAAGACAGGCTCTCGAAACTTGGACAGGCATTTTCGGCCAGG
+ATACAGTCGGCTTCGAACCTCGGTTCTGCTCCTGTACGTGCCTGGCGAAACTTGTCAAGGCGATGATTCA
+GGGTTGTCCTTCCTCTGTCGAAGAGGAAAGGATGGCCTTCCAGTCAATAAAGAAGTTATTGCCAGACTCC
+TGTTCCTGCATGGAACCCGCTCTGCTTGAGGGGATCCGCAAGAAGTTTTCGAGCCGTGGTCCTCCTCTGC
+CAACCGGCTACTTAGATTTCGTTCGGAAAACGACACGGAAGCTCTTTCCCAAGGGCTGGGATTCGTCCTA
+TGTGAAGTTTTGCGAAACTCTAAGTCCGCCGATATCTGCTAGTGAAGGTTTCTCCCGTACTGCCGGAGGA
+GTCTTGGGTGCAGGTCTAGACCATGACAATATTATGGAAGCCCTATTTGGTCGTCTGGATTTTGATCCAG
+CCAAATTTGAAGGGCAGCCGGTCTATTGCCTTAATCCCGAGAAGCCAGTTAAGTGTGCTCCGGACGGGAT
+AACCTGCCAAGCGCTTGTCGTCCAATCGGCGGGCAAGCCCCGCCCCCTTTCGAAGTTTAAACCGGAATCG
+ATCCTGCTTAAGCCGCTGCACAAGACCATCTACGGATGGTTGAGTGCGAAGAAGTGGCTTCTGCGAGGTG
+AGGTGACGGCTGAAAAACTAAGGAAGGCGGGATTCGTAAAGGATCGTGGTTGTTTGGTGTCGGGCGATTA
+CGCCTCAGCAACAGACAACCTCCCGATTGAGGTAGTCGAGGTGATTCTTGACGTTCTTGAAAAGAATGCG
+ATCTTCTGTCCGCAGTCGATCTTTTCTTACGCGCGCAAGAGTCTCCGCCCCCGTATGTGGTGTTTCGATC
+CTAGCACCGAGACTGACTGGGAAATCGATGTCGTTCGAGGGCAGATGATGGGGTCGCTTTTAAGCTTCCC
+CATGCTCTGCCTGCAGAACTTCATGGGATTATCCTTCGCCGTCTCTCGGGCCGGGAAAGAAATGCCTCCT
+TGTTTGATAAACGGGGATGACATCCTCTTTCAGTCTGACGAGGCCTTCGTGCCTTATTGGATGGAGGTTG
+TGGCCAAGTTGGGCCTTGAAGTAGAACCGACTAAGACTTCCGTCTCGACGGAATACGGATCGATTAACTC
+TACCCTGGTTCGTTGGGAAGAGAATCATCTGAATGTGATTCATACTCTAAGGTTCGGCCAATTGAGGAGG
+AGTGAGAACCCCACCAGCCTAGCGCAGTCTTTCTTTTCTTTTCTTGGCAAGCCTCGTGCTCTGCCGACTC
+CTGTTCGTTGGAAAGCGGCTTGTGCCTATTTTTCTTGGCACGCTGCAGAACTTCGAGACAAAAGTGGCGT
+CGGTTTTTATCCCGACGAGCTCGGCTTTAGAGGGCGCCTTGCCTTTAGACTGTGCGATCGTTACGGTTTA
+TTCCGTAATCGCGACCCGCGCGATCAAATCCGTTCACCCCCCAAAGGTCATTTAGTCCACAATGTGGAAT
+TACCTAGCGATTCCTGTACGTTGGTTTCGCGGGGCGACTTTGGAGAGGAGTTCGGACGAGAAATAGCCCG
+TGCGACGGCGGTGTGGAAGTGGGGACTTGATTTCGAGTCCATCCGAGAAGGTCAAGCCCGTTGGGCTTTA
+GCTCTGTCGTGCCCAGCGCGTTGGCGTTCACGACCGGAGGGCCTTCAAGGATTCAATGTCGAGCCGCGGC
+TGCTCGGCACTCGATTATCAAGGGAACCTGACTTGGTTGTTTGGCGGAGGAGATTCCGTAGGCCGTGGGT
+CAAGGAGGATTTGTGGCCGGTACTGGATGCAGCTCTTTACGAGCAAATGCAGCAGTTTGAACCGGTCCCT
+TCGTATGACGAGGCCATCGGAACACTGTTCCAGCTTCAAGTCGAGGAAGACGGGGATCGCGGGAAGAAGT
+GGTAGCCGCGATGGGAACCCCCAGCTGGCCCGCGTTAGGGGGCCTTGGGTACTGTTGACGCGTGAGGATG
+CACGCGTAGGCATTTATGCCGGACCGGCGCCAGTCACAGTTAGTCTGCGTCTACGTTTGGTCGGCGTATC
+TTGCGTTTAGGGTTTGGGTTCGCTCTGCCATCGGAGCGGTAAAAAGATTCGTGGGACACTCTTCTATTGT
+GTCGGAATCTTCGGCAAGAACTTCGGTCTCTTGCACCCGGGTACGCAAAAACCCCTCCTTCTCACAGGAG
+TTCGCCCTTCGGGGTCCTGAAATCTCGTTTCCCGTAGCCGCTTAGCGGGTCCGGAAATTCACACGGCGCC
+TCCTTGGAGGTCCACTCGGGTCTTGCTCGGGAGAGTTTGACCGTAGGGGTAAGCCTGGCGTGTTAGTACC
+GGGAGGTTCAAAGAGAAATTAGGGATGACAAAGGGGGGAGAGCAAAAGGTATGGCGGTCAAGTCAACGGC
+AGCGGTGATAATCGCTGGGGAGGTCCGGTTGCTATCTATCTACGCTTGTTAAGCGAAGAGGTACGCCGGG
+GTCCTGGCTAGGACCAGTGGGATGAGGGACGTAGTCCCCCGAGATAATCAACTTGGGGCGTGATGAACCC
+TGCGGCCAGCCGCA
+
+>ON746332.1 MAG: Tonghua Botou tick virus 1 isolate TIGMIC 6 genomic sequence
+GATATAGCCAACAGTATCAATCCTTAGCTTCCCTGGTCTTGCGACACTTGAAGATCAGCATGGATTCTGA
+TACTGCGCCAATAGCACTAACCGTACGTTTACCTAACGCCGACTTCTTTCTGGTACCAGATGAAGTCGGG
+TGTAAACGTCCCGATCATTGCCGCTTGGCATGTGTTCGACAGGCACGCGCGCTTAGGCGTGTCATCGAGG
+GCATTTCAAGTTCGTGTGGAGTCCCTTCCGGGGCTCTACTCAAAGGGGCACCACGTGTTCCGGTGAAGTC
+AATCTTCTCTCGGTACGTTGATGGTGTCGCCTACTGGACGAACTTGAACGCGTTTGTCAAAAAATTGTCG
+AGCATGTCTCCTTCTCATACTCGTTTTTTGTTTCCTGTTTCTCGTCGCGGTTCTATTGGCTCCCAAGCTA
+GACAATCTTTATCGTTTTCGCTTTCCTTGCTTGGGAAGTCCCTACATCCTCCTTGTTCTTGTCATGCACA
+TTACACAAACAAGCACCTTTCTCATCGCGAGTCTATTTCTAGACCTGAGAAAGCCGAACTTGCTTACGTT
+GGGTTTTGTCGTGATATGGCTCGTAGGATGTTTCGGAACAATTGGGACCGCGGTTATTCTGCTGCTTGCG
+CTTCTTCTGTTCCTTCCACTAATGGGTGCTTCGAAAGGGGCCGTCGTCGTTTCGGCGCTGCTTCTCTCTT
+TAATGACCAGACATCTTTTCTGAACCGTGTGCTTGGTTCGGAGGATGTTCCTTTTGACTCGATTGGTCGT
+TATTCGGAGGTTTGCAGTGCCGGTAAGATTCGGCCCCTGACTATTATGCACTCGTCTTTTGAACATCTTC
+GCCCTCTACACAAAACGCTTTATAATTATATTTCGCGGCAACCCTGGCTTTTGAGGGGTCCACCGCTTCC
+TGAGCGTTTTGTTTTTTCAAGTGATGAGGGCGAGTTCGTCTCCGTTGATTTTGAGTCCGCTACAGACAAT
+TTGTCTGTTCGTGTTGCAGAGGTGATTCTTGAGTCTGTTTTTGAAGGGTGTCGTTCGGTGCCATTATCCA
+TACAGAACTGTGCTTTTCAAGCACTCCGTCCTGTCGTGGAGTATGATCCGCTCGAAACCCTGTTCGGCAA
+GCTAGGTTTGGGCTCTGGGTCTCCACGTCTTTCCTCTGGTCAGATGATGGGTTCCCTTTTGTCCTTTCCC
+TTGCTTTGCCTCCAGACTTTTTTTTTCTACCTCTGGTCGACTGATCAGACCGACCTTACTGGTCGCCAGT
+TGCGGACTTTCGATCGTTGTTTGATAAACGGAGACGATCTTGTTTTTAAGACGAAGGATTCGAAGAAGTT
+TTTCCATGATGCCAGTTTAACATTGTCGAAGATAAATCAGAAAAAAACCCAGGTTTCGTCGGTTTATTTC
+AACATCAATTCGACTTTGTTTTCTTTTAAGCGCGGTGTTGTTCGGTCAGTTCCTTTCCTTCGTCCTGCAC
+AGTTTGACATCTCTCTTCCAGTTAACGTCGGTAGATCCGTTTTTGAGGCCACTAGGTGGCTATCTACGCG
+AACTGACCTCCAACGGAGGTCCTTTGACTGGCTTATGAGAGAGGCGTCTGCTGTTGTCCGGAAATTTGGT
+TGGTCTTTTGAGTCGTGTGGTTTTAAGGGCCCTAAACAGGCCGATTGGCTTCGCCGTAATGGGATGATGG
+GCTATGAGTGTGACGTTCGATCACTCAATCAGTCCTTTGTTGTCCCTGAAGAGAAGCCTTTTCATGCCAC
+TACGATGGTACCGTCACCTTTTGAGTACTCCCAGACTTTCCTTCGGGAAATGTCAGGTTTGTACAATTCT
+TGGTGGCGGTTCACGACCAAGTTTCCGGCTGAGAAGGAGAGGTTCTTTCTTGACGAGGAGTGCGAAAAGA
+GGAGGTTCGATCTTCAATCTTCACTTAAGGAAAGGGATTTGCGTTCTCGAAAGGCCAAGCGTTTGGCAAA
+GAAGGCCCTAGGGTCTATGCTTGGTTCTTTCTATCCCTTCTTTTATCGTGACCTCCTCTTTACTTCTCGA
+AAGAAACACCGCGCTTGGGCATTTGGATGCTTGGCGCAGAATTACGAGAAAACAGAAAAGTTTTTATTAC
+CTAAGCCTTTAGCGGATTTCCTCCAAGATCCCGTCGCTCTTATTTGCGACGGGGGATCCCGGGCCCATCC
+CTACTTTTTGCAAAGGGTTGGAGAGGTGATAAAAGCAGAAAAAAAAAGAAATAAAGACGGTTGTGAAGGA
+GCGTTTGTCGAGTGGTGACGTGGCATCACACGGTGAGGGAAAGCGCAACAAAGGAAAGGGTCTGCACGGT
+TGGCAGCTGGAATTGCGGACTGGGTCTGCAGCTTTACGGAACAAAGGAAATGGCAAGGAATGGATTGGGT
+CTCTGTAAGACCCGAGAGCCTTGTCGTGCGTTTCTTGCGTTTAGGATTAGGGTGTCGGGGGTTGACGGTG
+ACTTGACAGGAGGCCGCGCGTTCGCGCAACGCTAACTTTCCAGTTTACCCGACTACCCCCTACGGTTAGA
+ACTTCGGTCTCTAGCACCCGGGTACGCAATAATCCCGACTTAGCAATTTCGAAAATGAAAAACCTAACTC
+ATCTTGACCCTCCGAAAGGCACGTCACGGAAGCCGCCTTAATCAAGGCCCTGCGCTTGAGGCTTGACTCT
+CCGGAGCCCAACCCTTCGGGGTTTTGGCGTGAGCCGACGTTGGTTATGACCATCGGCGAAGGGGAAGGAA
+GGATGATGGATAGGGAGAAAGAGCTTAGTTGAGCAAAAGGAATGGACGGCAAGTGTTGATCGGGCAGTGA
+TTATCGCCTTCTCAGTACTTGTCAGGAACTTTAGGAAATTTTGCTGGACTTTTGTCCGTTAAGGAAGGTA
+TGTAGCCGCGCAGGTGGGCGCGCCGAGGTCATCTTAGCGAATGACAG
+
+>ON746333.1 MAG: Zhangzhou Botou tick virus 1 isolate TIGMIC 1 genomic sequence
+TTGACAGGTGAGTCTGTTCCATTTCTAGTCAATGGTGATGATTTGGTTGCCCAGGCTTCAGAGAATTGGG
+TCAATGTGTATCGATCCCAAGCACCTCTTTTGGGTTTTTCTTTGAATGAAAAGAAAACAAGTTATAGTAC
+GATGCCTAATATTAATTCAACGTACTTTACTTCAAGATTCAAGGAGATTCCTTTTATAAGAGCAAAAGGA
+TTGCGTGTCGTTGACCCTCGTCAAATAGGTAAGGTAATGAATGACATAAAAAGGCCTTATGAAAGGACTC
+GTCATTCCAGGTTGCCCCGACTCATTAATCATCTCATCTATTTCTTTTCAAAAATCATTAGGTACTATGG
+GCTGACCCTTTTTAATTTGGGCTTTCGGGTCCGTAGTATCGATAATTTGGTAATTGATAAGAAGACAAGA
+CATTATGAGAAGTATAGAAGTGGGCATACTCACAAAATTCGCATGACTCCTCCTAATCCGATGGGACTGA
+ATTTGGTTCAGGCTTCTGATCCTTATAAAGTCTGTTCGAATGAGGACGTTTCTAATGCGATTGTTGAGGA
+ACACTGGAATGGTCCTGCTTTTGAAATGGTCAAAGAAAGAATGTGGGAGGTGAAGAAACAATTAAAGGAA
+GATAAAAAAATATATGGCAGGAGGTGGAAGAAGTTAGGTATGAAGGGAACAATGGCTAGATTAGTTAGAG
+AGAAGAAGGTAGAGAAGCTTATCTGGATACCAGAGCGGCTTGCTGATTGTTTGACTCTTTCTCATGATCG
+TCTGAGCCTGCTTCCTGAAGTCGACAAAAAAAATAACGAAATAATAATTATAAAAGACTTTAGTGAGTGT
+AAGGTTTGTGAGAGAGTTGAAAAAATCCTTTTACAAAGGAGACAAGAAAATCGGCCTGCTGATTGGAGAC
+TAGATGTCCCTACTAAATATACAGCTCTTCTCTCTGACGTCCAGTCGGAAAGGAACCGCTTGTTGAGTAG
+AGTGGACACAGTTGTGGATGCAATGGTATCTTTCCATTCTCATCCTTCTGTGTAGCAGAGGATTTACTTA
+CCCTAGATGGGAGGTTATCTCTAGAAGTTCAAGGGAATGCGGGTCGTTGTTAGACGTCTATACCTTGAGC
+CCTATCTCTTGCGGAGAATGGACTAGGAATTAATAAGAGCCTAAACCGGATTGTCTTGCGTCTACGGACA
+CTCATCCTTAATCGGATTGAGGGCTTGCAATCGCAGTCTTTTATTTCGGCAGTGTTACTGCATCCGGGTA
+CGCAATAGTCCCCCAAAGGATTTTTTCTTTTGAGAATGGAGTCCGATTCAGGTAAATGAATGGTTAATGG
+CGGGCTGCCGTAGGTGTTCTACAAAAATAGAACCCGTAGGCCAAAAGACTCACATAGGGAGCCACAGGAA
+CTGTGTGTTGACTAAGCAGCTTCGCAGCGTGCTGGTCTTCCCCGTCAGACTGTCCCTACTGGGGGCCATA
+AAGTGCCACATTCATTTGGTTGATGGAGCGACCGTTCTGTGATAAGGAAATTATTACTGGGAACAAAAGG
+GAAGGGGCTCTAGTGTTAGTGACGCAGCGTATTATTAAGCCCGTCAGTATCTTGGAGCAAGGAGTGACAC
+CGTCCATGAAAAACCATCATGACGGGAAGTGGATCTCGACTAGAATTGCATTGACGATTGATATGCATTC
+TTGGTCAAAGACCTTCTGTTGGTCAAAAACCAATAGATTGGACGCACAAGTGCTGCCCTTGTAGTGCTAC
+GACGTTCGATGTCAAGTTTACCTTGCCAACAGATCGCAGCTTGTCCTGCACCAGAAGGTTGTCAAACCTT
+CCTACACAGCGTCCGCTCTGCTACAATACGAGCGGTTTCCTTTATCGAGAAGTTCTTCAAAATGAGCGCT
+TTCGTAGTAGTGCCTCCGGTTAACGGGACTTGCACCGACTACATCTCATTTTTGAAGAAGCAACTCGATA
+GTTGCTTGATTACCTGTATGGACGGAAAGTTTCCACCAGGCGTGTGTGAGTCAGACTATCTGTCTTTCTC
+TGCTTCTATTGCCTCCATTCCTAAGTCATGGCCTAATAACTGTGACTGCATGGTAGGTGAGTTGGAAAGC
+TCTTTGAAAAGTAGGTTAACAAAGGAAAAGATTCCGCTTCCAGCGGGGTATTTGGAATTTGTTTTTCGAA
+AGGTAAATGAGATTTTTCCCAGGGGTATGAGGAAGAAAGATCTTGATCGGCATGCCGCACGAGTTACTCC
+CCCTTATAGTTCTACTACAACCAGTACTAGAAGGGAAGGGGGGAGTTACTCATCATGGCGGAATCAGAGA
+
+codex
+The uploaded FASTA is about 11.9 MB and contains NCBI-style nucleotide records. I’m parsing record headers and sequence composition so the questions are grounded in actual taxa, isolates, lengths, and sequence features rather than just the file name.
+exec
+/bin/zsh -lc "rg -n '"'^>'"' data/nuccore_reported_viral_sequences.fasta | sed -n '1,80p'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+exec
+/bin/zsh -lc "rg -c '"'^>'"' data/nuccore_reported_viral_sequences.fasta" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+exec
+/bin/zsh -lc "rg -n '"'^>'"' data/nuccore_reported_viral_sequences.fasta | sed -n '81,180p'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+ succeeded in 0ms:
+1801
+
+ succeeded in 0ms:
+5748:>ON746411.1 MAG: Baoshan Mitov tick virus 1 isolate TIGMIC 1 genomic sequence
+5785:>ON746412.1 MAG: Zhangzhou Mymon tick virus 3 isolate TIGMIC 1 cRNA sequence
+5917:>ON746413.1 MAG: Sanya Mymon tick virus 1 isolate TIGMIC 2 cRNA sequence
+6068:>ON746414.1 MAG: Tonghua Nairo tick virus 1 isolate TIGMIC 1 cRNA sequence
+6255:>ON746415.1 MAG: Yanbian Nairo tick virus 1 isolate TIGMIC 1 cRNA sequence
+6430:>ON746416.1 MAG: Yanbian Nairo tick virus 2 isolate TIGMIC 1 cRNA sequence
+6604:>ON746417.1 MAG: Yushu Nairo tick virus 1 isolate TIGMIC 1 cRNA sequence
+6780:>ON746418.1 MAG: Dali Nairo tick virus 1 isolate TIGMIC 14 cRNA sequence
+6982:>ON746419.1 MAG: Xining Nairo tick virus 1 isolate TIGMIC 3 cRNA sequence
+7115:>ON746420.1 MAG: Linzhi Nairo tick virus 1 isolate TIGMIC 1 cRNA sequence
+7289:>ON746421.1 MAG: Xiangxi tick virus 1 isolate TIGMIC 1 genomic sequence
+7321:>ON746422.1 MAG: Kunming tick virus 1 isolate TIGMIC 2 genomic sequence
+7367:>ON746423.1 MAG: Nanning Narna tick virus 1 isolate TIGMIC 3 genomic sequence
+7416:>ON746424.1 MAG: Nanning Narna tick virus 2 isolate TIGMIC 1 genomic sequence
+7466:>ON746425.1 MAG: Baoding Narna tick virus 1 isolate TIGMIC 1 genomic sequence
+7507:>ON746426.1 MAG: Tonghua Narna tick virus 1 isolate TIGMIC 1 genomic sequence
+7558:>ON746427.1 MAG: Huaian Narna tick virus 1 isolate TIGMIC 15 genomic sequence
+7602:>ON746428.1 MAG: Qingyuan Narna tick virus 1 isolate TIGMIC 1 genomic sequence
+7651:>ON746429.1 MAG: Rizhao Narna tick virus 1 isolate TIGMIC 1 genomic sequence
+7688:>ON746430.1 MAG: Baoding Narna tick virus 2 isolate TIGMIC 3 genomic sequence
+7724:>ON746431.1 MAG: Zhangzhou Narna tick virus 1 isolate TIGMIC 1 genomic sequence
+7771:>ON746432.1 MAG: Zhangzhou Narna tick virus 2 isolate TIGMIC 1 genomic sequence
+7808:>ON746433.1 MAG: Zhangzhou Narna tick virus 3 isolate TIGMIC 1 genomic sequence
+7846:>ON746434.1 MAG: Zhangye Narna tick virus 1 isolate TIGMIC 1 genomic sequence
+7886:>ON746435.1 MAG: Nanning Narna tick virus 3 isolate TIGMIC 3 genomic sequence
+7980:>ON746436.1 MAG: Nanning Narna tick virus 4 isolate TIGMIC 1 genomic sequence
+8020:>ON746437.1 MAG: Qingyang Narna tick virus 1 isolate TIGMIC 1 genomic sequence
+8064:>ON746438.1 MAG: Baoding Narna tick virus 3 isolate TIGMIC 4 genomic sequence
+8108:>ON746439.1 MAG: Tonghua Narna tick virus 2 isolate TIGMIC 2 genomic sequence
+8153:>ON746440.1 MAG: Hulunbuir Narna tick virus 1 isolate TIGMIC 2 genomic sequence
+8204:>ON746441.1 MAG: Lianyungang Narna tick virus 1 isolate TIGMIC 1 genomic sequence
+8247:>ON746442.1 MAG: Tonghua Narna tick virus 3 isolate TIGMIC 1 genomic sequence
+8283:>ON746443.1 MAG: Tonghua Narna tick virus 4 isolate TIGMIC 2 genomic sequence
+8315:>ON746444.1 MAG: Kunming Narna tick virus 2 isolate TIGMIC 1 genomic sequence
+8352:>ON746445.1 MAG: Yanbian Narna tick virus 1 isolate TIGMIC 1 genomic sequence
+8391:>ON746446.1 MAG: Rizhao Narna tick virus 2 isolate TIGMIC 1 genomic sequence
+8430:>ON746447.1 MAG: Xiangxi Narna tick virus 1 isolate TIGMIC 2 genomic sequence
+8462:>ON746448.1 MAG: Zhangzhou Narna tick virus 4 isolate TIGMIC 6 genomic sequence
+8490:>ON746449.1 MAG: Zhangzhou Narna tick virus 5 isolate TIGMIC 4 genomic sequence
+8516:>ON746450.1 MAG: Luoyang Nodav tick virus 1 isolate TIGMIC 4 genomic sequence
+8580:>ON746451.1 MAG: Yanbian Nodav tick virus 1 isolate TIGMIC 3 genomic sequence
+8627:>ON746452.1 MAG: Tianjin Nodav tick virus 1 isolate TIGMIC 1 genomic sequence
+8673:>ON746453.1 MAG: Zhangzhou Ortho tick virus 1 isolate TIGMIC 3 cRNA sequence
+8710:>ON746454.1 MAG: Dali Ortho tick virus 1 isolate TIGMIC 5 cRNA sequence
+8744:>ON746455.1 MAG: Tongren Ortho tick virus 1 isolate TIGMIC 1 cRNA sequence
+8780:>ON746456.1 MAG: Yanbian Ortho tick virus 1 isolate TIGMIC 1 cRNA sequence
+8816:>ON746457.1 MAG: Yushu Ortho tick virus 1 isolate TIGMIC 1 cRNA sequence
+8852:>ON746458.1 MAG: Linzhi Ortho tick virus 1 isolate TIGMIC 1 cRNA sequence
+8888:>ON746459.1 MAG: Qingyang Ortho tick virus 1 isolate TIGMIC 21 cRNA sequence
+8924:>ON746460.1 MAG: Chuzhou Ortho tick virus 1 isolate TIGMIC 1 cRNA sequence
+8950:>ON746461.1 MAG: Zhangzhou Ortho tick virus 2 isolate TIGMIC 1 cRNA sequence
+8966:>ON746462.1 MAG: Xiangxi Ortho tick virus 1 isolate TIGMIC 1 cRNA sequence
+8987:>ON746463.1 MAG: Guoluo Parti tick virus 1 isolate TIGMIC 4 genomic sequence
+9044:>ON746464.1 MAG: Nanning Parti tick virus 1 isolate TIGMIC 1 genomic sequence
+9072:>ON746465.1 MAG: Zhangzhou Parti tick virus 1 isolate TIGMIC 1 genomic sequence
+9107:>ON746466.1 MAG: Zhangzhou Parti tick virus 2 isolate TIGMIC 1 genomic sequence
+9136:>ON746467.1 MAG: Zhangzhou Parti tick virus 3 isolate TIGMIC 1 genomic sequence
+9163:>ON746468.1 MAG: Hulunbuir Parti tick virus 1 isolate TIGMIC 1 genomic sequence
+9193:>ON746469.1 MAG: Tongren Parti tick virus 1 isolate TIGMIC 2 genomic sequence
+9220:>ON746470.1 MAG: Kashgar Parti tick virus 1 isolate TIGMIC 6 genomic sequence
+9247:>ON746471.1 MAG: Lhasa Parti tick virus 1 isolate TIGMIC 1 genomic sequence
+9275:>ON746472.1 MAG: Xiangxi Parti tick virus 1 isolate TIGMIC 1 genomic sequence
+9302:>ON746473.1 MAG: Nanning Parti tick virus 3 isolate TIGMIC 1 genomic sequence
+9330:>ON746474.1 MAG: Nanning Parti tick virus 2 isolate TIGMIC 3 genomic sequence
+9352:>ON746475.1 MAG: Sanmenxia Parti tick virus 1 isolate TIGMIC 4 genomic sequence
+9382:>ON746476.1 MAG: Bangxi Parti tick virus 1 isolate TIGMIC 1 genomic sequence
+9409:>ON746477.1 MAG: Anshan Parti tick virus 1 isolate TIGMIC 2 genomic sequence
+9435:>ON746478.1 MAG: Qingyuan Parti tick virus 1 isolate TIGMIC 1 genomic sequence
+9477:>ON746479.1 MAG: Leshan Parti tick virus 1 isolate TIGMIC 4 genomic sequence
+9504:>ON746480.1 MAG: Dali Parti tick virus 1 isolate TIGMIC 3 genomic sequence
+9525:>ON746481.1 MAG: Jinan tick virus 1 isolate TIGMIC 8 cRNA sequence
+9623:>ON746482.1 MAG: Zhangzhou tick virus 1 isolate TIGMIC 1 cRNA sequence
+9718:>ON746483.1 MAG: Nanning tick virus 3 isolate TIGMIC 1 cRNA sequence
+9822:>ON746484.1 MAG: Guyuan tick virus 1 isolate TIGMIC 1 cRNA sequence
+9918:>ON746485.1 MAG: Zhangye tick virus 1 isolate TIGMIC 1 cRNA sequence
+10039:>ON746486.1 MAG: Haerbin tick virus 2 isolate TIGMIC 8 cRNA sequence
+10174:>ON746487.1 MAG: Nanchang tick virus 1 isolate TIGMIC 1 cRNA sequence
+10303:>ON746488.1 MAG: Tongren tick virus 1 isolate TIGMIC 2 cRNA sequence
+10437:>ON746489.1 MAG: Heihe tick virus 1 isolate TIGMIC 1 cRNA sequence
+10535:>ON746490.1 MAG: Tonghua tick virus 1 isolate TIGMIC 1 cRNA sequence
+10648:>ON746491.1 MAG: Dandong tick virus 1 isolate TIGMIC 1 cRNA sequence
+10760:>ON746492.1 MAG: Yushu tick virus 1 isolate TIGMIC 1 cRNA sequence
+10893:>ON746493.1 MAG: Tongren Perib tick virus 2 isolate TIGMIC 1 cRNA sequence
+10988:>ON746494.1 MAG: Nanchang Perib tick virus 1 isolate TIGMIC 2 cRNA sequence
+11086:>ON746495.1 MAG: Nanning Phasm tick virus 1 isolate TIGMIC 2 cRNA sequence
+11202:>ON746496.1 MAG: Nanning Phenu tick virus 1 isolate TIGMIC 1 genomic sequence
+11299:>ON746497.1 MAG: Tongren Phenu tick virus 1 isolate TIGMIC 1 genomic sequence
+11395:>ON746498.1 MAG: Yanbian Phenu tick virus 1 isolate TIGMIC 2 genomic sequence
+11493:>ON746499.1 MAG: Bangxi Phenu tick virus 1 isolate TIGMIC 1 genomic sequence
+11588:>ON746500.1 MAG: Zhangjiakou Phenu tick virus 1 isolate TIGMIC 24 genomic sequence
+11686:>ON746501.1 MAG: Xining Phenu tick virus 1 isolate TIGMIC 3 genomic sequence
+11875:>ON746502.1 MAG: Dali Phenu tick virus 1 isolate TIGMIC 1 genomic sequence
+11969:>ON746503.1 MAG: Jinan Picor tick virus 1 isolate TIGMIC 3 genomic sequence
+12120:>ON746504.1 MAG: Beijing Picor tick virus 1 isolate TIGMIC 1 genomic sequence
+12229:>ON746505.1 MAG: Tongren Reovi tick virus 1 isolate TIGMIC 1 genomic sequence
+12290:>ON746506.1 MAG: Nanning Reovi tick virus 1 isolate TIGMIC 1 genomic sequence
+12319:>ON746507.1 MAG: Zhangjiakou Reovi tick virus 1 isolate TIGMIC 1 genomic sequence
+12383:>ON746508.1 MAG: Haerbin Reovi tick virus 1 isolate TIGMIC 1 genomic sequence
+12434:>ON746509.1 MAG: Yanbian Reovi tick virus 1 isolate TIGMIC 1 genomic sequence
+12490:>ON746510.1 MAG: Yanbian Reovi tick virus 2 isolate TIGMIC 1 genomic sequence
+
+ succeeded in 0ms:
+1:>ON746331.1 MAG: Nanning Botou tick virus 1 isolate TIGMIC 2 genomic sequence
+43:>ON746332.1 MAG: Tonghua Botou tick virus 1 isolate TIGMIC 6 genomic sequence
+87:>ON746333.1 MAG: Zhangzhou Botou tick virus 1 isolate TIGMIC 1 genomic sequence
+170:>ON746334.1 MAG: Maanshan Botou tick virus 1 isolate TIGMIC 1 genomic sequence
+214:>ON746335.1 MAG: Lianyungang Botou tick virus 1 isolate TIGMIC 9 genomic sequence
+261:>ON746336.1 MAG: Zhangzhou Botou tick virus 2 isolate TIGMIC 18 genomic sequence
+305:>ON746337.1 MAG: Nanning Botou tick virus 2 isolate TIGMIC 5 genomic sequence
+375:>ON746338.1 MAG: Hulunbuir Botou tick virus 1 isolate TIGMIC 7 genomic sequence
+422:>ON746339.1 MAG: Zhangzhou Botou tick virus 3 isolate TIGMIC 3 genomic sequence
+465:>ON746340.1 MAG: Zhangzhou Botou tick virus 4 isolate TIGMIC 5 genomic sequence
+508:>ON746341.1 MAG: Luoyang Botou tick virus 1 isolate TIGMIC 2 genomic sequence
+552:>ON746342.1 MAG: Zhangzhou Botou tick virus 5 isolate TIGMIC 1 genomic sequence
+590:>ON746343.1 MAG: Lianyungang Botou tick virus 2 isolate TIGMIC 7 genomic sequence
+629:>ON746344.1 MAG: Hulunbuir Botou tick virus 2 isolate TIGMIC 9 genomic sequence
+707:>ON746345.1 MAG: Tonghua Botou tick virus 2 isolate TIGMIC 10 genomic sequence
+742:>ON746346.1 MAG: Zhangzhou Botou tick virus 6 isolate TIGMIC 1 genomic sequence
+781:>ON746347.1 MAG: Zhangzhou Botou tick virus 7 isolate TIGMIC 7 genomic sequence
+845:>ON746348.1 MAG: Lianyungang Botou tick virus 3 isolate TIGMIC 1 genomic sequence
+884:>ON746349.1 MAG: Kashgar Botou tick virus 1 isolate TIGMIC 4 genomic sequence
+924:>ON746350.1 MAG: Tongren Botou tick virus 1 isolate TIGMIC 1 genomic sequence
+967:>ON746351.1 MAG: Alashan Botou tick virus 1 isolate TIGMIC 1 genomic sequence
+1010:>ON746352.1 MAG: Hulunbuir Botou tick virus 3 isolate TIGMIC 2 genomic sequence
+1057:>ON746353.1 MAG: Hulunbuir Botou tick virus 4 isolate TIGMIC 2 genomic sequence
+1096:>ON746354.1 MAG: Hulunbuir Botou tick virus 5 isolate TIGMIC 2 genomic sequence
+1135:>ON746355.1 MAG: Shangqiu Botou tick virus 1 isolate TIGMIC 1 genomic sequence
+1170:>ON746356.1 MAG: Hulunbuir Botou tick virus 6 isolate TIGMIC 2 genomic sequence
+1214:>ON746357.1 MAG: Hulunbuir Botou tick virus 7 isolate TIGMIC 40 genomic sequence
+1254:>ON746358.1 MAG: Tianjin Botou tick virus 1 isolate TIGMIC 8 genomic sequence
+1294:>ON746359.1 MAG: Hulunbuir Botou tick virus 8 isolate TIGMIC 1 genomic sequence
+1334:>ON746360.1 MAG: Tianjin Botou tick virus 2 isolate TIGMIC 1 genomic sequence
+1372:>ON746361.1 MAG: Tianjin Botou tick virus 3 isolate TIGMIC 3 genomic sequence
+1407:>ON746362.1 MAG: Suizhou Botou tick virus 1 isolate TIGMIC 4 genomic sequence
+1449:>ON746363.1 MAG: Huanggang Botou tick virus 1 isolate TIGMIC 2 genomic sequence
+1490:>ON746364.1 MAG: Tonghua Botou tick virus 3 isolate TIGMIC 1 genomic sequence
+1531:>ON746365.1 MAG: Luoyang Botou tick virus 2 isolate TIGMIC 1 genomic sequence
+1571:>ON746366.1 MAG: Tonghua Botou tick virus 4 isolate TIGMIC 1 genomic sequence
+1608:>ON746367.1 MAG: Chuzhou Botou tick virus 1 isolate TIGMIC 1 genomic sequence
+1663:>ON746368.1 MAG: Lianyungang Botou tick virus 4 isolate TIGMIC 39 genomic sequence
+1699:>ON746369.1 MAG: Jinan Botou tick virus 1 isolate TIGMIC 2 genomic sequence
+1737:>ON746370.1 MAG: Tianjin Botou tick virus 4 isolate TIGMIC 1 genomic sequence
+1780:>ON746371.1 MAG: Changdu Botou tick virus 1 isolate TIGMIC 1 genomic sequence
+1821:>ON746372.1 MAG: Taian Botou tick virus 2 isolate TIGMIC 3 genomic sequence
+1859:>ON746373.1 MAG: Dali Botou tick virus 1 isolate TIGMIC 1 genomic sequence
+1894:>ON746374.1 MAG: Beijing Bromo tick virus 1 isolate TIGMIC 1 genomic sequence
+1936:>ON746375.1 MAG: Nanning Chrys tick virus 1 isolate TIGMIC 1 genomic sequence
+1988:>ON746376.1 MAG: Baoding Chrys tick virus 1 isolate TIGMIC 1 genomic sequence
+2042:>ON746377.1 MAG: Hulunbuir Chrys tick virus 1 isolate TIGMIC 1 genomic sequence
+2097:>ON746378.1 MAG: Zhangzhou Chrys tick virus 3 isolate TIGMIC 1 genomic sequence
+2141:>ON746379.1 MAG: Yushu Chuvi tick virus 1 isolate TIGMIC 1 cRNA sequence
+2289:>ON746380.1 MAG: Nanning Chuvi tick virus 1 isolate TIGMIC 1 cRNA sequence
+2447:>ON746381.1 MAG: Zhangye Chuvi tick virus 1 isolate TIGMIC 1 cRNA sequence
+2572:>ON746382.1 MAG: Yanbian Chuvi tick virus 1 isolate TIGMIC 3 cRNA sequence
+2738:>ON746383.1 MAG: Xining Chuvi tick virus 1 isolate TIGMIC 1 cRNA sequence
+2878:>ON746384.1 MAG: Dali Chuvi tick virus 1 isolate TIGMIC 15 cRNA sequence
+3045:>ON746385.1 MAG: Nanning Chuvi tick virus 2 isolate TIGMIC 1 cRNA sequence
+3204:>ON746386.1 MAG: Qingyuan Delta tick virus 1 isolate TIGMIC 1 genomic sequence
+3345:>ON746387.1 MAG: Maanshan Dicis tick virus 1 isolate TIGMIC 1 genomic sequence
+3473:>ON746388.1 MAG: Suizhou Dicis tick virus 1 isolate TIGMIC 5 genomic sequence
+3606:>ON746389.1 MAG: Zhangjiakou Flavi tick virus 1 isolate TIGMIC 37 genomic sequence
+3855:>ON746390.1 MAG: Luoyang Fusar tick virus 1 isolate TIGMIC 1 genomic sequence
+3945:>ON746391.1 MAG: Zhangzhou Fusar tick virus 1 isolate TIGMIC 2 genomic sequence
+4028:>ON746392.1 MAG: Baoding Fusar tick virus 1 isolate TIGMIC 1 genomic sequence
+4125:>ON746393.1 MAG: Suizhou Fusar tick virus 1 isolate TIGMIC 1 genomic sequence
+4192:>ON746394.1 MAG: Dali Fusar tick virus 1 isolate TIGMIC 1 genomic sequence
+4239:>ON746395.1 MAG: Chuzhou tick virus 1 isolate TIGMIC 1 genomic sequence
+4426:>ON746396.1 MAG: Hulunbuir tick virus 1 isolate TIGMIC 2 genomic sequence
+4592:>ON746397.1 MAG: Chuzhou tick virus 2 isolate TIGMIC 1 genomic sequence
+4738:>ON746398.1 MAG: Nanning Iflav tick virus 1 isolate TIGMIC 1 genomic sequence
+4880:>ON746399.1 MAG: Linzhi Iflav tick virus 1 isolate TIGMIC 1 genomic sequence
+5002:>ON746400.1 MAG: Lhasa Iflav tick virus 1 isolate TIGMIC 6 genomic sequence
+5139:>ON746401.1 MAG: Tongren Iflav tick virus 1 isolate TIGMIC 3 genomic sequence
+5274:>ON746402.1 MAG: Daqing Iflav tick virus 1 isolate TIGMIC 2 genomic sequence
+5413:>ON746403.1 MAG: Chongqing Mitov tick virus 1 isolate TIGMIC 31 genomic sequence
+5452:>ON746404.1 MAG: Sanmenxia Mitov tick virus 1 isolate TIGMIC 7 genomic sequence
+5498:>ON746405.1 MAG: Tianjin Mitov tick virus 1 isolate TIGMIC 1 genomic sequence
+5556:>ON746406.1 MAG: Xiangxi tick virus 1 isolate TIGMIC 2 genomic sequence
+5588:>ON746407.1 MAG: Chongqing Mitov tick virus 2 isolate TIGMIC 1 genomic sequence
+5628:>ON746408.1 MAG: Zhangzhou Mitov tick virus 2 isolate TIGMIC 1 genomic sequence
+5666:>ON746409.1 MAG: Chuzhou Mitov tick virus 1 isolate TIGMIC 1 genomic sequence
+5713:>ON746410.1 MAG: Dali Mitov tick virus 1 isolate TIGMIC 1 genomic sequence
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from collections import Counter, defaultdict
+from statistics import mean, median
+from pathlib import Path
+import re, math
+p=Path('data/nuccore_reported_viral_sequences.fasta')
+records=[]
+header=None; seq=[]
+for line in p.read_text().splitlines():
+    if line.startswith('>'):
+        if header is not None:
+            records.append((header,''.join(seq).upper()))
+        header=line[1:].strip(); seq=[]
+    else:
+        seq.append(line.strip())
+if header is not None:
+    records.append((header,''.join(seq).upper()))
+print('records', len(records))
+lengths=[len(s) for _,s in records]
+print('total_bases', sum(lengths))
+print('len_min_median_mean_max', min(lengths), median(lengths), round(mean(lengths),1), max(lengths))
+print('len_quartiles', sorted(lengths)[len(lengths)//4], sorted(lengths)[len(lengths)//2], sorted(lengths)[3*len(lengths)//4])
+print('gc_mean_min_max', round(mean([(s.count('G')+s.count('C'))/len(s)*100 for _,s in records]),2), round(min([(s.count('G')+s.count('C'))/len(s)*100 for _,s in records]),2), round(max([(s.count('G')+s.count('C'))/len(s)*100 for _,s in records]),2))
+print('ambiguous_N_records', sum('N' in s for _,s in records), 'N_total', sum(s.count('N') for _,s in records))
+# parse header
+places=[]; groups=[]; types=[]; tigmic=[]; names=[]; access=[]
+parse_fail=[]
+for h,s in records:
+    access.append(h.split()[0])
+    m=re.match(r'(["'^ ]+) MAG: (.*?) isolate TIGMIC ('"\\d+) (genomic|cRNA) sequence"'$'"', h)
+    if not m:
+        parse_fail.append(h); continue
+    acc, desc, iso, typ=m.groups()
+    types.append(typ); tigmic.append(int(iso))
+    # desc examples: Nanning Botou tick virus 1, Chuzhou tick virus 1 (no group)
+    toks=desc.split()
+    place=toks[0]
+    places.append(place)
+    names.append(desc)
+    # group = token before tick if len >? e.g 'Botou tick'; if just '<place> tick virus', group='unclassified'
+    ti=toks.index('tick')
+    group=' '.join(toks[1:ti]) if ti>1 else '(none)'
+    groups.append(group)
+print('parse_fail', len(parse_fail))
+print('type_counts', Counter(types))
+print('unique_places', len(set(places)))
+print('top_places', Counter(places).most_common(15))
+print('unique_groups', len(set(groups)))
+print('top_groups', Counter(groups).most_common(20))
+print('isolate_counts_tigmic_summary', min(tigmic), median(tigmic), max(tigmic), 'gt1', sum(x>1 for x in tigmic), 'ge10', sum(x>=10 for x in tigmic))
+print('top_tigmic', sorted(zip(tigmic,names,access,lengths), reverse=True)[:20])
+# records by group type length
+bygroup=defaultdict(list); byplace=defaultdict(list)
+for (h,s),g,pl,typ in zip(records,groups,places,types):
+    bygroup[g].append((h,s,typ))
+    byplace[pl].append((h,s,typ))
+print('\\nGROUP_STATS top by count: group count medlen meangc genomic cRNA unique_places')
+for g,c in Counter(groups).most_common(30):
+    rec=bygroup[g]
+    lens=[len(s) for _,s,_ in rec]
+    gcs=[(s.count('G')+s.count('C'))/len(s)*100 for _,s,_ in rec]
+    tc=Counter(t for *_,t in rec)
+    upl=len(set(re.match(r'["'^ ]+ MAG: ([''^ ]+)'"', h).group(1) for h,_,_ in rec))
+    print(g, c, int(median(lens)), round(mean(gcs),1), tc.get('genomic',0), tc.get('cRNA',0), upl)
+# unique species names vs places?
+print('\\nVirus names repeated across places?')
+# remove place prefix from desc? e.g Botou tick virus 1 repeated with prefixes? Maybe virus type is after place
+familynum=Counter()
+for desc in names:
+    toks=desc.split()
+    try: ti=toks.index('tick')
+    except: continue
+    # clade name from token(s) before tick + virus + number
+    clade=' '.join(toks[1:])
+    familynum[clade]+=1
+print('unique_clade_names', len(familynum), 'repeated_clade_names', sum(1 for v in familynum.values() if v>1))
+print(familynum.most_common(20))
+# accessions prefixes count
+print('accession_prefixes', Counter(re.match(r'[A-Z]+', a).group(0) for a in access))
+# seq type by group cRNA counts
+print('\\ncRNA groups', Counter(g for g,t in zip(groups,types) if t=='cRNA').most_common())
+print('genomic groups top', Counter(g for g,t in zip(groups,types) if t=='genomic').most_common(20))
+# min/max records
+print('\\nshortest')
+for l,h in sorted((len(s),h) for h,s in records)[:10]: print(l,h)
+print('\\nlongest')
+for l,h in sorted((len(s),h) for h,s in records)[-10:]: print(l,h)
+# locations by groups richness
+loc_groups=defaultdict(set)
+for pl,g in zip(places,groups): loc_groups[pl].add(g)
+print('\\ntop location group richness', sorted(((len(v),pl,Counter([g for p,g in zip(places,groups) if p==pl]).most_common(5)) for pl,v in loc_groups.items()), reverse=True)[:20])
+# exact duplicate seqs count
+seq_counter=Counter(s for _,s in records)
+print('duplicate_sequences groups', sum(1 for v in seq_counter.values() if v>1), 'records_in_dups', sum(v for v in seq_counter.values() if v>1))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+ succeeded in 134ms:
+records 1801
+total_bases 11584068
+len_min_median_mean_max 803 6498 6432.0 22791
+len_quartiles 2592 6498 9240
+gc_mean_min_max 50.79 25.54 65.6
+ambiguous_N_records 0 N_total 0
+parse_fail 1565
+type_counts Counter({'genomic': 174, 'cRNA': 62})
+unique_places 53
+top_places [('Nanning', 25), ('Zhangzhou', 23), ('Yanbian', 17), ('Hulunbuir', 14), ('Tonghua', 12), ('Tongren', 12), ('Dali', 9), ('Luoyang', 8), ('Zhangjiakou', 7), ('Tianjin', 6), ('Xiangxi', 6), ('Lianyungang', 5), ('Chuzhou', 5), ('Baoding', 5), ('Yushu', 5)]
+unique_groups 26
+top_groups [('Botou', 43), ('Narna', 27), ('Totiv', 23), ('Rhabd', 21), ('(none)', 20), ('Parti', 18), ('Reovi', 13), ('Ortho', 10), ('Mitov', 8), ('Chuvi', 7), ('Nairo', 7), ('Phenu', 7), ('Fusar', 5), ('Iflav', 5), ('Chrys', 4), ('Nodav', 3), ('Dicis', 2), ('Mymon', 2), ('Perib', 2), ('Picor', 2)]
+isolate_counts_tigmic_summary 1 1.0 80 gt1 104 ge10 18
+top_tigmic [(80, 'Yanbian Totiv tick virus 1', 'ON746547.1', 8708), (51, 'Zhangzhou Totiv tick virus 1', 'ON746548.1', 9148), (46, 'Zhangjiakou Totiv tick virus 1', 'ON746543.1', 9088), (40, 'Hulunbuir Botou tick virus 7', 'ON746357.1', 2608), (39, 'Lianyungang Botou tick virus 4', 'ON746368.1', 2353), (37, 'Zhangjiakou Flavi tick virus 1', 'ON746389.1', 17254), (31, 'Chongqing Mitov tick virus 1', 'ON746403.1', 2555), (24, 'Zhangjiakou Phenu tick virus 1', 'ON746500.1', 6663), (22, 'Huanggang Rhabd tick virus 1', 'ON746518.1', 11556), (21, 'Qingyang Ortho tick virus 1', 'ON746459.1', 2372), (19, 'Zhangjiakou Totiv tick virus 2', 'ON746546.1', 9251), (18, 'Zhangzhou Botou tick virus 2', 'ON746336.1', 2882), (15, 'Huaian Narna tick virus 1', 'ON746427.1', 2879), (15, 'Dali Chuvi tick virus 1', 'ON746384.1', 11533), (14, 'Dali Nairo tick virus 1', 'ON746418.1', 13977), (12, 'Hulunbuir Totiv tick virus 1', 'ON746558.1', 3929), (11, 'Luoyang Totiv tick virus 1', 'ON746561.1', 4559), (10, 'Tonghua Botou tick virus 2', 'ON746345.1', 2285), (9, 'Lianyungang Botou tick virus 1', 'ON746335.1', 3144), (9, 'Hulunbuir Botou tick virus 2', 'ON746344.1', 5282)]
+
+GROUP_STATS top by count: group count medlen meangc genomic cRNA unique_places
+Botou 43 2691 51.6 43 0 19
+Narna 27 2629 51.2 27 0 14
+Totiv 23 5052 51.1 23 0 13
+Rhabd 21 11343 49.7 0 21 13
+(none) 20 7668 44.9 8 12 17
+Parti 18 1749 47.5 18 0 14
+Reovi 13 3612 46.5 13 0 7
+Ortho 10 2362 49.2 0 10 9
+Mitov 8 2585 38.0 8 0 7
+Chuvi 7 10906 50.3 0 7 6
+Nairo 7 12043 44.3 0 7 6
+Phenu 7 6632 47.6 7 0 7
+Fusar 5 5612 47.2 5 0 5
+Iflav 5 9382 38.9 5 0 5
+Chrys 4 3545 49.3 4 0 4
+Nodav 3 3085 44.7 3 0 3
+Dicis 2 8933 36.6 2 0 2
+Mymon 2 9721 47.1 0 2 2
+Perib 2 6579 46.8 0 2 2
+Picor 2 8924 35.2 2 0 2
+Tombu 2 5353 53.0 2 0 2
+Bromo 1 2760 43.4 1 0 1
+Delta 1 9704 49.2 1 0 1
+Flavi 1 17254 57.4 1 0 1
+Phasm 1 7945 33.5 0 1 1
+Virga 1 10093 37.5 1 0 1
+
+Virus names repeated across places?
+unique_clade_names 58 repeated_clade_names 38
+[('Botou tick virus 1', 18), ('tick virus 1', 16), ('Parti tick virus 1', 14), ('Narna tick virus 1', 13), ('Totiv tick virus 1', 13), ('Rhabd tick virus 1', 12), ('Ortho tick virus 1', 9), ('Botou tick virus 2', 8), ('Phenu tick virus 1', 7), ('Reovi tick virus 1', 7), ('Chuvi tick virus 1', 6), ('Mitov tick virus 1', 6), ('Nairo tick virus 1', 6), ('Narna tick virus 2', 6), ('Botou tick virus 3', 5), ('Botou tick virus 4', 5), ('Fusar tick virus 1', 5), ('Iflav tick virus 1', 5), ('Rhabd tick virus 2', 5), ('Totiv tick virus 2', 5)]
+accession_prefixes Counter({'ON': 1680, 'OP': 121})
+
+cRNA groups [('Rhabd', 21), ('(none)', 12), ('Ortho', 10), ('Chuvi', 7), ('Nairo', 7), ('Mymon', 2), ('Perib', 2), ('Phasm', 1)]
+genomic groups top [('Botou', 43), ('Narna', 27), ('Totiv', 23), ('Parti', 18), ('Reovi', 13), ('(none)', 8), ('Mitov', 8), ('Phenu', 7), ('Fusar', 5), ('Iflav', 5), ('Chrys', 4), ('Nodav', 3), ('Dicis', 2), ('Picor', 2), ('Tombu', 2), ('Bromo', 1), ('Delta', 1), ('Flavi', 1), ('Virga', 1)]
+
+shortest
+803 ON872623.1 MAG: Thogotovirus thogotoense isolate TIGMIC_4 polymerase PB1 gene, complete cds
+817 ON872641.1 MAG: Orthomyxoviridae sp. isolate TIGMIC_3 polymerase PB1 gene, partial cds
+864 ON872635.1 MAG: Orthomyxoviridae sp. isolate TIGMIC_2 polymerase PB1 gene, partial cds
+884 ON872642.1 MAG: Zambezi tick virus 1 isolate TIGMIC_3 polymerase PB1-like gene, complete sequence
+960 ON812452.1 MAG: Reoviridae sp. isolate TIGMIC_2 genomic sequence
+970 ON746461.1 MAG: Zhangzhou Ortho tick virus 2 isolate TIGMIC 1 cRNA sequence
+1100 ON812461.1 MAG: Reoviridae sp. isolate TIGMIC_2, complete genome
+1147 ON812453.1 MAG: Reoviridae sp. isolate TIGMIC_4 genomic sequence
+1177 ON812462.1 MAG: Reoviridae sp. isolate TIGMIC_2 genomic sequence
+1202 ON872622.1 MAG: Thogotovirus thogotoense isolate TIGMIC_3 polymerase PB1 gene, partial cds
+
+longest
+16555 ON811725.1 MAG: Flaviviridae sp. isolate TIGMIC_24, complete genome
+16861 ON811737.1 MAG: Flaviviridae sp. isolate TIGMIC_36, complete genome
+17002 ON811738.1 MAG UNVERIFIED: Trinbago virus isolate TIGMIC_1 genomic sequence
+17234 ON811741.1 MAG: Flaviviridae sp. isolate TIGMIC_38, complete genome
+17239 ON811742.1 MAG: Flaviviridae sp. isolate TIGMIC_39, complete genome
+17254 ON746389.1 MAG: Zhangjiakou Flavi tick virus 1 isolate TIGMIC 37 genomic sequence
+21798 OP628502.1 MAG: Lesnoe mivirus isolate TIGMIC_6, complete genome
+22543 OP628553.1 MAG: Mivirus sp. isolate TIGMIC_2, complete genome
+22567 OP628551.1 MAG: Mivirus sp. isolate TIGMIC_1 cRNA sequence
+22791 OP628559.1 MAG: Wuhan tick virus 2 isolate TIGMIC_3 cRNA sequence
+
+top location group richness [(13, 'Nanning', [('Narna', 4), ('Totiv', 4), ('Parti', 3), ('Botou', 2), ('Chuvi', 2)]), (10, 'Zhangzhou', [('Botou', 7), ('Narna', 5), ('Parti', 3), ('Ortho', 2), ('Chrys', 1)]), (9, 'Yanbian', [('Rhabd', 5), ('Reovi', 4), ('Nairo', 2), ('Chuvi', 1), ('Narna', 1)]), (9, 'Tongren', [('Rhabd', 3), ('Reovi', 2), ('Botou', 1), ('Iflav', 1), ('Ortho', 1)]), (9, 'Dali', [('Botou', 1), ('Chuvi', 1), ('Fusar', 1), ('Mitov', 1), ('Nairo', 1)]), (6, 'Tonghua', [('Botou', 4), ('Narna', 4), ('Nairo', 1), ('(none)', 1), ('Totiv', 1)]), (6, 'Hulunbuir', [('Botou', 8), ('Totiv', 2), ('Chrys', 1), ('(none)', 1), ('Narna', 1)]), (5, 'Zhangjiakou', [('Rhabd', 2), ('Totiv', 2), ('Flavi', 1), ('Phenu', 1), ('Reovi', 1)]), (5, 'Yushu', [('Chuvi', 1), ('Nairo', 1), ('Ortho', 1), ('(none)', 1), ('Rhabd', 1)]), (5, 'Xiangxi', [('(none)', 2), ('Narna', 1), ('Ortho', 1), ('Parti', 1), ('Totiv', 1)]), (4, 'Zhangye', [('Chuvi', 1), ('Narna', 1), ('(none)', 1), ('Rhabd', 1)]), (4, 'Luoyang', [('Totiv', 4), ('Botou', 2), ('Fusar', 1), ('Nodav', 1)]), (4, 'Kashgar', [('Botou', 1), ('Parti', 1), ('Reovi', 1), ('Totiv', 1)]), (4, 'Chuzhou', [('(none)', 2), ('Botou', 1), ('Mitov', 1), ('Ortho', 1)]), (3, 'Xining', [('Chuvi', 1), ('Nairo', 1), ('Phenu', 1)]), (3, 'Tianjin', [('Botou', 4), ('Mitov', 1), ('Nodav', 1)]), (3, 'Suizhou', [('Botou', 1), ('Dicis', 1), ('Fusar', 1)]), (3, 'Qingyuan', [('Delta', 1), ('Narna', 1), ('Parti', 1)]), (3, 'Qingyang', [('Narna', 1), ('Ortho', 1), ('Rhabd', 1)]), (3, 'Linzhi', [('Iflav', 1), ('Nairo', 1), ('Ortho', 1)])]
+duplicate_sequences groups 0 records_in_dups 0
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from collections import Counter, defaultdict
+from statistics import mean, median
+from pathlib import Path
+import re
+p=Path('data/nuccore_reported_viral_sequences.fasta')
+records=[]; h=None; seq=[]
+for line in p.read_text().splitlines():
+    if line.startswith('>'):
+        if h is not None: records.append((h,''.join(seq).upper()))
+        h=line[1:].strip(); seq=[]
+    else: seq.append(line.strip())
+if h: records.append((h,''.join(seq).upper()))
+pat=re.compile(r'"'^(?P<acc>'"\\S+) MAG(?: UNVERIFIED)?: (?P<taxon>.+?) isolate TIGMIC[ _](?P<iso>\\d+)\\b(?P<rest>.*)"'$'"')
+fail=[]; parsed=[]
+for h,s in records:
+    m=pat.match(h)
+    if not m: fail.append(h); continue
+    d=m.groupdict(); d['header']=h; d['len']=len(s); d['gc']=(s.count('G')+s.count('C'))/len(s)*100; parsed.append(d)
+print('parsed',len(parsed),'fail',len(fail))
+if fail:
+    print('fails sample'); print('\\n'.join(fail[:20]))
+print('unique_taxa', len(set(d['taxon'] for d in parsed)))
+print('top_taxa')
+for x in Counter(d['taxon'] for d in parsed).most_common(30): print(x)
+print('\\nrest categories top')
+rest_cat=[]
+for d in parsed:
+    r=d['rest'].strip(' ,')
+    if 'complete genome' in r: c='complete genome'
+    elif 'complete cds' in r: c='complete cds'
+    elif 'partial cds' in r: c='partial cds'
+    elif 'genomic sequence' in r: c='genomic sequence'
+    elif 'cRNA sequence' in r: c='cRNA sequence'
+    elif 'complete sequence' in r: c='complete sequence'
+    else: c=r or '(none)'
+    rest_cat.append(c)
+print(Counter(rest_cat).most_common(20))
+print('partial records', sum('partial' in d['rest'] for d in parsed))
+print('complete records', sum('complete' in d['rest'] for d in parsed))
+print('UNVERIFIED', sum('UNVERIFIED' in d['header'] for d in parsed))
+print('sp taxa records', sum(' sp.' in d['taxon'] or d['taxon'].endswith(' sp') for d in parsed), 'unique', len(set(d['taxon'] for d in parsed if ' sp.' in d['taxon'] or d['taxon'].endswith(' sp'))))
+# grouping: if taxon like 'Flaviviridae sp.' group family; if first block place+... above maybe group after location, else family/genus first word
+family_like=Counter()
+for d in parsed:
+    tax=d['taxon']
+    if ' tick virus' in tax:
+        toks=tax.split()
+        if toks[1]=='tick': group='unqualified tick virus'
+        else: group=toks[1] # likely location qualifier then clade abbreviation
+    elif tax.endswith(' sp.'):
+        group=tax.replace(' sp.','')
+    else:
+        group=tax.split()[0]
+    family_like[group]+=1
+print('\\ncoarse_group top 50')
+for x in family_like.most_common(50): print(x)
+# accession by prefix, ranges
+print('\\naccession prefixes',Counter(re.match(r'[A-Z]+',d['acc']).group() for d in parsed))
+# isolate nums, unique isolate IDs? counts by isolate number? (TIGMIC number is sample id maybe)
+iso_nums=[int(d['iso']) for d in parsed]
+print('iso number min med max unique',min(iso_nums),median(iso_nums),max(iso_nums),len(set(iso_nums)))
+print('top isolate ids by records',Counter(iso_nums).most_common(20))
+# length bins
+bins=[0,1000,2000,5000,10000,15000,20000,30000]
+bc=Counter()
+for l in [d['len'] for d in parsed]:
+    for a,b in zip(bins,bins[1:]):
+        if a<l<=b: bc[f'{a+1}-{b}']+=1; break
+print('length_bins',bc)
+# GC by complete/genomic/cRNA? 
+for cat in ['complete genome','genomic sequence','cRNA sequence','partial cds','complete cds','complete sequence']:
+    vals=[d for d,c in zip(parsed,rest_cat) if c==cat]
+    if vals:
+        print('catstats',cat,len(vals),'medlen',median([v['len'] for v in vals]),'meangc',round(mean(v['gc'] for v in vals),1))
+# top group stats by coarse group + category
+bygrp=defaultdict(list)
+for d in parsed:
+    tax=d['taxon']
+    if ' tick virus' in tax:
+        toks=tax.split(); group=(toks[1] if len(toks)>1 and toks[1]"'!='"'tick' else 'unqualified tick virus')
+    elif tax.endswith(' sp.'):
+        group=tax.replace(' sp.','')
+    else:
+        group=tax.split()[0]
+    bygrp[group].append(d)
+print('\\ncoarse group stats')
+for g,c in family_like.most_common(30):
+    vals=bygrp[g]
+    print(g, len(vals), 'uniq_taxa',len(set(v['taxon'] for v in vals)), 'medlen',int(median(v['len'] for v in vals)), 'meangc',round(mean(v['gc'] for v in vals),1))
+# find sets with multiple records per taxon and isolate ranges
+print('\\nTop repeated taxa details')
+for tax,c in Counter(d['taxon'] for d in parsed).most_common(20):
+    vals=[d for d in parsed if d['taxon']==tax]
+    print(tax,c,'iso_unique',len(set(v['iso'] for v in vals)),'len_range',(min(v['len'] for v in vals),max(v['len'] for v in vals)),'cat',Counter(rest_cat[parsed.index(v)] for v in vals).most_common(3))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+ succeeded in 0ms:
+parsed 1801 fail 0
+unique_taxa 362
+top_taxa
+('Totiviridae sp.', 244)
+('Botourmiaviridae sp.', 180)
+('Narnaviridae sp.', 91)
+('Dabieshan Tick Virus', 87)
+('Rhabdoviridae sp.', 72)
+('Mitoviridae sp.', 52)
+('Lihan tick virus', 51)
+('Partitiviridae sp.', 44)
+('Nairoviridae sp.', 41)
+('Flaviviridae sp.', 40)
+('Wuhan mivirus', 38)
+('Orthomyxoviridae sp.', 37)
+('Brown dog tick phlebovirus 1', 36)
+('Phenuiviridae sp.', 35)
+('Peribunyaviridae sp.', 32)
+('Wuhan tick virus 2', 26)
+('Tick phlebovirus', 23)
+('Shanxi tick virus 2', 20)
+('Brown dog tick phlebovirus 2', 20)
+('Reoviridae sp.', 20)
+('Chuviridae sp.', 20)
+('Iflaviridae sp.', 19)
+('Lesnoe mivirus', 19)
+('Gakugsa tick virus', 16)
+('Rhipicephalus associated rhabdo-like virus', 16)
+('Huangpi Tick Virus 1', 15)
+('Sara tick phlebovirus', 14)
+('Henan tick virus', 13)
+('Wuhan Tick Virus 1', 13)
+('Hebei mivirus 1', 11)
+
+rest categories top
+[('complete genome', 1228), ('genomic sequence', 308), ('cRNA sequence', 128), ('partial cds', 79), ('complete cds', 55), ('complete sequence', 2), ('polyprotein-like gene, partial sequence', 1)]
+partial records 80
+complete records 1285
+UNVERIFIED 101
+sp taxa records 945 unique 21
+
+coarse_group top 50
+('Totiviridae', 244)
+('Botourmiaviridae', 180)
+('unqualified tick virus', 153)
+('Narnaviridae', 91)
+('Dabieshan', 87)
+('Rhabdoviridae', 72)
+('Brown', 56)
+('Mitoviridae', 52)
+('Wuhan', 51)
+('Erysiphe', 49)
+('Partitiviridae', 44)
+('Botou', 43)
+('Nairoviridae', 41)
+('Flaviviridae', 40)
+('Plasmopara', 40)
+('Orthomyxoviridae', 37)
+('Phenuiviridae', 35)
+('Peribunyaviridae', 32)
+('Narna', 27)
+('Totiv', 23)
+('Tick', 23)
+('Rhabd', 21)
+('Rhipicephalus', 21)
+('Reoviridae', 20)
+('Chuviridae', 20)
+('Iflaviridae', 19)
+('Lesnoe', 19)
+('Parti', 18)
+('Huangpi', 15)
+('Sara', 14)
+('Reovi', 13)
+('Hebei', 11)
+('Ortho', 10)
+('Neofusicoccum', 9)
+('Mitov', 8)
+('Fusariviridae', 8)
+('Kaisodi', 8)
+('Bole', 8)
+('Chuvi', 7)
+('Nairo', 7)
+('Phenu', 7)
+('Mukawa', 7)
+('Thogotovirus', 7)
+('Fusar', 5)
+('Iflav', 5)
+('Hubei', 5)
+('Chrys', 4)
+('Alternaria', 4)
+('Nodav', 3)
+('Dicistroviridae', 3)
+
+accession prefixes Counter({'ON': 1680, 'OP': 121})
+iso number min med max unique 1 8 266 119
+top isolate ids by records [(1, 311), (2, 177), (3, 122), (4, 86), (5, 73), (6, 69), (7, 59), (8, 49), (10, 48), (9, 47), (11, 46), (12, 38), (13, 34), (15, 31), (14, 29), (16, 28), (17, 28), (18, 26), (21, 24), (22, 24)]
+length_bins Counter({'5001-10000': 667, '2001-5000': 620, '10001-15000': 346, '1001-2000': 122, '15001-20000': 36, '1-1000': 6, '20001-30000': 4})
+catstats complete genome 1228 medlen 6522.0 meangc 51.4
+catstats genomic sequence 308 medlen 3243.0 meangc 50.2
+catstats cRNA sequence 128 medlen 11272.0 meangc 47.1
+catstats partial cds 79 medlen 1975 meangc 50.2
+catstats complete cds 55 medlen 2362 meangc 50.3
+catstats complete sequence 2 medlen 6480.5 meangc 47.8
+
+coarse group stats
+Totiviridae 244 uniq_taxa 1 medlen 8588 meangc 58.9
+Botourmiaviridae 180 uniq_taxa 1 medlen 2476 meangc 53.4
+unqualified tick virus 153 uniq_taxa 27 medlen 10038 meangc 45.9
+Narnaviridae 91 uniq_taxa 1 medlen 2540 meangc 50.4
+Dabieshan 87 uniq_taxa 1 medlen 6520 meangc 49.8
+Rhabdoviridae 72 uniq_taxa 1 medlen 11345 meangc 51.0
+Brown 56 uniq_taxa 2 medlen 6542 meangc 49.4
+Mitoviridae 52 uniq_taxa 1 medlen 2292 meangc 52.7
+Wuhan 51 uniq_taxa 2 medlen 11406 meangc 47.2
+Erysiphe 49 uniq_taxa 19 medlen 2500 meangc 51.8
+Partitiviridae 44 uniq_taxa 1 medlen 1766 meangc 49.5
+Botou 43 uniq_taxa 43 medlen 2691 meangc 51.6
+Nairoviridae 41 uniq_taxa 1 medlen 12067 meangc 45.0
+Flaviviridae 40 uniq_taxa 1 medlen 16501 meangc 59.2
+Plasmopara 40 uniq_taxa 18 medlen 2538 meangc 50.7
+Orthomyxoviridae 37 uniq_taxa 1 medlen 2362 meangc 50.1
+Phenuiviridae 35 uniq_taxa 1 medlen 6638 meangc 49.9
+Peribunyaviridae 32 uniq_taxa 1 medlen 9212 meangc 46.0
+Narna 27 uniq_taxa 27 medlen 2629 meangc 51.2
+Totiv 23 uniq_taxa 23 medlen 5052 meangc 51.1
+Tick 23 uniq_taxa 1 medlen 6505 meangc 47.8
+Rhabd 21 uniq_taxa 21 medlen 11343 meangc 49.7
+Rhipicephalus 21 uniq_taxa 2 medlen 10276 meangc 47.5
+Reoviridae 20 uniq_taxa 1 medlen 2194 meangc 48.3
+Chuviridae 20 uniq_taxa 1 medlen 11245 meangc 53.2
+Iflaviridae 19 uniq_taxa 1 medlen 9274 meangc 40.0
+Lesnoe 19 uniq_taxa 1 medlen 10873 meangc 50.8
+Parti 18 uniq_taxa 18 medlen 1749 meangc 47.5
+Huangpi 15 uniq_taxa 1 medlen 11929 meangc 43.7
+Sara 14 uniq_taxa 1 medlen 6715 meangc 49.8
+
+Top repeated taxa details
+Totiviridae sp. 244 iso_unique 107 len_range (3689, 9251) cat [('complete genome', 218), ('genomic sequence', 23), ('complete cds', 3)]
+Botourmiaviridae sp. 180 iso_unique 46 len_range (2250, 3044) cat [('complete genome', 171), ('genomic sequence', 7), ('complete cds', 2)]
+Narnaviridae sp. 91 iso_unique 31 len_range (1609, 3354) cat [('complete genome', 59), ('partial cds', 28), ('genomic sequence', 2)]
+Dabieshan Tick Virus 87 iso_unique 87 len_range (5282, 7203) cat [('complete genome', 78), ('genomic sequence', 5), ('partial cds', 3)]
+Rhabdoviridae sp. 72 iso_unique 24 len_range (8816, 13066) cat [('complete genome', 62), ('cRNA sequence', 9), ('complete cds', 1)]
+Mitoviridae sp. 52 iso_unique 35 len_range (2016, 3056) cat [('complete genome', 29), ('genomic sequence', 22), ('partial cds', 1)]
+Lihan tick virus 51 iso_unique 51 len_range (5818, 6823) cat [('complete genome', 45), ('genomic sequence', 6)]
+Partitiviridae sp. 44 iso_unique 14 len_range (1272, 3505) cat [('complete genome', 23), ('partial cds', 14), ('genomic sequence', 7)]
+Nairoviridae sp. 41 iso_unique 28 len_range (5517, 12906) cat [('complete genome', 24), ('cRNA sequence', 9), ('partial cds', 6)]
+Flaviviridae sp. 40 iso_unique 40 len_range (7978, 17239) cat [('complete genome', 22), ('genomic sequence', 17), ('polyprotein-like gene, partial sequence', 1)]
+Wuhan mivirus 38 iso_unique 38 len_range (8154, 12415) cat [('complete genome', 23), ('cRNA sequence', 15)]
+Orthomyxoviridae sp. 37 iso_unique 24 len_range (817, 2367) cat [('complete cds', 34), ('partial cds', 3)]
+Brown dog tick phlebovirus 1 36 iso_unique 36 len_range (5480, 6733) cat [('complete genome', 33), ('genomic sequence', 2), ('complete cds', 1)]
+Phenuiviridae sp. 35 iso_unique 24 len_range (6532, 13045) cat [('complete genome', 33), ('genomic sequence', 1), ('complete cds', 1)]
+Peribunyaviridae sp. 32 iso_unique 24 len_range (5443, 9275) cat [('complete genome', 24), ('cRNA sequence', 4), ('partial cds', 4)]
+Wuhan tick virus 2 26 iso_unique 26 len_range (10038, 22791) cat [('complete genome', 21), ('cRNA sequence', 5)]
+Tick phlebovirus 23 iso_unique 23 len_range (6464, 6536) cat [('complete genome', 23)]
+Shanxi tick virus 2 20 iso_unique 20 len_range (6944, 13110) cat [('complete genome', 16), ('genomic sequence', 4)]
+Brown dog tick phlebovirus 2 20 iso_unique 20 len_range (5145, 6540) cat [('complete genome', 17), ('partial cds', 3)]
+Reoviridae sp. 20 iso_unique 6 len_range (960, 4297) cat [('genomic sequence', 13), ('complete genome', 7)]
+
+codex
+The parsed dataset has 1,801 nonduplicate viral nucleotide records, 362 taxon labels, and 11.58 Mb of sequence with no ambiguous `N` bases. I’m going to write the report and JSON around the main opportunity: taxonomic and genome-feature diversity in the reported TIGMIC tick-virus sequence set, with grounded alternatives for the ranked question list.
+exec
+/bin/zsh -lc 'mkdir -p report' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+ succeeded in 0ms:
+apply patch
+patch: completed
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726/agent_questions.json
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726/report/report.md
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..dd414d34d3a67677498788c6da4905f30caab999
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,117 @@
++{
++  "agent_id": "gpt-5.5-codex-cli",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "How much taxonomic and genome-feature diversity is captured in the reported TIGMIC tick-associated viral sequences, and which viral families or locality-named lineages account for the dominant complete-genome diversity?",
++      "rationale": "The FASTA contains 1,801 nonduplicate nucleotide records with 362 taxon labels and many complete-genome annotations. Dominant labels such as Totiviridae sp., Botourmiaviridae sp., Narnaviridae sp., Dabieshan Tick Virus, and Rhabdoviridae sp. indicate that diversity is unevenly distributed across viral groups. Length, GC content, completeness annotation, and header-derived lineage names make the question answerable without external metadata.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "FASTA taxon labels",
++        "TIGMIC isolate identifiers",
++        "sequence descriptors",
++        "nucleotide sequence length",
++        "GC content"
++      ],
++      "expected_test": "Parse FASTA headers and sequences, count taxa and sequence descriptor classes, calculate length and GC distributions, then summarize or cluster complete genomes by taxon and locality-named lineage.",
++      "scope_keywords": [
++        "tick virome",
++        "TIGMIC",
++        "taxonomy",
++        "complete genomes",
++        "genome length",
++        "GC content"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Do the dominant family-level MAG labels such as Totiviridae sp., Botourmiaviridae sp., Narnaviridae sp., and Rhabdoviridae sp. represent internally coherent sequence groups with characteristic genome lengths and GC contents?",
++      "rationale": "Family-level `sp.` labels account for a large fraction of the file, including 244 Totiviridae sp. records, 180 Botourmiaviridae sp. records, 91 Narnaviridae sp. records, and 72 Rhabdoviridae sp. records. These repeated labels provide enough records to compare within-label and between-label sequence properties. Coherent length and GC profiles would support treating these entries as structured viral groups rather than arbitrary header categories.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Totiviridae sp.",
++        "Botourmiaviridae sp.",
++        "Narnaviridae sp.",
++        "Rhabdoviridae sp.",
++        "nucleotide sequence length",
++        "GC content"
++      ],
++      "expected_test": "Group records by family-level taxon label, compute length and GC distributions for each group, and optionally cluster nucleotide sequences to test whether records with the same label group together.",
++      "scope_keywords": [
++        "family-level labels",
++        "MAG",
++        "sequence coherence",
++        "length distribution",
++        "GC content"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Among the locality-named tick virus records, which Chinese locality tokens and abbreviated viral lineages show the greatest apparent richness in the reported TIGMIC sequence set?",
++      "rationale": "A subset of 236 headers follows a locality-named pattern such as Nanning Botou tick virus or Zhangzhou Narna tick virus. This subset spans 53 locality tokens and 26 abbreviated viral groups, with Nanning, Zhangzhou, Yanbian, Hulunbuir, Tonghua, and Tongren among the most frequent locality tokens. The pattern supports a focused richness analysis within the records where locality is encoded in the virus name.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "locality-named FASTA headers",
++        "Botou tick virus labels",
++        "Narna tick virus labels",
++        "Totiv tick virus labels",
++        "Rhabd tick virus labels"
++      ],
++      "expected_test": "Extract locality tokens and abbreviated lineage tokens from locality-named headers, count records and unique lineage labels per locality, and compare apparent richness across localities.",
++      "scope_keywords": [
++        "locality names",
++        "viral richness",
++        "China",
++        "Botou",
++        "Narna",
++        "TIGMIC"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are cRNA sequence annotations concentrated in negative-sense or segmented tick-virus groups compared with records annotated as genomic sequences or complete genomes?",
++      "rationale": "The parsed descriptors include 128 cRNA sequence records as well as 1,228 complete genomes and 308 genomic sequences. In the locality-named subset, cRNA annotations appear in groups such as Rhabd, Ortho, Chuvi, and Nairo, while Botou, Narna, Totiv, and Parti are represented as genomic records. This makes descriptor enrichment across virus groups a testable marker of genome organization.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "cRNA sequence descriptors",
++        "genomic sequence descriptors",
++        "complete genome descriptors",
++        "Rhabd tick virus labels",
++        "Ortho tick virus labels",
++        "Chuvi tick virus labels",
++        "Nairo tick virus labels"
++      ],
++      "expected_test": "Classify records by header sequence descriptor and taxon or abbreviated lineage, then use contingency tables to compare cRNA frequency against genomic and complete-genome annotations.",
++      "scope_keywords": [
++        "cRNA",
++        "genome organization",
++        "Rhabd",
++        "Ortho",
++        "Chuvi",
++        "Nairo"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Which repeated named viruses, including Dabieshan Tick Virus, Lihan tick virus, Wuhan mivirus, and Brown dog tick phleboviruses, show the greatest isolate-level nucleotide diversity across TIGMIC isolate identifiers?",
++      "rationale": "Several named viral taxa recur across many TIGMIC isolate identifiers, including Dabieshan Tick Virus with 87 records, Lihan tick virus with 51, Wuhan mivirus with 38, and Brown dog tick phlebovirus 1 with 36. Because the sequences are nonduplicate and include isolate identifiers, repeated taxa can be compared for within-taxon divergence. This would identify whether common named viruses are represented by near-identical detections or by substantial genomic diversity.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Dabieshan Tick Virus",
++        "Lihan tick virus",
++        "Wuhan mivirus",
++        "Brown dog tick phlebovirus 1",
++        "TIGMIC isolate identifiers",
++        "nucleotide sequences"
++      ],
++      "expected_test": "For taxa with many records, align or cluster nucleotide sequences within each taxon, compute pairwise identity or distance, and compare diversity across TIGMIC isolate identifiers.",
++      "scope_keywords": [
++        "isolate diversity",
++        "Dabieshan Tick Virus",
++        "Lihan tick virus",
++        "Wuhan mivirus",
++        "phlebovirus"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4303ca84214b8c90fcedd0ceca21b093f305201d
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Data Summary
++
++The agent-visible upload contains one FASTA file, `data/nuccore_reported_viral_sequences.fasta`, listed in `info.json` at 11,888,536 bytes. I parsed 1,801 nucleotide records totaling 11,584,068 bases. All headers are NCBI-style MAG entries with accession IDs, taxon or provisional virus names, TIGMIC isolate identifiers, and sequence descriptors such as complete genome, genomic sequence, cRNA sequence, complete cds, or partial cds. The file contains 362 distinct taxon labels. The largest repeated labels are `Totiviridae sp.` (244 records), `Botourmiaviridae sp.` (180), `Narnaviridae sp.` (91), `Dabieshan Tick Virus` (87), and `Rhabdoviridae sp.` (72).
++
++# Analysis
++
++The sequence set is dominated by genome-scale records: 1,228 entries are annotated as complete genomes, 308 as genomic sequences, and 128 as cRNA sequences; 79 are partial cds and 55 are complete cds. Sequence lengths range from 803 to 22,791 bp, with a median of 6,498 bp and a mean of 6,432 bp. Length bins show broad genome-architecture diversity: 667 records fall between 5,001 and 10,000 bp, 620 between 2,001 and 5,000 bp, and 346 between 10,001 and 15,000 bp. Mean GC content is 50.79%, with a range from 25.54% to 65.60%. No record contains ambiguous `N` bases, and there are no exact duplicate nucleotide sequences.
++
++Header-derived taxonomy also shows strong compositional structure. Family-level `sp.` labels account for 945 records across 21 unique labels, while locality-named tick virus records account for 236 records across 53 locality tokens and 26 abbreviated virus groups. In that locality-named subset, the most frequent places are Nanning (25), Zhangzhou (23), Yanbian (17), Hulunbuir (14), Tonghua (12), and Tongren (12). The most common abbreviated groups are Botou (43), Narna (27), Totiv (23), Rhabd (21), unqualified tick virus (20), Parti (18), and Reovi (13). cRNA annotations are concentrated in groups such as Rhabd, Ortho, Chuvi, and Nairo.
++
++# Reasoning
++
++The strongest scientific opportunity is to use this nonredundant, mostly complete-genome sequence set to describe how tick-associated viral diversity is partitioned across taxa, provisional lineages, genome sizes, sequence composition, and cRNA/genomic annotation classes. The dataset is large enough for family-level and lineage-level comparisons, but still structured enough that the FASTA headers provide usable biological labels and TIGMIC isolate identifiers. The presence of many repeated taxa and many locality-named provisional viruses suggests that the data can support questions about dominant viral lineages, sequence diversity within reported taxa, and whether provisional tick-virus groups have coherent genome features.
++
++# Top Scientific Question
++
++How much taxonomic and genome-feature diversity is captured in the reported TIGMIC tick-associated viral sequences, and which viral families or locality-named lineages account for the dominant complete-genome diversity?
++
++# Why This Question Is Testable On The Provided Dataset
++
++This question is directly testable from the FASTA headers and sequences. The headers provide accession IDs, taxon labels, TIGMIC isolate numbers, and sequence descriptors, while the nucleotide sequences provide length, GC content, ambiguity, exact-duplicate status, and inputs for clustering or phylogenetic analysis. Counting labels, comparing genome lengths and GC content, separating complete genomes from cRNA or partial records, and clustering repeated taxa can identify the dominant lineages and quantify their genomic diversity.
+
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..dd414d34d3a67677498788c6da4905f30caab999
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,117 @@
++{
++  "agent_id": "gpt-5.5-codex-cli",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "How much taxonomic and genome-feature diversity is captured in the reported TIGMIC tick-associated viral sequences, and which viral families or locality-named lineages account for the dominant complete-genome diversity?",
++      "rationale": "The FASTA contains 1,801 nonduplicate nucleotide records with 362 taxon labels and many complete-genome annotations. Dominant labels such as Totiviridae sp., Botourmiaviridae sp., Narnaviridae sp., Dabieshan Tick Virus, and Rhabdoviridae sp. indicate that diversity is unevenly distributed across viral groups. Length, GC content, completeness annotation, and header-derived lineage names make the question answerable without external metadata.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "FASTA taxon labels",
++        "TIGMIC isolate identifiers",
++        "sequence descriptors",
++        "nucleotide sequence length",
++        "GC content"
++      ],
++      "expected_test": "Parse FASTA headers and sequences, count taxa and sequence descriptor classes, calculate length and GC distributions, then summarize or cluster complete genomes by taxon and locality-named lineage.",
++      "scope_keywords": [
++        "tick virome",
++        "TIGMIC",
++        "taxonomy",
++        "complete genomes",
++        "genome length",
++        "GC content"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Do the dominant family-level MAG labels such as Totiviridae sp., Botourmiaviridae sp., Narnaviridae sp., and Rhabdoviridae sp. represent internally coherent sequence groups with characteristic genome lengths and GC contents?",
++      "rationale": "Family-level `sp.` labels account for a large fraction of the file, including 244 Totiviridae sp. records, 180 Botourmiaviridae sp. records, 91 Narnaviridae sp. records, and 72 Rhabdoviridae sp. records. These repeated labels provide enough records to compare within-label and between-label sequence properties. Coherent length and GC profiles would support treating these entries as structured viral groups rather than arbitrary header categories.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Totiviridae sp.",
++        "Botourmiaviridae sp.",
++        "Narnaviridae sp.",
++        "Rhabdoviridae sp.",
++        "nucleotide sequence length",
++        "GC content"
++      ],
++      "expected_test": "Group records by family-level taxon label, compute length and GC distributions for each group, and optionally cluster nucleotide sequences to test whether records with the same label group together.",
++      "scope_keywords": [
++        "family-level labels",
++        "MAG",
++        "sequence coherence",
++        "length distribution",
++        "GC content"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Among the locality-named tick virus records, which Chinese locality tokens and abbreviated viral lineages show the greatest apparent richness in the reported TIGMIC sequence set?",
++      "rationale": "A subset of 236 headers follows a locality-named pattern such as Nanning Botou tick virus or Zhangzhou Narna tick virus. This subset spans 53 locality tokens and 26 abbreviated viral groups, with Nanning, Zhangzhou, Yanbian, Hulunbuir, Tonghua, and Tongren among the most frequent locality tokens. The pattern supports a focused richness analysis within the records where locality is encoded in the virus name.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "locality-named FASTA headers",
++        "Botou tick virus labels",
++        "Narna tick virus labels",
++        "Totiv tick virus labels",
++        "Rhabd tick virus labels"
++      ],
++      "expected_test": "Extract locality tokens and abbreviated lineage tokens from locality-named headers, count records and unique lineage labels per locality, and compare apparent richness across localities.",
++      "scope_keywords": [
++        "locality names",
++        "viral richness",
++        "China",
++        "Botou",
++        "Narna",
++        "TIGMIC"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are cRNA sequence annotations concentrated in negative-sense or segmented tick-virus groups compared with records annotated as genomic sequences or complete genomes?",
++      "rationale": "The parsed descriptors include 128 cRNA sequence records as well as 1,228 complete genomes and 308 genomic sequences. In the locality-named subset, cRNA annotations appear in groups such as Rhabd, Ortho, Chuvi, and Nairo, while Botou, Narna, Totiv, and Parti are represented as genomic records. This makes descriptor enrichment across virus groups a testable marker of genome organization.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "cRNA sequence descriptors",
++        "genomic sequence descriptors",
++        "complete genome descriptors",
++        "Rhabd tick virus labels",
++        "Ortho tick virus labels",
++        "Chuvi tick virus labels",
++        "Nairo tick virus labels"
++      ],
++      "expected_test": "Classify records by header sequence descriptor and taxon or abbreviated lineage, then use contingency tables to compare cRNA frequency against genomic and complete-genome annotations.",
++      "scope_keywords": [
++        "cRNA",
++        "genome organization",
++        "Rhabd",
++        "Ortho",
++        "Chuvi",
++        "Nairo"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Which repeated named viruses, including Dabieshan Tick Virus, Lihan tick virus, Wuhan mivirus, and Brown dog tick phleboviruses, show the greatest isolate-level nucleotide diversity across TIGMIC isolate identifiers?",
++      "rationale": "Several named viral taxa recur across many TIGMIC isolate identifiers, including Dabieshan Tick Virus with 87 records, Lihan tick virus with 51, Wuhan mivirus with 38, and Brown dog tick phlebovirus 1 with 36. Because the sequences are nonduplicate and include isolate identifiers, repeated taxa can be compared for within-taxon divergence. This would identify whether common named viruses are represented by near-identical detections or by substantial genomic diversity.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Dabieshan Tick Virus",
++        "Lihan tick virus",
++        "Wuhan mivirus",
++        "Brown dog tick phlebovirus 1",
++        "TIGMIC isolate identifiers",
++        "nucleotide sequences"
++      ],
++      "expected_test": "For taxa with many records, align or cluster nucleotide sequences within each taxon, compute pairwise identity or distance, and compare diversity across TIGMIC isolate identifiers.",
++      "scope_keywords": [
++        "isolate diversity",
++        "Dabieshan Tick Virus",
++        "Lihan tick virus",
++        "Wuhan mivirus",
++        "phlebovirus"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4303ca84214b8c90fcedd0ceca21b093f305201d
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Data Summary
++
++The agent-visible upload contains one FASTA file, `data/nuccore_reported_viral_sequences.fasta`, listed in `info.json` at 11,888,536 bytes. I parsed 1,801 nucleotide records totaling 11,584,068 bases. All headers are NCBI-style MAG entries with accession IDs, taxon or provisional virus names, TIGMIC isolate identifiers, and sequence descriptors such as complete genome, genomic sequence, cRNA sequence, complete cds, or partial cds. The file contains 362 distinct taxon labels. The largest repeated labels are `Totiviridae sp.` (244 records), `Botourmiaviridae sp.` (180), `Narnaviridae sp.` (91), `Dabieshan Tick Virus` (87), and `Rhabdoviridae sp.` (72).
++
++# Analysis
++
++The sequence set is dominated by genome-scale records: 1,228 entries are annotated as complete genomes, 308 as genomic sequences, and 128 as cRNA sequences; 79 are partial cds and 55 are complete cds. Sequence lengths range from 803 to 22,791 bp, with a median of 6,498 bp and a mean of 6,432 bp. Length bins show broad genome-architecture diversity: 667 records fall between 5,001 and 10,000 bp, 620 between 2,001 and 5,000 bp, and 346 between 10,001 and 15,000 bp. Mean GC content is 50.79%, with a range from 25.54% to 65.60%. No record contains ambiguous `N` bases, and there are no exact duplicate nucleotide sequences.
++
++Header-derived taxonomy also shows strong compositional structure. Family-level `sp.` labels account for 945 records across 21 unique labels, while locality-named tick virus records account for 236 records across 53 locality tokens and 26 abbreviated virus groups. In that locality-named subset, the most frequent places are Nanning (25), Zhangzhou (23), Yanbian (17), Hulunbuir (14), Tonghua (12), and Tongren (12). The most common abbreviated groups are Botou (43), Narna (27), Totiv (23), Rhabd (21), unqualified tick virus (20), Parti (18), and Reovi (13). cRNA annotations are concentrated in groups such as Rhabd, Ortho, Chuvi, and Nairo.
++
++# Reasoning
++
++The strongest scientific opportunity is to use this nonredundant, mostly complete-genome sequence set to describe how tick-associated viral diversity is partitioned across taxa, provisional lineages, genome sizes, sequence composition, and cRNA/genomic annotation classes. The dataset is large enough for family-level and lineage-level comparisons, but still structured enough that the FASTA headers provide usable biological labels and TIGMIC isolate identifiers. The presence of many repeated taxa and many locality-named provisional viruses suggests that the data can support questions about dominant viral lineages, sequence diversity within reported taxa, and whether provisional tick-virus groups have coherent genome features.
++
++# Top Scientific Question
++
++How much taxonomic and genome-feature diversity is captured in the reported TIGMIC tick-associated viral sequences, and which viral families or locality-named lineages account for the dominant complete-genome diversity?
++
++# Why This Question Is Testable On The Provided Dataset
++
++This question is directly testable from the FASTA headers and sequences. The headers provide accession IDs, taxon labels, TIGMIC isolate numbers, and sequence descriptors, while the nucleotide sequences provide length, GC content, ambiguity, exact-duplicate status, and inputs for clustering or phylogenetic analysis. Counting labels, comparing genome lengths and GC content, separating complete genomes from cRNA or partial records, and clustering repeated taxa can identify the dominant lineages and quantify their genomic diversity.
+
+ERROR: Reconnecting... 1/5
+codex
+The two requested files are written. I’m doing a quick validation pass now: JSON parse, rank/count checks, duplicate-question check, and report word count.
+exec
+/bin/zsh -lc 'test -f report/report.md && test -f agent_questions.json && wc -w report/report.md && find report -maxdepth 2 -type f -print' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+ succeeded in 0ms:
+     501 report/report.md
+report/report.md
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import json
+report=open('report/report.md').read()
+q=json.load(open('agent_questions.json'))['questions'][0]['question']
+print('top_question_in_report', q in report)
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+ succeeded in 0ms:
+top_question_in_report True
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import json
+from pathlib import Path
+p=Path('agent_questions.json')
+d=json.loads(p.read_text())
+qs=d['questions']
+print('questions', len(qs))
+print('ranks', [q['rank'] for q in qs])
+print('distinct_questions', len({q['question'] for q in qs}))
+print('all_end_question_mark', all(q['question'].endswith('?') for q in qs))
+print('top_question', qs[0]['question'])
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726
+ succeeded in 0ms:
+questions 5
+ranks [1, 2, 3, 4, 5]
+distinct_questions 5
+all_end_question_mark True
+top_question How much taxonomic and genome-feature diversity is captured in the reported TIGMIC tick-associated viral sequences, and which viral families or locality-named lineages account for the dominant complete-genome diversity?
+
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..dd414d34d3a67677498788c6da4905f30caab999
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,117 @@
++{
++  "agent_id": "gpt-5.5-codex-cli",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "How much taxonomic and genome-feature diversity is captured in the reported TIGMIC tick-associated viral sequences, and which viral families or locality-named lineages account for the dominant complete-genome diversity?",
++      "rationale": "The FASTA contains 1,801 nonduplicate nucleotide records with 362 taxon labels and many complete-genome annotations. Dominant labels such as Totiviridae sp., Botourmiaviridae sp., Narnaviridae sp., Dabieshan Tick Virus, and Rhabdoviridae sp. indicate that diversity is unevenly distributed across viral groups. Length, GC content, completeness annotation, and header-derived lineage names make the question answerable without external metadata.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "FASTA taxon labels",
++        "TIGMIC isolate identifiers",
++        "sequence descriptors",
++        "nucleotide sequence length",
++        "GC content"
++      ],
++      "expected_test": "Parse FASTA headers and sequences, count taxa and sequence descriptor classes, calculate length and GC distributions, then summarize or cluster complete genomes by taxon and locality-named lineage.",
++      "scope_keywords": [
++        "tick virome",
++        "TIGMIC",
++        "taxonomy",
++        "complete genomes",
++        "genome length",
++        "GC content"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Do the dominant family-level MAG labels such as Totiviridae sp., Botourmiaviridae sp., Narnaviridae sp., and Rhabdoviridae sp. represent internally coherent sequence groups with characteristic genome lengths and GC contents?",
++      "rationale": "Family-level `sp.` labels account for a large fraction of the file, including 244 Totiviridae sp. records, 180 Botourmiaviridae sp. records, 91 Narnaviridae sp. records, and 72 Rhabdoviridae sp. records. These repeated labels provide enough records to compare within-label and between-label sequence properties. Coherent length and GC profiles would support treating these entries as structured viral groups rather than arbitrary header categories.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Totiviridae sp.",
++        "Botourmiaviridae sp.",
++        "Narnaviridae sp.",
++        "Rhabdoviridae sp.",
++        "nucleotide sequence length",
++        "GC content"
++      ],
++      "expected_test": "Group records by family-level taxon label, compute length and GC distributions for each group, and optionally cluster nucleotide sequences to test whether records with the same label group together.",
++      "scope_keywords": [
++        "family-level labels",
++        "MAG",
++        "sequence coherence",
++        "length distribution",
++        "GC content"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Among the locality-named tick virus records, which Chinese locality tokens and abbreviated viral lineages show the greatest apparent richness in the reported TIGMIC sequence set?",
++      "rationale": "A subset of 236 headers follows a locality-named pattern such as Nanning Botou tick virus or Zhangzhou Narna tick virus. This subset spans 53 locality tokens and 26 abbreviated viral groups, with Nanning, Zhangzhou, Yanbian, Hulunbuir, Tonghua, and Tongren among the most frequent locality tokens. The pattern supports a focused richness analysis within the records where locality is encoded in the virus name.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "locality-named FASTA headers",
++        "Botou tick virus labels",
++        "Narna tick virus labels",
++        "Totiv tick virus labels",
++        "Rhabd tick virus labels"
++      ],
++      "expected_test": "Extract locality tokens and abbreviated lineage tokens from locality-named headers, count records and unique lineage labels per locality, and compare apparent richness across localities.",
++      "scope_keywords": [
++        "locality names",
++        "viral richness",
++        "China",
++        "Botou",
++        "Narna",
++        "TIGMIC"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are cRNA sequence annotations concentrated in negative-sense or segmented tick-virus groups compared with records annotated as genomic sequences or complete genomes?",
++      "rationale": "The parsed descriptors include 128 cRNA sequence records as well as 1,228 complete genomes and 308 genomic sequences. In the locality-named subset, cRNA annotations appear in groups such as Rhabd, Ortho, Chuvi, and Nairo, while Botou, Narna, Totiv, and Parti are represented as genomic records. This makes descriptor enrichment across virus groups a testable marker of genome organization.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "cRNA sequence descriptors",
++        "genomic sequence descriptors",
++        "complete genome descriptors",
++        "Rhabd tick virus labels",
++        "Ortho tick virus labels",
++        "Chuvi tick virus labels",
++        "Nairo tick virus labels"
++      ],
++      "expected_test": "Classify records by header sequence descriptor and taxon or abbreviated lineage, then use contingency tables to compare cRNA frequency against genomic and complete-genome annotations.",
++      "scope_keywords": [
++        "cRNA",
++        "genome organization",
++        "Rhabd",
++        "Ortho",
++        "Chuvi",
++        "Nairo"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Which repeated named viruses, including Dabieshan Tick Virus, Lihan tick virus, Wuhan mivirus, and Brown dog tick phleboviruses, show the greatest isolate-level nucleotide diversity across TIGMIC isolate identifiers?",
++      "rationale": "Several named viral taxa recur across many TIGMIC isolate identifiers, including Dabieshan Tick Virus with 87 records, Lihan tick virus with 51, Wuhan mivirus with 38, and Brown dog tick phlebovirus 1 with 36. Because the sequences are nonduplicate and include isolate identifiers, repeated taxa can be compared for within-taxon divergence. This would identify whether common named viruses are represented by near-identical detections or by substantial genomic diversity.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Dabieshan Tick Virus",
++        "Lihan tick virus",
++        "Wuhan mivirus",
++        "Brown dog tick phlebovirus 1",
++        "TIGMIC isolate identifiers",
++        "nucleotide sequences"
++      ],
++      "expected_test": "For taxa with many records, align or cluster nucleotide sequences within each taxon, compute pairwise identity or distance, and compare diversity across TIGMIC isolate identifiers.",
++      "scope_keywords": [
++        "isolate diversity",
++        "Dabieshan Tick Virus",
++        "Lihan tick virus",
++        "Wuhan mivirus",
++        "phlebovirus"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4303ca84214b8c90fcedd0ceca21b093f305201d
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Data Summary
++
++The agent-visible upload contains one FASTA file, `data/nuccore_reported_viral_sequences.fasta`, listed in `info.json` at 11,888,536 bytes. I parsed 1,801 nucleotide records totaling 11,584,068 bases. All headers are NCBI-style MAG entries with accession IDs, taxon or provisional virus names, TIGMIC isolate identifiers, and sequence descriptors such as complete genome, genomic sequence, cRNA sequence, complete cds, or partial cds. The file contains 362 distinct taxon labels. The largest repeated labels are `Totiviridae sp.` (244 records), `Botourmiaviridae sp.` (180), `Narnaviridae sp.` (91), `Dabieshan Tick Virus` (87), and `Rhabdoviridae sp.` (72).
++
++# Analysis
++
++The sequence set is dominated by genome-scale records: 1,228 entries are annotated as complete genomes, 308 as genomic sequences, and 128 as cRNA sequences; 79 are partial cds and 55 are complete cds. Sequence lengths range from 803 to 22,791 bp, with a median of 6,498 bp and a mean of 6,432 bp. Length bins show broad genome-architecture diversity: 667 records fall between 5,001 and 10,000 bp, 620 between 2,001 and 5,000 bp, and 346 between 10,001 and 15,000 bp. Mean GC content is 50.79%, with a range from 25.54% to 65.60%. No record contains ambiguous `N` bases, and there are no exact duplicate nucleotide sequences.
++
++Header-derived taxonomy also shows strong compositional structure. Family-level `sp.` labels account for 945 records across 21 unique labels, while locality-named tick virus records account for 236 records across 53 locality tokens and 26 abbreviated virus groups. In that locality-named subset, the most frequent places are Nanning (25), Zhangzhou (23), Yanbian (17), Hulunbuir (14), Tonghua (12), and Tongren (12). The most common abbreviated groups are Botou (43), Narna (27), Totiv (23), Rhabd (21), unqualified tick virus (20), Parti (18), and Reovi (13). cRNA annotations are concentrated in groups such as Rhabd, Ortho, Chuvi, and Nairo.
++
++# Reasoning
++
++The strongest scientific opportunity is to use this nonredundant, mostly complete-genome sequence set to describe how tick-associated viral diversity is partitioned across taxa, provisional lineages, genome sizes, sequence composition, and cRNA/genomic annotation classes. The dataset is large enough for family-level and lineage-level comparisons, but still structured enough that the FASTA headers provide usable biological labels and TIGMIC isolate identifiers. The presence of many repeated taxa and many locality-named provisional viruses suggests that the data can support questions about dominant viral lineages, sequence diversity within reported taxa, and whether provisional tick-virus groups have coherent genome features.
++
++# Top Scientific Question
++
++How much taxonomic and genome-feature diversity is captured in the reported TIGMIC tick-associated viral sequences, and which viral families or locality-named lineages account for the dominant complete-genome diversity?
++
++# Why This Question Is Testable On The Provided Dataset
++
++This question is directly testable from the FASTA headers and sequences. The headers provide accession IDs, taxon labels, TIGMIC isolate numbers, and sequence descriptors, while the nucleotide sequences provide length, GC content, ambiguity, exact-duplicate status, and inputs for clustering or phylogenetic analysis. Counting labels, comparing genome lengths and GC content, separating complete genomes from cRNA or partial records, and clustering repeated taxa can identify the dominant lineages and quantify their genomic diversity.
+
+codex
+Done. Created and validated:
+
+- [report/report.md](/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726/report/report.md)
+- [agent_questions.json](/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T152726/agent_questions.json)
+
+Validation: JSON parses, exactly 5 distinct questions, ranks 1-5, all questions end with `?`, and the report includes the rank-1 question verbatim.
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..dd414d34d3a67677498788c6da4905f30caab999
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,117 @@
++{
++  "agent_id": "gpt-5.5-codex-cli",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "How much taxonomic and genome-feature diversity is captured in the reported TIGMIC tick-associated viral sequences, and which viral families or locality-named lineages account for the dominant complete-genome diversity?",
++      "rationale": "The FASTA contains 1,801 nonduplicate nucleotide records with 362 taxon labels and many complete-genome annotations. Dominant labels such as Totiviridae sp., Botourmiaviridae sp., Narnaviridae sp., Dabieshan Tick Virus, and Rhabdoviridae sp. indicate that diversity is unevenly distributed across viral groups. Length, GC content, completeness annotation, and header-derived lineage names make the question answerable without external metadata.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "FASTA taxon labels",
++        "TIGMIC isolate identifiers",
++        "sequence descriptors",
++        "nucleotide sequence length",
++        "GC content"
++      ],
++      "expected_test": "Parse FASTA headers and sequences, count taxa and sequence descriptor classes, calculate length and GC distributions, then summarize or cluster complete genomes by taxon and locality-named lineage.",
++      "scope_keywords": [
++        "tick virome",
++        "TIGMIC",
++        "taxonomy",
++        "complete genomes",
++        "genome length",
++        "GC content"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Do the dominant family-level MAG labels such as Totiviridae sp., Botourmiaviridae sp., Narnaviridae sp., and Rhabdoviridae sp. represent internally coherent sequence groups with characteristic genome lengths and GC contents?",
++      "rationale": "Family-level `sp.` labels account for a large fraction of the file, including 244 Totiviridae sp. records, 180 Botourmiaviridae sp. records, 91 Narnaviridae sp. records, and 72 Rhabdoviridae sp. records. These repeated labels provide enough records to compare within-label and between-label sequence properties. Coherent length and GC profiles would support treating these entries as structured viral groups rather than arbitrary header categories.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Totiviridae sp.",
++        "Botourmiaviridae sp.",
++        "Narnaviridae sp.",
++        "Rhabdoviridae sp.",
++        "nucleotide sequence length",
++        "GC content"
++      ],
++      "expected_test": "Group records by family-level taxon label, compute length and GC distributions for each group, and optionally cluster nucleotide sequences to test whether records with the same label group together.",
++      "scope_keywords": [
++        "family-level labels",
++        "MAG",
++        "sequence coherence",
++        "length distribution",
++        "GC content"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Among the locality-named tick virus records, which Chinese locality tokens and abbreviated viral lineages show the greatest apparent richness in the reported TIGMIC sequence set?",
++      "rationale": "A subset of 236 headers follows a locality-named pattern such as Nanning Botou tick virus or Zhangzhou Narna tick virus. This subset spans 53 locality tokens and 26 abbreviated viral groups, with Nanning, Zhangzhou, Yanbian, Hulunbuir, Tonghua, and Tongren among the most frequent locality tokens. The pattern supports a focused richness analysis within the records where locality is encoded in the virus name.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "locality-named FASTA headers",
++        "Botou tick virus labels",
++        "Narna tick virus labels",
++        "Totiv tick virus labels",
++        "Rhabd tick virus labels"
++      ],
++      "expected_test": "Extract locality tokens and abbreviated lineage tokens from locality-named headers, count records and unique lineage labels per locality, and compare apparent richness across localities.",
++      "scope_keywords": [
++        "locality names",
++        "viral richness",
++        "China",
++        "Botou",
++        "Narna",
++        "TIGMIC"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are cRNA sequence annotations concentrated in negative-sense or segmented tick-virus groups compared with records annotated as genomic sequences or complete genomes?",
++      "rationale": "The parsed descriptors include 128 cRNA sequence records as well as 1,228 complete genomes and 308 genomic sequences. In the locality-named subset, cRNA annotations appear in groups such as Rhabd, Ortho, Chuvi, and Nairo, while Botou, Narna, Totiv, and Parti are represented as genomic records. This makes descriptor enrichment across virus groups a testable marker of genome organization.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "cRNA sequence descriptors",
++        "genomic sequence descriptors",
++        "complete genome descriptors",
++        "Rhabd tick virus labels",
++        "Ortho tick virus labels",
++        "Chuvi tick virus labels",
++        "Nairo tick virus labels"
++      ],
++      "expected_test": "Classify records by header sequence descriptor and taxon or abbreviated lineage, then use contingency tables to compare cRNA frequency against genomic and complete-genome annotations.",
++      "scope_keywords": [
++        "cRNA",
++        "genome organization",
++        "Rhabd",
++        "Ortho",
++        "Chuvi",
++        "Nairo"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Which repeated named viruses, including Dabieshan Tick Virus, Lihan tick virus, Wuhan mivirus, and Brown dog tick phleboviruses, show the greatest isolate-level nucleotide diversity across TIGMIC isolate identifiers?",
++      "rationale": "Several named viral taxa recur across many TIGMIC isolate identifiers, including Dabieshan Tick Virus with 87 records, Lihan tick virus with 51, Wuhan mivirus with 38, and Brown dog tick phlebovirus 1 with 36. Because the sequences are nonduplicate and include isolate identifiers, repeated taxa can be compared for within-taxon divergence. This would identify whether common named viruses are represented by near-identical detections or by substantial genomic diversity.",
++      "data_support": [
++        "data/nuccore_reported_viral_sequences.fasta",
++        "Dabieshan Tick Virus",
++        "Lihan tick virus",
++        "Wuhan mivirus",
++        "Brown dog tick phlebovirus 1",
++        "TIGMIC isolate identifiers",
++        "nucleotide sequences"
++      ],
++      "expected_test": "For taxa with many records, align or cluster nucleotide sequences within each taxon, compute pairwise identity or distance, and compare diversity across TIGMIC isolate identifiers.",
++      "scope_keywords": [
++        "isolate diversity",
++        "Dabieshan Tick Virus",
++        "Lihan tick virus",
++        "Wuhan mivirus",
++        "phlebovirus"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4303ca84214b8c90fcedd0ceca21b093f305201d
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Data Summary
++
++The agent-visible upload contains one FASTA file, `data/nuccore_reported_viral_sequences.fasta`, listed in `info.json` at 11,888,536 bytes. I parsed 1,801 nucleotide records totaling 11,584,068 bases. All headers are NCBI-style MAG entries with accession IDs, taxon or provisional virus names, TIGMIC isolate identifiers, and sequence descriptors such as complete genome, genomic sequence, cRNA sequence, complete cds, or partial cds. The file contains 362 distinct taxon labels. The largest repeated labels are `Totiviridae sp.` (244 records), `Botourmiaviridae sp.` (180), `Narnaviridae sp.` (91), `Dabieshan Tick Virus` (87), and `Rhabdoviridae sp.` (72).
++
++# Analysis
++
++The sequence set is dominated by genome-scale records: 1,228 entries are annotated as complete genomes, 308 as genomic sequences, and 128 as cRNA sequences; 79 are partial cds and 55 are complete cds. Sequence lengths range from 803 to 22,791 bp, with a median of 6,498 bp and a mean of 6,432 bp. Length bins show broad genome-architecture diversity: 667 records fall between 5,001 and 10,000 bp, 620 between 2,001 and 5,000 bp, and 346 between 10,001 and 15,000 bp. Mean GC content is 50.79%, with a range from 25.54% to 65.60%. No record contains ambiguous `N` bases, and there are no exact duplicate nucleotide sequences.
++
++Header-derived taxonomy also shows strong compositional structure. Family-level `sp.` labels account for 945 records across 21 unique labels, while locality-named tick virus records account for 236 records across 53 locality tokens and 26 abbreviated virus groups. In that locality-named subset, the most frequent places are Nanning (25), Zhangzhou (23), Yanbian (17), Hulunbuir (14), Tonghua (12), and Tongren (12). The most common abbreviated groups are Botou (43), Narna (27), Totiv (23), Rhabd (21), unqualified tick virus (20), Parti (18), and Reovi (13). cRNA annotations are concentrated in groups such as Rhabd, Ortho, Chuvi, and Nairo.
++
++# Reasoning
++
++The strongest scientific opportunity is to use this nonredundant, mostly complete-genome sequence set to describe how tick-associated viral diversity is partitioned across taxa, provisional lineages, genome sizes, sequence composition, and cRNA/genomic annotation classes. The dataset is large enough for family-level and lineage-level comparisons, but still structured enough that the FASTA headers provide usable biological labels and TIGMIC isolate identifiers. The presence of many repeated taxa and many locality-named provisional viruses suggests that the data can support questions about dominant viral lineages, sequence diversity within reported taxa, and whether provisional tick-virus groups have coherent genome features.
++
++# Top Scientific Question
++
++How much taxonomic and genome-feature diversity is captured in the reported TIGMIC tick-associated viral sequences, and which viral families or locality-named lineages account for the dominant complete-genome diversity?
++
++# Why This Question Is Testable On The Provided Dataset
++
++This question is directly testable from the FASTA headers and sequences. The headers provide accession IDs, taxon labels, TIGMIC isolate numbers, and sequence descriptors, while the nucleotide sequences provide length, GC content, ambiguity, exact-duplicate status, and inputs for clustering or phylogenetic analysis. Counting labels, comparing genome lengths and GC content, separating complete genomes from cRNA or partial records, and clustering repeated taxa can identify the dominant lineages and quantify their genomic diversity.
+
+tokens used
+53,056

@@ -1,0 +1,43 @@
+Perfect! Both files are now complete and saved. Let me provide a final summary:
+
+## Summary
+
+I have successfully completed the task as specified in INSTRUCTIONS.md. Here's what was delivered:
+
+### ✅ Files Created:
+
+1. **`report/report.md`** (5.1 KB)
+   - **Data summary**: Described all 5 data sources totaling ~142 MB
+     - 8,176 viral RdRp contigs from bat coronavirus surveillance
+     - RdRp motif database with conserved functional signatures
+     - 2.3+ million host DNA barcodes (CytB-COI-ITS markers)
+     - 99 ecological samples with 13 quantitative environmental variables
+     - Maximum-likelihood phylogenetic trees for 14 viral orders
+   
+   - **Analysis**: Provided 3 derived statistics:
+     1. Virome compositional diversity with conserved motif patterns
+     2. Host taxon representation and sampling bias patterns
+     3. Ecological niche structure linked to tissue tropism and climate
+   
+   - **Reasoning**: Explained why this is a "systems virology" integration opportunity
+   - **Top scientific question**: Clearly stated and grounded in data
+   - **Testability**: Detailed 5-step analysis pipeline using the provided data
+
+2. **`agent_questions.json`** (8.4 KB)
+   - **5 ranked questions** (rank 1 → 5) with decreasing specificity:
+     1. **Rank 1 (Best)**: Viral RdRp diversity correlations with host phylogeography and environmental niche
+     2. **Rank 2**: Spillover risk prediction from phylogenetic placement
+     3. **Rank 3**: Ecological drivers of RdRp motif heterogeneity by tissue tropism
+     4. **Rank 4**: Recombination signatures linked to environmental stress
+     5. **Rank 5**: Co-phylogenetic patterns between hosts and viromes
+   
+   - Each question includes:
+     - Single sentence ending with `?`
+     - 2-4 sentence rationale grounded in data evidence
+     - Specific `data_support` items referencing actual files
+     - `expected_test` describing how to answer the question
+     - 3-8 relevant `scope_keywords`
+   
+   - Schema validated: All required fields present, JSON well-formed
+
+Both output files are now saved in the current directory and ready for evaluation.

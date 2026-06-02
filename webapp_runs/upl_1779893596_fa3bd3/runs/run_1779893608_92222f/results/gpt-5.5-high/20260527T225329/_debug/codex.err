@@ -1,0 +1,1404 @@
+Reading additional input from stdin...
+2026-05-27T14:53:31.388308Z ERROR codex_models_manager::manager: failed to refresh available models: stream disconnected before completion: failed to decode models response: missing field `models` at line 1 column 74891; body: {"data":[{"id":"gpt-4.1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-05-13","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-08-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-11-20","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-2024-07-18","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-tts","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-max","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-mini","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.2","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-mini","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-nano","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-none","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-image-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-realtime","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-2025-08-28","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-large","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-small","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-ada-002","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"whisper-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gemini-2.5-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-preview-09-2025","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-pro-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-32768","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"claude-haiku-4-5-20251001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-haiku-4-5-20251001-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"dall-e-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"dall-e-3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gemini-2.0-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-thinking-exp","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gpt-3.5-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-0125","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-16k","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-instruct","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-2024-04-09","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-transcribe","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-transcribe-diarize","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-2026-03-05","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-image-1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-3-fast-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4-0709","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4.20-0309-reasoning","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4.3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"imagen-4.0-fast-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-ultra-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"o1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-pro-2025-03-19","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-pro-2025-06-10","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-2025-04-16","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"omni-moderation-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"sora-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-r1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-v3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"veo-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-fast-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"bailian/deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"bailian/deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-r1","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-0528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-v3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax/MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qvq-72b-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-edit-plus-2025-12-15","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"qwen-max-0403","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-longcontext","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0112","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1125","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1127","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1220","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-12-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-1101","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-2025-02-11","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1119","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1230","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-08","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-ocr-2025-11-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct-1m","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-omni-7b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-32b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-480b-a35b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-07-22","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2026-01-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-embedding","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-397b-a17b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash-2026-02-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus-2026-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.7-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.7-max-2026-05-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwq-32b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwq-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"text-embedding-v4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.0-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"ascend-tribe/pangu-pro-moe","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-en-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-zh-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"ByteDance-Seed/Seed-OSS-36B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-OCR","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-0528-Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-mini-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ring-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-embedding-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-reranker-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/MiniMaxAI/MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-VL-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-4.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-14B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct-128K","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-480B-A35B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-235B-A22B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-35B-A3B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-397B-A17B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-9B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/QwQ-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun-ai/Step-3.5-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-A13B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-MT-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4.1V-9B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5-Air","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5V","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-250528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-1-terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-2-251201","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-250324","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-m-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-lite-250315","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-lite-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-240915","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-250515","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-text-240715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-251215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-pro-32k-character-241215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250828","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250715","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-vision-250815","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-8-251228","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-code-preview-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-lite-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-mini-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-pro-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-code-preview-251028","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-250528","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-fast-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-3-0-t2i-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-0-250828","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-5-251128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-5-0-260128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"M2-her","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.1","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-Text-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4-voice","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.6","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.6v","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.7-FlashX","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5v-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-120b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0711-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0905-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking-turbo","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-turbo-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.5","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-thinking-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Kling-Video-O1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-omni","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-128k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-32k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-8k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"step-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"alibaba/tongyi-deepresearch-30b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek/deepseek-v3.2-speciale","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemini-embedding-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-3-27b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-26b-a4b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-31b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-coder","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionai/ling-2.6-1t","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.2-11b-vision-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-405b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.3-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-2-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-4-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4-multimodal-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-24b-instruct-2501","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-3.1-24b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2:online","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-120b","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-14b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-2b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"or/qwen3.5-9b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"perplexity/sonar-reasoning-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus-preview:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/hy3-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-vision-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-mini-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4-fast","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"xiaomi/mimo-v2-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]}],"object":"list","success":true}
+OpenAI Codex v0.130.0
+--------
+workdir: /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+model: gpt-5.5-high
+provider: newapi
+approval: never
+sandbox: danger-full-access
+reasoning effort: none
+reasoning summaries: none
+session id: 019e69ed-2b7e-73c1-980f-a7ea142aaf94
+--------
+user
+Read INSTRUCTIONS.md in the current working directory. Read the agent-visible files under data/. Produce exactly two files in the working directory: report/report.md and agent_questions.json (schema in info.json). target_study/ does not exist in this sandbox - do not look for it.
+
+CRITICAL: agent_questions.json MUST contain exactly 5 distinct candidate questions (rank 1..5, no duplicates). The judge scores Pass@1 (rank-1 only, 100% / 0%) and Pass@5 (position-weighted: rank-i pass adds 1+w_i where w=(5,4,3,2,1), divide by 20). Put your strongest answer at rank 1, plausible alternatives at 2..5.
+
+Stop only when both output files exist on disk.
+codex
+I’ll read the task contract and the visible data first, then create only the requested outputs. I’ll avoid touching `target_study/` as instructed.
+exec
+/bin/zsh -lc 'find . -maxdepth 2 -type f | sort' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+./INSTRUCTIONS.md
+./_debug/codex.err
+./_debug/codex.out
+./checklist.json
+./data/43705_2022_180_MOESM1_ESM.docx
+./info.json
+
+exec
+/bin/zsh -lc "pwd && rg --files -g 'INSTRUCTIONS.md' -g 'info.json' -g 'data/**'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+INSTRUCTIONS.md
+data/43705_2022_180_MOESM1_ESM.docx
+info.json
+
+exec
+/bin/zsh -lc "sed -n '1,240p' info.json" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+exec
+/bin/zsh -lc "sed -n '1,240p' INSTRUCTIONS.md" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+# INSTRUCTIONS — Scientific Question Generation
+
+You are an autonomous research agent. Read every file under `data/`, perform analysis, and propose **the single most important scientific question** that the data could be used to answer.
+
+A separate judge LLM will score your top-1 question against a hidden gold rubric. **You will NOT see the gold rubric.** Frame your question purely from the data you observe.
+
+---
+
+## What you have
+
+| Path | Description | Read? |
+|---|---|---|
+| `data/` | Whatever the user uploaded. Could be tables, FASTA, JSON, images, PDFs, …. Make no assumption about schema — discover the structure by listing and sampling files. | ✅ |
+| `info.json` | Data-side metadata: file inventory, sizes, derived statistics. | ✅ |
+| `gold/` | Gold rubric used by the judge. **MUST NOT be opened.** | ❌ |
+
+---
+
+## What you must produce (exact paths)
+
+### `report/report.md`
+
+A short technical report (~300–600 words) with these sections:
+
+1. **Data summary** — what files you found, structure, scale, key columns / fields.
+2. **Analysis** — at least three derived statistics, distributions, or relationships you computed from the data.
+3. **Reasoning** — why these observations motivate the scientific question you will pose.
+4. **Top scientific question** — copied verbatim from `agent_questions.json[0].question`.
+5. **Why this question is testable on the provided dataset.**
+
+### `agent_questions.json`
+
+```json
+{
+  "agent_id": "<your model + harness identifier>",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "<one English sentence ending with '?'>",
+      "rationale": "<2-4 sentences linking the question to specific data evidence>",
+      "data_support": ["<actual file or feature names you used>", "..."],
+      "expected_test": "<how the question is answerable using the kind of data described>",
+      "scope_keywords": ["<3-8 short keywords>"]
+    }
+  ]
+}
+```
+
+- You MUST provide **exactly 5 distinct candidates** (rank 1..5). Duplicates fail validation. The judge scores all 5 and reports:
+  - **Pass@1** = 100% if `questions[0]` passes else 0%.
+  - **Pass@5** = position-weighted score: passing rank `i` adds `(1 + w_i)` where `w = (5,4,3,2,1)`. Numerator divided by 20. Examples: rank-1 only → 30%, ranks 1+2 → 55%, all 5 → 100%.
+- Put your **strongest** answer at rank 1 and progressively-weaker but still grounded alternatives at ranks 2-5; this maximises Pass@5 even if rank 1 misses.
+- Each `question` must be a single sentence ending with `?`.
+- `data_support` items must reference files or features that **actually exist** in the uploaded data.
+
+---
+
+## How to think about the rubric (informally)
+
+The judge looks for questions that:
+
+- **target a non-trivial scientific opportunity**, not a routine ETL or data-cleaning task;
+- have **biomedical / ecological / surveillance / engineering significance**;
+- are **testable using the data in front of you** (you should be able to outline the analysis);
+- are **specifically grounded** — name the dataset's actual features instead of generic phrases like "this data";
+- are **precisely phrased** — clear scientific object, scope, marker, and expected implication.
+
+A question like *"Are there interesting patterns in the data?"* will score very low. A question that names the specific dataset modality, the specific marker / variable of interest, the scale at which the question operates, and the scientific implication will score high.
+
+---
+
+## What NOT to do
+
+- Do not fabricate file names, statistics, or features that aren't in the upload.
+- Do not propose questions that require wet-lab experiments not derivable from the data.
+- Do not open `gold/`.
+- Do not generate ten generic questions hoping one hits — only `questions[0]` is scored.
+
+When `report/report.md` and `agent_questions.json` both exist on disk, your run is complete.
+
+ succeeded in 0ms:
+{
+  "workspace_kind": "user_uploaded",
+  "data_root": "data/",
+  "files": [
+    {
+      "path": "43705_2022_180_MOESM1_ESM.docx",
+      "size_bytes": 2250456
+    }
+  ],
+  "agent_output_contract": {
+    "report_path": "report/report.md",
+    "scientific_question_output_path": "agent_questions.json"
+  },
+  "agent_output_schema": {
+    "type": "object",
+    "required": [
+      "agent_id",
+      "questions"
+    ],
+    "properties": {
+      "agent_id": {
+        "type": "string"
+      },
+      "questions": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "required": [
+            "rank",
+            "question",
+            "rationale"
+          ],
+          "properties": {
+            "rank": {
+              "type": "integer"
+            },
+            "question": {
+              "type": "string"
+            },
+            "rationale": {
+              "type": "string"
+            },
+            "data_support": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "expected_test": {
+              "type": "string"
+            },
+            "scope_keywords": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+exec
+/bin/zsh -lc "unzip -l data/43705_2022_180_MOESM1_ESM.docx | sed -n '1,240p'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+Archive:  data/43705_2022_180_MOESM1_ESM.docx
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+     1364  01-01-1980 00:00   [Content_Types].xml
+      590  01-01-1980 00:00   _rels/.rels
+  1856094  01-01-1980 00:00   word/document.xml
+     1483  01-01-1980 00:00   word/_rels/document.xml.rels
+   498582  01-01-1980 00:00   word/media/image1.tiff
+   304864  01-01-1980 00:00   word/media/image2.tiff
+   636746  01-01-1980 00:00   word/media/image3.tiff
+   253266  01-01-1980 00:00   word/media/image4.tiff
+   497648  01-01-1980 00:00   word/media/image5.tiff
+     8393  01-01-1980 00:00   word/theme/theme1.xml
+     4039  01-01-1980 00:00   word/settings.xml
+    37704  01-01-1980 00:00   word/styles.xml
+     1710  01-01-1980 00:00   word/webSettings.xml
+     1926  01-01-1980 00:00   word/fontTable.xml
+      752  01-01-1980 00:00   docProps/core.xml
+      994  01-01-1980 00:00   docProps/app.xml
+---------                     -------
+  4106155                     16 files
+
+codex
+The upload is a single DOCX supplement with a large `word/document.xml` plus five embedded TIFF images. I’m going to extract the document text and table structure directly from the DOCX package so the questions are grounded in actual fields.
+exec
+/bin/zsh -lc 'command -v libreoffice || command -v soffice || true' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+exec
+/bin/zsh -lc 'command -v pandoc || true' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+ succeeded in 0ms:
+exec
+/bin/zsh -lc "unzip -p data/43705_2022_180_MOESM1_ESM.docx docProps/core.xml | sed -n '1,160p'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title></dc:title><dc:subject></dc:subject><dc:creator>Emma Harding</dc:creator><cp:keywords></cp:keywords><dc:description></dc:description><cp:lastModifiedBy>Emma Harding</cp:lastModifiedBy><cp:revision>26</cp:revision><dcterms:created xsi:type="dcterms:W3CDTF">2022-06-17T09:08:00Z</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">2022-06-17T09:59:00Z</dcterms:modified></cp:coreProperties>
+exec
+/bin/zsh -lc "unzip -p data/43705_2022_180_MOESM1_ESM.docx docProps/app.xml | sed -n '1,160p'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"><Template>Normal</Template><TotalTime>19</TotalTime><Pages>15</Pages><Words>3733</Words><Characters>22886</Characters><Application>Microsoft Office Word</Application><DocSecurity>0</DocSecurity><Lines>586</Lines><Paragraphs>345</Paragraphs><ScaleCrop>false</ScaleCrop><HeadingPairs><vt:vector size="2" baseType="variant"><vt:variant><vt:lpstr>Title</vt:lpstr></vt:variant><vt:variant><vt:i4>1</vt:i4></vt:variant></vt:vector></HeadingPairs><TitlesOfParts><vt:vector size="1" baseType="lpstr"><vt:lpstr></vt:lpstr></vt:vector></TitlesOfParts><Company></Company><LinksUpToDate>false</LinksUpToDate><CharactersWithSpaces>26274</CharactersWithSpaces><SharedDoc>false</SharedDoc><HyperlinksChanged>false</HyperlinksChanged><AppVersion>16.0000</AppVersion></Properties>
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import zipfile, xml.etree.ElementTree as ET, re
+path='data/43705_2022_180_MOESM1_ESM.docx'
+ns={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+with zipfile.ZipFile(path) as z:
+    xml=z.read('word/document.xml')
+root=ET.fromstring(xml)
+
+def text_of(el):
+    parts=[]
+    for node in el.iter():
+        tag=node.tag.rsplit('}',1)[-1]
+        if tag=='t' and node.text:
+            parts.append(node.text)
+        elif tag=='tab':
+            parts.append('\\t')
+        elif tag=='br':
+            parts.append('\\n')
+    return ''.join(parts)
+
+body=root.find('w:body',ns)
+for i, child in enumerate(body):
+    tag=child.tag.rsplit('}',1)[-1]
+    if tag=='p':
+        txt=text_of(child).strip()
+        if txt:
+            print(f'P\\t{i}\\t{txt}')
+    elif tag=='tbl':
+        rows=[]
+        for tr in child.findall('w:tr',ns):
+            cells=[re.sub(r'\\s+',' ', text_of(tc)).strip() for tc in tr.findall('w:tc',ns)]
+            rows.append(cells)
+        print(f'TABLE\\t{i}\\trows={len(rows)}\\tcols={max(map(len,rows)) if rows else 0}')
+        for r,row in enumerate(rows[:8]): print('ROW\\t%d\\t%s' % (r, ' | '.join(row)))
+        if len(rows)>8: print('...')
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+P	0	Supplementary materials
+P	1	Supplementary Table 1 – Datasets selected for viral discovery
+P	2	Supplementary Figure 1 – Novel reptile Bunyavirales
+P	3	Supplementary Figure 2 – Reptile lyssaviruses
+P	4	Supplementary Figure 3 – Novel amphibian and reptile Hepeviridae and Astroviridae
+P	5	Supplementary Figure 4 – Novel newt influenza virus
+P	6	Supplementary Figure 5 – Novel newt calicivirus
+P	9	Supplementary Table 1: Publicly available RNA-Sequencing datasets used in this study
+TABLE	10	rows=237	cols=7
+ROW	0	Species | Scientific name | Animal type | SRA Accession | Country of origin | Tissue | Sequencing platform
+ROW	1	Cayenne caecilian | Typhlonectes compressicauda | Amphibian | SRR5591415 | French Giana | Kidney | Illumina HiSeq2000
+ROW	2	Cayenne caecilian | Typhlonectes compressicauda | Amphibian | SRR5591416 | French Giana | Heart | Illumina HiSeq2000
+ROW	3	Cayenne caecilian | Typhlonectes compressicauda | Amphibian | SRR5591417 | French Giana | Lung | Illumina HiSeq2000
+ROW	4	Cayenne caecilian | Typhlonectes compressicauda | Amphibian | SRR5591418 | French Giana | Liver | Illumina HiSeq2000
+ROW	5	Two-lined caecilian | Rhinatrema bivittatum | Amphibian | SRR5591419 | French Giana | Skin | Illumina HiSeq2000
+ROW	6	Two-lined caecilian | Rhinatrema bivittatum | Amphibian | SRR5591420 | French Giana | Liver | Illumina HiSeq2000
+ROW	7	 | Microcaecilia unicolor | Amphibian | SRR5591421 | French Giana | Skin | Illumina HiSeq2000
+...
+P	17	Supplementary Figure 1: Novel reptile Bunyavirales. Contigs were identified using a BLAST search of annotated bunyavirales proteins downloaded from NCBI protein database against herptile transcriptomes B: The nucleoprotein gene of bunyavirales were in silico translated and 582 AA was aligned with reference viruses using MAFFT. Phylogenetic trees were constructed using RAxML with 500 bootstrap replicates. Novel viruses are red and known classifications are shaded. The scale bar represents substitutions per site.
+P	21	Supplementary Figure 2: Reptile lyssaviruses. Contigs were identified using a BLAST search of rhabdovirus proteins downloaded from NCBI protein database against transcriptomes. A: Genome of Rabies lyssavirus. Viral contigs (red) were aligned with the reference genome (yellow) using MAFFT. The grey box represents the region selected for phylogenetic analysis. B: Phylogeny of rhabdoviruses. The nucleoprotein (N) gene of anole lyssa-like virus and alligator-associated rabies lyssavirus was in silico translated and aligned with reference rhabdoviruses using MAFFT. A phylogenetic tree was constructed using RAxML with 500 bootstrap replicates. Alligator-associated rabies lyssavirus is coloured red and the previously identified anole lyssa-like virus is green. Known classifications are shaded. The scale bar represents substitutions per site.
+P	24	Supplementary Figure 3: Novel amphibian and reptile Hepeviridae and Astroviridae. Contigs were identified using a BLAST search of astrovirus and hepevirus proteins downloaded from NCBI protein database against herptile transcriptomes. A: Astrovirus genomic structure. Virus contigs (green) were aligned with reference genomes using MAFFT. Non-structural genes are shaded orange and structural genes are shaded blue. The common recombination breakpoint is denoted with a red arrow. B: Hepevirus genomic structure. Virus contigs (green) were aligned with reference genomes using MAFFT. Non-structural genes are shaded orange and structural genes are shaded blue. The common recombination breakpoint is denoted with a red arrow. C: Non-structural gene phylogeny of astroviruses and hepeviruses. The non-structural gene of novel viruses were in silico translated and aligned with reference viruses using MAFFT. A phylogenetic tree was constructed using RAxML with 500 bootstrap replicates. Novel viruses are coloured red and known classifications are shaded or outlined. The scale bar represents substitutions per site. D: Structural phylogeny of hepeviruses. The structural capsid genes of novel viruses were in silico translated and aligned with reference viruses using MAFFT. A phylogenetic tree was constructed using RAxML with 500 bootstrap replicates. Novel viruses are coloured red and known classifications are shaded and outlined. The scale bar represents substitutions per site.
+P	28	Supplementary Figure 4: Novel newt influenza virus. Contigs were identified using a BLAST search of influenza virus proteins downloaded from NCBI protein database against herptile transcriptomes. The polymerase basic 1 (PB1) gene of newt influenza virus was in silico translated and aligned with reference orthomyxoviruses using MAFFT. A phylogenetic tree was constructed using RAxML with 500 bootstrap replicates. Newt influenza virus is coloured red and known classifications are shaded. The scale bar represents substitutions per site.
+P	32	Supplementary Figure 5 – Novel newt calicivirus. Contigs were identified using a BLAST search of calicivirus proteins downloaded from NCBI protein database against herptile transcriptomes. The polyprotein (7390 nt) of newt calicivirus was in silico translated and aligned with reference orthomyxoviruses using MAFFT. A phylogenetic tree was constructed using RAxML with 500 bootstrap replicates. Newt calicivirus is coloured red and known classifications are shaded. The scale bar represents substitutions per site.
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import zipfile, xml.etree.ElementTree as ET, re, collections
+path='data/43705_2022_180_MOESM1_ESM.docx'
+ns={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+with zipfile.ZipFile(path) as z:
+    root=ET.fromstring(z.read('word/document.xml'))
+
+def text_of(el):
+    parts=[]
+    for node in el.iter():
+        tag=node.tag.rsplit('}',1)[-1]
+        if tag=='t' and node.text: parts.append(node.text)
+        elif tag=='tab': parts.append('\\t')
+        elif tag=='br': parts.append('\\n')
+    return ''.join(parts)
+
+tbl=root.find('.//w:tbl', ns)
+rows=[]
+for tr in tbl.findall('w:tr', ns):
+    cells=[re.sub(r'\\s+',' ', text_of(tc)).strip() for tc in tr.findall('w:tc',ns)]
+    rows.append(cells)
+header=rows[0]; data=[dict(zip(header,r)) for r in rows[1:]]
+print('rows', len(data))
+for col in header:
+    vals=[d.get(col,'') for d in data]
+    print('\\nCOL', col, 'nonblank', sum(1 for v in vals if v), 'unique_nonblank', len(set(v for v in vals if v)))
+    print(collections.Counter(v for v in vals if v).most_common(20))
+print('\\nblank species rows', sum(1 for d in data if not d['Species']))
+# Country corrections and composite values
+print('\\nCountries raw all:', sorted(set(d['Country of origin'] for d in data)))
+print('\\nAnimal by country:')
+for c, n in collections.Counter((d['Animal type'], d['Country of origin']) for d in data).most_common(50): print(c,n)
+print('\\nScientific species counts top 30:')
+for k,v in collections.Counter(d['Scientific name'] for d in data if d['Scientific name']).most_common(40): print(v,k)
+print('\\nTissues all:')
+for k,v in collections.Counter(d['Tissue'] for d in data if d['Tissue']).most_common(): print(v,k)
+print('\\nPlatforms all:')
+for k,v in collections.Counter(d['Sequencing platform'] for d in data if d['Sequencing platform']).most_common(): print(v,k)
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+rows 236
+
+COL Species nonblank 210 unique_nonblank 118
+[('Western terrestrial garter snake', 13), ('Chinese softshell turtle', 11), ('Burmese python', 11), ('Two-lined caecilian', 9), ('Bueycito anole', 8), ('Cuban White-fanned Anole', 8), ('Spiny softshell turtle', 8), ('Cayenne caecilian', 7), ('Chinese alligator', 5), ('Pit viper', 4), ('Green iguana', 4), ('Red-eared slider', 4), ('Central bearded dragon', 4), ('Oriental fire-bellied toad', 2), ('Tuatara', 2), ('Indian python', 2), ('Coorg night frog', 2), ('Castle rock night frog', 2), ('Amboli leaping frog', 2), ('Chinese pond turtle', 2)]
+
+COL Scientific name nonblank 235 unique_nonblank 122
+[('Thamnophis elegans', 13), ('Pelodiscus sinensis', 11), ('Python bivittatus', 11), ('Microcaecilia unicolor', 10), ('Caecilia tentaculata', 10), ('Rhinatrema bivittatum', 9), ('Anolis allogus', 8), ('Anolis homolechis', 8), ('Typhlonectes compressicauda', 7), ('Alligator sinensis', 5), ('Pogona vitticeps', 5), ('Microcaecilia dermatophaga', 4), ('Apalone spinifera', 4), ('Bothrops jararaca', 4), ('Chrysemys picta', 4), ('Iguana iguana', 3), ('Trachemys scripta elegans', 3), ('Bombina orientalis', 2), ('Sphenodon punctatus', 2), ('Python molurus', 2)]
+
+COL Animal type nonblank 235 unique_nonblank 2
+[('Reptile', 156), ('Amphibian', 79)]
+
+COL SRA Accession nonblank 235 unique_nonblank 234
+[('SRR4212883', 2), ('SRR5591415', 1), ('SRR5591416', 1), ('SRR5591417', 1), ('SRR5591418', 1), ('SRR5591419', 1), ('SRR5591420', 1), ('SRR5591421', 1), ('SRR5591422', 1), ('SRR5591423', 1), ('SRR5591424', 1), ('SRR5591425', 1), ('SRR5591426', 1), ('SRR5591427', 1), ('SRR5591428', 1), ('SRR5591429', 1), ('SRR5591430', 1), ('SRR5591431', 1), ('SRR5591432', 1), ('SRR5591433', 1)]
+
+COL Country of origin nonblank 235 unique_nonblank 29
+[('French Giana', 40), ('China', 32), ('USA', 28), ('Unknown', 22), ('Australia', 17), ('Cuba', 16), ('India', 11), ('Denmark', 11), ('Madagascar', 10), ('Mexico', 5), ('Spain', 5), ('Peru', 4), ('Africa', 4), ('Brazil', 4), ('UK', 3), ('Colombia', 3), ('Turkey', 3), ('Croatia', 3), ('New Zealand', 2), ('France', 2)]
+
+COL Tissue nonblank 235 unique_nonblank 26
+[('Liver', 97), ('Mixed viscera', 38), ('Kidney', 20), ('Nuptial pad', 9), ('Heart', 8), ('Skin', 8), ('Blood', 6), ('Small intestine', 6), ('Lung', 5), ('Mixed tadpole viscera', 5), ('Foregut', 4), ('Posterior skin', 3), ('Muscle', 3), ('Testis', 3), ('Femoral gland', 3), ('Spleen', 2), ('Testes', 2), ('Tadpole', 2), ('Embryo', 2), ('Mental gland', 2)]
+
+COL Sequencing platform nonblank 235 unique_nonblank 15
+[('Illumina HiSeq 2000', 56), ('Illumina HiSeq2000', 40), ('NextSeq 500', 40), ('Illumina HiSeq 2500', 30), ('Illumina HiSeq 2000*', 23), ('Illumina Genome Analyzer II', 14), ('Illumina HiSeq 4000*', 11), ('Illumina HiSeq 4000', 8), ('454 GS Junior', 4), ('Illumina HiSeq 2500*', 3), ('454 GS FLX*', 2), ('Illumina HiSeq4000', 1), ('HiSeq X Ten', 1), ('Illumina HiSeq 1500', 1), ('Illumina Genome Analyzer IIx', 1)]
+
+blank species rows 26
+
+Countries raw all: ['', 'Africa', 'Asia', 'Australia', 'Brazil', 'China', 'Colombia', 'Croatia', 'Cuba', 'Denmark', 'Europe', 'France', 'French Giana', 'Greece', 'India', 'Iran', 'Italy', 'Japan', 'Madagascar', 'Mexico', 'Morocco', 'Nepal', 'Netherlands', 'New Zealand', 'Peru', 'Spain', 'Turkey', 'UK', 'USA', 'Unknown']
+
+Animal by country:
+('Amphibian', 'French Giana') 40
+('Reptile', 'China') 25
+('Reptile', 'USA') 25
+('Reptile', 'Unknown') 21
+('Reptile', 'Cuba') 16
+('Reptile', 'Australia') 13
+('Amphibian', 'India') 11
+('Reptile', 'Denmark') 11
+('Reptile', 'Madagascar') 10
+('Amphibian', 'China') 7
+('Reptile', 'Mexico') 5
+('Reptile', 'Spain') 5
+('Amphibian', 'Peru') 4
+('Reptile', 'Brazil') 4
+('Amphibian', 'Australia') 4
+('Amphibian', 'USA') 3
+('Amphibian', 'UK') 3
+('Reptile', 'Turkey') 3
+('Reptile', 'Croatia') 3
+('Reptile', 'New Zealand') 2
+('Amphibian', 'Africa') 2
+('Reptile', 'Europe') 2
+('Reptile', 'Africa') 2
+('Reptile', 'Colombia') 2
+('Amphibian', 'Nepal') 1
+('Amphibian', 'Colombia') 1
+('Reptile', 'Netherlands') 1
+('Amphibian', 'Unknown') 1
+('Amphibian', 'France') 1
+('Reptile', 'Iran') 1
+('Reptile', 'Asia') 1
+('Reptile', 'Italy') 1
+('Reptile', 'Greece') 1
+('Reptile', 'France') 1
+('Reptile', 'Morocco') 1
+('Amphibian', 'Japan') 1
+('', '') 1
+
+Scientific species counts top 30:
+13 Thamnophis elegans
+11 Pelodiscus sinensis
+11 Python bivittatus
+10 Microcaecilia unicolor
+10 Caecilia tentaculata
+9 Rhinatrema bivittatum
+8 Anolis allogus
+8 Anolis homolechis
+7 Typhlonectes compressicauda
+5 Alligator sinensis
+5 Pogona vitticeps
+4 Microcaecilia dermatophaga
+4 Apalone spinifera
+4 Bothrops jararaca
+4 Chrysemys picta
+3 Iguana iguana
+3 Trachemys scripta elegans
+2 Bombina orientalis
+2 Sphenodon punctatus
+2 Python molurus
+2 Nyctibatrachus sanctipalustris
+2 Nyctibatrachus petraeus
+2 Indirana chiravasi
+2 Crocodylus siamensis
+2 Gambelia wislizenii
+2 Mauremys reevesii
+2 Notechis scutatus
+2 Varanus komodensis
+1 Ascaphus truei
+1 Bombina variegata scabra
+1 Bombina bombina
+1 Scutiger
+1 Leptobrachium ailaonicum
+1 Oreolalax omeimontis
+1 Oreolalax major
+1 Oreolalax rhodostigmatus
+1 Oreolalax popei
+1 Megophrys omeimontis
+1 Spea bombifrons
+1 Spea multiplicata
+
+Tissues all:
+97 Liver
+38 Mixed viscera
+20 Kidney
+9 Nuptial pad
+8 Heart
+8 Skin
+6 Blood
+6 Small intestine
+5 Lung
+5 Mixed tadpole viscera
+4 Foregut
+3 Posterior skin
+3 Muscle
+3 Testis
+3 Femoral gland
+2 Spleen
+2 Testes
+2 Tadpole
+2 Embryo
+2 Mental gland
+2 Pancreas
+1 Dorsal skin
+1 Pectoral gland
+1 Axillary gland
+1 Ventral skin
+1 Tail fin
+
+Platforms all:
+56 Illumina HiSeq 2000
+40 Illumina HiSeq2000
+40 NextSeq 500
+30 Illumina HiSeq 2500
+23 Illumina HiSeq 2000*
+14 Illumina Genome Analyzer II
+11 Illumina HiSeq 4000*
+8 Illumina HiSeq 4000
+4 454 GS Junior
+3 Illumina HiSeq 2500*
+2 454 GS FLX*
+1 Illumina HiSeq4000
+1 HiSeq X Ten
+1 Illumina HiSeq 1500
+1 Illumina Genome Analyzer IIx
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import zipfile, xml.etree.ElementTree as ET, re
+ns={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+with zipfile.ZipFile('data/43705_2022_180_MOESM1_ESM.docx') as z: root=ET.fromstring(z.read('word/document.xml'))
+def text_of(el):
+    return ''.join((node.text or '') if node.tag.rsplit('}',1)[-1]=='t' else ('\\t' if node.tag.rsplit('}',1)[-1]=='tab' else '') for node in el.iter())
+rows=[]
+for tr in root.find('.//w:tbl', ns).findall('w:tr', ns):
+    rows.append([re.sub(r'\\s+',' ',text_of(tc)).strip() for tc in tr.findall('w:tc', ns)])
+for i,r in list(enumerate(rows[1:],1))[:20]: print(i, r)
+print('--- tail')
+for i,r in list(enumerate(rows[1:],1))[-20:]: print(i, r)
+print('--- rows with duplicate SRA or blanks')
+seen={}
+for i,r in enumerate(rows[1:],1):
+    s=r[3] if len(r)>3 else ''
+    if not all(r): print('blankish', i, r)
+    if s:
+        if s in seen: print('dup', s, seen[s], i)
+        seen[s]=i
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+1 ['Cayenne caecilian', 'Typhlonectes compressicauda', 'Amphibian', 'SRR5591415', 'French Giana', 'Kidney', 'Illumina HiSeq2000']
+2 ['Cayenne caecilian', 'Typhlonectes compressicauda', 'Amphibian', 'SRR5591416', 'French Giana', 'Heart', 'Illumina HiSeq2000']
+3 ['Cayenne caecilian', 'Typhlonectes compressicauda', 'Amphibian', 'SRR5591417', 'French Giana', 'Lung', 'Illumina HiSeq2000']
+4 ['Cayenne caecilian', 'Typhlonectes compressicauda', 'Amphibian', 'SRR5591418', 'French Giana', 'Liver', 'Illumina HiSeq2000']
+5 ['Two-lined caecilian', 'Rhinatrema bivittatum', 'Amphibian', 'SRR5591419', 'French Giana', 'Skin', 'Illumina HiSeq2000']
+6 ['Two-lined caecilian', 'Rhinatrema bivittatum', 'Amphibian', 'SRR5591420', 'French Giana', 'Liver', 'Illumina HiSeq2000']
+7 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591421', 'French Giana', 'Skin', 'Illumina HiSeq2000']
+8 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591422', 'French Giana', 'Posterior skin', 'Illumina HiSeq2000']
+9 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591423', 'French Giana', 'Muscle', 'Illumina HiSeq2000']
+10 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591424', 'French Giana', 'Lung', 'Illumina HiSeq2000']
+11 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591425', 'French Giana', 'Liver', 'Illumina HiSeq2000']
+12 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591426', 'French Giana', 'Foregut', 'Illumina HiSeq2000']
+13 ['', 'Microcaecilia dermatophaga', 'Amphibian', 'SRR5591427', 'French Giana', 'Skin', 'Illumina HiSeq2000']
+14 ['', 'Microcaecilia dermatophaga', 'Amphibian', 'SRR5591428', 'French Giana', 'Posterior skin', 'Illumina HiSeq2000']
+15 ['', 'Microcaecilia dermatophaga', 'Amphibian', 'SRR5591429', 'French Giana', 'Liver', 'Illumina HiSeq2000']
+16 ['', 'Microcaecilia dermatophaga', 'Amphibian', 'SRR5591430', 'French Giana', 'Kidney', 'Illumina HiSeq2000']
+17 ['Cayenne caecilian', 'Typhlonectes compressicauda', 'Amphibian', 'SRR5591431', 'French Giana', 'Foregut', 'Illumina HiSeq2000']
+18 ['Two-lined caecilian', 'Rhinatrema bivittatum', 'Amphibian', 'SRR5591432', 'French Giana', 'Testis', 'Illumina HiSeq2000']
+19 ['Two-lined caecilian', 'Rhinatrema bivittatum', 'Amphibian', 'SRR5591433', 'French Giana', 'Muscle', 'Illumina HiSeq2000']
+20 ['Two-lined caecilian', 'Rhinatrema bivittatum', 'Amphibian', 'SRR5591434', 'French Giana', 'Skin', 'Illumina HiSeq2000']
+--- tail
+217 ['Red-eared slider', 'Trachemys scripta elegans', 'Reptile', 'SRR7540571', 'China', 'Liver', 'Illumina HiSeq 4000']
+218 ['Japanese fire belly newt', 'Cynops pyrrhogaster', 'Amphibian', 'SRR1553357', 'Japan', 'Mixed viscera', 'Illumina HiSeq 2500*']
+219 ['Komodo dragon', 'Varanus komodensis', 'Reptile', 'SRR8735151', 'Unknown', 'Heart', 'NextSeq 500']
+220 ['Komodo dragon', 'Varanus komodensis', 'Reptile', 'SRR8735152', 'Unknown', 'Heart', 'NextSeq 500']
+221 ['Central bearded dragon', 'Pogona vitticeps', 'Reptile', 'SRR8925842', 'Australia', 'Heart', 'NextSeq 500']
+222 ['Central bearded dragon', 'Pogona vitticeps', 'Reptile', 'SRR8925843', 'Australia', 'Heart', 'NextSeq 500']
+223 ['Central bearded dragon', 'Pogona vitticeps', 'Reptile', 'SRR8925844', 'Australia', 'Heart', 'NextSeq 500']
+224 ['Central bearded dragon', 'Pogona vitticeps', 'Reptile', 'SRR8925845', 'Australia', 'Heart', 'NextSeq 500']
+225 ['Tawny snake eyed skink', 'Crytoblepharus ruber', 'Reptile', 'SRR3901727', 'Australia', 'Liver', 'Illumina HiSeq 2000']
+226 ['Eastern striped skink', 'Ctenotus robustus', 'Reptile', 'SRR3901725', 'Australia', 'Liver', 'Illumina HiSeq 2000']
+227 ['Broad-banded sand-swimmer', 'Eremiascincus ciliaris', 'Reptile', 'SRR3901726', 'Australia', 'Liver', 'Illumina HiSeq 2000']
+228 ['Northern spotted rock dtella', 'Gehyra nana', 'Reptile', 'SRR3901730', 'Australia', 'Liver', 'Illumina HiSeq 2000']
+229 ['Marbled velvet gecko', 'Oedura marmorata', 'Reptile', 'SRR3901728', 'Australia', 'Liver', 'Illumina HiSeq 2000']
+230 ['Northern spiny-tailed gecko', 'Strophurus ciliaris', 'Reptile', 'SRR3901729', 'Australia', 'Liver', 'Illumina HiSeq 2000']
+231 ['Spiny-tailed monitor', 'Varanas acanthurus', 'Reptile', 'SRR3901711', 'Australia', 'Liver', 'Illumina HiSeq 2000']
+232 ['Desert tree frog', 'Litoria rubella', 'Amphibian', 'SRR3901722', 'Australia', 'Liver', 'Illumina HiSeq 2000']
+233 ['Robust frog', 'Austrochaperina robusta', 'Amphibian', 'SRR3901723', 'Australia', 'Liver', 'Illumina HiSeq 2000']
+234 ['Giant frog', 'Cyclorana australis', 'Amphibian', 'SRR3901720', 'Australia', 'Liver', 'Illumina HiSeq 2000']
+235 ["Mahony's toadlet", 'Uperoleia mahonyi', 'Amphibian', 'SRR3901719', 'Australia', 'Liver', 'Illumina HiSeq 2000']
+236 ['* indicates PolyA selection was used during library preparation', '', '', '', '', '', '']
+--- rows with duplicate SRA or blanks
+blankish 7 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591421', 'French Giana', 'Skin', 'Illumina HiSeq2000']
+blankish 8 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591422', 'French Giana', 'Posterior skin', 'Illumina HiSeq2000']
+blankish 9 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591423', 'French Giana', 'Muscle', 'Illumina HiSeq2000']
+blankish 10 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591424', 'French Giana', 'Lung', 'Illumina HiSeq2000']
+blankish 11 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591425', 'French Giana', 'Liver', 'Illumina HiSeq2000']
+blankish 12 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591426', 'French Giana', 'Foregut', 'Illumina HiSeq2000']
+blankish 13 ['', 'Microcaecilia dermatophaga', 'Amphibian', 'SRR5591427', 'French Giana', 'Skin', 'Illumina HiSeq2000']
+blankish 14 ['', 'Microcaecilia dermatophaga', 'Amphibian', 'SRR5591428', 'French Giana', 'Posterior skin', 'Illumina HiSeq2000']
+blankish 15 ['', 'Microcaecilia dermatophaga', 'Amphibian', 'SRR5591429', 'French Giana', 'Liver', 'Illumina HiSeq2000']
+blankish 16 ['', 'Microcaecilia dermatophaga', 'Amphibian', 'SRR5591430', 'French Giana', 'Kidney', 'Illumina HiSeq2000']
+blankish 23 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591437', 'French Giana', 'Skin', 'Illumina HiSeq2000']
+blankish 24 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591438', 'French Giana', 'Foregut', 'Illumina HiSeq2000']
+blankish 25 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591439', 'French Giana', 'Kidney', 'Illumina HiSeq2000']
+blankish 26 ['', 'Microcaecilia unicolor', 'Amphibian', 'SRR5591440', 'French Giana', 'Liver', 'Illumina HiSeq2000']
+blankish 31 ['', 'Caecilia tentaculata', 'Amphibian', 'SRR5591445', 'French Giana', 'Testis', 'Illumina HiSeq2000']
+blankish 32 ['', 'Caecilia tentaculata', 'Amphibian', 'SRR5591446', 'French Giana', 'Spleen', 'Illumina HiSeq2000']
+blankish 33 ['', 'Caecilia tentaculata', 'Amphibian', 'SRR5591447', 'French Giana', 'Muscle', 'Illumina HiSeq2000']
+blankish 34 ['', 'Caecilia tentaculata', 'Amphibian', 'SRR5591448', 'French Giana', 'Lung', 'Illumina HiSeq2000']
+blankish 35 ['', 'Caecilia tentaculata', 'Amphibian', 'SRR5591449', 'French Giana', 'Skin', 'Illumina HiSeq2000']
+blankish 36 ['', 'Caecilia tentaculata', 'Amphibian', 'SRR5591450', 'French Giana', 'Skin', 'Illumina HiSeq2000']
+blankish 37 ['', 'Caecilia tentaculata', 'Amphibian', 'SRR5591451', 'French Giana', 'Heart', 'Illumina HiSeq2000']
+blankish 38 ['', 'Caecilia tentaculata', 'Amphibian', 'SRR5591452', 'French Giana', 'Foregut', 'Illumina HiSeq2000']
+blankish 39 ['', 'Caecilia tentaculata', 'Amphibian', 'SRR5591453', 'French Giana', 'Liver', 'Illumina HiSeq2000']
+blankish 40 ['', 'Caecilia tentaculata', 'Amphibian', 'SRR5591454', 'French Giana', 'Kidney', 'Illumina HiSeq2000']
+blankish 66 ['', 'Calumma ambreense', 'Reptile', 'SRR9298922', 'Madagascar', 'Mixed viscera', 'NextSeq 500']
+blankish 92 ['', 'Fejervarya goemchi', 'Amphibian', 'SRR8954565', 'India', 'Nuptial pad', 'Illumina HiSeq 2500']
+dup SRR4212883 70 123
+blankish 236 ['* indicates PolyA selection was used during library preparation', '', '', '', '', '', '']
+
+codex
+The table has one real data table plus a footnote row, so I’m treating 235 rows as usable SRA entries. The captions name the virus discovery targets and the table gives host, tissue, geography, platform, and accession-level sampling metadata.
+exec
+/bin/zsh -lc 'for img in word/media/image1.tiff word/media/image2.tiff word/media/image3.tiff word/media/image4.tiff word/media/image5.tiff; do unzip -p data/43705_2022_180_MOESM1_ESM.docx "$img" | file -; done' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+/dev/stdin: TIFF image data, little-endian, direntries=15, height=1534, bps=-31864, compression=LZW, PhotometricIntepretation=RGB, width=1380
+/dev/stdin: TIFF image data, little-endian, direntries=15, height=1301, bps=-28046, compression=LZW, PhotometricIntepretation=RGB, width=1377
+/dev/stdin: TIFF image data, little-endian, direntries=15, height=1750, bps=-25636, compression=LZW, PhotometricIntepretation=RGB, width=1388
+/dev/stdin: TIFF image data, little-endian, direntries=15, height=1338, bps=-14252, compression=LZW, PhotometricIntepretation=RGB, width=1379
+/dev/stdin: TIFF image data, little-endian, direntries=15, height=1637, bps=32322, compression=LZW, PhotometricIntepretation=RGB, width=1379
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import zipfile, xml.etree.ElementTree as ET, re, collections, math
+ns={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+with zipfile.ZipFile('data/43705_2022_180_MOESM1_ESM.docx') as z: root=ET.fromstring(z.read('word/document.xml'))
+def text_of(el):
+    out=[]
+    for n in el.iter():
+        tag=n.tag.rsplit('}',1)[-1]
+        if tag=='t' and n.text: out.append(n.text)
+        elif tag=='tab': out.append('\\t')
+    return ''.join(out)
+rows=[]
+for tr in root.find('.//w:tbl', ns).findall('w:tr', ns): rows.append([re.sub(r'\\s+',' ',text_of(tc)).strip() for tc in tr.findall('w:tc',ns)])
+header=rows[0]
+valid=[r for r in rows[1:] if len(r)>=7 and r[3].startswith('SRR')]
+D=[dict(zip(header,r)) for r in valid]
+print('valid_entries',len(D))
+print('unique_sra',len(set(d['SRA Accession'] for d in D)))
+print('duplicate_sra',[k for k,v in collections.Counter(d['SRA Accession'] for d in D).items() if v>1])
+print('unique_scientific_names',len(set(d['Scientific name'] for d in D)))
+print('animal_type_counts',collections.Counter(d['Animal type'] for d in D))
+print('animal_type_percent',{k:round(v/len(D)*100,1) for k,v in collections.Counter(d['Animal type'] for d in D).items()})
+print('countries',len(set(d['Country of origin'] for d in D)),collections.Counter(d['Country of origin'] for d in D).most_common(10))
+print('tissues',len(set(d['Tissue'] for d in D)),collections.Counter(d['Tissue'] for d in D).most_common(10))
+print('platforms_raw',len(set(d['Sequencing platform'] for d in D)),collections.Counter(d['Sequencing platform'] for d in D).most_common())
+star=sum('*' in d['Sequencing platform'] for d in D)
+print('polyA_starred',star,round(star/len(D)*100,1))
+print('liver_or_mixed_viscera',sum(d['Tissue'] in ['Liver','Mixed viscera'] for d in D),round(sum(d['Tissue'] in ['Liver','Mixed viscera'] for d in D)/len(D)*100,1))
+print('top_species',collections.Counter(d['Scientific name'] for d in D).most_common(12))
+print('amph_countries',len(set(d['Country of origin'] for d in D if d['Animal type']=='Amphibian')),collections.Counter(d['Country of origin'] for d in D if d['Animal type']=='Amphibian').most_common(8))
+print('rept_countries',len(set(d['Country of origin'] for d in D if d['Animal type']=='Reptile')),collections.Counter(d['Country of origin'] for d in D if d['Animal type']=='Reptile').most_common(8))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+valid_entries 212
+unique_sra 211
+duplicate_sra ['SRR4212883']
+unique_scientific_names 114
+animal_type_counts Counter({'Reptile': 137, 'Amphibian': 75})
+animal_type_percent {'Amphibian': 35.4, 'Reptile': 64.6}
+countries 27 [('French Giana', 40), ('China', 32), ('USA', 28), ('Unknown', 21), ('Australia', 17), ('India', 11), ('Denmark', 10), ('Madagascar', 9), ('Mexico', 5), ('Spain', 5)]
+tissues 26 [('Liver', 75), ('Mixed viscera', 38), ('Kidney', 20), ('Nuptial pad', 9), ('Heart', 8), ('Skin', 8), ('Blood', 6), ('Small intestine', 6), ('Lung', 5), ('Mixed tadpole viscera', 5)]
+platforms_raw 14 [('Illumina HiSeq2000', 40), ('NextSeq 500', 39), ('Illumina HiSeq 2000', 38), ('Illumina HiSeq 2500', 27), ('Illumina HiSeq 2000*', 23), ('Illumina Genome Analyzer II', 14), ('Illumina HiSeq 4000*', 11), ('Illumina HiSeq 4000', 8), ('454 GS Junior', 4), ('Illumina HiSeq 2500*', 3), ('454 GS FLX*', 2), ('Illumina HiSeq4000', 1), ('HiSeq X Ten', 1), ('Illumina Genome Analyzer IIx', 1)]
+polyA_starred 39 18.4
+liver_or_mixed_viscera 113 53.3
+top_species [('Thamnophis elegans', 13), ('Pelodiscus sinensis', 11), ('Python bivittatus', 11), ('Microcaecilia unicolor', 10), ('Caecilia tentaculata', 10), ('Rhinatrema bivittatum', 9), ('Typhlonectes compressicauda', 7), ('Alligator sinensis', 5), ('Pogona vitticeps', 5), ('Microcaecilia dermatophaga', 4), ('Apalone spinifera', 4), ('Bothrops jararaca', 4)]
+amph_countries 12 [('French Giana', 40), ('India', 11), ('China', 7), ('Australia', 4), ('USA', 3), ('Peru', 3), ('Africa', 2), ('Nepal', 1)]
+rept_countries 22 [('China', 25), ('USA', 25), ('Unknown', 20), ('Australia', 13), ('Denmark', 10), ('Madagascar', 9), ('Mexico', 5), ('Spain', 5)]
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import zipfile, xml.etree.ElementTree as ET, re, collections
+ns={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+with zipfile.ZipFile('data/43705_2022_180_MOESM1_ESM.docx') as z: root=ET.fromstring(z.read('word/document.xml'))
+def text_of(el):
+    out=[]
+    for n in el.iter():
+        tag=n.tag.rsplit('}',1)[-1]
+        if tag=='t' and n.text: out.append(n.text)
+        elif tag=='tab': out.append('\\t')
+    return ''.join(out)
+rows=[]
+for tr in root.find('.//w:tbl', ns).findall('w:tr', ns): rows.append([re.sub(r'\\s+',' ',text_of(tc)).strip() for tc in tr.findall('w:tc',ns)])
+header=rows[0]
+for i,r in enumerate(rows[1:],1):
+    if len(r)>=7 and r[3] and not r[3].startswith('SRR'):
+        print(i,r)
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+42 ['Oriental fire-bellied toad', 'Bombina orientalis', 'Amphibian', 'ERR632225', 'UK', 'Liver', 'Illumina HiSeq 2500']
+43 ['Yellow bellied toad', 'Bombina variegata scabra', 'Amphibian', 'ERR632224', 'UK', 'Liver', 'Illumina HiSeq 2500']
+44 ['Fire-bellied toad', 'Bombina bombina', 'Amphibian', 'ERR632222', 'UK', 'Liver', 'Illumina HiSeq 2500']
+55 ['Sira poison frog', 'Ranitomeya sirensis', 'Amphibian', 'ERR4074563', 'Peru', 'Liver', 'NextSeq 500']
+58 ['Madagascar ground gecko', 'Paroedura picta', 'Reptile', 'DRR047251', 'Madagascar', 'Embryo', 'Illumina HiSeq 1500']
+71 ['Spectacled caiman', 'Caiman crorodilus', 'Reptile', 'ERR2198478', 'Unknown', 'Liver', 'Illumina HiSeq 2000']
+124 ['Bueycito anole', 'Anolis allogus', 'Reptile', 'DRR055059', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+125 ['Bueycito anole', 'Anolis allogus', 'Reptile', 'DRR055060', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+126 ['Bueycito anole', 'Anolis allogus', 'Reptile', 'DRR055061', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+127 ['Bueycito anole', 'Anolis allogus', 'Reptile', 'DRR055063', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+128 ['Bueycito anole', 'Anolis allogus', 'Reptile', 'DRR055062', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+129 ['Bueycito anole', 'Anolis allogus', 'Reptile', 'DRR055064', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+130 ['Bueycito anole', 'Anolis allogus', 'Reptile', 'DRR055065', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+131 ['Bueycito anole', 'Anolis allogus', 'Reptile', 'DRR055066', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+132 ['Cuban White-fanned Anole', 'Anolis homolechis', 'Reptile', 'DRR055083', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+133 ['Cuban White-fanned Anole', 'Anolis homolechis', 'Reptile', 'DRR055085', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+134 ['Cuban White-fanned Anole', 'Anolis homolechis', 'Reptile', 'DRR055086', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+135 ['Cuban White-fanned Anole', 'Anolis homolechis', 'Reptile', 'DRR055087', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+136 ['Cuban White-fanned Anole', 'Anolis homolechis', 'Reptile', 'DRR055084', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+137 ['Cuban White-fanned Anole', 'Anolis homolechis', 'Reptile', 'DRR055088', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+138 ['Cuban White-fanned Anole', 'Anolis homolechis', 'Reptile', 'DRR055090', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+139 ['Cuban White-fanned Anole', 'Anolis homolechis', 'Reptile', 'DRR055089', 'Cuba', 'Liver', 'Illumina HiSeq 2000']
+214 ['Red-eared slider', 'Trachemys scripta', 'Reptile', 'ERR2198830', 'Denmark', 'Liver', 'Illumina HiSeq 2000']
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import zipfile, xml.etree.ElementTree as ET, re, collections
+ns={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+with zipfile.ZipFile('data/43705_2022_180_MOESM1_ESM.docx') as z: root=ET.fromstring(z.read('word/document.xml'))
+def text_of(el):
+    out=[]
+    for n in el.iter():
+        tag=n.tag.rsplit('}',1)[-1]
+        if tag=='t' and n.text: out.append(n.text)
+        elif tag=='tab': out.append('\\t')
+    return ''.join(out)
+rows=[]
+for tr in root.find('.//w:tbl', ns).findall('w:tr', ns): rows.append([re.sub(r'\\s+',' ',text_of(tc)).strip() for tc in tr.findall('w:tc',ns)])
+header=rows[0]
+D=[dict(zip(header,r)) for r in rows[1:] if len(r)>=7 and r[3]]
+for name,val in [
+('valid_entries',len(D)),('unique_accessions',len(set(d['SRA Accession'] for d in D))),('unique_scientific_names',len(set(d['Scientific name'] for d in D))),('countries',len(set(d['Country of origin'] for d in D))),('tissues',len(set(d['Tissue'] for d in D))),('platforms_raw',len(set(d['Sequencing platform'] for d in D)))]: print(name,val)
+for label,col in [('animal','Animal type'),('country','Country of origin'),('tissue','Tissue'),('platform','Sequencing platform')]: print(label, collections.Counter(d[col] for d in D).most_common(20))
+print('animal_pct',{k:round(v/len(D)*100,1) for k,v in collections.Counter(d['Animal type'] for d in D).items()})
+print('liver+mixed_viscera',sum(d['Tissue'] in ('Liver','Mixed viscera') for d in D),round(sum(d['Tissue'] in ('Liver','Mixed viscera') for d in D)/len(D)*100,1))
+print('starred',sum('*' in d['Sequencing platform'] for d in D),round(sum('*' in d['Sequencing platform'] for d in D)/len(D)*100,1))
+print('accession_prefixes',collections.Counter(re.match(r'[A-Z]+', d['SRA Accession']).group(0) for d in D).most_common())
+print('top_species',collections.Counter(d['Scientific name'] for d in D).most_common(12))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+valid_entries 235
+unique_accessions 234
+unique_scientific_names 122
+countries 29
+tissues 26
+platforms_raw 15
+animal [('Reptile', 156), ('Amphibian', 79)]
+country [('French Giana', 40), ('China', 32), ('USA', 28), ('Unknown', 22), ('Australia', 17), ('Cuba', 16), ('India', 11), ('Denmark', 11), ('Madagascar', 10), ('Mexico', 5), ('Spain', 5), ('Peru', 4), ('Africa', 4), ('Brazil', 4), ('UK', 3), ('Colombia', 3), ('Turkey', 3), ('Croatia', 3), ('New Zealand', 2), ('France', 2)]
+tissue [('Liver', 97), ('Mixed viscera', 38), ('Kidney', 20), ('Nuptial pad', 9), ('Heart', 8), ('Skin', 8), ('Blood', 6), ('Small intestine', 6), ('Lung', 5), ('Mixed tadpole viscera', 5), ('Foregut', 4), ('Posterior skin', 3), ('Muscle', 3), ('Testis', 3), ('Femoral gland', 3), ('Spleen', 2), ('Testes', 2), ('Tadpole', 2), ('Embryo', 2), ('Mental gland', 2)]
+platform [('Illumina HiSeq 2000', 56), ('Illumina HiSeq2000', 40), ('NextSeq 500', 40), ('Illumina HiSeq 2500', 30), ('Illumina HiSeq 2000*', 23), ('Illumina Genome Analyzer II', 14), ('Illumina HiSeq 4000*', 11), ('Illumina HiSeq 4000', 8), ('454 GS Junior', 4), ('Illumina HiSeq 2500*', 3), ('454 GS FLX*', 2), ('Illumina HiSeq4000', 1), ('HiSeq X Ten', 1), ('Illumina HiSeq 1500', 1), ('Illumina Genome Analyzer IIx', 1)]
+animal_pct {'Amphibian': 33.6, 'Reptile': 66.4}
+liver+mixed_viscera 135 57.4
+starred 39 16.6
+accession_prefixes [('SRR', 212), ('DRR', 17), ('ERR', 6)]
+top_species [('Thamnophis elegans', 13), ('Pelodiscus sinensis', 11), ('Python bivittatus', 11), ('Microcaecilia unicolor', 10), ('Caecilia tentaculata', 10), ('Rhinatrema bivittatum', 9), ('Anolis allogus', 8), ('Anolis homolechis', 8), ('Typhlonectes compressicauda', 7), ('Alligator sinensis', 5), ('Pogona vitticeps', 5), ('Microcaecilia dermatophaga', 4)]
+
+codex
+I have enough context to write the outputs. The rank-1 question will focus on transcriptome mining for novel RNA viruses in herptiles, because that is the common thread linking the accession table and all five supplementary figure captions.
+exec
+/bin/zsh -lc 'mkdir -p report' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+apply patch
+patch: completed
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329/agent_questions.json
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329/report/report.md
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..270b0365628dfaebf8d1b47411b3a25b53c47666
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,123 @@
++{
++  "agent_id": "gpt-5.5-codex-harness",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "Can transcriptome mining of public amphibian and reptile RNA-seq datasets uncover novel RNA viruses in under-sampled herptile hosts and place them phylogenetically within Bunyavirales, lyssa-like rhabdoviruses, Hepeviridae, Astroviridae, influenza-like orthomyxoviruses, and Caliciviridae?",
++      "rationale": "Supplementary Table 1 lists 235 accession-bearing RNA-seq datasets from amphibians and reptiles, giving host species, tissue, country, and sequencing platform for systematic mining. The five figure captions document viral-contig discovery and phylogenetic placement for novel reptile Bunyavirales, lyssaviruses, amphibian and reptile Hepeviridae/Astroviridae, newt influenza virus, and newt calicivirus. This directly links public transcriptome breadth to discovery of divergent RNA viruses and their evolutionary context.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "SRA Accession",
++        "Animal type",
++        "Scientific name",
++        "Supplementary Figure 1",
++        "Supplementary Figure 2",
++        "Supplementary Figure 3",
++        "Supplementary Figure 4",
++        "Supplementary Figure 5"
++      ],
++      "expected_test": "Retrieve or assemble transcriptomes from the listed accessions, identify viral contigs with BLAST against viral protein references, translate viral genes, align them with MAFFT, and infer RAxML phylogenies to test whether detected contigs form novel lineages within the named RNA virus families.",
++      "scope_keywords": [
++        "herptile transcriptomes",
++        "RNA virus discovery",
++        "Bunyavirales",
++        "lyssaviruses",
++        "Hepeviridae",
++        "Astroviridae",
++        "phylogenetics"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Are amphibians and reptiles reservoirs of divergent negative-sense RNA viruses, including bunyaviruses, lyssa-like rhabdoviruses, and influenza-like viruses, that can be recovered from public RNA-seq transcriptomes?",
++      "rationale": "The supplement specifically highlights novel reptile Bunyavirales, reptile lyssaviruses, and a novel newt influenza virus. These targets are all evaluated through translated viral genes and reference phylogenies, implying that public herptile transcriptomes can reveal deep negative-sense RNA virus diversity. The table supplies a large host and tissue sampling frame for testing whether these discoveries are isolated or part of a broader reservoir pattern.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "Animal type",
++        "Tissue",
++        "Supplementary Figure 1",
++        "Supplementary Figure 2",
++        "Supplementary Figure 4"
++      ],
++      "expected_test": "Screen the accession-bearing transcriptomes for bunyavirus, rhabdovirus, and orthomyxovirus protein homology, then compare translated contigs with reference negative-sense RNA viruses in family-specific phylogenies.",
++      "scope_keywords": [
++        "negative-sense RNA viruses",
++        "amphibians",
++        "reptiles",
++        "Bunyavirales",
++        "Rhabdoviridae",
++        "influenza"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Do novel hepevirus and astrovirus contigs from amphibian and reptile transcriptomes show genomic organization and phylogenetic placement consistent with expansion of known vertebrate virus diversity?",
++      "rationale": "Supplementary Figure 3 describes novel amphibian and reptile Hepeviridae and Astroviridae, including genomic structure, non-structural genes, structural genes, and a common recombination breakpoint. The caption indicates that both non-structural and structural genes were translated, aligned, and placed in phylogenies. These data features support testing whether the contigs represent divergent vertebrate-associated lineages rather than routine database matches.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Figure 3",
++        "non-structural gene",
++        "structural capsid genes",
++        "common recombination breakpoint",
++        "Supplementary Table 1"
++      ],
++      "expected_test": "Map contigs to hepevirus and astrovirus genome regions, compare non-structural and capsid gene phylogenies with reference viruses, and assess whether the amphibian/reptile sequences occupy novel or host-associated branches.",
++      "scope_keywords": [
++        "Hepeviridae",
++        "Astroviridae",
++        "genome organization",
++        "capsid",
++        "recombination",
++        "vertebrate viruses"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Which host class, tissue type, country of origin, and sequencing platform strata in the herptile RNA-seq accession table are most informative for detecting divergent viral contigs?",
++      "rationale": "The table provides structured metadata for host class, scientific name, tissue, geography, sequencing accession, and platform across 235 usable entries. Reptile entries are more numerous than amphibian entries, liver and mixed viscera dominate tissue sampling, and platform labels include both broad Illumina coverage and polyA-selected libraries. These variables can be tested as predictors of viral-contig detection or recovery quality.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "Animal type",
++        "Country of origin",
++        "Tissue",
++        "Sequencing platform",
++        "SRA Accession"
++      ],
++      "expected_test": "Use the table metadata as covariates and viral-contig presence, count, length, or family assignment as outcomes after standardized transcriptome screening, then compare detection rates across host, tissue, country, and platform groups.",
++      "scope_keywords": [
++        "metadata predictors",
++        "host class",
++        "tissue",
++        "geography",
++        "sequencing platform",
++        "viral contigs"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Can liver and mixed-viscera RNA-seq libraries from globally distributed amphibians and reptiles serve as a practical surveillance resource for discovering evolutionarily distinct vertebrate RNA viruses?",
++      "rationale": "Liver and mixed viscera account for 135 of the 235 accession-bearing entries, making internal-organ transcriptomes the dominant sampling mode in Supplementary Table 1. The table spans 29 country or region values and 122 scientific host names, while the figures document successful discovery of several novel RNA virus groups. This supports a surveillance-oriented question about whether existing public organ transcriptomes are sufficient to reveal biologically important viral diversity.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "Tissue",
++        "Country of origin",
++        "Scientific name",
++        "Supplementary Figure 1",
++        "Supplementary Figure 5"
++      ],
++      "expected_test": "Subset the accession table to liver and mixed-viscera libraries, perform standardized viral homology searches and phylogenetic classification, and compare discovery yield and novelty against other tissues and known reference virus diversity.",
++      "scope_keywords": [
++        "surveillance",
++        "liver",
++        "mixed viscera",
++        "global sampling",
++        "vertebrate RNA viruses",
++        "virus discovery"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..bc2ffc9e94d97312006c5360f4215f20a1573c46
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,19 @@
++# Data Summary
++
++The uploaded data consist of one Microsoft Word supplement, `data/43705_2022_180_MOESM1_ESM.docx`, with a 15-page document, one large accession table, and five embedded TIFF figures. Supplementary Table 1 is titled "Publicly available RNA-Sequencing datasets used in this study" and has columns for `Species`, `Scientific name`, `Animal type`, `SRA Accession`, `Country of origin`, `Tissue`, and `Sequencing platform`. The figure captions describe viral-contig discovery and phylogenetic analysis for novel reptile Bunyavirales, reptile lyssaviruses, amphibian and reptile Hepeviridae and Astroviridae, a newt influenza virus, and a newt calicivirus.
++
++# Analysis
++
++After excluding the footnote row, the table contains 235 accession-bearing RNA-seq entries, representing 234 unique accessions because `SRR4212883` appears twice. The accessions span 122 scientific host names and two host classes: 156 reptile entries (66.4%) and 79 amphibian entries (33.6%). Geographic metadata include 29 country or region values; the largest contributors are French Giana (40 entries), China (32), USA (28), Unknown (22), Australia (17), and Cuba (16). Tissue metadata are broad, with 26 tissue categories; liver is the dominant source (97 entries), followed by mixed viscera (38), kidney (20), nuptial pad (9), heart (8), and skin (8). Liver plus mixed viscera account for 135 of 235 entries (57.4%), indicating that many libraries sample internal organs where systemic viral RNA may be detectable. Sequencing technologies are mostly Illumina-based, with 15 platform labels; HiSeq 2000 variants, NextSeq 500, and HiSeq 2500 dominate, while 39 entries (16.6%) are starred as polyA-selected.
++
++# Reasoning
++
++The dataset is not just a host inventory: the captions show a complete viral discovery workflow. Viral contigs were identified by BLAST searches against NCBI viral protein databases, translated, aligned with MAFFT, and placed in RAxML phylogenies with 500 bootstrap replicates. The combination of broad amphibian/reptile host sampling, accession-level public transcriptomes, and figure evidence for multiple divergent RNA virus families points to a central scientific opportunity: using under-mined herptile transcriptomes to expand the known RNA virosphere and infer evolutionary relationships.
++
++# Top Scientific Question
++
++Can transcriptome mining of public amphibian and reptile RNA-seq datasets uncover novel RNA viruses in under-sampled herptile hosts and place them phylogenetically within Bunyavirales, lyssa-like rhabdoviruses, Hepeviridae, Astroviridae, influenza-like orthomyxoviruses, and Caliciviridae?
++
++# Why This Question Is Testable On The Provided Dataset
++
++Supplementary Table 1 provides the public accessions, host taxonomy, animal class, tissue, geography, and sequencing platform needed to retrieve and stratify transcriptome libraries. The figure captions specify the computational tests: BLAST-based viral contig detection, in silico translation, MAFFT alignment against reference viruses, and RAxML phylogenetic placement. The five figure topics also provide concrete positive targets across several RNA virus families, making the question directly answerable from the accession list and documented viral phylogenies.
+
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..270b0365628dfaebf8d1b47411b3a25b53c47666
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,123 @@
++{
++  "agent_id": "gpt-5.5-codex-harness",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "Can transcriptome mining of public amphibian and reptile RNA-seq datasets uncover novel RNA viruses in under-sampled herptile hosts and place them phylogenetically within Bunyavirales, lyssa-like rhabdoviruses, Hepeviridae, Astroviridae, influenza-like orthomyxoviruses, and Caliciviridae?",
++      "rationale": "Supplementary Table 1 lists 235 accession-bearing RNA-seq datasets from amphibians and reptiles, giving host species, tissue, country, and sequencing platform for systematic mining. The five figure captions document viral-contig discovery and phylogenetic placement for novel reptile Bunyavirales, lyssaviruses, amphibian and reptile Hepeviridae/Astroviridae, newt influenza virus, and newt calicivirus. This directly links public transcriptome breadth to discovery of divergent RNA viruses and their evolutionary context.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "SRA Accession",
++        "Animal type",
++        "Scientific name",
++        "Supplementary Figure 1",
++        "Supplementary Figure 2",
++        "Supplementary Figure 3",
++        "Supplementary Figure 4",
++        "Supplementary Figure 5"
++      ],
++      "expected_test": "Retrieve or assemble transcriptomes from the listed accessions, identify viral contigs with BLAST against viral protein references, translate viral genes, align them with MAFFT, and infer RAxML phylogenies to test whether detected contigs form novel lineages within the named RNA virus families.",
++      "scope_keywords": [
++        "herptile transcriptomes",
++        "RNA virus discovery",
++        "Bunyavirales",
++        "lyssaviruses",
++        "Hepeviridae",
++        "Astroviridae",
++        "phylogenetics"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Are amphibians and reptiles reservoirs of divergent negative-sense RNA viruses, including bunyaviruses, lyssa-like rhabdoviruses, and influenza-like viruses, that can be recovered from public RNA-seq transcriptomes?",
++      "rationale": "The supplement specifically highlights novel reptile Bunyavirales, reptile lyssaviruses, and a novel newt influenza virus. These targets are all evaluated through translated viral genes and reference phylogenies, implying that public herptile transcriptomes can reveal deep negative-sense RNA virus diversity. The table supplies a large host and tissue sampling frame for testing whether these discoveries are isolated or part of a broader reservoir pattern.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "Animal type",
++        "Tissue",
++        "Supplementary Figure 1",
++        "Supplementary Figure 2",
++        "Supplementary Figure 4"
++      ],
++      "expected_test": "Screen the accession-bearing transcriptomes for bunyavirus, rhabdovirus, and orthomyxovirus protein homology, then compare translated contigs with reference negative-sense RNA viruses in family-specific phylogenies.",
++      "scope_keywords": [
++        "negative-sense RNA viruses",
++        "amphibians",
++        "reptiles",
++        "Bunyavirales",
++        "Rhabdoviridae",
++        "influenza"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Do novel hepevirus and astrovirus contigs from amphibian and reptile transcriptomes show genomic organization and phylogenetic placement consistent with expansion of known vertebrate virus diversity?",
++      "rationale": "Supplementary Figure 3 describes novel amphibian and reptile Hepeviridae and Astroviridae, including genomic structure, non-structural genes, structural genes, and a common recombination breakpoint. The caption indicates that both non-structural and structural genes were translated, aligned, and placed in phylogenies. These data features support testing whether the contigs represent divergent vertebrate-associated lineages rather than routine database matches.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Figure 3",
++        "non-structural gene",
++        "structural capsid genes",
++        "common recombination breakpoint",
++        "Supplementary Table 1"
++      ],
++      "expected_test": "Map contigs to hepevirus and astrovirus genome regions, compare non-structural and capsid gene phylogenies with reference viruses, and assess whether the amphibian/reptile sequences occupy novel or host-associated branches.",
++      "scope_keywords": [
++        "Hepeviridae",
++        "Astroviridae",
++        "genome organization",
++        "capsid",
++        "recombination",
++        "vertebrate viruses"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Which host class, tissue type, country of origin, and sequencing platform strata in the herptile RNA-seq accession table are most informative for detecting divergent viral contigs?",
++      "rationale": "The table provides structured metadata for host class, scientific name, tissue, geography, sequencing accession, and platform across 235 usable entries. Reptile entries are more numerous than amphibian entries, liver and mixed viscera dominate tissue sampling, and platform labels include both broad Illumina coverage and polyA-selected libraries. These variables can be tested as predictors of viral-contig detection or recovery quality.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "Animal type",
++        "Country of origin",
++        "Tissue",
++        "Sequencing platform",
++        "SRA Accession"
++      ],
++      "expected_test": "Use the table metadata as covariates and viral-contig presence, count, length, or family assignment as outcomes after standardized transcriptome screening, then compare detection rates across host, tissue, country, and platform groups.",
++      "scope_keywords": [
++        "metadata predictors",
++        "host class",
++        "tissue",
++        "geography",
++        "sequencing platform",
++        "viral contigs"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Can liver and mixed-viscera RNA-seq libraries from globally distributed amphibians and reptiles serve as a practical surveillance resource for discovering evolutionarily distinct vertebrate RNA viruses?",
++      "rationale": "Liver and mixed viscera account for 135 of the 235 accession-bearing entries, making internal-organ transcriptomes the dominant sampling mode in Supplementary Table 1. The table spans 29 country or region values and 122 scientific host names, while the figures document successful discovery of several novel RNA virus groups. This supports a surveillance-oriented question about whether existing public organ transcriptomes are sufficient to reveal biologically important viral diversity.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "Tissue",
++        "Country of origin",
++        "Scientific name",
++        "Supplementary Figure 1",
++        "Supplementary Figure 5"
++      ],
++      "expected_test": "Subset the accession table to liver and mixed-viscera libraries, perform standardized viral homology searches and phylogenetic classification, and compare discovery yield and novelty against other tissues and known reference virus diversity.",
++      "scope_keywords": [
++        "surveillance",
++        "liver",
++        "mixed viscera",
++        "global sampling",
++        "vertebrate RNA viruses",
++        "virus discovery"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..bc2ffc9e94d97312006c5360f4215f20a1573c46
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,19 @@
++# Data Summary
++
++The uploaded data consist of one Microsoft Word supplement, `data/43705_2022_180_MOESM1_ESM.docx`, with a 15-page document, one large accession table, and five embedded TIFF figures. Supplementary Table 1 is titled "Publicly available RNA-Sequencing datasets used in this study" and has columns for `Species`, `Scientific name`, `Animal type`, `SRA Accession`, `Country of origin`, `Tissue`, and `Sequencing platform`. The figure captions describe viral-contig discovery and phylogenetic analysis for novel reptile Bunyavirales, reptile lyssaviruses, amphibian and reptile Hepeviridae and Astroviridae, a newt influenza virus, and a newt calicivirus.
++
++# Analysis
++
++After excluding the footnote row, the table contains 235 accession-bearing RNA-seq entries, representing 234 unique accessions because `SRR4212883` appears twice. The accessions span 122 scientific host names and two host classes: 156 reptile entries (66.4%) and 79 amphibian entries (33.6%). Geographic metadata include 29 country or region values; the largest contributors are French Giana (40 entries), China (32), USA (28), Unknown (22), Australia (17), and Cuba (16). Tissue metadata are broad, with 26 tissue categories; liver is the dominant source (97 entries), followed by mixed viscera (38), kidney (20), nuptial pad (9), heart (8), and skin (8). Liver plus mixed viscera account for 135 of 235 entries (57.4%), indicating that many libraries sample internal organs where systemic viral RNA may be detectable. Sequencing technologies are mostly Illumina-based, with 15 platform labels; HiSeq 2000 variants, NextSeq 500, and HiSeq 2500 dominate, while 39 entries (16.6%) are starred as polyA-selected.
++
++# Reasoning
++
++The dataset is not just a host inventory: the captions show a complete viral discovery workflow. Viral contigs were identified by BLAST searches against NCBI viral protein databases, translated, aligned with MAFFT, and placed in RAxML phylogenies with 500 bootstrap replicates. The combination of broad amphibian/reptile host sampling, accession-level public transcriptomes, and figure evidence for multiple divergent RNA virus families points to a central scientific opportunity: using under-mined herptile transcriptomes to expand the known RNA virosphere and infer evolutionary relationships.
++
++# Top Scientific Question
++
++Can transcriptome mining of public amphibian and reptile RNA-seq datasets uncover novel RNA viruses in under-sampled herptile hosts and place them phylogenetically within Bunyavirales, lyssa-like rhabdoviruses, Hepeviridae, Astroviridae, influenza-like orthomyxoviruses, and Caliciviridae?
++
++# Why This Question Is Testable On The Provided Dataset
++
++Supplementary Table 1 provides the public accessions, host taxonomy, animal class, tissue, geography, and sequencing platform needed to retrieve and stratify transcriptome libraries. The figure captions specify the computational tests: BLAST-based viral contig detection, in silico translation, MAFFT alignment against reference viruses, and RAxML phylogenetic placement. The five figure topics also provide concrete positive targets across several RNA virus families, making the question directly answerable from the accession list and documented viral phylogenies.
+
+codex
+The two requested files are written. I’m doing a quick validation pass now: JSON parse, five unique ranked questions, and the rank-1 question matching the report text.
+exec
+/bin/zsh -lc 'wc -c report/report.md agent_questions.json' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+exec
+/bin/zsh -lc "find report -maxdepth 2 -type f -print && test -f agent_questions.json && printf 'agent_questions.json\\n'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+    3244 report/report.md
+    7550 agent_questions.json
+   10794 total
+
+ succeeded in 0ms:
+report/report.md
+agent_questions.json
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import json, pathlib, re
+root=pathlib.Path('.')
+q=json.loads(pathlib.Path('agent_questions.json').read_text())
+qs=q['questions']
+assert len(qs)==5, len(qs)
+assert [x['rank'] for x in qs]==[1,2,3,4,5], [x['rank'] for x in qs]
+texts=[x['question'] for x in qs]
+assert len(set(texts))==5
+assert all(t.endswith('?') and t.count('?')==1 for t in texts)
+report=pathlib.Path('report/report.md').read_text()
+assert texts[0] in report
+print('valid agent_questions.json with 5 distinct ranked questions')
+print('rank1 matches report:', texts[0])
+print('report words:', len(re.findall(r\"\\b\\w+\\b\", report)))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329
+ succeeded in 0ms:
+valid agent_questions.json with 5 distinct ranked questions
+rank1 matches report: Can transcriptome mining of public amphibian and reptile RNA-seq datasets uncover novel RNA viruses in under-sampled herptile hosts and place them phylogenetically within Bunyavirales, lyssa-like rhabdoviruses, Hepeviridae, Astroviridae, influenza-like orthomyxoviruses, and Caliciviridae?
+report words: 453
+
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..270b0365628dfaebf8d1b47411b3a25b53c47666
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,123 @@
++{
++  "agent_id": "gpt-5.5-codex-harness",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "Can transcriptome mining of public amphibian and reptile RNA-seq datasets uncover novel RNA viruses in under-sampled herptile hosts and place them phylogenetically within Bunyavirales, lyssa-like rhabdoviruses, Hepeviridae, Astroviridae, influenza-like orthomyxoviruses, and Caliciviridae?",
++      "rationale": "Supplementary Table 1 lists 235 accession-bearing RNA-seq datasets from amphibians and reptiles, giving host species, tissue, country, and sequencing platform for systematic mining. The five figure captions document viral-contig discovery and phylogenetic placement for novel reptile Bunyavirales, lyssaviruses, amphibian and reptile Hepeviridae/Astroviridae, newt influenza virus, and newt calicivirus. This directly links public transcriptome breadth to discovery of divergent RNA viruses and their evolutionary context.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "SRA Accession",
++        "Animal type",
++        "Scientific name",
++        "Supplementary Figure 1",
++        "Supplementary Figure 2",
++        "Supplementary Figure 3",
++        "Supplementary Figure 4",
++        "Supplementary Figure 5"
++      ],
++      "expected_test": "Retrieve or assemble transcriptomes from the listed accessions, identify viral contigs with BLAST against viral protein references, translate viral genes, align them with MAFFT, and infer RAxML phylogenies to test whether detected contigs form novel lineages within the named RNA virus families.",
++      "scope_keywords": [
++        "herptile transcriptomes",
++        "RNA virus discovery",
++        "Bunyavirales",
++        "lyssaviruses",
++        "Hepeviridae",
++        "Astroviridae",
++        "phylogenetics"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Are amphibians and reptiles reservoirs of divergent negative-sense RNA viruses, including bunyaviruses, lyssa-like rhabdoviruses, and influenza-like viruses, that can be recovered from public RNA-seq transcriptomes?",
++      "rationale": "The supplement specifically highlights novel reptile Bunyavirales, reptile lyssaviruses, and a novel newt influenza virus. These targets are all evaluated through translated viral genes and reference phylogenies, implying that public herptile transcriptomes can reveal deep negative-sense RNA virus diversity. The table supplies a large host and tissue sampling frame for testing whether these discoveries are isolated or part of a broader reservoir pattern.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "Animal type",
++        "Tissue",
++        "Supplementary Figure 1",
++        "Supplementary Figure 2",
++        "Supplementary Figure 4"
++      ],
++      "expected_test": "Screen the accession-bearing transcriptomes for bunyavirus, rhabdovirus, and orthomyxovirus protein homology, then compare translated contigs with reference negative-sense RNA viruses in family-specific phylogenies.",
++      "scope_keywords": [
++        "negative-sense RNA viruses",
++        "amphibians",
++        "reptiles",
++        "Bunyavirales",
++        "Rhabdoviridae",
++        "influenza"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Do novel hepevirus and astrovirus contigs from amphibian and reptile transcriptomes show genomic organization and phylogenetic placement consistent with expansion of known vertebrate virus diversity?",
++      "rationale": "Supplementary Figure 3 describes novel amphibian and reptile Hepeviridae and Astroviridae, including genomic structure, non-structural genes, structural genes, and a common recombination breakpoint. The caption indicates that both non-structural and structural genes were translated, aligned, and placed in phylogenies. These data features support testing whether the contigs represent divergent vertebrate-associated lineages rather than routine database matches.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Figure 3",
++        "non-structural gene",
++        "structural capsid genes",
++        "common recombination breakpoint",
++        "Supplementary Table 1"
++      ],
++      "expected_test": "Map contigs to hepevirus and astrovirus genome regions, compare non-structural and capsid gene phylogenies with reference viruses, and assess whether the amphibian/reptile sequences occupy novel or host-associated branches.",
++      "scope_keywords": [
++        "Hepeviridae",
++        "Astroviridae",
++        "genome organization",
++        "capsid",
++        "recombination",
++        "vertebrate viruses"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Which host class, tissue type, country of origin, and sequencing platform strata in the herptile RNA-seq accession table are most informative for detecting divergent viral contigs?",
++      "rationale": "The table provides structured metadata for host class, scientific name, tissue, geography, sequencing accession, and platform across 235 usable entries. Reptile entries are more numerous than amphibian entries, liver and mixed viscera dominate tissue sampling, and platform labels include both broad Illumina coverage and polyA-selected libraries. These variables can be tested as predictors of viral-contig detection or recovery quality.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "Animal type",
++        "Country of origin",
++        "Tissue",
++        "Sequencing platform",
++        "SRA Accession"
++      ],
++      "expected_test": "Use the table metadata as covariates and viral-contig presence, count, length, or family assignment as outcomes after standardized transcriptome screening, then compare detection rates across host, tissue, country, and platform groups.",
++      "scope_keywords": [
++        "metadata predictors",
++        "host class",
++        "tissue",
++        "geography",
++        "sequencing platform",
++        "viral contigs"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Can liver and mixed-viscera RNA-seq libraries from globally distributed amphibians and reptiles serve as a practical surveillance resource for discovering evolutionarily distinct vertebrate RNA viruses?",
++      "rationale": "Liver and mixed viscera account for 135 of the 235 accession-bearing entries, making internal-organ transcriptomes the dominant sampling mode in Supplementary Table 1. The table spans 29 country or region values and 122 scientific host names, while the figures document successful discovery of several novel RNA virus groups. This supports a surveillance-oriented question about whether existing public organ transcriptomes are sufficient to reveal biologically important viral diversity.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "Tissue",
++        "Country of origin",
++        "Scientific name",
++        "Supplementary Figure 1",
++        "Supplementary Figure 5"
++      ],
++      "expected_test": "Subset the accession table to liver and mixed-viscera libraries, perform standardized viral homology searches and phylogenetic classification, and compare discovery yield and novelty against other tissues and known reference virus diversity.",
++      "scope_keywords": [
++        "surveillance",
++        "liver",
++        "mixed viscera",
++        "global sampling",
++        "vertebrate RNA viruses",
++        "virus discovery"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..bc2ffc9e94d97312006c5360f4215f20a1573c46
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,19 @@
++# Data Summary
++
++The uploaded data consist of one Microsoft Word supplement, `data/43705_2022_180_MOESM1_ESM.docx`, with a 15-page document, one large accession table, and five embedded TIFF figures. Supplementary Table 1 is titled "Publicly available RNA-Sequencing datasets used in this study" and has columns for `Species`, `Scientific name`, `Animal type`, `SRA Accession`, `Country of origin`, `Tissue`, and `Sequencing platform`. The figure captions describe viral-contig discovery and phylogenetic analysis for novel reptile Bunyavirales, reptile lyssaviruses, amphibian and reptile Hepeviridae and Astroviridae, a newt influenza virus, and a newt calicivirus.
++
++# Analysis
++
++After excluding the footnote row, the table contains 235 accession-bearing RNA-seq entries, representing 234 unique accessions because `SRR4212883` appears twice. The accessions span 122 scientific host names and two host classes: 156 reptile entries (66.4%) and 79 amphibian entries (33.6%). Geographic metadata include 29 country or region values; the largest contributors are French Giana (40 entries), China (32), USA (28), Unknown (22), Australia (17), and Cuba (16). Tissue metadata are broad, with 26 tissue categories; liver is the dominant source (97 entries), followed by mixed viscera (38), kidney (20), nuptial pad (9), heart (8), and skin (8). Liver plus mixed viscera account for 135 of 235 entries (57.4%), indicating that many libraries sample internal organs where systemic viral RNA may be detectable. Sequencing technologies are mostly Illumina-based, with 15 platform labels; HiSeq 2000 variants, NextSeq 500, and HiSeq 2500 dominate, while 39 entries (16.6%) are starred as polyA-selected.
++
++# Reasoning
++
++The dataset is not just a host inventory: the captions show a complete viral discovery workflow. Viral contigs were identified by BLAST searches against NCBI viral protein databases, translated, aligned with MAFFT, and placed in RAxML phylogenies with 500 bootstrap replicates. The combination of broad amphibian/reptile host sampling, accession-level public transcriptomes, and figure evidence for multiple divergent RNA virus families points to a central scientific opportunity: using under-mined herptile transcriptomes to expand the known RNA virosphere and infer evolutionary relationships.
++
++# Top Scientific Question
++
++Can transcriptome mining of public amphibian and reptile RNA-seq datasets uncover novel RNA viruses in under-sampled herptile hosts and place them phylogenetically within Bunyavirales, lyssa-like rhabdoviruses, Hepeviridae, Astroviridae, influenza-like orthomyxoviruses, and Caliciviridae?
++
++# Why This Question Is Testable On The Provided Dataset
++
++Supplementary Table 1 provides the public accessions, host taxonomy, animal class, tissue, geography, and sequencing platform needed to retrieve and stratify transcriptome libraries. The figure captions specify the computational tests: BLAST-based viral contig detection, in silico translation, MAFFT alignment against reference viruses, and RAxML phylogenetic placement. The five figure topics also provide concrete positive targets across several RNA virus families, making the question directly answerable from the accession list and documented viral phylogenies.
+
+codex
+Done. Created:
+
+- [report/report.md](/private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329/report/report.md)
+- [agent_questions.json](/private/tmp/codex-sandboxes/gpt-5.5-high/20260527T225329/agent_questions.json)
+
+Validated that `agent_questions.json` parses, contains exactly 5 distinct ranked questions, and the rank-1 question matches the report.
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..270b0365628dfaebf8d1b47411b3a25b53c47666
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,123 @@
++{
++  "agent_id": "gpt-5.5-codex-harness",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "Can transcriptome mining of public amphibian and reptile RNA-seq datasets uncover novel RNA viruses in under-sampled herptile hosts and place them phylogenetically within Bunyavirales, lyssa-like rhabdoviruses, Hepeviridae, Astroviridae, influenza-like orthomyxoviruses, and Caliciviridae?",
++      "rationale": "Supplementary Table 1 lists 235 accession-bearing RNA-seq datasets from amphibians and reptiles, giving host species, tissue, country, and sequencing platform for systematic mining. The five figure captions document viral-contig discovery and phylogenetic placement for novel reptile Bunyavirales, lyssaviruses, amphibian and reptile Hepeviridae/Astroviridae, newt influenza virus, and newt calicivirus. This directly links public transcriptome breadth to discovery of divergent RNA viruses and their evolutionary context.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "SRA Accession",
++        "Animal type",
++        "Scientific name",
++        "Supplementary Figure 1",
++        "Supplementary Figure 2",
++        "Supplementary Figure 3",
++        "Supplementary Figure 4",
++        "Supplementary Figure 5"
++      ],
++      "expected_test": "Retrieve or assemble transcriptomes from the listed accessions, identify viral contigs with BLAST against viral protein references, translate viral genes, align them with MAFFT, and infer RAxML phylogenies to test whether detected contigs form novel lineages within the named RNA virus families.",
++      "scope_keywords": [
++        "herptile transcriptomes",
++        "RNA virus discovery",
++        "Bunyavirales",
++        "lyssaviruses",
++        "Hepeviridae",
++        "Astroviridae",
++        "phylogenetics"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Are amphibians and reptiles reservoirs of divergent negative-sense RNA viruses, including bunyaviruses, lyssa-like rhabdoviruses, and influenza-like viruses, that can be recovered from public RNA-seq transcriptomes?",
++      "rationale": "The supplement specifically highlights novel reptile Bunyavirales, reptile lyssaviruses, and a novel newt influenza virus. These targets are all evaluated through translated viral genes and reference phylogenies, implying that public herptile transcriptomes can reveal deep negative-sense RNA virus diversity. The table supplies a large host and tissue sampling frame for testing whether these discoveries are isolated or part of a broader reservoir pattern.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "Animal type",
++        "Tissue",
++        "Supplementary Figure 1",
++        "Supplementary Figure 2",
++        "Supplementary Figure 4"
++      ],
++      "expected_test": "Screen the accession-bearing transcriptomes for bunyavirus, rhabdovirus, and orthomyxovirus protein homology, then compare translated contigs with reference negative-sense RNA viruses in family-specific phylogenies.",
++      "scope_keywords": [
++        "negative-sense RNA viruses",
++        "amphibians",
++        "reptiles",
++        "Bunyavirales",
++        "Rhabdoviridae",
++        "influenza"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Do novel hepevirus and astrovirus contigs from amphibian and reptile transcriptomes show genomic organization and phylogenetic placement consistent with expansion of known vertebrate virus diversity?",
++      "rationale": "Supplementary Figure 3 describes novel amphibian and reptile Hepeviridae and Astroviridae, including genomic structure, non-structural genes, structural genes, and a common recombination breakpoint. The caption indicates that both non-structural and structural genes were translated, aligned, and placed in phylogenies. These data features support testing whether the contigs represent divergent vertebrate-associated lineages rather than routine database matches.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Figure 3",
++        "non-structural gene",
++        "structural capsid genes",
++        "common recombination breakpoint",
++        "Supplementary Table 1"
++      ],
++      "expected_test": "Map contigs to hepevirus and astrovirus genome regions, compare non-structural and capsid gene phylogenies with reference viruses, and assess whether the amphibian/reptile sequences occupy novel or host-associated branches.",
++      "scope_keywords": [
++        "Hepeviridae",
++        "Astroviridae",
++        "genome organization",
++        "capsid",
++        "recombination",
++        "vertebrate viruses"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Which host class, tissue type, country of origin, and sequencing platform strata in the herptile RNA-seq accession table are most informative for detecting divergent viral contigs?",
++      "rationale": "The table provides structured metadata for host class, scientific name, tissue, geography, sequencing accession, and platform across 235 usable entries. Reptile entries are more numerous than amphibian entries, liver and mixed viscera dominate tissue sampling, and platform labels include both broad Illumina coverage and polyA-selected libraries. These variables can be tested as predictors of viral-contig detection or recovery quality.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "Animal type",
++        "Country of origin",
++        "Tissue",
++        "Sequencing platform",
++        "SRA Accession"
++      ],
++      "expected_test": "Use the table metadata as covariates and viral-contig presence, count, length, or family assignment as outcomes after standardized transcriptome screening, then compare detection rates across host, tissue, country, and platform groups.",
++      "scope_keywords": [
++        "metadata predictors",
++        "host class",
++        "tissue",
++        "geography",
++        "sequencing platform",
++        "viral contigs"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Can liver and mixed-viscera RNA-seq libraries from globally distributed amphibians and reptiles serve as a practical surveillance resource for discovering evolutionarily distinct vertebrate RNA viruses?",
++      "rationale": "Liver and mixed viscera account for 135 of the 235 accession-bearing entries, making internal-organ transcriptomes the dominant sampling mode in Supplementary Table 1. The table spans 29 country or region values and 122 scientific host names, while the figures document successful discovery of several novel RNA virus groups. This supports a surveillance-oriented question about whether existing public organ transcriptomes are sufficient to reveal biologically important viral diversity.",
++      "data_support": [
++        "data/43705_2022_180_MOESM1_ESM.docx",
++        "Supplementary Table 1",
++        "Tissue",
++        "Country of origin",
++        "Scientific name",
++        "Supplementary Figure 1",
++        "Supplementary Figure 5"
++      ],
++      "expected_test": "Subset the accession table to liver and mixed-viscera libraries, perform standardized viral homology searches and phylogenetic classification, and compare discovery yield and novelty against other tissues and known reference virus diversity.",
++      "scope_keywords": [
++        "surveillance",
++        "liver",
++        "mixed viscera",
++        "global sampling",
++        "vertebrate RNA viruses",
++        "virus discovery"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..bc2ffc9e94d97312006c5360f4215f20a1573c46
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,19 @@
++# Data Summary
++
++The uploaded data consist of one Microsoft Word supplement, `data/43705_2022_180_MOESM1_ESM.docx`, with a 15-page document, one large accession table, and five embedded TIFF figures. Supplementary Table 1 is titled "Publicly available RNA-Sequencing datasets used in this study" and has columns for `Species`, `Scientific name`, `Animal type`, `SRA Accession`, `Country of origin`, `Tissue`, and `Sequencing platform`. The figure captions describe viral-contig discovery and phylogenetic analysis for novel reptile Bunyavirales, reptile lyssaviruses, amphibian and reptile Hepeviridae and Astroviridae, a newt influenza virus, and a newt calicivirus.
++
++# Analysis
++
++After excluding the footnote row, the table contains 235 accession-bearing RNA-seq entries, representing 234 unique accessions because `SRR4212883` appears twice. The accessions span 122 scientific host names and two host classes: 156 reptile entries (66.4%) and 79 amphibian entries (33.6%). Geographic metadata include 29 country or region values; the largest contributors are French Giana (40 entries), China (32), USA (28), Unknown (22), Australia (17), and Cuba (16). Tissue metadata are broad, with 26 tissue categories; liver is the dominant source (97 entries), followed by mixed viscera (38), kidney (20), nuptial pad (9), heart (8), and skin (8). Liver plus mixed viscera account for 135 of 235 entries (57.4%), indicating that many libraries sample internal organs where systemic viral RNA may be detectable. Sequencing technologies are mostly Illumina-based, with 15 platform labels; HiSeq 2000 variants, NextSeq 500, and HiSeq 2500 dominate, while 39 entries (16.6%) are starred as polyA-selected.
++
++# Reasoning
++
++The dataset is not just a host inventory: the captions show a complete viral discovery workflow. Viral contigs were identified by BLAST searches against NCBI viral protein databases, translated, aligned with MAFFT, and placed in RAxML phylogenies with 500 bootstrap replicates. The combination of broad amphibian/reptile host sampling, accession-level public transcriptomes, and figure evidence for multiple divergent RNA virus families points to a central scientific opportunity: using under-mined herptile transcriptomes to expand the known RNA virosphere and infer evolutionary relationships.
++
++# Top Scientific Question
++
++Can transcriptome mining of public amphibian and reptile RNA-seq datasets uncover novel RNA viruses in under-sampled herptile hosts and place them phylogenetically within Bunyavirales, lyssa-like rhabdoviruses, Hepeviridae, Astroviridae, influenza-like orthomyxoviruses, and Caliciviridae?
++
++# Why This Question Is Testable On The Provided Dataset
++
++Supplementary Table 1 provides the public accessions, host taxonomy, animal class, tissue, geography, and sequencing platform needed to retrieve and stratify transcriptome libraries. The figure captions specify the computational tests: BLAST-based viral contig detection, in silico translation, MAFFT alignment against reference viruses, and RAxML phylogenetic placement. The five figure topics also provide concrete positive targets across several RNA virus families, making the question directly answerable from the accession list and documented viral phylogenies.
+
+tokens used
+70,703

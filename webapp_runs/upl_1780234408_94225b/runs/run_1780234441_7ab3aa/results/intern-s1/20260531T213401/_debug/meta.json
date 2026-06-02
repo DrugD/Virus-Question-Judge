@@ -1,0 +1,55 @@
+{
+  "agent_id": "intern-s1",
+  "model": "intern-s1",
+  "base_url": "https://chat.intern-ai.org.cn/api/v1",
+  "max_iters": 30,
+  "iters": 5,
+  "tool_call_count": 5,
+  "files_written": [
+    "report/report.md",
+    "agent_questions.json"
+  ],
+  "iters_history": [
+    {
+      "iter": 1,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "list_files"
+      ],
+      "content_len": 545
+    },
+    {
+      "iter": 2,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "read_file"
+      ],
+      "content_len": 708
+    },
+    {
+      "iter": 3,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "write_file"
+      ],
+      "content_len": 2
+    },
+    {
+      "iter": 4,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "write_file"
+      ],
+      "content_len": 2
+    },
+    {
+      "iter": 5,
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        "done"
+      ],
+      "content_len": 3
+    }
+  ],
+  "terminated_via_done": true
+}

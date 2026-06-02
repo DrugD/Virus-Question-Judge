@@ -1,0 +1,6 @@
+Done. Created and validated:
+
+- `report/report.md`
+- `agent_questions.json`
+
+`agent_questions.json` contains exactly 5 distinct ranked questions, ranks 1-5, all ending with `?`.

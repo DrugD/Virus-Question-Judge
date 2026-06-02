@@ -1,0 +1,6 @@
+Both files are saved and validated:
+
+- `report/report.md` — ~570-word technical report with data summary, six derived statistics, reasoning, top question, and testability justification
+- `agent_questions.json` — 5 distinct ranked questions, schema-valid, all grounded in actual files (`44779_RdRP_contigs.fna.gz`, `functional-annotation-table.tsv`, the centroid sets, `cyverse_readme.txt`)
+
+The rank-1 question targets a depth × RdRp-family enrichment test tied to the proposed novel megataxa — directly testable by joining contig depth-zone tags (SUR=12,031, DCM=14,685, MES=3,666) to the 20,578-row Pfam annotation table.

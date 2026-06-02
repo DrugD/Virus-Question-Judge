@@ -1,0 +1,14 @@
+# Data Summary
+The provided dataset primarily consists of a large FASTA file named `data/nuccore_reported_viral_sequences.fasta`, which is approximately 11.8 MB in size. This file contains numerous nucleotide sequences, each representing a reported viral genomic sequence. Each entry in the FASTA file includes a header line starting with `>` followed by an accession number and a descriptive name of the virus, often including information about its type, isolate, and sometimes host or origin. For example, one entry begins with `>ON746331.1 MAG: Nanning Botou tick virus 1 isolate TIGMIC 2 genomic sequence`. The subsequent lines for each entry contain the raw nucleotide sequence (A, T, C, G). An `info.json` file was also provided, detailing the workspace structure and expected output formats.
+
+# Analysis
+The core of the analysis revolves around processing the `nuccore_reported_viral_sequences.fasta` file. This involves parsing the FASTA format to extract individual sequence identifiers, descriptions, and the nucleotide sequences themselves. Once extracted, these sequences can be subjected to various bioinformatics analyses. For instance, sequence alignment tools can be used to compare sequences, identify conserved or variable regions, and calculate genetic distances. Basic sequence statistics, such as genome length and GC content, can be computed for each entry. The descriptive information in the FASTA headers can also be parsed to categorize viruses by type, family, or other taxonomic classifications.
+
+# Reasoning
+Viral genomic sequences are fundamental to understanding viral biology, evolution, and epidemiology. By analyzing the genetic makeup of reported viruses, we can gain insights into their diversity, evolutionary relationships, potential origins, and unique genomic features. Such analyses are crucial for tracking viral outbreaks, developing diagnostic tools, and designing antiviral strategies. The questions proposed aim to leverage the raw sequence data to uncover these biological insights, ranging from broad genetic diversity assessments to specific genomic characteristics and taxonomic classifications.
+
+# Top Scientific Question
+What is the overall genetic diversity among the reported viral sequences in the dataset?
+
+# Why Testable on This Dataset
+This question is directly testable using the `data/nuccore_reported_viral_sequences.fasta` file because it contains a collection of viral genomic sequences. By performing multiple sequence alignment on these sequences, one can identify nucleotide variations and calculate various metrics of genetic diversity, such as pairwise genetic distances, nucleotide diversity (π), or the number of segregating sites. The raw nucleotide data within the FASTA file provides all the necessary information to quantify the extent of genetic variation present across the reported viral sequences.

@@ -1,0 +1,14 @@
+Both output files have been saved. Here's a summary of what was produced:
+
+---
+
+**Dataset:** The BtCN-Virome study comprises bat metagenomic data from Chinese bat populations, including:
+- 8,176 virome assembly contigs (347 bat pools, 500–19,176 bp)
+- Ecological metadata for 98 pooled samples across 5 bat families (Rhinolophidae, Vespertilionidae, Pteropodidae, Emballonuridae, Hipposideridae) and 5 organ tissues, with 9 standardized climate covariates
+- ML phylogenies placing BtCN virome RdRp sequences into 12 of 13 viral orders/families
+- Reference RdRp motif table (motifs A–G with family-level variants)
+- Host barcoding databases (CytB/COI/ITS)
+
+**Top question (rank 1):** Whether bat family identity independently predicts total viral Shannon diversity (`tvs`) after controlling for organ tissue type and climate variables — specifically whether Rhinolophidae × intestine combinations carry the highest broad-spectrum RNA virus diversity. This is directly testable via mixed-effects modeling on `total.txt` and cross-validated against the phylogenetic data.
+
+**Five ranked questions** cover: (1) host-by-organ interaction on TVS, (2) climate threshold identification for gut virome diversity, (3) phylogenetic distinctiveness of BtCN clades from ZOVER references, (4) species richness dilution/amplification in lung pools, and (5) RdRp motif variant distribution across bat-associated viral families.

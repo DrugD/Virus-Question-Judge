@@ -1,0 +1,6 @@
+Both files are saved and validated.
+
+**Summary**
+
+- `report/report.md` — describes the dataset (33 GenBank FASTA records, KR902709–KR902741: 5 four-segmented arthropod RNA viruses + 13 polyprotein-encoding ssRNA viruses spanning insects, arachnids, a crustacean, a chilopod, and a shark), reports four derived statistics (architecture split, bimodal length distribution, GC range 34.3–56.1%, host taxonomy), and motivates the top question.
+- `agent_questions.json` — 5 distinct ranked questions. Rank 1 is the strongest, broadest question linking host class to genome architecture, segment-length conservation, and GC. Ranks 2–5 progressively narrow to architecture signature, the Wenling shark vertebrate outlier, tick-vs-spider compositional contrast, and within-virus segment composition coupling for metagenomic binning.

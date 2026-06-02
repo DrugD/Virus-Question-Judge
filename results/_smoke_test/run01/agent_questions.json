@@ -1,0 +1,14 @@
+{
+  "agent_id": "smoke-test",
+  "workspace_id": "Life_Virus_001",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "Can petabase-scale mining of public sequencing archives via translated RdRP search reveal a vast hidden RNA-virus diversity that is absent from curated viral reference databases?",
+      "rationale": "The 5.7M-run / 10.2 PB upstream search yields ~131,957 candidate novel sOTUs whose representatives drop below the 0.40 identity threshold against curated references, suggesting a systematic blind spot in current databases rather than a tooling artefact.",
+      "data_support": ["candidate_unique_novel_rdrp_sotus", "translated_runs_screened", "candidate_sotu_clusters", "alignment_hits", "rdrp_aa_fragments"],
+      "expected_test": "Quantify the fraction of cluster representatives below the curated-reference identity threshold across the full 5.7M-run search; compare cluster count to the size of curated RdRP reference families.",
+      "scope_keywords": ["petabase-scale", "RdRP", "RNA virus", "reference-database gap"]
+    }
+  ]
+}

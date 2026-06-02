@@ -1,0 +1,127 @@
+{
+  "workspace_id": "Life_Virus_001",
+  "task_id": "T_001_petabase_rdrp_question_generation",
+  "task_kind": "scientific_question_generation",
+  "domain": "virology / metagenomics",
+  "title": "Petabase-scale RdRP-driven RNA virus discovery — scientific question generation",
+  "short_description": "Given a blind, anonymized subset of an upstream petabase-scale public-sequencing translated search for RdRP-like fragments, propose the single most important scientific question the dataset can answer.",
+
+  "agent_visible_inputs": {
+    "instructions": "INSTRUCTIONS.md",
+    "checklist": "checklist.json",
+    "data_dir": "data/raw_data/",
+    "blind_entry_point": "data/raw_data/blind_input_summary.json"
+  },
+
+  "agent_output_contract": {
+    "report_path": "report/report.md",
+    "scientific_question_output_path": "agent_questions.json",
+    "max_questions": 5,
+    "min_questions": 1
+  },
+
+  "agent_output_schema": {
+    "type": "object",
+    "required": ["agent_id", "workspace_id", "questions"],
+    "properties": {
+      "agent_id": {
+        "type": "string",
+        "description": "Identifier for the model + harness combination, chosen by the agent runner."
+      },
+      "workspace_id": {
+        "type": "string",
+        "const": "Life_Virus_001"
+      },
+      "questions": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "required": ["rank", "question", "rationale", "data_support", "expected_test", "scope_keywords"],
+          "properties": {
+            "rank": {"type": "integer", "minimum": 1},
+            "question": {
+              "type": "string",
+              "description": "Single sentence ending with '?'."
+            },
+            "rationale": {
+              "type": "string",
+              "description": "2-4 sentences linking the question to blind-data evidence."
+            },
+            "data_support": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Items must come from blind_input_summary.json.available_features or local_files."
+            },
+            "expected_test": {
+              "type": "string",
+              "description": "How the question is answerable from the kind of data described in blind_input_summary.json."
+            },
+            "scope_keywords": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "judge_protocol": {
+    "framework": "DeepEval + custom BaseMetric (one metric per rubric dimension, weighted composite)",
+    "judge_input_unit": "questions[0]",
+    "ranking_diagnostics": "All candidates are also scored, but only top-1 is the official score.",
+    "score_range_per_dimension": [0, 5],
+    "aggregation": "weighted average of the 6 rubric dimensions with weights summing to 1.0",
+    "passing_score": 0.60,
+    "judge_only_assets": [
+      "target_study/checklist.json",
+      "target_study/question_rubric.json",
+      "target_study/README.md"
+    ]
+  },
+
+  "data": [
+    {
+      "name": "blind_input_summary",
+      "path": "data/raw_data/blind_input_summary.json",
+      "kind": "json",
+      "role": "entry_point"
+    },
+    {
+      "name": "runinfo_subset",
+      "path": "data/raw_data/runinfo_subset.tsv",
+      "kind": "tsv",
+      "rows": 32,
+      "columns": ["run_id_anonymized", "sample_source", "host_or_environment", "geographic_region_if_available", "metadata_completeness"]
+    },
+    {
+      "name": "rdrp_aa_fragments",
+      "path": "data/raw_data/rdrp_aa_fragments.faa",
+      "kind": "fasta_aa",
+      "rows": 53,
+      "header_format": ">FRAG_<id> run=<run_id> len=<fragment_length> motif_strength=<0|1|2>"
+    },
+    {
+      "name": "alignment_hits",
+      "path": "data/raw_data/alignment_hits.tsv",
+      "kind": "tsv",
+      "rows": 53,
+      "columns": ["fragment_id", "alignment_score", "e_value", "nearest_reference_family", "percent_identity_to_nearest_reference", "coverage_to_reference"]
+    },
+    {
+      "name": "candidate_sotu_clusters",
+      "path": "data/raw_data/candidate_sotu_clusters.tsv",
+      "kind": "tsv",
+      "rows": 32,
+      "columns": ["cluster_id", "cluster_size", "representative_fragment_id", "nearest_reference_family", "percent_identity_to_nearest_reference", "novelty_flag", "mean_metadata_completeness"]
+    }
+  ],
+
+  "data_provenance": {
+    "synthetic": true,
+    "seed": 20260514,
+    "note": "Local subset is synthetic but schema-faithful. Calibration of the rubric is against the upstream-search-scale statistics in blind_input_summary.json.data_scale_visible_to_agent, not the 53-row local subset."
+  }
+}

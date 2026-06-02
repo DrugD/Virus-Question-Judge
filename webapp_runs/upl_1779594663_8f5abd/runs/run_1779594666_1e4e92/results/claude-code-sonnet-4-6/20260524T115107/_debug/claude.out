@@ -1,0 +1,11 @@
+Both files are saved and verified. Here's a summary of what was produced:
+
+---
+
+**Data:** The single file `data/43705_2022_180_MOESM1_ESM.docx` is a supplementary document from a herptile (amphibian + reptile) viral discovery study. It contains:
+- **Supplementary Table 1**: 236 RNA-seq SRA accessions across 123 species (79 amphibian, 156 reptile) from ≥20 countries, with tissue and sequencing platform metadata.
+- **5 phylogenetic figures** (embedded TIFFs) showing novel viruses from 6 families: Bunyavirales, Lyssaviridae/Rhabdoviridae, Hepeviridae, Astroviridae, Orthomyxoviridae (influenza-like), and Caliciviridae.
+
+**Top question (rank 1):** Whether tissue-sampling breadth per host species predicts novel virus-family richness — motivated by the striking observation that only 7 caecilian species were sampled across ≥3 tissues and these yielded the most diverse novel viromes, while 116 species were sampled from liver only.
+
+**Other ranked questions cover:** amphibian vs reptile virome breadth (rank 2), tissue tropism of Hepeviridae/Astroviridae (rank 3), phylogeographic structuring of Bunyavirales/lyssaviruses (rank 4), and polyA-selection library bias against negative-sense RNA viruses (rank 5).

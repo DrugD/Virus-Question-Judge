@@ -1,0 +1,13 @@
+# Local Codex config used by the codex-cli agent in this workspace.
+# Loaded via `codex exec --config <abs path>` (the agent runner sets this).
+
+model_provider = "newapi"
+model = "gpt-5.1-codex"
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+
+[model_providers.newapi]
+name        = "new-api gateway"
+base_url    = "http://35.220.164.252:3888/v1"
+env_key     = "NEWAPI_KEY"
+wire_api    = "chat"

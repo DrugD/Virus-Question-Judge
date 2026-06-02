@@ -1,0 +1,13 @@
+Both files are saved. Here's a summary of what was produced:
+
+---
+
+**Data found:** A single FASTA file (`nuccore_reported_viral_sequences.fasta`) containing 33 complete RNA virus genome sequences — 5 four-segment viruses (20 sequences) and 13 polyprotein (non-segmented) viruses — from diverse invertebrate and one vertebrate host. Accessions KR902709–KR902741, part of the landmark Shi et al. 2016 invertebrate RNA virome survey.
+
+**Key derived statistics:**
+1. Segment-size hierarchy (seg1 > seg3 ≈ seg4 > seg2) is conserved across all five segmented viruses
+2. Intra-virus GC variance for segmented viruses is uniformly low (0.37–1.17), indicating co-packaging constraints
+3. GC content varies strongly by host group: ticks 50.1%, insects 41–43%, spider/centipede/water-strider viruses 34–38%
+4. Polyprotein genome sizes span a 2.7× range (9,653–26,315 bp); the largest (Gamboa mosquito virus) falls in nidovirus size territory
+
+**Top question (rank 1):** Whether the segmented genome architecture imposes a co-packaging constraint that restricts cross-host-order switching compared to polyprotein-encoding viruses — directly testable from the segment GC covariation and host-range metadata in the FASTA headers.

@@ -1,0 +1,6 @@
+Both required files have been written and validated:
+
+- **`report/report.md`** — A ~600-word technical report with the required sections (Data summary, Analysis with 4 derived statistics, Reasoning, Top question, Why testable).
+- **`agent_questions.json`** — 5 distinct ranked questions; all end with `?`; each cites real files (`BtCN-Virome_full_spectrum.fna`, `Meta_data_for_ecological_modeling/*.txt`, `ML_Phylo/*.tar.gz`, `RdRp_motif_collection.xlsx`, `Bats/COI.fasta`, etc.).
+
+Top-ranked question targets a non-trivial, biomedically/ecologically significant problem (climate × land-use predictors of bat virome richness, stratified by zoonotic vs. arthropod/plant-borne RdRp lineages) that is directly testable on the supplied tables and phylogenies. Ranks 2–5 cover progressively different but still data-grounded angles (host/tissue phylogenetic structure, novel taxa delineation, RdRp motif architecture, dietary/vector co-detection) to maximize Pass@5.

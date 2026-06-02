@@ -1,0 +1,4 @@
+Both files saved:
+
+- `report/report.md` — ~520 words covering data summary, three+ derived statistics, reasoning, the verbatim top question, and testability justification.
+- `agent_questions.json` — five distinct ranked questions with rationale, file-grounded `data_support`, `expected_test`, and `scope_keywords`. Rank 1 targets dsRNA-clade novelty + host-ecology in the Hirai contigs (the strongest signal in the data); ranks 2–5 cover dark-matter HMM recovery, multipartite genome reconstruction, host attribution within Picornavirales, and a cross-family richness/divergence comparison.

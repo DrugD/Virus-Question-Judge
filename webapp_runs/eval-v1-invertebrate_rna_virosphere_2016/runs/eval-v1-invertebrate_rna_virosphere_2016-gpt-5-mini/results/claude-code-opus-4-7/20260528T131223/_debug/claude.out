@@ -1,0 +1,4 @@
+Both files are saved:
+
+- **`report/report.md`** — Data summary (2,339 contigs, 22 clades, 60 alignment/tree files, geographic + host prefixes), three derived analyses (segment composition, per-clade tree depth, RdRp-vs-structural pairing), reasoning, the verbatim top question, and a testability section.
+- **`agent_questions.json`** — Valid JSON with 5 distinct ranked entries. Rank 1 targets the question the dataset was most clearly designed to answer (RdRp vs structural-protein topological incongruence / modular evolution across the invertebrate RNA virosphere — leveraging the `RdRp_versus_structural/` subfolder). Ranks 2–5 progressively address phylum-rank novelty of the New-* clades, segment reassortment in negative-sense viruses, host phylogenetic signal, and clade-specific genome-size ceilings — each grounded in real file/feature names from the upload.

@@ -1,0 +1,23 @@
+Both output files are saved. Here's a summary of what was produced:
+
+---
+
+## Output Summary
+
+### Dataset
+The data is from the **Shi et al. 2016** large-scale Chinese invertebrate RNA virome study:
+- **`5905698_all_virus_genomes.fasta`**: 2,339 RNA virus sequences across 22 superfamilies, sampled from invertebrate hosts (arthropods, crustaceans, molluscs, nematodes) at multiple Chinese sites
+- **`5905695_alignments_and_phylogenies.zip`**: 20 RdRp PhyML phylogenies + 20 trimmed alignments + 20 paired structural-protein trees for congruence analysis
+
+### `report/report.md`
+Five-section technical report covering data structure, four derived statistics (genome size distribution, Nidovirus lengths, novel lineage counts, RdRp vs. structural comparison design), and justification for the top question.
+
+### `agent_questions.json` — 5 ranked questions
+
+| Rank | Question Focus |
+|------|----------------|
+| **1** | RdRp vs. structural-protein phylogenetic congruence across 6 lineages — tests modular capsid evolution / horizontal gene exchange |
+| 2 | Phylogenetic placement of 5 entirely new virus superfamilies (Weivirus, Qinvirus, Zhaovirus, Yanvirus, Yuevirus) |
+| 3 | Whether invertebrate Nidovirales large genomes (up to 30,353 bp) predate vertebrate nidovirus large-genome complexity |
+| 4 | Bunya-Arena segment reassortment across invertebrate host types |
+| 5 | Host-driven vs. host-switching diversification in the 603-sequence Picorna-Calici clade |

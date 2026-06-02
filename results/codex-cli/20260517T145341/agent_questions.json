@@ -1,0 +1,21 @@
+{
+  "agent_id": "gpt-5.2-codex",
+  "workspace_id": "Life_Virus_001",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "Do petabase-scale public sequencing runs, particularly arthropod and vertebrate transcriptomes, harbor RdRP fragments with <40% identity to references that delineate cohesive yet novel RNA-virus sOTUs absent from current reference families?",
+      "rationale": "Eighty-seven percent of fragments in the blind subset fall below 40% identity, 19% have no assignable reference family, and 75% of clusters are labeled novel, with the densest concentrations arising from arthropod and vertebrate transcriptomes. These patterns imply systematic gaps in existing RdRP reference catalogs rather than random noise. Extrapolated to 5.7 million screened runs and 131,957 candidate novel sOTUs, the deficit would represent entire RNA-virus lineages missing from taxonomic coverage. This motivates verifying whether the low-identity, transcriptome-associated fragments can be organized into coherent novel clades using sOTU clustering pipelines at petabase scale.",
+      "data_support": [
+        "data/runinfo_subset.tsv",
+        "data/alignment_hits.tsv",
+        "data/candidate_sotu_clusters.tsv",
+        "percent_identity_to_nearest_reference",
+        "novelty_flag",
+        "sample_source"
+      ],
+      "expected_test": "Integrate percent identity and nearest reference family annotations from alignment hits with novelty_flagged sOTU clusters, stratified by sample_source metadata across all screened runs, to determine whether <40% identity fragments from transcriptome-rich biomes consistently form novel clusters that lack reference family assignments.",
+      "scope_keywords": ["RdRP", "RNA virus", "petabase-scale", "sOTU clustering", "public sequencing archives", "low-identity fragments"]
+    }
+  ]
+}

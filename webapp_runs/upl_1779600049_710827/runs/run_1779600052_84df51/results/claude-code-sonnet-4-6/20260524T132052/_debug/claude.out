@@ -1,0 +1,13 @@
+Both files are written. Here's a summary of what was done:
+
+---
+
+**Data analyzed:**
+- `5905698_all_virus_genomes.fasta` — 2,339 RNA virus genome/segment sequences from arthropod metatranscriptomics, spanning 22 supergroups, collected from coastal/riverine China sites (Beihai, Wuhan, Wenzhou, etc.) from spiders, ticks, mosquitoes, crabs, shrimp, centipedes, and other invertebrates
+- `5905695_alignments_and_phylogenies.zip` — 20 per-supergroup trimmed RdRp alignments + PhyML trees, plus 10 paired RdRp/structural-protein alignments in `RdRp_versus_structural/`
+
+**Top question (rank 1):** Whether the RdRp-based and structural-protein-based phylogenies for six supergroups show topological incongruence — directly testable using the paired `.fas` alignments and `.nwk` PhyML trees in `RdRp_versus_structural/`, which appears to be the primary scientific design of the dataset.
+
+**Output files:**
+- `report/report.md` — 600-word technical report with data summary, 4 derived statistics, reasoning, top question, and testability argument
+- `agent_questions.json` — 5 ranked questions from RdRp/structural modular recombination (rank 1) down to negative-sense genome segmentation architecture (rank 5)

@@ -1,0 +1,14 @@
+Both files are now saved. Here's a summary of what was done:
+
+---
+
+**Data findings:**
+
+- `nuccore_reported_viral_sequences.fasta`: 170 GenBank sequences (KM817593–KM817764) from the Shi et al. eLife paper e05378 — a landmark 2015 metatranscriptomic survey of novel RNA viruses from diverse Chinese invertebrates (ticks, mosquitoes, flies, spiders, cockroaches, crabs, shrimp, etc.)
+- `elife-05378-supp-v1.zip`: Three EPS figure supplement images from the same paper
+- 90+ novel virus species; 77 L gene entries, 50 glycoprotein, 48 nucleocapsid sequences; GC range 24.7–60.0%; tick viruses have longest mean sequences (7,147 bp)
+
+**Output files:**
+
+- `report/report.md`: Technical report with data summary, three derived statistics (length by host, GC distribution, gene content distribution), reasoning, and top question
+- `agent_questions.json`: 5 ranked questions — all grounded in specific sequences and features from the dataset, covering: (1) host-ecology phylogenetic clustering via L gene, (2) tick vs. dipteran genome composition, (3) orthomyxovirus-like PB1 spillover potential, (4) aquatic crustacean virus deep divergence, (5) L gene as predictor of genome architecture

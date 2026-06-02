@@ -1,0 +1,96 @@
+{
+  "composite_score": 1.0,
+  "composite_score_raw": 5.0,
+  "passed": true,
+  "threshold": 0.6,
+  "dimensions": [
+    {
+      "id": "question_matching",
+      "weight": 0.4,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The candidate explicitly asks about petabase-scale mining of public sequencing, focuses on RdRP, targets hidden RNA-virus diversity, and specifies absence from current reference families. It closely mirrors the groundtruth question’s scope and scientific intent, only adding more detail (hosts, identity threshold, sOTUs) without changing direction."
+    },
+    {
+      "id": "novelty",
+      "weight": 0.15,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question explicitly targets petabase-scale archives, focuses on RdRP fragments <40% identity, and asks whether they form cohesive yet novel RNA-virus sOTUs absent from current reference families. It frames a major, systematic blind spot in reference databases and a broad, unexplored RNA virome frontier grounded in large-scale public data mining."
+    },
+    {
+      "id": "importance",
+      "weight": 0.15,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question targets petabase-scale public sequencing archives, genome-wide RdRP diversity, and asks whether large, cohesive novel RNA-virus lineages missing from reference families can be delineated. It directly concerns hidden global virome diversity and taxonomic coverage gaps with implications for viral evolution and surveillance, not just narrow technical clustering. This aligns with broad-significance criteria rather than limited or dataset-specific importance."
+    },
+    {
+      "id": "testability",
+      "weight": 0.1,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question is explicitly about large-scale mining of public runs, RdRP-based detection, novelty vs. reference databases, sOTU clustering, and source distribution. The listed data_support features and expected_test map directly onto coverage, identity to references, clustering, and sample-source analyses. All needed analyses are computational and derivable from the provided blind dataset, so the question is fully and directly testable at petabase scale."
+    },
+    {
+      "id": "data_support",
+      "weight": 0.1,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question explicitly integrates petabase-scale archive mining, RdRP fragments, low percent identity to references, candidate sOTUs, and absence from current reference families, with emphasis on public sequencing transcriptomes and database gaps. The rationale and expected test both rely on alignment identities, novelty flags, clustering, and sample metadata drawn from the listed data files. This is strongly grounded in the combined signals described in the rubric’s top anchor."
+    },
+    {
+      "id": "specificity",
+      "weight": 0.1,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question explicitly invokes petabase-scale mining of public sequencing archives, uses RdRP as the marker, targets hidden RNA virus diversity with <40% identity, emphasizes absence from current reference families/databases, and links this to formation of novel sOTUs (downstream scientific significance). It is more detailed than anchor 4, fully matching anchor 5’s requirements."
+    }
+  ],
+  "refusal_triggered": false,
+  "flags_hit": [],
+  "candidate": {
+    "agent_id": "gpt-5.2-codex",
+    "question": "Do petabase-scale public sequencing runs, particularly arthropod and vertebrate transcriptomes, harbor RdRP fragments with <40% identity to references that delineate cohesive yet novel RNA-virus sOTUs absent from current reference families?",
+    "rationale": "Eighty-seven percent of fragments in the blind subset fall below 40% identity, 19% have no assignable reference family, and 75% of clusters are labeled novel, with the densest concentrations arising from arthropod and vertebrate transcriptomes. These patterns imply systematic gaps in existing RdRP reference catalogs rather than random noise. Extrapolated to 5.7 million screened runs and 131,957 candidate novel sOTUs, the deficit would represent entire RNA-virus lineages missing from taxonomic coverage. This motivates verifying whether the low-identity, transcriptome-associated fragments can be organized into coherent novel clades using sOTU clustering pipelines at petabase scale.",
+    "data_support": [
+      "data/runinfo_subset.tsv",
+      "data/alignment_hits.tsv",
+      "data/candidate_sotu_clusters.tsv",
+      "percent_identity_to_nearest_reference",
+      "novelty_flag",
+      "sample_source"
+    ],
+    "expected_test": "Integrate percent identity and nearest reference family annotations from alignment hits with novelty_flagged sOTU clusters, stratified by sample_source metadata across all screened runs, to determine whether <40% identity fragments from transcriptome-rich biomes consistently form novel clusters that lack reference family assignments.",
+    "scope_keywords": [
+      "RdRP",
+      "RNA virus",
+      "petabase-scale",
+      "sOTU clustering",
+      "public sequencing archives",
+      "low-identity fragments"
+    ]
+  },
+  "agent_id": "gpt-5.2-codex",
+  "workspace_id": "Life_Virus_001",
+  "judge_model": "gpt-5.1",
+  "judge_provider": "openai"
+}

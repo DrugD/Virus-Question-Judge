@@ -1,0 +1,11 @@
+{
+  "agent_id": "intern-s1-mini",
+  "model": "intern-s1-mini",
+  "base_url": "https://chat.intern-ai.org.cn/api/v1",
+  "max_iters": 30,
+  "iters": 1,
+  "tool_call_count": 0,
+  "files_written": [],
+  "iters_history": [],
+  "fatal_error": "APIConnectionError: Connection error."
+}

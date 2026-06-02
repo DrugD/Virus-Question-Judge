@@ -1,0 +1,1772 @@
+Reading additional input from stdin...
+2026-05-24T07:43:43.671143Z ERROR codex_models_manager::manager: failed to refresh available models: stream disconnected before completion: failed to decode models response: missing field `models` at line 1 column 75897; body: {"data":[{"id":"dall-e-3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-3.5-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-0125","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-instruct","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-05-13","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-08-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-11-20","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-2024-07-18","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-tts","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-2025-11-13","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":[]},{"id":"gpt-5.1-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-max","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-mini","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":[]},{"id":"gpt-5.2","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-mini","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-nano","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-none","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-image-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-1.5","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":[]},{"id":"gpt-image-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-realtime","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-2025-08-28","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":[]},{"id":"o1-mini-2024-09-12","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":[]},{"id":"o1-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":[]},{"id":"o1-preview-2024-09-12","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":[]},{"id":"o3-2025-04-16","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":[]},{"id":"o3-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":[]},{"id":"sora-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-large","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-small","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-ada-002","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"whisper-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gemini-2.5-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-preview-09-2025","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-pro-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-32768","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"claude-haiku-4-5-20251001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-haiku-4-5-20251001-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"dall-e-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gemini-2.0-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-thinking-exp","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gpt-3.5-turbo-16k","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-2024-04-09","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-transcribe","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-transcribe-diarize","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-2026-03-05","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-3-fast-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4-0709","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4.20-0309-reasoning","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4.3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"imagen-4.0-fast-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-ultra-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"o1-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-pro-2025-03-19","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-pro-2025-06-10","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-2025-04-16-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"omni-moderation-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-r1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-v3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"veo-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-fast-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"bailian/deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"bailian/deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-r1","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-0528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-v3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax/MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qvq-72b-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-edit-plus-2025-12-15","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"qwen-max-0403","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-longcontext","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0112","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1125","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1127","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1220","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-12-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-1101","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-2025-02-11","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1119","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1230","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-08","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-ocr-2025-11-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct-1m","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-omni-7b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-32b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-480b-a35b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-07-22","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2026-01-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-embedding","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-397b-a17b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash-2026-02-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus-2026-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.7-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.7-max-2026-05-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwq-32b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwq-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"text-embedding-v4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.0-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"ascend-tribe/pangu-pro-moe","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-en-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-zh-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"ByteDance-Seed/Seed-OSS-36B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-OCR","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-0528-Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-mini-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ring-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-embedding-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-reranker-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/MiniMaxAI/MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-VL-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-4.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-14B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct-128K","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-480B-A35B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-235B-A22B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-35B-A3B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-397B-A17B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-9B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/QwQ-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun-ai/Step-3.5-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-A13B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-MT-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4.1V-9B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5-Air","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5V","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-250528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-1-terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-2-251201","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-250324","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-m-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-lite-250315","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-lite-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-240915","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-250515","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-text-240715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-251215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-pro-32k-character-241215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250828","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250715","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-vision-250815","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-8-251228","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-code-preview-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-lite-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-mini-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-pro-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-code-preview-251028","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-250528","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-fast-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-3-0-t2i-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-0-250828","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-5-251128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-5-0-260128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"M2-her","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.1","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-Text-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4-voice","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.6","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.6v","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.7-FlashX","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5v-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-120b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0711-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0905-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking-turbo","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-turbo-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.5","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-thinking-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Kling-Video-O1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-omni","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-128k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-32k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-8k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"step-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"alibaba/tongyi-deepresearch-30b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek/deepseek-v3.2-speciale","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemini-embedding-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-3-27b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-26b-a4b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-31b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-coder","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionai/ling-2.6-1t","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.2-11b-vision-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-405b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.3-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-2-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-4-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4-multimodal-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-24b-instruct-2501","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-3.1-24b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2:online","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-120b","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-14b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-2b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"or/qwen3.5-9b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"perplexity/sonar-reasoning-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus-preview:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/hy3-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-vision-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-mini-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4-fast","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"xiaomi/mimo-v2-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]}],"object":"list","success":true}
+OpenAI Codex v0.130.0
+--------
+workdir: /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+model: gpt-5.5-high
+provider: newapi
+approval: never
+sandbox: danger-full-access
+reasoning effort: none
+reasoning summaries: none
+session id: 019e58f0-9a3b-7182-970f-6fa6db4d4fe5
+--------
+user
+Read INSTRUCTIONS.md in the current working directory. Read the agent-visible files under data/. Produce exactly two files in the working directory: report/report.md and agent_questions.json (schema in info.json). target_study/ does not exist in this sandbox - do not look for it.
+
+CRITICAL: agent_questions.json MUST contain exactly 5 distinct candidate questions (rank 1..5, no duplicates). The judge scores Pass@1 (rank-1 only, 100% / 0%) and Pass@5 (position-weighted: rank-i pass adds 1+w_i where w=(5,4,3,2,1), divide by 20). Put your strongest answer at rank 1, plausible alternatives at 2..5.
+
+Stop only when both output files exist on disk.
+codex
+I’ll read the task instructions and the visible data/schema first, then write only the two requested outputs in the working directory.
+exec
+/bin/zsh -lc "sed -n '1,220p' INSTRUCTIONS.md" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+exec
+/bin/zsh -lc "sed -n '1,240p' info.json" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+{
+  "workspace_kind": "user_uploaded",
+  "data_root": "data/",
+  "files": [
+    {
+      "path": "41586_2018_12_MOESM1_ESM.pdf",
+      "size_bytes": 74856
+    },
+    {
+      "path": "41586_2018_12_MOESM2_ESM.xlsx",
+      "size_bytes": 22655
+    },
+    {
+      "path": "41586_2018_12_MOESM3_ESM.xlsx",
+      "size_bytes": 47255
+    }
+  ],
+  "agent_output_contract": {
+    "report_path": "report/report.md",
+    "scientific_question_output_path": "agent_questions.json"
+  },
+  "agent_output_schema": {
+    "type": "object",
+    "required": [
+      "agent_id",
+      "questions"
+    ],
+    "properties": {
+      "agent_id": {
+        "type": "string"
+      },
+      "questions": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "required": [
+            "rank",
+            "question",
+            "rationale"
+          ],
+          "properties": {
+            "rank": {
+              "type": "integer"
+            },
+            "question": {
+              "type": "string"
+            },
+            "rationale": {
+              "type": "string"
+            },
+            "data_support": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "expected_test": {
+              "type": "string"
+            },
+            "scope_keywords": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+ succeeded in 0ms:
+# INSTRUCTIONS — Scientific Question Generation
+
+You are an autonomous research agent. Read every file under `data/`, perform analysis, and propose **the single most important scientific question** that the data could be used to answer.
+
+A separate judge LLM will score your top-1 question against a hidden gold rubric. **You will NOT see the gold rubric.** Frame your question purely from the data you observe.
+
+---
+
+## What you have
+
+| Path | Description | Read? |
+|---|---|---|
+| `data/` | Whatever the user uploaded. Could be tables, FASTA, JSON, images, PDFs, …. Make no assumption about schema — discover the structure by listing and sampling files. | ✅ |
+| `info.json` | Data-side metadata: file inventory, sizes, derived statistics. | ✅ |
+| `gold/` | Gold rubric used by the judge. **MUST NOT be opened.** | ❌ |
+
+---
+
+## What you must produce (exact paths)
+
+### `report/report.md`
+
+A short technical report (~300–600 words) with these sections:
+
+1. **Data summary** — what files you found, structure, scale, key columns / fields.
+2. **Analysis** — at least three derived statistics, distributions, or relationships you computed from the data.
+3. **Reasoning** — why these observations motivate the scientific question you will pose.
+4. **Top scientific question** — copied verbatim from `agent_questions.json[0].question`.
+5. **Why this question is testable on the provided dataset.**
+
+### `agent_questions.json`
+
+```json
+{
+  "agent_id": "<your model + harness identifier>",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "<one English sentence ending with '?'>",
+      "rationale": "<2-4 sentences linking the question to specific data evidence>",
+      "data_support": ["<actual file or feature names you used>", "..."],
+      "expected_test": "<how the question is answerable using the kind of data described>",
+      "scope_keywords": ["<3-8 short keywords>"]
+    }
+  ]
+}
+```
+
+- You MUST provide **exactly 5 distinct candidates** (rank 1..5). Duplicates fail validation. The judge scores all 5 and reports:
+  - **Pass@1** = 100% if `questions[0]` passes else 0%.
+  - **Pass@5** = position-weighted score: passing rank `i` adds `(1 + w_i)` where `w = (5,4,3,2,1)`. Numerator divided by 20. Examples: rank-1 only → 30%, ranks 1+2 → 55%, all 5 → 100%.
+- Put your **strongest** answer at rank 1 and progressively-weaker but still grounded alternatives at ranks 2-5; this maximises Pass@5 even if rank 1 misses.
+- Each `question` must be a single sentence ending with `?`.
+- `data_support` items must reference files or features that **actually exist** in the uploaded data.
+
+---
+
+## How to think about the rubric (informally)
+
+The judge looks for questions that:
+
+- **target a non-trivial scientific opportunity**, not a routine ETL or data-cleaning task;
+- have **biomedical / ecological / surveillance / engineering significance**;
+- are **testable using the data in front of you** (you should be able to outline the analysis);
+- are **specifically grounded** — name the dataset's actual features instead of generic phrases like "this data";
+- are **precisely phrased** — clear scientific object, scope, marker, and expected implication.
+
+A question like *"Are there interesting patterns in the data?"* will score very low. A question that names the specific dataset modality, the specific marker / variable of interest, the scale at which the question operates, and the scientific implication will score high.
+
+---
+
+## What NOT to do
+
+- Do not fabricate file names, statistics, or features that aren't in the upload.
+- Do not propose questions that require wet-lab experiments not derivable from the data.
+- Do not open `gold/`.
+- Do not generate ten generic questions hoping one hits — only `questions[0]` is scored.
+
+When `report/report.md` and `agent_questions.json` both exist on disk, your run is complete.
+
+exec
+/bin/zsh -lc "pwd && rg --files -g 'INSTRUCTIONS.md' -g 'info.json' -g 'data/**'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+INSTRUCTIONS.md
+data/41586_2018_12_MOESM1_ESM.pdf
+data/41586_2018_12_MOESM3_ESM.xlsx
+data/41586_2018_12_MOESM2_ESM.xlsx
+info.json
+
+codex
+The upload is a Nature supplement set: one PDF plus two Excel workbooks. I’m going to extract the PDF text and inspect workbook sheets/columns before choosing the strongest scientific question.
+exec
+/bin/zsh -lc 'file data/41586_2018_12_MOESM1_ESM.pdf data/41586_2018_12_MOESM2_ESM.xlsx data/41586_2018_12_MOESM3_ESM.xlsx' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+data/41586_2018_12_MOESM1_ESM.pdf:  PDF document, version 1.5 (zip deflate encoded)
+data/41586_2018_12_MOESM2_ESM.xlsx: Microsoft Excel 2007+
+data/41586_2018_12_MOESM3_ESM.xlsx: Microsoft Excel 2007+
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import pandas as pd
+for path in ['data/41586_2018_12_MOESM2_ESM.xlsx','data/41586_2018_12_MOESM3_ESM.xlsx']:
+    xl=pd.ExcelFile(path)
+    print('\\nFILE',path)
+    print('sheets',xl.sheet_names)
+    for s in xl.sheet_names:
+        df=pd.read_excel(path,sheet_name=s, header=None)
+        print('SHEET',repr(s),'shape',df.shape)
+        print(df.head(8).to_string(index=False, header=False))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ exited 1 in 0ms:
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'pandas'
+
+exec
+/bin/zsh -lc "pdftotext data/41586_2018_12_MOESM1_ESM.pdf - | sed -n '1,220p'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+Life Sciences Reporting Summary
+Nature Research wishes to improve the reproducibility of the work that we publish. This form is intended for publication with all accepted life
+science papers and provides structure for consistency and transparency in reporting. Every life science submission will use this form; some list
+items might not apply to an individual manuscript, but all fields must be completed for clarity.
+For further information on the points included in this form, see Reporting Life Sciences Research. For further information on Nature Research
+policies, including our data availability policy, see Authors & Referees and the Editorial Policy Checklist.
+Please do not complete any field with "not applicable" or n/a. Refer to the help text for what text to use if an item is not relevant to your study.
+For final submission: please carefully check your responses for accuracy; you will not be able to make changes later.
+
+`
+
+Experimental design
+
+1. Sample size
+Describe how sample size was determined.
+
+The goal of this study was to survey animal species within the phylum Chordata (vertebrates)
+for the purposes of virus discovery. In total, we collected more than 186 host species to
+represent as much diversity as possible within the phylum Chordata. For each host species,
+1-24 individuals we collected, depending on the availability of animals in the field. Since it is a
+discovery study, the number of individuals is irrelevant to the conclusions drawn in the paper.
+
+nature research | life sciences reporting summary
+
+Corresponding author(s): Yong-Zhen Zhang
+
+2. Data exclusions
+Describe any data exclusions.
+
+No data was excluded from the analyses.
+
+3. Replication
+Describe the measures taken to verify the reproducibility
+of the experimental findings.
+
+The presence of viral genomes were confirmed by more than one sequencing approach (i.e.
+Next-generation and Sanger sequencing). The results from phylogenetic and co-divergence
+analyses were confirmed by multiple runs.
+
+4. Randomization
+Describe how samples/organisms/participants were
+allocated into experimental groups.
+
+Not applicable
+
+5. Blinding
+Describe whether the investigators were blinded to
+group allocation during data collection and/or analysis.
+
+Not applicable
+
+Note: all in vivo studies must report how sample size was determined and whether blinding and randomization were used.
+
+6. Statistical parameters
+For all figures and tables that use statistical methods, confirm that the following items are present in relevant figure legends (or in the
+Methods section if additional space is needed).
+n/a Confirmed
+The exact sample size (n) for each experimental group/condition, given as a discrete number and unit of measurement (animals, litters, cultures, etc.)
+A description of how samples were collected, noting whether measurements were taken from distinct samples or whether the same
+sample was measured repeatedly
+A statement indicating how many times each experiment was replicated
+The statistical test(s) used and whether they are one- or two-sided
+Only common tests should be described solely by name; describe more complex techniques in the Methods section.
+
+Test values indicating whether an effect is present
+Provide confidence intervals or give results of significance tests (e.g. P values) as exact values whenever appropriate and with effect sizes noted.
+
+A clear description of statistics including central tendency (e.g. median, mean) and variation (e.g. standard deviation, interquartile range)
+
+November 2017
+
+A description of any assumptions or corrections, such as an adjustment for multiple comparisons
+
+Clearly defined error bars in all relevant figure captions (with explicit mention of central tendency and variation)
+See the web collection on statistics for biologists for further resources and guidance.
+
+1
+
+Policy information about availability of computer code
+
+7. Software
+Describe the software used to analyze the data in this
+study.
+
+Trimmotic: adaptor- and quality-trimming of sequencing reads
+Trinity: de novo assembly of reads
+Blastn, blastx, blastp: homology based annotation of sequencing contigs
+DNAstar: contig assembly/merging
+Bowtie2: read mapping
+Geneious: visualization of mapping results, concensus calling
+NetNGlyc, SignalP, and TMHMM: determining primary protein structure
+MAFFT: sequence alignment
+Trimal: alignment editing
+PhyML: Phylogenetic tree estimation
+MrBayes: Phylogenetic tree estimation
+BaTS: evaluating the pattern of clustering in the phylogenetic tree
+Jane4: examining the extent of virus-host co-divergence
+
+For manuscripts utilizing custom algorithms or software that are central to the paper but not yet described in the published literature, software must be made
+available to editors and reviewers upon request. We strongly encourage code deposition in a community repository (e.g. GitHub). Nature Methods guidance for
+providing algorithms and software for publication provides further information on this topic.
+
+` Materials and reagents
+
+nature research | life sciences reporting summary
+
+` Software
+
+Policy information about availability of materials
+
+8. Materials availability
+Indicate whether there are restrictions on availability of
+unique materials or if these materials are only available
+for distribution by a third party.
+
+No restrictions
+
+9. Antibodies
+Describe the antibodies used and how they were validated Not applicable
+for use in the system under study (i.e. assay and species).
+
+10. Eukaryotic cell lines
+
+`
+
+a. State the source of each eukaryotic cell line used.
+
+Not applicable
+
+b. Describe the method of cell line authentication used.
+
+Describe the authentication procedures for each cell line used OR declare that none of the cell
+lines used have been authenticated OR state that no eukaryotic cell lines were used.
+
+c. Report whether the cell lines were tested for
+mycoplasma contamination.
+
+Confirm that all cell lines tested negative for mycoplasma contamination OR describe the
+results of the testing for mycoplasma contamination OR declare that the cell lines were not
+tested for mycoplasma contamination OR state that no eukaryotic cell lines were used.
+
+d. If any of the cell lines used are listed in the database
+of commonly misidentified cell lines maintained by
+ICLAC, provide a scientific rationale for their use.
+
+Provide a rationale for the use of commonly misidentified cell lines OR state that no commonly
+misidentified cell lines were used.
+
+Animals and human research participants
+
+Policy information about studies involving animals; when reporting animal research, follow the ARRIVE guidelines
+
+11. Description of research animals
+Provide all relevant details on animals and/or
+animal-derived materials used in the study.
+
+Animal samples were obtained from the field. The details are provided in Supplementary
+table 1.
+
+Policy information about studies involving human research participants
+
+12. Description of human research participants
+Not applicable
+
+November 2017
+
+Describe the covariate-relevant population
+characteristics of the human research participants.
+
+2
+
+
+codex
+The PDF is a reporting summary for a vertebrate virus-discovery study: over 186 chordate host species, viral genomes confirmed by sequencing, with phylogenetic and co-divergence analyses. Pandas is not installed, so I’ll parse the Excel workbooks directly from their XLSX XML.
+exec
+/bin/zsh -lc "unzip -l data/41586_2018_12_MOESM2_ESM.xlsx | sed -n '1,120p'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+exec
+/bin/zsh -lc "unzip -l data/41586_2018_12_MOESM3_ESM.xlsx | sed -n '1,140p'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+Archive:  data/41586_2018_12_MOESM2_ESM.xlsx
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+     1412  01-01-1980 00:00   [Content_Types].xml
+      588  01-01-1980 00:00   _rels/.rels
+      831  01-01-1980 00:00   xl/_rels/workbook.xml.rels
+      997  01-01-1980 00:00   xl/workbook.xml
+    24616  01-01-1980 00:00   xl/sharedStrings.xml
+      322  01-01-1980 00:00   xl/worksheets/_rels/sheet1.xml.rels
+     7129  01-01-1980 00:00   xl/theme/theme1.xml
+     2722  01-01-1980 00:00   xl/styles.xml
+    51527  01-01-1980 00:00   xl/worksheets/sheet1.xml
+      593  01-01-1980 00:00   docProps/core.xml
+      171  01-01-1980 00:00   xl/calcChain.xml
+      220  01-01-1980 00:00   xl/printerSettings/printerSettings1.bin
+      785  01-01-1980 00:00   docProps/app.xml
+---------                     -------
+    91913                     13 files
+
+ succeeded in 0ms:
+Archive:  data/41586_2018_12_MOESM3_ESM.xlsx
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+     1168  01-01-1980 00:00   [Content_Types].xml
+      588  01-01-1980 00:00   _rels/.rels
+      698  01-01-1980 00:00   xl/_rels/workbook.xml.rels
+      736  01-01-1980 00:00   xl/workbook.xml
+    48649  01-01-1980 00:00   xl/sharedStrings.xml
+     7139  01-01-1980 00:00   xl/theme/theme1.xml
+     3299  01-01-1980 00:00   xl/styles.xml
+   193810  01-01-1980 00:00   xl/worksheets/sheet1.xml
+      593  01-01-1980 00:00   docProps/core.xml
+      785  01-01-1980 00:00   docProps/app.xml
+---------                     -------
+   257465                     10 files
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+try:
+ import openpyxl
+ print('openpyxl available')
+except Exception as e:
+ print(type(e).__name__, e)
+try:
+ import xlrd
+ print('xlrd available')
+except Exception as e:
+ print(type(e).__name__, e)
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+openpyxl available
+ModuleNotFoundError No module named 'xlrd'
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from openpyxl import load_workbook
+for path in ['data/41586_2018_12_MOESM2_ESM.xlsx','data/41586_2018_12_MOESM3_ESM.xlsx']:
+    wb=load_workbook(path, read_only=True, data_only=True)
+    print('\\nFILE',path)
+    print('sheets',wb.sheetnames)
+    for ws in wb.worksheets:
+        print('SHEET',repr(ws.title),'max',ws.max_row,ws.max_column)
+        for i,row in enumerate(ws.iter_rows(max_row=12, values_only=True),1):
+            print(i, '\\t'.join('' if v is None else str(v) for v in row[:12]))
+        print()
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 121ms:
+
+FILE data/41586_2018_12_MOESM2_ESM.xlsx
+sheets ['Sheet1']
+SHEET 'Sheet1' max 130 9
+1 Library1	Library Code	Host Class	Host Orders	Host Species	Host Organ	Locations	Data (bp)	Library Accession
+2 Snakes mix - gut	LPSC	Reptilia	Squamata	Myrrophis chinensis, Euprepiophis mandarinus, Cyclophiops major, Dinodon rufozonatum, Viridovipera stejnegeri, Hebius popei, Xenopeltis hainanensis	Gut	China: Guangdong, Hainan	7864772100	SRR6291266
+3 Snakes mix - lung	LPSF	Reptilia	Squamata	Myrrophis chinensis, Euprepiophis mandarinus, Cyclophiops major, Dinodon rufozonatum, Viridovipera stejnegeri, Oligodon formosanus, Hebius popei	Lung	China: Guangdong, Hainan	5131382700	SRR6291265
+4 Snakes mix - liver	LPSG	Reptilia	Squamata	Myrrophis chinensis, Euprepiophis mandarinus, Cyclophiops major, Dinodon rufozonatum, Viridovipera stejnegeri, Oligodon formosanus, Hebius popei, Xenopeltis hainanensis	Liver	China: Guangdong, Hainan	7753325400	SRR6291264
+5 Lizard mix - gut	LPXYC	Reptilia	Squamata	Goniurosaurus luii, Gekko similignum, Hemidactylus frenatus, Tropidophorus sinicus	Gut	China: Guangdong, Guangxi, Hainan	6548340300	SRR6291263
+6 Chinese Waterside Skink mix - gut  (subset of LPXYC)	ZGLXR	Reptilia	Squamata	Tropidophorus sinicus	Gut	China: Guangdong	6975937800	SRR6291270
+7 Lizard mix - lung	LPXYF	Reptilia	Squamata	Goniurosaurus luii, Gekko similignum, Hemidactylus frenatus, Tropidophorus sinicus	Lung	China: Guangdong, Guangxi, Hainan	6079876500	SRR6291269
+8 Lizard mix - liver	LPXYG	Reptilia	Squamata	Goniurosaurus luii, Gekko similignum, Hemidactylus frenatus, Tropidophorus sinicus	Liver	China: Guangdong, Guangxi, Hainan	6574195500	SRR6291268
+9 Chinese Tiger Gecko mix - liver (subset of LPXYG)	PXJHG	Reptilia	Squamata	Goniurosaurus luii	Liver	China: Guangxi	5685165600	SRR6291267
+10 Amphibians mix - gut	LPWC	Amphibia, Reptilia	Anura, Caudata, Squamata	Duttaphrynus melanostictus, Leptobrachium hainanense, Pachytriton brevipes, Hyla simplex, Sylvirana guentheri, Teratoscincus roborowskii2, Kaloula pulchra, Cynops orientalis, Microhyla pulchra, Oligodon formosanu2	Gut	China: Hainan, Fujian, Zhejiang, Xinjiang	6334512900	SRR6291272
+11 Gunther's Amoy Frog mix - gut (subset of LPWC)	TQSWC	Amphibia	Anura	Sylvirana guentheri	Gut	China: Zhejiang	4831251400	SRR6291271
+12 Asian common toad - gut (subset of LPWC)	HKCCC	Amphibia	Anura	Duttaphrynus melanostictus	Gut	China: Hainan	3714684000	SRR6291294
+
+
+FILE data/41586_2018_12_MOESM3_ESM.xlsx
+sheets ['Sheet1']
+SHEET 'Sheet1' max 274 22
+1 Order	Library	Identification	Classification	Virus Name	Strain	Segment (protein)	Tissue	Accession	Length	% reads *	Coverage *
+2 1	BHFishC	BHFishC185032	Caliciviridae	Beihai conger calicivirus	BHFishC185032		Gut	MG599956	6981	0.152	2270.9
+3 2	BHFishC	BHFishC186477	Caliciviridae	Beihai fish calicivirus	BHFishC186477		Gut	MG599957	6847	0.015	235.8
+4 3	BHFishC	BHFishC187917	Caliciviridae	Beihai yellowfin seabream calicivirus	BHFishC187917		Gut	MG599958	6816	0.002	29.8
+5 4	BHFishC	BHFishC181798	Caliciviridae	Beihai rabbitfish calicivirus 1	BHFishC181798		Gut	MG599959	4604	0	8.6
+6 5	BHFishC	BHFishC188521	Caliciviridae	Beihai rabbitfish calicivirus 2	BHFishC188521		Gut	MG599960	5721	0.001	20.5
+7 6	BHFishC	BHFishC188617	Picornaviridae	Beihai conger picornavirus	BHFishC188617		Gut	MG600065	7532	0.003	40.8
+8 7	BHFishC, BHFishS	BHFishC188159	Astro-Poty-like vert	Beihai mudskipper astro-like virus	BHFishC188159		Gut, Gill	MG599872	10377	0.005	53.8
+9 8	BHFishG	BHFishG84007	Flaviviridae: Hepacivirus	Wenling shark virus	BHFishG84007		Liver	NC_028377	9653	0.021	87
+10 9	BHFishS	BHFishS58819	Mono-Chu-like: Dimarhabdovirus	Beihai dimarhabodovirus 1	BHFishS58819		Gill	MG600012	9450	0.004	63.2
+11 10	DSYC	DSYC1862	Caliciviridae	Wuhan carp calicivirus 1	DSYC1862		Gut	MG599961	4674	0.001	9.8
+12 11	DSYC	DSYC30477	Caliciviridae	Wuhan spiny eel calicivirus 1	DSYC30477		Gut	MG599962	6584	0.002	15.5
+
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from openpyxl import load_workbook
+for path in ['data/41586_2018_12_MOESM2_ESM.xlsx','data/41586_2018_12_MOESM3_ESM.xlsx']:
+    wb=load_workbook(path, read_only=True, data_only=True)
+    ws=wb.active
+    headers=[c.value for c in next(ws.iter_rows(max_row=1))]
+    print('\\n',path)
+    for i,h in enumerate(headers,1): print(i,repr(h))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+
+ data/41586_2018_12_MOESM2_ESM.xlsx
+1 'Library1'
+2 'Library Code'
+3 'Host Class'
+4 'Host Orders'
+5 'Host Species'
+6 'Host Organ'
+7 'Locations'
+8 'Data (bp)'
+9 'Library Accession'
+
+ data/41586_2018_12_MOESM3_ESM.xlsx
+1 'Order'
+2 'Library'
+3 'Identification'
+4 'Classification'
+5 'Virus Name'
+6 'Strain'
+7 'Segment (protein)'
+8 'Tissue'
+9 'Accession'
+10 'Length'
+11 '% reads *'
+12 'Coverage *'
+13 'Host code'
+14 'Host class'
+15 'Host order'
+16 'Host species'
+17 'Blastx hits on known viruses (blast amino acid identity)'
+18 'Note'
+19 None
+20 None
+21 None
+22 None
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from openpyxl import load_workbook
+for path in ['data/41586_2018_12_MOESM3_ESM.xlsx']:
+    ws=load_workbook(path, read_only=True, data_only=True).active
+    for r in [1,2,50,100,150,200,250,274]:
+        vals=[ws.cell(r,c).value for c in range(1,23)]
+        print('\\nROW',r)
+        for i,v in enumerate(vals,1):
+            if v is not None: print(i, repr(v))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 753ms:
+
+ROW 1
+1 'Order'
+2 'Library'
+3 'Identification'
+4 'Classification'
+5 'Virus Name'
+6 'Strain'
+7 'Segment (protein)'
+8 'Tissue'
+9 'Accession'
+10 'Length'
+11 '% reads *'
+12 'Coverage *'
+13 'Host code'
+14 'Host class'
+15 'Host order'
+16 'Host species'
+17 'Blastx hits on known viruses (blast amino acid identity)'
+18 'Note'
+
+ROW 2
+1 1
+2 'BHFishC'
+3 'BHFishC185032'
+4 'Caliciviridae'
+5 'Beihai conger calicivirus'
+6 'BHFishC185032'
+8 'Gut'
+9 'MG599956'
+10 6981
+11 0.152
+12 2270.9
+13 'BHMY'
+14 'Actinopterygii'
+15 'Anguilliformes'
+16 'Conger japonicus'
+17 'Atlantic salmon calicivirus (39%)'
+18 'Vertebrate specific virus'
+
+ROW 50
+1 49
+2 'LXMC'
+3 'LXMC375533'
+4 'Nodaviridae'
+5 'Nervous necrosis virus'
+6 'LXMC375533'
+8 'Gut'
+9 'MG600032'
+10 3109
+11 0.325
+12 6291.3
+13 'N/A'
+14 'Actinopterygii'
+15 'Perciformes'
+16 'N/A'
+17 'Asian seabass Nervous Necrosis Virus (100%)'
+18 'Vertebrate specific virus'
+
+ROW 100
+1 99
+2 'YXMC'
+3 'YXMC112999'
+4 'Astroviridae'
+5 'Wenling pterygotrigla hemisticta astrovirus'
+6 'YXMC112999'
+8 'Gut'
+9 'MG599902'
+10 6230
+11 0.003
+12 30.2
+13 'DJJFF'
+14 'Actinopterygii'
+15 'Scorpaeniformes'
+16 'Pterygotrigla hemisticta'
+17 'Chicken astrovirus (33%)'
+18 'Vertebrate specific virus'
+
+ROW 150
+1 149
+2 'LPXYC'
+3 'LPXYC188631'
+4 'Astroviridae'
+5 'Hainan gekko similignum astrovirus'
+6 'LPXYC188631'
+8 'Gut'
+9 'MG599917'
+10 6548
+11 0.001
+12 8
+13 'ZGBH'
+14 'Reptilia'
+15 'Squamata'
+16 'Gekko similignum'
+17 'Turkey astrovirus (47%)'
+18 'Vertebrate specific virus'
+
+ROW 200
+1 199
+2 'XDXMC'
+3 'XDXMC61459'
+4 'Picornaviridae'
+5 'Wenling scaldfish picornavirus 2'
+6 'XDXMC61459'
+8 'Gut'
+9 'MG600097'
+10 7758
+11 0.041
+12 294.2
+13 'DHYSP'
+14 'Actinopterygii'
+15 'Pleuronectiformes'
+16 'Arnoglossus sp'
+17 'Eel picornavirus 1 (35%)'
+18 'Vertebrate specific virus'
+
+ROW 250
+1 249
+2 'NHJSG'
+3 'NHJSG30261'
+4 'Flaviviridae: Hepacivirus'
+5 'Nanhai dogfish shark hepacivirus'
+6 'NHJSG30261'
+8 'Liver'
+9 'MG599995'
+10 9175
+11 0.0041544144080127325
+12 28.2
+13 'NHJS'
+14 'Chondrichthyes'
+15 'Squaliformes'
+16 'Squalus brevirostris'
+17 'Wenling shark virus (43%)'
+18 'Vertebrate specific virus'
+
+ROW 274
+
+codex
+The two spreadsheets are the core dataset: one library/sample inventory and one virus-catalog table with host taxonomy, tissue, accessions, read fraction, coverage, and best BLASTx hit. I’m computing cross-table counts now so the report and questions are grounded in actual fields rather than article-level description.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from openpyxl import load_workbook
+from collections import Counter, defaultdict
+from statistics import median, mean
+import re, math
+
+def rows(path):
+    ws=load_workbook(path, read_only=True, data_only=True).active
+    it=ws.iter_rows(values_only=True)
+    headers=list(next(it))
+    out=[]
+    for row in it:
+        d={headers[i]: row[i] if i < len(row) else None for i in range(len(headers)) if headers[i] is not None}
+        if any(v not in (None,'') for v in d.values()): out.append(d)
+    return headers, out
+h2, lib=rows('data/41586_2018_12_MOESM2_ESM.xlsx')
+h3, vir=rows('data/41586_2018_12_MOESM3_ESM.xlsx')
+print('LIB rows',len(lib),'headers',h2)
+print('VIR rows',len(vir),'headers',[h for h in h3 if h])
+
+def split(v):
+    if v is None: return []
+    return [x.strip() for x in str(v).split(',') if x and x.strip()]
+
+def norm_na(v):
+    if v is None: return None
+    s=str(v).strip()
+    if s.upper() in {'N/A','NA',''}: return None
+    return s
+
+print('\\nLibrary data bp')
+bps=[float(r['Data (bp)']) for r in lib if r.get('Data (bp)') is not None]
+print('sum',sum(bps),'Gb',sum(bps)/1e9,'medianGb',median(bps)/1e9,'minGb',min(bps)/1e9,'maxGb',max(bps)/1e9)
+print('organ counts',Counter(r['Host Organ'] for r in lib).most_common())
+cls=Counter(x for r in lib for x in split(r['Host Class']))
+print('host class mentions library',cls)
+orders=Counter(x for r in lib for x in split(r['Host Orders']))
+print('top orders library',orders.most_common(12))
+locs=Counter(x for r in lib for x in split(r['Locations']))
+print('locations',locs.most_common(20))
+species=set(x for r in lib for x in split(r['Host Species']))
+print('unique host species mention lib',len(species))
+print('example species',list(sorted(species))[:10])
+print('library codes',len(set(r['Library Code'] for r in lib)))
+
+print('\\nVirus table')
+print('records',len(vir),'unique virus names',len(set(r['Virus Name'] for r in vir)),'unique accessions',len(set(r['Accession'] for r in vir)))
+print('classifications count',len(set(r['Classification'] for r in vir)))
+print('top classifications',Counter(r['Classification'] for r in vir).most_common(20))
+print('host class counts',Counter(r['Host class'] for r in vir).most_common())
+print('host order top',Counter(r['Host order'] for r in vir).most_common(20))
+print('tissue counts',Counter(t for r in vir for t in split(r['Tissue'])).most_common())
+print('note counts',Counter(r['Note'] for r in vir).most_common())
+print('segment nonempty',sum(1 for r in vir if norm_na(r.get('Segment (protein)'))), Counter(norm_na(r.get('Segment (protein)')) for r in vir if norm_na(r.get('Segment (protein)'))).most_common(20))
+lengths=[float(r['Length']) for r in vir if isinstance(r.get('Length'),(int,float))]
+reads=[float(r['% reads *']) for r in vir if isinstance(r.get('% reads *'),(int,float))]
+covs=[float(r['Coverage *']) for r in vir if isinstance(r.get('Coverage *'),(int,float))]
+for name, vals in [('length',lengths),('%reads',reads),('coverage',covs)]:
+    print(name,'n',len(vals),'min',min(vals),'median',median(vals),'mean',mean(vals),'max',max(vals))
+print('coverage >=100',sum(v>=100 for v in covs),'coverage >=1000',sum(v>=1000 for v in covs))
+print('%reads >=0.01',sum(v>=0.01 for v in reads),'>=0.1',sum(v>=0.1 for v in reads))
+
+code_set=set(r['Library Code'] for r in lib)
+vir_codes=Counter()
+for r in vir:
+    for code in split(r['Library']):
+        vir_codes[code]+=1
+print('virus library codes',len(vir_codes),'in lib',sum(1 for c in vir_codes if c in code_set),'not in lib',[c for c in vir_codes if c not in code_set][:20])
+print('top libraries by virus records',vir_codes.most_common(20))
+print('libraries with any virus / total',sum(1 for c in code_set if c in vir_codes),len(code_set))
+
+# virus richness by host class/order and tissue (unique names)
+for group in ['Host class','Host order','Tissue']:
+    m=defaultdict(set)
+    for r in vir:
+        for val in split(r[group]) if group=='Tissue' else [r[group]]:
+            m[val].add(r['Virus Name'])
+    print('\\nunique viruses by',group)
+    print(sorted(((k,len(v)) for k,v in m.items()), key=lambda x:-x[1])[:15])
+
+# relationship coverage/read corr simple Pearson log10(read+small), log10(cov)
+pairs=[(float(r['% reads *']), float(r['Coverage *'])) for r in vir if isinstance(r.get('% reads *'),(int,float)) and isinstance(r.get('Coverage *'),(int,float)) and r['% reads *']>0 and r['Coverage *']>0]
+import statistics
+xs=[math.log10(a) for a,b in pairs]
+ys=[math.log10(b) for a,b in pairs]
+mx,my=mean(xs),mean(ys)
+r=sum((x-mx)*(y-my) for x,y in zip(xs,ys))/math.sqrt(sum((x-mx)**2 for x in xs)*sum((y-my)**2 for y in ys))
+print('\\nlog10 %reads vs log10 coverage Pearson r',r,'n',len(pairs))
+
+# Host species count in vir
+print('unique host species vir excluding NA',len(set(norm_na(r['Host species']) for r in vir if norm_na(r['Host species']))))
+print('top host species vir',Counter(r['Host species'] for r in vir).most_common(20))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+LIB rows 129 headers ['Library1', 'Library Code', 'Host Class', 'Host Orders', 'Host Species', 'Host Organ', 'Locations', 'Data (bp)', 'Library Accession']
+VIR rows 271 headers ['Order', 'Library', 'Identification', 'Classification', 'Virus Name', 'Strain', 'Segment (protein)', 'Tissue', 'Accession', 'Length', '% reads *', 'Coverage *', 'Host code', 'Host class', 'Host order', 'Host species', 'Blastx hits on known viruses (blast amino acid identity)', 'Note']
+
+Library data bp
+sum 1611498859728.0 Gb 1611.498859728 medianGb 6.1759086 minGb 2.8343606 maxGb 805.749429864
+organ counts [('Gut', 45), ('Liver', 33), ('Gill', 30), ('Lung', 6), (None, 3), ('Gut, Liver, Gill', 2), ('Entire individual', 2), ('Liver and lung', 2), ('Gut, lung, liver', 1), ('gut', 1), ('lung', 1), ('liver', 1), ('Non-gut organs', 1), ('Liver and gill', 1)]
+host class mentions library Counter({'Actinopterygii': 44, 'Chondrichthyes': 38, 'Amphibia': 18, 'Reptilia': 17, 'Agnatha': 17, 'Sarcopterygii': 6, 'Reptilia2': 2, 'Leptocardii': 2})
+top orders library [('Perciformes', 22), ('Carcharhiniformes', 22), ('Myliobatiformes', 15), ('Squamata', 14), ('Anura', 13), ('Anguilliformes', 11), ('Rajiformes', 10), ('Lophiiformes', 9), ('Aulopiformes', 8), ('Caudata', 7), ('Gasterosteiformes', 7), ('Zeiformes', 7)]
+locations [('China: Eastern China Sea', 63), ('Yellow Sea', 18), ('China: Guangdong', 12), ('South China Sea', 11), ('China: South China Sea', 9), ('China: Guangxi', 8), ('Hainan', 6), ('China: Hainan', 6), ('Eastern China Sea', 6), ('China: Heilongjiang', 6), ('China: Zhejiang', 4), ('China: Wuhan', 4), ('China: Hubei', 4), ('Nigeria', 4), ('Guangxi', 3), ('Fujian', 3), ('Zhejiang', 3), ('Xinjiang', 3), ('China: Fujian', 2), ('Chile', 2)]
+unique host species mention lib 185
+example species ['Acanthopagrus latus', 'Acheilognathus macropterus', 'Amphiprion sebae', 'Antennarius striatus', 'Apogon semilineatus', 'Ariosoma meeki', 'Ariosoma sp', 'Arnoglossus sp', 'Arothron sp', 'Ateleopus natalensis']
+library codes 127
+
+Virus table
+records 271 unique virus names 229 unique accessions 271
+classifications count 32
+top classifications [('Astroviridae', 57), ('Picornaviridae', 46), ('Caliciviridae', 24), ('Orthomyxoviridae: Influenza virus', 18), ('Flaviviridae: Hepacivirus', 15), ('Bunyavirales: Hantaviridae', 15), ('Reoviridae: Orthoreovirus', 11), ('Arenaviridae', 9), ('Astro-Poty-like vert', 8), ('Mono-Chu-like: Dimarhabdovirus', 8), ('Hepeviridae', 8), ('Nidovirales: Arteriviridae', 6), ('Paramyxoviridae', 6), ('Nidovirales: Torovirinae', 5), ('Flaviviridae', 4), ('Orthomyxoviridae', 4), ('Reoviridae: Rotavirus', 3), ('Togaviridae: Alphavirus', 3), ('Mono-Chu-like: Chuvirus vert', 3), ('Orthomyxoviridae: Isavirus', 2)]
+host class counts [('Actinopterygii', 138), ('Reptilia', 50), ('Chondrichthyes', 32), ('Amphibia', 31), ('Agnatha', 15), ('Sarcopterygii', 4), (None, 1)]
+host order top [('Squamata', 41), ('Perciformes', 23), ('Lophiiformes', 23), ('Anura', 22), ('Carcharhiniformes', 15), ('Pleuronectiformes', 14), ('Cypriniformes', 13), ('Synbranchiformes', 11), ('Tetraodontiformes', 9), ('Testudines', 9), ('Gadiformes', 8), ('Myxiniformes', 8), ('Petromyzontiformes', 7), ('Scorpaeniformes', 7), ('Caudata', 7), ('Chimaeriformes', 7), ('Aulopiformes', 6), ('Anguilliformes', 5), ('N/A', 4), ('Rajiformes', 4)]
+tissue counts [('Gut', 164), ('Gill', 80), ('Liver', 78), ('Lung', 32), ('N/A', 1)]
+note counts [('Vertebrate specific virus', 236), ('Unknown divergent virus', 16), ('Putative vertebrate virus', 12), ('Vertebrate virus related to vector-borne virus', 6), (None, 1)]
+segment nonempty 44 [('RdRp', 8), ('Nucleoprotein', 8), ('Glycoprotein', 8), ('PB1', 6), ('PA', 4), ('PB2', 3), ('NP', 3), ('HA', 2), ('MP', 1), ('NS', 1)]
+length n 270 min 1096.0 median 7131.5 mean 7443.544444444445 max 30859.0
+%reads n 269 min 0.0 median 0.008 mean 0.5595592703477164 max 76.044
+coverage n 269 min 3.1 median 67.7 mean 4321.5977695167285 max 390301.0
+coverage >=100 115 coverage >=1000 41
+%reads >=0.01 128 >=0.1 49
+virus library codes 102 in lib 99 not in lib ['HMB', 'XQTMS: XQTMSHanta', '(mined from TSA database)']
+top libraries by virus records [('XYHYC', 24), ('DSYS', 20), ('LPWC', 20), ('LXMC', 14), ('LPXYC', 14), ('RGYQSMC', 12), ('XYHYG', 11), ('LPSF', 11), ('WHQSR', 10), ('XQTMS', 10), ('DSYC', 9), ('LXMC-PolyA', 9), ('RGYQSMG', 9), ('XYHYC-PolyA', 9), ('LPSG', 9), ('LPWG', 9), ('RGYQSMS', 8), ('XYHYS', 8), ('XDXMC', 8), ('DHMMS', 8)]
+libraries with any virus / total 99 127
+
+unique viruses by Host class
+[('Actinopterygii', 110), ('Reptilia', 48), ('Chondrichthyes', 31), ('Amphibia', 25), ('Agnatha', 10), ('Sarcopterygii', 4), (None, 1)]
+
+unique viruses by Host order
+[('Squamata', 39), ('Perciformes', 23), ('Anura', 16), ('Carcharhiniformes', 14), ('Pleuronectiformes', 14), ('Cypriniformes', 13), ('Lophiiformes', 11), ('Testudines', 9), ('Gadiformes', 8), ('Petromyzontiformes', 7), ('Scorpaeniformes', 7), ('Tetraodontiformes', 7), ('Caudata', 7), ('Chimaeriformes', 7), ('Anguilliformes', 5)]
+
+unique viruses by Tissue
+[('Gut', 153), ('Liver', 71), ('Gill', 51), ('Lung', 25), ('N/A', 1)]
+
+log10 %reads vs log10 coverage Pearson r 0.9393779188614505 n 259
+unique host species vir excluding NA 93
+top host species vir [('N/A', 11), ('Mastacembelus aculeatus', 11), ('Antennarius striatus', 11), ('Coelorinchus multispinulosus', 8), ('Halieutaea stellata', 8), ('Hemidactylus bowringii', 8), ('Eptatretus burgeri', 8), ('Lethenteron camtschaticum', 7), ('Scoliodon macrorhynchos', 7), ('Bufo gargarizans', 7), ('Chimaera sp', 7), ('Carassius auratus', 5), ('Hemiculter leucisculus', 5), ('Synodus macrops', 5), ('Mauremys megalocephala', 5), ('Various species', 4), ('Lophius litulon', 4), ('Myrrophis chinensis', 4), ('Teratoscincus roborowskii', 4), ('Duttaphrynus melanostictus', 4)]
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from openpyxl import load_workbook
+for path in ['data/41586_2018_12_MOESM2_ESM.xlsx','data/41586_2018_12_MOESM3_ESM.xlsx']:
+    ws=load_workbook(path, read_only=True, data_only=True).active
+    print('\\nFILE',path,'max',ws.max_row,ws.max_column)
+    for r in range(max(1, ws.max_row-12), ws.max_row+1):
+        vals=[ws.cell(r,c).value for c in range(1, min(ws.max_column,22)+1)]
+        if any(v is not None for v in vals):
+            print('ROW',r, vals)
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 2620ms:
+
+FILE data/41586_2018_12_MOESM2_ESM.xlsx max 130 9
+ROW 118 ['Wenling hagfish mix - gill', 'DHMMS', 'Agnatha', 'Myxiniformes', 'Eptatretus burgeri', 'Gill', 'China: Eastern China Sea', 6846213900, 'SRR6291313']
+ROW 119 ['Wenling hagfish mix - liver', 'DHMMG', 'Agnatha', 'Myxiniformes', 'Eptatretus burgeri', 'Liver', 'China: Eastern China Sea', 7355495400, 'SRR6291325']
+ROW 120 ['Wenling hagfish mix - gut', 'DHMMC', 'Agnatha', 'Myxiniformes', 'Eptatretus burgeri', 'Gut', 'China: Eastern China Sea', 5858278800, 'SRR6291336']
+ROW 121 ['Xiamen sepia Stingray mix - liver and gill', 'DHHHBHGS', 'Chondrichthyes', 'Myliobatiformes', 'Urolophus aurantiacus', 'Liver and gill', 'China: Eastern China Sea', 5855018400, 'SRR6291335']
+ROW 122 ['Xiamen sepia Stingray mix - gut', 'DHHHBHC', 'Chondrichthyes', 'Myliobatiformes', 'Urolophus aurantiacus', 'Gut', 'China: Eastern China Sea', 5625212400, 'SRR6291339']
+ROW 123 ['Xiamen guitarfish mix - gill', 'BWLTYS', 'Chondrichthyes', 'Rajiformes', 'Rhinobatos hynnicephalus', 'Gill', 'China: Eastern China Sea', 5278575300, 'SRR6291340']
+ROW 124 ['Xiamen guitarfish mix - liver', 'BWLTYG', 'Chondrichthyes', 'Rajiformes', 'Rhinobatos hynnicephalus', 'Liver', 'China: Eastern China Sea', 4334336400, 'SRR6291337']
+ROW 125 ['Xiamen guitarfish mix - gut', 'BWLTYC', 'Chondrichthyes', 'Rajiformes', 'Rhinobatos hynnicephalus', 'Gut', 'China: Eastern China Sea', 5964329100, 'SRR6291338']
+ROW 126 ['Wenling hagfish individual 2 - gill (Subset of DHMMS)', 'DHMM2', 'Agnatha', 'Myxiniformes', 'Eptatretus burgeri', 'Gill', 'China: Eastern China Sea', 2868114300, 'SRR6291342']
+ROW 127 ['Wenling hagfish individual 6 - gill (Subset of DHMMS)', 'DHMM6', 'Agnatha', 'Myxiniformes', 'Eptatretus burgeri', 'Gill', 'China: Eastern China Sea', 5008915200, 'SRR6291343']
+ROW 128 [None, None, None, None, None, None, None, 805749429864, None]
+ROW 129 ['1. The name of the libraries indicate the common names for the majority of the animals, but not all. For more detailed information of classification please refer to the columns "host class", "host order", and "host species".', None, None, None, None, None, None, None, None]
+ROW 130 ['2. The reptile samples in the Amphibian libraries are due to a mistake in taxa mixing. However, the host information has been correctly assigned to each virus based on subsequent RT-PCR screening of the un-mixed RNA samples as well as RNA-seq of individual RNA samples.', None, None, None, None, None, None, None, None]
+
+FILE data/41586_2018_12_MOESM3_ESM.xlsx max 274 22
+ROW 262 [261, 'WHJYGF', 'WHJYGF75270', 'Flaviviridae: Hepacivirus', 'Chinese softshell turtle hepacivirus', 'WHJYGF75270', None, 'Liver', 'MG599999', 9194, 0.011886507942698164, 71.3, 'WHJY', 'Reptilia', 'Testudines', 'Pelodiscus sinensis', 'Rodent hepacivirus (38%)', 'Vertebrate specific virus', None, None, None, None]
+ROW 263 [262, 'WHJYGF', 'WHJYGF75857', 'Picornaviridae', 'Chinese softshell turtle picornavirus 2', 'WHJYGF75857', None, 'Liver', 'MG600107', 8117, 0.7017874423130407, 4667.9, 'WHJY', 'Reptilia', 'Testudines', 'Pelodiscus sinensis', 'Tremovirus A (52%)', 'Vertebrate specific virus', None, None, None, None]
+ROW 264 [263, 'WHWGC', 'WHWGC149849', 'Astro-Poty-like vert', 'Chinese broad-headed pond turtle astro-like virus', 'WHWGC149849', None, 'Gut', 'MG599879', 9296, 0.002442386227033659, 14.8, 'WHWG', 'Reptilia', 'Testudines', 'Mauremys megalocephala', 'Avastrovirus 1 (25%)', 'Putative vertebrate virus', None, None, None, None]
+ROW 265 [264, 'WHWGC, WHWGGF', 'WHWGC150683', 'Nidovirales: Arteriviridae', 'Chinese broad-headed pond turtle arterivirus', 'WHWGC150683', None, 'Gut, Liver, Lung', 'MG600025', 14939, 0.32847218281600854, 1221, 'WHWG', 'Reptilia', 'Testudines', 'Mauremys megalocephala', 'Porcine reproductive and respiratory syndrome virus (26%)', 'Vertebrate specific virus', None, None, None, None]
+ROW 266 [265, 'WHWGC', 'WHWGC151314', 'Picornaviridae', 'Chinese broad-headed pond turtle picornavirus 1', 'WHWGC151314', None, 'Gut', 'MG600108', 9218, 0.018064244171679355, 109.6, 'WHWG', 'Reptilia', 'Testudines', 'Mauremys megalocephala', 'Rosavirus C (42%)', 'Vertebrate specific virus', None, None, None, None]
+ROW 267 [266, 'WHWGGF', 'WHWGGF74766', 'Picornaviridae', 'Tortoise Rafivirus A', 'WHWGGF74766', None, 'Liver, Lung, Gut', 'MG600109', 7315, 0.018057569132481657, 128.2, 'WHWG', 'Reptilia', 'Testudines', 'Mauremys sinensis', 'Tortoise rafivirus A (99%)', 'Vertebrate specific virus', None, None, None, None]
+ROW 268 [267, 'WHWGGF', 'WHWGGF75534', 'Picornaviridae', 'Chinese broad-headed pond turtle picornavirus 2', 'WHWGGF75534', None, 'Liver', 'MG600110', 7999, 0.007283247955904195, 46.8, 'WHWG', 'Reptilia', 'Testudines', 'Mauremys megalocephala', 'Tremovirus A (35%)', 'Vertebrate specific virus', None, None, None, None]
+ROW 269 [268, 'WHWGGF', 'WHWGGF64311', 'Flaviviridae: Hepacivirus', 'Chinese broad-headed pond turtle hepacivirus', 'WHWGGF64311', None, 'Liver', 'MG600000', 8764, 0.001641855428437061, 9.8, 'WHWG', 'Reptilia', 'Testudines', 'Mauremys megalocephala', 'Rodent hepacivirus (35%)', 'Vertebrate specific virus', None, None, None, None]
+ROW 270 [269, 'XMTSYG', 'XMTSYG10372', 'Flaviviridae', 'Xiamen fanray pesti-like virus', 'XMTSYG10372', None, 'Liver, Gill', 'MG599985', 11039, 0.10380749277142202, 613.7, 'XMTSY', 'Chondrichthyes', 'Myliobatiformes', 'Platyrhina sp', 'Porcine pestivirus isolate Bungowannah (28%)', 'Unknown divergent virus', None, None, None, None]
+ROW 271 [270, '(mined from TSA database)', 'GECV01031551', 'Nidovirales: Coronavirinae', 'Microhyla fissipes coronavirus', 'GECV01031551', None, 'N/A', 'GECV01031551', 22303, 'N/A', 'N/A', 'GECV01031551', 'Amphibia', 'Anura', 'Microhyla fissipes', 'NL63-related bat coronavirus (35%)', 'Vertebrate specific virus', None, None, None, None]
+ROW 273 ['*The calculatation is based on library with the highest viral abundance', None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from openpyxl import load_workbook
+from collections import Counter, defaultdict
+from statistics import median, mean
+import math
+
+def load(path):
+    ws=load_workbook(path, read_only=True, data_only=True).active
+    rows=list(ws.iter_rows(values_only=True))
+    h=list(rows[0])
+    return [{h[i]: row[i] if i < len(row) else None for i in range(len(h)) if h[i] is not None} for row in rows[1:]]
+lib=[r for r in load('data/41586_2018_12_MOESM2_ESM.xlsx') if r.get('Library Code')]
+vir=[r for r in load('data/41586_2018_12_MOESM3_ESM.xlsx') if isinstance(r.get('Order'), int)]
+def split(v):
+    if v is None: return []
+    return [x.strip() for x in str(v).split(',') if x and x.strip()]
+def norm(v):
+    if v is None: return None
+    s=str(v).strip()
+    return None if s.upper() in {'N/A','NA',''} else s
+print('VALID LIB rows',len(lib))
+print('VALID VIR rows',len(vir))
+bps=[float(r['Data (bp)']) for r in lib]
+print('Data bp total Gb',sum(bps)/1e9,'medianGb',median(bps)/1e9,'minGb',min(bps)/1e9,'maxGb',max(bps)/1e9)
+print('organs',Counter(r['Host Organ'] for r in lib).most_common())
+print('organ expanded',Counter(x.strip().title() for r in lib for x in str(r['Host Organ']).replace('and',',').split(',') if r['Host Organ'] and x.strip()).most_common())
+print('classes lib',Counter(x for r in lib for x in split(r['Host Class'])).most_common())
+print('orders lib top',Counter(x for r in lib for x in split(r['Host Orders'])).most_common(10))
+print('locations top',Counter(x for r in lib for x in split(r['Locations'])).most_common(12))
+print('host species lib unique',len(set(x for r in lib for x in split(r['Host Species']))))
+print('accessions lib',len(set(r['Library Accession'] for r in lib)))
+print('\\nVirus unique names',len(set(r['Virus Name'] for r in vir)),'accessions',len(set(r['Accession'] for r in vir)),'classes',len(set(r['Classification'] for r in vir)))
+print('classification top',Counter(r['Classification'] for r in vir).most_common(15))
+print('host classes vir',Counter(r['Host class'] for r in vir).most_common())
+print('host order top',Counter(r['Host order'] for r in vir).most_common(15))
+print('tissues expanded',Counter(t for r in vir for t in split(r['Tissue'])).most_common())
+print('notes',Counter(r['Note'] for r in vir).most_common())
+print('host species vir unique excl NA',len(set(norm(r['Host species']) for r in vir if norm(r['Host species']))))
+lengths=[float(r['Length']) for r in vir if isinstance(r.get('Length'),(int,float))]
+reads=[float(r['% reads *']) for r in vir if isinstance(r.get('% reads *'),(int,float))]
+covs=[float(r['Coverage *']) for r in vir if isinstance(r.get('Coverage *'),(int,float))]
+print('length min med mean max',min(lengths),median(lengths),mean(lengths),max(lengths),'n',len(lengths))
+print('reads min med mean max',min(reads),median(reads),mean(reads),max(reads),'n',len(reads))
+print('cov min med mean max',min(covs),median(covs),mean(covs),max(covs),'n',len(covs))
+print('cov>=100',sum(x>=100 for x in covs),'cov>=1000',sum(x>=1000 for x in covs),'reads>=0.01',sum(x>=0.01 for x in reads),'reads>=0.1',sum(x>=0.1 for x in reads))
+code_set=set(r['Library Code'] for r in lib)
+vir_codes=Counter(c for r in vir for c in split(r['Library']))
+print('virus code count',len(vir_codes),'matched',sum(c in code_set for c in vir_codes),'unmatched',[c for c in vir_codes if c not in code_set])
+print('library positive',sum(c in vir_codes for c in code_set),'of',len(code_set))
+print('top library virus',vir_codes.most_common(12))
+# unique virus names by groups
+for group, expanded in [('Host class',False),('Host order',False),('Tissue',True),('Classification',False)]:
+    d=defaultdict(set)
+    for r in vir:
+        vals=split(r[group]) if expanded else [r[group]]
+        for v in vals: d[v].add(r['Virus Name'])
+    print('unique names by',group, sorted(((k,len(v)) for k,v in d.items()), key=lambda x:-x[1])[:10])
+# log corr
+pairs=[(float(r['% reads *']), float(r['Coverage *'])) for r in vir if isinstance(r.get('% reads *'),(int,float)) and isinstance(r.get('Coverage *'),(int,float)) and r['% reads *']>0 and r['Coverage *']>0]
+xs=[math.log10(a) for a,b in pairs]; ys=[math.log10(b) for a,b in pairs]
+mx,my=mean(xs),mean(ys)
+print('corr log reads cov',sum((x-mx)*(y-my) for x,y in zip(xs,ys))/math.sqrt(sum((x-mx)**2 for x in xs)*sum((y-my)**2 for y in ys)),len(pairs))
+# classes across library sampling vs virus yield per library matched? detection counts grouped by library host class
+lib_by_code={r['Library Code']:r for r in lib}
+yield_by_class=Counter()
+lib_count_by_class=Counter()
+for c,r in lib_by_code.items():
+    for cl in split(r['Host Class']):
+        lib_count_by_class[cl]+=1
+        yield_by_class[cl]+=vir_codes.get(c,0)
+print('virus records per library class matched')
+for cl,n in lib_count_by_class.most_common():
+    print(cl,'libraries',n,'virus_records',yield_by_class[cl], 'per_lib', yield_by_class[cl]/n)
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+VALID LIB rows 126
+VALID VIR rows 270
+Data bp total Gb 805.749429864 medianGb 6.1734096 minGb 2.8343606 maxGb 15.6823095
+organs [('Gut', 45), ('Liver', 33), ('Gill', 30), ('Lung', 6), ('Gut, Liver, Gill', 2), ('Entire individual', 2), ('Liver and lung', 2), ('Gut, lung, liver', 1), ('gut', 1), ('lung', 1), ('liver', 1), ('Non-gut organs', 1), ('Liver and gill', 1)]
+organ expanded [('Gut', 49), ('Liver', 40), ('Gill', 33), ('Lung', 10), ('Entire Individual', 2), ('Non-Gut Organs', 1)]
+classes lib [('Actinopterygii', 44), ('Chondrichthyes', 38), ('Amphibia', 18), ('Reptilia', 17), ('Agnatha', 17), ('Sarcopterygii', 6), ('Reptilia2', 2), ('Leptocardii', 2)]
+orders lib top [('Perciformes', 22), ('Carcharhiniformes', 22), ('Myliobatiformes', 15), ('Squamata', 14), ('Anura', 13), ('Anguilliformes', 11), ('Rajiformes', 10), ('Lophiiformes', 9), ('Aulopiformes', 8), ('Caudata', 7)]
+locations top [('China: Eastern China Sea', 63), ('Yellow Sea', 18), ('China: Guangdong', 12), ('South China Sea', 11), ('China: South China Sea', 9), ('China: Guangxi', 8), ('Hainan', 6), ('China: Hainan', 6), ('Eastern China Sea', 6), ('China: Heilongjiang', 6), ('China: Zhejiang', 4), ('China: Wuhan', 4)]
+host species lib unique 185
+accessions lib 126
+
+Virus unique names 228 accessions 270 classes 31
+classification top [('Astroviridae', 57), ('Picornaviridae', 46), ('Caliciviridae', 24), ('Orthomyxoviridae: Influenza virus', 18), ('Flaviviridae: Hepacivirus', 15), ('Bunyavirales: Hantaviridae', 15), ('Reoviridae: Orthoreovirus', 11), ('Arenaviridae', 9), ('Astro-Poty-like vert', 8), ('Mono-Chu-like: Dimarhabdovirus', 8), ('Hepeviridae', 8), ('Nidovirales: Arteriviridae', 6), ('Paramyxoviridae', 6), ('Nidovirales: Torovirinae', 5), ('Flaviviridae', 4)]
+host classes vir [('Actinopterygii', 138), ('Reptilia', 50), ('Chondrichthyes', 32), ('Amphibia', 31), ('Agnatha', 15), ('Sarcopterygii', 4)]
+host order top [('Squamata', 41), ('Perciformes', 23), ('Lophiiformes', 23), ('Anura', 22), ('Carcharhiniformes', 15), ('Pleuronectiformes', 14), ('Cypriniformes', 13), ('Synbranchiformes', 11), ('Tetraodontiformes', 9), ('Testudines', 9), ('Gadiformes', 8), ('Myxiniformes', 8), ('Petromyzontiformes', 7), ('Scorpaeniformes', 7), ('Caudata', 7)]
+tissues expanded [('Gut', 164), ('Gill', 80), ('Liver', 78), ('Lung', 32), ('N/A', 1)]
+notes [('Vertebrate specific virus', 236), ('Unknown divergent virus', 16), ('Putative vertebrate virus', 12), ('Vertebrate virus related to vector-borne virus', 6)]
+host species vir unique excl NA 93
+length min med mean max 1096.0 7131.5 7443.544444444445 30859.0 n 270
+reads min med mean max 0.0 0.008 0.5595592703477164 76.044 n 269
+cov min med mean max 3.1 67.7 4321.5977695167285 390301.0 n 269
+cov>=100 115 cov>=1000 41 reads>=0.01 128 reads>=0.1 49
+virus code count 102 matched 99 unmatched ['HMB', 'XQTMS: XQTMSHanta', '(mined from TSA database)']
+library positive 99 of 126
+top library virus [('XYHYC', 24), ('DSYS', 20), ('LPWC', 20), ('LXMC', 14), ('LPXYC', 14), ('RGYQSMC', 12), ('XYHYG', 11), ('LPSF', 11), ('WHQSR', 10), ('XQTMS', 10), ('DSYC', 9), ('LXMC-PolyA', 9)]
+unique names by Host class [('Actinopterygii', 110), ('Reptilia', 48), ('Chondrichthyes', 31), ('Amphibia', 25), ('Agnatha', 10), ('Sarcopterygii', 4)]
+unique names by Host order [('Squamata', 39), ('Perciformes', 23), ('Anura', 16), ('Carcharhiniformes', 14), ('Pleuronectiformes', 14), ('Cypriniformes', 13), ('Lophiiformes', 11), ('Testudines', 9), ('Gadiformes', 8), ('Petromyzontiformes', 7)]
+unique names by Tissue [('Gut', 153), ('Liver', 71), ('Gill', 51), ('Lung', 25), ('N/A', 1)]
+unique names by Classification [('Astroviridae', 52), ('Picornaviridae', 46), ('Caliciviridae', 24), ('Flaviviridae: Hepacivirus', 14), ('Reoviridae: Orthoreovirus', 10), ('Astro-Poty-like vert', 8), ('Mono-Chu-like: Dimarhabdovirus', 8), ('Hepeviridae', 8), ('Nidovirales: Arteriviridae', 6), ('Nidovirales: Torovirinae', 5)]
+corr log reads cov 0.9393779188614505 259
+virus records per library class matched
+Actinopterygii libraries 44 virus_records 198 per_lib 4.5
+Chondrichthyes libraries 38 virus_records 101 per_lib 2.6578947368421053
+Amphibia libraries 18 virus_records 62 per_lib 3.4444444444444446
+Reptilia libraries 17 virus_records 95 per_lib 5.588235294117647
+Agnatha libraries 17 virus_records 83 per_lib 4.882352941176471
+Sarcopterygii libraries 6 virus_records 7 per_lib 1.1666666666666667
+Reptilia2 libraries 2 virus_records 11 per_lib 5.5
+Leptocardii libraries 2 virus_records 0 per_lib 0.0
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from openpyxl import load_workbook
+from collections import Counter, defaultdict
+from statistics import median, mean
+import re
+ws=load_workbook('data/41586_2018_12_MOESM3_ESM.xlsx', read_only=True, data_only=True).active
+rows=list(ws.iter_rows(values_only=True)); h=list(rows[0])
+vir=[]
+for row in rows[1:]:
+    d={h[i]:row[i] for i in range(len(h)) if h[i] is not None}
+    if isinstance(d.get('Order'), int): vir.append(d)
+# parse identity percent last parenthetical or all
+ids=[]; no=[]
+for r in vir:
+    s=str(r.get('Blastx hits on known viruses (blast amino acid identity)') or '')
+    m=re.findall(r'\\((\\d+(?:\\.\\d+)?)%\\)', s)
+    if m: ids.append(float(m[-1]))
+    else: no.append((r['Virus Name'],s))
+print('identity n',len(ids),'min median mean max',min(ids),median(ids),mean(ids),max(ids))
+for thresh in [30,40,50,70,90,99]: print('<=',thresh,sum(x<=thresh for x in ids))
+# by classification median identities count low
+class_ids=defaultdict(list)
+for r in vir:
+    s=str(r.get('Blastx hits on known viruses (blast amino acid identity)') or '')
+    m=re.findall(r'\\((\\d+(?:\\.\\d+)?)%\\)', s)
+    if m: class_ids[r['Classification']].append(float(m[-1]))
+print('low identity classifications n>=4')
+for cl, vals in sorted(class_ids.items(), key=lambda kv: median(kv[1])):
+    if len(vals)>=4:
+        print(cl,'n',len(vals),'median',median(vals),'<=40',sum(x<=40 for x in vals))
+# tissue x host class counts
+mat=defaultdict(Counter)
+def split(v): return [x.strip() for x in str(v).split(',') if x and x.strip()]
+for r in vir:
+    for t in split(r['Tissue']): mat[r['Host class']][t]+=1
+print('\\ntissue by host class')
+for cl,c in mat.items(): print(cl,c)
+# family across host classes
+fam_classes=defaultdict(set); fam_n=Counter()
+for r in vir:
+    fam_classes[r['Classification']].add(r['Host class']); fam_n[r['Classification']]+=1
+print('\\nclassifications spanning host classes')
+for fam, classes in sorted(fam_classes.items(), key=lambda kv:(-len(kv[1]), -fam_n[kv[0]]))[:20]: print(fam, 'n', fam_n[fam], 'classes', sorted(classes, key=str))
+# host classes per virus name?
+name_classes=defaultdict(set)
+for r in vir: name_classes[r['Virus Name']].add(r['Host class'])
+print('virus names across >1 host class', [(n,sorted(c, key=str)) for n,c in name_classes.items() if len(c)>1][:20], 'count', sum(1 for c in name_classes.values() if len(c)>1))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+identity n 243 min median mean max 22.0 35.0 38.349794238683124 100.0
+<= 30 62
+<= 40 173
+<= 50 214
+<= 70 235
+<= 90 238
+<= 99 241
+low identity classifications n>=4
+Astro-Poty-like vert n 5 median 25.0 <=40 5
+Flaviviridae n 4 median 26.5 <=40 4
+Bunyavirales: Hantaviridae n 12 median 26.5 <=40 11
+Nidovirales: Arteriviridae n 6 median 27.0 <=40 6
+Orthomyxoviridae n 4 median 28.0 <=40 3
+Hepeviridae n 8 median 31.0 <=40 7
+Caliciviridae n 24 median 32.0 <=40 22
+Picornaviridae n 46 median 34.5 <=40 33
+Orthomyxoviridae: Influenza virus n 18 median 34.5 <=40 10
+Astroviridae n 47 median 35.0 <=40 39
+Paramyxoviridae n 6 median 36.0 <=40 5
+Flaviviridae: Hepacivirus n 15 median 37.0 <=40 11
+Mono-Chu-like: Dimarhabdovirus n 8 median 38.5 <=40 5
+Reoviridae: Orthoreovirus n 11 median 48.0 <=40 1
+Nidovirales: Torovirinae n 4 median 49.0 <=40 0
+
+tissue by host class
+Actinopterygii Counter({'Gut': 85, 'Gill': 59, 'Liver': 19, 'Lung': 1})
+Chondrichthyes Counter({'Liver': 23, 'Gut': 18, 'Gill': 7})
+Agnatha Counter({'Gill': 14, 'Gut': 5, 'Liver': 1})
+Amphibia Counter({'Gut': 21, 'Lung': 8, 'Liver': 8, 'N/A': 1})
+Reptilia Counter({'Gut': 32, 'Liver': 25, 'Lung': 21})
+Sarcopterygii Counter({'Gut': 3, 'Lung': 2, 'Liver': 2})
+
+classifications spanning host classes
+Astroviridae n 57 classes ['Actinopterygii', 'Agnatha', 'Amphibia', 'Chondrichthyes', 'Reptilia']
+Picornaviridae n 46 classes ['Actinopterygii', 'Amphibia', 'Chondrichthyes', 'Reptilia', 'Sarcopterygii']
+Caliciviridae n 24 classes ['Actinopterygii', 'Agnatha', 'Amphibia', 'Chondrichthyes', 'Reptilia']
+Flaviviridae: Hepacivirus n 15 classes ['Actinopterygii', 'Chondrichthyes', 'Reptilia', 'Sarcopterygii']
+Reoviridae: Orthoreovirus n 11 classes ['Actinopterygii', 'Chondrichthyes', 'Reptilia', 'Sarcopterygii']
+Astro-Poty-like vert n 8 classes ['Actinopterygii', 'Amphibia', 'Reptilia', 'Sarcopterygii']
+Hepeviridae n 8 classes ['Actinopterygii', 'Agnatha', 'Amphibia', 'Chondrichthyes']
+Orthomyxoviridae: Influenza virus n 18 classes ['Actinopterygii', 'Agnatha', 'Amphibia']
+Bunyavirales: Hantaviridae n 15 classes ['Actinopterygii', 'Agnatha', 'Reptilia']
+Mono-Chu-like: Dimarhabdovirus n 8 classes ['Actinopterygii', 'Amphibia', 'Chondrichthyes']
+Nidovirales: Arteriviridae n 6 classes ['Actinopterygii', 'Chondrichthyes', 'Reptilia']
+Paramyxoviridae n 6 classes ['Actinopterygii', 'Chondrichthyes', 'Reptilia']
+Nidovirales: Torovirinae n 5 classes ['Actinopterygii', 'Reptilia']
+Reoviridae: Rotavirus n 3 classes ['Actinopterygii', 'Chondrichthyes']
+Togaviridae: Alphavirus n 3 classes ['Actinopterygii', 'Agnatha']
+Mono-Chu-like: Chuvirus vert n 3 classes ['Actinopterygii', 'Reptilia']
+Picobirnaviridae n 2 classes ['Actinopterygii', 'Reptilia']
+Birnaviridae n 2 classes ['Actinopterygii', 'Chondrichthyes']
+Nidovirales: Coronavirinae n 2 classes ['Amphibia', 'Reptilia']
+Arenaviridae n 9 classes ['Actinopterygii']
+virus names across >1 host class [] count 0
+
+codex
+A few checks changed the counts: the library workbook has 126 actual library rows plus footnotes/total, and the virus workbook has 270 actual virus records plus a footnote. I’m going to write the report around those filtered counts and make the top question focus on host taxonomy, tissue, and viral family composition because those are the strongest linked variables across both tables.
+exec
+/bin/zsh -lc 'ls -ld report 2>/dev/null || true' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+exec
+/bin/zsh -lc 'find . -maxdepth 2 -type f | sort' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+ succeeded in 0ms:
+./INSTRUCTIONS.md
+./_debug/codex.err
+./_debug/codex.out
+./checklist.json
+./data/41586_2018_12_MOESM1_ESM.pdf
+./data/41586_2018_12_MOESM2_ESM.xlsx
+./data/41586_2018_12_MOESM3_ESM.xlsx
+./info.json
+
+exec
+/bin/zsh -lc 'mkdir -p report' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+codex
+I’m creating the two requested outputs now: a concise technical report and a JSON file with exactly five ranked, distinct scientific questions.
+apply patch
+patch: completed
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342/agent_questions.json
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342/report/report.md
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..af38bbcb9abee3101cf285607ea6cb5f8cbe1ad2
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,118 @@
++{
++  "agent_id": "gpt-5.5-high-codex",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "How do vertebrate host taxonomy and tissue tropism jointly shape RNA virus richness, abundance, and family composition across the 126-library chordate metatranscriptomic survey?",
++      "rationale": "The library table provides host class, order, species, organ, location, sequencing depth, and library code for 126 libraries, while the virus table links detections to classification, tissue, host taxonomy, read fraction, and coverage. Virus records are unevenly distributed across host classes and tissues, with Actinopterygii and gut samples contributing many detections, but several viral families span multiple host classes. This makes host taxonomy versus tissue tropism the most direct and biologically important organizing question for the dataset.",
++      "data_support": [
++        "41586_2018_12_MOESM2_ESM.xlsx: Library Code",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Class",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Organ",
++        "41586_2018_12_MOESM2_ESM.xlsx: Data (bp)",
++        "41586_2018_12_MOESM3_ESM.xlsx: Classification",
++        "41586_2018_12_MOESM3_ESM.xlsx: Tissue",
++        "41586_2018_12_MOESM3_ESM.xlsx: % reads *",
++        "41586_2018_12_MOESM3_ESM.xlsx: Coverage *"
++      ],
++      "expected_test": "Join virus records to the library inventory by library code, normalize richness by Data (bp), and compare viral classification composition, unique virus counts, % reads, and coverage across host classes/orders/species and tissue categories using stratified richness estimates and multivariable models.",
++      "scope_keywords": [
++        "host taxonomy",
++        "tissue tropism",
++        "RNA viruses",
++        "richness",
++        "abundance",
++        "family composition",
++        "metatranscriptomics"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Are basal aquatic vertebrate lineages enriched for low-identity or unknown divergent RNA viruses compared with amphibian and reptile hosts?",
++      "rationale": "The virus catalog includes host classes such as Actinopterygii, Chondrichthyes, Agnatha, Amphibia, Reptilia, and Sarcopterygii, plus BLASTx amino acid identity to known viruses and notes such as unknown divergent virus. Parsed BLASTx identities are generally low, with a median of 35% among parseable records, suggesting substantial undiscovered diversity. Comparing identity and note categories across host classes can test whether older aquatic lineages contribute disproportionately to divergent virus discovery.",
++      "data_support": [
++        "41586_2018_12_MOESM3_ESM.xlsx: Host class",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host order",
++        "41586_2018_12_MOESM3_ESM.xlsx: Blastx hits on known viruses (blast amino acid identity)",
++        "41586_2018_12_MOESM3_ESM.xlsx: Note",
++        "41586_2018_12_MOESM3_ESM.xlsx: Virus Name"
++      ],
++      "expected_test": "Extract amino acid identity percentages from the BLASTx field, group records by host class and order, and compare the frequency of low-identity hits and unknown divergent or putative virus notes between aquatic vertebrate classes and amphibian/reptile classes.",
++      "scope_keywords": [
++        "divergent viruses",
++        "BLASTx identity",
++        "aquatic vertebrates",
++        "Agnatha",
++        "Chondrichthyes",
++        "Actinopterygii"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Which sampled organs are most productive for detecting vertebrate-specific RNA viruses after accounting for sequencing depth and host class?",
++      "rationale": "The library inventory has host organ and sequencing depth, and the virus catalog records tissue for each detection along with vertebrate-specific, putative, vector-related, or unknown-divergent notes. Gut detections are most frequent, but gill, liver, and lung are also represented and host classes differ in their organ availability. A depth- and host-adjusted analysis would identify whether the apparent gut signal reflects true detection productivity or sampling imbalance.",
++      "data_support": [
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Organ",
++        "41586_2018_12_MOESM2_ESM.xlsx: Data (bp)",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Class",
++        "41586_2018_12_MOESM3_ESM.xlsx: Tissue",
++        "41586_2018_12_MOESM3_ESM.xlsx: Note",
++        "41586_2018_12_MOESM3_ESM.xlsx: Coverage *"
++      ],
++      "expected_test": "Map virus detections to library organ categories, classify detections by Note, and model vertebrate-specific virus counts or coverage as a function of organ while including Data (bp) and host class as covariates or offsets.",
++      "scope_keywords": [
++        "organ sampling",
++        "gut",
++        "gill",
++        "liver",
++        "lung",
++        "sequencing depth",
++        "vertebrate-specific viruses"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Do major RNA virus families span multiple vertebrate host classes in patterns consistent with ancient host association or repeated host switching?",
++      "rationale": "Several classifications occur in multiple host classes: Astroviridae, Picornaviridae, Caliciviridae, hepaciviruses, and orthoreoviruses each appear across broad host-class ranges. The virus table contains host class, host order, classification, virus name, and best known-virus hit, which together support family-level host-range comparisons. Although the dataset does not itself provide complete phylogenetic trees, taxonomy-linked family distributions can identify families that merit co-divergence or host-switching tests.",
++      "data_support": [
++        "41586_2018_12_MOESM3_ESM.xlsx: Classification",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host class",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host order",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host species",
++        "41586_2018_12_MOESM3_ESM.xlsx: Blastx hits on known viruses (blast amino acid identity)"
++      ],
++      "expected_test": "For each viral classification, count host classes, orders, and species represented, compare observed breadth to sampling effort by host group, and flag families whose breadth exceeds expectations from library coverage.",
++      "scope_keywords": [
++        "viral families",
++        "host range",
++        "host switching",
++        "co-divergence",
++        "Astroviridae",
++        "Picornaviridae"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Which host orders and library types contain the highest normalized richness and abundance of newly cataloged RNA viruses in this chordate survey?",
++      "rationale": "The library table records host orders, library codes, organs, accessions, and base-pair yield, while the virus table records the library source, virus identity, classification, read percentage, and coverage. Virus detections are highly uneven across libraries, with some codes contributing many more records than others. Normalizing by sequencing depth would turn this catalog into a practical surveillance-prioritization analysis.",
++      "data_support": [
++        "41586_2018_12_MOESM2_ESM.xlsx: Library Code",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Orders",
++        "41586_2018_12_MOESM2_ESM.xlsx: Data (bp)",
++        "41586_2018_12_MOESM3_ESM.xlsx: Library",
++        "41586_2018_12_MOESM3_ESM.xlsx: Virus Name",
++        "41586_2018_12_MOESM3_ESM.xlsx: % reads *",
++        "41586_2018_12_MOESM3_ESM.xlsx: Coverage *"
++      ],
++      "expected_test": "Aggregate unique virus names and abundance measures by library code and host order, divide richness by Data (bp), and rank host orders and library types by normalized discovery yield and cumulative viral abundance.",
++      "scope_keywords": [
++        "host orders",
++        "library yield",
++        "normalized richness",
++        "viral abundance",
++        "surveillance",
++        "sequencing depth"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..45f54fb05ac9bdb893108c5cd93b27c3160615f7
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Data summary
++
++The visible data consist of a Nature life-sciences reporting summary PDF and two Excel supplements. `data/41586_2018_12_MOESM2_ESM.xlsx` is a sequencing-library inventory with 126 actual library rows after excluding the total and footnote rows. Its key fields are `Library Code`, `Host Class`, `Host Orders`, `Host Species`, `Host Organ`, `Locations`, `Data (bp)`, and `Library Accession`. `data/41586_2018_12_MOESM3_ESM.xlsx` is a virus-catalog table with 270 actual virus records after excluding its footnote row. It includes `Classification`, `Virus Name`, `Tissue`, `Accession`, `Length`, `% reads *`, `Coverage *`, `Host class`, `Host order`, `Host species`, `Blastx hits on known viruses (blast amino acid identity)`, and `Note`. The PDF states that the study surveyed more than 186 chordate host species for virus discovery, with viral genomes confirmed by next-generation and Sanger sequencing and analyses including phylogenetics and co-divergence.
++
++# Analysis
++
++The 126 library rows contain 805.75 Gb of sequence data, with a median of 6.17 Gb per library and a range from 2.83 to 15.68 Gb. Library sampling spans 185 host-species strings and is concentrated in Actinopterygii (44 library mentions), Chondrichthyes (38), Amphibia (18), Reptilia (17), and Agnatha (17), with smaller Sarcopterygii and Leptocardii representation. The most common library organs are gut (45 single-organ libraries), liver (33), gill (30), and lung (6), with additional mixed-organ libraries.
++
++The virus table contains 228 unique virus names and 270 unique accessions across 31 classifications. The leading classifications are `Astroviridae` (57 records), `Picornaviridae` (46), `Caliciviridae` (24), `Orthomyxoviridae: Influenza virus` (18), `Flaviviridae: Hepacivirus` (15), and `Bunyavirales: Hantaviridae` (15). Host-class counts are uneven: Actinopterygii account for 138 virus records, Reptilia 50, Chondrichthyes 32, Amphibia 31, Agnatha 15, and Sarcopterygii 4. Expanded tissue counts show 164 gut detections, 80 gill, 78 liver, and 32 lung. Read fraction and coverage are strongly coupled on a log scale (Pearson r = 0.94, n = 259), supporting their joint use as abundance evidence. The BLASTx identities are mostly low: among 243 parseable identities, the median is 35%, and 173 are at or below 40%.
++
++# Reasoning
++
++The strongest scientific opportunity is not simply cataloging viruses, but testing how virome composition varies across host evolutionary strata and anatomical sampling sites while accounting for sequencing depth and abundance. The dataset links library-level sampling effort to virus-level host taxonomy, tissue, classification, abundance, coverage, and similarity to known viruses. The combination of broad chordate host coverage, many low-identity viruses, and repeated tissue categories makes host taxonomy versus tissue tropism the central testable axis.
++
++# Top scientific question
++
++How do vertebrate host taxonomy and tissue tropism jointly shape RNA virus richness, abundance, and family composition across the 126-library chordate metatranscriptomic survey?
++
++# Why this question is testable on the provided dataset.
++
++The question can be tested by joining `Library Code` from the library inventory to `Library` in the virus catalog, then modeling virus richness and family composition using `Host Class`, `Host Orders`, `Host Species`, `Host Organ`/`Tissue`, and `Data (bp)`. `% reads *` and `Coverage *` provide abundance measures, while `Classification` and `Virus Name` support diversity and composition analyses across host and tissue groups.
+
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..af38bbcb9abee3101cf285607ea6cb5f8cbe1ad2
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,118 @@
++{
++  "agent_id": "gpt-5.5-high-codex",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "How do vertebrate host taxonomy and tissue tropism jointly shape RNA virus richness, abundance, and family composition across the 126-library chordate metatranscriptomic survey?",
++      "rationale": "The library table provides host class, order, species, organ, location, sequencing depth, and library code for 126 libraries, while the virus table links detections to classification, tissue, host taxonomy, read fraction, and coverage. Virus records are unevenly distributed across host classes and tissues, with Actinopterygii and gut samples contributing many detections, but several viral families span multiple host classes. This makes host taxonomy versus tissue tropism the most direct and biologically important organizing question for the dataset.",
++      "data_support": [
++        "41586_2018_12_MOESM2_ESM.xlsx: Library Code",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Class",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Organ",
++        "41586_2018_12_MOESM2_ESM.xlsx: Data (bp)",
++        "41586_2018_12_MOESM3_ESM.xlsx: Classification",
++        "41586_2018_12_MOESM3_ESM.xlsx: Tissue",
++        "41586_2018_12_MOESM3_ESM.xlsx: % reads *",
++        "41586_2018_12_MOESM3_ESM.xlsx: Coverage *"
++      ],
++      "expected_test": "Join virus records to the library inventory by library code, normalize richness by Data (bp), and compare viral classification composition, unique virus counts, % reads, and coverage across host classes/orders/species and tissue categories using stratified richness estimates and multivariable models.",
++      "scope_keywords": [
++        "host taxonomy",
++        "tissue tropism",
++        "RNA viruses",
++        "richness",
++        "abundance",
++        "family composition",
++        "metatranscriptomics"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Are basal aquatic vertebrate lineages enriched for low-identity or unknown divergent RNA viruses compared with amphibian and reptile hosts?",
++      "rationale": "The virus catalog includes host classes such as Actinopterygii, Chondrichthyes, Agnatha, Amphibia, Reptilia, and Sarcopterygii, plus BLASTx amino acid identity to known viruses and notes such as unknown divergent virus. Parsed BLASTx identities are generally low, with a median of 35% among parseable records, suggesting substantial undiscovered diversity. Comparing identity and note categories across host classes can test whether older aquatic lineages contribute disproportionately to divergent virus discovery.",
++      "data_support": [
++        "41586_2018_12_MOESM3_ESM.xlsx: Host class",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host order",
++        "41586_2018_12_MOESM3_ESM.xlsx: Blastx hits on known viruses (blast amino acid identity)",
++        "41586_2018_12_MOESM3_ESM.xlsx: Note",
++        "41586_2018_12_MOESM3_ESM.xlsx: Virus Name"
++      ],
++      "expected_test": "Extract amino acid identity percentages from the BLASTx field, group records by host class and order, and compare the frequency of low-identity hits and unknown divergent or putative virus notes between aquatic vertebrate classes and amphibian/reptile classes.",
++      "scope_keywords": [
++        "divergent viruses",
++        "BLASTx identity",
++        "aquatic vertebrates",
++        "Agnatha",
++        "Chondrichthyes",
++        "Actinopterygii"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Which sampled organs are most productive for detecting vertebrate-specific RNA viruses after accounting for sequencing depth and host class?",
++      "rationale": "The library inventory has host organ and sequencing depth, and the virus catalog records tissue for each detection along with vertebrate-specific, putative, vector-related, or unknown-divergent notes. Gut detections are most frequent, but gill, liver, and lung are also represented and host classes differ in their organ availability. A depth- and host-adjusted analysis would identify whether the apparent gut signal reflects true detection productivity or sampling imbalance.",
++      "data_support": [
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Organ",
++        "41586_2018_12_MOESM2_ESM.xlsx: Data (bp)",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Class",
++        "41586_2018_12_MOESM3_ESM.xlsx: Tissue",
++        "41586_2018_12_MOESM3_ESM.xlsx: Note",
++        "41586_2018_12_MOESM3_ESM.xlsx: Coverage *"
++      ],
++      "expected_test": "Map virus detections to library organ categories, classify detections by Note, and model vertebrate-specific virus counts or coverage as a function of organ while including Data (bp) and host class as covariates or offsets.",
++      "scope_keywords": [
++        "organ sampling",
++        "gut",
++        "gill",
++        "liver",
++        "lung",
++        "sequencing depth",
++        "vertebrate-specific viruses"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Do major RNA virus families span multiple vertebrate host classes in patterns consistent with ancient host association or repeated host switching?",
++      "rationale": "Several classifications occur in multiple host classes: Astroviridae, Picornaviridae, Caliciviridae, hepaciviruses, and orthoreoviruses each appear across broad host-class ranges. The virus table contains host class, host order, classification, virus name, and best known-virus hit, which together support family-level host-range comparisons. Although the dataset does not itself provide complete phylogenetic trees, taxonomy-linked family distributions can identify families that merit co-divergence or host-switching tests.",
++      "data_support": [
++        "41586_2018_12_MOESM3_ESM.xlsx: Classification",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host class",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host order",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host species",
++        "41586_2018_12_MOESM3_ESM.xlsx: Blastx hits on known viruses (blast amino acid identity)"
++      ],
++      "expected_test": "For each viral classification, count host classes, orders, and species represented, compare observed breadth to sampling effort by host group, and flag families whose breadth exceeds expectations from library coverage.",
++      "scope_keywords": [
++        "viral families",
++        "host range",
++        "host switching",
++        "co-divergence",
++        "Astroviridae",
++        "Picornaviridae"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Which host orders and library types contain the highest normalized richness and abundance of newly cataloged RNA viruses in this chordate survey?",
++      "rationale": "The library table records host orders, library codes, organs, accessions, and base-pair yield, while the virus table records the library source, virus identity, classification, read percentage, and coverage. Virus detections are highly uneven across libraries, with some codes contributing many more records than others. Normalizing by sequencing depth would turn this catalog into a practical surveillance-prioritization analysis.",
++      "data_support": [
++        "41586_2018_12_MOESM2_ESM.xlsx: Library Code",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Orders",
++        "41586_2018_12_MOESM2_ESM.xlsx: Data (bp)",
++        "41586_2018_12_MOESM3_ESM.xlsx: Library",
++        "41586_2018_12_MOESM3_ESM.xlsx: Virus Name",
++        "41586_2018_12_MOESM3_ESM.xlsx: % reads *",
++        "41586_2018_12_MOESM3_ESM.xlsx: Coverage *"
++      ],
++      "expected_test": "Aggregate unique virus names and abundance measures by library code and host order, divide richness by Data (bp), and rank host orders and library types by normalized discovery yield and cumulative viral abundance.",
++      "scope_keywords": [
++        "host orders",
++        "library yield",
++        "normalized richness",
++        "viral abundance",
++        "surveillance",
++        "sequencing depth"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..45f54fb05ac9bdb893108c5cd93b27c3160615f7
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Data summary
++
++The visible data consist of a Nature life-sciences reporting summary PDF and two Excel supplements. `data/41586_2018_12_MOESM2_ESM.xlsx` is a sequencing-library inventory with 126 actual library rows after excluding the total and footnote rows. Its key fields are `Library Code`, `Host Class`, `Host Orders`, `Host Species`, `Host Organ`, `Locations`, `Data (bp)`, and `Library Accession`. `data/41586_2018_12_MOESM3_ESM.xlsx` is a virus-catalog table with 270 actual virus records after excluding its footnote row. It includes `Classification`, `Virus Name`, `Tissue`, `Accession`, `Length`, `% reads *`, `Coverage *`, `Host class`, `Host order`, `Host species`, `Blastx hits on known viruses (blast amino acid identity)`, and `Note`. The PDF states that the study surveyed more than 186 chordate host species for virus discovery, with viral genomes confirmed by next-generation and Sanger sequencing and analyses including phylogenetics and co-divergence.
++
++# Analysis
++
++The 126 library rows contain 805.75 Gb of sequence data, with a median of 6.17 Gb per library and a range from 2.83 to 15.68 Gb. Library sampling spans 185 host-species strings and is concentrated in Actinopterygii (44 library mentions), Chondrichthyes (38), Amphibia (18), Reptilia (17), and Agnatha (17), with smaller Sarcopterygii and Leptocardii representation. The most common library organs are gut (45 single-organ libraries), liver (33), gill (30), and lung (6), with additional mixed-organ libraries.
++
++The virus table contains 228 unique virus names and 270 unique accessions across 31 classifications. The leading classifications are `Astroviridae` (57 records), `Picornaviridae` (46), `Caliciviridae` (24), `Orthomyxoviridae: Influenza virus` (18), `Flaviviridae: Hepacivirus` (15), and `Bunyavirales: Hantaviridae` (15). Host-class counts are uneven: Actinopterygii account for 138 virus records, Reptilia 50, Chondrichthyes 32, Amphibia 31, Agnatha 15, and Sarcopterygii 4. Expanded tissue counts show 164 gut detections, 80 gill, 78 liver, and 32 lung. Read fraction and coverage are strongly coupled on a log scale (Pearson r = 0.94, n = 259), supporting their joint use as abundance evidence. The BLASTx identities are mostly low: among 243 parseable identities, the median is 35%, and 173 are at or below 40%.
++
++# Reasoning
++
++The strongest scientific opportunity is not simply cataloging viruses, but testing how virome composition varies across host evolutionary strata and anatomical sampling sites while accounting for sequencing depth and abundance. The dataset links library-level sampling effort to virus-level host taxonomy, tissue, classification, abundance, coverage, and similarity to known viruses. The combination of broad chordate host coverage, many low-identity viruses, and repeated tissue categories makes host taxonomy versus tissue tropism the central testable axis.
++
++# Top scientific question
++
++How do vertebrate host taxonomy and tissue tropism jointly shape RNA virus richness, abundance, and family composition across the 126-library chordate metatranscriptomic survey?
++
++# Why this question is testable on the provided dataset.
++
++The question can be tested by joining `Library Code` from the library inventory to `Library` in the virus catalog, then modeling virus richness and family composition using `Host Class`, `Host Orders`, `Host Species`, `Host Organ`/`Tissue`, and `Data (bp)`. `% reads *` and `Coverage *` provide abundance measures, while `Classification` and `Virus Name` support diversity and composition analyses across host and tissue groups.
+
+exec
+/bin/zsh -lc 'wc -w report/report.md && find . -maxdepth 2 -type f | sort' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+     501 report/report.md
+./INSTRUCTIONS.md
+./_debug/codex.err
+./_debug/codex.out
+./agent_questions.json
+./checklist.json
+./data/41586_2018_12_MOESM1_ESM.pdf
+./data/41586_2018_12_MOESM2_ESM.xlsx
+./data/41586_2018_12_MOESM3_ESM.xlsx
+./info.json
+./report/report.md
+
+exec
+/bin/zsh -lc "python3 -m json.tool agent_questions.json >/dev/null && python3 - <<'PY'
+import json
+q=json.load(open('agent_questions.json'))['questions']
+print('questions', len(q))
+print('ranks', [x['rank'] for x in q])
+print('unique_questions', len({x['question'] for x in q}))
+print('all_end_question_mark', all(x['question'].endswith('?') for x in q))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342
+ succeeded in 0ms:
+questions 5
+ranks [1, 2, 3, 4, 5]
+unique_questions 5
+all_end_question_mark True
+
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..af38bbcb9abee3101cf285607ea6cb5f8cbe1ad2
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,118 @@
++{
++  "agent_id": "gpt-5.5-high-codex",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "How do vertebrate host taxonomy and tissue tropism jointly shape RNA virus richness, abundance, and family composition across the 126-library chordate metatranscriptomic survey?",
++      "rationale": "The library table provides host class, order, species, organ, location, sequencing depth, and library code for 126 libraries, while the virus table links detections to classification, tissue, host taxonomy, read fraction, and coverage. Virus records are unevenly distributed across host classes and tissues, with Actinopterygii and gut samples contributing many detections, but several viral families span multiple host classes. This makes host taxonomy versus tissue tropism the most direct and biologically important organizing question for the dataset.",
++      "data_support": [
++        "41586_2018_12_MOESM2_ESM.xlsx: Library Code",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Class",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Organ",
++        "41586_2018_12_MOESM2_ESM.xlsx: Data (bp)",
++        "41586_2018_12_MOESM3_ESM.xlsx: Classification",
++        "41586_2018_12_MOESM3_ESM.xlsx: Tissue",
++        "41586_2018_12_MOESM3_ESM.xlsx: % reads *",
++        "41586_2018_12_MOESM3_ESM.xlsx: Coverage *"
++      ],
++      "expected_test": "Join virus records to the library inventory by library code, normalize richness by Data (bp), and compare viral classification composition, unique virus counts, % reads, and coverage across host classes/orders/species and tissue categories using stratified richness estimates and multivariable models.",
++      "scope_keywords": [
++        "host taxonomy",
++        "tissue tropism",
++        "RNA viruses",
++        "richness",
++        "abundance",
++        "family composition",
++        "metatranscriptomics"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Are basal aquatic vertebrate lineages enriched for low-identity or unknown divergent RNA viruses compared with amphibian and reptile hosts?",
++      "rationale": "The virus catalog includes host classes such as Actinopterygii, Chondrichthyes, Agnatha, Amphibia, Reptilia, and Sarcopterygii, plus BLASTx amino acid identity to known viruses and notes such as unknown divergent virus. Parsed BLASTx identities are generally low, with a median of 35% among parseable records, suggesting substantial undiscovered diversity. Comparing identity and note categories across host classes can test whether older aquatic lineages contribute disproportionately to divergent virus discovery.",
++      "data_support": [
++        "41586_2018_12_MOESM3_ESM.xlsx: Host class",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host order",
++        "41586_2018_12_MOESM3_ESM.xlsx: Blastx hits on known viruses (blast amino acid identity)",
++        "41586_2018_12_MOESM3_ESM.xlsx: Note",
++        "41586_2018_12_MOESM3_ESM.xlsx: Virus Name"
++      ],
++      "expected_test": "Extract amino acid identity percentages from the BLASTx field, group records by host class and order, and compare the frequency of low-identity hits and unknown divergent or putative virus notes between aquatic vertebrate classes and amphibian/reptile classes.",
++      "scope_keywords": [
++        "divergent viruses",
++        "BLASTx identity",
++        "aquatic vertebrates",
++        "Agnatha",
++        "Chondrichthyes",
++        "Actinopterygii"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Which sampled organs are most productive for detecting vertebrate-specific RNA viruses after accounting for sequencing depth and host class?",
++      "rationale": "The library inventory has host organ and sequencing depth, and the virus catalog records tissue for each detection along with vertebrate-specific, putative, vector-related, or unknown-divergent notes. Gut detections are most frequent, but gill, liver, and lung are also represented and host classes differ in their organ availability. A depth- and host-adjusted analysis would identify whether the apparent gut signal reflects true detection productivity or sampling imbalance.",
++      "data_support": [
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Organ",
++        "41586_2018_12_MOESM2_ESM.xlsx: Data (bp)",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Class",
++        "41586_2018_12_MOESM3_ESM.xlsx: Tissue",
++        "41586_2018_12_MOESM3_ESM.xlsx: Note",
++        "41586_2018_12_MOESM3_ESM.xlsx: Coverage *"
++      ],
++      "expected_test": "Map virus detections to library organ categories, classify detections by Note, and model vertebrate-specific virus counts or coverage as a function of organ while including Data (bp) and host class as covariates or offsets.",
++      "scope_keywords": [
++        "organ sampling",
++        "gut",
++        "gill",
++        "liver",
++        "lung",
++        "sequencing depth",
++        "vertebrate-specific viruses"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Do major RNA virus families span multiple vertebrate host classes in patterns consistent with ancient host association or repeated host switching?",
++      "rationale": "Several classifications occur in multiple host classes: Astroviridae, Picornaviridae, Caliciviridae, hepaciviruses, and orthoreoviruses each appear across broad host-class ranges. The virus table contains host class, host order, classification, virus name, and best known-virus hit, which together support family-level host-range comparisons. Although the dataset does not itself provide complete phylogenetic trees, taxonomy-linked family distributions can identify families that merit co-divergence or host-switching tests.",
++      "data_support": [
++        "41586_2018_12_MOESM3_ESM.xlsx: Classification",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host class",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host order",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host species",
++        "41586_2018_12_MOESM3_ESM.xlsx: Blastx hits on known viruses (blast amino acid identity)"
++      ],
++      "expected_test": "For each viral classification, count host classes, orders, and species represented, compare observed breadth to sampling effort by host group, and flag families whose breadth exceeds expectations from library coverage.",
++      "scope_keywords": [
++        "viral families",
++        "host range",
++        "host switching",
++        "co-divergence",
++        "Astroviridae",
++        "Picornaviridae"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Which host orders and library types contain the highest normalized richness and abundance of newly cataloged RNA viruses in this chordate survey?",
++      "rationale": "The library table records host orders, library codes, organs, accessions, and base-pair yield, while the virus table records the library source, virus identity, classification, read percentage, and coverage. Virus detections are highly uneven across libraries, with some codes contributing many more records than others. Normalizing by sequencing depth would turn this catalog into a practical surveillance-prioritization analysis.",
++      "data_support": [
++        "41586_2018_12_MOESM2_ESM.xlsx: Library Code",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Orders",
++        "41586_2018_12_MOESM2_ESM.xlsx: Data (bp)",
++        "41586_2018_12_MOESM3_ESM.xlsx: Library",
++        "41586_2018_12_MOESM3_ESM.xlsx: Virus Name",
++        "41586_2018_12_MOESM3_ESM.xlsx: % reads *",
++        "41586_2018_12_MOESM3_ESM.xlsx: Coverage *"
++      ],
++      "expected_test": "Aggregate unique virus names and abundance measures by library code and host order, divide richness by Data (bp), and rank host orders and library types by normalized discovery yield and cumulative viral abundance.",
++      "scope_keywords": [
++        "host orders",
++        "library yield",
++        "normalized richness",
++        "viral abundance",
++        "surveillance",
++        "sequencing depth"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..45f54fb05ac9bdb893108c5cd93b27c3160615f7
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Data summary
++
++The visible data consist of a Nature life-sciences reporting summary PDF and two Excel supplements. `data/41586_2018_12_MOESM2_ESM.xlsx` is a sequencing-library inventory with 126 actual library rows after excluding the total and footnote rows. Its key fields are `Library Code`, `Host Class`, `Host Orders`, `Host Species`, `Host Organ`, `Locations`, `Data (bp)`, and `Library Accession`. `data/41586_2018_12_MOESM3_ESM.xlsx` is a virus-catalog table with 270 actual virus records after excluding its footnote row. It includes `Classification`, `Virus Name`, `Tissue`, `Accession`, `Length`, `% reads *`, `Coverage *`, `Host class`, `Host order`, `Host species`, `Blastx hits on known viruses (blast amino acid identity)`, and `Note`. The PDF states that the study surveyed more than 186 chordate host species for virus discovery, with viral genomes confirmed by next-generation and Sanger sequencing and analyses including phylogenetics and co-divergence.
++
++# Analysis
++
++The 126 library rows contain 805.75 Gb of sequence data, with a median of 6.17 Gb per library and a range from 2.83 to 15.68 Gb. Library sampling spans 185 host-species strings and is concentrated in Actinopterygii (44 library mentions), Chondrichthyes (38), Amphibia (18), Reptilia (17), and Agnatha (17), with smaller Sarcopterygii and Leptocardii representation. The most common library organs are gut (45 single-organ libraries), liver (33), gill (30), and lung (6), with additional mixed-organ libraries.
++
++The virus table contains 228 unique virus names and 270 unique accessions across 31 classifications. The leading classifications are `Astroviridae` (57 records), `Picornaviridae` (46), `Caliciviridae` (24), `Orthomyxoviridae: Influenza virus` (18), `Flaviviridae: Hepacivirus` (15), and `Bunyavirales: Hantaviridae` (15). Host-class counts are uneven: Actinopterygii account for 138 virus records, Reptilia 50, Chondrichthyes 32, Amphibia 31, Agnatha 15, and Sarcopterygii 4. Expanded tissue counts show 164 gut detections, 80 gill, 78 liver, and 32 lung. Read fraction and coverage are strongly coupled on a log scale (Pearson r = 0.94, n = 259), supporting their joint use as abundance evidence. The BLASTx identities are mostly low: among 243 parseable identities, the median is 35%, and 173 are at or below 40%.
++
++# Reasoning
++
++The strongest scientific opportunity is not simply cataloging viruses, but testing how virome composition varies across host evolutionary strata and anatomical sampling sites while accounting for sequencing depth and abundance. The dataset links library-level sampling effort to virus-level host taxonomy, tissue, classification, abundance, coverage, and similarity to known viruses. The combination of broad chordate host coverage, many low-identity viruses, and repeated tissue categories makes host taxonomy versus tissue tropism the central testable axis.
++
++# Top scientific question
++
++How do vertebrate host taxonomy and tissue tropism jointly shape RNA virus richness, abundance, and family composition across the 126-library chordate metatranscriptomic survey?
++
++# Why this question is testable on the provided dataset.
++
++The question can be tested by joining `Library Code` from the library inventory to `Library` in the virus catalog, then modeling virus richness and family composition using `Host Class`, `Host Orders`, `Host Species`, `Host Organ`/`Tissue`, and `Data (bp)`. `% reads *` and `Coverage *` provide abundance measures, while `Classification` and `Virus Name` support diversity and composition analyses across host and tissue groups.
+
+codex
+Done. Created:
+
+- [report/report.md](/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342/report/report.md)
+- [agent_questions.json](/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T154342/agent_questions.json)
+
+Validated `agent_questions.json` parses correctly and contains exactly 5 distinct ranked questions ending in `?`.
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..af38bbcb9abee3101cf285607ea6cb5f8cbe1ad2
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,118 @@
++{
++  "agent_id": "gpt-5.5-high-codex",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "How do vertebrate host taxonomy and tissue tropism jointly shape RNA virus richness, abundance, and family composition across the 126-library chordate metatranscriptomic survey?",
++      "rationale": "The library table provides host class, order, species, organ, location, sequencing depth, and library code for 126 libraries, while the virus table links detections to classification, tissue, host taxonomy, read fraction, and coverage. Virus records are unevenly distributed across host classes and tissues, with Actinopterygii and gut samples contributing many detections, but several viral families span multiple host classes. This makes host taxonomy versus tissue tropism the most direct and biologically important organizing question for the dataset.",
++      "data_support": [
++        "41586_2018_12_MOESM2_ESM.xlsx: Library Code",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Class",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Organ",
++        "41586_2018_12_MOESM2_ESM.xlsx: Data (bp)",
++        "41586_2018_12_MOESM3_ESM.xlsx: Classification",
++        "41586_2018_12_MOESM3_ESM.xlsx: Tissue",
++        "41586_2018_12_MOESM3_ESM.xlsx: % reads *",
++        "41586_2018_12_MOESM3_ESM.xlsx: Coverage *"
++      ],
++      "expected_test": "Join virus records to the library inventory by library code, normalize richness by Data (bp), and compare viral classification composition, unique virus counts, % reads, and coverage across host classes/orders/species and tissue categories using stratified richness estimates and multivariable models.",
++      "scope_keywords": [
++        "host taxonomy",
++        "tissue tropism",
++        "RNA viruses",
++        "richness",
++        "abundance",
++        "family composition",
++        "metatranscriptomics"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Are basal aquatic vertebrate lineages enriched for low-identity or unknown divergent RNA viruses compared with amphibian and reptile hosts?",
++      "rationale": "The virus catalog includes host classes such as Actinopterygii, Chondrichthyes, Agnatha, Amphibia, Reptilia, and Sarcopterygii, plus BLASTx amino acid identity to known viruses and notes such as unknown divergent virus. Parsed BLASTx identities are generally low, with a median of 35% among parseable records, suggesting substantial undiscovered diversity. Comparing identity and note categories across host classes can test whether older aquatic lineages contribute disproportionately to divergent virus discovery.",
++      "data_support": [
++        "41586_2018_12_MOESM3_ESM.xlsx: Host class",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host order",
++        "41586_2018_12_MOESM3_ESM.xlsx: Blastx hits on known viruses (blast amino acid identity)",
++        "41586_2018_12_MOESM3_ESM.xlsx: Note",
++        "41586_2018_12_MOESM3_ESM.xlsx: Virus Name"
++      ],
++      "expected_test": "Extract amino acid identity percentages from the BLASTx field, group records by host class and order, and compare the frequency of low-identity hits and unknown divergent or putative virus notes between aquatic vertebrate classes and amphibian/reptile classes.",
++      "scope_keywords": [
++        "divergent viruses",
++        "BLASTx identity",
++        "aquatic vertebrates",
++        "Agnatha",
++        "Chondrichthyes",
++        "Actinopterygii"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Which sampled organs are most productive for detecting vertebrate-specific RNA viruses after accounting for sequencing depth and host class?",
++      "rationale": "The library inventory has host organ and sequencing depth, and the virus catalog records tissue for each detection along with vertebrate-specific, putative, vector-related, or unknown-divergent notes. Gut detections are most frequent, but gill, liver, and lung are also represented and host classes differ in their organ availability. A depth- and host-adjusted analysis would identify whether the apparent gut signal reflects true detection productivity or sampling imbalance.",
++      "data_support": [
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Organ",
++        "41586_2018_12_MOESM2_ESM.xlsx: Data (bp)",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Class",
++        "41586_2018_12_MOESM3_ESM.xlsx: Tissue",
++        "41586_2018_12_MOESM3_ESM.xlsx: Note",
++        "41586_2018_12_MOESM3_ESM.xlsx: Coverage *"
++      ],
++      "expected_test": "Map virus detections to library organ categories, classify detections by Note, and model vertebrate-specific virus counts or coverage as a function of organ while including Data (bp) and host class as covariates or offsets.",
++      "scope_keywords": [
++        "organ sampling",
++        "gut",
++        "gill",
++        "liver",
++        "lung",
++        "sequencing depth",
++        "vertebrate-specific viruses"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Do major RNA virus families span multiple vertebrate host classes in patterns consistent with ancient host association or repeated host switching?",
++      "rationale": "Several classifications occur in multiple host classes: Astroviridae, Picornaviridae, Caliciviridae, hepaciviruses, and orthoreoviruses each appear across broad host-class ranges. The virus table contains host class, host order, classification, virus name, and best known-virus hit, which together support family-level host-range comparisons. Although the dataset does not itself provide complete phylogenetic trees, taxonomy-linked family distributions can identify families that merit co-divergence or host-switching tests.",
++      "data_support": [
++        "41586_2018_12_MOESM3_ESM.xlsx: Classification",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host class",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host order",
++        "41586_2018_12_MOESM3_ESM.xlsx: Host species",
++        "41586_2018_12_MOESM3_ESM.xlsx: Blastx hits on known viruses (blast amino acid identity)"
++      ],
++      "expected_test": "For each viral classification, count host classes, orders, and species represented, compare observed breadth to sampling effort by host group, and flag families whose breadth exceeds expectations from library coverage.",
++      "scope_keywords": [
++        "viral families",
++        "host range",
++        "host switching",
++        "co-divergence",
++        "Astroviridae",
++        "Picornaviridae"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "Which host orders and library types contain the highest normalized richness and abundance of newly cataloged RNA viruses in this chordate survey?",
++      "rationale": "The library table records host orders, library codes, organs, accessions, and base-pair yield, while the virus table records the library source, virus identity, classification, read percentage, and coverage. Virus detections are highly uneven across libraries, with some codes contributing many more records than others. Normalizing by sequencing depth would turn this catalog into a practical surveillance-prioritization analysis.",
++      "data_support": [
++        "41586_2018_12_MOESM2_ESM.xlsx: Library Code",
++        "41586_2018_12_MOESM2_ESM.xlsx: Host Orders",
++        "41586_2018_12_MOESM2_ESM.xlsx: Data (bp)",
++        "41586_2018_12_MOESM3_ESM.xlsx: Library",
++        "41586_2018_12_MOESM3_ESM.xlsx: Virus Name",
++        "41586_2018_12_MOESM3_ESM.xlsx: % reads *",
++        "41586_2018_12_MOESM3_ESM.xlsx: Coverage *"
++      ],
++      "expected_test": "Aggregate unique virus names and abundance measures by library code and host order, divide richness by Data (bp), and rank host orders and library types by normalized discovery yield and cumulative viral abundance.",
++      "scope_keywords": [
++        "host orders",
++        "library yield",
++        "normalized richness",
++        "viral abundance",
++        "surveillance",
++        "sequencing depth"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..45f54fb05ac9bdb893108c5cd93b27c3160615f7
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Data summary
++
++The visible data consist of a Nature life-sciences reporting summary PDF and two Excel supplements. `data/41586_2018_12_MOESM2_ESM.xlsx` is a sequencing-library inventory with 126 actual library rows after excluding the total and footnote rows. Its key fields are `Library Code`, `Host Class`, `Host Orders`, `Host Species`, `Host Organ`, `Locations`, `Data (bp)`, and `Library Accession`. `data/41586_2018_12_MOESM3_ESM.xlsx` is a virus-catalog table with 270 actual virus records after excluding its footnote row. It includes `Classification`, `Virus Name`, `Tissue`, `Accession`, `Length`, `% reads *`, `Coverage *`, `Host class`, `Host order`, `Host species`, `Blastx hits on known viruses (blast amino acid identity)`, and `Note`. The PDF states that the study surveyed more than 186 chordate host species for virus discovery, with viral genomes confirmed by next-generation and Sanger sequencing and analyses including phylogenetics and co-divergence.
++
++# Analysis
++
++The 126 library rows contain 805.75 Gb of sequence data, with a median of 6.17 Gb per library and a range from 2.83 to 15.68 Gb. Library sampling spans 185 host-species strings and is concentrated in Actinopterygii (44 library mentions), Chondrichthyes (38), Amphibia (18), Reptilia (17), and Agnatha (17), with smaller Sarcopterygii and Leptocardii representation. The most common library organs are gut (45 single-organ libraries), liver (33), gill (30), and lung (6), with additional mixed-organ libraries.
++
++The virus table contains 228 unique virus names and 270 unique accessions across 31 classifications. The leading classifications are `Astroviridae` (57 records), `Picornaviridae` (46), `Caliciviridae` (24), `Orthomyxoviridae: Influenza virus` (18), `Flaviviridae: Hepacivirus` (15), and `Bunyavirales: Hantaviridae` (15). Host-class counts are uneven: Actinopterygii account for 138 virus records, Reptilia 50, Chondrichthyes 32, Amphibia 31, Agnatha 15, and Sarcopterygii 4. Expanded tissue counts show 164 gut detections, 80 gill, 78 liver, and 32 lung. Read fraction and coverage are strongly coupled on a log scale (Pearson r = 0.94, n = 259), supporting their joint use as abundance evidence. The BLASTx identities are mostly low: among 243 parseable identities, the median is 35%, and 173 are at or below 40%.
++
++# Reasoning
++
++The strongest scientific opportunity is not simply cataloging viruses, but testing how virome composition varies across host evolutionary strata and anatomical sampling sites while accounting for sequencing depth and abundance. The dataset links library-level sampling effort to virus-level host taxonomy, tissue, classification, abundance, coverage, and similarity to known viruses. The combination of broad chordate host coverage, many low-identity viruses, and repeated tissue categories makes host taxonomy versus tissue tropism the central testable axis.
++
++# Top scientific question
++
++How do vertebrate host taxonomy and tissue tropism jointly shape RNA virus richness, abundance, and family composition across the 126-library chordate metatranscriptomic survey?
++
++# Why this question is testable on the provided dataset.
++
++The question can be tested by joining `Library Code` from the library inventory to `Library` in the virus catalog, then modeling virus richness and family composition using `Host Class`, `Host Orders`, `Host Species`, `Host Organ`/`Tissue`, and `Data (bp)`. `% reads *` and `Coverage *` provide abundance measures, while `Classification` and `Virus Name` support diversity and composition analyses across host and tissue groups.
+
+tokens used
+68,097

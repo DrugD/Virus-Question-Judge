@@ -1,0 +1,1452 @@
+Reading additional input from stdin...
+2026-05-24T08:28:35.306648Z ERROR codex_models_manager::manager: failed to refresh available models: stream disconnected before completion: failed to decode models response: missing field `models` at line 1 column 75988; body: {"data":[{"id":"dall-e-3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-3.5-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-0125","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-instruct","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-05-13","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-08-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-11-20","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-2024-07-18","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-tts","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-2025-11-13","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-max","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-mini","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-mini","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-nano","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-none","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-image-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-1.5","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-realtime","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-2025-08-28","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-mini-2024-09-12","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-preview-2024-09-12","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-2025-04-16","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"sora-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-large","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-small","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-ada-002","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"whisper-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gemini-2.5-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-preview-09-2025","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-pro-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-32768","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"claude-haiku-4-5-20251001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-haiku-4-5-20251001-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"dall-e-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gemini-2.0-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-thinking-exp","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gpt-3.5-turbo-16k","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-2024-04-09","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-transcribe","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-transcribe-diarize","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-2026-03-05","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-3-fast-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4-0709","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4.20-0309-reasoning","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4.3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"imagen-4.0-fast-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-ultra-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"o1-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-pro-2025-03-19","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-pro-2025-06-10","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-2025-04-16-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"omni-moderation-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-r1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-v3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"veo-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-fast-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"bailian/deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"bailian/deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-r1","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-0528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-v3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax/MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qvq-72b-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-edit-plus-2025-12-15","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"qwen-max-0403","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-longcontext","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0112","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1125","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1127","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1220","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-12-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-1101","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-2025-02-11","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1119","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1230","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-08","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-ocr-2025-11-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct-1m","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-omni-7b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-32b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-480b-a35b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-07-22","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2026-01-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-embedding","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-397b-a17b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash-2026-02-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus-2026-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.7-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.7-max-2026-05-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwq-32b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwq-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"text-embedding-v4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.0-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"ascend-tribe/pangu-pro-moe","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-en-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-zh-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"ByteDance-Seed/Seed-OSS-36B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-OCR","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-0528-Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-mini-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ring-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-embedding-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-reranker-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/MiniMaxAI/MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-VL-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-4.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-14B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct-128K","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-480B-A35B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-235B-A22B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-35B-A3B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-397B-A17B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-9B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/QwQ-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun-ai/Step-3.5-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-A13B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-MT-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4.1V-9B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5-Air","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5V","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-250528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-1-terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-2-251201","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-250324","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-m-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-lite-250315","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-lite-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-240915","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-250515","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-text-240715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-251215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-pro-32k-character-241215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250828","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250715","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-vision-250815","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-8-251228","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-code-preview-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-lite-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-mini-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-pro-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-code-preview-251028","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-250528","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-fast-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-3-0-t2i-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-0-250828","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-5-251128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-5-0-260128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"M2-her","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.1","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-Text-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4-voice","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.6","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.6v","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.7-FlashX","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5v-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-120b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0711-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0905-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking-turbo","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-turbo-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.5","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-thinking-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Kling-Video-O1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-omni","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-128k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-32k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-8k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"step-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"alibaba/tongyi-deepresearch-30b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek/deepseek-v3.2-speciale","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemini-embedding-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-3-27b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-26b-a4b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-31b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-coder","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionai/ling-2.6-1t","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.2-11b-vision-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-405b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.3-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-2-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-4-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4-multimodal-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-24b-instruct-2501","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-3.1-24b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2:online","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-120b","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-14b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-2b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"or/qwen3.5-9b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"perplexity/sonar-reasoning-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus-preview:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/hy3-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-vision-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-mini-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4-fast","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"xiaomi/mimo-v2-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]}],"object":"list","success":true}
+OpenAI Codex v0.130.0
+--------
+workdir: /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834
+model: gpt-5.5-high
+provider: newapi
+approval: never
+sandbox: danger-full-access
+reasoning effort: none
+reasoning summaries: none
+session id: 019e5919-ac6d-7cf3-8be8-173cb15f26cb
+--------
+user
+Read INSTRUCTIONS.md in the current working directory. Read the agent-visible files under data/. Produce exactly two files in the working directory: report/report.md and agent_questions.json (schema in info.json). target_study/ does not exist in this sandbox - do not look for it.
+
+CRITICAL: agent_questions.json MUST contain exactly 5 distinct candidate questions (rank 1..5, no duplicates). The judge scores Pass@1 (rank-1 only, 100% / 0%) and Pass@5 (position-weighted: rank-i pass adds 1+w_i where w=(5,4,3,2,1), divide by 20). Put your strongest answer at rank 1, plausible alternatives at 2..5.
+
+Stop only when both output files exist on disk.
+codex
+I’ll read the local instructions and the visible data files first, then write only the two requested outputs in the working directory.
+exec
+/bin/zsh -lc 'find . -maxdepth 2 -type f | sort' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834
+ succeeded in 0ms:
+./INSTRUCTIONS.md
+./_debug/codex.err
+./_debug/codex.out
+./checklist.json
+./data/16945363_31352431_chrysoviridae_alignment.fas
+./data/16945399_31352560_Narnaviridae_alignment.fas
+./data/16945423_31352587_Picornavirales_alignment.fas
+./data/16945426_31352578_Partitiviridae_alignment.fas
+./data/16945456_31352599_Pocobirnaviridae_alignment.fas
+./data/16945462_31352605_Reoviridae_alignment.fas
+./data/16945477_31352614_Totiviridae_alignment.fas
+./data/16945969_31356130_Hirai_Contigs_RdRp.fas
+./data/16958869_31373884_Possible_virus_contigs.fas
+./data/nuccore_reported_viral_sequences.fasta
+./info.json
+
+exec
+/bin/zsh -lc "pwd && rg --files -g 'INSTRUCTIONS.md' -g 'info.json' -g 'data/**'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834
+ succeeded in 0ms:
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834
+INSTRUCTIONS.md
+data/16945969_31356130_Hirai_Contigs_RdRp.fas
+data/16945363_31352431_chrysoviridae_alignment.fas
+data/16945423_31352587_Picornavirales_alignment.fas
+data/16945462_31352605_Reoviridae_alignment.fas
+data/16945426_31352578_Partitiviridae_alignment.fas
+data/16958869_31373884_Possible_virus_contigs.fas
+data/16945477_31352614_Totiviridae_alignment.fas
+data/nuccore_reported_viral_sequences.fasta
+data/16945456_31352599_Pocobirnaviridae_alignment.fas
+data/16945399_31352560_Narnaviridae_alignment.fas
+info.json
+
+codex
+The directory contains the instruction/schema files and FASTA-style data under `data/`. I’m going to inspect the schema and sequence headers/content shape before deciding the candidate questions.
+exec
+/bin/zsh -lc "sed -n '1,220p' info.json" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834
+exec
+/bin/zsh -lc "sed -n '1,220p' INSTRUCTIONS.md" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834
+ succeeded in 0ms:
+{
+  "workspace_kind": "user_uploaded",
+  "data_root": "data/",
+  "files": [
+    {
+      "path": "16945363_31352431_chrysoviridae_alignment.fas",
+      "size_bytes": 27583
+    },
+    {
+      "path": "16945399_31352560_Narnaviridae_alignment.fas",
+      "size_bytes": 8752
+    },
+    {
+      "path": "16945423_31352587_Picornavirales_alignment.fas",
+      "size_bytes": 48515
+    },
+    {
+      "path": "16945426_31352578_Partitiviridae_alignment.fas",
+      "size_bytes": 53403
+    },
+    {
+      "path": "16945456_31352599_Pocobirnaviridae_alignment.fas",
+      "size_bytes": 20537
+    },
+    {
+      "path": "16945462_31352605_Reoviridae_alignment.fas",
+      "size_bytes": 23447
+    },
+    {
+      "path": "16945477_31352614_Totiviridae_alignment.fas",
+      "size_bytes": 15773
+    },
+    {
+      "path": "16945969_31356130_Hirai_Contigs_RdRp.fas",
+      "size_bytes": 250192
+    },
+    {
+      "path": "16958869_31373884_Possible_virus_contigs.fas",
+      "size_bytes": 63227
+    },
+    {
+      "path": "nuccore_reported_viral_sequences.fasta",
+      "size_bytes": 58923
+    }
+  ],
+  "agent_output_contract": {
+    "report_path": "report/report.md",
+    "scientific_question_output_path": "agent_questions.json"
+  },
+  "agent_output_schema": {
+    "type": "object",
+    "required": [
+      "agent_id",
+      "questions"
+    ],
+    "properties": {
+      "agent_id": {
+        "type": "string"
+      },
+      "questions": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "required": [
+            "rank",
+            "question",
+            "rationale"
+          ],
+          "properties": {
+            "rank": {
+              "type": "integer"
+            },
+            "question": {
+              "type": "string"
+            },
+            "rationale": {
+              "type": "string"
+            },
+            "data_support": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "expected_test": {
+              "type": "string"
+            },
+            "scope_keywords": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+ succeeded in 0ms:
+# INSTRUCTIONS — Scientific Question Generation
+
+You are an autonomous research agent. Read every file under `data/`, perform analysis, and propose **the single most important scientific question** that the data could be used to answer.
+
+A separate judge LLM will score your top-1 question against a hidden gold rubric. **You will NOT see the gold rubric.** Frame your question purely from the data you observe.
+
+---
+
+## What you have
+
+| Path | Description | Read? |
+|---|---|---|
+| `data/` | Whatever the user uploaded. Could be tables, FASTA, JSON, images, PDFs, …. Make no assumption about schema — discover the structure by listing and sampling files. | ✅ |
+| `info.json` | Data-side metadata: file inventory, sizes, derived statistics. | ✅ |
+| `gold/` | Gold rubric used by the judge. **MUST NOT be opened.** | ❌ |
+
+---
+
+## What you must produce (exact paths)
+
+### `report/report.md`
+
+A short technical report (~300–600 words) with these sections:
+
+1. **Data summary** — what files you found, structure, scale, key columns / fields.
+2. **Analysis** — at least three derived statistics, distributions, or relationships you computed from the data.
+3. **Reasoning** — why these observations motivate the scientific question you will pose.
+4. **Top scientific question** — copied verbatim from `agent_questions.json[0].question`.
+5. **Why this question is testable on the provided dataset.**
+
+### `agent_questions.json`
+
+```json
+{
+  "agent_id": "<your model + harness identifier>",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "<one English sentence ending with '?'>",
+      "rationale": "<2-4 sentences linking the question to specific data evidence>",
+      "data_support": ["<actual file or feature names you used>", "..."],
+      "expected_test": "<how the question is answerable using the kind of data described>",
+      "scope_keywords": ["<3-8 short keywords>"]
+    }
+  ]
+}
+```
+
+- You MUST provide **exactly 5 distinct candidates** (rank 1..5). Duplicates fail validation. The judge scores all 5 and reports:
+  - **Pass@1** = 100% if `questions[0]` passes else 0%.
+  - **Pass@5** = position-weighted score: passing rank `i` adds `(1 + w_i)` where `w = (5,4,3,2,1)`. Numerator divided by 20. Examples: rank-1 only → 30%, ranks 1+2 → 55%, all 5 → 100%.
+- Put your **strongest** answer at rank 1 and progressively-weaker but still grounded alternatives at ranks 2-5; this maximises Pass@5 even if rank 1 misses.
+- Each `question` must be a single sentence ending with `?`.
+- `data_support` items must reference files or features that **actually exist** in the uploaded data.
+
+---
+
+## How to think about the rubric (informally)
+
+The judge looks for questions that:
+
+- **target a non-trivial scientific opportunity**, not a routine ETL or data-cleaning task;
+- have **biomedical / ecological / surveillance / engineering significance**;
+- are **testable using the data in front of you** (you should be able to outline the analysis);
+- are **specifically grounded** — name the dataset's actual features instead of generic phrases like "this data";
+- are **precisely phrased** — clear scientific object, scope, marker, and expected implication.
+
+A question like *"Are there interesting patterns in the data?"* will score very low. A question that names the specific dataset modality, the specific marker / variable of interest, the scale at which the question operates, and the scientific implication will score high.
+
+---
+
+## What NOT to do
+
+- Do not fabricate file names, statistics, or features that aren't in the upload.
+- Do not propose questions that require wet-lab experiments not derivable from the data.
+- Do not open `gold/`.
+- Do not generate ten generic questions hoping one hits — only `questions[0]` is scored.
+
+When `report/report.md` and `agent_questions.json` both exist on disk, your run is complete.
+
+exec
+/bin/zsh -lc "for f in data/*; do printf '%s\\n' \""'$f"; rg -n '"'"'^>'"' \""'$f" | head -20; done' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834
+ succeeded in 0ms:
+data/16945363_31352431_chrysoviridae_alignment.fas
+1:>AJ781166 Amasya cherry disease associated chrysovirus
+3:>FJ899675 Anthurium mosaic-associated chrysovirus
+5:>FN178512 Aspergillus fumigatus chrysovirus
+7:>KP782031 Brassica campestris chrysovirus
+9:>KT581957 Colletotrichum gloeosporioides chrysovirus
+11:>AF297176 Helminthosporium victoriae virus 145S
+13:>KX898416 Isaria javanica chrysovirus
+15:>KP900886 Macrophomina phaseolina chrysovirus
+17:>AF296439 Penicillium chrysogenum virus
+19:>KJ418374 Persea americana chrysovirus
+21:>JQ045335Raphanus sativus chrysovirus
+23:>MF176340Shuangao insect-associated chrysovirus
+25:>HM004067 Verticillium dahliae chrysovirus 1
+27:>LC350277 Alternaria alternata chrysovirus
+29:>KF688736 Botryosphaeria dothidea chrysovirus
+31:>MG425969 Colletotrichum fructicola chrysovirus
+33:>HQ343295 Fusarium graminearum chrysovirus
+35:>KP876629 Fusarium oxysporum chrysovirus 2
+37:>AB560761 Magnaporthe oryzae chrysovirus
+39:>KT601115 Penicillium janczewskii chrysovirus 1
+data/16945399_31352560_Narnaviridae_alignment.fas
+1:>Hirai_contig_780
+3:>Hirai_contig_836
+5:>AAC98925_Saccharomyces_20S_RNA_narnavirus
+7:>AAC98708_Saccharomyces_23S_RNA_narnavirus
+9:>AAR01970_Cryphonectria_mitovirus_1a
+11:>NP_660179_Ophiostoma_mitovirus_4
+13:>NP_660180_Ophiostoma_mitovirus_5
+15:>NP_660181_Ophiostoma_mitovirus_6
+17:>NP_660176_Ophiostoma_mitovirus_3a
+19:>QOE55590_Macrophomina_phaseolina_mitovirus_4
+data/16945423_31352587_Picornavirales_alignment.fas
+1:>NC_014137_Slow_bee_paralysis_virus
+3:>Hirai_contig_2
+5:>YP_009333456_Beihai_picorna-like_virus_71
+7:>YP_009337682_Wenzhou_picorna-like_virus_26
+9:>APG78061_Beihai_picorna-like_virus_70
+11:>NC_007916_Newbury_1_virus
+13:>NC_001543_Rabbit_hemorrhagic_disease_virus
+15:>NC_002548_Acute_bee_paralysis_virus
+17:>EF219380_Israeli_acute_paralysis_virus
+19:>AY275710_Kashmir_bee_virus
+21:>HM777507_Mud_crab_virus
+23:>AY634314_Solenopsis_invicta_virus_1
+25:>AF277675_Taura_syndrome_virus
+27:>NC_003924_Cricket_paralysis_virus
+29:>AF536531_Aphid_lethal_paralysis_virus
+31:>AF014388_Drosophila_C_virus
+33:>AF022937_Rhopalosiphum_padi_virus
+35:>AF183905_Black_queen_cell_virus
+37:>AB017037_Himetobi_P_virus
+39:>DQ288865_Homalodisca_coagulata_virus_1
+data/16945426_31352578_Partitiviridae_alignment.fas
+1:>Hirai_contig_48
+3:>Hirai_contig_58
+5:>Hirai_contig_132
+7:>Hirai_contig_136
+9:>Hirai_contig_474
+11:>Hirai_contig_478
+13:>Hirai_contig_556
+15:>Hirai_contig_784
+17:>Hirai_contig_1030
+19:>Hirai_contig_1192
+21:>Hirai_contig_1244
+23:>EU489061_Beet_cryptic_virus_1
+25:>FJ550604_Carrot_cryptic_virus
+27:>AJ781168_Cherry_chlorotic_rusty_spot_associated_partitivirus
+29:>AM999771_Chondrostereum_purpureum_cryptic_virus_1
+31:>AB465308_Flammulina_velutipes_browning_virus
+33:>AB025903_Helicobasidium_mompa_partitivirus_V70
+35:>HQ541323_Heterobasidion_partitivirus_1
+37:>FJ816271_Heterobasidion_partitivirus_3
+39:>KF963175_Heterobasidion_partitivirus_12
+data/16945456_31352599_Pocobirnaviridae_alignment.fas
+1:>KR902507_Equine_picobirnavirus
+3:>AB186898_Human_picobirnavirus
+5:>KY855429_Marmot_picobirnavirus
+7:>KC692366_Fox_picobirnavirus
+9:>Hirai_contig_349
+11:>Hirai_contig_385
+13:>Hirai_contig_390
+15:>Hirai_contig_1489
+17:>Hirai_contig_1979
+19:>Hirai_contig_2783
+21:>Hirai_contig_44
+23:>GBH21805_Jam_full_183_P1
+25:>GBH21811_Jam_full_189_P1
+27:>GBH22771_St97_full_89_P1
+29:>GBH22740_St97_full_60_P2
+31:>GBH22853_St122_full_27_P2
+33:>GBH22336_St73_full_19_P2
+35:>GBH22332_St73_full_18_P2
+37:>GBH22841_St122_full_20_P2
+39:>GBH22844_St122_full_22_P2
+data/16945462_31352605_Reoviridae_alignment.fas
+1:>AAT11887_Eriocheir_sinensis_reovirus
+3:>AAZ94042_Micromonas_pusilla_reovirus
+5:>AAA88823_Bluetongue_virus
+7:>NC_005997_St_Croix_river_virus
+9:>BAA14222_Rice_dwarf_virus_isolate_A
+11:>NC_009248_Rice_gall_dwarf_virus
+13:>AAC58684_Simian_rotavirus
+15:>NC_011507_Rotavirus_A
+17:>AAF77631_Banna_virus
+19:>NC_004210_Kadipiro_virus
+21:>AAL31497_Chum_salmon_reovirus_CS
+23:>NC_038630_Green_River_chinook_virus
+25:>NC_003696_Eyach_virus
+27:>AAK20301_Bombyx_mori_cypovirus_1
+29:>NC_023491_Inachis_io_cypovirus_2
+31:>AAZ94068_Aedes_pseudoscutellaris_reovirus
+33:>BAA08542_Nilaparvata_lugens_reovirus
+35:>NC_037570_Maize_rough_dwarf_fijivirus
+37:>AAP45577_Mycoreovirus-1_isolate_CpMYRV-1
+39:>KU128375_Sclerotinia_sclerotiorum_mycoreovirus_4
+data/16945477_31352614_Totiviridae_alignment.fas
+1:>AAB01579_Giardia_lamblia_virus
+3:>AAB50024_Leishmania_RNA_virus_1-1
+5:>AAB94791_Helminthosporium_victoriae_virus_190S
+7:>AAA62868_Trichomonas_vaginalis_virus_1
+9:>Hirai_contig_644
+11:>Hirai_contig_1117
+13:>Hirai_contig_1179
+15:>Hirai_contig_1206
+17:>Hirai_contig_1382
+19:>Hirai_contig_1497
+21:>Hirai_contig_2340
+23:>Hirai_contig_2450
+25:>Hirai_contig_1821
+27:>Hirai_contig_2146
+29:>GBH22796_St122_full_11_P2
+31:>BAU79524_Diatom_colony_associated_virus-Like_RNA_Segment_4
+33:>BBZ90080_Diatom_totivirus_1
+35:>YP_009336604_Beihai_victori-like_virus_1
+37:>YP_009553336_Diatom_colony_associated_dsRNA_virus_3
+39:>YP_009552791_Diatom_colony_associated_dsRNA_virus_6
+data/16945969_31356130_Hirai_Contigs_RdRp.fas
+1:>contig_2542_Chu-like_partial
+3:>contig_1308_Narna-like_partial
+5:>contig_101_Narna-like_partial
+7:>contig_102_Narna-like_partial
+9:>contig_220_Narna-like_partial
+11:>contig_780_Narna-like_partial
+13:>contig_826_Narna-like_partial
+15:>contig_836_Narna-like_partial
+17:>contig_1411_Narna-like_partial
+19:>contig_1570_Narna-like_partial
+21:>contig_2208_Narna-like_partial
+23:>contig_2702_Solemo-like_partial
+25:>contig_1473_Tombus-like_partial
+27:>contig_2_LC651642_Picorna-like_complete
+29:>contig_231_Picorna-like_partial
+31:>contig_633_Virga-like_partial
+33:>contig_1789_Virga-like_partial
+35:>contig_1834_Virga-like_partial
+37:>contig_1079_Unclassified_ssRNA_virus_partial
+39:>contig_79_Unclassified_ssRNA_virus_partial
+data/16958869_31373884_Possible_virus_contigs.fas
+1:>Hirai_nohit1
+3:>Hirai_nohit2
+5:>Hirai_nohit3
+7:>Hirai_nohit4
+9:>Hirai_nohit5
+11:>Hirai_nohit6
+13:>Hirai_nohit7
+15:>Hirai_nohit8
+17:>Hirai_nohit9
+19:>Hirai_nohit10
+21:>Hirai_nohit11
+23:>Hirai_nohit12
+25:>Hirai_nohit13
+27:>Hirai_nohit14
+29:>Hirai_nohit15
+31:>Hirai_nohit16
+33:>Hirai_nohit17
+35:>Hirai_nohit18
+37:>Hirai_nohit19
+39:>Hirai_nohit20
+data/nuccore_reported_viral_sequences.fasta
+1:>LC651635.1 Viral metagenome 2021-JH01 gene for RdRp, complete cds
+54:>LC651636.1 Viral metagenome 2021-JH02 gene for Capsid, complete cds
+101:>LC651637.1 Viral metagenome 2021-JH03 gene for hypothetical protein, complete cds
+145:>LC651638.1 Viral metagenome 2021-JH04 gene for hypothetical protein, complete cds
+188:>LC651639.1 Viral metagenome 2021-JH05 gene for RdRp, complete cds
+223:>LC651640.1 Viral metagenome 2021-JH06 gene for RdRp, complete cds
+251:>LC651641.1 Viral metagenome 2021-JH07 gene for hypothetical protein, complete cds
+276:>LC651642.1 Viral metagenome 2021-JH08 gene for polyprotein, complete cds
+411:>LC651643.1 Viral metagenome 2021-JH09 gene for RdRp, complete cds
+450:>LC651644.1 Viral metagenome 2021-JH10 gene for RdRp, complete cds
+482:>LC651645.1 Viral metagenome 2021-JH11 genes for hypothetical protein and RdRp, complete cds
+537:>LC651646.1 Viral metagenome 2021-JH12 gene for RdRp, complete cds
+571:>LC651647.1 Viral metagenome 2021-JH13 gene for RdRp, complete cds
+597:>LC651648.1 Viral metagenome 2021-JH14 gene for polyprotein, complete cds
+769:>LC651649.1 Viral metagenome 2021-JH15 gene for RdRp, complete cds
+797:>LC651650.1 Viral metagenome 2021-JH16 gene for hypothetical protein, complete cds
+822:>LC651651.1 Viral metagenome 2021-JH17 gene for RdRp, complete cds
+
+exec
+/bin/zsh -lc "wc -l data/* && for f in data/*; do printf '%s ' \""'$f"; rg -c '"'"'^>'"' \""'$f"; done' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834
+ succeeded in 0ms:
+      44 data/16945363_31352431_chrysoviridae_alignment.fas
+      20 data/16945399_31352560_Narnaviridae_alignment.fas
+      74 data/16945423_31352587_Picornavirales_alignment.fas
+     134 data/16945426_31352578_Partitiviridae_alignment.fas
+      64 data/16945456_31352599_Pocobirnaviridae_alignment.fas
+      52 data/16945462_31352605_Reoviridae_alignment.fas
+      88 data/16945477_31352614_Totiviridae_alignment.fas
+     388 data/16945969_31356130_Hirai_Contigs_RdRp.fas
+      74 data/16958869_31373884_Possible_virus_contigs.fas
+     854 data/nuccore_reported_viral_sequences.fasta
+    1792 total
+data/16945363_31352431_chrysoviridae_alignment.fas 22
+data/16945399_31352560_Narnaviridae_alignment.fas 10
+data/16945423_31352587_Picornavirales_alignment.fas 37
+data/16945426_31352578_Partitiviridae_alignment.fas 67
+data/16945456_31352599_Pocobirnaviridae_alignment.fas 32
+data/16945462_31352605_Reoviridae_alignment.fas 26
+data/16945477_31352614_Totiviridae_alignment.fas 44
+data/16945969_31356130_Hirai_Contigs_RdRp.fas 194
+data/16958869_31373884_Possible_virus_contigs.fas 37
+data/nuccore_reported_viral_sequences.fasta 17
+
+codex
+The data are mostly viral protein alignments plus assembled Hirai contigs and reported nuccore viral sequences. I’m parsing the FASTA records now to compute counts, lengths, marker labels, and how many Hirai sequences appear in each comparative alignment.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from collections import Counter,defaultdict
+root=Path('data')
+files=sorted(root.iterdir())
+
+def read_fasta(path):
+    recs=[]; h=None; seq=[]
+    with path.open() as f:
+        for line in f:
+            line=line.strip()
+            if not line: continue
+            if line.startswith('>'):
+                if h is not None:
+                    recs.append((h,''.join(seq)))
+                h=line[1:]; seq=[]
+            else:
+                seq.append(line)
+        if h is not None:
+            recs.append((h,''.join(seq)))
+    return recs
+
+def nongap_len(s):
+    return sum(1 for c in s if c not in '-.')
+
+def is_hirai(h):
+    return h.startswith('Hirai') or h.startswith('contig_') or 'Hirai' in h
+
+def fam_from_file(p):
+    n=p.name
+    if '_alignment' in n:
+        return n.split('_')[-2] if n.split('_')[-1]=='alignment.fas' else n
+    return n
+
+allrecs=[]
+print('FILE_SUMMARY')
+for p in files:
+    recs=read_fasta(p)
+    allrecs += [(p.name,h,s) for h,s in recs]
+    lens=[nongap_len(s) for h,s in recs]
+    raw=[len(s) for h,s in recs]
+    hir=sum(is_hirai(h) for h,s in recs)
+    dash=sum(s.count('-') for h,s in recs)
+    chars=Counter(''.join(s for h,s in recs).upper())
+    alphabet='nt' if sum(chars[c] for c in 'ACGTUN') > sum(chars[c] for c in 'EFILPQZX*')*2 else 'aa/alignment'
+    print(p.name, 'records',len(recs),'hirai',hir,'raw_len_range', (min(raw), max(raw)), 'nongap_range',(min(lens),max(lens)),'mean_nongap',round(sum(lens)/len(lens),1),'dash',dash,'alphabet',alphabet)
+
+print('\\nHIRAI_IN_ALIGNMENTS')
+for p in files:
+    if 'alignment' in p.name:
+        recs=read_fasta(p)
+        print(p.name)
+        for h,s in recs:
+            if is_hirai(h): print(' ',h,'len',nongap_len(s))
+
+# classify Hirai_Contigs_RdRp headers
+rd=read_fasta(root/'16945969_31356130_Hirai_Contigs_RdRp.fas')
+class_counts=Counter()
+status_counts=Counter()
+for h,s in rd:
+    parts=h.split('_')
+    # h contig_2542_Chu-like_partial or contig_2_LC651642_Picorna-like_complete
+    status=h.rsplit('_',1)[-1]
+    status_counts[status]+=1
+    body=h[len('contig_'):]
+    toks=body.split('_')
+    # remove id first
+    toks=toks[1:]
+    if toks and (toks[0].startswith('LC') or toks[0].startswith('NC') or toks[0].startswith('AB')):
+        toks=toks[1:]
+    label='_'.join(toks[:-1]) if toks and toks[-1] in ('partial','complete') else '_'.join(toks)
+    class_counts[label]+=1
+print('\\nRDRP_CLASS_COUNTS')
+for k,v in class_counts.most_common(): print(k,v)
+print('status',status_counts)
+
+# nohit stats
+no=read_fasta(root/'16958869_31373884_Possible_virus_contigs.fas')
+print('\\nNOHIT_LENGTHS', sorted(nongap_len(s) for h,s in no))
+# nuccore gene labels
+nu=read_fasta(root/'nuccore_reported_viral_sequences.fasta')
+gene_counts=Counter()
+for h,s in nu:
+    desc=h.lower()
+    if 'polyprotein' in desc: gene='polyprotein'
+    elif 'capsid' in desc: gene='capsid'
+    elif 'rdrp' in desc: gene='RdRp'
+    elif 'hypothetical' in desc: gene='hypothetical protein'
+    else: gene='other'
+    gene_counts[gene]+=1
+print('\\nNUCCORE_GENE_COUNTS', gene_counts)
+for h,s in nu: print(h,'len',nongap_len(s))
+
+# overlap reported LC in RdRp contigs
+lc_in_rd=[]
+for h,s in rd:
+    for token in h.replace('_',' ').split():
+        if token.startswith('LC'):
+            lc_in_rd.append((token,h,nongap_len(s)))
+print('\\nLC_IN_RDRP',lc_in_rd)
+
+# totals
+print('\\nTOTAL records',len(allrecs), 'hirai-like', sum(is_hirai(h) for _,h,_ in allrecs))
+# alignment family count with hirai share
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834
+ succeeded in 0ms:
+FILE_SUMMARY
+16945363_31352431_chrysoviridae_alignment.fas records 22 hirai 1 raw_len_range (1207, 1207) nongap_range (1056, 1131) mean_nongap 1084.8 dash 2688 alphabet aa/alignment
+16945399_31352560_Narnaviridae_alignment.fas records 10 hirai 2 raw_len_range (838, 838) nongap_range (549, 751) mean_nongap 598.9 dash 2391 alphabet aa/alignment
+16945423_31352587_Picornavirales_alignment.fas records 37 hirai 1 raw_len_range (1274, 1274) nongap_range (437, 1024) mean_nongap 532.7 dash 27429 alphabet aa/alignment
+16945426_31352578_Partitiviridae_alignment.fas records 67 hirai 11 raw_len_range (759, 759) nongap_range (336, 604) mean_nongap 521.3 dash 15926 alphabet aa/alignment
+16945456_31352599_Pocobirnaviridae_alignment.fas records 32 hirai 7 raw_len_range (611, 611) nongap_range (302, 536) mean_nongap 478.7 dash 4233 alphabet aa/alignment
+16945462_31352605_Reoviridae_alignment.fas records 26 hirai 1 raw_len_range (865, 865) nongap_range (485, 687) mean_nongap 578.0 dash 7462 alphabet aa/alignment
+16945477_31352614_Totiviridae_alignment.fas records 44 hirai 10 raw_len_range (318, 318) nongap_range (213, 275) mean_nongap 241.1 dash 3384 alphabet aa/alignment
+16945969_31356130_Hirai_Contigs_RdRp.fas records 194 hirai 194 raw_len_range (484, 11845) nongap_range (484, 11845) mean_nongap 1252.9 dash 0 alphabet nt
+16958869_31373884_Possible_virus_contigs.fas records 37 hirai 37 raw_len_range (744, 3440) nongap_range (744, 3440) mean_nongap 1690.4 dash 0 alphabet nt
+nuccore_reported_viral_sequences.fasta records 17 hirai 0 raw_len_range (1547, 11845) nongap_range (1547, 11845) mean_nongap 3343.6 dash 0 alphabet nt
+
+HIRAI_IN_ALIGNMENTS
+16945363_31352431_chrysoviridae_alignment.fas
+  Hirai_contig 31 len 1063
+16945399_31352560_Narnaviridae_alignment.fas
+  Hirai_contig_780 len 553
+  Hirai_contig_836 len 549
+16945423_31352587_Picornavirales_alignment.fas
+  Hirai_contig_2 len 475
+16945426_31352578_Partitiviridae_alignment.fas
+  Hirai_contig_48 len 498
+  Hirai_contig_58 len 424
+  Hirai_contig_132 len 531
+  Hirai_contig_136 len 519
+  Hirai_contig_474 len 336
+  Hirai_contig_478 len 362
+  Hirai_contig_556 len 504
+  Hirai_contig_784 len 461
+  Hirai_contig_1030 len 445
+  Hirai_contig_1192 len 450
+  Hirai_contig_1244 len 456
+16945456_31352599_Pocobirnaviridae_alignment.fas
+  Hirai_contig_349 len 471
+  Hirai_contig_385 len 499
+  Hirai_contig_390 len 416
+  Hirai_contig_1489 len 302
+  Hirai_contig_1979 len 312
+  Hirai_contig_2783 len 348
+  Hirai_contig_44 len 500
+16945462_31352605_Reoviridae_alignment.fas
+  Hirai_contig_908 len 502
+16945477_31352614_Totiviridae_alignment.fas
+  Hirai_contig_644 len 232
+  Hirai_contig_1117 len 230
+  Hirai_contig_1179 len 250
+  Hirai_contig_1206 len 250
+  Hirai_contig_1382 len 261
+  Hirai_contig_1497 len 249
+  Hirai_contig_2340 len 275
+  Hirai_contig_2450 len 230
+  Hirai_contig_1821 len 254
+  Hirai_contig_2146 len 232
+
+RDRP_CLASS_COUNTS
+Partiti-like 82
+Toti-like 37
+Picobirna-like 23
+Reo-like 14
+Narna-like 10
+Endorna-like 7
+Hypo-like 4
+Virga-like 3
+Unclassified_ssRNA_virus 3
+Unclassified_dsRNA_virus 3
+Picorna-like 2
+Megabirna-like 2
+Chu-like 1
+Solemo-like 1
+Tombus-like 1
+Chryso-like 1
+status Counter({'partial': 182, 'complete': 12})
+
+NOHIT_LENGTHS [744, 894, 965, 978, 1006, 1006, 1047, 1217, 1223, 1228, 1316, 1369, 1477, 1546, 1575, 1579, 1584, 1594, 1622, 1654, 1690, 1758, 1770, 1773, 1788, 1795, 1886, 1940, 1952, 1984, 2045, 2108, 2420, 2661, 2801, 3111, 3440]
+
+NUCCORE_GENE_COUNTS Counter({'RdRp': 10, 'hypothetical protein': 4, 'polyprotein': 2, 'capsid': 1})
+LC651635.1 Viral metagenome 2021-JH01 gene for RdRp, complete cds len 3564
+LC651636.1 Viral metagenome 2021-JH02 gene for Capsid, complete cds len 3109
+LC651637.1 Viral metagenome 2021-JH03 gene for hypothetical protein, complete cds len 2913
+LC651638.1 Viral metagenome 2021-JH04 gene for hypothetical protein, complete cds len 2813
+LC651639.1 Viral metagenome 2021-JH05 gene for RdRp, complete cds len 2269
+LC651640.1 Viral metagenome 2021-JH06 gene for RdRp, complete cds len 1816
+LC651641.1 Viral metagenome 2021-JH07 gene for hypothetical protein, complete cds len 1547
+LC651642.1 Viral metagenome 2021-JH08 gene for polyprotein, complete cds len 9274
+LC651643.1 Viral metagenome 2021-JH09 gene for RdRp, complete cds len 2573
+LC651644.1 Viral metagenome 2021-JH10 gene for RdRp, complete cds len 2079
+LC651645.1 Viral metagenome 2021-JH11 genes for hypothetical protein and RdRp, complete cds len 3648
+LC651646.1 Viral metagenome 2021-JH12 gene for RdRp, complete cds len 2195
+LC651647.1 Viral metagenome 2021-JH13 gene for RdRp, complete cds len 1639
+LC651648.1 Viral metagenome 2021-JH14 gene for polyprotein, complete cds len 11845
+LC651649.1 Viral metagenome 2021-JH15 gene for RdRp, complete cds len 1811
+LC651650.1 Viral metagenome 2021-JH16 gene for hypothetical protein, complete cds len 1587
+LC651651.1 Viral metagenome 2021-JH17 gene for RdRp, complete cds len 2159
+
+LC_IN_RDRP [('LC651642', 'contig_2_LC651642_Picorna-like_complete', 9274), ('LC651635', 'contig_31_LC651635_Chryso-like_complete', 3564), ('LC651648', 'contig_43_LC651648_Hypo-like_complete', 11845), ('LC651640', 'contig_48_LC651640_Partiti-like_complete', 1816), ('LC651644', 'contig_58_LC651644_Partiti-like_complete', 2079), ('LC651651', 'contig_60_LC651651_Partiti-like_complete', 2159), ('LC651639', 'contig_132_LC651639_Partiti-like_complete', 2269), ('LC651643', 'contig_474_LC651643_Partiti-like_complete', 2573), ('LC651646', 'contig_478_LC651646_Partiti-like_complete', 2195), ('LC651649', 'contig_1346_LC651649_Partiti-like_complete', 1811), ('LC651647', 'contig_349_LC651647_Picobirna-like_complete', 1639), ('LC651645', 'contig_44_LC651645_Picobirna-like_complete', 3648)]
+
+TOTAL records 486 hirai-like 264
+
+codex
+The main signal is a Hirai viral metagenome with 194 RdRp-labeled contigs, 37 additional possible viral no-hit contigs, 17 reported complete CDS records, and seven family-level amino-acid alignments that mix Hirai contigs with references. The RdRp labels are strongly skewed toward partiti-like, toti-like, picobirna-like, and reo-like groups, so the candidate questions should focus on RNA-virus diversity, novelty, and phylogenetic placement rather than simple sequence inventory.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from collections import Counter
+root=Path('data')
+
+def read_fasta(path):
+    recs=[]; h=None; seq=[]
+    for line in path.read_text().splitlines():
+        line=line.strip()
+        if not line: continue
+        if line.startswith('>'):
+            if h is not None: recs.append((h,''.join(seq)))
+            h=line[1:]; seq=[]
+        else: seq.append(line.upper())
+    if h is not None: recs.append((h,''.join(seq)))
+    return recs
+
+def is_hirai(h):
+    return h.startswith('Hirai') or h.startswith('contig_') or 'Hirai' in h
+
+def pid(a,b):
+    overlap=match=0
+    for x,y in zip(a,b):
+        if x in '-.' or y in '-.': continue
+        overlap+=1
+        if x==y: match+=1
+    return (100*match/overlap if overlap else 0, overlap)
+
+print('NEAREST_REFERENCE_BY_ALIGNMENT')
+for p in sorted(root.glob('*alignment.fas')):
+    recs=read_fasta(p)
+    refs=[r for r in recs if not is_hirai(r[0])]
+    hir=[r for r in recs if is_hirai(r[0])]
+    vals=[]
+    print('\\n'+p.name, 'Hirai',len(hir),'Refs',len(refs))
+    for h,s in hir:
+        best=max(((pid(s,rs)[0], pid(s,rs)[1], rh) for rh,rs in refs), default=(0,0,''))
+        vals.append(best[0])
+        print(f'{h}: best_pid={best[0]:.1f} overlap={best[1]} ref={best[2][:80]}')
+    if vals:
+        print('family best_pid range/mean', f'{min(vals):.1f}-{max(vals):.1f}', f'{sum(vals)/len(vals):.1f}')
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834
+ succeeded in 0ms:
+NEAREST_REFERENCE_BY_ALIGNMENT
+
+16945363_31352431_chrysoviridae_alignment.fas Hirai 1 Refs 21
+Hirai_contig 31: best_pid=90.5 overlap=1063 ref=FN178512 Aspergillus fumigatus chrysovirus
+family best_pid range/mean 90.5-90.5 90.5
+
+16945399_31352560_Narnaviridae_alignment.fas Hirai 2 Refs 8
+Hirai_contig_780: best_pid=40.6 overlap=539 ref=QOE55590_Macrophomina_phaseolina_mitovirus_4
+Hirai_contig_836: best_pid=40.7 overlap=536 ref=QOE55590_Macrophomina_phaseolina_mitovirus_4
+family best_pid range/mean 40.6-40.7 40.7
+
+16945423_31352587_Picornavirales_alignment.fas Hirai 1 Refs 36
+Hirai_contig_2: best_pid=92.0 overlap=474 ref=YP_009337682_Wenzhou_picorna-like_virus_26
+family best_pid range/mean 92.0-92.0 92.0
+
+16945426_31352578_Partitiviridae_alignment.fas Hirai 11 Refs 56
+Hirai_contig_48: best_pid=42.8 overlap=488 ref=ASA47308_Wilkie_partiti-like_virus_2
+Hirai_contig_58: best_pid=40.1 overlap=404 ref=APG78246_Hubei_partiti-like_virus_26
+Hirai_contig_132: best_pid=37.1 overlap=504 ref=BCD56390_Lichen_partiti-like_RNA_virus_sp
+Hirai_contig_136: best_pid=46.0 overlap=511 ref=ASA47308_Wilkie_partiti-like_virus_2
+Hirai_contig_474: best_pid=37.1 overlap=321 ref=APG78246_Hubei_partiti-like_virus_26
+Hirai_contig_478: best_pid=41.0 overlap=344 ref=APG78241_Hubei_partiti-like_virus_27
+Hirai_contig_556: best_pid=39.7 overlap=501 ref=ASA47308_Wilkie_partiti-like_virus_2
+Hirai_contig_784: best_pid=35.7 overlap=456 ref=YP_009293586_Cannabis_cryptic_virus
+Hirai_contig_1030: best_pid=82.4 overlap=438 ref=GBH22439_St73_full_89_P1
+Hirai_contig_1192: best_pid=58.5 overlap=448 ref=BAU79511_Diatom_colony_associated_dsRNA_virus_14
+Hirai_contig_1244: best_pid=52.0 overlap=448 ref=ASA47308_Wilkie_partiti-like_virus_2
+family best_pid range/mean 35.7-82.4 46.6
+
+16945456_31352599_Pocobirnaviridae_alignment.fas Hirai 7 Refs 25
+Hirai_contig_349: best_pid=67.2 overlap=464 ref=GBH21818_Jam_full_196_P1
+Hirai_contig_385: best_pid=54.4 overlap=491 ref=YP_009333352_Beihai_picobirna-like_virus_7
+Hirai_contig_390: best_pid=52.2 overlap=408 ref=YP_009333352_Beihai_picobirna-like_virus_7
+Hirai_contig_1489: best_pid=86.4 overlap=302 ref=GBH22740_St97_full_60_P2
+Hirai_contig_1979: best_pid=51.9 overlap=312 ref=GBH22841_St122_full_20_P2
+Hirai_contig_2783: best_pid=89.4 overlap=348 ref=GBH22678_St97_full_15_P2
+Hirai_contig_44: best_pid=55.4 overlap=496 ref=GBH22332_St73_full_18_P2
+family best_pid range/mean 51.9-89.4 65.3
+
+16945462_31352605_Reoviridae_alignment.fas Hirai 1 Refs 25
+Hirai_contig_908: best_pid=22.2 overlap=473 ref=GBH22303_St73_full_15_P1
+family best_pid range/mean 22.2-22.2 22.2
+
+16945477_31352614_Totiviridae_alignment.fas Hirai 10 Refs 34
+Hirai_contig_644: best_pid=57.8 overlap=232 ref=BAU79524_Diatom_colony_associated_virus-Like_RNA_Segment_4
+Hirai_contig_1117: best_pid=53.0 overlap=230 ref=YP_009333276_Beihai_blue_swimmer_crab_virus_3
+Hirai_contig_1179: best_pid=31.1 overlap=228 ref=YP_009336493_Hubei_toti-like_virus_10
+Hirai_contig_1206: best_pid=41.5 overlap=248 ref=YP_009388611_Aedes_camptorhynchus_toti-like_virus_1
+Hirai_contig_1382: best_pid=39.0 overlap=246 ref=YP_009025166_Persimmon_latent_virus
+Hirai_contig_1497: best_pid=51.0 overlap=249 ref=CAB3228065_Arctia_plantaginis
+Hirai_contig_2340: best_pid=44.7 overlap=246 ref=YP_009336493_Hubei_toti-like_virus_10
+Hirai_contig_2450: best_pid=50.2 overlap=227 ref=YP_009552791_Diatom_colony_associated_dsRNA_virus_6
+Hirai_contig_1821: best_pid=35.3 overlap=238 ref=YP_009025166_Persimmon_latent_virus
+Hirai_contig_2146: best_pid=59.6 overlap=230 ref=YP_009553336_Diatom_colony_associated_dsRNA_virus_3
+family best_pid range/mean 31.1-59.6 46.3
+
+codex
+I have enough computed evidence to write the deliverables. I’ll make the report directory and add `report/report.md` plus `agent_questions.json`, keeping the rank-1 question identical in both files.
+exec
+/bin/zsh -lc 'mkdir -p report' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834
+ succeeded in 0ms:
+apply patch
+patch: completed
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834/report/report.md
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6b5b2298fe94b4ccb49fff2e3ccd3d3d1bf55d18
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Scientific Question Report
++
++## Data summary
++
++The `data/` directory contains ten FASTA files describing a Hirai viral metagenome and comparative viral alignments. Seven files are amino-acid multiple sequence alignments for viral RdRp or polymerase-like regions: Chrysoviridae, Narnaviridae, Picornavirales, Partitiviridae, Pocobirnaviridae, Reoviridae, and Totiviridae. These alignments mix Hirai contigs with reference viral sequences whose headers encode accession-like identifiers and virus names. `16945969_31356130_Hirai_Contigs_RdRp.fas` contains nucleotide sequences for 194 Hirai RdRp contigs with headers encoding contig ID, virus-like classification, and complete/partial status. `16958869_31373884_Possible_virus_contigs.fas` contains 37 additional Hirai no-hit possible viral contigs. `nuccore_reported_viral_sequences.fasta` contains 17 reported complete CDS records named LC651635.1-LC651651.1 with gene annotations such as RdRp, polyprotein, capsid, and hypothetical protein.
++
++## Analysis
++
++Across all FASTA files there are 486 records, of which 264 are Hirai-like records. The seven family-level alignments contain 238 total amino-acid records and 33 Hirai entries; the Partitiviridae alignment has the most Hirai representatives (11), followed by Totiviridae (10), Pocobirnaviridae (7), Narnaviridae (2), and one each in Chrysoviridae, Picornavirales, and Reoviridae. The 194 RdRp contigs are dominated by dsRNA-associated groups: 82 Partiti-like, 37 Toti-like, 23 Picobirna-like, 14 Reo-like, 10 Narna-like, 7 Endorna-like, and smaller counts of Hypo-like, Virga-like, unclassified ssRNA/dsRNA, Picorna-like, Megabirna-like, Chu-like, Solemo-like, Tombus-like, and Chryso-like labels. Only 12 of the 194 RdRp contigs are marked complete; 182 are partial. The 37 no-hit possible viral contigs range from 744 to 3440 nt, with a mean length of about 1690 nt. Nearest-reference amino-acid identity varies sharply by alignment: Hirai Picornavirales and Chrysoviridae representatives are close to known references (92.0% and 90.5%), while Reoviridae, Narnaviridae, Partitiviridae, and Totiviridae Hirai sequences include much more divergent placements, with nearest-reference identities around 22.2%, 40.7%, 46.6% mean, and 46.3% mean, respectively.
++
++## Reasoning
++
++The data are not just a list of assembled contigs; they already contain marker annotations, complete reported sequences, no-hit candidates, and comparative alignments spanning several RNA virus families. The strongest scientific opportunity is therefore to ask how broad and novel the Hirai RNA virome is, especially because the RdRp inventory is large, dominated by partiti-like/toti-like/picobirna-like/reo-like groups, and includes both close matches and highly divergent sequences. The alignments make this testable by comparing Hirai contigs to known viral references, while the contig inventory can quantify family composition and completeness.
++
++## Top scientific question
++
++What is the diversity, novelty, and phylogenetic placement of RdRp-bearing RNA viruses recovered from the Hirai viral metagenome across the partiti-like, toti-like, picobirna-like, reo-like, narna-like, picorna-like, and related viral groups?
++
++## Why this question is testable on the provided dataset
++
++The question can be answered directly from the provided FASTA files by parsing RdRp contig classifications, summarizing complete versus partial viral sequences, aligning Hirai entries against the supplied family-level reference alignments, estimating nearest-reference similarity, and reconstructing family-specific phylogenetic trees or distance matrices. The `nuccore_reported_viral_sequences.fasta` records provide complete CDS examples for validation, while the no-hit contigs can be screened as possible additional divergent viral sequences.
+
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6b5b2298fe94b4ccb49fff2e3ccd3d3d1bf55d18
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Scientific Question Report
++
++## Data summary
++
++The `data/` directory contains ten FASTA files describing a Hirai viral metagenome and comparative viral alignments. Seven files are amino-acid multiple sequence alignments for viral RdRp or polymerase-like regions: Chrysoviridae, Narnaviridae, Picornavirales, Partitiviridae, Pocobirnaviridae, Reoviridae, and Totiviridae. These alignments mix Hirai contigs with reference viral sequences whose headers encode accession-like identifiers and virus names. `16945969_31356130_Hirai_Contigs_RdRp.fas` contains nucleotide sequences for 194 Hirai RdRp contigs with headers encoding contig ID, virus-like classification, and complete/partial status. `16958869_31373884_Possible_virus_contigs.fas` contains 37 additional Hirai no-hit possible viral contigs. `nuccore_reported_viral_sequences.fasta` contains 17 reported complete CDS records named LC651635.1-LC651651.1 with gene annotations such as RdRp, polyprotein, capsid, and hypothetical protein.
++
++## Analysis
++
++Across all FASTA files there are 486 records, of which 264 are Hirai-like records. The seven family-level alignments contain 238 total amino-acid records and 33 Hirai entries; the Partitiviridae alignment has the most Hirai representatives (11), followed by Totiviridae (10), Pocobirnaviridae (7), Narnaviridae (2), and one each in Chrysoviridae, Picornavirales, and Reoviridae. The 194 RdRp contigs are dominated by dsRNA-associated groups: 82 Partiti-like, 37 Toti-like, 23 Picobirna-like, 14 Reo-like, 10 Narna-like, 7 Endorna-like, and smaller counts of Hypo-like, Virga-like, unclassified ssRNA/dsRNA, Picorna-like, Megabirna-like, Chu-like, Solemo-like, Tombus-like, and Chryso-like labels. Only 12 of the 194 RdRp contigs are marked complete; 182 are partial. The 37 no-hit possible viral contigs range from 744 to 3440 nt, with a mean length of about 1690 nt. Nearest-reference amino-acid identity varies sharply by alignment: Hirai Picornavirales and Chrysoviridae representatives are close to known references (92.0% and 90.5%), while Reoviridae, Narnaviridae, Partitiviridae, and Totiviridae Hirai sequences include much more divergent placements, with nearest-reference identities around 22.2%, 40.7%, 46.6% mean, and 46.3% mean, respectively.
++
++## Reasoning
++
++The data are not just a list of assembled contigs; they already contain marker annotations, complete reported sequences, no-hit candidates, and comparative alignments spanning several RNA virus families. The strongest scientific opportunity is therefore to ask how broad and novel the Hirai RNA virome is, especially because the RdRp inventory is large, dominated by partiti-like/toti-like/picobirna-like/reo-like groups, and includes both close matches and highly divergent sequences. The alignments make this testable by comparing Hirai contigs to known viral references, while the contig inventory can quantify family composition and completeness.
++
++## Top scientific question
++
++What is the diversity, novelty, and phylogenetic placement of RdRp-bearing RNA viruses recovered from the Hirai viral metagenome across the partiti-like, toti-like, picobirna-like, reo-like, narna-like, picorna-like, and related viral groups?
++
++## Why this question is testable on the provided dataset
++
++The question can be answered directly from the provided FASTA files by parsing RdRp contig classifications, summarizing complete versus partial viral sequences, aligning Hirai entries against the supplied family-level reference alignments, estimating nearest-reference similarity, and reconstructing family-specific phylogenetic trees or distance matrices. The `nuccore_reported_viral_sequences.fasta` records provide complete CDS examples for validation, while the no-hit contigs can be screened as possible additional divergent viral sequences.
+
+apply patch
+patch: completed
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834/agent_questions.json
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..80a0bdcc65fd2a5f1c71c8d935957909b5dd95fe
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,108 @@
++{
++  "agent_id": "gpt-5.5-codex-harness",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "What is the diversity, novelty, and phylogenetic placement of RdRp-bearing RNA viruses recovered from the Hirai viral metagenome across the partiti-like, toti-like, picobirna-like, reo-like, narna-like, picorna-like, and related viral groups?",
++      "rationale": "The largest file contains 194 Hirai RdRp contigs whose headers encode virus-like classifications and complete/partial status. The supplied family-level alignments include 33 Hirai sequences among reference viruses, enabling direct comparison of placement and divergence; nearest-reference identities range from very close matches in Picornavirales and Chrysoviridae to highly divergent Reoviridae, Narnaviridae, Partitiviridae, and Totiviridae placements.",
++      "data_support": [
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "16945426_31352578_Partitiviridae_alignment.fas",
++        "16945477_31352614_Totiviridae_alignment.fas",
++        "16945456_31352599_Pocobirnaviridae_alignment.fas",
++        "16945462_31352605_Reoviridae_alignment.fas",
++        "16945399_31352560_Narnaviridae_alignment.fas",
++        "16945423_31352587_Picornavirales_alignment.fas",
++        "16945363_31352431_chrysoviridae_alignment.fas"
++      ],
++      "expected_test": "Parse RdRp classifications and completeness from Hirai contig headers, compute family counts and sequence lengths, use the supplied amino-acid alignments to estimate nearest-reference similarity, and infer phylogenetic placements of Hirai contigs within each viral group.",
++      "scope_keywords": [
++        "Hirai",
++        "RdRp",
++        "RNA virome",
++        "phylogeny",
++        "novelty",
++        "viral diversity"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Do the Hirai RdRp contigs reveal a virome dominated by divergent dsRNA virus lineages, especially partiti-like, toti-like, picobirna-like, and reo-like viruses?",
++      "rationale": "The RdRp contig inventory is dominated by 82 Partiti-like, 37 Toti-like, 23 Picobirna-like, and 14 Reo-like records. Several of the corresponding alignments show low or moderate nearest-reference identities for Hirai entries, including a 22.2% best match in Reoviridae and means near 46% in Partitiviridae and Totiviridae.",
++      "data_support": [
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "16945426_31352578_Partitiviridae_alignment.fas",
++        "16945477_31352614_Totiviridae_alignment.fas",
++        "16945456_31352599_Pocobirnaviridae_alignment.fas",
++        "16945462_31352605_Reoviridae_alignment.fas"
++      ],
++      "expected_test": "Classify all Hirai RdRp contigs by header label, compare group abundance across labels, then use the supplied alignments to quantify amino-acid divergence from known references and identify divergent dsRNA-associated clades.",
++      "scope_keywords": [
++        "dsRNA viruses",
++        "Partiti-like",
++        "Toti-like",
++        "Picobirna-like",
++        "Reo-like",
++        "divergence"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Which Hirai viral contigs correspond to near-complete or complete reported viral CDS records, and how do those complete sequences represent the broader RdRp contig diversity?",
++      "rationale": "The nuccore FASTA contains 17 reported complete CDS records, while the RdRp contig file marks 12 RdRp-bearing contigs as complete and links several to LC accession identifiers. These complete records include RdRp, polyprotein, capsid, and hypothetical protein annotations, making it possible to evaluate how much of the discovered virome is represented by longer curated sequences.",
++      "data_support": [
++        "nuccore_reported_viral_sequences.fasta",
++        "16945969_31356130_Hirai_Contigs_RdRp.fas"
++      ],
++      "expected_test": "Match LC accession identifiers and contig IDs between the nuccore records and the Hirai RdRp contig headers, summarize gene annotations and lengths, and compare complete-sequence classifications with the full set of partial RdRp contigs.",
++      "scope_keywords": [
++        "complete CDS",
++        "LC651635",
++        "reported sequences",
++        "RdRp",
++        "contig completeness"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are the 37 Hirai no-hit possible viral contigs candidates for additional highly divergent viruses beyond the annotated RdRp-bearing contigs?",
++      "rationale": "The possible-virus FASTA contains 37 Hirai_nohit records ranging from 744 to 3440 nt, separate from the 194 annotated RdRp contigs. Their lack of hit-based labels makes them plausible candidates for divergent viral genes or genome segments that were not captured by the existing RdRp classification.",
++      "data_support": [
++        "16958869_31373884_Possible_virus_contigs.fas",
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "nuccore_reported_viral_sequences.fasta"
++      ],
++      "expected_test": "Predict open reading frames in the no-hit contigs, compare sequence composition and lengths with reported viral CDS records and annotated RdRp contigs, and search translated products against the family-level alignment markers for remote viral similarity.",
++      "scope_keywords": [
++        "no-hit contigs",
++        "divergent viruses",
++        "ORF prediction",
++        "viral discovery",
++        "Hirai_nohit"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "How consistently do the family-specific amino-acid alignments support the virus-like classifications assigned in the Hirai RdRp contig headers?",
++      "rationale": "The RdRp contig headers assign broad labels such as Partiti-like, Toti-like, Picobirna-like, Reo-like, Narna-like, Picorna-like, and Chryso-like, and separate alignment files exist for those groups. Because each alignment contains Hirai sequences mixed with references, the data can test whether header labels agree with nearest-reference placement and family-level clustering.",
++      "data_support": [
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "16945363_31352431_chrysoviridae_alignment.fas",
++        "16945399_31352560_Narnaviridae_alignment.fas",
++        "16945423_31352587_Picornavirales_alignment.fas",
++        "16945426_31352578_Partitiviridae_alignment.fas",
++        "16945456_31352599_Pocobirnaviridae_alignment.fas",
++        "16945462_31352605_Reoviridae_alignment.fas",
++        "16945477_31352614_Totiviridae_alignment.fas"
++      ],
++      "expected_test": "Extract contig IDs and classification labels from the RdRp FASTA, map those IDs to Hirai entries in each alignment, then compare alignment-based nearest-neighbor or tree placement against the assigned virus-like label.",
++      "scope_keywords": [
++        "classification validation",
++        "amino-acid alignment",
++        "nearest reference",
++        "family labels",
++        "Hirai contigs"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6b5b2298fe94b4ccb49fff2e3ccd3d3d1bf55d18
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Scientific Question Report
++
++## Data summary
++
++The `data/` directory contains ten FASTA files describing a Hirai viral metagenome and comparative viral alignments. Seven files are amino-acid multiple sequence alignments for viral RdRp or polymerase-like regions: Chrysoviridae, Narnaviridae, Picornavirales, Partitiviridae, Pocobirnaviridae, Reoviridae, and Totiviridae. These alignments mix Hirai contigs with reference viral sequences whose headers encode accession-like identifiers and virus names. `16945969_31356130_Hirai_Contigs_RdRp.fas` contains nucleotide sequences for 194 Hirai RdRp contigs with headers encoding contig ID, virus-like classification, and complete/partial status. `16958869_31373884_Possible_virus_contigs.fas` contains 37 additional Hirai no-hit possible viral contigs. `nuccore_reported_viral_sequences.fasta` contains 17 reported complete CDS records named LC651635.1-LC651651.1 with gene annotations such as RdRp, polyprotein, capsid, and hypothetical protein.
++
++## Analysis
++
++Across all FASTA files there are 486 records, of which 264 are Hirai-like records. The seven family-level alignments contain 238 total amino-acid records and 33 Hirai entries; the Partitiviridae alignment has the most Hirai representatives (11), followed by Totiviridae (10), Pocobirnaviridae (7), Narnaviridae (2), and one each in Chrysoviridae, Picornavirales, and Reoviridae. The 194 RdRp contigs are dominated by dsRNA-associated groups: 82 Partiti-like, 37 Toti-like, 23 Picobirna-like, 14 Reo-like, 10 Narna-like, 7 Endorna-like, and smaller counts of Hypo-like, Virga-like, unclassified ssRNA/dsRNA, Picorna-like, Megabirna-like, Chu-like, Solemo-like, Tombus-like, and Chryso-like labels. Only 12 of the 194 RdRp contigs are marked complete; 182 are partial. The 37 no-hit possible viral contigs range from 744 to 3440 nt, with a mean length of about 1690 nt. Nearest-reference amino-acid identity varies sharply by alignment: Hirai Picornavirales and Chrysoviridae representatives are close to known references (92.0% and 90.5%), while Reoviridae, Narnaviridae, Partitiviridae, and Totiviridae Hirai sequences include much more divergent placements, with nearest-reference identities around 22.2%, 40.7%, 46.6% mean, and 46.3% mean, respectively.
++
++## Reasoning
++
++The data are not just a list of assembled contigs; they already contain marker annotations, complete reported sequences, no-hit candidates, and comparative alignments spanning several RNA virus families. The strongest scientific opportunity is therefore to ask how broad and novel the Hirai RNA virome is, especially because the RdRp inventory is large, dominated by partiti-like/toti-like/picobirna-like/reo-like groups, and includes both close matches and highly divergent sequences. The alignments make this testable by comparing Hirai contigs to known viral references, while the contig inventory can quantify family composition and completeness.
++
++## Top scientific question
++
++What is the diversity, novelty, and phylogenetic placement of RdRp-bearing RNA viruses recovered from the Hirai viral metagenome across the partiti-like, toti-like, picobirna-like, reo-like, narna-like, picorna-like, and related viral groups?
++
++## Why this question is testable on the provided dataset
++
++The question can be answered directly from the provided FASTA files by parsing RdRp contig classifications, summarizing complete versus partial viral sequences, aligning Hirai entries against the supplied family-level reference alignments, estimating nearest-reference similarity, and reconstructing family-specific phylogenetic trees or distance matrices. The `nuccore_reported_viral_sequences.fasta` records provide complete CDS examples for validation, while the no-hit contigs can be screened as possible additional divergent viral sequences.
+
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..80a0bdcc65fd2a5f1c71c8d935957909b5dd95fe
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,108 @@
++{
++  "agent_id": "gpt-5.5-codex-harness",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "What is the diversity, novelty, and phylogenetic placement of RdRp-bearing RNA viruses recovered from the Hirai viral metagenome across the partiti-like, toti-like, picobirna-like, reo-like, narna-like, picorna-like, and related viral groups?",
++      "rationale": "The largest file contains 194 Hirai RdRp contigs whose headers encode virus-like classifications and complete/partial status. The supplied family-level alignments include 33 Hirai sequences among reference viruses, enabling direct comparison of placement and divergence; nearest-reference identities range from very close matches in Picornavirales and Chrysoviridae to highly divergent Reoviridae, Narnaviridae, Partitiviridae, and Totiviridae placements.",
++      "data_support": [
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "16945426_31352578_Partitiviridae_alignment.fas",
++        "16945477_31352614_Totiviridae_alignment.fas",
++        "16945456_31352599_Pocobirnaviridae_alignment.fas",
++        "16945462_31352605_Reoviridae_alignment.fas",
++        "16945399_31352560_Narnaviridae_alignment.fas",
++        "16945423_31352587_Picornavirales_alignment.fas",
++        "16945363_31352431_chrysoviridae_alignment.fas"
++      ],
++      "expected_test": "Parse RdRp classifications and completeness from Hirai contig headers, compute family counts and sequence lengths, use the supplied amino-acid alignments to estimate nearest-reference similarity, and infer phylogenetic placements of Hirai contigs within each viral group.",
++      "scope_keywords": [
++        "Hirai",
++        "RdRp",
++        "RNA virome",
++        "phylogeny",
++        "novelty",
++        "viral diversity"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Do the Hirai RdRp contigs reveal a virome dominated by divergent dsRNA virus lineages, especially partiti-like, toti-like, picobirna-like, and reo-like viruses?",
++      "rationale": "The RdRp contig inventory is dominated by 82 Partiti-like, 37 Toti-like, 23 Picobirna-like, and 14 Reo-like records. Several of the corresponding alignments show low or moderate nearest-reference identities for Hirai entries, including a 22.2% best match in Reoviridae and means near 46% in Partitiviridae and Totiviridae.",
++      "data_support": [
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "16945426_31352578_Partitiviridae_alignment.fas",
++        "16945477_31352614_Totiviridae_alignment.fas",
++        "16945456_31352599_Pocobirnaviridae_alignment.fas",
++        "16945462_31352605_Reoviridae_alignment.fas"
++      ],
++      "expected_test": "Classify all Hirai RdRp contigs by header label, compare group abundance across labels, then use the supplied alignments to quantify amino-acid divergence from known references and identify divergent dsRNA-associated clades.",
++      "scope_keywords": [
++        "dsRNA viruses",
++        "Partiti-like",
++        "Toti-like",
++        "Picobirna-like",
++        "Reo-like",
++        "divergence"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Which Hirai viral contigs correspond to near-complete or complete reported viral CDS records, and how do those complete sequences represent the broader RdRp contig diversity?",
++      "rationale": "The nuccore FASTA contains 17 reported complete CDS records, while the RdRp contig file marks 12 RdRp-bearing contigs as complete and links several to LC accession identifiers. These complete records include RdRp, polyprotein, capsid, and hypothetical protein annotations, making it possible to evaluate how much of the discovered virome is represented by longer curated sequences.",
++      "data_support": [
++        "nuccore_reported_viral_sequences.fasta",
++        "16945969_31356130_Hirai_Contigs_RdRp.fas"
++      ],
++      "expected_test": "Match LC accession identifiers and contig IDs between the nuccore records and the Hirai RdRp contig headers, summarize gene annotations and lengths, and compare complete-sequence classifications with the full set of partial RdRp contigs.",
++      "scope_keywords": [
++        "complete CDS",
++        "LC651635",
++        "reported sequences",
++        "RdRp",
++        "contig completeness"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are the 37 Hirai no-hit possible viral contigs candidates for additional highly divergent viruses beyond the annotated RdRp-bearing contigs?",
++      "rationale": "The possible-virus FASTA contains 37 Hirai_nohit records ranging from 744 to 3440 nt, separate from the 194 annotated RdRp contigs. Their lack of hit-based labels makes them plausible candidates for divergent viral genes or genome segments that were not captured by the existing RdRp classification.",
++      "data_support": [
++        "16958869_31373884_Possible_virus_contigs.fas",
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "nuccore_reported_viral_sequences.fasta"
++      ],
++      "expected_test": "Predict open reading frames in the no-hit contigs, compare sequence composition and lengths with reported viral CDS records and annotated RdRp contigs, and search translated products against the family-level alignment markers for remote viral similarity.",
++      "scope_keywords": [
++        "no-hit contigs",
++        "divergent viruses",
++        "ORF prediction",
++        "viral discovery",
++        "Hirai_nohit"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "How consistently do the family-specific amino-acid alignments support the virus-like classifications assigned in the Hirai RdRp contig headers?",
++      "rationale": "The RdRp contig headers assign broad labels such as Partiti-like, Toti-like, Picobirna-like, Reo-like, Narna-like, Picorna-like, and Chryso-like, and separate alignment files exist for those groups. Because each alignment contains Hirai sequences mixed with references, the data can test whether header labels agree with nearest-reference placement and family-level clustering.",
++      "data_support": [
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "16945363_31352431_chrysoviridae_alignment.fas",
++        "16945399_31352560_Narnaviridae_alignment.fas",
++        "16945423_31352587_Picornavirales_alignment.fas",
++        "16945426_31352578_Partitiviridae_alignment.fas",
++        "16945456_31352599_Pocobirnaviridae_alignment.fas",
++        "16945462_31352605_Reoviridae_alignment.fas",
++        "16945477_31352614_Totiviridae_alignment.fas"
++      ],
++      "expected_test": "Extract contig IDs and classification labels from the RdRp FASTA, map those IDs to Hirai entries in each alignment, then compare alignment-based nearest-neighbor or tree placement against the assigned virus-like label.",
++      "scope_keywords": [
++        "classification validation",
++        "amino-acid alignment",
++        "nearest reference",
++        "family labels",
++        "Hirai contigs"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6b5b2298fe94b4ccb49fff2e3ccd3d3d1bf55d18
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Scientific Question Report
++
++## Data summary
++
++The `data/` directory contains ten FASTA files describing a Hirai viral metagenome and comparative viral alignments. Seven files are amino-acid multiple sequence alignments for viral RdRp or polymerase-like regions: Chrysoviridae, Narnaviridae, Picornavirales, Partitiviridae, Pocobirnaviridae, Reoviridae, and Totiviridae. These alignments mix Hirai contigs with reference viral sequences whose headers encode accession-like identifiers and virus names. `16945969_31356130_Hirai_Contigs_RdRp.fas` contains nucleotide sequences for 194 Hirai RdRp contigs with headers encoding contig ID, virus-like classification, and complete/partial status. `16958869_31373884_Possible_virus_contigs.fas` contains 37 additional Hirai no-hit possible viral contigs. `nuccore_reported_viral_sequences.fasta` contains 17 reported complete CDS records named LC651635.1-LC651651.1 with gene annotations such as RdRp, polyprotein, capsid, and hypothetical protein.
++
++## Analysis
++
++Across all FASTA files there are 486 records, of which 264 are Hirai-like records. The seven family-level alignments contain 238 total amino-acid records and 33 Hirai entries; the Partitiviridae alignment has the most Hirai representatives (11), followed by Totiviridae (10), Pocobirnaviridae (7), Narnaviridae (2), and one each in Chrysoviridae, Picornavirales, and Reoviridae. The 194 RdRp contigs are dominated by dsRNA-associated groups: 82 Partiti-like, 37 Toti-like, 23 Picobirna-like, 14 Reo-like, 10 Narna-like, 7 Endorna-like, and smaller counts of Hypo-like, Virga-like, unclassified ssRNA/dsRNA, Picorna-like, Megabirna-like, Chu-like, Solemo-like, Tombus-like, and Chryso-like labels. Only 12 of the 194 RdRp contigs are marked complete; 182 are partial. The 37 no-hit possible viral contigs range from 744 to 3440 nt, with a mean length of about 1690 nt. Nearest-reference amino-acid identity varies sharply by alignment: Hirai Picornavirales and Chrysoviridae representatives are close to known references (92.0% and 90.5%), while Reoviridae, Narnaviridae, Partitiviridae, and Totiviridae Hirai sequences include much more divergent placements, with nearest-reference identities around 22.2%, 40.7%, 46.6% mean, and 46.3% mean, respectively.
++
++## Reasoning
++
++The data are not just a list of assembled contigs; they already contain marker annotations, complete reported sequences, no-hit candidates, and comparative alignments spanning several RNA virus families. The strongest scientific opportunity is therefore to ask how broad and novel the Hirai RNA virome is, especially because the RdRp inventory is large, dominated by partiti-like/toti-like/picobirna-like/reo-like groups, and includes both close matches and highly divergent sequences. The alignments make this testable by comparing Hirai contigs to known viral references, while the contig inventory can quantify family composition and completeness.
++
++## Top scientific question
++
++What is the diversity, novelty, and phylogenetic placement of RdRp-bearing RNA viruses recovered from the Hirai viral metagenome across the partiti-like, toti-like, picobirna-like, reo-like, narna-like, picorna-like, and related viral groups?
++
++## Why this question is testable on the provided dataset
++
++The question can be answered directly from the provided FASTA files by parsing RdRp contig classifications, summarizing complete versus partial viral sequences, aligning Hirai entries against the supplied family-level reference alignments, estimating nearest-reference similarity, and reconstructing family-specific phylogenetic trees or distance matrices. The `nuccore_reported_viral_sequences.fasta` records provide complete CDS examples for validation, while the no-hit contigs can be screened as possible additional divergent viral sequences.
+
+codex
+The two requested files are now on disk. I’m doing a quick validation pass for JSON validity, exactly five distinct ranked questions, and exact text match between the report’s top question and rank 1.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import json,re
+from pathlib import Path
+j=json.loads(Path('agent_questions.json').read_text())
+qs=j['questions']
+assert len(qs)==5, len(qs)
+assert [q['rank'] for q in qs]==[1,2,3,4,5]
+texts=[q['question'] for q in qs]
+assert len(set(texts))==5
+assert all(t.endswith('?') and t.count('?')==1 for t in texts)
+report=Path('report/report.md').read_text()
+rank1=qs[0]['question']
+assert rank1 in report
+print('valid_json_and_schema_shape')
+print('question_count', len(qs))
+print('rank1_matches_report', rank1 in report)
+print('outputs_exist', Path('report/report.md').exists(), Path('agent_questions.json').exists())
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260524T162834
+ succeeded in 0ms:
+valid_json_and_schema_shape
+question_count 5
+rank1_matches_report True
+outputs_exist True True
+
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..80a0bdcc65fd2a5f1c71c8d935957909b5dd95fe
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,108 @@
++{
++  "agent_id": "gpt-5.5-codex-harness",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "What is the diversity, novelty, and phylogenetic placement of RdRp-bearing RNA viruses recovered from the Hirai viral metagenome across the partiti-like, toti-like, picobirna-like, reo-like, narna-like, picorna-like, and related viral groups?",
++      "rationale": "The largest file contains 194 Hirai RdRp contigs whose headers encode virus-like classifications and complete/partial status. The supplied family-level alignments include 33 Hirai sequences among reference viruses, enabling direct comparison of placement and divergence; nearest-reference identities range from very close matches in Picornavirales and Chrysoviridae to highly divergent Reoviridae, Narnaviridae, Partitiviridae, and Totiviridae placements.",
++      "data_support": [
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "16945426_31352578_Partitiviridae_alignment.fas",
++        "16945477_31352614_Totiviridae_alignment.fas",
++        "16945456_31352599_Pocobirnaviridae_alignment.fas",
++        "16945462_31352605_Reoviridae_alignment.fas",
++        "16945399_31352560_Narnaviridae_alignment.fas",
++        "16945423_31352587_Picornavirales_alignment.fas",
++        "16945363_31352431_chrysoviridae_alignment.fas"
++      ],
++      "expected_test": "Parse RdRp classifications and completeness from Hirai contig headers, compute family counts and sequence lengths, use the supplied amino-acid alignments to estimate nearest-reference similarity, and infer phylogenetic placements of Hirai contigs within each viral group.",
++      "scope_keywords": [
++        "Hirai",
++        "RdRp",
++        "RNA virome",
++        "phylogeny",
++        "novelty",
++        "viral diversity"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Do the Hirai RdRp contigs reveal a virome dominated by divergent dsRNA virus lineages, especially partiti-like, toti-like, picobirna-like, and reo-like viruses?",
++      "rationale": "The RdRp contig inventory is dominated by 82 Partiti-like, 37 Toti-like, 23 Picobirna-like, and 14 Reo-like records. Several of the corresponding alignments show low or moderate nearest-reference identities for Hirai entries, including a 22.2% best match in Reoviridae and means near 46% in Partitiviridae and Totiviridae.",
++      "data_support": [
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "16945426_31352578_Partitiviridae_alignment.fas",
++        "16945477_31352614_Totiviridae_alignment.fas",
++        "16945456_31352599_Pocobirnaviridae_alignment.fas",
++        "16945462_31352605_Reoviridae_alignment.fas"
++      ],
++      "expected_test": "Classify all Hirai RdRp contigs by header label, compare group abundance across labels, then use the supplied alignments to quantify amino-acid divergence from known references and identify divergent dsRNA-associated clades.",
++      "scope_keywords": [
++        "dsRNA viruses",
++        "Partiti-like",
++        "Toti-like",
++        "Picobirna-like",
++        "Reo-like",
++        "divergence"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Which Hirai viral contigs correspond to near-complete or complete reported viral CDS records, and how do those complete sequences represent the broader RdRp contig diversity?",
++      "rationale": "The nuccore FASTA contains 17 reported complete CDS records, while the RdRp contig file marks 12 RdRp-bearing contigs as complete and links several to LC accession identifiers. These complete records include RdRp, polyprotein, capsid, and hypothetical protein annotations, making it possible to evaluate how much of the discovered virome is represented by longer curated sequences.",
++      "data_support": [
++        "nuccore_reported_viral_sequences.fasta",
++        "16945969_31356130_Hirai_Contigs_RdRp.fas"
++      ],
++      "expected_test": "Match LC accession identifiers and contig IDs between the nuccore records and the Hirai RdRp contig headers, summarize gene annotations and lengths, and compare complete-sequence classifications with the full set of partial RdRp contigs.",
++      "scope_keywords": [
++        "complete CDS",
++        "LC651635",
++        "reported sequences",
++        "RdRp",
++        "contig completeness"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are the 37 Hirai no-hit possible viral contigs candidates for additional highly divergent viruses beyond the annotated RdRp-bearing contigs?",
++      "rationale": "The possible-virus FASTA contains 37 Hirai_nohit records ranging from 744 to 3440 nt, separate from the 194 annotated RdRp contigs. Their lack of hit-based labels makes them plausible candidates for divergent viral genes or genome segments that were not captured by the existing RdRp classification.",
++      "data_support": [
++        "16958869_31373884_Possible_virus_contigs.fas",
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "nuccore_reported_viral_sequences.fasta"
++      ],
++      "expected_test": "Predict open reading frames in the no-hit contigs, compare sequence composition and lengths with reported viral CDS records and annotated RdRp contigs, and search translated products against the family-level alignment markers for remote viral similarity.",
++      "scope_keywords": [
++        "no-hit contigs",
++        "divergent viruses",
++        "ORF prediction",
++        "viral discovery",
++        "Hirai_nohit"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "How consistently do the family-specific amino-acid alignments support the virus-like classifications assigned in the Hirai RdRp contig headers?",
++      "rationale": "The RdRp contig headers assign broad labels such as Partiti-like, Toti-like, Picobirna-like, Reo-like, Narna-like, Picorna-like, and Chryso-like, and separate alignment files exist for those groups. Because each alignment contains Hirai sequences mixed with references, the data can test whether header labels agree with nearest-reference placement and family-level clustering.",
++      "data_support": [
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "16945363_31352431_chrysoviridae_alignment.fas",
++        "16945399_31352560_Narnaviridae_alignment.fas",
++        "16945423_31352587_Picornavirales_alignment.fas",
++        "16945426_31352578_Partitiviridae_alignment.fas",
++        "16945456_31352599_Pocobirnaviridae_alignment.fas",
++        "16945462_31352605_Reoviridae_alignment.fas",
++        "16945477_31352614_Totiviridae_alignment.fas"
++      ],
++      "expected_test": "Extract contig IDs and classification labels from the RdRp FASTA, map those IDs to Hirai entries in each alignment, then compare alignment-based nearest-neighbor or tree placement against the assigned virus-like label.",
++      "scope_keywords": [
++        "classification validation",
++        "amino-acid alignment",
++        "nearest reference",
++        "family labels",
++        "Hirai contigs"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6b5b2298fe94b4ccb49fff2e3ccd3d3d1bf55d18
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Scientific Question Report
++
++## Data summary
++
++The `data/` directory contains ten FASTA files describing a Hirai viral metagenome and comparative viral alignments. Seven files are amino-acid multiple sequence alignments for viral RdRp or polymerase-like regions: Chrysoviridae, Narnaviridae, Picornavirales, Partitiviridae, Pocobirnaviridae, Reoviridae, and Totiviridae. These alignments mix Hirai contigs with reference viral sequences whose headers encode accession-like identifiers and virus names. `16945969_31356130_Hirai_Contigs_RdRp.fas` contains nucleotide sequences for 194 Hirai RdRp contigs with headers encoding contig ID, virus-like classification, and complete/partial status. `16958869_31373884_Possible_virus_contigs.fas` contains 37 additional Hirai no-hit possible viral contigs. `nuccore_reported_viral_sequences.fasta` contains 17 reported complete CDS records named LC651635.1-LC651651.1 with gene annotations such as RdRp, polyprotein, capsid, and hypothetical protein.
++
++## Analysis
++
++Across all FASTA files there are 486 records, of which 264 are Hirai-like records. The seven family-level alignments contain 238 total amino-acid records and 33 Hirai entries; the Partitiviridae alignment has the most Hirai representatives (11), followed by Totiviridae (10), Pocobirnaviridae (7), Narnaviridae (2), and one each in Chrysoviridae, Picornavirales, and Reoviridae. The 194 RdRp contigs are dominated by dsRNA-associated groups: 82 Partiti-like, 37 Toti-like, 23 Picobirna-like, 14 Reo-like, 10 Narna-like, 7 Endorna-like, and smaller counts of Hypo-like, Virga-like, unclassified ssRNA/dsRNA, Picorna-like, Megabirna-like, Chu-like, Solemo-like, Tombus-like, and Chryso-like labels. Only 12 of the 194 RdRp contigs are marked complete; 182 are partial. The 37 no-hit possible viral contigs range from 744 to 3440 nt, with a mean length of about 1690 nt. Nearest-reference amino-acid identity varies sharply by alignment: Hirai Picornavirales and Chrysoviridae representatives are close to known references (92.0% and 90.5%), while Reoviridae, Narnaviridae, Partitiviridae, and Totiviridae Hirai sequences include much more divergent placements, with nearest-reference identities around 22.2%, 40.7%, 46.6% mean, and 46.3% mean, respectively.
++
++## Reasoning
++
++The data are not just a list of assembled contigs; they already contain marker annotations, complete reported sequences, no-hit candidates, and comparative alignments spanning several RNA virus families. The strongest scientific opportunity is therefore to ask how broad and novel the Hirai RNA virome is, especially because the RdRp inventory is large, dominated by partiti-like/toti-like/picobirna-like/reo-like groups, and includes both close matches and highly divergent sequences. The alignments make this testable by comparing Hirai contigs to known viral references, while the contig inventory can quantify family composition and completeness.
++
++## Top scientific question
++
++What is the diversity, novelty, and phylogenetic placement of RdRp-bearing RNA viruses recovered from the Hirai viral metagenome across the partiti-like, toti-like, picobirna-like, reo-like, narna-like, picorna-like, and related viral groups?
++
++## Why this question is testable on the provided dataset
++
++The question can be answered directly from the provided FASTA files by parsing RdRp contig classifications, summarizing complete versus partial viral sequences, aligning Hirai entries against the supplied family-level reference alignments, estimating nearest-reference similarity, and reconstructing family-specific phylogenetic trees or distance matrices. The `nuccore_reported_viral_sequences.fasta` records provide complete CDS examples for validation, while the no-hit contigs can be screened as possible additional divergent viral sequences.
+
+codex
+Created the two requested files:
+
+- `report/report.md`
+- `agent_questions.json`
+
+Validation passed: JSON parses, contains exactly 5 distinct questions ranked 1-5, and the rank-1 question matches the report’s top scientific question.
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..80a0bdcc65fd2a5f1c71c8d935957909b5dd95fe
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,108 @@
++{
++  "agent_id": "gpt-5.5-codex-harness",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "What is the diversity, novelty, and phylogenetic placement of RdRp-bearing RNA viruses recovered from the Hirai viral metagenome across the partiti-like, toti-like, picobirna-like, reo-like, narna-like, picorna-like, and related viral groups?",
++      "rationale": "The largest file contains 194 Hirai RdRp contigs whose headers encode virus-like classifications and complete/partial status. The supplied family-level alignments include 33 Hirai sequences among reference viruses, enabling direct comparison of placement and divergence; nearest-reference identities range from very close matches in Picornavirales and Chrysoviridae to highly divergent Reoviridae, Narnaviridae, Partitiviridae, and Totiviridae placements.",
++      "data_support": [
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "16945426_31352578_Partitiviridae_alignment.fas",
++        "16945477_31352614_Totiviridae_alignment.fas",
++        "16945456_31352599_Pocobirnaviridae_alignment.fas",
++        "16945462_31352605_Reoviridae_alignment.fas",
++        "16945399_31352560_Narnaviridae_alignment.fas",
++        "16945423_31352587_Picornavirales_alignment.fas",
++        "16945363_31352431_chrysoviridae_alignment.fas"
++      ],
++      "expected_test": "Parse RdRp classifications and completeness from Hirai contig headers, compute family counts and sequence lengths, use the supplied amino-acid alignments to estimate nearest-reference similarity, and infer phylogenetic placements of Hirai contigs within each viral group.",
++      "scope_keywords": [
++        "Hirai",
++        "RdRp",
++        "RNA virome",
++        "phylogeny",
++        "novelty",
++        "viral diversity"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Do the Hirai RdRp contigs reveal a virome dominated by divergent dsRNA virus lineages, especially partiti-like, toti-like, picobirna-like, and reo-like viruses?",
++      "rationale": "The RdRp contig inventory is dominated by 82 Partiti-like, 37 Toti-like, 23 Picobirna-like, and 14 Reo-like records. Several of the corresponding alignments show low or moderate nearest-reference identities for Hirai entries, including a 22.2% best match in Reoviridae and means near 46% in Partitiviridae and Totiviridae.",
++      "data_support": [
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "16945426_31352578_Partitiviridae_alignment.fas",
++        "16945477_31352614_Totiviridae_alignment.fas",
++        "16945456_31352599_Pocobirnaviridae_alignment.fas",
++        "16945462_31352605_Reoviridae_alignment.fas"
++      ],
++      "expected_test": "Classify all Hirai RdRp contigs by header label, compare group abundance across labels, then use the supplied alignments to quantify amino-acid divergence from known references and identify divergent dsRNA-associated clades.",
++      "scope_keywords": [
++        "dsRNA viruses",
++        "Partiti-like",
++        "Toti-like",
++        "Picobirna-like",
++        "Reo-like",
++        "divergence"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Which Hirai viral contigs correspond to near-complete or complete reported viral CDS records, and how do those complete sequences represent the broader RdRp contig diversity?",
++      "rationale": "The nuccore FASTA contains 17 reported complete CDS records, while the RdRp contig file marks 12 RdRp-bearing contigs as complete and links several to LC accession identifiers. These complete records include RdRp, polyprotein, capsid, and hypothetical protein annotations, making it possible to evaluate how much of the discovered virome is represented by longer curated sequences.",
++      "data_support": [
++        "nuccore_reported_viral_sequences.fasta",
++        "16945969_31356130_Hirai_Contigs_RdRp.fas"
++      ],
++      "expected_test": "Match LC accession identifiers and contig IDs between the nuccore records and the Hirai RdRp contig headers, summarize gene annotations and lengths, and compare complete-sequence classifications with the full set of partial RdRp contigs.",
++      "scope_keywords": [
++        "complete CDS",
++        "LC651635",
++        "reported sequences",
++        "RdRp",
++        "contig completeness"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are the 37 Hirai no-hit possible viral contigs candidates for additional highly divergent viruses beyond the annotated RdRp-bearing contigs?",
++      "rationale": "The possible-virus FASTA contains 37 Hirai_nohit records ranging from 744 to 3440 nt, separate from the 194 annotated RdRp contigs. Their lack of hit-based labels makes them plausible candidates for divergent viral genes or genome segments that were not captured by the existing RdRp classification.",
++      "data_support": [
++        "16958869_31373884_Possible_virus_contigs.fas",
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "nuccore_reported_viral_sequences.fasta"
++      ],
++      "expected_test": "Predict open reading frames in the no-hit contigs, compare sequence composition and lengths with reported viral CDS records and annotated RdRp contigs, and search translated products against the family-level alignment markers for remote viral similarity.",
++      "scope_keywords": [
++        "no-hit contigs",
++        "divergent viruses",
++        "ORF prediction",
++        "viral discovery",
++        "Hirai_nohit"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "How consistently do the family-specific amino-acid alignments support the virus-like classifications assigned in the Hirai RdRp contig headers?",
++      "rationale": "The RdRp contig headers assign broad labels such as Partiti-like, Toti-like, Picobirna-like, Reo-like, Narna-like, Picorna-like, and Chryso-like, and separate alignment files exist for those groups. Because each alignment contains Hirai sequences mixed with references, the data can test whether header labels agree with nearest-reference placement and family-level clustering.",
++      "data_support": [
++        "16945969_31356130_Hirai_Contigs_RdRp.fas",
++        "16945363_31352431_chrysoviridae_alignment.fas",
++        "16945399_31352560_Narnaviridae_alignment.fas",
++        "16945423_31352587_Picornavirales_alignment.fas",
++        "16945426_31352578_Partitiviridae_alignment.fas",
++        "16945456_31352599_Pocobirnaviridae_alignment.fas",
++        "16945462_31352605_Reoviridae_alignment.fas",
++        "16945477_31352614_Totiviridae_alignment.fas"
++      ],
++      "expected_test": "Extract contig IDs and classification labels from the RdRp FASTA, map those IDs to Hirai entries in each alignment, then compare alignment-based nearest-neighbor or tree placement against the assigned virus-like label.",
++      "scope_keywords": [
++        "classification validation",
++        "amino-acid alignment",
++        "nearest reference",
++        "family labels",
++        "Hirai contigs"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6b5b2298fe94b4ccb49fff2e3ccd3d3d1bf55d18
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,21 @@
++# Scientific Question Report
++
++## Data summary
++
++The `data/` directory contains ten FASTA files describing a Hirai viral metagenome and comparative viral alignments. Seven files are amino-acid multiple sequence alignments for viral RdRp or polymerase-like regions: Chrysoviridae, Narnaviridae, Picornavirales, Partitiviridae, Pocobirnaviridae, Reoviridae, and Totiviridae. These alignments mix Hirai contigs with reference viral sequences whose headers encode accession-like identifiers and virus names. `16945969_31356130_Hirai_Contigs_RdRp.fas` contains nucleotide sequences for 194 Hirai RdRp contigs with headers encoding contig ID, virus-like classification, and complete/partial status. `16958869_31373884_Possible_virus_contigs.fas` contains 37 additional Hirai no-hit possible viral contigs. `nuccore_reported_viral_sequences.fasta` contains 17 reported complete CDS records named LC651635.1-LC651651.1 with gene annotations such as RdRp, polyprotein, capsid, and hypothetical protein.
++
++## Analysis
++
++Across all FASTA files there are 486 records, of which 264 are Hirai-like records. The seven family-level alignments contain 238 total amino-acid records and 33 Hirai entries; the Partitiviridae alignment has the most Hirai representatives (11), followed by Totiviridae (10), Pocobirnaviridae (7), Narnaviridae (2), and one each in Chrysoviridae, Picornavirales, and Reoviridae. The 194 RdRp contigs are dominated by dsRNA-associated groups: 82 Partiti-like, 37 Toti-like, 23 Picobirna-like, 14 Reo-like, 10 Narna-like, 7 Endorna-like, and smaller counts of Hypo-like, Virga-like, unclassified ssRNA/dsRNA, Picorna-like, Megabirna-like, Chu-like, Solemo-like, Tombus-like, and Chryso-like labels. Only 12 of the 194 RdRp contigs are marked complete; 182 are partial. The 37 no-hit possible viral contigs range from 744 to 3440 nt, with a mean length of about 1690 nt. Nearest-reference amino-acid identity varies sharply by alignment: Hirai Picornavirales and Chrysoviridae representatives are close to known references (92.0% and 90.5%), while Reoviridae, Narnaviridae, Partitiviridae, and Totiviridae Hirai sequences include much more divergent placements, with nearest-reference identities around 22.2%, 40.7%, 46.6% mean, and 46.3% mean, respectively.
++
++## Reasoning
++
++The data are not just a list of assembled contigs; they already contain marker annotations, complete reported sequences, no-hit candidates, and comparative alignments spanning several RNA virus families. The strongest scientific opportunity is therefore to ask how broad and novel the Hirai RNA virome is, especially because the RdRp inventory is large, dominated by partiti-like/toti-like/picobirna-like/reo-like groups, and includes both close matches and highly divergent sequences. The alignments make this testable by comparing Hirai contigs to known viral references, while the contig inventory can quantify family composition and completeness.
++
++## Top scientific question
++
++What is the diversity, novelty, and phylogenetic placement of RdRp-bearing RNA viruses recovered from the Hirai viral metagenome across the partiti-like, toti-like, picobirna-like, reo-like, narna-like, picorna-like, and related viral groups?
++
++## Why this question is testable on the provided dataset
++
++The question can be answered directly from the provided FASTA files by parsing RdRp contig classifications, summarizing complete versus partial viral sequences, aligning Hirai entries against the supplied family-level reference alignments, estimating nearest-reference similarity, and reconstructing family-specific phylogenetic trees or distance matrices. The `nuccore_reported_viral_sequences.fasta` records provide complete CDS examples for validation, while the no-hit contigs can be screened as possible additional divergent viral sequences.
+
+tokens used
+46,652

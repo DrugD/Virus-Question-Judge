@@ -1,0 +1,7 @@
+Both files are saved and validated.
+
+**Summary**
+
+- `data/nuccore_reported_viral_sequences.fasta` — 1,801 NCBI viral MAGs from a Chinese tick-virome study (TIGMIC project, accessions ON746xxx + ON811/812xxx), 21 viral families, 362 species labels (282 singletons), >30 Chinese localities encoded in species names, length range 803–22,791 nt.
+- `report/report.md` — data summary, four derived statistics, reasoning, top question (verbatim), and testability section.
+- `agent_questions.json` — 5 ranked, distinct, single-sentence questions ending with `?`. Rank 1 targets the strongest signal: which Nairoviridae/Phenuiviridae contigs are phylogenetically sister to known tick-borne human/livestock pathogens (CCHFV, SFTSV, NSDV) and how that zoonotic-adjacent diversity distributes geographically. Ranks 2–5 cover mycovirus-vs-arthropod-virus host attribution, biogeographic richness gradient, near-complete Flavi/Chuvirus genomes, and MAG-vs-UNVERIFIED QC analysis.

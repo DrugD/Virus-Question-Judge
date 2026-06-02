@@ -1,0 +1,87 @@
+[
+  {
+    "id": "question_matching",
+    "type": "text",
+    "content": "Question matching: evaluate whether the top-ranked generated scientific question matches the primary groundtruth question from the target paper. Groundtruth question: Can petabase-scale mining of public sequencing data uncover a large hidden RNA-virus/RdRP diversity that is absent from curated viral reference databases?",
+    "path": null,
+    "keywords": [
+      "0: Completely unrelated. Example: Can vaccines prevent RNA viruses?",
+      "1: Only mentions viruses, but the research direction is wrong. Example: Can ML discover dangerous viruses in humans?",
+      "2: Mentions SRA or new viruses, but remains too generic. Example: Are there new viruses in SRA data?",
+      "3: Mentions RdRP or public databases, but lacks the core scientific significance. Example: Can we identify some RdRP sequences from public data?",
+      "4: Basically covers the target paper's question, but misses one or two key elements. Example: Can large-scale SRA mining reveal many novel RNA viruses?",
+      "5: Highly matches the core scientific question. Example: Can petabase-scale RdRP alignment of public SRA data reveal large hidden RNA-virus diversity missing from reference databases?"
+    ],
+    "weight": 0.4
+  },
+  {
+    "id": "novelty",
+    "type": "text",
+    "content": "Novelty: evaluate whether the generated scientific question identifies a nontrivial scientific opportunity rather than a routine data-processing task.",
+    "path": null,
+    "keywords": [
+      "1: The question is generic and only asks whether new viruses exist.",
+      "2: The question mentions new viral sequences but does not identify a clear knowledge gap.",
+      "3: The question identifies novel RdRP or RNA-virus candidates, but does not explain why they matter scientifically.",
+      "4: The question identifies large-scale hidden RNA-virus diversity or a reference-database blind spot.",
+      "5: The question clearly frames a major unexplored RNA virome, a systematic reference-database limitation, or a large-scale viral discovery frontier."
+    ],
+    "weight": 0.15
+  },
+  {
+    "id": "importance",
+    "type": "text",
+    "content": "Importance: evaluate whether the generated scientific question has scientific, biomedical, ecological, or surveillance significance.",
+    "path": null,
+    "keywords": [
+      "1: The question has only narrow technical relevance.",
+      "2: The question is relevant only to a small subset of sequences or samples.",
+      "3: The question has moderate relevance to viral discovery.",
+      "4: The question is important for RNA-virus diversity, database construction, or large-scale viromics.",
+      "5: The question has broad significance for viral evolution, global virome characterization, viral reservoirs, or pathogen surveillance."
+    ],
+    "weight": 0.15
+  },
+  {
+    "id": "testability",
+    "type": "text",
+    "content": "Testability: evaluate whether the generated scientific question can be tested using the provided blind dataset and reasonable downstream analyses.",
+    "path": null,
+    "keywords": [
+      "1: The question cannot be tested with the available data.",
+      "2: The question requires unrelated experiments or unsupported external assumptions.",
+      "3: The question can be partially tested using alignment or metadata evidence.",
+      "4: The question can be tested using RdRP alignment, clustering, novelty statistics, and sample-source metadata.",
+      "5: The question is directly testable through large-scale search coverage, RdRP hit validation, sOTU clustering, reference-database comparison, and source-distribution analysis."
+    ],
+    "weight": 0.1
+  },
+  {
+    "id": "data_support",
+    "type": "text",
+    "content": "Data support: evaluate whether the generated scientific question is grounded in the blind input data rather than invented context.",
+    "path": null,
+    "keywords": [
+      "1: The question is not supported by the input data.",
+      "2: The question uses only one vague cue from the input.",
+      "3: The question uses public sequencing data or RdRP evidence, but ignores scale or novelty signals.",
+      "4: The question uses multiple relevant cues such as RdRP fragments, low reference identity, cluster counts, and metadata.",
+      "5: The question is strongly grounded in the combination of large-scale archive mining, RdRP-like fragments, candidate sOTUs, low reference similarity, and reference-database gaps."
+    ],
+    "weight": 0.1
+  },
+  {
+    "id": "specificity",
+    "type": "text",
+    "content": "Specificity: evaluate whether the generated scientific question has clear objects, data scope, biological marker, and scientific implication.",
+    "path": null,
+    "keywords": [
+      "1: The question is extremely vague.",
+      "2: The question mentions viruses but lacks data scope or biological marker.",
+      "3: The question mentions public data or RdRP, but lacks a precise scientific implication.",
+      "4: The question specifies public archive data, RdRP, novel RNA-virus diversity, and a testable comparison.",
+      "5: The question precisely specifies petabase-scale public sequencing mining, the RdRP marker, hidden RNA-virus diversity, reference-database absence, and downstream scientific significance."
+    ],
+    "weight": 0.1
+  }
+]

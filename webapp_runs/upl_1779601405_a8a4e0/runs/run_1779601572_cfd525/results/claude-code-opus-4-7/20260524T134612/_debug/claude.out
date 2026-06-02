@@ -1,0 +1,6 @@
+Both files saved:
+
+- `report/report.md` — short technical report with data summary (6 supplementary files: 3 xlsx, 1 .fa with 154 RdRp ORFs, 1 zip with 9 family FASTAs, 1 figure), three+ derived statistics (taxa breakdown, cross-environment sharing 75/65/31, family FASTA sizes, longitudinal sampling design), reasoning, the verbatim top question, and a testability paragraph.
+- `agent_questions.json` — 5 distinct ranked questions; rank 1 targets the resident-vs-transient oyster-virome distinction using the cross-matrix flags and per-family phylogenies, with grounded `data_support`, `expected_test`, and `scope_keywords`.
+
+Note on the system reminders: the data is biological (RNA-virus RdRp sequences and abundance tables from a Microbiome 2024 oyster virome study) — no executable code was read, so the malware-analysis caveat is moot here. Per instructions I did not open `gold/`.

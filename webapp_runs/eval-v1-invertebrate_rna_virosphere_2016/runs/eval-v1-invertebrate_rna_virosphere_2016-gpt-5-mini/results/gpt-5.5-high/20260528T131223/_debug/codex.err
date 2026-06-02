@@ -1,0 +1,1340 @@
+Reading additional input from stdin...
+2026-05-28T05:12:24.580043Z ERROR codex_models_manager::manager: failed to refresh available models: stream disconnected before completion: failed to decode models response: missing field `models` at line 1 column 74891; body: {"data":[{"id":"gpt-4.1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-05-13","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-08-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-11-20","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-2024-07-18","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-tts","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-max","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-mini","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.2","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-mini","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-nano","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-none","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-image-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-realtime","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-2025-08-28","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-large","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-small","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-ada-002","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"whisper-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gemini-2.5-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-preview-09-2025","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-pro-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-32768","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"claude-haiku-4-5-20251001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-haiku-4-5-20251001-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"dall-e-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"dall-e-3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gemini-2.0-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-thinking-exp","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gpt-3.5-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-0125","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-16k","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-instruct","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-2024-04-09","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-transcribe","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-transcribe-diarize","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-2026-03-05","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-image-1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-3-fast-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4-0709","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4.20-0309-reasoning","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4.3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"imagen-4.0-fast-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-ultra-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"o1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-pro-2025-03-19","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-pro-2025-06-10","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-2025-04-16","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"omni-moderation-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"sora-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-r1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-v3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"veo-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-fast-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"bailian/deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"bailian/deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-r1","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-0528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-v3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax/MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qvq-72b-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-edit-plus-2025-12-15","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"qwen-max-0403","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-longcontext","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0112","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1125","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1127","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1220","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-12-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-1101","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-2025-02-11","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1119","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1230","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-08","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-ocr-2025-11-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct-1m","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-omni-7b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-32b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-480b-a35b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-07-22","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2026-01-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-embedding","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-397b-a17b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash-2026-02-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus-2026-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.7-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.7-max-2026-05-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwq-32b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwq-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"text-embedding-v4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.0-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"ascend-tribe/pangu-pro-moe","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-en-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-zh-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"ByteDance-Seed/Seed-OSS-36B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-OCR","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-0528-Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-mini-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ring-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-embedding-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-reranker-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/MiniMaxAI/MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-VL-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-4.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-14B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct-128K","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-480B-A35B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-235B-A22B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-35B-A3B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-397B-A17B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-9B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/QwQ-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun-ai/Step-3.5-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-A13B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-MT-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4.1V-9B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5-Air","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5V","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-250528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-1-terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-2-251201","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-250324","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-m-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-lite-250315","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-lite-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-240915","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-250515","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-text-240715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-251215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-pro-32k-character-241215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250828","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250715","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-vision-250815","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-8-251228","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-code-preview-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-lite-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-mini-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-pro-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-code-preview-251028","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-250528","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-fast-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-3-0-t2i-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-0-250828","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-5-251128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-5-0-260128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"M2-her","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.1","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-Text-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4-voice","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.6","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.6v","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.7-FlashX","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5v-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-120b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0711-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0905-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking-turbo","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-turbo-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.5","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-thinking-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Kling-Video-O1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-omni","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-128k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-32k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-8k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"step-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"alibaba/tongyi-deepresearch-30b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek/deepseek-v3.2-speciale","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemini-embedding-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-3-27b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-26b-a4b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-31b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-coder","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionai/ling-2.6-1t","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.2-11b-vision-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-405b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.3-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-2-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-4-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4-multimodal-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-24b-instruct-2501","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-3.1-24b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2:online","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-120b","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-14b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-2b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"or/qwen3.5-9b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"perplexity/sonar-reasoning-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus-preview:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/hy3-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-vision-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-mini-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4-fast","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"xiaomi/mimo-v2-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]}],"object":"list","success":true}
+OpenAI Codex v0.130.0
+--------
+workdir: /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+model: gpt-5.5-high
+provider: newapi
+approval: never
+sandbox: danger-full-access
+reasoning effort: none
+reasoning summaries: none
+session id: 019e6cff-8108-79a0-9d29-d3485f18661e
+--------
+user
+Read INSTRUCTIONS.md in the current working directory. Read the agent-visible files under data/. Produce exactly two files in the working directory: report/report.md and agent_questions.json (schema in info.json). target_study/ does not exist in this sandbox - do not look for it.
+
+CRITICAL: agent_questions.json MUST contain exactly 5 distinct candidate questions (rank 1..5, no duplicates). The judge scores Pass@1 (rank-1 only, 100% / 0%) and Pass@5 (position-weighted: rank-i pass adds 1+w_i where w=(5,4,3,2,1), divide by 20). Put your strongest answer at rank 1, plausible alternatives at 2..5.
+
+Stop only when both output files exist on disk.
+codex
+I’ll read the task instructions and the visible data files first, then write only the two requested outputs in the working directory.
+exec
+/bin/zsh -lc 'find . -maxdepth 2 -type f | sort' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+ succeeded in 0ms:
+./INSTRUCTIONS.md
+./_debug/codex.err
+./_debug/codex.out
+./checklist.json
+./data/5905695_alignments_and_phylogenies.zip
+./data/5905698_all_virus_genomes.fasta
+./info.json
+
+exec
+/bin/zsh -lc "pwd && rg --files -g 'INSTRUCTIONS.md' -g 'info.json' -g 'data/**' -g '"'!target_study/**'"'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+ succeeded in 0ms:
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+INSTRUCTIONS.md
+data/5905695_alignments_and_phylogenies.zip
+data/5905698_all_virus_genomes.fasta
+info.json
+
+codex
+The workspace contains the instruction files plus two data artifacts: a FASTA and a ZIP of alignments/phylogenies. I’m checking the schema and the data contents before deciding the five ranked questions.
+exec
+/bin/zsh -lc "sed -n '1,240p' info.json" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+exec
+/bin/zsh -lc "sed -n '1,240p' INSTRUCTIONS.md" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+ succeeded in 0ms:
+{
+  "workspace_kind": "user_uploaded",
+  "data_root": "data/",
+  "files": [
+    {
+      "path": "5905695_alignments_and_phylogenies.zip",
+      "size_bytes": 515950
+    },
+    {
+      "path": "5905698_all_virus_genomes.fasta",
+      "size_bytes": 13600672
+    }
+  ],
+  "agent_output_contract": {
+    "report_path": "report/report.md",
+    "scientific_question_output_path": "agent_questions.json"
+  },
+  "agent_output_schema": {
+    "type": "object",
+    "required": [
+      "agent_id",
+      "questions"
+    ],
+    "properties": {
+      "agent_id": {
+        "type": "string"
+      },
+      "questions": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "required": [
+            "rank",
+            "question",
+            "rationale"
+          ],
+          "properties": {
+            "rank": {
+              "type": "integer"
+            },
+            "question": {
+              "type": "string"
+            },
+            "rationale": {
+              "type": "string"
+            },
+            "data_support": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "expected_test": {
+              "type": "string"
+            },
+            "scope_keywords": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+ succeeded in 0ms:
+# INSTRUCTIONS — Scientific Question Generation
+
+You are an autonomous research agent. Read every file under `data/`, perform analysis, and propose **the single most important scientific question** that the data could be used to answer.
+
+A separate judge LLM will score your top-1 question against a hidden gold rubric. **You will NOT see the gold rubric.** Frame your question purely from the data you observe.
+
+---
+
+## What you have
+
+| Path | Description | Read? |
+|---|---|---|
+| `data/` | Whatever the user uploaded. Could be tables, FASTA, JSON, images, PDFs, …. Make no assumption about schema — discover the structure by listing and sampling files. | ✅ |
+| `info.json` | Data-side metadata: file inventory, sizes, derived statistics. | ✅ |
+| `gold/` | Gold rubric used by the judge. **MUST NOT be opened.** | ❌ |
+
+---
+
+## What you must produce (exact paths)
+
+### `report/report.md`
+
+A short technical report (~300–600 words) with these sections:
+
+1. **Data summary** — what files you found, structure, scale, key columns / fields.
+2. **Analysis** — at least three derived statistics, distributions, or relationships you computed from the data.
+3. **Reasoning** — why these observations motivate the scientific question you will pose.
+4. **Top scientific question** — copied verbatim from `agent_questions.json[0].question`.
+5. **Why this question is testable on the provided dataset.**
+
+### `agent_questions.json`
+
+```json
+{
+  "agent_id": "<your model + harness identifier>",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "<one English sentence ending with '?'>",
+      "rationale": "<2-4 sentences linking the question to specific data evidence>",
+      "data_support": ["<actual file or feature names you used>", "..."],
+      "expected_test": "<how the question is answerable using the kind of data described>",
+      "scope_keywords": ["<3-8 short keywords>"]
+    }
+  ]
+}
+```
+
+- You MUST provide **exactly 5 distinct candidates** (rank 1..5). Duplicates fail validation. The judge scores all 5 and reports:
+  - **Pass@1** = 100% if `questions[0]` passes else 0%.
+  - **Pass@5** = position-weighted score: passing rank `i` adds `(1 + w_i)` where `w = (5,4,3,2,1)`. Numerator divided by 20. Examples: rank-1 only → 30%, ranks 1+2 → 55%, all 5 → 100%.
+- Put your **strongest** answer at rank 1 and progressively-weaker but still grounded alternatives at ranks 2-5; this maximises Pass@5 even if rank 1 misses.
+- Each `question` must be a single sentence ending with `?`.
+- `data_support` items must reference files or features that **actually exist** in the uploaded data.
+
+---
+
+## How to think about the rubric (informally)
+
+The judge looks for questions that:
+
+- **target a non-trivial scientific opportunity**, not a routine ETL or data-cleaning task;
+- have **biomedical / ecological / surveillance / engineering significance**;
+- are **testable using the data in front of you** (you should be able to outline the analysis);
+- are **specifically grounded** — name the dataset's actual features instead of generic phrases like "this data";
+- are **precisely phrased** — clear scientific object, scope, marker, and expected implication.
+
+A question like *"Are there interesting patterns in the data?"* will score very low. A question that names the specific dataset modality, the specific marker / variable of interest, the scale at which the question operates, and the scientific implication will score high.
+
+---
+
+## What NOT to do
+
+- Do not fabricate file names, statistics, or features that aren't in the upload.
+- Do not propose questions that require wet-lab experiments not derivable from the data.
+- Do not open `gold/`.
+- Do not generate ten generic questions hoping one hits — only `questions[0]` is scored.
+
+When `report/report.md` and `agent_questions.json` both exist on disk, your run is complete.
+
+exec
+/bin/zsh -lc "unzip -l data/5905695_alignments_and_phylogenies.zip | sed -n '1,240p'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+ succeeded in 0ms:
+Archive:  data/5905695_alignments_and_phylogenies.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+     6421  06-25-2016 02:33   RdRp_versus_structural/RdRp_hepe_trimal.fas
+      149  06-25-2016 02:33   RdRp_versus_structural/RdRp_hepe_trimal.phy_phyml_tree.nwk
+     4934  06-25-2016 02:33   RdRp_versus_structural/RdRp_luteo_trimal.fas
+      302  06-25-2016 02:33   RdRp_versus_structural/RdRp_luteo_trimal.phy_phyml_tree.nwk
+     1461  06-25-2016 02:33   RdRp_versus_structural/RdRp_narna_trimal.fas
+       73  06-25-2016 02:33   RdRp_versus_structural/RdRp_narna_trimal.nwk
+     5304  06-25-2016 02:33   RdRp_versus_structural/RdRp_permutotetra_trimal.fas
+      216  06-25-2016 02:33   RdRp_versus_structural/RdRp_permutotetra_trimal.phy_phyml_tree.nwk
+     9691  06-25-2016 02:33   RdRp_versus_structural/RdRp_tombus_trimal.fas
+      783  06-25-2016 02:33   RdRp_versus_structural/RdRp_tombus_trimal.phy_phyml_tree.nwk
+     2402  06-25-2016 02:33   RdRp_versus_structural/RdRp_weivirus_trimal.fas
+      110  06-25-2016 02:33   RdRp_versus_structural/RdRp_weivirus_trimal.phy_phyml_tree.nwk
+     2723  06-25-2016 02:33   RdRp_versus_structural/Structure_A21_trimal.fas
+      203  06-25-2016 02:33   RdRp_versus_structural/Structure_A21_trimal.phy_phyml_tree.nwk
+     2521  06-25-2016 02:33   RdRp_versus_structural/Structure_A6_trimal.fas
+      127  06-25-2016 02:33   RdRp_versus_structural/Structure_A6_trimal.phy_phyml_tree.nwk
+     3006  06-25-2016 02:33   RdRp_versus_structural/Structure_Alverna_trimal.fas
+      223  06-25-2016 02:33   RdRp_versus_structural/Structure_Alverna_trimal.phy_phyml_tree.nwk
+     6672  06-25-2016 02:33   RdRp_versus_structural/Structure_Sdomain_trimal.fas
+     1106  06-25-2016 02:33   RdRp_versus_structural/Structure_Sdomain_trimal.phy_phyml_tree.nwk
+      845  08-29-2016 13:19   Astro-Poty_RdRp_phylogeny.nwk
+     5399  08-08-2016 09:19   Astro-Poty_RdRp_trimmed_alignment.fas
+      631  08-29-2016 13:29   birnaviridae_RdRp_phylogeny.nwk
+     5546  08-08-2016 09:44   Birnaviridae_RdRp_trimmed_alignment.fas
+    12067  07-31-2016 19:19   Hepe-Virga_RdRp_phylogeny.nwk
+    56072  07-31-2016 10:15   Hepe-Virga_RdRp_trimmed_alignment.fas
+      870  08-29-2016 13:30   Hypo_RdRp_phylogeny.nwk
+    10647  08-08-2016 10:05   Hypo_RdRp_trimmed_alignment.fas
+    11274  08-29-2016 14:07   Luteo-Sobemo_RdRp_phylogeny.nwk
+    56426  08-06-2016 15:47   Luteo-Sobemo_RdRp_trimmed_alignment.fas
+    13148  08-29-2016 14:09   Narna-Levi_RdRp_phylogeny.nwk
+    40304  08-06-2016 15:58   Narna-Levi_RdRp_trimmed_alignment.fas
+    10851  08-29-2016 14:13   Negative_Bunya-Arena_RdRp_phylogeny.nwk
+    78007  08-04-2016 15:06   Negative_Bunya-Arena_RdRp_trimmed_alignment.fas
+    10991  08-29-2016 14:13   Negative_Mono-Chu_RdRp_phylogeny.nwk
+   136697  08-04-2016 20:30   Negative_Mono-Chu_RdRp_trimmed_alignment.fas
+     2104  08-29-2016 14:13   Negative_Orthomyxo_RdRp_phylogeny.nwk
+    12141  08-04-2016 20:51   Negative_Orthomyxo_RdRp_trimmed_alignment.fas
+      579  08-30-2016 08:22   New-Qinvirus_RdRp_phylogeny.nwk
+     6537  08-08-2016 13:11   New-Qinvirus_RdRp_trimmed_alignment.fas
+     1418  08-30-2016 08:22   New-Weivirus_RdRp_phylogeny.nwk
+     7897  08-08-2016 15:38   New-Weivirus_RdRp_trimmed_alignment.fas
+      287  08-30-2016 08:22   New-Yanvirus_RdRp_phylogeny.nwk
+     1670  08-08-2016 16:10   New-Yanvirus_RdRp_trimmed_alignment.fas
+      583  08-30-2016 08:23   New-Zhaovirus_RdRp_phylogeny.nwk
+     3498  08-08-2016 15:12   New-Zhaovirus_RdRp_trimmed_alignment.fas
+     2317  08-29-2016 14:14   Nido_RdRp_phylogeny.nwk
+    16758  08-01-2016 15:49   Nido_RdRp_trimmed_alignment.fas
+    12813  08-29-2016 14:17   Partiti-Picobirna_RdRp_phylogeny.nwk
+    46690  08-06-2016 18:50   Partiti-Picobirna_RdRp_trimmed_alignment.fas
+     1625  08-29-2016 14:19   Permutotetra_RdRp_phylogeny.nwk
+    12598  08-08-2016 10:51   Permutotetra_RdRp_trimmed_alignment.fas
+    37410  08-29-2016 14:21   Picorna-Calici_RdRp_phylogeny.nwk
+   196522  08-01-2016 14:33   Picorna-Calici_RdRp_trimmed_alignment.fas
+     5439  08-29-2016 14:21   Reo_RdRp_phylogeny.nwk
+    39381  08-07-2016 19:25   Reo_RdRp_trimmed_alignment.fas
+    19841  08-29-2016 14:22   Tombus-Noda_RdRp_phylogeny.nwk
+   100037  08-02-2016 10:38   Tombus-Noda_RdRp_trimmed_alignment.fas
+     7644  08-29-2016 14:23   Toti-Chryso_RdRp_phylogeny.nwk
+    45515  08-07-2016 21:19   Toti-Chryso_RdRp_trimmed_alignment.fas
+---------                     -------
+  1079506                     60 files
+
+exec
+/bin/zsh -lc "awk '/"'^>/{n++; if(n<=80) print; next} {if(n<=3) print substr($0,1,120)} END{print "records=" n}'"' data/5905698_all_virus_genomes.fasta" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+ succeeded in 218ms:
+>BHWZXX13371_Astro-Poty_Beihai_astro-like_virus_len6856
+CAAGTATCCCATGGCTTTTAACGATTGGCAGGCTATTGACTTTGTATTTTTTGACTTAGAAAACGAAGTTGTGGAAATATATAGAGGACACGGCCTTGCCAACCCTGAGAGCTTTGTGAC
+>CJLX30535_Astro-Poty_Zucchini_yellow_mosaic_virus_len9557
+AGTGTTCAAACGAATTTTAAATCGTATTCACATACAAGCAATCCACAATTCGCACAGCATTAAGAATTTCTTCAAGTACTTTGTTTATTTTAGACACAACAATGGCCTCAGTTATGATTG
+>CJLX30757_Astro-Poty_Changjiang_astro-like_virus_len5795
+GATTTATTGATGATAGTTTATGGCTGTGTGTTCAATCTTTGCTGATCTTGAAAGGTATTTGAACCATAAGTATACACGCAAGTTCGAATGTTTGAGCACACCGTCACTCTATTTACCAAT
+>QTM27268_Astro-Poty_Hubei_poty-like_virus_1_len8182
+>SCM51506_Astro-Poty_Hubei_Poty-like_virus_1_len9356
+>SCM51513_Astro-Poty_Bean_yellow_mosaic_virus_len7032
+>spider131932_Astro-Poty_Zucchini_yellow_mosaic_virus_len9551
+>SZmix32467_Astro-Poty_Hubei_leech_virus_1_len4779
+>WGML136555_Astro-Poty_Hubei_astro-like_virus_len6784
+>WHWN51517_Astro-Poty_Wuhan_poty-like_virus_1_len8197
+>JMYJCC68862_Birna_Jingmen_birna-like_virus_len3293
+>SZmix18962_Birna_Hubei_birna-like_virus_len2895
+>3mos5202_Bunya-Arena_Wuhan_mosquito_virus_1_KM817697_RdRp_len6474
+>3mos4052_Bunya-Arena_Wuhan_mosquito_virus_1_KM817726_Glycoprotein_len2217
+>3mos6328_Bunya-Arena_Wuhan_mosquito_virus_1_KM817758_Nucleoprotein_len2111
+>3mos6216_Bunya-Arena_Zhee_mosquito_virus_KM817705_len7603
+>arthropodmix13442_Bunya-Arena_Wuhan_insect_virus_16_RdRp_len6683
+>arthropodmix12000_Bunya-Arena_Wuhan_insect_virus_16_Nucleoprotein_len1618
+>arthropodmix14045_Bunya-Arena_Hubei_insect_virus_1_RdRp_len7035
+>arthropodmix13349_Bunya-Arena_Hubei_insect_virus_1_Nucleoprotein_len1380
+>BHBJDX18821_Bunya-Arena_Beihai_shrimp_virus_3_RdRp_len10960
+>BHBJDX18799_Bunya-Arena_Beihai_shrimp_virus_3_Glycoprotein_len4249
+>BHBJDX18341_Bunya-Arena_Beihai_shrimp_virus_3_Nucleoprotein_len3605
+>BHCL81707_Bunya-Arena_Beihai_bunya-like_virus_4_len9843
+>BHJJX25757_Bunya-Arena_Beihai_hermit_crab_virus_2_RdRp_len9038
+>BHJJX25545_Bunya-Arena_Beihai_hermit_crab_virus_2_Glycoprotein_len5119
+>BHJJX25710_Bunya-Arena_Beihai_hermit_crab_virus_2_Nucleoprotein_len5153
+>BHJP59844_Bunya-Arena_Beihai_bunya-like_virus_5_len7842
+>BHNXC41490_Bunya-Arena_Beihai_sipunculid_worm_virus_7_RdRp_len11709
+>BHNXC41315_Bunya-Arena_Beihai_sipunculid_worm_virus_7_Glycoprotein_len7631
+>BHTH16146_Bunya-Arena_Beihai_barnacle_virus_5_len6887
+>BHTH41702_Bunya-Arena_Beihai_barnacle_virus_6_len5878
+>BHTSS17606_Bunya-Arena_Beihai_bunya-like_virus_1_RdRp_len6576
+>BHTSS6042_Bunya-Arena_Beihai_bunya-like_virus_1_Nucleoprotein_len1557
+>BHWZXX15649_Bunya-Arena_Beihai_shrimp_virus_3_RdRp_len10960
+>BHWZXX15640_Bunya-Arena_Beihai_shrimp_virus_3_Glycoprotein_len4249
+>BHWZXX15383_Bunya-Arena_Beihai_shrimp_virus_3_Nucleoprotein_len3605
+>BHZC35426_Bunya-Arena_Beihai_bunya-like_virus_2_RdRp_len6115
+>BHZC31792_Bunya-Arena_Beihai_bunya-like_virus_2_Nucleoprotein_len1380
+>BWBFG40849_Bunya-Arena_Beihai_bunya-like_virus_3_len10487
+>CC41253_Bunya-Arena_Shuangao_Bedbug_Virus_1_RdRp_KM817678_len6085
+>CC65850_Bunya-Arena_Shuangao_Bedbug_Virus_1_Glycoprotein_KM817713_len3302
+>CC59661_Bunya-Arena_Wuhan_Louse_Fly_Virus_1_RdRp_KM817663_len6787
+>CC56033_Bunya-Arena_Wuhan_Louse_Fly_Virus_1_Glycoprotein_KM817725_len2939
+>CC57314_Bunya-Arena_Wuhan_Louse_Fly_Virus_1_Nucleoprotein_KM817755_len959
+>CC64393_Bunya-Arena_Wuhan_Louse_Fly_Virus_2_RdRp_KM817694_len7082
+>CC62488_Bunya-Arena_Wuhan_Louse_Fly_Virus_2_Nucleoprotein_KM817756_len1285
+>CPQY18609_Bunya-Arena_Changping_bunya-like_virus_1_len10125
+>fly38845_Bunya-Arena_Wuhan_Fly_Virus_1_RdRp_KM817689_len6779
+>fly116628_Bunya-Arena_Wuhan_Fly_Virus_1_Glycoprotein_KM817722_len4454
+>fly116620_Bunya-Arena_Wuhan_Fly_Virus_1_Nucleoprotein_KM817749_len1116
+>GCM10499_Bunya-Arena_Hubei_myriapoda_virus_5_RdRp_len9874
+>GCM10217_Bunya-Arena_Hubei_myriapoda_virus_5_Glycoprotein_len3558
+>GCM10064_Bunya-Arena_Hubei_myriapoda_virus_5_Nucleoprotein_len2579
+>HBXXC60124_Bunya-Arena_Hubei_blood_fluke_virus_2_RdRp_len6087
+>HBXXC46594_Bunya-Arena_Hubei_blood_fluke_virus_2_Nucleoprotein_len1457
+>HBXXC56361_Bunya-Arena_Hubei_blood_fluke_virus_1_RdRp_len6054
+>HBXXC50893_Bunya-Arena_Hubei_blood_fluke_virus_1_Nucleoprotein_len1351
+>HC21343_Bunya-Arena_Shayang_ascaridia_galli_virus_1_len8373
+>horsefly105120_Bunya-Arena_Wuhan_horsefly_Virus_KM817690_RdRp_len9549
+>horsefly38870_Bunya-Arena_Wuhan_horsefly_Virus_KM817723_Glycoprotein_len2804
+>horsefly124358_Bunya-Arena_Wuhan_horsefly_Virus_KM817750_NS_len1698
+>horsefly124382_Bunya-Arena_Wuhan_horsefly_Virus_KM817751_Nucleoprotein_len1861
+>insectZJ95907_Bunya-Arena_Shuangao_Insect_Virus_1_RdRp_KM817679_len7329
+>insectZJ96907_Bunya-Arena_Shuangao_Insect_Virus_1_Glycoprotein_KM817714_len4753
+>insectZJ99139_Bunya-Arena_Shuangao_Insect_Virus_1_Nucleoprotein_KM817739_len1233
+>insectZJ97888_Bunya-Arena_Shuangao_Insect_Virus_2_RdRp_KM817680_len4899
+>insectZJ84526_Bunya-Arena_Shuangao_Insect_Virus_2_Glycoprotein_KM817715_len2255
+>insectZJ68958_Bunya-Arena_Shuangao_Insect_Virus_2_Nucleoprotein_KM817740_len1959
+>insectZJ98059_Bunya-Arena_Shuangao_Insect_Virus_3_KM817681_len6276
+>JMYJCC72012_Bunya-Arena_Jingmen_bunya-like_virus_1_len8361
+>JMYJCC72107_Bunya-Arena_Jingmen_ascaridia_virus_1_len6946
+>JSC69896_Bunya-Arena_Hubei_blood_fluke_virus_2_RdRp_len6087
+>JSC69150_Bunya-Arena_Hubei_blood_fluke_virus_2_Nucleoprotein_len1457
+>JSC85519_Bunya-Arena_Hubei_blood_fluke_virus_1_RdRp_len6054
+>JSC210170_Bunya-Arena_Hubei_blood_fluke_virus_1_Nucleoprotein_len1351
+>LCM141331_Bunya-Arena_Hubei_lepidoptera_virus_1_RdRp_len7541
+>LCM141308_Bunya-Arena_Hubei_lepidoptera_virus_1_Glycoprotein_len5354
+>LCM135915_Bunya-Arena_Hubei_lepidoptera_virus_1_Nucleoprotein_len1275
+>liyanpi39952_Bunya-Arena_Bole_Tick_Virus_1_RdRp_KM817664_Len6483
+records=2339
+
+codex
+The FASTA headers encode a viral grouping, virus name, optional genome segment/gene label, and sequence length. I’m going to compute counts by group, sequence length distributions, segmented-genome patterns, and alignment/tree coverage from the ZIP.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from collections import Counter, defaultdict
+import re, statistics, zipfile
+f=Path('data/5905698_all_virus_genomes.fasta')
+records=[]
+seq_id=None; seq=[]
+for line in f.open():
+    line=line.strip()
+    if not line: continue
+    if line.startswith('>'):
+        if seq_id:
+            records.append((seq_id,''.join(seq)))
+        seq_id=line[1:]
+        seq=[]
+    else:
+        seq.append(line.upper())
+if seq_id: records.append((seq_id,''.join(seq)))
+print('FASTA records', len(records))
+lengths=[]; mism=[]; groups=Counter(); genes=Counter(); species_counter=Counter(); sample_prefix=Counter(); source_prefix=Counter()
+by_group=defaultdict(list); virus_segments=defaultdict(list); virus_seqids=defaultdict(list)
+for h,s in records:
+    m=re.search(r'_(?:l|L)en(\\d+)"'$'"', h)
+    L=int(m.group(1)) if m else len(s)
+    lengths.append(L)
+    if L "'!= len(s): mism.append((h,L,len(s)))
+    # split header: seqid_group_rest_len
+    base=re.sub(r'"'_(?:l|L)en\\d+"'$'"','',h)
+    parts=base.split('_')
+    sid=parts[0]
+    grp=parts[1] if len(parts)>1 else ''
+    groups[grp]+=1; by_group[grp].append(L)
+    # detect gene/segment from common terminal tokens before len, including GenBank accessions maybe before gene
+    term=parts[-1] if parts else ''
+    if term in {'RdRp','Glycoprotein','Nucleoprotein','NS','Sdomain','ORF1','ORF2','ORF3','Capsid','N','G','L','M','S'}:
+        genes[term]+=1
+        virus_name='_'.join(parts[2:-1])
+        gene=term
+    else:
+        # sometimes accession before gene: ... KM817697_RdRp
+        if len(parts)>=2 and parts[-2].startswith(('KM','NC','KX','KT','JQ','AY','DQ','EU','HQ','KF','KP','AF','AB')) and term in {'RdRp','Glycoprotein','Nucleoprotein','NS'}:
+            gene=term; genes[term]+=1; virus_name='_'.join(parts[2:-2])
+        else:
+            gene='whole/unspecified'; genes[gene]+=1; virus_name='_'.join(parts[2:])
+    sample_prefix[re.match(r'[A-Za-z]+', sid).group(0) if re.match(r'[A-Za-z]+', sid) else re.match(r'\\d*[A-Za-z]+', sid).group(0) if re.match(r'\\d*[A-Za-z]+', sid) else sid]+=1
+    species_counter[(grp,virus_name)]+=1
+    virus_segments[(grp,virus_name)].append(gene)
+    virus_seqids[(grp,virus_name)].append(sid)
+print('length declared mismatches', len(mism))
+print('total nt', sum(lengths), 'min', min(lengths), 'median', statistics.median(lengths), 'mean', round(statistics.mean(lengths),1), 'max', max(lengths))
+print('length quantiles', {q: sorted(lengths)[int(len(lengths)*q/100)] for q in [5,25,50,75,95]})
+print('\\nTop groups by records:')
+for g,c in groups.most_common():
+    vals=by_group[g]
+    print(f'{g}\\t{c}\\tmedian_len={statistics.median(vals):.0f}\\tmean_len={statistics.mean(vals):.0f}\\tmin={min(vals)}\\tmax={max(vals)}')
+print('\\nGene/segment labels:')
+for k,v in genes.most_common(): print(k,v)
+print('\\nunique virus names (group,name):', len(species_counter))
+seg_counts=Counter(len(set(v)) for v in virus_segments.values())
+print('distinct gene labels per virus-name distribution', seg_counts)
+print('viruses with >=2 gene labels', sum(1 for v in virus_segments.values() if len(set(v))>=2))
+print('viruses with >=3 gene labels', sum(1 for v in virus_segments.values() if len(set(v))>=3))
+print('\\nTop repeated virus names by sequence count:')
+for (g,name),c in species_counter.most_common(20):
+    print(g,c,name, sorted(set(virus_segments[(g,name)])))
+print('\\nTop sample prefixes:')
+for p,c in sample_prefix.most_common(30): print(p,c)
+# host-ish tokens in virus names
+host_terms=['mosquito','insect','shrimp','crab','worm','leech','spider','tick','fly','horsefly','bedbug','barnacle','fluke','ascaridia','myriapoda','lepidoptera','odonata','cixiid','aphid','beetle','moth','mite','dragonfly','plant','zucchini','bean','bat','human','avian','fish']
+host_counter=Counter()
+for (g,name),c in species_counter.items():
+    lname=name.lower()
+    for t in host_terms:
+        if t in lname: host_counter[t]+=c
+print('\\nHost/name token sequence counts:')
+for t,c in host_counter.most_common(): print(t,c)
+# alignment zip stats
+zip_path=Path('data/5905695_alignments_and_phylogenies.zip')
+with zipfile.ZipFile(zip_path) as z:
+    infos=z.infolist()
+    fas=[i for i in infos if i.filename.endswith(('.fas','.fasta'))]
+    nwk=[i for i in infos if i.filename.endswith('.nwk')]
+    print('\\nzip files', len(infos), 'fas', len(fas), 'nwk', len(nwk))
+    align_stats=[]
+    for info in fas:
+        txt=z.read(info).decode('utf-8', errors='replace').splitlines()
+        hs=[]; seq=''; seqs=[]
+        cur=None
+        for line in txt:
+            line=line.strip()
+            if not line: continue
+            if line.startswith('>'):
+                if cur is not None: seqs.append((cur,seq))
+                cur=line[1:]; seq=''
+            else: seq += line.strip()
+        if cur is not None: seqs.append((cur,seq))
+        alen=len(seqs[0][1]) if seqs else 0
+        gap_fracs=[]
+        for h,s in seqs:
+            gap_fracs.append((s.count('-')+s.count('.'))/len(s) if s else 0)
+        align_stats.append((info.filename, len(seqs), alen, round(statistics.mean(gap_fracs),3) if gap_fracs else 0))
+    print('\\nalignment stats filename\\tnseq\\talen\\tmean_gap')
+    for row in sorted(align_stats, key=lambda x:x[1], reverse=True): print('\\t'.join(map(str,row)))
+    print('\\nAlignment sequence total', sum(x[1] for x in align_stats), 'median nseq', statistics.median([x[1] for x in align_stats]), 'median alen', statistics.median([x[2] for x in align_stats]))
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+ succeeded in 0ms:
+FASTA records 2339
+length declared mismatches 391
+total nt 13453538 min 799 median 4470 mean 5751.8 max 30353
+length quantiles {5: 1458, 25: 2729, 50: 4470, 75: 8935, 95: 11709}
+
+Top groups by records:
+Picorna-Calici	603	median_len=9177	mean_len=9303	min=5358	max=13842
+Tombus-Noda	277	median_len=3550	mean_len=3639	min=1235	max=7304
+Bunya-Arena	249	median_len=5956	mean_len=5270	min=799	max=13527
+Partiti-Picobirna	205	median_len=1565	mean_len=1654	min=1222	max=3737
+Luteo-Sobemo	174	median_len=2948	mean_len=2994	min=1446	max=6083
+Narna-Levi	167	median_len=3467	mean_len=3313	min=1684	max=5313
+Reo	159	median_len=2920	mean_len=2824	min=800	max=4705
+Mono-Chu	123	median_len=11119	mean_len=10187	min=2291	max=16196
+Hepe-Virga	101	median_len=9247	mean_len=8646	min=2222	max=16132
+Orthomyxo	64	median_len=2328	mean_len=2206	min=1206	max=4027
+Toti-Chryso	62	median_len=4960	mean_len=5065	min=1779	max=8690
+Flavi	46	median_len=2863	mean_len=7232	min=1846	max=24521
+Permutotetra	25	median_len=4668	mean_len=4457	min=2087	max=6096
+New-Weivirus	21	median_len=4629	mean_len=4590	min=3714	max=5218
+New-Qinvirus	17	median_len=3627	mean_len=3856	min=1569	max=6585
+Nido	12	median_len=22463	mean_len=20642	min=5040	max=30353
+Astro-Poty	10	median_len=7607	mean_len=7609	min=4779	max=9557
+New-Zhaovirus	9	median_len=5682	mean_len=6367	min=4925	max=9086
+New-Yanvirus	5	median_len=6235	mean_len=6178	min=5804	max=6579
+Hypo	4	median_len=9424	mean_len=9904	min=8297	max=12473
+New-Yuevirus	4	median_len=3947	mean_len=3987	min=1177	max=6878
+Birna	2	median_len=3094	mean_len=3094	min=2895	max=3293
+
+Gene/segment labels:
+whole/unspecified 2019
+RdRp 166
+Capsid 63
+Nucleoprotein 54
+Glycoprotein 36
+NS 1
+
+unique virus names (group,name): 1782
+distinct gene labels per virus-name distribution Counter({1: 1693, 2: 75, 3: 14})
+viruses with >=2 gene labels 89
+viruses with >=3 gene labels 14
+
+Top repeated virus names by sequence count:
+Reo 20 Hubei_tetragnatha_maxillosa_virus_9_Unknown ['whole/unspecified']
+Picorna-Calici 14 Beihai_picorna-like_virus_15 ['whole/unspecified']
+Reo 14 Wuhan_heteroptera_virus_3_Unknown ['whole/unspecified']
+Tombus-Noda 14 Wuhan_house_centipede_virus_6 ['Capsid', 'RdRp']
+Picorna-Calici 13 Beihai_picorna-like_virus_35 ['whole/unspecified']
+Luteo-Sobemo 10 Hubei_myriapoda_virus_9 ['Capsid', 'RdRp']
+Bunya-Arena 9 Shahe_heteroptera_virus_3 ['Glycoprotein', 'Nucleoprotein', 'RdRp']
+Picorna-Calici 9 Beihai_picorna-like_virus_2 ['whole/unspecified']
+Partiti-Picobirna 8 Wuhan_cricket_virus_2_Unknown ['whole/unspecified']
+Picorna-Calici 8 Hubei_earwig_virus_3 ['whole/unspecified']
+Picorna-Calici 7 Hubei_picorna-like_virus_15 ['whole/unspecified']
+Picorna-Calici 7 Beihai_mollusks_virus_1 ['whole/unspecified']
+Reo 7 Hubei_insect_virus_2_Unknown ['whole/unspecified']
+Bunya-Arena 6 Beihai_shrimp_virus_3 ['Glycoprotein', 'Nucleoprotein', 'RdRp']
+Bunya-Arena 6 Hubei_myriapoda_virus_5 ['Glycoprotein', 'Nucleoprotein', 'RdRp']
+Bunya-Arena 6 Hubei_blood_fluke_virus_2 ['Nucleoprotein', 'RdRp']
+Bunya-Arena 6 Hubei_blood_fluke_virus_1 ['Nucleoprotein', 'RdRp']
+Luteo-Sobemo 6 Hubei_mosquito_virus_2 ['Capsid', 'RdRp']
+Luteo-Sobemo 6 Wuhan_heteroptera_virus_2 ['Capsid', 'RdRp']
+Luteo-Sobemo 6 Hubei_tetragnatha_maxillosa_virus_6 ['Capsid', 'RdRp']
+
+Top sample prefixes:
+QTM 198
+SCM 92
+spider 89
+arthropodmix 85
+WLJQ 82
+CJLX 72
+BHZY 72
+SHWC 70
+WGML 69
+BHZC 54
+WHCCII 52
+WZFSL 52
+mosHB 45
+tick 44
+BHBJDX 43
+SXSSP 42
+SXXX 40
+BHNXC 39
+BHWZXX 38
+BHJJX 36
+ZCM 36
+SSZZ 36
+WHCC 35
+WHBL 35
+BHTSS 34
+CC 34
+insectZJ 34
+WHYY 33
+BHTH 30
+BWBFG 28
+
+Host/name token sequence counts:
+insect 96
+mosquito 57
+fly 54
+shrimp 49
+tick 49
+crab 31
+worm 30
+myriapoda 24
+lepidoptera 24
+spider 23
+fluke 22
+barnacle 18
+aphid 12
+fish 9
+ascaridia 6
+leech 5
+horsefly 5
+bedbug 3
+zucchini 2
+bean 2
+moth 1
+
+zip files 60 fas 30 nwk 30
+
+alignment stats filename	nseq	alen	mean_gap
+Picorna-Calici_RdRp_trimmed_alignment.fas	533	319	0.016
+Tombus-Noda_RdRp_trimmed_alignment.fas	294	291	0.02
+Narna-Levi_RdRp_trimmed_alignment.fas	195	158	0.01
+Partiti-Picobirna_RdRp_trimmed_alignment.fas	185	202	0.017
+Negative_Bunya-Arena_RdRp_trimmed_alignment.fas	171	400	0.005
+Negative_Mono-Chu_RdRp_trimmed_alignment.fas	170	749	0.007
+Luteo-Sobemo_RdRp_trimmed_alignment.fas	165	293	0.011
+Hepe-Virga_RdRp_trimmed_alignment.fas	164	294	0.007
+Toti-Chryso_RdRp_trimmed_alignment.fas	110	364	0.017
+Reo_RdRp_trimmed_alignment.fas	86	414	0.01
+RdRp_versus_structural/Structure_Sdomain_trimal.fas	48	114	0.021
+Nido_RdRp_trimmed_alignment.fas	36	421	0.02
+RdRp_versus_structural/RdRp_tombus_trimal.fas	34	260	0.01
+Negative_Orthomyxo_RdRp_trimmed_alignment.fas	34	307	0.006
+Permutotetra_RdRp_trimmed_alignment.fas	24	474	0.006
+New-Weivirus_RdRp_trimmed_alignment.fas	21	324	0.006
+Astro-Poty_RdRp_trimmed_alignment.fas	15	321	0.011
+RdRp_versus_structural/RdRp_luteo_trimal.fas	14	329	0.008
+Hypo_RdRp_trimmed_alignment.fas	13	769	0.013
+RdRp_versus_structural/Structure_Alverna_trimal.fas	11	251	0.004
+RdRp_versus_structural/Structure_A21_trimal.fas	10	250	0.002
+Birnaviridae_RdRp_trimmed_alignment.fas	10	509	0.008
+New-Qinvirus_RdRp_trimmed_alignment.fas	9	668	0.003
+New-Zhaovirus_RdRp_trimmed_alignment.fas	9	336	0.004
+RdRp_versus_structural/RdRp_permutotetra_trimal.fas	8	634	0.002
+RdRp_versus_structural/RdRp_hepe_trimal.fas	7	894	0.01
+RdRp_versus_structural/Structure_A6_trimal.fas	7	340	0.029
+RdRp_versus_structural/RdRp_weivirus_trimal.fas	6	380	0.009
+New-Yanvirus_RdRp_trimmed_alignment.fas	5	284	0.008
+RdRp_versus_structural/RdRp_narna_trimal.fas	4	345	0.02
+
+Alignment sequence total 2398 median nseq 22.5 median alen 332.5
+
+codex
+A few useful patterns are emerging: 2,339 genome records span 22 named viral groups, while the ZIP supplies 30 matched FASTA/tree phylogenetic files, mostly RdRp alignments plus a smaller RdRp-versus-structural comparison set. The largest genome groups are Picorna-Calici, Tombus-Noda, Bunya-Arena, Partiti-Picobirna, and Luteo-Sobemo.
+exec
+/bin/zsh -lc "unzip -p data/5905695_alignments_and_phylogenies.zip RdRp_versus_structural/Structure_Sdomain_trimal.fas | awk '/"'^>/{print; if(++n==60) exit}'"'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+exec
+/bin/zsh -lc "unzip -p data/5905695_alignments_and_phylogenies.zip Hepe-Virga_RdRp_trimmed_alignment.fas | awk '/"'^>/{print; if(++n==30) exit}'"'" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+exec
+/bin/zsh -lc 'unzip -p data/5905695_alignments_and_phylogenies.zip Luteo-Sobemo_RdRp_phylogeny.nwk | cut -c1-1000' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+ succeeded in 0ms:
+(((((((((((((((NC_003743_Turnip_yellows_virus:0.03431513,NC_016038_Brassica_yellows_virus:0.01323793)1.0000:0.09827236,(NC_010732_Tobacco_vein_distorting_virus:0.00419383,NC_015050_Pepper_vein_yellows_virus:0.01120473)1.0000:0.07217329)0.9996:0.03297987,(CJLX30310_Changjiang_polero-like_virus_1:0.14154818,WHCC118254_Hubei_polero-like_virus_1:0.06617992)0.9854:0.03500141)0.9755:0.01655065,(NC_003491_Beet_mild_yellowing_virus:0.08255991,(NC_003688_Cucurbit_aphid-borne_yellows_virus:0.04788011,(NC_004756_Beet_western_yellows_virus:0.04002099,NC_010809_Melon_aphid-borne_yellows_virus:0.04234000)0.8915:0.01576961)1.0000:0.05029889)0.9998:0.04124393)0.8738:0.01135783,NC_021484_Maize_yellow_dwarf_virus-RMV:0.11163695)0.9971:0.02387644,(NC_014545_Cotton_leafroll_dwarf_virus:0.09434046,((NC_002766_Beet_chlorosis_virus:0.12593771,NC_006265_Carrot_red_leaf_virus:0.07578018)0.9990:0.02954397,((NC_025435_Strawberry_polerovirus_1:0.10949479,NC_000874_Sugarcane_yellow_leaf_virus:0.17279076)0.9949:0.0
+
+ succeeded in 0ms:
+>BHTSS17827_Behai_endorna-like_virus_1_ciliate_coding_len3831
+>QCM148882_Hubei_endorna-like_virus_1_len13694
+>endorna_YP_009046830_Yerba_mate_endornavirus
+>endorna_YP_005086952_Persea_americana_endornavirus
+>endorna_YP_009010973_Lagenaria_siceraria_endornavirus-California
+>endorna_YP_009011062_Phaseolus_vulgaris_endornavirus_1
+>endorna_YP_438202_Oryza_rufipogon_endornavirus
+>endorna_YP_004765011_Bell_pepper_endornavirus
+>SHWC0209c12790_Shahe_endorna-like_virus_1_len15783
+>endorna_YP_438201_Vicia_faba_endornavirus
+>endorna_YP_241110_Phytophthora_endornavirus_1
+>endorna_YP_003280846_Helicobasidium_mompa_endornavirus_1
+>endorna_YP_007003829_Grapevine_endophyte_endornavirus
+>WCLSXC58279_Wuchan_romanomermis_nematode_virus_1_len14984
+>endorna_YP_009115493_Alternaria_brassicicola_endornavirus
+>endorna_YP_008169851_Sclerotinia_sclerotiorum_endornavirus-1
+>endorna_YP_529670_Gremmeniella_abietina_type_B_RNA_virus_XL1
+>endorna_YP_004123950_Tuber_aestivum_endornavirus
+>BHHK129576_Beihai_anemone_virus_1_len11540
+>SXXX35475_Sanxia_atyid_shrimp_virus_1_len11157
+>BHTH16123_Beihai_barnacle_virus_2_len9154
+>QTM162107_Hubei_negev-like_virus_1_len2937
+>WHYY23932_Wuhan_house_centipede_virus_1_len10322
+>WHCCII10272_Wuhan_insect_virus_8_len10644
+>CC64601_Hubei_negev-like_virus_2_len6640
+>others_AFI24684_Negev_virus
+>others_AIS40866_Brejeira_virus
+>others_AFI24690_Loreto_virus
+>WHCCII12598_Hubei_virga-like_virus_4_len7920
+>WGML111093_Hubei_virga-like_viurs_8_len9503
+
+ succeeded in 0ms:
+>Sdomain_Soybean_yellow_mottle_mosaic_virus
+>Sdomain_Cowpea_mottle_virus
+>Sdomain_BHZC37436
+>Sdomain_Tobacco_necrosis_virus_A
+>Sdomain_Southern_bean_mosaic_virus
+>Sdomain_CJLX29920
+>Sdomain_WZFSL79329
+>Sdomain_BZL81307
+>Sdomain_spider112003
+>Sdomain_QTM27278
+>Sdomain_WCLSXC83893
+>Sdomain_WHYY19909
+>Sdomain_QTM27196
+>Sdomain_WHYCM199
+>Sdomain_ZCM21318
+>Sdomain_WLJQ76752
+>Sdomain_SXSSP1704
+>Sdomain_HWRTX12795
+>Sdomain_WZFSL78689
+>Sdomain_CJLX29055
+>Sdomain_WHBL72900
+>Sdomain_WHYY23891
+>Sdomain_SSZZ3520
+>Sdomain_WGML146568
+>Sdomain_CJLX30757
+>Sdomain_BHZY60709
+>Sdomain_shrimp6189-seg
+>Sdomain_HOU157766
+>Sdomain_SXSSP2568
+>Sdomain_Striped_Jack_nervous_necrosis_virus
+>Sdomain_mosHB232766
+>Sdomain_WHSWHC54546
+>Sdomain_Santeuil_nodavirus
+>Sdomain_XSNXC27943
+>Sdomain_WLJQ100551
+>Sdomain_Maize_chlorotic_mottle_virus
+>Sdomain_CJLX29674
+>Sdomain_WZFSL67420
+>Sdomain_WZFSL61418
+>Sdomain_SCM94998
+>Sdomain_WHYY24053
+>Sdomain_WGML143241
+>Sdomain_BHZY60925
+>Sdomain_HWRTX14333
+>Sdomain_WLJQ101409
+>Sdomain_WHYY20710
+>Sdomain_insectZJ93971
+>Sdomain_WZFSL84050
+
+codex
+I have enough context now. I’m going to write the report and the ranked JSON with the broad RdRp phylogenetic placement question first, because it is the best-supported by the whole dataset; the lower ranks will cover structural/RdRp incongruence, segmented genomes, new lineages, and genome architecture.
+exec
+/bin/zsh -lc 'mkdir -p report' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+ succeeded in 0ms:
+apply patch
+patch: completed
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223/agent_questions.json
+/private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223/report/report.md
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..c1fc17c3168e4ae39f8d8be707fbf2c98a1aa623
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,110 @@
++{
++  "agent_id": "gpt-5.5-codex-cli",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "How do the 2,339 uploaded RNA virus genome records reshape RdRp-based phylogenetic relationships among established and newly named viral groups, and do they reveal invertebrate-associated lineages that bridge or expand known RNA virus diversity?",
++      "rationale": "The FASTA file contains 2,339 viral genome records across 22 broad group labels, including both established groups and labels such as New-Qinvirus, New-Weivirus, New-Yanvirus, New-Zhaovirus, and New-Yuevirus. The ZIP contains 30 alignments and 30 Newick trees, mostly RdRp phylogenies, with large group-level alignments such as Picorna-Calici, Tombus-Noda, Bunya-Arena, and Partiti-Picobirna. This makes broad phylogenetic placement of uploaded viruses against reference lineages the most central and well-supported scientific analysis.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "data/5905695_alignments_and_phylogenies.zip",
++        "Picorna-Calici_RdRp_trimmed_alignment.fas",
++        "Tombus-Noda_RdRp_phylogeny.nwk",
++        "New-Qinvirus_RdRp_phylogeny.nwk"
++      ],
++      "expected_test": "Parse genome headers to assign group labels, use the RdRp alignment/tree pairs to locate uploaded sequences relative to reference taxa, and quantify monophyly, sister relationships, branch lengths, and placements that connect established and newly named viral groups.",
++      "scope_keywords": [
++        "RdRp",
++        "phylogeny",
++        "RNA viruses",
++        "invertebrate viruses",
++        "novel clades",
++        "viral diversity"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Do RdRp and structural-protein phylogenies show incongruent relationships among the uploaded RNA viruses, indicating modular genome evolution or recombination between polymerase and capsid/structural genes?",
++      "rationale": "The ZIP has a dedicated RdRp_versus_structural directory with paired polymerase alignments and structural alignments/trees, including RdRp_tombus_trimal.fas, RdRp_luteo_trimal.fas, Structure_Sdomain_trimal.fas, Structure_A21_trimal.fas, Structure_A6_trimal.fas, and Structure_Alverna_trimal.fas. The genome FASTA also includes explicit RdRp and Capsid labels for some records. These data are well suited to comparing whether polymerase-defined clades retain the same relationships when structural proteins are analyzed.",
++      "data_support": [
++        "RdRp_versus_structural/RdRp_tombus_trimal.fas",
++        "RdRp_versus_structural/RdRp_luteo_trimal.fas",
++        "RdRp_versus_structural/Structure_Sdomain_trimal.fas",
++        "RdRp_versus_structural/Structure_A21_trimal.fas",
++        "data/5905698_all_virus_genomes.fasta"
++      ],
++      "expected_test": "Build or inspect matched RdRp and structural-protein trees for shared taxa, compare topology and clade membership, and flag taxa whose structural gene placement conflicts with their RdRp placement.",
++      "scope_keywords": [
++        "RdRp",
++        "structural proteins",
++        "capsid",
++        "recombination",
++        "modular evolution",
++        "tree incongruence"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Which viral groups in the uploaded genomes show evidence of segmented genome organization, and how are RdRp, glycoprotein, nucleoprotein, capsid, and NS segments distributed across their phylogenetic lineages?",
++      "rationale": "The genome headers include explicit segment or gene labels for 166 RdRp, 63 Capsid, 54 Nucleoprotein, 36 Glycoprotein, and 1 NS records. Eighty-nine parsed virus-name groups contain at least two distinct gene labels, and 14 contain at least three. This pattern is especially relevant to groups such as Bunya-Arena, Orthomyxo, Reo, and Partiti-Picobirna where segmentation and segment reassortment are central evolutionary questions.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "Negative_Bunya-Arena_RdRp_trimmed_alignment.fas",
++        "Negative_Orthomyxo_RdRp_phylogeny.nwk",
++        "Reo_RdRp_trimmed_alignment.fas",
++        "Partiti-Picobirna_RdRp_phylogeny.nwk"
++      ],
++      "expected_test": "Extract gene labels and virus-name groupings from FASTA headers, identify viruses with multiple segment types, and map their RdRp-bearing records onto the corresponding phylogenies to assess lineage-specific segment complements.",
++      "scope_keywords": [
++        "segmented genomes",
++        "Bunya-Arena",
++        "RdRp",
++        "glycoprotein",
++        "nucleoprotein",
++        "reassortment"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are the newly named groups New-Qinvirus, New-Weivirus, New-Yanvirus, New-Zhaovirus, and New-Yuevirus phylogenetically coherent lineages with genome sizes and RdRp placements distinct from established RNA virus groups?",
++      "rationale": "The FASTA includes 56 records carrying these newly named group labels, with New-Weivirus, New-Qinvirus, New-Zhaovirus, New-Yanvirus, and New-Yuevirus represented. The ZIP includes specific RdRp alignments and trees for New-Qinvirus, New-Weivirus, New-Yanvirus, and New-Zhaovirus. Comparing these trees with genome length distributions can test whether the names correspond to coherent evolutionary groups rather than scattered divergent sequences.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "New-Qinvirus_RdRp_trimmed_alignment.fas",
++        "New-Weivirus_RdRp_phylogeny.nwk",
++        "New-Yanvirus_RdRp_trimmed_alignment.fas",
++        "New-Zhaovirus_RdRp_phylogeny.nwk"
++      ],
++      "expected_test": "Subset FASTA records by new group labels, summarize genome lengths and sequence counts, and inspect their RdRp trees for monophyly, internal branch support, and separation from reference or neighboring viral lineages.",
++      "scope_keywords": [
++        "new viral groups",
++        "monophyly",
++        "Qinvirus",
++        "Weivirus",
++        "Yanvirus",
++        "Zhaovirus",
++        "genome size"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "How does genome length and gene architecture vary across the 22 viral group labels in the uploaded FASTA, and are these architectural differences reflected in the available RdRp phylogenies?",
++      "rationale": "The genome FASTA spans a broad length range from 799 to 30,353 nt, with large differences among groups such as Nido, Mono-Chu, Picorna-Calici, Partiti-Picobirna, and Reo. Header-derived gene labels distinguish whole or unspecified genomes from RdRp, Capsid, Nucleoprotein, Glycoprotein, and NS records. The corresponding RdRp alignments and trees allow these architectural summaries to be evaluated in an evolutionary framework.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "Nido_RdRp_phylogeny.nwk",
++        "Picorna-Calici_RdRp_trimmed_alignment.fas",
++        "Negative_Mono-Chu_RdRp_phylogeny.nwk",
++        "Reo_RdRp_trimmed_alignment.fas"
++      ],
++      "expected_test": "Compute genome length and gene-label distributions by group from FASTA headers, then overlay those summaries on group-specific RdRp trees to identify clades associated with compact, large, or multipartite genome architectures.",
++      "scope_keywords": [
++        "genome architecture",
++        "genome length",
++        "gene labels",
++        "viral groups",
++        "RdRp phylogeny"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ee79df2de14eb1abb9efb02ace16cf5ad01eccb0
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,23 @@
++# Scientific Question Report
++
++## Data summary
++
++The uploaded data contain two files. `data/5905698_all_virus_genomes.fasta` is a multi-FASTA of 2,339 viral genome or genome-segment records with headers encoding a sequence/sample identifier, a broad viral group label such as `Picorna-Calici`, `Bunya-Arena`, or `New-Qinvirus`, a virus name, occasional gene/segment labels, and a terminal length field. `data/5905695_alignments_and_phylogenies.zip` contains 60 files: 30 FASTA alignments and 30 matching Newick phylogenies. Most are RdRp alignments/trees for broad RNA virus groups, while `RdRp_versus_structural/` adds paired polymerase and structural-protein alignments/trees for selected groups.
++
++## Analysis
++
++The genome FASTA spans 13,453,538 nucleotide characters. Sequence lengths range from 799 to 30,353 nt, with a median of 4,470 nt and mean of 5,752 nt. I parsed 22 viral group labels; the largest were `Picorna-Calici` with 603 records, `Tombus-Noda` with 277, `Bunya-Arena` with 249, `Partiti-Picobirna` with 205, and `Luteo-Sobemo` with 174. The headers resolved to 1,782 unique group-plus-virus-name labels, indicating a broad and relatively sparse virus collection rather than repeated sampling of a few taxa.
++
++The data also contain explicit gene or segment labels: 166 `RdRp`, 63 `Capsid`, 54 `Nucleoprotein`, 36 `Glycoprotein`, and 1 `NS` record, while most records are whole or unspecified genomes. Eighty-nine virus-name groups have at least two distinct gene labels and 14 have at least three, mainly in segmented negative-sense groups such as `Bunya-Arena`. The ZIP alignments contain 2,398 aligned sequences in total; the largest RdRp alignments are `Picorna-Calici_RdRp_trimmed_alignment.fas` with 533 sequences, `Tombus-Noda_RdRp_trimmed_alignment.fas` with 294, `Narna-Levi_RdRp_trimmed_alignment.fas` with 195, and `Partiti-Picobirna_RdRp_trimmed_alignment.fas` with 185. Alignment files include both dataset sequences and named reference viruses, such as `NC_` accessions and established plant, fungal, and invertebrate virus names.
++
++## Reasoning
++
++The strongest scientific opportunity is not simply cataloguing genomes, but using the already prepared RdRp alignments and phylogenies to place a large invertebrate-associated virus collection into the broader RNA virus tree. The scale across many groups, the presence of novel labels such as `New-Weivirus`, `New-Qinvirus`, `New-Yanvirus`, `New-Zhaovirus`, and `New-Yuevirus`, and the inclusion of reference taxa make this dataset suited to testing whether these genomes fill evolutionary gaps between established viral families or define deep new clades. The structural-protein comparison files add a secondary route to evaluate modular evolution, but the most general and well-powered signal is RdRp phylogenetic placement across the whole dataset.
++
++## Top scientific question
++
++How do the 2,339 uploaded RNA virus genome records reshape RdRp-based phylogenetic relationships among established and newly named viral groups, and do they reveal invertebrate-associated lineages that bridge or expand known RNA virus diversity?
++
++## Why this question is testable on the provided dataset.
++
++The question can be answered directly by combining `5905698_all_virus_genomes.fasta` group and genome metadata with the 30 RdRp alignment/tree pairs in `5905695_alignments_and_phylogenies.zip`. A test would quantify clade membership, sister relationships to reference viruses, branch lengths, monophyly of newly named groups, and the distribution of uploaded sequences across established and novel phylogenetic positions.
+
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..c1fc17c3168e4ae39f8d8be707fbf2c98a1aa623
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,110 @@
++{
++  "agent_id": "gpt-5.5-codex-cli",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "How do the 2,339 uploaded RNA virus genome records reshape RdRp-based phylogenetic relationships among established and newly named viral groups, and do they reveal invertebrate-associated lineages that bridge or expand known RNA virus diversity?",
++      "rationale": "The FASTA file contains 2,339 viral genome records across 22 broad group labels, including both established groups and labels such as New-Qinvirus, New-Weivirus, New-Yanvirus, New-Zhaovirus, and New-Yuevirus. The ZIP contains 30 alignments and 30 Newick trees, mostly RdRp phylogenies, with large group-level alignments such as Picorna-Calici, Tombus-Noda, Bunya-Arena, and Partiti-Picobirna. This makes broad phylogenetic placement of uploaded viruses against reference lineages the most central and well-supported scientific analysis.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "data/5905695_alignments_and_phylogenies.zip",
++        "Picorna-Calici_RdRp_trimmed_alignment.fas",
++        "Tombus-Noda_RdRp_phylogeny.nwk",
++        "New-Qinvirus_RdRp_phylogeny.nwk"
++      ],
++      "expected_test": "Parse genome headers to assign group labels, use the RdRp alignment/tree pairs to locate uploaded sequences relative to reference taxa, and quantify monophyly, sister relationships, branch lengths, and placements that connect established and newly named viral groups.",
++      "scope_keywords": [
++        "RdRp",
++        "phylogeny",
++        "RNA viruses",
++        "invertebrate viruses",
++        "novel clades",
++        "viral diversity"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Do RdRp and structural-protein phylogenies show incongruent relationships among the uploaded RNA viruses, indicating modular genome evolution or recombination between polymerase and capsid/structural genes?",
++      "rationale": "The ZIP has a dedicated RdRp_versus_structural directory with paired polymerase alignments and structural alignments/trees, including RdRp_tombus_trimal.fas, RdRp_luteo_trimal.fas, Structure_Sdomain_trimal.fas, Structure_A21_trimal.fas, Structure_A6_trimal.fas, and Structure_Alverna_trimal.fas. The genome FASTA also includes explicit RdRp and Capsid labels for some records. These data are well suited to comparing whether polymerase-defined clades retain the same relationships when structural proteins are analyzed.",
++      "data_support": [
++        "RdRp_versus_structural/RdRp_tombus_trimal.fas",
++        "RdRp_versus_structural/RdRp_luteo_trimal.fas",
++        "RdRp_versus_structural/Structure_Sdomain_trimal.fas",
++        "RdRp_versus_structural/Structure_A21_trimal.fas",
++        "data/5905698_all_virus_genomes.fasta"
++      ],
++      "expected_test": "Build or inspect matched RdRp and structural-protein trees for shared taxa, compare topology and clade membership, and flag taxa whose structural gene placement conflicts with their RdRp placement.",
++      "scope_keywords": [
++        "RdRp",
++        "structural proteins",
++        "capsid",
++        "recombination",
++        "modular evolution",
++        "tree incongruence"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Which viral groups in the uploaded genomes show evidence of segmented genome organization, and how are RdRp, glycoprotein, nucleoprotein, capsid, and NS segments distributed across their phylogenetic lineages?",
++      "rationale": "The genome headers include explicit segment or gene labels for 166 RdRp, 63 Capsid, 54 Nucleoprotein, 36 Glycoprotein, and 1 NS records. Eighty-nine parsed virus-name groups contain at least two distinct gene labels, and 14 contain at least three. This pattern is especially relevant to groups such as Bunya-Arena, Orthomyxo, Reo, and Partiti-Picobirna where segmentation and segment reassortment are central evolutionary questions.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "Negative_Bunya-Arena_RdRp_trimmed_alignment.fas",
++        "Negative_Orthomyxo_RdRp_phylogeny.nwk",
++        "Reo_RdRp_trimmed_alignment.fas",
++        "Partiti-Picobirna_RdRp_phylogeny.nwk"
++      ],
++      "expected_test": "Extract gene labels and virus-name groupings from FASTA headers, identify viruses with multiple segment types, and map their RdRp-bearing records onto the corresponding phylogenies to assess lineage-specific segment complements.",
++      "scope_keywords": [
++        "segmented genomes",
++        "Bunya-Arena",
++        "RdRp",
++        "glycoprotein",
++        "nucleoprotein",
++        "reassortment"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are the newly named groups New-Qinvirus, New-Weivirus, New-Yanvirus, New-Zhaovirus, and New-Yuevirus phylogenetically coherent lineages with genome sizes and RdRp placements distinct from established RNA virus groups?",
++      "rationale": "The FASTA includes 56 records carrying these newly named group labels, with New-Weivirus, New-Qinvirus, New-Zhaovirus, New-Yanvirus, and New-Yuevirus represented. The ZIP includes specific RdRp alignments and trees for New-Qinvirus, New-Weivirus, New-Yanvirus, and New-Zhaovirus. Comparing these trees with genome length distributions can test whether the names correspond to coherent evolutionary groups rather than scattered divergent sequences.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "New-Qinvirus_RdRp_trimmed_alignment.fas",
++        "New-Weivirus_RdRp_phylogeny.nwk",
++        "New-Yanvirus_RdRp_trimmed_alignment.fas",
++        "New-Zhaovirus_RdRp_phylogeny.nwk"
++      ],
++      "expected_test": "Subset FASTA records by new group labels, summarize genome lengths and sequence counts, and inspect their RdRp trees for monophyly, internal branch support, and separation from reference or neighboring viral lineages.",
++      "scope_keywords": [
++        "new viral groups",
++        "monophyly",
++        "Qinvirus",
++        "Weivirus",
++        "Yanvirus",
++        "Zhaovirus",
++        "genome size"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "How does genome length and gene architecture vary across the 22 viral group labels in the uploaded FASTA, and are these architectural differences reflected in the available RdRp phylogenies?",
++      "rationale": "The genome FASTA spans a broad length range from 799 to 30,353 nt, with large differences among groups such as Nido, Mono-Chu, Picorna-Calici, Partiti-Picobirna, and Reo. Header-derived gene labels distinguish whole or unspecified genomes from RdRp, Capsid, Nucleoprotein, Glycoprotein, and NS records. The corresponding RdRp alignments and trees allow these architectural summaries to be evaluated in an evolutionary framework.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "Nido_RdRp_phylogeny.nwk",
++        "Picorna-Calici_RdRp_trimmed_alignment.fas",
++        "Negative_Mono-Chu_RdRp_phylogeny.nwk",
++        "Reo_RdRp_trimmed_alignment.fas"
++      ],
++      "expected_test": "Compute genome length and gene-label distributions by group from FASTA headers, then overlay those summaries on group-specific RdRp trees to identify clades associated with compact, large, or multipartite genome architectures.",
++      "scope_keywords": [
++        "genome architecture",
++        "genome length",
++        "gene labels",
++        "viral groups",
++        "RdRp phylogeny"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ee79df2de14eb1abb9efb02ace16cf5ad01eccb0
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,23 @@
++# Scientific Question Report
++
++## Data summary
++
++The uploaded data contain two files. `data/5905698_all_virus_genomes.fasta` is a multi-FASTA of 2,339 viral genome or genome-segment records with headers encoding a sequence/sample identifier, a broad viral group label such as `Picorna-Calici`, `Bunya-Arena`, or `New-Qinvirus`, a virus name, occasional gene/segment labels, and a terminal length field. `data/5905695_alignments_and_phylogenies.zip` contains 60 files: 30 FASTA alignments and 30 matching Newick phylogenies. Most are RdRp alignments/trees for broad RNA virus groups, while `RdRp_versus_structural/` adds paired polymerase and structural-protein alignments/trees for selected groups.
++
++## Analysis
++
++The genome FASTA spans 13,453,538 nucleotide characters. Sequence lengths range from 799 to 30,353 nt, with a median of 4,470 nt and mean of 5,752 nt. I parsed 22 viral group labels; the largest were `Picorna-Calici` with 603 records, `Tombus-Noda` with 277, `Bunya-Arena` with 249, `Partiti-Picobirna` with 205, and `Luteo-Sobemo` with 174. The headers resolved to 1,782 unique group-plus-virus-name labels, indicating a broad and relatively sparse virus collection rather than repeated sampling of a few taxa.
++
++The data also contain explicit gene or segment labels: 166 `RdRp`, 63 `Capsid`, 54 `Nucleoprotein`, 36 `Glycoprotein`, and 1 `NS` record, while most records are whole or unspecified genomes. Eighty-nine virus-name groups have at least two distinct gene labels and 14 have at least three, mainly in segmented negative-sense groups such as `Bunya-Arena`. The ZIP alignments contain 2,398 aligned sequences in total; the largest RdRp alignments are `Picorna-Calici_RdRp_trimmed_alignment.fas` with 533 sequences, `Tombus-Noda_RdRp_trimmed_alignment.fas` with 294, `Narna-Levi_RdRp_trimmed_alignment.fas` with 195, and `Partiti-Picobirna_RdRp_trimmed_alignment.fas` with 185. Alignment files include both dataset sequences and named reference viruses, such as `NC_` accessions and established plant, fungal, and invertebrate virus names.
++
++## Reasoning
++
++The strongest scientific opportunity is not simply cataloguing genomes, but using the already prepared RdRp alignments and phylogenies to place a large invertebrate-associated virus collection into the broader RNA virus tree. The scale across many groups, the presence of novel labels such as `New-Weivirus`, `New-Qinvirus`, `New-Yanvirus`, `New-Zhaovirus`, and `New-Yuevirus`, and the inclusion of reference taxa make this dataset suited to testing whether these genomes fill evolutionary gaps between established viral families or define deep new clades. The structural-protein comparison files add a secondary route to evaluate modular evolution, but the most general and well-powered signal is RdRp phylogenetic placement across the whole dataset.
++
++## Top scientific question
++
++How do the 2,339 uploaded RNA virus genome records reshape RdRp-based phylogenetic relationships among established and newly named viral groups, and do they reveal invertebrate-associated lineages that bridge or expand known RNA virus diversity?
++
++## Why this question is testable on the provided dataset.
++
++The question can be answered directly by combining `5905698_all_virus_genomes.fasta` group and genome metadata with the 30 RdRp alignment/tree pairs in `5905695_alignments_and_phylogenies.zip`. A test would quantify clade membership, sister relationships to reference viruses, branch lengths, monophyly of newly named groups, and the distribution of uploaded sequences across established and novel phylogenetic positions.
+
+codex
+The two requested files are written. I’m validating the JSON shape and checking the report length now, then I’ll stop.
+exec
+/bin/zsh -lc 'wc -w report/report.md agent_questions.json && find report -type f -maxdepth 2 -print && test -f agent_questions.json && test -f report/report.md' in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+ succeeded in 0ms:
+     469 report/report.md
+     737 agent_questions.json
+    1206 total
+report/report.md
+
+exec
+/bin/zsh -lc "python3 -m json.tool agent_questions.json >/dev/null && python3 - <<'PY'
+import json
+p=json.load(open('agent_questions.json'))
+qs=p['questions']
+print('questions', len(qs))
+print('ranks', [q['rank'] for q in qs])
+print('unique_questions', len({q['question'] for q in qs}))
+print('end_question_marks', [q['question'].endswith('?') for q in qs])
+PY" in /private/tmp/codex-sandboxes/gpt-5.5-high/20260528T131223
+ succeeded in 0ms:
+questions 5
+ranks [1, 2, 3, 4, 5]
+unique_questions 5
+end_question_marks [True, True, True, True, True]
+
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..c1fc17c3168e4ae39f8d8be707fbf2c98a1aa623
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,110 @@
++{
++  "agent_id": "gpt-5.5-codex-cli",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "How do the 2,339 uploaded RNA virus genome records reshape RdRp-based phylogenetic relationships among established and newly named viral groups, and do they reveal invertebrate-associated lineages that bridge or expand known RNA virus diversity?",
++      "rationale": "The FASTA file contains 2,339 viral genome records across 22 broad group labels, including both established groups and labels such as New-Qinvirus, New-Weivirus, New-Yanvirus, New-Zhaovirus, and New-Yuevirus. The ZIP contains 30 alignments and 30 Newick trees, mostly RdRp phylogenies, with large group-level alignments such as Picorna-Calici, Tombus-Noda, Bunya-Arena, and Partiti-Picobirna. This makes broad phylogenetic placement of uploaded viruses against reference lineages the most central and well-supported scientific analysis.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "data/5905695_alignments_and_phylogenies.zip",
++        "Picorna-Calici_RdRp_trimmed_alignment.fas",
++        "Tombus-Noda_RdRp_phylogeny.nwk",
++        "New-Qinvirus_RdRp_phylogeny.nwk"
++      ],
++      "expected_test": "Parse genome headers to assign group labels, use the RdRp alignment/tree pairs to locate uploaded sequences relative to reference taxa, and quantify monophyly, sister relationships, branch lengths, and placements that connect established and newly named viral groups.",
++      "scope_keywords": [
++        "RdRp",
++        "phylogeny",
++        "RNA viruses",
++        "invertebrate viruses",
++        "novel clades",
++        "viral diversity"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Do RdRp and structural-protein phylogenies show incongruent relationships among the uploaded RNA viruses, indicating modular genome evolution or recombination between polymerase and capsid/structural genes?",
++      "rationale": "The ZIP has a dedicated RdRp_versus_structural directory with paired polymerase alignments and structural alignments/trees, including RdRp_tombus_trimal.fas, RdRp_luteo_trimal.fas, Structure_Sdomain_trimal.fas, Structure_A21_trimal.fas, Structure_A6_trimal.fas, and Structure_Alverna_trimal.fas. The genome FASTA also includes explicit RdRp and Capsid labels for some records. These data are well suited to comparing whether polymerase-defined clades retain the same relationships when structural proteins are analyzed.",
++      "data_support": [
++        "RdRp_versus_structural/RdRp_tombus_trimal.fas",
++        "RdRp_versus_structural/RdRp_luteo_trimal.fas",
++        "RdRp_versus_structural/Structure_Sdomain_trimal.fas",
++        "RdRp_versus_structural/Structure_A21_trimal.fas",
++        "data/5905698_all_virus_genomes.fasta"
++      ],
++      "expected_test": "Build or inspect matched RdRp and structural-protein trees for shared taxa, compare topology and clade membership, and flag taxa whose structural gene placement conflicts with their RdRp placement.",
++      "scope_keywords": [
++        "RdRp",
++        "structural proteins",
++        "capsid",
++        "recombination",
++        "modular evolution",
++        "tree incongruence"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Which viral groups in the uploaded genomes show evidence of segmented genome organization, and how are RdRp, glycoprotein, nucleoprotein, capsid, and NS segments distributed across their phylogenetic lineages?",
++      "rationale": "The genome headers include explicit segment or gene labels for 166 RdRp, 63 Capsid, 54 Nucleoprotein, 36 Glycoprotein, and 1 NS records. Eighty-nine parsed virus-name groups contain at least two distinct gene labels, and 14 contain at least three. This pattern is especially relevant to groups such as Bunya-Arena, Orthomyxo, Reo, and Partiti-Picobirna where segmentation and segment reassortment are central evolutionary questions.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "Negative_Bunya-Arena_RdRp_trimmed_alignment.fas",
++        "Negative_Orthomyxo_RdRp_phylogeny.nwk",
++        "Reo_RdRp_trimmed_alignment.fas",
++        "Partiti-Picobirna_RdRp_phylogeny.nwk"
++      ],
++      "expected_test": "Extract gene labels and virus-name groupings from FASTA headers, identify viruses with multiple segment types, and map their RdRp-bearing records onto the corresponding phylogenies to assess lineage-specific segment complements.",
++      "scope_keywords": [
++        "segmented genomes",
++        "Bunya-Arena",
++        "RdRp",
++        "glycoprotein",
++        "nucleoprotein",
++        "reassortment"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are the newly named groups New-Qinvirus, New-Weivirus, New-Yanvirus, New-Zhaovirus, and New-Yuevirus phylogenetically coherent lineages with genome sizes and RdRp placements distinct from established RNA virus groups?",
++      "rationale": "The FASTA includes 56 records carrying these newly named group labels, with New-Weivirus, New-Qinvirus, New-Zhaovirus, New-Yanvirus, and New-Yuevirus represented. The ZIP includes specific RdRp alignments and trees for New-Qinvirus, New-Weivirus, New-Yanvirus, and New-Zhaovirus. Comparing these trees with genome length distributions can test whether the names correspond to coherent evolutionary groups rather than scattered divergent sequences.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "New-Qinvirus_RdRp_trimmed_alignment.fas",
++        "New-Weivirus_RdRp_phylogeny.nwk",
++        "New-Yanvirus_RdRp_trimmed_alignment.fas",
++        "New-Zhaovirus_RdRp_phylogeny.nwk"
++      ],
++      "expected_test": "Subset FASTA records by new group labels, summarize genome lengths and sequence counts, and inspect their RdRp trees for monophyly, internal branch support, and separation from reference or neighboring viral lineages.",
++      "scope_keywords": [
++        "new viral groups",
++        "monophyly",
++        "Qinvirus",
++        "Weivirus",
++        "Yanvirus",
++        "Zhaovirus",
++        "genome size"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "How does genome length and gene architecture vary across the 22 viral group labels in the uploaded FASTA, and are these architectural differences reflected in the available RdRp phylogenies?",
++      "rationale": "The genome FASTA spans a broad length range from 799 to 30,353 nt, with large differences among groups such as Nido, Mono-Chu, Picorna-Calici, Partiti-Picobirna, and Reo. Header-derived gene labels distinguish whole or unspecified genomes from RdRp, Capsid, Nucleoprotein, Glycoprotein, and NS records. The corresponding RdRp alignments and trees allow these architectural summaries to be evaluated in an evolutionary framework.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "Nido_RdRp_phylogeny.nwk",
++        "Picorna-Calici_RdRp_trimmed_alignment.fas",
++        "Negative_Mono-Chu_RdRp_phylogeny.nwk",
++        "Reo_RdRp_trimmed_alignment.fas"
++      ],
++      "expected_test": "Compute genome length and gene-label distributions by group from FASTA headers, then overlay those summaries on group-specific RdRp trees to identify clades associated with compact, large, or multipartite genome architectures.",
++      "scope_keywords": [
++        "genome architecture",
++        "genome length",
++        "gene labels",
++        "viral groups",
++        "RdRp phylogeny"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ee79df2de14eb1abb9efb02ace16cf5ad01eccb0
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,23 @@
++# Scientific Question Report
++
++## Data summary
++
++The uploaded data contain two files. `data/5905698_all_virus_genomes.fasta` is a multi-FASTA of 2,339 viral genome or genome-segment records with headers encoding a sequence/sample identifier, a broad viral group label such as `Picorna-Calici`, `Bunya-Arena`, or `New-Qinvirus`, a virus name, occasional gene/segment labels, and a terminal length field. `data/5905695_alignments_and_phylogenies.zip` contains 60 files: 30 FASTA alignments and 30 matching Newick phylogenies. Most are RdRp alignments/trees for broad RNA virus groups, while `RdRp_versus_structural/` adds paired polymerase and structural-protein alignments/trees for selected groups.
++
++## Analysis
++
++The genome FASTA spans 13,453,538 nucleotide characters. Sequence lengths range from 799 to 30,353 nt, with a median of 4,470 nt and mean of 5,752 nt. I parsed 22 viral group labels; the largest were `Picorna-Calici` with 603 records, `Tombus-Noda` with 277, `Bunya-Arena` with 249, `Partiti-Picobirna` with 205, and `Luteo-Sobemo` with 174. The headers resolved to 1,782 unique group-plus-virus-name labels, indicating a broad and relatively sparse virus collection rather than repeated sampling of a few taxa.
++
++The data also contain explicit gene or segment labels: 166 `RdRp`, 63 `Capsid`, 54 `Nucleoprotein`, 36 `Glycoprotein`, and 1 `NS` record, while most records are whole or unspecified genomes. Eighty-nine virus-name groups have at least two distinct gene labels and 14 have at least three, mainly in segmented negative-sense groups such as `Bunya-Arena`. The ZIP alignments contain 2,398 aligned sequences in total; the largest RdRp alignments are `Picorna-Calici_RdRp_trimmed_alignment.fas` with 533 sequences, `Tombus-Noda_RdRp_trimmed_alignment.fas` with 294, `Narna-Levi_RdRp_trimmed_alignment.fas` with 195, and `Partiti-Picobirna_RdRp_trimmed_alignment.fas` with 185. Alignment files include both dataset sequences and named reference viruses, such as `NC_` accessions and established plant, fungal, and invertebrate virus names.
++
++## Reasoning
++
++The strongest scientific opportunity is not simply cataloguing genomes, but using the already prepared RdRp alignments and phylogenies to place a large invertebrate-associated virus collection into the broader RNA virus tree. The scale across many groups, the presence of novel labels such as `New-Weivirus`, `New-Qinvirus`, `New-Yanvirus`, `New-Zhaovirus`, and `New-Yuevirus`, and the inclusion of reference taxa make this dataset suited to testing whether these genomes fill evolutionary gaps between established viral families or define deep new clades. The structural-protein comparison files add a secondary route to evaluate modular evolution, but the most general and well-powered signal is RdRp phylogenetic placement across the whole dataset.
++
++## Top scientific question
++
++How do the 2,339 uploaded RNA virus genome records reshape RdRp-based phylogenetic relationships among established and newly named viral groups, and do they reveal invertebrate-associated lineages that bridge or expand known RNA virus diversity?
++
++## Why this question is testable on the provided dataset.
++
++The question can be answered directly by combining `5905698_all_virus_genomes.fasta` group and genome metadata with the 30 RdRp alignment/tree pairs in `5905695_alignments_and_phylogenies.zip`. A test would quantify clade membership, sister relationships to reference viruses, branch lengths, monophyly of newly named groups, and the distribution of uploaded sequences across established and novel phylogenetic positions.
+
+codex
+Done. Created and validated:
+
+- `report/report.md`
+- `agent_questions.json`
+
+`agent_questions.json` contains exactly 5 distinct ranked questions, ranks 1-5, all ending with `?`.
+diff --git a/agent_questions.json b/agent_questions.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..c1fc17c3168e4ae39f8d8be707fbf2c98a1aa623
+--- /dev/null
++++ b/agent_questions.json
+@@ -0,0 +1,110 @@
++{
++  "agent_id": "gpt-5.5-codex-cli",
++  "questions": [
++    {
++      "rank": 1,
++      "question": "How do the 2,339 uploaded RNA virus genome records reshape RdRp-based phylogenetic relationships among established and newly named viral groups, and do they reveal invertebrate-associated lineages that bridge or expand known RNA virus diversity?",
++      "rationale": "The FASTA file contains 2,339 viral genome records across 22 broad group labels, including both established groups and labels such as New-Qinvirus, New-Weivirus, New-Yanvirus, New-Zhaovirus, and New-Yuevirus. The ZIP contains 30 alignments and 30 Newick trees, mostly RdRp phylogenies, with large group-level alignments such as Picorna-Calici, Tombus-Noda, Bunya-Arena, and Partiti-Picobirna. This makes broad phylogenetic placement of uploaded viruses against reference lineages the most central and well-supported scientific analysis.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "data/5905695_alignments_and_phylogenies.zip",
++        "Picorna-Calici_RdRp_trimmed_alignment.fas",
++        "Tombus-Noda_RdRp_phylogeny.nwk",
++        "New-Qinvirus_RdRp_phylogeny.nwk"
++      ],
++      "expected_test": "Parse genome headers to assign group labels, use the RdRp alignment/tree pairs to locate uploaded sequences relative to reference taxa, and quantify monophyly, sister relationships, branch lengths, and placements that connect established and newly named viral groups.",
++      "scope_keywords": [
++        "RdRp",
++        "phylogeny",
++        "RNA viruses",
++        "invertebrate viruses",
++        "novel clades",
++        "viral diversity"
++      ]
++    },
++    {
++      "rank": 2,
++      "question": "Do RdRp and structural-protein phylogenies show incongruent relationships among the uploaded RNA viruses, indicating modular genome evolution or recombination between polymerase and capsid/structural genes?",
++      "rationale": "The ZIP has a dedicated RdRp_versus_structural directory with paired polymerase alignments and structural alignments/trees, including RdRp_tombus_trimal.fas, RdRp_luteo_trimal.fas, Structure_Sdomain_trimal.fas, Structure_A21_trimal.fas, Structure_A6_trimal.fas, and Structure_Alverna_trimal.fas. The genome FASTA also includes explicit RdRp and Capsid labels for some records. These data are well suited to comparing whether polymerase-defined clades retain the same relationships when structural proteins are analyzed.",
++      "data_support": [
++        "RdRp_versus_structural/RdRp_tombus_trimal.fas",
++        "RdRp_versus_structural/RdRp_luteo_trimal.fas",
++        "RdRp_versus_structural/Structure_Sdomain_trimal.fas",
++        "RdRp_versus_structural/Structure_A21_trimal.fas",
++        "data/5905698_all_virus_genomes.fasta"
++      ],
++      "expected_test": "Build or inspect matched RdRp and structural-protein trees for shared taxa, compare topology and clade membership, and flag taxa whose structural gene placement conflicts with their RdRp placement.",
++      "scope_keywords": [
++        "RdRp",
++        "structural proteins",
++        "capsid",
++        "recombination",
++        "modular evolution",
++        "tree incongruence"
++      ]
++    },
++    {
++      "rank": 3,
++      "question": "Which viral groups in the uploaded genomes show evidence of segmented genome organization, and how are RdRp, glycoprotein, nucleoprotein, capsid, and NS segments distributed across their phylogenetic lineages?",
++      "rationale": "The genome headers include explicit segment or gene labels for 166 RdRp, 63 Capsid, 54 Nucleoprotein, 36 Glycoprotein, and 1 NS records. Eighty-nine parsed virus-name groups contain at least two distinct gene labels, and 14 contain at least three. This pattern is especially relevant to groups such as Bunya-Arena, Orthomyxo, Reo, and Partiti-Picobirna where segmentation and segment reassortment are central evolutionary questions.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "Negative_Bunya-Arena_RdRp_trimmed_alignment.fas",
++        "Negative_Orthomyxo_RdRp_phylogeny.nwk",
++        "Reo_RdRp_trimmed_alignment.fas",
++        "Partiti-Picobirna_RdRp_phylogeny.nwk"
++      ],
++      "expected_test": "Extract gene labels and virus-name groupings from FASTA headers, identify viruses with multiple segment types, and map their RdRp-bearing records onto the corresponding phylogenies to assess lineage-specific segment complements.",
++      "scope_keywords": [
++        "segmented genomes",
++        "Bunya-Arena",
++        "RdRp",
++        "glycoprotein",
++        "nucleoprotein",
++        "reassortment"
++      ]
++    },
++    {
++      "rank": 4,
++      "question": "Are the newly named groups New-Qinvirus, New-Weivirus, New-Yanvirus, New-Zhaovirus, and New-Yuevirus phylogenetically coherent lineages with genome sizes and RdRp placements distinct from established RNA virus groups?",
++      "rationale": "The FASTA includes 56 records carrying these newly named group labels, with New-Weivirus, New-Qinvirus, New-Zhaovirus, New-Yanvirus, and New-Yuevirus represented. The ZIP includes specific RdRp alignments and trees for New-Qinvirus, New-Weivirus, New-Yanvirus, and New-Zhaovirus. Comparing these trees with genome length distributions can test whether the names correspond to coherent evolutionary groups rather than scattered divergent sequences.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "New-Qinvirus_RdRp_trimmed_alignment.fas",
++        "New-Weivirus_RdRp_phylogeny.nwk",
++        "New-Yanvirus_RdRp_trimmed_alignment.fas",
++        "New-Zhaovirus_RdRp_phylogeny.nwk"
++      ],
++      "expected_test": "Subset FASTA records by new group labels, summarize genome lengths and sequence counts, and inspect their RdRp trees for monophyly, internal branch support, and separation from reference or neighboring viral lineages.",
++      "scope_keywords": [
++        "new viral groups",
++        "monophyly",
++        "Qinvirus",
++        "Weivirus",
++        "Yanvirus",
++        "Zhaovirus",
++        "genome size"
++      ]
++    },
++    {
++      "rank": 5,
++      "question": "How does genome length and gene architecture vary across the 22 viral group labels in the uploaded FASTA, and are these architectural differences reflected in the available RdRp phylogenies?",
++      "rationale": "The genome FASTA spans a broad length range from 799 to 30,353 nt, with large differences among groups such as Nido, Mono-Chu, Picorna-Calici, Partiti-Picobirna, and Reo. Header-derived gene labels distinguish whole or unspecified genomes from RdRp, Capsid, Nucleoprotein, Glycoprotein, and NS records. The corresponding RdRp alignments and trees allow these architectural summaries to be evaluated in an evolutionary framework.",
++      "data_support": [
++        "data/5905698_all_virus_genomes.fasta",
++        "Nido_RdRp_phylogeny.nwk",
++        "Picorna-Calici_RdRp_trimmed_alignment.fas",
++        "Negative_Mono-Chu_RdRp_phylogeny.nwk",
++        "Reo_RdRp_trimmed_alignment.fas"
++      ],
++      "expected_test": "Compute genome length and gene-label distributions by group from FASTA headers, then overlay those summaries on group-specific RdRp trees to identify clades associated with compact, large, or multipartite genome architectures.",
++      "scope_keywords": [
++        "genome architecture",
++        "genome length",
++        "gene labels",
++        "viral groups",
++        "RdRp phylogeny"
++      ]
++    }
++  ]
++}
+diff --git a/report/report.md b/report/report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ee79df2de14eb1abb9efb02ace16cf5ad01eccb0
+--- /dev/null
++++ b/report/report.md
+@@ -0,0 +1,23 @@
++# Scientific Question Report
++
++## Data summary
++
++The uploaded data contain two files. `data/5905698_all_virus_genomes.fasta` is a multi-FASTA of 2,339 viral genome or genome-segment records with headers encoding a sequence/sample identifier, a broad viral group label such as `Picorna-Calici`, `Bunya-Arena`, or `New-Qinvirus`, a virus name, occasional gene/segment labels, and a terminal length field. `data/5905695_alignments_and_phylogenies.zip` contains 60 files: 30 FASTA alignments and 30 matching Newick phylogenies. Most are RdRp alignments/trees for broad RNA virus groups, while `RdRp_versus_structural/` adds paired polymerase and structural-protein alignments/trees for selected groups.
++
++## Analysis
++
++The genome FASTA spans 13,453,538 nucleotide characters. Sequence lengths range from 799 to 30,353 nt, with a median of 4,470 nt and mean of 5,752 nt. I parsed 22 viral group labels; the largest were `Picorna-Calici` with 603 records, `Tombus-Noda` with 277, `Bunya-Arena` with 249, `Partiti-Picobirna` with 205, and `Luteo-Sobemo` with 174. The headers resolved to 1,782 unique group-plus-virus-name labels, indicating a broad and relatively sparse virus collection rather than repeated sampling of a few taxa.
++
++The data also contain explicit gene or segment labels: 166 `RdRp`, 63 `Capsid`, 54 `Nucleoprotein`, 36 `Glycoprotein`, and 1 `NS` record, while most records are whole or unspecified genomes. Eighty-nine virus-name groups have at least two distinct gene labels and 14 have at least three, mainly in segmented negative-sense groups such as `Bunya-Arena`. The ZIP alignments contain 2,398 aligned sequences in total; the largest RdRp alignments are `Picorna-Calici_RdRp_trimmed_alignment.fas` with 533 sequences, `Tombus-Noda_RdRp_trimmed_alignment.fas` with 294, `Narna-Levi_RdRp_trimmed_alignment.fas` with 195, and `Partiti-Picobirna_RdRp_trimmed_alignment.fas` with 185. Alignment files include both dataset sequences and named reference viruses, such as `NC_` accessions and established plant, fungal, and invertebrate virus names.
++
++## Reasoning
++
++The strongest scientific opportunity is not simply cataloguing genomes, but using the already prepared RdRp alignments and phylogenies to place a large invertebrate-associated virus collection into the broader RNA virus tree. The scale across many groups, the presence of novel labels such as `New-Weivirus`, `New-Qinvirus`, `New-Yanvirus`, `New-Zhaovirus`, and `New-Yuevirus`, and the inclusion of reference taxa make this dataset suited to testing whether these genomes fill evolutionary gaps between established viral families or define deep new clades. The structural-protein comparison files add a secondary route to evaluate modular evolution, but the most general and well-powered signal is RdRp phylogenetic placement across the whole dataset.
++
++## Top scientific question
++
++How do the 2,339 uploaded RNA virus genome records reshape RdRp-based phylogenetic relationships among established and newly named viral groups, and do they reveal invertebrate-associated lineages that bridge or expand known RNA virus diversity?
++
++## Why this question is testable on the provided dataset.
++
++The question can be answered directly by combining `5905698_all_virus_genomes.fasta` group and genome metadata with the 30 RdRp alignment/tree pairs in `5905695_alignments_and_phylogenies.zip`. A test would quantify clade membership, sister relationships to reference viruses, branch lengths, monophyly of newly named groups, and the distribution of uploaded sequences across established and novel phylogenetic positions.
+
+tokens used
+63,382

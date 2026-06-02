@@ -1,0 +1,17 @@
+# Data summary
+The blind input dataset represents a subset of a massive public sequencing archive processed through translated sequence search. The upstream search encompasses approximately 5.7 million sequencing runs covering 10.2 petabases of data, yielding 131,957 candidate unique novel RdRP sOTUs. The local subset provided for analysis contains 32 sequencing runs spanning diverse biological and environmental sources (arthropod RNA-seq, vertebrate transcriptomes, soil and gut metagenomes, plant transcriptomes, and aquatic metaviromes) across multiple geographic regions. From these runs, 53 RdRP-like amino acid fragments were extracted, aligned against curated viral references, and grouped into 32 candidate sOTU clusters.
+
+# Analysis
+Three key derived statistics from the local subset highlight a pronounced divergence from known viral references:
+1. **Low Reference Identity:** Approximately 83% of the 53 RdRP fragments exhibit a `percent_identity_to_nearest_reference` below 0.40, indicating substantial sequence divergence from curated viral families.
+2. **High Novelty Rate:** In the candidate sOTU clustering table, 75% of clusters (24 out of 32) carry a `novelty_flag` of `novel`, defined by representative identity thresholds below 0.40.
+3. **Unclassified Diversity:** Roughly 15% of alignment hits resolve to `unclassified_RdRP`, lacking assignment to any established viral order or family. Furthermore, novel clusters are distributed evenly across all sampled source types, suggesting that this hidden diversity is not restricted to a single ecological niche.
+
+# Reasoning
+When extrapolated to the full upstream scale of 5.7 million runs and over 131,000 candidate novel sOTUs, these local patterns strongly imply that current curated viral reference databases capture only a narrow slice of the global RNA virome. The consistent recovery of highly divergent RdRP fragments across heterogeneous sample types and geographic regions points to a systematic blind spot in reference databases. This gap is not merely an artifact of sparse sampling but reflects a fundamental, large-scale reservoir of uncharacterized RNA viruses. Mining public sequencing archives at the petabase scale therefore presents a unique opportunity to systematically map this hidden diversity, redefine viral taxonomy, and improve global pathogen surveillance baselines.
+
+# Top scientific question
+Can petabase-scale mining of public sequencing data uncover a large hidden RNA-virus and RdRP diversity that is absent from curated viral reference databases?
+
+# Why this question is testable on the provided dataset
+The question is directly testable using the provided data architecture and its scalable upstream equivalent. The dataset supplies translated sequencing runs, RdRP-like amino acid fragments, alignment metrics (scores, e-values, percent identity), and sOTU clustering outputs with novelty flags. By applying the same translated search and alignment pipeline to the full 10.2-petabase archive, researchers can quantify the exact proportion of RdRP fragments that fall below standard reference identity thresholds, cluster them into novel sOTUs, and map their phylogenetic and ecological distributions. The combination of `percent_identity_to_nearest_reference`, `novelty_flag`, `nearest_reference_family`, and `sample_source` metadata provides all necessary variables to statistically validate the existence and scale of this hidden RNA-virus diversity relative to existing reference databases.

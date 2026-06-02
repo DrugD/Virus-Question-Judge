@@ -1,0 +1,28 @@
+{
+  "agent_id": "autonomous-research-agent-v1",
+  "workspace_id": "Life_Virus_001",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "Can petabase-scale mining of public sequencing data uncover a large hidden RNA-virus and RdRP diversity that is absent from curated viral reference databases?",
+      "rationale": "The blind input reveals that across millions of sequencing runs, a substantial fraction of detected RdRP fragments exhibit low sequence identity (<40%) to known viral families, with a majority of candidate sOTUs flagged as novel. Extrapolating these local patterns to the full 10.2-petabase dataset suggests that current reference databases capture only a fraction of the true RNA virome. This question directly targets the scale and novelty signals present in the data.",
+      "data_support": [
+        "percent_identity_to_nearest_reference",
+        "novelty_flag",
+        "nearest_reference_family",
+        "alignment_hits",
+        "candidate_sotu_clusters",
+        "sample_source"
+      ],
+      "expected_test": "The question can be tested by scaling the translated search and RdRP alignment pipeline across the full public archive, clustering fragments into sOTUs, calculating novelty rates based on reference identity thresholds, and quantifying the proportion of unclassified or highly divergent RdRP lineages across diverse sample sources.",
+      "scope_keywords": [
+        "RdRP",
+        "RNA virus",
+        "petabase-scale",
+        "public sequencing archive",
+        "reference database gap",
+        "viral diversity"
+      ]
+    }
+  ]
+}
