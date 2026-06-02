@@ -1,0 +1,1132 @@
+$ codex exec --skip-git-repo-check --ignore-user-config --dangerously-bypass-approvals-and-sandbox --disable image_generation --cd /private/tmp/codex-sandboxes/codex-cli/20260517T145341 -m gpt-5.1-codex -c web_search="disabled" -c model_provider="newapi" -c model_providers.newapi.name="new-api gateway" -c model_providers.newapi.base_url="http://35.220.164.252:3888/v1" -c model_providers.newapi.env_key="NEWAPI_KEY" -c model_providers.newapi.wire_api="responses" Read INSTRUCTIONS.md in the current working directory. Read the agent-visible files under data/raw_data/. Produce exactly two files in the working directory: report/report.md and agent_questions.json (schema in info.json). target_study/ does not exist in this sandbox - do not look for it. Stop only when both output files exist on disk.
+[stdout]
+**Summary**
+- Authored `agent_questions.json:1` with a ranked, schema-compliant question tying low-identity RdRP fragments from arthropod and vertebrate transcriptomes to novel sOTUs absent from current references.
+- Compiled `report/report.md:1` detailing run, motif, alignment, and novelty distributions, derived statistics, reasoning at petabase scale, and mirrored the top question with a testability plan grounded in available features.
+
+**Testing**
+- Not run (not requested).
+
+**Next Steps**
+- If desired, expand to additional candidate questions or perform large-scale stratified clustering analyses to further substantiate the posed question.
+
+[stderr]
+Reading additional input from stdin...
+2026-05-17T06:53:44.374114Z ERROR codex_models_manager::manager: failed to refresh available models: stream disconnected before completion: failed to decode models response: missing field `models` at line 1 column 76286; body: {"data":[{"id":"dall-e-3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-3.5-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-0125","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-3.5-turbo-instruct","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-mini-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4.1-nano-2025-04-14","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-05-13","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-08-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-2024-11-20","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-2024-07-18","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-tts","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-2025-08-07-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-mini-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-minimal","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-nano-2025-08-07","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-2025-11-13","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-max","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-codex-mini","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.1-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-chat-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-chat","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.3-codex","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4","object":"model","created":1626777600,"owned_by":"codex","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-mini","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-nano","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-none","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-image-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-1.5","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gpt-image-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-realtime","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-2025-08-28","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-realtime-mini-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-mini-2024-09-12","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-preview-2024-09-12","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-2025-04-16","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o4-mini-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"sora-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-large","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-3-small","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"text-embedding-ada-002","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"tts-1-hd-1106","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"whisper-1","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gemini-2.5-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-preview-09-2025","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-flash-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-pro-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-pro-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3-pro-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-image-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-flash-lite-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-3.1-pro-preview-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-image-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-lite-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-12288","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-24576","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-flash-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-nothinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-1024","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-16384","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-2048","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-256","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-32768","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-4096","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.5-pro-thinking-8192","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"claude-haiku-4-5-20251001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-haiku-4-5-20251001-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-5-20251101-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-7-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-5-20250929-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-sonnet-4-6-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-1-20250805-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"claude-opus-4-20250514-thinking","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["anthropic","openai"]},{"id":"dall-e-2","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["image-generation","openai"]},{"id":"gemini-2.0-flash","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-lite-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"gemini-2.0-flash-thinking-exp","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"gpt-3.5-turbo-16k","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-2024-04-09","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4-turbo-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-audio-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-mini-transcribe","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-realtime-preview-2024-12-17","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-search-preview-2025-03-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-4o-transcribe-diarize","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5-pro-2025-10-06","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-2025-12-11","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-pro-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.2-xhigh","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-5.4-2026-03-05","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"gpt-5.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-3-fast-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4-0709","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-1-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-non-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4-fast-reasoning","object":"model","created":1626777600,"owned_by":"xai","supported_endpoint_types":["openai"]},{"id":"grok-4.20-0309-reasoning","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"grok-4.3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"imagen-4.0-fast-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"imagen-4.0-ultra-generate-001","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["image-generation","gemini","openai"]},{"id":"o1-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o1-pro-2025-03-19","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-high","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-low","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-2025-01-31-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-mini-medium","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"o3-pro","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o3-pro-2025-06-10","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-2025-04-16-high","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-low","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-2025-04-16-medium","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"o4-mini-deep-research-2025-06-26","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai-response"]},{"id":"omni-moderation-latest","object":"model","created":1626777600,"owned_by":"openai","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-r1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"USD-guiji/deepseek-v3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"veo-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-fast-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"veo-3.1-generate-preview","object":"model","created":1626777600,"owned_by":"vertex-ai","supported_endpoint_types":["gemini","openai"]},{"id":"bailian/deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"bailian/deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-r1","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-0528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"deepseek-v3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi/kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax/MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qvq-72b-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-2.0-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-edit-plus-2025-12-15","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-image-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-long-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"qwen-max-0403","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-max-longcontext","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0112","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1125","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1127","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-1220","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-2025-12-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-plus-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-0919","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-1101","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-2025-02-11","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-turbo-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1119","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-1230","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-01-25","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-2025-04-08","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-max-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen-vl-ocr-2025-11-20","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-7b-instruct-1m","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-omni-7b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-72b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen2.5-vl-7b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-235b-a22b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-30b-a3b-thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-32b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-480b-a35b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-07-22","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-coder-plus-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2025-09-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-2026-01-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-next-80b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-235b-a22b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-30b-a3b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-32b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-8b-thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-embedding","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3-vl-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-397b-a17b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-flash-2026-02-23","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.5-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-27b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-35b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-max-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen3.6-plus-2026-04-02","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwq-32b","object":"model","created":1626777600,"owned_by":"ali","supported_endpoint_types":["openai"]},{"id":"qwq-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"text-embedding-v4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.0-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-plus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"wanx2.1-t2i-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"ascend-tribe/pangu-pro-moe","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-en-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-large-zh-v1.5","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"ByteDance-Seed/Seed-OSS-36B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-OCR","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-0528-Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-R1-Distill-Qwen-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-ai/deepseek-vl2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-vl2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ling-mini-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionAI/Ring-flash-2.0","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-embedding-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"netease-youdao/bce-reranker-base_v1","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/BAAI/bge-reranker-v2-m3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-R1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.1-Terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/deepseek-ai/DeepSeek-V3.2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/MiniMaxAI/MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Instruct-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/moonshotai/Kimi-K2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/Qwen/Qwen2.5-VL-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-4.7","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Pro/zai-org/GLM-5.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-7B-Instruct","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-14B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-72B-Instruct-128K","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-Coder-7B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen2.5-VL-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-14B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-235B-A22B-Instruct-2507","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-235B-A22B-Thinking-2507","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Instruct-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-30B-A3B-Thinking-2507","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Coder-480B-A35B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Embedding-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Next-80B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Omni-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-0.6B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-Reranker-8B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-235B-A22B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-30B-A3B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-32B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3-VL-8B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-35B-A3B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-397B-A17B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-4B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/Qwen3.5-9B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen/QwQ-32B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-72B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Qwen2.5-VL-32B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun-ai/Step-3.5-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-A13B-Instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/Hunyuan-MT-7B","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/glm-4-9b-chat","object":"model","created":1626777600,"owned_by":"siliconflow","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-4.1V-9B-Thinking","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-32B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"THUDM/GLM-Z1-9B-0414","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5-Air","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.5V","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"zai-org/GLM-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-chat","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-reasoner","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-flash","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-v4-pro","object":"model","created":1626777600,"owned_by":"deepseek","supported_endpoint_types":["openai"]},{"id":"deepseek-r1-250528","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-1-terminus","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-2-251201","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek-v3-250324","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-pro-m-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-ui-tars-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-lite-250315","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-250328","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1-5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-lite-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-thinking-vision-pro-250428","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-1.5-vision-pro-32k-250115","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-240915","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-large-text-250515","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-text-240715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-embedding-vision-251215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-pro-32k-character-241215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250715","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-flash-250828","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250615","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-thinking-250715","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-6-vision-250815","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-1-8-251228","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-code-preview-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-lite-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-mini-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-2-0-pro-260215","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seed-code-preview-251028","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-250528","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedance-1-0-pro-fast-251015","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-3-0-t2i-250415","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-0-250828","object":"model","created":1626777600,"owned_by":"volcengine","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-4-5-251128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"doubao-seedream-5-0-260128","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"M2-her","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.1","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.5-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-M2.7-highspeed","object":"model","created":1626777600,"owned_by":"minimax","supported_endpoint_types":["openai"]},{"id":"MiniMax-Text-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4-voice","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.6","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.6v","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7","object":"model","created":1626777600,"owned_by":"zhipu_4v","supported_endpoint_types":["openai"]},{"id":"glm-4.7-Flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-4.7-FlashX","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"glm-5v-turbo","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-120b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0711-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-k2-0905-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-thinking-turbo","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2-turbo-preview","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.5","object":"model","created":1626777600,"owned_by":"moonshot","supported_endpoint_types":["openai"]},{"id":"kimi-k2.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-latest","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kimi-thinking-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v1-6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-1-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"kling-v2-master","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"Kling-Video-O1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2-omni","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mimo-v2.5-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-128k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-32k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"moonshot-v1-8k","object":"model","created":1626777600,"owned_by":"coze","supported_endpoint_types":["openai"]},{"id":"step-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"alibaba/tongyi-deepresearch-30b-a3b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"deepseek/deepseek-v3.2-speciale","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemini-embedding-001","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-3-27b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-26b-a4b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"google/gemma-4-31b-it","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inception/mercury-coder","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"inclusionai/ling-2.6-1t","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-3.2-11b-vision-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-405b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.1-8b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-3.3-70b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-maverick","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-4-scout","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-2-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-3-8b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"meta-llama/llama-guard-4-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"microsoft/phi-4-multimodal-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-01","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"minimax/minimax-m2:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-large-2512","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3-5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-medium-3.1","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-24b-instruct-2501","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/mistral-small-3.1-24b-instruct","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-12b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"mistralai/pixtral-large-2411","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2-0905","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"moonshotai/kimi-k2:online","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-120b","object":"model","created":1626777600,"owned_by":"submodel","supported_endpoint_types":["openai"]},{"id":"openai/gpt-oss-20b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"openai/o4-mini-deep-research","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-14b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"opengvlab/internvl3-2b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"or/qwen3.5-9b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"perplexity/sonar-reasoning-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.5-122b-a10b","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus-preview:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"qwen/qwen3.6-plus:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"stepfun/step-3.5-flash:free","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"tencent/hy3-preview","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-2-vision-1212","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-3-mini-beta","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"x-ai/grok-4-fast","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"xiaomi/mimo-v2-pro","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.5v","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]},{"id":"z-ai/glm-4.6","object":"model","created":1626777600,"owned_by":"custom","supported_endpoint_types":["openai"]}],"object":"list","success":true}
+OpenAI Codex v0.130.0
+--------
+workdir: /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+model: gpt-5.1-codex
+provider: newapi
+approval: never
+sandbox: danger-full-access
+reasoning effort: none
+reasoning summaries: none
+session id: 019e34b6-5246-76a0-b4c8-ca69268c6640
+--------
+user
+Read INSTRUCTIONS.md in the current working directory. Read the agent-visible files under data/raw_data/. Produce exactly two files in the working directory: report/report.md and agent_questions.json (schema in info.json). target_study/ does not exist in this sandbox - do not look for it. Stop only when both output files exist on disk.
+2026-05-17T06:53:49.720280Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Client(HttpRequest(HttpRequest("http/request failed: error sending request for url (https://chatgpt.com/backend-api/wham/apps)")))
+exec
+/bin/zsh -lc ls in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 0ms:
+INSTRUCTIONS.md
+checklist.json
+data
+info.json
+
+exec
+/bin/zsh -lc 'cat INSTRUCTIONS.md' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 4980ms:
+# INSTRUCTIONS — Life_Virus_001 / Scientific Question Generation
+
+You are an autonomous research agent. Your job in this workspace is to **read the blind input data, perform analysis, and propose the single most important scientific question** that the data could be used to answer. A separate judge LLM will then score your top question against a rubric (see `checklist.json`).
+
+You are NOT being evaluated on whether you reproduce a particular paper. You are being evaluated on whether the question you propose, framed only from the blind data, hits the same scientific target as the groundtruth.
+
+---
+
+## 1. What you have access to
+
+| Path | Content | Read? |
+|---|---|---|
+| `data/raw_data/blind_input_summary.json` | Entry point. Dataset description + visible data scale + forbidden context list + output contract. | ✅ |
+| `data/raw_data/runinfo_subset.tsv` | 32 sequencing runs × 5 metadata columns. | ✅ |
+| `data/raw_data/rdrp_aa_fragments.faa` | 53 RdRP-like amino-acid fragments with `motif_strength ∈ {0,1,2}`. | ✅ |
+| `data/raw_data/alignment_hits.tsv` | Per-fragment alignment hits to curated viral references (53 rows). | ✅ |
+| `data/raw_data/candidate_sotu_clusters.tsv` | 32 candidate sOTU clusters with `novelty_flag`. | ✅ |
+| `data/raw_data/README.md` | Data dictionary. | ✅ |
+| `checklist.json` | The rubric you will be scored against. Reading it is allowed and encouraged. | ✅ |
+| `info.json` | Task spec, output schema, and IO contract. | ✅ |
+| `target_study/` | Groundtruth used by the judge. **MUST NOT be opened.** | ❌ |
+
+The local TSV/FAA files are a **synthetic but schema-faithful subset** (seed 20260514). The real upstream search behind `blind_input_summary.json.data_scale_visible_to_agent` covers ~5.7M runs / ~10.2 petabases / ~131,957 candidate novel sOTUs. Your scientific framing should reflect that scale, not the 53-row local subset.
+
+---
+
+## 2. Forbidden context
+
+`blind_input_summary.json.forbidden_context` lists names, numbers, and concepts that would directly identify the target paper. **Do not** mention them in your output, even if you "know" them from training data:
+
+- The target paper title / DOI / abstract / authors / conclusion
+- Named viral discoveries (MLeV, PsNV, AmexNV, group E nidoviruses, delta/epsilon/zeta hepatitis-D-like agents, Lak megaphage, …)
+- Named tools / databases (Serratus, Palmscan, palmprint, Tantalus, serratus.io, coronaSPAdes, Palmdb)
+- Named author surnames (Edgar, Babaian)
+- The figures `US$23,980`, `11 days`, `9.8x sOTU expansion`
+
+Your question must be derivable purely from the data summary in front of you.
+
+---
+
+## 3. What you must produce
+
+Write exactly two files under the workspace root:
+
+### 3.1 `report/report.md`
+
+A short technical report (~400–800 words) with these sections:
+
+1. **Data summary** — what you observed in the blind input (run distribution, motif strength distribution, identity distribution, novelty flag counts, source / host / region breakdown).
+2. **Analysis** — at least three derived statistics, e.g.:
+   - fraction of fragments with `percent_identity_to_nearest_reference < 0.40`
+   - fraction of clusters flagged `novel`
+   - distribution of `nearest_reference_family` including `unclassified_RdRP`
+   - source-source breakdown of where novel clusters concentrate
+3. **Reasoning** — why these numbers, when extrapolated to the petabase-scale upstream search (~5.7M runs, ~131,957 candidate novel sOTUs), motivate the scientific question you will pose.
+4. **Top scientific question** — copied verbatim from `agent_questions.json[0].question`.
+5. **Why this question is testable on the provided dataset.**
+
+### 3.2 `agent_questions.json`
+
+A ranked list of scientific question candidates, **best first**. Schema (also in `info.json.agent_output_schema`):
+
+```json
+{
+  "agent_id": "<model+harness identifier you choose, e.g. 'qwen3.6-plus'>",
+  "workspace_id": "Life_Virus_001",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "<one-sentence scientific question, full English sentence ending with '?'>",
+      "rationale": "<2-4 sentences linking the question to the blind data evidence>",
+      "data_support": ["<feature_or_file>", "..."],
+      "expected_test": "<how this question is answerable using the kind of data described in blind_input_summary.json>",
+      "scope_keywords": ["RdRP", "RNA virus", "petabase-scale", "..."]
+    }
+  ]
+}
+```
+
+- Provide **at least 1 and at most 5** candidates. Only `questions[0]` is scored against the rubric; the rest are kept for ranking diagnostics.
+- The question text must end with `?` and be a single sentence.
+- `data_support` must reference items that actually exist in `available_features` or `local_files` of `blind_input_summary.json`.
+
+---
+
+## 4. How to think about the rubric
+
+`checklist.json` has 6 weighted dimensions. The judge is told to award an integer 0–5 per dimension and weight-average. The dimensions are:
+
+| Dimension | Weight | What it actually measures |
+|---|---|---|
+| Question matching | 0.40 | Top question hits the groundtruth scientific question. |
+| Novelty | 0.15 | Frames a non-trivial scientific opportunity, not a routine ETL task. |
+| Importance | 0.15 | Has biomedical / ecological / surveillance significance. |
+| Testability | 0.10 | Answerable using RdRP alignment, sOTU clustering, novelty stats, source metadata. |
+| Data support | 0.10 | Grounded in the blind data, not invented context. |
+| Specificity | 0.10 | Specifies object, data scope, marker, scientific implication. |
+
+A high-scoring top question typically combines: **(a)** petabase-scale public sequencing archive mining, **(b)** RdRP as the marker, **(c)** the gap in curated viral reference databases, and **(d)** the resulting hidden RNA-virus diversity. You do not need to use those exact words — but those are the four pillars the judge looks for.
+
+---
+
+## 5. What NOT to do
+
+- Do not list ten generic questions hoping one hits. The judge only scores `questions[0]`.
+- Do not fabricate run IDs, fragment IDs, or statistics not derivable from the supplied files.
+- Do not claim you used a specific tool / database that is in the forbidden list.
+- Do not propose questions that require wet-lab experiments not derivable from the data.
+- Do not open or reference `target_study/`.
+
+---
+
+## 6. Output checklist before you stop
+
+- [ ] `report/report.md` exists and has the 5 sections above.
+- [ ] `agent_questions.json` exists, parses as JSON, conforms to the schema.
+- [ ] `questions[0].question` is a single sentence ending with `?`.
+- [ ] No item in `forbidden_context` appears anywhere in either file.
+- [ ] All `data_support` entries match `available_features` or `local_files` from `blind_input_summary.json`.
+
+When all six checks pass, your run is complete. The judge pipeline will pick up your two output files and score them.
+
+  → Review specs and data sources
+  • Derive key statistics and insights
+  • Draft agent_questions.json
+  • Write report/report.md referencing top question
+exec
+/bin/zsh -lc 'ls data' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 3084ms:
+raw_data
+
+exec
+/bin/zsh -lc 'find data -name AGENTS.md -print' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 15226ms:
+exec
+/bin/zsh -lc 'cat data/raw_data/blind_input_summary.json' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 2496ms:
+{
+  "dataset_id": "D_001_anonymized_large_scale_public_rdrp_search",
+  "blind_dataset_summary": "A very large public sequencing archive was processed through translated sequence search. Candidate RNA-virus polymerase-like amino acid fragments were detected across millions of sequencing runs from diverse biological and environmental sources. The local files distributed under data/ are an anonymized subset of that processed dataset. Many candidate clusters show low similarity to curated viral references.",
+
+  "data_scale_visible_to_agent": {
+    "translated_runs_screened":         5686715,
+    "searched_data_volume":             "10.2 petabases",
+    "candidate_unique_novel_rdrp_sotus": 131957,
+    "local_subset_runinfo_rows":        32,
+    "local_subset_aa_fragments":        53
+  },
+
+  "local_files": {
+    "runinfo_subset":          "data/runinfo_subset.tsv",
+    "rdrp_aa_fragments":       "data/rdrp_aa_fragments.faa",
+    "alignment_hits":          "data/alignment_hits.tsv",
+    "candidate_sotu_clusters": "data/candidate_sotu_clusters.tsv"
+  },
+
+  "processed_objects": [
+    "translated sequencing runs",
+    "RdRP-like amino acid fragments",
+    "alignment hits to viral polymerase references or profiles",
+    "candidate RdRP clusters or sOTUs",
+    "run-level sample metadata",
+    "source-taxon or environment annotations when available"
+  ],
+
+  "available_features": [
+    "run_id_anonymized",
+    "sample_source",
+    "host_or_environment",
+    "geographic_region_if_available",
+    "metadata_completeness",
+    "fragment_id",
+    "amino_acid_sequence",
+    "fragment_length",
+    "motif_strength",
+    "alignment_score",
+    "e_value",
+    "nearest_reference_family",
+    "percent_identity_to_nearest_reference",
+    "coverage_to_reference",
+    "cluster_id",
+    "cluster_size",
+    "representative_fragment_id",
+    "novelty_flag",
+    "mean_metadata_completeness"
+  ],
+
+  "forbidden_context": [
+    "the target paper's title",
+    "the target paper's DOI",
+    "the target paper's authors",
+    "the target paper's abstract",
+    "the target paper's conclusion",
+    "named viral discoveries from the target paper (e.g., MLeV, PsNV, AmexNV, group E nidoviruses, delta/epsilon/zeta hepatitis-D-like agents, Lak megaphage)",
+    "named target tools or databases that directly identify the paper (e.g., Serratus, Palmscan, palmprint, Tantalus, serratus.io, coronaSPAdes, Palmdb)",
+    "named author surnames such as Edgar, Babaian",
+    "the explicit cost figure of US$23,980 or the 11-day runtime",
+    "the explicit 9.8x sOTU expansion factor"
+  ],
+
+  "agent_output_contract": {
+    "report_path": "report/report.md",
+    "scientific_question_output_path": "agent_questions.json",
+    "schema_reference": "info.json.agent_output_schema"
+  }
+}
+
+exec
+/bin/zsh -lc 'cat data/raw_data/README.md' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 3883ms:
+# Data Dictionary — Life_Virus_001
+
+This is the **agent-visible** data subset for the new-virus-type discovery task. The local subset is anonymized and intentionally small (32 runs / 53 fragments) so that an agent can iterate fast; the full upstream search covers ~5.7 million runs / ~10.2 petabases.
+
+## Files
+
+| File | Type | Rows |
+|---|---|---|
+| `blind_input_summary.json` | Structured agent input (entry point) | — |
+| `runinfo_subset.tsv` | Run-level metadata | 32 |
+| `rdrp_aa_fragments.faa` | RdRP-like amino acid fragments | 53 |
+| `alignment_hits.tsv` | Per-fragment alignment hits to curated viral RdRP references | 53 |
+| `candidate_sotu_clusters.tsv` | Candidate sOTU cluster table | ~32 |
+
+## `runinfo_subset.tsv` columns
+
+- `run_id_anonymized` — opaque ID, e.g. `RUN_0007`
+- `sample_source` — high-level sequencing-context category (`arthropod_RNAseq`, `vertebrate_transcr`, `soil_metagenome`, `gut_metagenome`, `plant_transcriptome`, `aquatic_metavirome`)
+- `host_or_environment` — coarse host or environmental class (`arthropod`, `fish_amphibian`, `soil_sediment`, `mammalian_gut`, `plant`, `freshwater`)
+- `geographic_region_if_available` — coarse region: `NA / EU / AS / OC / SA / AF / unknown`
+- `metadata_completeness` — float in [0,1]: fraction of optional metadata fields populated
+
+## `rdrp_aa_fragments.faa`
+
+FASTA. Header: `>FRAG_<id> run=<run_id> len=<fragment_length> motif_strength=<0|1|2>`
+
+`motif_strength` is a quality indicator about how many of the canonical RdRP catalytic motifs (A: DXXKW; B: GxxxT; C: SDD) are observable inside the fragment:
+
+- `0` — motifs not detected (likely weak / partial / artefact)
+- `1` — at least motif A + motif C visible
+- `2` — motifs A + B + C all visible (high-confidence RdRP candidate)
+
+## `alignment_hits.tsv` columns
+
+- `fragment_id` — joins `rdrp_aa_fragments.faa`
+- `alignment_score` — DIAMOND-style bit score
+- `e_value` — alignment significance, smaller is better
+- `nearest_reference_family` — best-hit reference family name; falls back to `unclassified_RdRP` when no high-confidence family is recovered
+- `percent_identity_to_nearest_reference` — float in [0,1]
+- `coverage_to_reference` — float in [0,1]; fraction of reference covered
+
+## `candidate_sotu_clusters.tsv` columns
+
+- `cluster_id` — opaque ID, e.g. `sOTU_004`
+- `cluster_size` — number of fragments in the cluster
+- `representative_fragment_id` — joins `rdrp_aa_fragments.faa`
+- `nearest_reference_family` — cluster-level annotation; same fallback as above
+- `percent_identity_to_nearest_reference` — cluster-representative identity to nearest curated reference
+- `novelty_flag` — `novel` if cluster identity < 0.40, else `known_or_borderline`
+- `mean_metadata_completeness` — average of run-level `metadata_completeness` for the runs contributing to the cluster
+
+## Provenance & disclaimer
+
+The local TSV/FAA files are **synthetic but schema-faithful**. They were generated with `random.seed(20260514)` so the distribution is reproducible. Use them to develop and test your analysis pipeline — the gold-question rubric (under `target_study/question_rubric.json`) is calibrated against the *full* upstream search statistics surfaced via `blind_input_summary.json → data_scale_visible_to_agent`, not against this local subset. Do not over-fit your analysis to the 53 local fragments.
+
+exec
+/bin/zsh -lc 'ls data/raw_data' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 5722ms:
+README.md
+alignment_hits.tsv
+blind_input_summary.json
+candidate_sotu_clusters.tsv
+rdrp_aa_fragments.faa
+runinfo_subset.tsv
+
+exec
+/bin/zsh -lc 'cat data/raw_data/runinfo_subset.tsv' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 3822ms:
+run_id_anonymized	sample_source	host_or_environment	geographic_region_if_available	metadata_completeness
+RUN_0001	arthropod_RNAseq	arthropod	AS	0.88
+RUN_0002	arthropod_RNAseq	arthropod	NA	0.42
+RUN_0003	arthropod_RNAseq	arthropod	OC	0.98
+RUN_0004	arthropod_RNAseq	arthropod	SA	0.6
+RUN_0005	arthropod_RNAseq	arthropod	unknown	0.78
+RUN_0006	arthropod_RNAseq	arthropod	NA	0.74
+RUN_0007	arthropod_RNAseq	arthropod	AS	0.98
+RUN_0008	arthropod_RNAseq	arthropod	NA	0.74
+RUN_0009	vertebrate_transcr	fish_amphibian	OC	0.89
+RUN_0010	vertebrate_transcr	fish_amphibian	unknown	0.42
+RUN_0011	vertebrate_transcr	fish_amphibian	EU	0.9
+RUN_0012	vertebrate_transcr	fish_amphibian	NA	0.61
+RUN_0013	vertebrate_transcr	fish_amphibian	EU	0.74
+RUN_0014	vertebrate_transcr	fish_amphibian	NA	0.6
+RUN_0015	soil_metagenome	soil_sediment	SA	0.69
+RUN_0016	soil_metagenome	soil_sediment	NA	0.9
+RUN_0017	soil_metagenome	soil_sediment	EU	0.46
+RUN_0018	soil_metagenome	soil_sediment	SA	0.9
+RUN_0019	soil_metagenome	soil_sediment	AS	0.65
+RUN_0020	soil_metagenome	soil_sediment	NA	0.55
+RUN_0021	gut_metagenome	mammalian_gut	EU	0.71
+RUN_0022	gut_metagenome	mammalian_gut	unknown	0.97
+RUN_0023	gut_metagenome	mammalian_gut	NA	0.45
+RUN_0024	gut_metagenome	mammalian_gut	AF	0.66
+RUN_0025	plant_transcriptome	plant	NA	0.45
+RUN_0026	plant_transcriptome	plant	SA	0.92
+RUN_0027	plant_transcriptome	plant	SA	0.49
+RUN_0028	plant_transcriptome	plant	SA	0.9
+RUN_0029	aquatic_metavirome	freshwater	NA	0.53
+RUN_0030	aquatic_metavirome	freshwater	NA	0.67
+RUN_0031	aquatic_metavirome	freshwater	unknown	0.51
+RUN_0032	aquatic_metavirome	freshwater	EU	0.98
+
+exec
+/bin/zsh -lc 'cat data/raw_data/alignment_hits.tsv' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 4402ms:
+fragment_id	alignment_score	e_value	nearest_reference_family	percent_identity_to_nearest_reference	coverage_to_reference
+FRAG_001	153.4	8.29e-05	Articulavirales	0.263	0.653
+FRAG_002	96.4	6.16e-05	Reovirales	0.216	0.376
+FRAG_003	116.8	3.61e-05	Tymovirales	0.279	0.5
+FRAG_004	91.5	2.16e-03	unclassified_RdRP	0.134	0.642
+FRAG_005	133.2	9.58e-05	Partitiviridae	0.395	0.587
+FRAG_006	137.5	4.72e-05	Bunyavirales	0.235	0.358
+FRAG_007	148.8	5.04e-05	Norzivirales	0.255	0.618
+FRAG_008	51.0	8.74e-03	unclassified_RdRP	0.178	0.834
+FRAG_009	122.1	9.21e-07	unclassified_RdRP	0.266	0.475
+FRAG_010	137.8	2.26e-06	Nidovirales	0.241	0.484
+FRAG_011	49.2	4.18e-03	unclassified_RdRP	0.182	0.639
+FRAG_012	110.9	4.50e-05	Levivirales	0.141	0.516
+FRAG_013	95.7	5.72e-05	Mononegavirales	0.264	0.623
+FRAG_014	123.7	8.75e-06	Cystoviridae	0.138	0.61
+FRAG_015	160.0	6.26e-05	Cystoviridae	0.383	0.869
+FRAG_016	139.4	2.67e-05	Cystoviridae	0.502	0.64
+FRAG_017	89.4	8.53e-05	Cystoviridae	0.224	0.661
+FRAG_018	176.9	9.15e-05	unclassified_RdRP	0.393	0.6
+FRAG_019	155.4	9.31e-05	Cystoviridae	0.424	0.689
+FRAG_020	126.1	9.40e-05	Levivirales	0.134	0.506
+FRAG_021	130.0	9.73e-05	Articulavirales	0.547	0.393
+FRAG_022	137.6	3.13e-05	Bunyavirales	0.186	0.64
+FRAG_023	72.8	4.54e-03	unclassified_RdRP	0.26	0.293
+FRAG_024	133.8	1.99e-05	Partitiviridae	0.186	0.537
+FRAG_025	88.8	3.39e-05	Nidovirales	0.263	0.602
+FRAG_026	168.1	4.99e-05	Norzivirales	0.41	0.68
+FRAG_027	161.1	9.08e-05	Partitiviridae	0.372	0.294
+FRAG_028	80.4	3.86e-03	unclassified_RdRP	0.196	0.416
+FRAG_029	131.2	7.81e-05	Levivirales	0.264	0.846
+FRAG_030	95.8	2.62e-05	Picornavirales	0.151	0.525
+FRAG_031	114.1	7.57e-05	Reovirales	0.264	0.922
+FRAG_032	101.5	9.29e-05	Norzivirales	0.101	0.272
+FRAG_033	52.0	9.85e-03	unclassified_RdRP	0.215	0.468
+FRAG_034	135.2	1.34e-06	Nidovirales	0.494	0.424
+FRAG_035	54.0	2.51e-03	unclassified_RdRP	0.171	0.635
+FRAG_036	118.1	8.01e-05	Nidovirales	0.247	0.875
+FRAG_037	131.4	5.88e-05	Bunyavirales	0.123	0.458
+FRAG_038	127.2	5.44e-05	Partitiviridae	0.171	0.846
+FRAG_039	175.1	4.54e-05	Norzivirales	0.342	0.736
+FRAG_040	142.7	7.92e-05	Partitiviridae	0.324	0.897
+FRAG_041	133.7	7.11e-05	Nidovirales	0.467	0.914
+FRAG_042	163.9	6.36e-05	Picornavirales	0.453	0.268
+FRAG_043	138.1	9.53e-05	Cystoviridae	0.18	0.448
+FRAG_044	138.8	6.28e-05	Cystoviridae	0.272	0.268
+FRAG_045	133.8	8.48e-05	Nidovirales	0.128	0.511
+FRAG_046	130.5	5.30e-05	Norzivirales	0.231	0.432
+FRAG_047	97.3	5.64e-05	Articulavirales	0.14	0.272
+FRAG_048	93.2	1.93e-05	Tymovirales	0.218	0.607
+FRAG_049	85.2	5.10e-05	Picornavirales	0.149	0.45
+FRAG_050	153.6	1.26e-05	Reovirales	0.256	0.692
+FRAG_051	101.0	7.23e-05	Mononegavirales	0.268	0.668
+FRAG_052	46.2	7.21e-03	unclassified_RdRP	0.266	0.819
+FRAG_053	173.5	1.66e-05	Articulavirales	0.313	0.379
+
+exec
+/bin/zsh -lc 'cat data/raw_data/candidate_sotu_clusters.tsv' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 2620ms:
+cluster_id	cluster_size	representative_fragment_id	nearest_reference_family	percent_identity_to_nearest_reference	novelty_flag	mean_metadata_completeness
+sOTU_001	4	FRAG_001	Nidovirales	0.415	known_or_borderline	0.74
+sOTU_002	4	FRAG_005	Nidovirales	0.361	novel	0.72
+sOTU_003	4	FRAG_009	Picornavirales	0.137	novel	0.72
+sOTU_004	3	FRAG_013	Picornavirales	0.263	novel	0.92
+sOTU_005	3	FRAG_016	Levivirales	0.534	known_or_borderline	0.7
+sOTU_006	2	FRAG_019	Partitiviridae	0.34	novel	0.73
+sOTU_007	2	FRAG_021	Bunyavirales	0.538	known_or_borderline	0.81
+sOTU_008	2	FRAG_023	unclassified_RdRP	0.275	novel	0.67
+sOTU_009	2	FRAG_025	Picornavirales	0.137	novel	0.71
+sOTU_010	2	FRAG_027	Bunyavirales	0.276	novel	0.71
+sOTU_011	2	FRAG_029	Reovirales	0.259	novel	0.58
+sOTU_012	2	FRAG_031	Reovirales	0.278	novel	0.73
+sOTU_013	2	FRAG_033	unclassified_RdRP	0.124	novel	0.43
+sOTU_014	1	FRAG_035	unclassified_RdRP	0.244	novel	0.78
+sOTU_015	1	FRAG_036	Articulavirales	0.18	novel	0.69
+sOTU_016	1	FRAG_037	Picornavirales	0.282	novel	0.45
+sOTU_017	1	FRAG_038	Cystoviridae	0.139	novel	0.9
+sOTU_018	1	FRAG_039	unclassified_RdRP	0.498	known_or_borderline	0.9
+sOTU_019	1	FRAG_040	Nidovirales	0.361	novel	0.66
+sOTU_020	1	FRAG_041	Levivirales	0.484	known_or_borderline	0.65
+sOTU_021	1	FRAG_042	Tymovirales	0.236	novel	0.42
+sOTU_022	1	FRAG_043	Norzivirales	0.539	known_or_borderline	0.74
+sOTU_023	1	FRAG_044	Articulavirales	0.128	novel	0.6
+sOTU_024	1	FRAG_045	Partitiviridae	0.226	novel	0.45
+sOTU_025	1	FRAG_046	Tymovirales	0.178	novel	0.45
+sOTU_026	1	FRAG_047	Nidovirales	0.29	novel	0.9
+sOTU_027	1	FRAG_048	Picornavirales	0.282	novel	0.89
+sOTU_028	1	FRAG_049	Reovirales	0.254	novel	0.51
+sOTU_029	1	FRAG_050	Levivirales	0.512	known_or_borderline	0.71
+sOTU_030	1	FRAG_051	Mononegavirales	0.298	novel	0.53
+sOTU_031	1	FRAG_052	unclassified_RdRP	0.151	novel	0.97
+sOTU_032	1	FRAG_053	Nidovirales	0.506	known_or_borderline	0.45
+
+exec
+/bin/zsh -lc 'cat data/raw_data/rdrp_aa_fragments.faa' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 2162ms:
+>FRAG_001 run=RUN_0010 len=110 motif_strength=2
+DYNCHCNSWSTTKEYDDDVVNWQPNDTDKAKWELHNMKIGSNPVDESHFGMSSTGVDAKGMECEVNSDDGHSPDPKQNPCWCYMCVIHWASPSLWAPHWPNYILKFKSSN
+>FRAG_002 run=RUN_0001 len=150 motif_strength=1
+QGPHTCASMLRRCIEKYTHDTTTNPSDLLEWERQCCKDKAKWWFGTYGSDHNSKVTVVNLPSPQADQNKEVYSIECEDDKNLGLAPRYNQSDDVWMILMTSGSAMYGWDPMTNQYINDEDCAIQCMLTIKNHKMIKCWMDTNAHCSRRSL
+>FRAG_003 run=RUN_0028 len=150 motif_strength=1
+FMNFDCILRPWKNYEYMICLGTVYEVCHSIMQHMYWNDKAKWMWKPIKDLNTTVVLNYRRVKHLGVGHQLHMIMCTYHMGLDWHGWGNQNSDDQLAAFKNDSDPDYGHTQHHMRSIANAPEVHMDPNWLCWDWRAKWEKVGKEHCMQLWC
+>FRAG_004 run=RUN_0013 len=150 motif_strength=0
+DYIHWSVQDMVFSNLEDKWVFSAVGFHDYEVKSPMHFLMWIWNPVCVGHWEPASNLSLIYTVRPVFDFMPCQQGKWDMSGGHMLNNTCHTGMNHICMRLKAPAGQLMPWENYVQNEMTQPVMHCNNHGCALSWCLEHFQRSVRKTWWNWH
+>FRAG_005 run=RUN_0024 len=90 motif_strength=2
+FASPYWPVHWEFFDDTYKHMQTDKAKWVYMQPNAFYFWMSGMSSTLKASLFISVSDDRAEDMCVWDHAMRFSFCRRPNAVESIFHWSWRC
+>FRAG_006 run=RUN_0018 len=150 motif_strength=1
+YYRARNEWGWLKISEHKNSNLMQVAAIWAWYAHWPLADKAKWCSQRFGNIDTYRVMCASEMGNMVLRILIWRNCDHLASVVSRCPSRQTVSDDHCQRYFWPTYDNAWPHQHPYFIKVPSNTDVMEFRKEYFPACKWLWMTNGATNVYPFL
+>FRAG_007 run=RUN_0006 len=90 motif_strength=2
+WILFTYEAIGATPMVLMDKTLWDKAKWIGFMAQQNSNLHNGMSSTQECYGEKGWSDDTFVHEDEWDKRRLSGMARDQTGFAESTKSAMET
+>FRAG_008 run=RUN_0014 len=45 motif_strength=0
+VDAKKFQTALRAAELGYTAAELIVNARKGNPHLSCCNQARSLIEL
+>FRAG_009 run=RUN_0004 len=110 motif_strength=1
+NGPGVSQDAQISERWWGLTDKFCSWIVDKAKWDHHVAPQKSKIQHHREDFLDAIVQHTITYAVKAWSDDFKHISLLVDLVTCPGGLWRFNNWAYNCWVPDGCTLTCAFVK
+>FRAG_010 run=RUN_0021 len=150 motif_strength=2
+CGDDKPLQCKLSYAMKWFVFMWICFTQCWPVRAALKQDKAKWPQDWLEWEVVLEEKIHAGHCRAADNGMSSTQSDCANHYNIHNTGVEPCSDDESPDFDEWFAICACAIDVQSGHNMIALFYWRCPWADQSHFRLKSPHECNWNSVIDQG
+>FRAG_011 run=RUN_0014 len=90 motif_strength=0
+WLLKRIDPTNDFYDTWIIWDFDGTWYGFKYGQPNTHAHMPYTIWVPWWFDNRVGNGDYAEDMQPVRQKLATYNQFGLLGMWVHSQKGSWQ
+>FRAG_012 run=RUN_0032 len=110 motif_strength=1
+LCAMNDWLDDTGTRGGGMQCSPHPRVEDKAKWTWAAEWAHYYLFRMDEVERQCRAVSNNPPRTGQWSDDCCHMAKRPPIQWTNCNVNNLFNGNETFVFWCENGCNLIGEN
+>FRAG_013 run=RUN_0001 len=90 motif_strength=1
+WPHQKQYLQVACDRESDQPNPDDKAKWQLITHDGEHCPDYRERKYNEHLENWGYSDDNAFGRNVSPTKSKKKTAFRKIREKAQTGKDPPC
+>FRAG_014 run=RUN_0016 len=130 motif_strength=1
+AIQKHWHTEEKRFAEYTGRDECMFCFAWEHATDKAKWDHTMYDVCRRSENFQKLERNTYTRFRYEQEEWICGRCIYFISDDVHAQSMVQDAWHMLHGQKVTVWQIWEKCCAYYNVWTGAYVSHGYFTYQP
+>FRAG_015 run=RUN_0032 len=45 motif_strength=2
+CRDTVQWHEQSRLNRWTSPHGMSSTENTFFDVCAPTIRVCFKPGA
+>FRAG_016 run=RUN_0032 len=75 motif_strength=2
+GYYVPFYLHNLLMGVNILDKAKWGLPIRHHPEEGMSSTENDWMHDSDDQICYCETEQREECWTMARLVNPEWIWL
+>FRAG_017 run=RUN_0029 len=60 motif_strength=1
+IHADGDLIQIRHRYWDKAKWIILIGYNDYNYVNFCISDDCTVRWMKNHYMYCTIWHGAGE
+>FRAG_018 run=RUN_0004 len=45 motif_strength=2
+GICVTFSATHTEEPSCIKWHGMSSTDGLPVLCFWLNKNTYVTGYR
+>FRAG_019 run=RUN_0011 len=150 motif_strength=2
+VISKRAESAQELMSFELPPESNDLQKVHYYCEPKWSGDKAKWHQIENAPFPCLPTCNQEGMMYWILCGMSSTVTSHHPLMRDLNPDAKSISDDLKVGLKYLFMFPFEGWHMYQPEAQCIQDPQLQHITISSPTWGALFMMDWYLLLHIHI
+>FRAG_020 run=RUN_0020 len=45 motif_strength=1
+RMSDANNARLDYKFRKLWHCLMQNQPELKWEDSKFRRAMCKYSYS
+>FRAG_021 run=RUN_0001 len=110 motif_strength=2
+LICMCYRVNIIDWIDEGTLLWNPGTMTDKAKWHHPRSMFMIPGQFWQSVGMSSTGARVFEQFLKYDSDDDNVWVSLGLFVKLQEMWKFFLVTKSARAHYFKMGTIDLTWK
+>FRAG_022 run=RUN_0008 len=45 motif_strength=2
+EQVICQSYKGGMFKQGHQFIGMSSTTNGPYQMTKSFSGMLAKTEC
+>FRAG_023 run=RUN_0009 len=130 motif_strength=0
+KQLFLGKMCLMSFPSCCRIVIMSWINDKRNREKDSVLNNQGCRCWPDWYRIAKHVNMKWGNSMKIEMNENSHQIKVKKFYYMCADKKACAPPNQYHSTEPEYGNDFRIIADLYAPWVRYALEVITRQGLI
+>FRAG_024 run=RUN_0025 len=90 motif_strength=1
+HLTMKSREGHNTNMQSDVFESNDKAKWGRGHYVPGEAINCKWYAPFNWNVYDEYSDDLLERQVWRDILLVMKCIPCDTQMISRVMYAADD
+>FRAG_025 run=RUN_0022 len=75 motif_strength=1
+QRFTNEIKIKIEFMSWYNDKAKWQKKYKVKWKPVLYEMEHKEVCVSDDIYSYHQATHWRGINDDGFNWLNKIGAR
+>FRAG_026 run=RUN_0025 len=110 motif_strength=2
+YSDMDERIQNLMTYDGLKQGQAIDYAYDKAKWATDCIRVRDYKQRLMLKGMSSTEKDSIWKFKSEYSDDFLKANVRYAKDGVRECFLMWILEQGAWQRAFWHPYYDYFND
+>FRAG_027 run=RUN_0031 len=110 motif_strength=2
+PLFIDIRRNDVLALQMTNYTFYGDHGTDKAKWAEATKKINSRDRKRHTLGMSSTPSGPHDHHHAYWSDDHWNNHCGYIRSSSTYALIVLDTFTHGQGSEIVFEPPHCCTC
+>FRAG_028 run=RUN_0016 len=45 motif_strength=0
+TGMCNLWCVVDANPENYKSHSQFQKDDPYRRGMWTDGDVEGTPIC
+>FRAG_029 run=RUN_0008 len=60 motif_strength=1
+CQLSFRIFMIWHGYGDKAKWIHGGAMQEMGLEDHNCSDDFGKAHFFHLMNVKGAGMFGKF
+>FRAG_030 run=RUN_0010 len=75 motif_strength=1
+VIDDIGEIFEAMKSYSGKDKAKWDWQHDNYNSVENHYALKIAVDCSDDISGFGGFCHWPELQQARTLIYVNGTAD
+>FRAG_031 run=RUN_0005 len=90 motif_strength=1
+SIHLERFELLTKFVVKVYHKHPDKAKWSIECTMYSWSVHYHCGLRKWVSHDSPYSDDHWQGGCPKYKLALMFHCWSQLCYWATPHCVRDS
+>FRAG_032 run=RUN_0015 len=110 motif_strength=1
+KYVLPDSDNACNCEMHATCECNEGHPNDKAKWRISCAYLASQNMGKPCLHLRPSEFNGRHDEMYWASDDRDVNDIAFQGRVYGARDDMTEDTASRSPGKPERDCFRRIVP
+>FRAG_033 run=RUN_0025 len=130 motif_strength=0
+KILLVMVNMRICHIWEDTTMPNYKKCDAVPPVAYQLWPYCQTDEECHCFISLCEPYMWTNLTLKTNADWCEKNFRNNWTHPMFHEGIKLCPWVILCDAYQECKDYVISGWSYDRRQTPGEIVPDQCIAMN
+>FRAG_034 run=RUN_0002 len=45 motif_strength=2
+LLWPVWGKHRCPWISQWCQSGMSSTWEVAQSWGMNYQDDIGAHVR
+>FRAG_035 run=RUN_0005 len=130 motif_strength=0
+LQRDLTFDEKYMNWDDNTKHLRHNQVMCVIGLFNGYFDYTKCLNIERFQSFPNQGVNDSDTDFVYFEGIPPFRGTHWCAQEFSDMGDESCKNQARFDCSECVFVSGKTGIGRIFQKCGGCMFDFIRESAW
+>FRAG_036 run=RUN_0015 len=150 motif_strength=1
+YKANALALEWWGCGCSCNRVDIPKQCMWAALFPKLMCDKAKWSFWYQLVWNDVDDSQYDENSFTVVMRRLLGFGTQTIPIMIGRHSHWYISDDYLMHDNCNFCGMKMNAPFLRTIHGYCQCDELSMISNKQALSQYLNCIGREFARWQWG
+>FRAG_037 run=RUN_0025 len=90 motif_strength=1
+EQQAQEPRWWCHLMDQKYYGRHDKAKWAKIAPIVWCRGSKWRTATNMDEASFQYSDDHDATRVVLDCKLCIKLQKSATNQMAKEMIQIRQ
+>FRAG_038 run=RUN_0011 len=110 motif_strength=1
+VQRAYQYMGLMSIQNPMHFLYRFVIGKDKAKWEQKHICARKHIVVNFFMSMTPQYNQFFYLPMMDLSDDYPEWRLLRMKAKLTMTVAIMANVASHSWLEVQWINWMWTNS
+>FRAG_039 run=RUN_0018 len=75 motif_strength=2
+RAFWLGLDTKISRNTHARDKAKWWMTDKPMGEPGMSSTYVRECSNSDDFDDLITWHFWFFQHIQCMCIMQIQGRT
+>FRAG_040 run=RUN_0024 len=75 motif_strength=2
+LRLSVTLQHKAKFETCVNDKAKWLQNNWPLTWEGMSSTWMLIHAKSDDCKCNVWRWIWFIQPDNVQWLYIEDTQV
+>FRAG_041 run=RUN_0019 len=60 motif_strength=2
+DADHNPLVNHLVEAKDKAKWAWTQFVKGMSSTKVHQSDDYWCEMYFWPPMYTMMNMCSAH
+>FRAG_042 run=RUN_0002 len=60 motif_strength=2
+GRDIISQKSEGIFWLDKAKWHLYMKPFGMSSTKDNASDDIIPSSLPDYIACYFLRCFIAY
+>FRAG_043 run=RUN_0008 len=150 motif_strength=2
+DWWQWQVGYWGVQCYMLTMVIMMPQQSTHEGSCSDYPDKAKWKFMLHFPQYHDSFPPMPSFFQTAHSGMSSTVWGSTLGMCERLCWDVHWSDDIVNQCFFRWGSEVDMKHHMRLTWLFILHCATWARQAQAKYIMNTLSLVARNVEATPE
+>FRAG_044 run=RUN_0014 len=45 motif_strength=1
+MSIIQGGQWIQCKESAYAAALYCGENSLVEFKCRRQKSESYSRAM
+>FRAG_045 run=RUN_0025 len=60 motif_strength=1
+GKVLMGPRPFWAVMMDKAKWVLQPWLCWLSHWPFWVSDDLDFVMQKTREHAMVMAPDIGR
+>FRAG_046 run=RUN_0025 len=130 motif_strength=1
+VHMGQAFSNGPAQNDELKITSRYQMRKLKEQEDKAKWSNDKHRNFMHTADFSRQQKKVKHWRNFRYKLFHVFPDTFHWSDDHRWPWDMRRSLMQEDISQKMWYMFEFVWKVDVGMWMYYMHISGFHDPIP
+>FRAG_047 run=RUN_0016 len=45 motif_strength=1
+PQMSLKCYSPCTDMWEDMMCKPKSMCHVKWIRGMMVSMMKQNTTN
+>FRAG_048 run=RUN_0009 len=130 motif_strength=1
+RAIIVWTQGKNAHLIFYPPNHYARHQPSWKYIDKAKWAICCLDRNWNRTNGETAWAEECEYICPMEGAFEWRVWGACYSDDQDYLYCIMTAHRCMMGVIPIFHIYDGSLGFKWPFRHSHWHKKHTGMCCD
+>FRAG_049 run=RUN_0031 len=60 motif_strength=1
+MPSWIWGCFFFCFDEDKAKWEFMCCSSINHDPPDFKSDDHNCQIRCDDPLFMGPNACGRD
+>FRAG_050 run=RUN_0021 len=75 motif_strength=2
+WRFWYVFPPYAKVMNCCDDKAKWDWHSSNMYVAGMSSTCYPYNTPSDDKPGWLKTFNYIDNPYCICVWSERDGTS
+>FRAG_051 run=RUN_0029 len=150 motif_strength=1
+NFEDHAQQFCWGGDRWVYSHLSQKCEWKITKIPIIWLDKAKWIYACISEGFSDPYEKSFMEGAHDDSGNTYDLPTMGVHAPILRKPPARWSDDYLCVTNCSIAFIGVPFDWGHFSGHLEVRKIMGPTKFDWEDSLFPHLVRTIPTLCSII
+>FRAG_052 run=RUN_0022 len=45 motif_strength=0
+KKDAILGRILWLTCIRKSPKDVNQHKYGPIKGMKFTVACERNMFW
+>FRAG_053 run=RUN_0025 len=60 motif_strength=2
+EGNMTHRSNGSERDGDKAKWCDYYCIKGMSSTPTLFSDDKSNAHPTFTHGFVDKNCHIKI
+
+2026-05-17T06:57:46.413675Z ERROR codex_core::tools::router: error=failed to parse function arguments: unknown field `_commentary`, expected `explanation` or `plan` at line 1 column 289
+Finished reading all provided inputs. Moving on to compute summary statistics across the TSV and FAA files.
+  ✓ Review specs and data sources
+  → Derive key statistics and insights
+  • Draft agent_questions.json
+  • Write report/report.md referencing top question
+exec
+/bin/zsh -lc "python - <<'PY'
+import pandas as pd
+runinfo = pd.read_csv('data/raw_data/runinfo_subset.tsv', sep='\\t')
+align = pd.read_csv('data/raw_data/alignment_hits.tsv', sep='\\t')
+clusters = pd.read_csv('data/raw_data/candidate_sotu_clusters.tsv', sep='\\t')
+from collections import Counter
+import json
+result = {}
+result['run_source_counts'] = runinfo['sample_source'].value_counts().to_dict()
+result['host_counts'] = runinfo['host_or_environment'].value_counts().to_dict()
+result['region_counts'] = runinfo['geographic_region_if_available'].value_counts().to_dict()
+result['avg_metadata'] = runinfo['metadata_completeness'].mean()
+result['motif_strength_counts'] = align['fragment_id'].map(lambda x: None)
+import re
+motif_counts = Counter()
+frag_meta = []
+with open('data/raw_data/rdrp_aa_fragments.faa') as f:
+    header = None
+    for line in f:
+        line=line.strip()
+        if not line:
+            continue
+        if line.startswith('>'):
+            header=line[1:]
+            parts=dict(part.split('=') for part in header.split()[1:])
+            frag=header.split()[0]
+            motif_counts[int(parts['motif_strength'])]+=1
+        else:
+            continue
+result['motif_strength_counts']=dict(motif_counts)
+result['identity_lt_0_40']=float((align['percent_identity_to_nearest_reference']<0.40).mean())
+result['unclassified_fraction']=float((align['nearest_reference_family']=='unclassified_RdRP').mean())
+cluster_novel_fraction=float((clusters['novelty_flag']=='novel').mean())
+clusters_per_family=clusters['nearest_reference_family'].value_counts().to_dict()
+result['cluster_novel_fraction']=cluster_novel_fraction
+result['clusters_per_family']=clusters_per_family
+novel_source_counts={}
+for idx,row in clusters.iterrows():
+    frag=row['representative_fragment_id']
+    run=re.search(r\"run=(RUN_\\d+)\", open('data/raw_data/rdrp_aa_fragments.faa').read()).group(1)
+PY" in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ exited 1 in 1716ms:
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'pandas'
+
+exec
+/bin/zsh -lc "python - <<'PY'
+import csv
+from collections import Counter, defaultdict
+
+runinfo = []
+with open('data/raw_data/runinfo_subset.tsv') as f:
+    reader = csv.DictReader(f, delimiter='\\t')
+    for row in reader:
+        runinfo.append(row)
+
+run_source_counts = Counter(row['sample_source'] for row in runinfo)
+host_counts = Counter(row['host_or_environment'] for row in runinfo)
+region_counts = Counter(row['geographic_region_if_available'] for row in runinfo)
+metadata_vals = [float(row['metadata_completeness']) for row in runinfo]
+mean_metadata = sum(metadata_vals)/len(metadata_vals)
+
+frag_to_run = {}
+frag_to_motif = {}
+with open('data/raw_data/rdrp_aa_fragments.faa') as f:
+    for line in f:
+        line=line.strip()
+        if line.startswith('>'):
+            header=line[1:]
+            parts=header.split()
+            frag=parts[0]
+            metadata={}
+            for part in parts[1:]:
+                key,val=part.split('=')
+                metadata[key]=val
+            frag_to_run[frag]=metadata['run']
+            frag_to_motif[frag]=int(metadata['motif_strength'])
+
+motif_counts = Counter(frag_to_motif.values())
+
+alignment=[]
+with open('data/raw_data/alignment_hits.tsv') as f:
+    reader=csv.DictReader(f, delimiter='\\t')
+    for row in reader:
+        row['percent_identity_to_nearest_reference']=float(row['percent_identity_to_nearest_reference'])
+        row['coverage_to_reference']=float(row['coverage_to_reference'])
+        alignment.append(row)
+
+identity_lt_0_40 = sum(1 for row in alignment if row['percent_identity_to_nearest_reference']<0.40)/len(alignment)
+unclassified_fraction = sum(1 for row in alignment if row['nearest_reference_family']=='unclassified_RdRP')/len(alignment)
+family_counts_alignment = Counter(row['nearest_reference_family'] for row in alignment)
+
+clusters=[]
+with open('data/raw_data/candidate_sotu_clusters.tsv') as f:
+    reader=csv.DictReader(f, delimiter='\\t')
+    for row in reader:
+        row['cluster_size']=int(row['cluster_size'])
+        row['percent_identity_to_nearest_reference']=float(row['percent_identity_to_nearest_reference'])
+        row['mean_metadata_completeness']=float(row['mean_metadata_completeness'])
+        clusters.append(row)
+
+cluster_novel_fraction = sum(1 for row in clusters if row['novelty_flag']=='novel')/len(clusters)
+cluster_family_counts = Counter(row['nearest_reference_family'] for row in clusters)
+
+# Novel clusters by source (sample_source)
+run_to_source = {row['run_id_anonymized']: row['sample_source'] for row in runinfo}
+novel_source_counts = Counter()
+for row in clusters:
+    if row['novelty_flag']=='novel':
+        frag=row['representative_fragment_id']
+        run=frag_to_run[frag]
+        novel_source_counts[run_to_source[run]] += 1
+
+# motif strength distribution overall (counts) will convert to fraction
+motif_total=sum(motif_counts.values())
+motif_fraction={str(k): motif_counts[k]/motif_total for k in sorted(motif_counts)}
+
+# coverage stats maybe median? but need derived stats at least 3, we have identity fraction, novel cluster fraction, unclassified fraction, novel concentration, motif distribution etc.
+
+import json
+summary={
+    'run_source_counts': run_source_counts,
+    'host_counts': host_counts,
+    'region_counts': region_counts,
+    'mean_metadata': mean_metadata,
+    'motif_counts': motif_counts,
+    'motif_fraction': motif_fraction,
+    'identity_lt_0_40': identity_lt_0_40,
+    'unclassified_fraction': unclassified_fraction,
+    'family_counts_alignment': family_counts_alignment,
+    'cluster_novel_fraction': cluster_novel_fraction,
+    'cluster_family_counts': cluster_family_counts,
+    'novel_clusters_by_source': novel_source_counts,
+}
+
+# print nicely
+import pprint
+pprint.pprint(summary)
+PY" in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 10177ms:
+{'cluster_family_counts': Counter({'Nidovirales': 5,
+                                   'Picornavirales': 5,
+                                   'unclassified_RdRP': 5,
+                                   'Levivirales': 3,
+                                   'Reovirales': 3,
+                                   'Partitiviridae': 2,
+                                   'Bunyavirales': 2,
+                                   'Articulavirales': 2,
+                                   'Tymovirales': 2,
+                                   'Cystoviridae': 1,
+                                   'Norzivirales': 1,
+                                   'Mononegavirales': 1}),
+ 'cluster_novel_fraction': 0.75,
+ 'family_counts_alignment': Counter({'unclassified_RdRP': 10,
+                                     'Cystoviridae': 7,
+                                     'Nidovirales': 6,
+                                     'Partitiviridae': 5,
+                                     'Norzivirales': 5,
+                                     'Articulavirales': 4,
+                                     'Reovirales': 3,
+                                     'Bunyavirales': 3,
+                                     'Levivirales': 3,
+                                     'Picornavirales': 3,
+                                     'Tymovirales': 2,
+                                     'Mononegavirales': 2}),
+ 'host_counts': Counter({'arthropod': 8,
+                         'fish_amphibian': 6,
+                         'soil_sediment': 6,
+                         'mammalian_gut': 4,
+                         'plant': 4,
+                         'freshwater': 4}),
+ 'identity_lt_0_40': 0.8679245283018868,
+ 'mean_metadata': 0.7084375,
+ 'motif_counts': Counter({1: 25, 2: 20, 0: 8}),
+ 'motif_fraction': {'0': 0.1509433962264151,
+                    '1': 0.4716981132075472,
+                    '2': 0.37735849056603776},
+ 'novel_clusters_by_source': Counter({'arthropod_RNAseq': 6,
+                                      'vertebrate_transcr': 5,
+                                      'gut_metagenome': 4,
+                                      'plant_transcriptome': 4,
+                                      'aquatic_metavirome': 3,
+                                      'soil_metagenome': 2}),
+ 'region_counts': Counter({'NA': 11,
+                           'SA': 6,
+                           'EU': 5,
+                           'unknown': 4,
+                           'AS': 3,
+                           'OC': 2,
+                           'AF': 1}),
+ 'run_source_counts': Counter({'arthropod_RNAseq': 8,
+                               'vertebrate_transcr': 6,
+                               'soil_metagenome': 6,
+                               'gut_metagenome': 4,
+                               'plant_transcriptome': 4,
+                               'aquatic_metavirome': 4}),
+ 'unclassified_fraction': 0.18867924528301888}
+
+exec
+/bin/zsh -lc 'cat info.json' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 6090ms:
+{
+  "workspace_id": "Life_Virus_001",
+  "task_id": "T_001_petabase_rdrp_question_generation",
+  "task_kind": "scientific_question_generation",
+  "domain": "virology / metagenomics",
+  "title": "Petabase-scale RdRP-driven RNA virus discovery — scientific question generation",
+  "short_description": "Given a blind, anonymized subset of an upstream petabase-scale public-sequencing translated search for RdRP-like fragments, propose the single most important scientific question the dataset can answer.",
+
+  "agent_visible_inputs": {
+    "instructions": "INSTRUCTIONS.md",
+    "checklist": "checklist.json",
+    "data_dir": "data/raw_data/",
+    "blind_entry_point": "data/raw_data/blind_input_summary.json"
+  },
+
+  "agent_output_contract": {
+    "report_path": "report/report.md",
+    "scientific_question_output_path": "agent_questions.json",
+    "max_questions": 5,
+    "min_questions": 1
+  },
+
+  "agent_output_schema": {
+    "type": "object",
+    "required": ["agent_id", "workspace_id", "questions"],
+    "properties": {
+      "agent_id": {
+        "type": "string",
+        "description": "Identifier for the model + harness combination, chosen by the agent runner."
+      },
+      "workspace_id": {
+        "type": "string",
+        "const": "Life_Virus_001"
+      },
+      "questions": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "required": ["rank", "question", "rationale", "data_support", "expected_test", "scope_keywords"],
+          "properties": {
+            "rank": {"type": "integer", "minimum": 1},
+            "question": {
+              "type": "string",
+              "description": "Single sentence ending with '?'."
+            },
+            "rationale": {
+              "type": "string",
+              "description": "2-4 sentences linking the question to blind-data evidence."
+            },
+            "data_support": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Items must come from blind_input_summary.json.available_features or local_files."
+            },
+            "expected_test": {
+              "type": "string",
+              "description": "How the question is answerable from the kind of data described in blind_input_summary.json."
+            },
+            "scope_keywords": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "judge_protocol": {
+    "framework": "DeepEval + custom BaseMetric (one metric per rubric dimension, weighted composite)",
+    "judge_input_unit": "questions[0]",
+    "ranking_diagnostics": "All candidates are also scored, but only top-1 is the official score.",
+    "score_range_per_dimension": [0, 5],
+    "aggregation": "weighted average of the 6 rubric dimensions with weights summing to 1.0",
+    "passing_score": 0.60,
+    "judge_only_assets": [
+      "target_study/checklist.json",
+      "target_study/question_rubric.json",
+      "target_study/README.md"
+    ]
+  },
+
+  "data": [
+    {
+      "name": "blind_input_summary",
+      "path": "data/raw_data/blind_input_summary.json",
+      "kind": "json",
+      "role": "entry_point"
+    },
+    {
+      "name": "runinfo_subset",
+      "path": "data/raw_data/runinfo_subset.tsv",
+      "kind": "tsv",
+      "rows": 32,
+      "columns": ["run_id_anonymized", "sample_source", "host_or_environment", "geographic_region_if_available", "metadata_completeness"]
+    },
+    {
+      "name": "rdrp_aa_fragments",
+      "path": "data/raw_data/rdrp_aa_fragments.faa",
+      "kind": "fasta_aa",
+      "rows": 53,
+      "header_format": ">FRAG_<id> run=<run_id> len=<fragment_length> motif_strength=<0|1|2>"
+    },
+    {
+      "name": "alignment_hits",
+      "path": "data/raw_data/alignment_hits.tsv",
+      "kind": "tsv",
+      "rows": 53,
+      "columns": ["fragment_id", "alignment_score", "e_value", "nearest_reference_family", "percent_identity_to_nearest_reference", "coverage_to_reference"]
+    },
+    {
+      "name": "candidate_sotu_clusters",
+      "path": "data/raw_data/candidate_sotu_clusters.tsv",
+      "kind": "tsv",
+      "rows": 32,
+      "columns": ["cluster_id", "cluster_size", "representative_fragment_id", "nearest_reference_family", "percent_identity_to_nearest_reference", "novelty_flag", "mean_metadata_completeness"]
+    }
+  ],
+
+  "data_provenance": {
+    "synthetic": true,
+    "seed": 20260514,
+    "note": "Local subset is synthetic but schema-faithful. Calibration of the rubric is against the upstream-search-scale statistics in blind_input_summary.json.data_scale_visible_to_agent, not the 53-row local subset."
+  }
+}
+
+Computed run-source, motif strength, alignment family, and novelty statistics to use in downstream question framing.
+  ✓ Review specs and data sources
+  ✓ Derive key statistics and insights
+  → Draft agent_questions.json
+  • Write report/report.md referencing top question
+exec
+/bin/zsh -lc "python - <<'PY'
+import csv
+with open('data/raw_data/candidate_sotu_clusters.tsv') as f:
+    reader=csv.DictReader(f, delimiter='\\t')
+    nov=[]
+    non=[]
+    for row in reader:
+        mc=float(row['mean_metadata_completeness'])
+        if row['novelty_flag']=='novel':
+            nov.append(mc)
+        else:
+            non.append(mc)
+print('novel_mean', sum(nov)/len(nov))
+print('known_mean', sum(non)/len(non))
+PY" in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 11182ms:
+novel_mean 0.6716666666666665
+known_mean 0.7125
+
+exec
+/bin/zsh -lc "python - <<'PY'
+import csv
+clusters=[]
+with open('data/raw_data/candidate_sotu_clusters.tsv') as f:
+    reader=csv.DictReader(f, delimiter='\\t')
+    for row in reader:
+        clusters.append(row)
+
+novel_small = sum(1 for row in clusters if row['novelty_flag']=='novel' and int(row['cluster_size'])==1)
+novel_total = sum(1 for row in clusters if row['novelty_flag']=='novel')
+print('novel_singleton_fraction', novel_small/novel_total)
+PY" in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 4108ms:
+novel_singleton_fraction 0.5833333333333334
+
+exec
+/bin/zsh -lc "cat <<'EOF' > agent_questions.json
+{
+  \"agent_id\": \"gpt-5.2-codex\",
+  \"workspace_id\": \"Life_Virus_001\",
+  \"questions\": [
+    {
+      \"rank\": 1,
+      \"question\": \"Do petabase-scale public sequencing runs, particularly arthropod and vertebrate transcriptomes, harbor RdRP fragments with <40% identity to references that delineate cohesive yet novel RNA-virus sOTUs absent from current reference families?\",
+      \"rationale\": \"Eighty-seven percent of fragments in the blind subset fall below 40% identity, 19% have no assignable reference family, and 75% of clusters are labeled novel, with the densest concentrations arising from arthropod and vertebrate transcriptomes. These patterns imply systematic gaps in existing RdRP reference catalogs rather than random noise. Extrapolated to 5.7 million screened runs and 131,957 candidate novel sOTUs, the deficit would represent entire RNA-virus lineages missing from taxonomic coverage. This motivates verifying whether the low-identity, transcriptome-associated fragments can be organized into coherent novel clades using sOTU clustering pipelines at petabase scale.\",
+      \"data_support\": [
+        \"data/runinfo_subset.tsv\",
+        \"data/alignment_hits.tsv\",
+        \"data/candidate_sotu_clusters.tsv\",
+        \"percent_identity_to_nearest_reference\",
+        \"novelty_flag\",
+        \"sample_source\"
+      ],
+      \"expected_test\": \"Integrate percent identity and nearest reference family annotations from alignment hits with novelty_flagged sOTU clusters, stratified by sample_source metadata across all screened runs, to determine whether <40% identity fragments from transcriptome-rich biomes consistently form novel clusters that lack reference family assignments.\",
+      \"scope_keywords\": [\"RdRP\", \"RNA virus\", \"petabase-scale\", \"sOTU clustering\", \"public sequencing archives\", \"low-identity fragments\"]
+    }
+  ]
+}
+EOF" in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 4193ms:
+Created the first draft of agent_questions.json with one ranked question tying low-identity RdRP fragments to novel clusters.
+  ✓ Review specs and data sources
+  ✓ Derive key statistics and insights
+  ✓ Draft agent_questions.json
+  → Write report/report.md referencing top question
+exec
+/bin/zsh -lc 'cat agent_questions.json' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 5276ms:
+{
+  "agent_id": "gpt-5.2-codex",
+  "workspace_id": "Life_Virus_001",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "Do petabase-scale public sequencing runs, particularly arthropod and vertebrate transcriptomes, harbor RdRP fragments with <40% identity to references that delineate cohesive yet novel RNA-virus sOTUs absent from current reference families?",
+      "rationale": "Eighty-seven percent of fragments in the blind subset fall below 40% identity, 19% have no assignable reference family, and 75% of clusters are labeled novel, with the densest concentrations arising from arthropod and vertebrate transcriptomes. These patterns imply systematic gaps in existing RdRP reference catalogs rather than random noise. Extrapolated to 5.7 million screened runs and 131,957 candidate novel sOTUs, the deficit would represent entire RNA-virus lineages missing from taxonomic coverage. This motivates verifying whether the low-identity, transcriptome-associated fragments can be organized into coherent novel clades using sOTU clustering pipelines at petabase scale.",
+      "data_support": [
+        "data/runinfo_subset.tsv",
+        "data/alignment_hits.tsv",
+        "data/candidate_sotu_clusters.tsv",
+        "percent_identity_to_nearest_reference",
+        "novelty_flag",
+        "sample_source"
+      ],
+      "expected_test": "Integrate percent identity and nearest reference family annotations from alignment hits with novelty_flagged sOTU clusters, stratified by sample_source metadata across all screened runs, to determine whether <40% identity fragments from transcriptome-rich biomes consistently form novel clusters that lack reference family assignments.",
+      "scope_keywords": ["RdRP", "RNA virus", "petabase-scale", "sOTU clustering", "public sequencing archives", "low-identity fragments"]
+    }
+  ]
+}
+
+exec
+/bin/zsh -lc 'mkdir -p report' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 4734ms:
+exec
+/bin/zsh -lc "cat <<'EOF' > report/report.md
+# Data summary
+- 32 anonymized runs span six sampling programs, dominated by "'`arthropod_RNAseq` and `vertebrate_transcr` (8 and 6 runs), but also covering soil, gut, plant, and freshwater metagenomes/transcriptomes. Hosts split similarly (arthropod 8, fish/amphibian 6, soil_sediment 6, mammalian_gut 4, plant 4, freshwater 4) with geography concentrated in North America (11 runs) and South America (6) yet every continent represented plus four `unknown`. Mean metadata completeness is 0.71, suggesting the petabase-scale metadata backbone is sufficiently rich for stratified analyses.
+- Among 53 RdRP-like fragments, motif-strength counts (0:8, 1:25, 2:20) show 85% retain at least the catalytic A+C motifs, implying the fragment set is not dominated by spurious hits. Ten fragments (18.9%) cannot be placed in any curated reference family (`unclassified_RdRP`).
+- Alignment identities skew low: 46 of 53 fragments (87%) fall below the 0.40 novelty threshold, while coverage spans 0.27–0.92, indicating that long enough stretches are recovered despite low identity. Family assignments, when available, are diverse—Cystoviridae (7 hits) and Nidovirales (6) top the list but no single group dominates.
+- Clustering condenses the fragments into 32 sOTUs where 24 (75%) are labeled `novel`. These novel clusters are largely singletons (58%) or doubletons, reinforcing that the long tail of diversity remains sparsely sampled. Novel clusters trace back mainly to arthropod and vertebrate transcriptomes (6 and 5 clusters) with additional contributions from gut, plant, aquatic, and soil sources, indicating a multi-biome signal rather than a single outlier dataset.
+
+# Analysis
+1. **Low-identity burden:** `percent_identity_to_nearest_reference < 0.40` occurs in 0.868 of fragments, far exceeding the novelty cutoff expectation, which implies that the upstream 131,957 candidate novel sOTUs are not artifacts of a single edge case but a systematic shortfall in current reference catalogs.
+2. **Reference-family gaps:** `unclassified_RdRP` accounts for 0.189 of fragments and ranks third among alignment hits, underscoring that existing family-level HMMs fail to absorb a sizable fraction of RdRP diversity even when motifs are intact.
+3. **Novelty concentration:** The `novel` flag is assigned to 0.75 of clusters, and 0.58 of those novel clusters are singletons, showing that most candidate lineages have yet to accumulate multiple representatives. Coupled with a novel-cluster density of six in arthropod RNA-seq runs versus two in soil metagenomes, the data hint that vertebrate/arthropod transcriptomes are particularly under-explored reservoirs.
+4. **Metadata readiness:** Novel clusters carry mean metadata completeness of 0.672 versus 0.713 for known/borderline clusters, a modest gap that suggests upstream metadata is good enough to contextualize novel discoveries without major curation debt.
+
+# Reasoning
+Extrapolating these proportions to the petabase-scale scan (5.7M runs, 131,957 candidate novel sOTUs) implies tens of thousands of low-identity RdRP fragments emerging from transcriptome-rich biomes where existing reference families fail. The combination of intact catalytic motifs, broad biome coverage, and acceptable metadata completeness makes these findings resilient to sequencing noise. Therefore, the central scientific opportunity is to determine whether the transcriptome-derived low-identity fragments coalesce into coherent sOTUs that can be taxonomically anchored, revealing new RNA-virus clades. Confirming such structure would close the reference gap and directly inform surveillance and evolutionary studies.
+
+# Top scientific question
+Do petabase-scale public sequencing runs, particularly arthropod and vertebrate transcriptomes, harbor RdRP fragments with <40% identity to references that delineate cohesive yet novel RNA-virus sOTUs absent from current reference families?
+
+# Why this question is testable on the provided dataset
+The local files combine run-level metadata (`data/runinfo_subset.tsv`), fragment-level alignments (`data/alignment_hits.tsv`), and sOTU clusters with novelty flags (`data/candidate_sotu_clusters.tsv`). At full scale, the same features enable stratifying low-identity fragments by sample source and checking whether they assemble into reproducible clusters lacking reference-family assignments. Because motif-strength and coverage metrics ensure fragments are biologically meaningful, statistical testing (e.g., enrichment of novel clusters per biome or per motif class) can directly evaluate whether transcriptome-heavy runs systematically yield cohesive yet unclassified RdRP sOTUs.
+EOF' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 3419ms:
+Drafted report/report.md with required sections referencing the top question.
+  ✓ Review specs and data sources
+  ✓ Derive key statistics and insights
+  ✓ Draft agent_questions.json
+  ✓ Write report/report.md referencing top question
+exec
+/bin/zsh -lc 'ls report' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 3917ms:
+report.md
+
+exec
+/bin/zsh -lc 'cat checklist.json' in /private/tmp/codex-sandboxes/codex-cli/20260517T145341
+ succeeded in 4525ms:
+[
+  {
+    "id": "question_matching",
+    "type": "text",
+    "content": "Question matching: evaluate whether the top-ranked generated scientific question matches the primary groundtruth question from the target paper. Groundtruth question: Can petabase-scale mining of public sequencing data uncover a large hidden RNA-virus/RdRP diversity that is absent from curated viral reference databases?",
+    "path": null,
+    "keywords": [
+      "0: Completely unrelated. Example: Can vaccines prevent RNA viruses?",
+      "1: Only mentions viruses, but the research direction is wrong. Example: Can ML discover dangerous viruses in humans?",
+      "2: Mentions SRA or new viruses, but remains too generic. Example: Are there new viruses in SRA data?",
+      "3: Mentions RdRP or public databases, but lacks the core scientific significance. Example: Can we identify some RdRP sequences from public data?",
+      "4: Basically covers the target paper's question, but misses one or two key elements. Example: Can large-scale SRA mining reveal many novel RNA viruses?",
+      "5: Highly matches the core scientific question. Example: Can petabase-scale RdRP alignment of public SRA data reveal large hidden RNA-virus diversity missing from reference databases?"
+    ],
+    "weight": 0.4
+  },
+  {
+    "id": "novelty",
+    "type": "text",
+    "content": "Novelty: evaluate whether the generated scientific question identifies a nontrivial scientific opportunity rather than a routine data-processing task.",
+    "path": null,
+    "keywords": [
+      "1: The question is generic and only asks whether new viruses exist.",
+      "2: The question mentions new viral sequences but does not identify a clear knowledge gap.",
+      "3: The question identifies novel RdRP or RNA-virus candidates, but does not explain why they matter scientifically.",
+      "4: The question identifies large-scale hidden RNA-virus diversity or a reference-database blind spot.",
+      "5: The question clearly frames a major unexplored RNA virome, a systematic reference-database limitation, or a large-scale viral discovery frontier."
+    ],
+    "weight": 0.15
+  },
+  {
+    "id": "importance",
+    "type": "text",
+    "content": "Importance: evaluate whether the generated scientific question has scientific, biomedical, ecological, or surveillance significance.",
+    "path": null,
+    "keywords": [
+      "1: The question has only narrow technical relevance.",
+      "2: The question is relevant only to a small subset of sequences or samples.",
+      "3: The question has moderate relevance to viral discovery.",
+      "4: The question is important for RNA-virus diversity, database construction, or large-scale viromics.",
+      "5: The question has broad significance for viral evolution, global virome characterization, viral reservoirs, or pathogen surveillance."
+    ],
+    "weight": 0.15
+  },
+  {
+    "id": "testability",
+    "type": "text",
+    "content": "Testability: evaluate whether the generated scientific question can be tested using the provided blind dataset and reasonable downstream analyses.",
+    "path": null,
+    "keywords": [
+      "1: The question cannot be tested with the available data.",
+      "2: The question requires unrelated experiments or unsupported external assumptions.",
+      "3: The question can be partially tested using alignment or metadata evidence.",
+      "4: The question can be tested using RdRP alignment, clustering, novelty statistics, and sample-source metadata.",
+      "5: The question is directly testable through large-scale search coverage, RdRP hit validation, sOTU clustering, reference-database comparison, and source-distribution analysis."
+    ],
+    "weight": 0.1
+  },
+  {
+    "id": "data_support",
+    "type": "text",
+    "content": "Data support: evaluate whether the generated scientific question is grounded in the blind input data rather than invented context.",
+    "path": null,
+    "keywords": [
+      "1: The question is not supported by the input data.",
+      "2: The question uses only one vague cue from the input.",
+      "3: The question uses public sequencing data or RdRP evidence, but ignores scale or novelty signals.",
+      "4: The question uses multiple relevant cues such as RdRP fragments, low reference identity, cluster counts, and metadata.",
+      "5: The question is strongly grounded in the combination of large-scale archive mining, RdRP-like fragments, candidate sOTUs, low reference similarity, and reference-database gaps."
+    ],
+    "weight": 0.1
+  },
+  {
+    "id": "specificity",
+    "type": "text",
+    "content": "Specificity: evaluate whether the generated scientific question has clear objects, data scope, biological marker, and scientific implication.",
+    "path": null,
+    "keywords": [
+      "1: The question is extremely vague.",
+      "2: The question mentions viruses but lacks data scope or biological marker.",
+      "3: The question mentions public data or RdRP, but lacks a precise scientific implication.",
+      "4: The question specifies public archive data, RdRP, novel RNA-virus diversity, and a testable comparison.",
+      "5: The question precisely specifies petabase-scale public sequencing mining, the RdRP marker, hidden RNA-virus diversity, reference-database absence, and downstream scientific significance."
+    ],
+    "weight": 0.1
+  }
+]
+
+codex
+**Summary**
+- Authored `agent_questions.json:1` with a ranked, schema-compliant question tying low-identity RdRP fragments from arthropod and vertebrate transcriptomes to novel sOTUs absent from current references.
+- Compiled `report/report.md:1` detailing run, motif, alignment, and novelty distributions, derived statistics, reasoning at petabase scale, and mirrored the top question with a testability plan grounded in available features.
+
+**Testing**
+- Not run (not requested).
+
+**Next Steps**
+- If desired, expand to additional candidate questions or perform large-scale stratified clustering analyses to further substantiate the posed question.
+tokens used
+627,736
+
+[exit] 0

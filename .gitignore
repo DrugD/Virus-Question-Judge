@@ -1,0 +1,34 @@
+# Excluded data and study materials
+lucaprot_hidden_virosphere_2024/
+data/
+data.zip
+data.ZIP
+
+# macOS
+.DS_Store
+
+# Local sandboxes
+.sandboxes/
+
+# Claude Code local settings (user-specific)
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments (kept by user request — uncomment to exclude)
+# .venv/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs / temp
+*.log
+*.tmp

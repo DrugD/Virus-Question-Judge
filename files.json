@@ -1,0 +1,28 @@
+{
+  "workspace_id": "Life_Virus_001",
+  "agent_visible": [
+    {"path": "INSTRUCTIONS.md", "role": "agent_prompt"},
+    {"path": "checklist.json", "role": "rubric_visible_to_agent"},
+    {"path": "info.json", "role": "task_spec"},
+    {"path": "data/raw_data/README.md", "role": "data_dictionary"},
+    {"path": "data/raw_data/blind_input_summary.json", "role": "blind_entry_point"},
+    {"path": "data/raw_data/runinfo_subset.tsv", "role": "blind_data"},
+    {"path": "data/raw_data/rdrp_aa_fragments.faa", "role": "blind_data"},
+    {"path": "data/raw_data/alignment_hits.tsv", "role": "blind_data"},
+    {"path": "data/raw_data/candidate_sotu_clusters.tsv", "role": "blind_data"}
+  ],
+  "agent_must_create": [
+    {"path": "report/report.md", "role": "agent_report"},
+    {"path": "agent_questions.json", "role": "agent_output", "schema": "info.json#/agent_output_schema"}
+  ],
+  "judge_only": [
+    {"path": "target_study/README.md"},
+    {"path": "target_study/checklist.json"},
+    {"path": "target_study/question_rubric.json"}
+  ],
+  "evaluation_artifacts": [
+    {"path": "results/{agent}/{run_id}/agent_questions.json"},
+    {"path": "results/{agent}/{run_id}/report/report.md"},
+    {"path": "results/{agent}/{run_id}/judge_scores.json"}
+  ]
+}

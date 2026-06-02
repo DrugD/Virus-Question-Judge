@@ -1,0 +1,186 @@
+{
+  "workspace_id": "Life_Virus_001",
+  "task_id": "T_001_petabase_rdrp_question_generation",
+  "calibration_target": "data_scale_visible_to_agent (5.7M runs / 10.2 petabases / 131,957 candidate novel sOTUs)",
+  "judge_only": true,
+
+  "groundtruth_questions": [
+    {
+      "id": "GQ_001",
+      "rank": 1,
+      "is_primary": true,
+      "question": "Can petabase-scale mining of public sequencing data uncover a large hidden RNA-virus/RdRP diversity that is absent from curated viral reference databases?",
+      "core_pillars": [
+        "petabase-scale public sequencing archive mining",
+        "RdRP as the marker",
+        "hidden RNA-virus diversity",
+        "absence from curated reference databases"
+      ]
+    },
+    {
+      "id": "GQ_002",
+      "rank": 2,
+      "is_primary": false,
+      "question": "How does the diversity of newly recovered RdRP-defined sOTUs compare in scale to existing curated viral reference databases when public sequencing archives are exhaustively screened?"
+    },
+    {
+      "id": "GQ_003",
+      "rank": 3,
+      "is_primary": false,
+      "question": "Which sample sources, hosts, and environments contribute disproportionately to the previously unobserved RNA-virus diversity recoverable from public sequencing archives?"
+    },
+    {
+      "id": "GQ_004",
+      "rank": 4,
+      "is_primary": false,
+      "question": "Are there RdRP-bearing lineages whose representative sequences fall below standard family-level identity thresholds, suggesting a systematic blind spot in current viral taxonomy?"
+    },
+    {
+      "id": "GQ_005",
+      "rank": 5,
+      "is_primary": false,
+      "question": "Can a translated alignment + clustering pipeline applied to petabases of raw public reads recover virus-like polymerase fragments at a rate that justifies routine archive-scale viromic surveillance?"
+    },
+    {
+      "id": "GQ_006",
+      "rank": 6,
+      "is_primary": false,
+      "question": "What fraction of RdRP-like fragments recovered from a petabase-scale archive search lack any high-identity match in curated viral references?"
+    },
+    {
+      "id": "GQ_007",
+      "rank": 7,
+      "is_primary": false,
+      "question": "Does sOTU-level clustering of archive-mined RdRP fragments reveal lineages that recur across geographically and ecologically distinct samples?"
+    },
+    {
+      "id": "GQ_008",
+      "rank": 8,
+      "is_primary": false,
+      "question": "Can the catalytic motif structure (A/B/C) of RdRP-like fragments recovered from public archives be used to triage genuine RNA-virus polymerases from spurious matches at archive scale?"
+    }
+  ],
+
+  "rubric_dimensions": [
+    {"id": "question_matching", "weight": 0.40},
+    {"id": "novelty",           "weight": 0.15},
+    {"id": "importance",        "weight": 0.15},
+    {"id": "testability",       "weight": 0.10},
+    {"id": "data_support",      "weight": 0.10},
+    {"id": "specificity",       "weight": 0.10}
+  ],
+
+  "refusal_flags": [
+    {
+      "id": "FL_001",
+      "label": "uses_forbidden_named_entity",
+      "description": "Output references one of the names/numbers in blind_input_summary.json.forbidden_context.",
+      "action": "cap question_matching at 1, set refusal=true"
+    },
+    {
+      "id": "FL_002",
+      "label": "fabricated_data_support",
+      "description": "data_support list contains items not in blind_input_summary.json.available_features or local_files.",
+      "action": "cap data_support at 1"
+    },
+    {
+      "id": "FL_003",
+      "label": "out_of_domain_question",
+      "description": "Question is about non-virology topic (e.g. vaccines, drug design, host disease).",
+      "action": "cap question_matching at 0"
+    },
+    {
+      "id": "FL_004",
+      "label": "wet_lab_only_question",
+      "description": "Question requires a wet-lab experiment not derivable from the data.",
+      "action": "cap testability at 1"
+    },
+    {
+      "id": "FL_005",
+      "label": "single_run_question",
+      "description": "Question scopes to a single run / fragment / cluster instead of archive-scale phenomena.",
+      "action": "cap importance at 2"
+    },
+    {
+      "id": "FL_006",
+      "label": "groundtruth_leak",
+      "description": "Output verbatim quotes the groundtruth question or any pillar phrasing without supporting analysis.",
+      "action": "cap novelty at 2"
+    },
+    {
+      "id": "FL_007",
+      "label": "no_question_mark",
+      "description": "questions[0].question does not end with '?' or is not a single sentence.",
+      "action": "cap specificity at 2"
+    },
+    {
+      "id": "FL_008",
+      "label": "missing_top_question",
+      "description": "agent_questions.json is missing or questions[] is empty.",
+      "action": "all dimensions = 0"
+    }
+  ],
+
+  "calibration_anchors": [
+    {
+      "id": "CA_001",
+      "label": "perfect_match",
+      "example_question": "Can petabase-scale RdRP-driven mining of public sequencing archives reveal a previously hidden RNA-virus diversity that is absent from current curated viral reference databases?",
+      "expected_scores": {"question_matching": 5, "novelty": 5, "importance": 5, "testability": 5, "data_support": 5, "specificity": 5}
+    },
+    {
+      "id": "CA_002",
+      "label": "strong_but_missing_scale",
+      "example_question": "Can mining public sequencing archives reveal hidden RNA-virus diversity not represented in curated reference databases?",
+      "expected_scores": {"question_matching": 4, "novelty": 4, "importance": 4, "testability": 4, "data_support": 4, "specificity": 4}
+    },
+    {
+      "id": "CA_003",
+      "label": "rdrp_focus_only",
+      "example_question": "Can public sequencing data be used to identify novel RdRP sequences?",
+      "expected_scores": {"question_matching": 3, "novelty": 3, "importance": 3, "testability": 4, "data_support": 3, "specificity": 3}
+    },
+    {
+      "id": "CA_004",
+      "label": "generic_new_virus",
+      "example_question": "Are there new viruses in SRA data?",
+      "expected_scores": {"question_matching": 2, "novelty": 1, "importance": 2, "testability": 3, "data_support": 2, "specificity": 1}
+    },
+    {
+      "id": "CA_005",
+      "label": "wrong_direction",
+      "example_question": "Can ML discover dangerous viruses in humans?",
+      "expected_scores": {"question_matching": 1, "novelty": 1, "importance": 3, "testability": 1, "data_support": 1, "specificity": 1}
+    },
+    {
+      "id": "CA_006",
+      "label": "completely_unrelated",
+      "example_question": "Can vaccines prevent RNA viruses?",
+      "expected_scores": {"question_matching": 0, "novelty": 1, "importance": 3, "testability": 1, "data_support": 0, "specificity": 1}
+    },
+    {
+      "id": "CA_007",
+      "label": "host_metadata_only",
+      "example_question": "Which arthropod hosts in the dataset carry the most sequencing reads?",
+      "expected_scores": {"question_matching": 1, "novelty": 1, "importance": 2, "testability": 5, "data_support": 3, "specificity": 3}
+    },
+    {
+      "id": "CA_008",
+      "label": "good_database_gap_framing",
+      "example_question": "What fraction of archive-mined RdRP-like fragments map to no curated viral family at the standard identity threshold?",
+      "expected_scores": {"question_matching": 4, "novelty": 4, "importance": 4, "testability": 5, "data_support": 5, "specificity": 4}
+    },
+    {
+      "id": "CA_009",
+      "label": "ecology_focus",
+      "example_question": "Which sample sources contribute the most novel sOTUs after archive-scale RdRP screening?",
+      "expected_scores": {"question_matching": 3, "novelty": 3, "importance": 4, "testability": 5, "data_support": 4, "specificity": 4}
+    },
+    {
+      "id": "CA_010",
+      "label": "method_only",
+      "example_question": "Can a translated DIAMOND search of SRA detect RdRP fragments?",
+      "expected_scores": {"question_matching": 2, "novelty": 2, "importance": 2, "testability": 5, "data_support": 3, "specificity": 3}
+    }
+  ]
+}

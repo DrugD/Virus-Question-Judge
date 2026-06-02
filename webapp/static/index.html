@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scientific-Question Judge · Rubric Eval Console</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script defer src="/static/charts.js"></script>
+  <script defer src="/static/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🧬</span>
+      <div>
+        <h1>Scientific-Question Judge</h1>
+        <p class="subtitle">Agent reads data → proposes question → Judge LLM scores against your gold rubric</p>
+      </div>
+    </div>
+    <nav class="topnav">
+      <a class="nav-link active" data-route="/">新评测</a>
+      <a class="nav-link" data-route="/history">历史 (<span id="nav-history-count">0</span>)</a>
+    </nav>
+    <div id="run-stamp" class="run-stamp"></div>
+  </header>
+
+  <!-- =========================================================== -->
+  <!-- View: NEW EVAL                                               -->
+  <!-- =========================================================== -->
+  <main class="layout view view-new active">
+    <!-- ============================================================ -->
+    <section class="card wide" id="step-upload">
+      <div class="card-head">
+        <span class="step-num">1</span>
+        <h2>上传数据 + 标注问题</h2>
+        <span class="status-pill" data-status="idle">未上传</span>
+      </div>
+      <div class="card-body">
+        <p class="hint">
+          左：研究数据。<strong>支持 .zip 文件，也支持直接拖入或选择整个文件夹</strong>，agent 会自动解析里面的内容。<br>
+          右：你已标注的科学问题。<strong>JSON 文件即可</strong>，命名随意；既支持完整 JSON 对象，也兼容仅含问题数组的片段。
+        </p>
+
+        <div class="qset-row">
+          <label class="qset-label" for="qset-id">题集 id</label>
+          <input
+            id="qset-id"
+            type="text"
+            maxlength="64"
+            autocomplete="off"
+            placeholder="例：bat_btcn_virome_2024  ·  留空将自动用 ts_<unix> 作为 id"
+          />
+          <small class="qset-hint muted">同一题集 id 下的多次评测会被聚合到一起；只允许字母/数字/.-_，最多 64 字符。</small>
+        </div>
+
+        <div class="upload-pair">
+          <div class="dropzone" id="dz-data">
+            <input type="file" id="data-input" accept=".zip" hidden />
+            <input type="file" id="data-folder-input" webkitdirectory directory hidden />
+            <div class="dz-prompt">
+              <div class="dz-label">DATA · zip 或 文件夹</div>
+              <strong>拖入此处</strong><br>
+              <span class="muted" style="font-size:11px;">或点击：</span>
+              <button class="link" data-pick="data-input">.zip 文件</button>
+              <span class="muted">·</span>
+              <button class="link" data-pick="data-folder-input">整个文件夹</button>
+            </div>
+            <div class="dz-name muted" id="data-name"></div>
+          </div>
+
+          <div class="dropzone" id="dz-gold">
+            <input type="file" id="gold-input" accept=".json,application/json" hidden />
+            <div class="dz-prompt">
+              <div class="dz-label">GOLD · 任意 .json</div>
+              <strong>拖入此处</strong> · 或 <button class="link" data-pick="gold-input">选择文件</button>
+            </div>
+            <div class="dz-name muted" id="gold-name"></div>
+          </div>
+
+          <div class="dropzone optional" id="dz-candidate">
+            <input type="file" id="candidate-input" accept=".json,application/json" hidden />
+            <div class="dz-prompt">
+              <div class="dz-label">CANDIDATE · 可选 (judge-only)</div>
+              <strong>拖入此处</strong> · 或 <button class="link" data-pick="candidate-input">选择 .json</button>
+              <div style="margin-top:6px;"><a class="link" id="dl-candidate-template">📥 下载模板</a> · <a class="link" id="show-candidate-format">格式说明</a></div>
+            </div>
+            <div class="dz-name muted" id="candidate-name"></div>
+          </div>
+        </div>
+
+        <details id="candidate-format" class="candidate-format" hidden>
+          <summary>候选 JSON 格式（schema 同 agent_output）</summary>
+          <pre>{
+  "agent_id": "&lt;your_label&gt;",
+  "workspace_id": "user_uploaded",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "Does &lt;X&gt; drive &lt;Y&gt; in this dataset?",
+      "rationale": "Two-to-four sentences citing specific files / fields ...",
+      "data_support": ["data/foo.csv", "..."],
+      "expected_test": "How this is answerable from the data",
+      "scope_keywords": ["3-8 short keywords"]
+    }
+    // 1–5 entries 共评 (Pass@k)
+  ]
+}</pre>
+          <p class="hint">上传后 Step 2 自动切到 <strong>判官直评模式</strong>，跳过 agent 阶段，对你给的候选直接打分；不上传则正常跑 agent。</p>
+        </details>
+
+        <div class="upload-action">
+          <button id="upload-btn" class="primary" disabled>校验并上传 →</button>
+          <div class="dz-progress" id="upload-progress" hidden>
+            <div class="bar"><div class="bar-fill" id="upload-bar"></div></div>
+            <small id="upload-text"></small>
+          </div>
+        </div>
+
+        <div id="validation-report" class="validation" hidden>
+          <div class="vsection">
+            <h3>Data</h3>
+            <div id="data-summary" class="validation-summary"></div>
+            <div id="data-tree" class="file-tree"></div>
+          </div>
+          <div class="vsection">
+            <h3>Gold Rubric</h3>
+            <div id="gold-summary" class="validation-summary"></div>
+            <div id="gold-list" class="gold-list"></div>
+          </div>
+          <ul id="validation-errors" class="validation-errors"></ul>
+          <ul id="validation-warnings" class="validation-warnings"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <section class="card wide" id="step-agents">
+      <div class="card-head">
+        <span class="step-num">2</span>
+        <h2>选择 Agent (生成科学问题)</h2>
+        <span class="status-pill" data-status="idle">等上传通过</span>
+      </div>
+      <div class="card-body">
+        <div id="judge-only-banner" class="judge-only-banner" hidden>
+          <span class="badge">判官直评模式</span>
+          <span class="muted" style="font-size:12px;margin-left:6px;">已上传候选 JSON · 跳过 agent，直接打分。</span>
+          <button id="cancel-judge-only" class="link" style="margin-left:auto;">取消，回到 agent 模式</button>
+        </div>
+        <div id="agent-grid" class="agent-grid"></div>
+        <div class="action-row">
+          <button id="select-all" class="ghost">全选</button>
+          <button id="select-none" class="ghost">清空</button>
+          <button id="start-run" class="primary" disabled>开始评测 →</button>
+          <small id="agent-hint" class="muted">至少选一个 agent，并行执行；agent 越多越能横向比较，但耗时取决于最慢的那个。</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <section class="card wide" id="step-judge">
+      <div class="card-head">
+        <span class="step-num">3</span>
+        <h2>Judge LLM &amp; 评测标准</h2>
+        <span class="status-pill" data-status="idle" id="judge-status">读取配置中</span>
+      </div>
+      <div class="card-body">
+        <div id="judge-info-box" class="judge-info">
+          <div class="ji-cell"><span class="muted">model</span>
+            <select id="judge-model-select" class="judge-select"></select>
+          </div>
+          <div class="ji-cell"><span class="muted">provider</span><code id="judge-provider">…</code></div>
+          <div class="ji-cell"><span class="muted">base_url</span><code id="judge-baseurl">…</code></div>
+          <div class="ji-cell"><span class="muted">threshold</span><code id="judge-threshold">…</code></div>
+        </div>
+        <p class="hint" style="margin-top:6px;font-size:11.5px;" id="judge-desc"></p>
+        <details class="rubric-details" open>
+          <summary>📐 评测标准 (4 维 × 0–5 锚点) — judge 与你看到的是同一份</summary>
+          <div id="rubric-spec" class="rubric-spec"></div>
+          <p class="hint" style="margin-top:8px;">
+            composite = (Σ weight × score) / 5。若 matched gold 是 <code>secondary</code> 且
+            存在 <code>primary</code>，再 ×0.85。pass 阈值 <code id="rubric-threshold">0.6</code>。
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <section class="card wide" id="step-progress">
+      <div class="card-head">
+        <span class="step-num">4</span>
+        <h2>实时进度 · Agent 思考与候选问题</h2>
+        <span class="status-pill" data-status="idle">未启动</span>
+      </div>
+      <div class="card-body">
+        <div id="progress-timeline" class="timeline"></div>
+        <div id="agent-streams" class="agent-streams"></div>
+        <details>
+          <summary class="muted">原始事件流</summary>
+          <pre id="event-log" class="event-log"></pre>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <section class="card wide" id="step-results">
+      <div class="card-head">
+        <span class="step-num">5</span>
+        <h2>评测结果</h2>
+        <span class="status-pill" data-status="idle">等待运行</span>
+      </div>
+      <div class="card-body">
+        <div class="result-tabs">
+          <button class="tab active" data-tab="leaderboard">Leaderboard</button>
+          <button class="tab" data-tab="radar">四维雷达</button>
+          <button class="tab" data-tab="bars">分维度对比</button>
+          <button class="tab" data-tab="elements">required_elements 覆盖</button>
+          <button class="tab" data-tab="questions">候选 question 对比</button>
+          <button class="tab" data-tab="timing">时间分解</button>
+        </div>
+
+        <div class="tab-pane active" data-tab="leaderboard">
+          <table id="leaderboard-table">
+            <thead>
+              <tr>
+                <th data-tip="按 Pass@5 排序后的位次（1 = 最高）。">Rank</th>
+                <th data-tip="生成这 5 个候选 question 的 agent / 模型 ID。">Agent</th>
+                <th data-tip="rank-1 候选是否通过阈值。100% = 通过，0% = 没过。">Pass@1</th>
+                <th data-tip="位置加权得分。第 i 条通过加 (1 + w_i)，w=(5,4,3,2,1)，分母 20。例：rank-1 only = 30%，全过 = 100%。">Pass@5</th>
+                <th data-tip="该 agent 5 条候选的 Composite 平均值 (0..1)。">Avg Comp</th>
+                <th data-tip="该 agent 5 条候选的 Raw /5 平均值 (0..5)。">Avg Raw</th>
+                <th data-tip="5 个候选里通过的命中分布：first-hit 是最先通过的 rank；P=primary，S=secondary。">Hit detail</th>
+                <th data-tip="agent 从开始到生成完 agent_questions.json 的墙钟时间。">Agent time</th>
+                <th data-tip="judge 完成 5 次评测的总墙钟时间（gather 并行）。">Judge time</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="tab-pane" data-tab="radar"><canvas id="radar-canvas"></canvas></div>
+        <div class="tab-pane" data-tab="bars"><canvas id="bars-canvas"></canvas></div>
+        <div class="tab-pane" data-tab="elements"><div id="elements-grid" class="question-grid"></div></div>
+        <div class="tab-pane" data-tab="questions"><div id="question-grid" class="question-grid"></div></div>
+        <div class="tab-pane" data-tab="timing"><canvas id="timing-canvas"></canvas></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================== -->
+  <!-- View: HISTORY                                                -->
+  <!-- =========================================================== -->
+  <main class="layout view view-history">
+    <section class="card wide">
+      <div class="card-head">
+        <span class="step-num">📁</span>
+        <h2>评测历史</h2>
+        <div class="history-toolbar" style="margin-left:auto;display:flex;gap:8px;align-items:center;">
+          <label class="history-toggle">
+            <input type="checkbox" id="history-group-toggle" checked />
+            按题集分组
+          </label>
+          <button id="clear-history-btn" class="ghost danger">清空全部历史</button>
+          <a class="link nav-link" data-route="/">← 回到新评测</a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div id="history-grouped" class="history-grouped"></div>
+        <table id="history-table" class="history-table" hidden>
+          <thead>
+            <tr>
+              <th>时间</th>
+              <th>题集</th>
+              <th>Upload</th>
+              <th>Run</th>
+              <th>Agents</th>
+              <th>Top composite</th>
+              <th>状态</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================== -->
+  <!-- View: SINGLE RUN DETAIL                                      -->
+  <!-- =========================================================== -->
+  <main class="layout view view-detail">
+    <section class="card wide">
+      <div class="card-head">
+        <span class="step-num">🔎</span>
+        <h2 id="detail-title">运行详情</h2>
+        <div class="detail-toolbar" style="margin-left:auto;display:flex;gap:8px;align-items:center;">
+          <button id="export-csv-btn" class="ghost" disabled>导出 CSV</button>
+          <button id="export-json-btn" class="ghost" disabled>导出 JSON</button>
+          <button id="export-md-btn" class="ghost" disabled>复制 Markdown</button>
+          <a class="link nav-link" data-route="/history">← 历史</a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div id="detail-meta" class="judge-info"></div>
+        <div id="detail-live-strip" class="live-strip" hidden></div>
+        <div class="result-tabs" style="margin-top:14px;">
+          <button class="tab active" data-tab="d-leaderboard">Leaderboard</button>
+          <button class="tab" data-tab="d-radar">四维雷达</button>
+          <button class="tab" data-tab="d-elements">required_elements</button>
+          <button class="tab" data-tab="d-questions">候选 question</button>
+          <button class="tab" data-tab="d-events">事件流</button>
+        </div>
+
+        <div class="tab-pane active" data-tab="d-leaderboard">
+          <table id="detail-leaderboard">
+            <thead>
+              <tr>
+                <th data-tip="按 Pass@5 排序的位次。">Rank</th>
+                <th>Agent</th>
+                <th data-tip="rank-1 是否通过。">Pass@1</th>
+                <th data-tip="位置加权得分（1+w_i 之和 / 20）。">Pass@5</th>
+                <th>Avg Comp</th>
+                <th>Avg Raw</th>
+                <th data-tip="first-hit + P/S 命中分布">Hit detail</th>
+                <th>Agent time</th>
+                <th>Judge time</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="tab-pane" data-tab="d-radar"><canvas id="detail-radar"></canvas></div>
+        <div class="tab-pane" data-tab="d-elements"><div id="detail-elements" class="question-grid"></div></div>
+        <div class="tab-pane" data-tab="d-questions"><div id="detail-questions" class="question-grid"></div></div>
+        <div class="tab-pane" data-tab="d-events"><pre id="detail-events" class="event-log"></pre></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>API: <code id="api-host"></code></span>
+    <span>·</span>
+    <span>Workspace mode: <code>user_uploaded</code></span>
+  </footer>
+
+  <!-- floating tooltip element -->
+  <div id="tooltip" class="tooltip" hidden></div>
+</body>
+</html>

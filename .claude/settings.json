@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk *)",
+      "Bash(curl -sS http://127.0.0.1*)",
+      "Bash(curl -sSL http://127.0.0.1*)",
+      "Bash(curl -sN http://127.0.0.1*)",
+      "Bash(.venv/bin/python -m py_compile *)",
+      "Bash(.venv/bin/python -m uvicorn webapp.server*)",
+      "Bash(.venv/bin/python -m eval.run_pipeline *)",
+      "Bash(.venv/bin/python -m eval.run_judge *)"
+    ]
+  }
+}

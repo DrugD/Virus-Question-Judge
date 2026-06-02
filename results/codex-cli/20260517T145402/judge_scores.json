@@ -1,0 +1,92 @@
+{
+  "composite_score": 0.9400000000000001,
+  "composite_score_raw": 4.7,
+  "passed": true,
+  "threshold": 0.6,
+  "dimensions": [
+    {
+      "id": "question_matching",
+      "weight": 0.4,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The candidate explicitly mentions petabase-scale mining, RdRP fragments, hidden RNA virus diversity, and that these fall below 40% identity to curated references. It clearly targets discovering previously unknown RNA-virus/RdRP diversity missing from reference databases using large-scale public sequencing, matching all core pillars of the groundtruth question."
+    },
+    {
+      "id": "novelty",
+      "weight": 0.15,
+      "raw_score": 4,
+      "normalized": 0.8,
+      "capped_raw": 4,
+      "capped_normalized": 0.8,
+      "flags": [],
+      "reasoning": "The question explicitly leverages petabase-scale mining to interrogate RdRP fragments that are taxonomically unassigned and <40% identity to curated references, highlighting a systematic reference blind spot. It also emphasizes geographically concentrated, hidden RNA-virus diversity. This clearly goes beyond routine detection and aligns with uncovering large-scale, database-missed RNA-virome diversity, but it is slightly less expansive than framing a “major unexplored RNA virome” frontier in the strongest possible terms."
+    },
+    {
+      "id": "importance",
+      "weight": 0.15,
+      "raw_score": 4,
+      "normalized": 0.8,
+      "capped_raw": 4,
+      "capped_normalized": 0.8,
+      "flags": [],
+      "reasoning": "The question focuses on petabase-scale mining, RdRP-based discovery, and reference gaps, which are central to RNA-virus diversity and large-scale viromics. It examines geographically concentrated, taxonomically unassigned diversity at low identity to curated databases. While this has clear implications for surveillance and reservoirs, the framing is more about where novelty concentrates within existing archives than global evolution broadly, so it aligns best with importance level 4 rather than 5."
+    },
+    {
+      "id": "testability",
+      "weight": 0.1,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question can be directly tested with the blind data: RdRP fragments and hits provide identity values, candidate sOTU clusters support novelty and taxonomic assignment, runinfo gives geographic/source metadata, and large-scale screen outputs cover petabase mining. One can quantify <40% identity hits, their taxonomic status, clustering, and geographic/source enrichment using only these resources, matching the level of detail in the score-5 anchor."
+    },
+    {
+      "id": "data_support",
+      "weight": 0.1,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question is clearly grounded in multiple concrete data cues: large-scale mining (~5.7M runs, 131k candidate sOTUs), RdRP fragments, low-identity alignments (<40%), candidate novel sOTU clusters, and explicit reference-database gaps (unclassified RdRP profiles). It also ties these to metadata-derived geography and source information. This matches the strongest anchor: a synthesis of archive scale, RdRP evidence, novelty, and missing curated references."
+    },
+    {
+      "id": "specificity",
+      "weight": 0.1,
+      "raw_score": 5,
+      "normalized": 1.0,
+      "capped_raw": 5,
+      "capped_normalized": 1.0,
+      "flags": [],
+      "reasoning": "The question explicitly mentions petabase-scale mining, focuses on RdRP fragments as marker, targets hidden RNA virus diversity below 40% identity, emphasizes taxonomically unassigned/curated reference gaps, and links this to geographic concentration, implying downstream significance about undersampled regions and sources."
+    }
+  ],
+  "refusal_triggered": false,
+  "flags_hit": [],
+  "candidate": {
+    "agent_id": "gpt-5.2-codex",
+    "question": "How does petabase-scale mining of RdRP fragments reveal geographically concentrated yet taxonomically unassigned RNA virus diversity that falls below 40% identity to curated references?",
+    "rationale": "Across 53 fragments, 86.8% align below 40% identity and a plurality (10/53) only map to unclassified RdRP profiles, indicating a persistent reference gap. Three quarters (24/32) of candidate clusters flag as novel, with low-identity clusters distributed across arthropod transcriptomes, plant metatranscriptomes, and aquatic viromes, particularly from North America and metadata-poor runs. Given the upstream screen spans ~5.7M runs and 131k candidate novel sOTUs, these signals imply that viral polymerase novelty concentrates in specific sources and regions that curated databases do not yet cover.",
+    "data_support": [
+      "alignment_hits",
+      "candidate_sotu_clusters",
+      "runinfo_subset"
+    ],
+    "expected_test": "Intersect run-level sources and regions with RdRP alignment identity and sOTU novelty flags to quantify which sampling contexts drive the <40% identity fraction.",
+    "scope_keywords": [
+      "RdRP",
+      "RNA virus",
+      "petabase-scale",
+      "novelty",
+      "public sequencing"
+    ]
+  },
+  "agent_id": "gpt-5.2-codex",
+  "workspace_id": "Life_Virus_001",
+  "judge_model": "gpt-5.1",
+  "judge_provider": "openai"
+}

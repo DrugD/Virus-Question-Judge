@@ -1,0 +1,11 @@
+[
+  {
+    "qset": "zooplankton_rna_virosphere_2022",
+    "judge": "claude-opus-4-7",
+    "skipped": false,
+    "ok_after": 2,
+    "fail_after": 9,
+    "wall_s": 1077.09623503685,
+    "leaderboard": "/Users/likun/Desktop/AILab/Virus-Question-Judge/webapp_runs/eval-v1-zooplankton_rna_virosphere_2022/runs/eval-v1-zooplankton_rna_virosphere_2022-claude-opus-4-7/results/leaderboard.json"
+  }
+]

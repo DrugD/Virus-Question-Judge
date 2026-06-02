@@ -1,0 +1,222 @@
+[
+  {
+    "qset": "arthropod_neg_sense_2015",
+    "judge": "gemini-2.5-flash",
+    "reran_agents": [
+      "claude-code-sonnet-4-6",
+      "glm-5",
+      "deepseek-v4-pro",
+      "intern-s2-preview"
+    ],
+    "ok_after": 7,
+    "fail_after": 4,
+    "wall_s": 296.5756080150604
+  },
+  {
+    "qset": "bat_btcn_virome_2024",
+    "judge": "gemini-2.5-flash",
+    "reran_agents": [
+      "gpt-5.5-high",
+      "gemini-2.5-flash",
+      "intern-s2-preview"
+    ],
+    "ok_after": 10,
+    "fail_after": 1,
+    "wall_s": 261.49796628952026
+  },
+  {
+    "qset": "flavi_jingmen_jvi_2016",
+    "judge": "gpt-5-mini",
+    "reran_agents": [
+      "gpt-5.5-high",
+      "claude-code-opus-4-7",
+      "claude-code-sonnet-4-6",
+      "gemini-3.1-pro",
+      "gemini-2.5-flash",
+      "glm-5",
+      "deepseek-v4-pro",
+      "intern-s1",
+      "intern-s1-pro"
+    ],
+    "ok_after": 3,
+    "fail_after": 8,
+    "wall_s": 394.00526309013367
+  },
+  {
+    "qset": "flavi_jingmen_jvi_2016",
+    "judge": "gemini-2.5-flash",
+    "reran_agents": [
+      "claude-code-opus-4-7",
+      "glm-5",
+      "deepseek-v4-pro"
+    ],
+    "ok_after": 7,
+    "fail_after": 4,
+    "wall_s": 299.0955834388733
+  },
+  {
+    "qset": "oyster_rna_virome_2024",
+    "judge": "gemini-2.5-flash",
+    "reran_agents": [
+      "deepseek-v4-pro"
+    ],
+    "ok_after": 11,
+    "fail_after": 0,
+    "wall_s": 375.7811620235443
+  },
+  {
+    "qset": "rvmt_cell_2022",
+    "judge": "gpt-5-mini",
+    "reran_agents": [
+      "gpt-5.5-high",
+      "gemini-3.1-pro"
+    ],
+    "ok_after": 10,
+    "fail_after": 1,
+    "wall_s": 594.4233076572418
+  },
+  {
+    "qset": "rvmt_cell_2022",
+    "judge": "gemini-2.5-flash",
+    "reran_agents": [
+      "gpt-5.5-high",
+      "claude-code-opus-4-7",
+      "claude-code-sonnet-4-6",
+      "gemini-3.1-pro",
+      "gemini-2.5-flash",
+      "glm-5",
+      "deepseek-v4-pro",
+      "intern-s1",
+      "intern-s1-pro",
+      "intern-s2-preview"
+    ],
+    "ok_after": 9,
+    "fail_after": 2,
+    "wall_s": 481.8721830844879
+  },
+  {
+    "qset": "tara_oceans_science_2022",
+    "judge": "gpt-5-mini",
+    "reran_agents": [
+      "gpt-5.5-high",
+      "claude-code-opus-4-7",
+      "claude-code-sonnet-4-6",
+      "gemini-3.1-pro",
+      "gemini-2.5-flash",
+      "glm-5",
+      "deepseek-v4-pro",
+      "intern-s1",
+      "intern-s1-pro",
+      "intern-s2-preview"
+    ],
+    "ok_after": 10,
+    "fail_after": 1,
+    "wall_s": 531.1775779724121
+  },
+  {
+    "qset": "tara_oceans_science_2022",
+    "judge": "gemini-2.5-flash",
+    "reran_agents": [
+      "gpt-5.5-high",
+      "claude-code-opus-4-7",
+      "claude-code-sonnet-4-6",
+      "gemini-3.1-pro",
+      "gemini-2.5-flash",
+      "glm-5",
+      "deepseek-v4-pro",
+      "intern-s1",
+      "intern-s1-pro",
+      "intern-s2-preview"
+    ],
+    "ok_after": 2,
+    "fail_after": 9,
+    "wall_s": 451.0908451080322
+  },
+  {
+    "qset": "tick_metavirome_2023",
+    "judge": "gpt-5-mini",
+    "reran_agents": [
+      "gpt-5.5-high",
+      "gemini-3.1-pro",
+      "gemini-2.5-flash",
+      "glm-5",
+      "deepseek-v4-pro",
+      "intern-s1",
+      "intern-s1-pro",
+      "intern-s2-preview"
+    ],
+    "ok_after": 10,
+    "fail_after": 1,
+    "wall_s": 428.8592948913574
+  },
+  {
+    "qset": "vertebrate_rna_viruses_2018",
+    "judge": "gpt-5-mini",
+    "reran_agents": [
+      "claude-code-opus-4-7",
+      "claude-code-sonnet-4-6",
+      "gemini-3.1-pro",
+      "deepseek-v4-pro"
+    ],
+    "ok_after": 10,
+    "fail_after": 1,
+    "wall_s": 793.796156167984
+  },
+  {
+    "qset": "vertebrate_rna_viruses_2018",
+    "judge": "gemini-2.5-flash",
+    "reran_agents": [
+      "gpt-5.5-high",
+      "claude-code-opus-4-7",
+      "claude-code-sonnet-4-6",
+      "gemini-3.1-pro",
+      "gemini-2.5-flash",
+      "glm-5",
+      "deepseek-v4-pro",
+      "intern-s1",
+      "intern-s1-pro",
+      "intern-s2-preview"
+    ],
+    "ok_after": 10,
+    "fail_after": 1,
+    "wall_s": 1700.7472202777863
+  },
+  {
+    "qset": "zooplankton_rna_virosphere_2022",
+    "judge": "gpt-5-mini",
+    "reran_agents": [
+      "gpt-5.5-high",
+      "claude-code-opus-4-7",
+      "claude-code-sonnet-4-6",
+      "gemini-3.1-pro",
+      "gemini-2.5-flash",
+      "glm-5",
+      "deepseek-v4-pro",
+      "intern-s1",
+      "intern-s1-pro",
+      "intern-s2-preview"
+    ],
+    "ok_after": 10,
+    "fail_after": 1,
+    "wall_s": 548.9155352115631
+  },
+  {
+    "qset": "zooplankton_rna_virosphere_2022",
+    "judge": "gemini-2.5-flash",
+    "reran_agents": [
+      "gpt-5.5-high",
+      "claude-code-opus-4-7",
+      "claude-code-sonnet-4-6",
+      "gemini-3.1-pro",
+      "gemini-2.5-flash",
+      "glm-5",
+      "deepseek-v4-pro",
+      "intern-s1",
+      "intern-s1-pro",
+      "intern-s2-preview"
+    ],
+    "ok_after": 3,
+    "fail_after": 8,
+    "wall_s": 617.7912681102753
+  }
+]

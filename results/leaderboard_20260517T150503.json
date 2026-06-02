@@ -1,0 +1,42 @@
+[
+  {
+    "agent_id": "codex-cli",
+    "run_dir": "/Users/likun/Desktop/AILab/病毒-Question-Judge/results/codex-cli/20260517T145341",
+    "composite_score": 1.0,
+    "composite_score_raw": 5.0,
+    "passed": true,
+    "flags_hit": [],
+    "per_dimension": {
+      "question_matching": {
+        "raw": 5,
+        "weight": 0.4,
+        "flags": []
+      },
+      "novelty": {
+        "raw": 5,
+        "weight": 0.15,
+        "flags": []
+      },
+      "importance": {
+        "raw": 5,
+        "weight": 0.15,
+        "flags": []
+      },
+      "testability": {
+        "raw": 5,
+        "weight": 0.1,
+        "flags": []
+      },
+      "data_support": {
+        "raw": 5,
+        "weight": 0.1,
+        "flags": []
+      },
+      "specificity": {
+        "raw": 5,
+        "weight": 0.1,
+        "flags": []
+      }
+    }
+  }
+]

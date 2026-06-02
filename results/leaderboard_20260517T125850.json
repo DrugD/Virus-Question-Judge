@@ -1,0 +1,46 @@
+[
+  {
+    "agent_id": "qwen3.6-plus",
+    "run_dir": "/Users/likun/Desktop/AILab/病毒-Question-Judge/results/qwen3.6-plus/20260517T125638",
+    "composite_score": 0.9099999999999999,
+    "composite_score_raw": 4.55,
+    "passed": true,
+    "flags_hit": [
+      "FL_006"
+    ],
+    "per_dimension": {
+      "question_matching": {
+        "raw": 5,
+        "weight": 0.4,
+        "flags": []
+      },
+      "novelty": {
+        "raw": 2,
+        "weight": 0.15,
+        "flags": [
+          "FL_006"
+        ]
+      },
+      "importance": {
+        "raw": 5,
+        "weight": 0.15,
+        "flags": []
+      },
+      "testability": {
+        "raw": 5,
+        "weight": 0.1,
+        "flags": []
+      },
+      "data_support": {
+        "raw": 5,
+        "weight": 0.1,
+        "flags": []
+      },
+      "specificity": {
+        "raw": 5,
+        "weight": 0.1,
+        "flags": []
+      }
+    }
+  }
+]

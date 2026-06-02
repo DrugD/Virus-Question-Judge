@@ -1,0 +1,87 @@
+{
+  "agent_id": "claude-sonnet-4.5-20250929",
+  "workspace_id": "Life_Virus_001",
+  "questions": [
+    {
+      "rank": 1,
+      "question": "Can systematic petabase-scale RdRP-targeted mining of public sequencing archives reveal extensive hidden RNA-virus diversity that is absent from curated viral reference databases?",
+      "rationale": "The blind data shows 86.8% of RdRP fragments exhibit <40% identity to nearest references, and 78.1% of candidate sOTU clusters are flagged as novel. When extrapolated to the full upstream search (5.7M runs, 10.2 petabases, 131,957 candidate novel sOTUs), this indicates that public sequencing archives contain a massive hidden RNA virome that curated databases have not captured. RdRP provides a universal marker enabling systematic detection across divergent lineages.",
+      "data_support": [
+        "percent_identity_to_nearest_reference",
+        "novelty_flag",
+        "nearest_reference_family",
+        "candidate_unique_novel_rdrp_sotus",
+        "searched_data_volume",
+        "translated_runs_screened",
+        "motif_strength",
+        "sample_source",
+        "host_or_environment"
+      ],
+      "expected_test": "The question is testable by quantifying: (1) the fraction of RdRP-containing sOTUs that fall below standard similarity thresholds to curated viral references, (2) the absolute scale of novel candidates discovered across petabase-scale translated search, (3) the distribution of novel diversity across diverse biological sources and environments captured in public archives, and (4) the validation of RdRP catalytic motifs confirming genuine polymerase fragments rather than false positives.",
+      "scope_keywords": [
+        "RdRP",
+        "RNA virus",
+        "petabase-scale",
+        "public sequencing archives",
+        "hidden diversity",
+        "reference database gap",
+        "translated search",
+        "sOTU",
+        "viral discovery",
+        "metagenomics"
+      ]
+    },
+    {
+      "rank": 2,
+      "question": "Does large-scale computational screening of public metagenomes and transcriptomes using conserved RdRP motifs uncover RNA-virus lineages that represent novel families or orders absent from existing taxonomic classifications?",
+      "rationale": "The data reveals that 17% of fragments could not be assigned to any recognized viral family (annotated as unclassified_RdRP), and the majority of fragments showing <40% identity to references suggests family- or order-level novelty. This indicates that RdRP-based screening may discover deeply divergent lineages that expand the known boundaries of RNA-virus taxonomy.",
+      "data_support": [
+        "nearest_reference_family",
+        "percent_identity_to_nearest_reference",
+        "motif_strength",
+        "alignment_score",
+        "e_value",
+        "cluster_size",
+        "novelty_flag"
+      ],
+      "expected_test": "This question can be tested by phylogenetic analysis of low-identity RdRP sequences, quantification of unclassified_RdRP hits, and assessment of whether identity thresholds are consistent with family- or order-level divergence. Source diversity (arthropods, soil, aquatic, gut) would indicate whether novel lineages are restricted to specific niches or globally distributed.",
+      "scope_keywords": [
+        "RdRP",
+        "RNA virus",
+        "taxonomic novelty",
+        "conserved motifs",
+        "metagenomics",
+        "transcriptomics",
+        "viral families",
+        "unclassified viruses",
+        "public data mining"
+      ]
+    },
+    {
+      "rank": 3,
+      "question": "What fraction of global RNA-virus diversity remains undetected by traditional viral isolation and curation methods, and can RdRP-based translated search of public data quantify this sampling gap?",
+      "rationale": "With 78.1% of discovered sOTU clusters flagged as novel and only 21.9% matching known references at >40% identity, the data suggests that curated databases represent a minority of actual RNA-virus diversity. The petabase-scale search enables a quantitative comparison between database-represented and database-absent viral lineages.",
+      "data_support": [
+        "novelty_flag",
+        "candidate_unique_novel_rdrp_sotus",
+        "percent_identity_to_nearest_reference",
+        "nearest_reference_family",
+        "searched_data_volume",
+        "sample_source",
+        "cluster_size"
+      ],
+      "expected_test": "The question is answerable by calculating the ratio of novel to known sOTUs, characterizing the identity distribution to nearest references, and comparing the candidate count (131,957 novel sOTUs) against the size of existing curated RdRP databases. Metadata on source diversity provides context for where traditional methods have undersampled.",
+      "scope_keywords": [
+        "RNA virus",
+        "RdRP",
+        "sampling gap",
+        "viral diversity",
+        "database completeness",
+        "translated search",
+        "public sequencing data",
+        "viral discovery",
+        "metagenomics"
+      ]
+    }
+  ]
+}
