@@ -27,6 +27,11 @@ class JudgeConfig:
     max_retries: int = 2
 
 
+class _ContentFiltered(Exception):
+    """The judge gateway's guardrail classifier blocked the prompt
+    (finish_reason=content_filter). Non-retryable — retries never clear it."""
+
+
 class JudgeLLM:
     """Thin client used by every rubric-dimension metric."""
 
@@ -60,16 +65,29 @@ class JudgeLLM:
         slightly larger steps when the failure was an empty body — that's
         the Bedrock per-key throttle signature, and it usually clears in
         ~10s.
+
+        A `content_filter` finish reason is NOT retryable: the gateway's
+        guardrail classifier rejected the prompt (common for virology / RdRP
+        rubric content). Surface it immediately with a clear message instead of
+        burning the retry budget on a failure that will never clear.
         """
         last_err: Exception | None = None
         budget = max(self.cfg.max_retries, 4)  # ensure at least 5 total attempts
         for attempt in range(budget + 1):
             try:
-                raw = self._chat_raw(system, user)
+                raw, finish = self._chat_raw(system, user)
+                if finish == "content_filter" and (not raw or not raw.strip()):
+                    raise _ContentFiltered(
+                        "judge gateway blocked the prompt (finish_reason="
+                        "content_filter) — guardrail classifier rejected the "
+                        "rubric/gold content; not retryable"
+                    )
                 if not raw or not raw.strip():
                     # empty body — Bedrock throttle. Treat as retryable.
                     raise ValueError("empty judge response (likely Bedrock throttle)")
                 return self._extract_json(raw)
+            except _ContentFiltered:
+                raise  # non-retryable, propagate clear message
             except Exception as e:
                 last_err = e
                 if attempt < budget:
@@ -80,7 +98,9 @@ class JudgeLLM:
                 raise
         raise last_err  # pragma: no cover
 
-    def _chat_raw(self, system: str, user: str) -> str:
+    def _chat_raw(self, system: str, user: str) -> tuple[str, str | None]:
+        """Return (content, finish_reason). finish_reason is None when the
+        provider doesn't expose one (Anthropic native path)."""
         prov = self.cfg.provider
         if prov in ("openai", "dashscope"):
             kwargs = dict(
@@ -106,7 +126,8 @@ class JudgeLLM:
             if not model_lc.startswith(("claude-", "anthropic")):
                 kwargs["response_format"] = {"type": "json_object"}
             resp = self._client.chat.completions.create(**kwargs)
-            return resp.choices[0].message.content or ""
+            choice = resp.choices[0]
+            return (choice.message.content or ""), getattr(choice, "finish_reason", None)
         if prov == "anthropic":
             kwargs = dict(
                 model=self.cfg.model,
@@ -117,7 +138,11 @@ class JudgeLLM:
             if self.cfg.temperature is not None:
                 kwargs["temperature"] = self.cfg.temperature
             resp = self._client.messages.create(**kwargs)
-            return "".join(b.text for b in resp.content if b.type == "text")
+            text = "".join(b.text for b in resp.content if b.type == "text")
+            stop = getattr(resp, "stop_reason", None)
+            # Anthropic signals a guardrail block via stop_reason values like
+            # "refusal"; map to the OpenAI-style token for uniform handling.
+            return text, ("content_filter" if stop == "refusal" else stop)
         raise ValueError(prov)
 
     @staticmethod
