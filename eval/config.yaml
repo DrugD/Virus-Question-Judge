@@ -9,11 +9,11 @@
 # =============================================================================
 
 judge:
-  provider: openai                                          # OpenAI SDK path; gateway is OpenAI-compatible (routes Claude transparently)
-  model: claude-opus-4-7                                    # default — strongest rubric judge; the gateway forwards to Anthropic
+  provider: openai                                          # OpenAI SDK path; gateway is OpenAI-compatible
+  model: gpt-5.5-high                                       # default — strong rubric judge; avoids the Opus-4.7 content-filter on virology prompts
   api_key_env: NEWAPI_KEY                                   # env-var NAME (set in .env), not the key itself
   base_url: http://35.220.164.252:3888/v1
-  temperature: null                                         # Bedrock Opus 4.7 rejects `temperature`; null = omit the field
+  temperature: null                                         # omit; gpt-5.5-high reasoning model ignores/!rejects custom temperature
   max_tokens: 4096
   timeout: 300
   max_retries: 2
@@ -22,14 +22,22 @@ judge:
 # `judge:` block that overrides the default when chosen. base_url and
 # api_key_env inherit from `judge:` if omitted.
 judge_options:
+  - id: gpt-5.5-high
+    label: "GPT-5.5 (high) · top-tier reasoning"
+    provider: openai
+    model: gpt-5.5-high
+    temperature: null
+    max_tokens: 4096
+    timeout: 300
+    description: "OpenAI GPT-5.5 (high effort) — strongest available rubric judge here; no content-filter on virology prompts. Default judge."
   - id: claude-opus-4-7
-    label: "Claude Opus 4.7 · top-tier reasoning"
+    label: "Claude Opus 4.7 · top-tier (may be content-filtered)"
     provider: openai
     model: claude-opus-4-7
     temperature: null                                       # required: Bedrock rejects temperature for this model
     max_tokens: 4096
     timeout: 300
-    description: "Anthropic Claude Opus 4.7 — strongest rubric adherence + nuance; ~10–20s per call. Default judge."
+    description: "Anthropic Claude Opus 4.7 — strongest rubric adherence, but the gateway content-filter often blocks virology/RdRP rubric prompts; use only if your gateway allows it."
   - id: gpt-5-mini
     label: "GPT-5 mini · fast reasoning"
     provider: openai

@@ -46,7 +46,8 @@ agent (Qwen3.6-Plus | Codex CLI | Claude Code | …)
 - **数据有效性检查.** 上传校验新增有效性检查：空文件、只有表头无数据行的表格、空 FASTA、无法解析的 JSON 会被标记为 warning，并在 `valid_file_count` 汇总；若全部文件无效则直接拒绝（`webapp/validator.py`）。
 - **Pass@5 改为计数式.** 5 条候选每通过 1 条记 **+0.2**（`pass_count / 5`），与排名无关：全对 = 1.0，全错 = 0.0。取代原“位置加权 / 20”算法。涉及 `webapp/pipeline_runner.py`、`eval/rejudge.py` 及所有 agent/UI 文案。
 - **不再持久化 sandbox 数据.** 每次 run 结束后自动删除 `webapp_runs/.../sandboxes/<agent>/<ts>/data/`（成功与失败路径都清理），仅保留 agent 输出与 `_debug/`。一次性清理了历史遗留的 ~1.5 GB 拷贝，并在 `.gitignore` 中排除该路径。
-- **judge model 默认最强模型.** 默认 judge 固定为 **Claude Opus 4.7**（`eval/config.yaml`，当前最强档；后续可扩展为最强 n 个 LLM 的集成评审）。
+- **judge model 默认 GPT-5.5 (high).** 默认 judge 为 **gpt-5.5-high**（`eval/config.yaml`）。原计划用 Claude Opus 4.7，但当前网关对病毒学/RdRP 的 rubric 提示词会触发 content-filter 拦截（返回空），故改用 gpt-5.5-high——判分链路实测可用、无拦截；Opus 4.7 仍保留为可选项（若你的网关放行可手动切回）。
+- **agent 全部走网关（无需本地 CLI）.** `gpt-5.5-high` / `claude-code-opus-4-7` / `claude-code-sonnet-4-6` 原本依赖本地 `codex` / `claude` 命令行（缺失即 `FileNotFoundError`），现统一改走 new-api 网关的通用 ReAct 工具循环（`eval/agents/llm_tool_agent.py` 的网关版工厂），registry id 不变。注：`gpt-5.5-high` 这个 id 在网关上指向 `gpt-5.5` 模型，因为网关给 `-high` 强制的 `reasoning_effort` 与 chat-completions 的函数工具不兼容。
 - **历史结果归档（按 judge 标注）.** v0.3.0 之前的所有结果移入 `results_archive/`，并按评测所用 LLM Judge 分目录：`judge-gpt-5.1/`（旧 `results/`）、`judge-gpt-5-mini/`、`judge-gemini-2.5-flash/`、`aggregate-multi-judge/`（`STATS*` 汇总）、`judge-unjudged-agent-outputs/`（20 个仅跑 agent、未评测的 `upl_*`）。每个目录含 `JUDGE.txt` 标注 judge 模型 + 旧版 Pass@5 口径。详见 `results_archive/README.md`。旧分数为位置加权口径，**不可**与新计数式混比。
 - **移除 intern-s1-mini.** 该 agent 从 `eval/agents/__init__.py` 的 `REGISTRY` / `AGENT_META` 下线，不再出现在可选 agent 列表。
 
