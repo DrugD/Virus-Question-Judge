@@ -697,6 +697,19 @@ def _make(agent_id: str, model: str, **kw: Any) -> type[LLMToolAgent]:
 GPT_5_5_HIGH    = _make("gpt-5.5-high",      "gpt-5.5-high",                 max_tokens=4096)
 CLAUDE_SON_TOOL = _make("claude-sonnet-4-5", "claude-sonnet-4-5-20250929",   max_tokens=4096)
 CLAUDE_HAI_TOOL = _make("claude-haiku-4-5",  "claude-haiku-4-5-20251001",    max_tokens=4096)
+# Gateway (no-local-CLI) variants of the Codex / Claude Code agents. Same ids as
+# the CLI versions so results dirs + UI labels stay identical; these route the
+# model through the new-api gateway via the generic ReAct tool loop instead of
+# requiring a locally-installed `codex` / `claude` binary.
+#
+# NOTE: the `gpt-5.5-high` *id* maps to the gateway model `gpt-5.5` (not
+# `gpt-5.5-high`). The gateway pins `reasoning_effort=high` on the `-high`
+# model, and OpenAI rejects function-tools + reasoning_effort on
+# /v1/chat/completions ("use /v1/responses instead"). The generic tool loop is
+# chat-completions-based, so we use plain `gpt-5.5`, which supports tool calls.
+GPT_5_5_HIGH_TOOL   = _make("gpt-5.5-high",           "gpt-5.5",             max_tokens=4096)
+CLAUDE_OPUS_47_TOOL = _make("claude-code-opus-4-7",   "claude-opus-4-7",     max_tokens=4096)
+CLAUDE_SON_46_TOOL  = _make("claude-code-sonnet-4-6", "claude-sonnet-4-6",   max_tokens=4096)
 GEMINI_PRO_TOOL = _make("gemini-3.1-pro",    "gemini-3.1-pro-preview",       max_tokens=4096)
 GEMINI_FLAS_TOOL = _make("gemini-2.5-flash", "gemini-2.5-flash",             max_tokens=4096)
 GLM_5_TOOL      = _make("glm-5",             "glm-5",                         max_tokens=4096)
@@ -722,7 +735,7 @@ INTERN_VL3_2B_TOOL  = _make("internvl3-2b",  "opengvlab/internvl3-2b",        ma
 # 系列"). The 'A1' slot maps to intern-s1-mini since the public model list has
 # no 'a1' variant — closest equivalent is the lightweight reasoning model.
 _INTERN_BASE_URL = "https://chat.intern-ai.org.cn/api/v1"
-_INTERN_KEY_ENV  = "INTERN_AI_KEY"
+_INTERN_KEY_ENV  = "sk-XiROgusunKHqyN9Bb1pCJnGvDrHhpE2Jh0eUrUbAs9l4cQVP"
 
 INTERN_S1_TOOL      = _make("intern-s1",         "intern-s1",         default_base_url=_INTERN_BASE_URL, default_api_key_env=_INTERN_KEY_ENV, max_tokens=4096)
 INTERN_S1_PRO_TOOL  = _make("intern-s1-pro",     "intern-s1-pro",     default_base_url=_INTERN_BASE_URL, default_api_key_env=_INTERN_KEY_ENV, max_tokens=4096)

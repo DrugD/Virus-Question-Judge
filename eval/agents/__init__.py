@@ -1,11 +1,8 @@
 from .base import AgentRunner, RunResult
-from .codex_cli_agent import CodexCLIAgent, CodexGpt55High
-from .claude_code_agent import (
-    ClaudeCodeOpus47, ClaudeCodeSonnet46,
-)
 from .openai_chat_agent import OpenAIChatAgent  # legacy single-shot, kept importable
 from .llm_tool_agent import (
     LLMToolAgent,
+    GPT_5_5_HIGH_TOOL, CLAUDE_OPUS_47_TOOL, CLAUDE_SON_46_TOOL,
     GEMINI_PRO_TOOL, GEMINI_FLAS_TOOL,
     GLM_5_TOOL,
     DEEPSEEK_V4_PRO_TOOL,
@@ -14,19 +11,15 @@ from .llm_tool_agent import (
 
 # Public registry — id ↔ runner class.
 #
-# Routing policy (家家用自家脚手架，没 native CLI 的走通用 ReAct loop):
-#   - Anthropic Claude  → ClaudeCode CLI (--model <claude-id>)
-#   - OpenAI GPT        → Codex CLI       (-m <gpt-id>)
-#   - Google Gemini     → generic LLMToolAgent (no local native CLI)
-#   - Z.AI GLM          → generic LLMToolAgent
-#   - DeepSeek          → generic LLMToolAgent (no native CLI)
-#   - InternLM (浦语)   → generic LLMToolAgent · own endpoint chat.intern-ai.org.cn
+# Routing policy: every agent runs through the new-api gateway via the generic
+# ReAct tool loop (LLMToolAgent) — no locally-installed `codex` / `claude`
+# binary required. InternLM uses its own OpenAI-compatible endpoint.
 REGISTRY: dict[str, type[AgentRunner]] = {
-    # OpenAI — Codex CLI
-    "gpt-5.5-high":           CodexGpt55High,
-    # Anthropic — Claude Code CLI
-    "claude-code-opus-4-7":   ClaudeCodeOpus47,
-    "claude-code-sonnet-4-6": ClaudeCodeSonnet46,
+    # OpenAI — gateway ReAct loop
+    "gpt-5.5-high":           GPT_5_5_HIGH_TOOL,
+    # Anthropic — gateway ReAct loop (was Claude Code CLI)
+    "claude-code-opus-4-7":   CLAUDE_OPUS_47_TOOL,
+    "claude-code-sonnet-4-6": CLAUDE_SON_46_TOOL,
     # Google — generic ReAct tool loop
     "gemini-3.1-pro":         GEMINI_PRO_TOOL,
     "gemini-2.5-flash":       GEMINI_FLAS_TOOL,
@@ -42,9 +35,9 @@ REGISTRY: dict[str, type[AgentRunner]] = {
 
 # Metadata for the UI: family + brief description.
 AGENT_META: dict[str, dict[str, str]] = {
-    "gpt-5.5-high":           {"family": "OpenAI",          "kind": "Codex CLI ReAct",       "desc": "GPT-5.5 (high effort) via Codex CLI"},
-    "claude-code-opus-4-7":   {"family": "Anthropic",       "kind": "Claude Code CLI",       "desc": "Claude Opus 4.7 via Claude Code"},
-    "claude-code-sonnet-4-6": {"family": "Anthropic",       "kind": "Claude Code CLI",       "desc": "Claude Sonnet 4.6 via Claude Code"},
+    "gpt-5.5-high":           {"family": "OpenAI",          "kind": "tool-using ReAct loop", "desc": "GPT-5.5 (high effort) via gateway"},
+    "claude-code-opus-4-7":   {"family": "Anthropic",       "kind": "tool-using ReAct loop", "desc": "Claude Opus 4.7 via gateway"},
+    "claude-code-sonnet-4-6": {"family": "Anthropic",       "kind": "tool-using ReAct loop", "desc": "Claude Sonnet 4.6 via gateway"},
     "gemini-3.1-pro":         {"family": "Google",          "kind": "tool-using ReAct loop", "desc": "Gemini 3.1 Pro preview + tool loop"},
     "gemini-2.5-flash":       {"family": "Google",          "kind": "tool-using ReAct loop", "desc": "Gemini 2.5 Flash + tool loop"},
     "glm-5":                  {"family": "Z.AI",            "kind": "tool-using ReAct loop", "desc": "GLM 5 + tool loop"},
@@ -57,7 +50,5 @@ AGENT_META: dict[str, dict[str, str]] = {
 __all__ = [
     "AgentRunner", "RunResult",
     "OpenAIChatAgent", "LLMToolAgent",
-    "CodexCLIAgent", "CodexGpt55High",
-    "ClaudeCodeOpus47", "ClaudeCodeSonnet46",
     "REGISTRY", "AGENT_META",
 ]
