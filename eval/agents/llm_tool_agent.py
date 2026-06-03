@@ -735,7 +735,7 @@ INTERN_VL3_2B_TOOL  = _make("internvl3-2b",  "opengvlab/internvl3-2b",        ma
 # 系列"). The 'A1' slot maps to intern-s1-mini since the public model list has
 # no 'a1' variant — closest equivalent is the lightweight reasoning model.
 _INTERN_BASE_URL = "https://chat.intern-ai.org.cn/api/v1"
-_INTERN_KEY_ENV  = "sk-XiROgusunKHqyN9Bb1pCJnGvDrHhpE2Jh0eUrUbAs9l4cQVP"
+_INTERN_KEY_ENV  = "INTERN_AI_KEY"   # env-var NAME (set the token in .env), NOT the key itself
 
 INTERN_S1_TOOL      = _make("intern-s1",         "intern-s1",         default_base_url=_INTERN_BASE_URL, default_api_key_env=_INTERN_KEY_ENV, max_tokens=4096)
 INTERN_S1_PRO_TOOL  = _make("intern-s1-pro",     "intern-s1-pro",     default_base_url=_INTERN_BASE_URL, default_api_key_env=_INTERN_KEY_ENV, max_tokens=4096)
