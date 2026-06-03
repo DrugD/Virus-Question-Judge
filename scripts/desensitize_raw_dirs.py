@@ -2,8 +2,13 @@
 
 Reuses the production desensitizer (webapp.pipeline_runner._desensitize_data),
 which flattens the tree, recursively expands nested archives (.zip/.tar/.gz/.bz2)
-so inner members are anonymised too, and renames everything to <N>.<ext>. The
-original-name provenance is written to raw_no_name/filename_map.json.
+so inner members are anonymised too, and renames everything to <N>.<ext>.
+
+IMPORTANT: the original-name provenance map is written to
+data/<qset>/filename_map.json — the QSET ROOT, NEVER inside raw_no_name/. The
+whole point of raw_no_name/ is that an agent reading it sees only 1.csv/2.json
+style names; a filename_map.json sitting next to them would leak every original
+(intent-revealing) filename and defeat the desensitization.
 """
 from __future__ import annotations
 
@@ -25,17 +30,22 @@ def main() -> None:
         if dst.exists():
             shutil.rmtree(dst)
         mapping = _desensitize_data(raw, dst)
-        (dst / "filename_map.json").write_text(
+        # judge-only map lives at the qset root, OUTSIDE raw_no_name/, so it is
+        # never exposed alongside the anonymised data files.
+        (q / "filename_map.json").write_text(
             json.dumps(mapping, ensure_ascii=False, indent=2), encoding="utf-8"
         )
-        out_files = sorted(p.name for p in dst.iterdir() if p.name != "filename_map.json")
+        out_files = sorted(p.name for p in dst.iterdir())
+        leak = [n for n in out_files if n == "filename_map.json"]
         print(f"[{q.name}]")
         print(f"  raw/         : {sorted(p.name for p in raw.rglob('*') if p.is_file())}")
         print(f"  raw_no_name/ : {out_files}")
-        for anon, orig in mapping.items():
-            print(f"      {anon:12s} <- {orig}")
+        print(f"  map written  : {q / 'filename_map.json'}  (qset root, judge-only)")
+        if leak:
+            print(f"  !! LEAK: filename_map.json still inside raw_no_name/ !!")
         print()
 
 
 if __name__ == "__main__":
     main()
+
