@@ -94,17 +94,9 @@
           <summary>候选 JSON 格式（schema 同 agent_output）</summary>
           <pre>{
   "agent_id": "&lt;your_label&gt;",
-  "workspace_id": "user_uploaded",
   "questions": [
-    {
-      "rank": 1,
-      "question": "Does &lt;X&gt; drive &lt;Y&gt; in this dataset?",
-      "rationale": "Two-to-four sentences citing specific files / fields ...",
-      "data_support": ["data/foo.csv", "..."],
-      "expected_test": "How this is answerable from the data",
-      "scope_keywords": ["3-8 short keywords"]
-    }
-    // 1–5 entries 共评 (Pass@k)
+    { "rank": 1, "question": "Does &lt;X&gt; drive &lt;Y&gt; in this dataset?" }
+    // 共 5 条，每条只需 {rank, question}；5 条一起评 (Pass@5)
   ]
 }</pre>
           <p class="hint">上传后 Step 2 自动切到 <strong>判官直评模式</strong>，跳过 agent 阶段，对你给的候选直接打分；不上传则正常跑 agent。</p>

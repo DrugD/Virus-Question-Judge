@@ -362,14 +362,10 @@ def hydrate_workspace(
                     "type": "array", "minItems": 1, "maxItems": 5,
                     "items": {
                         "type": "object",
-                        "required": ["rank", "question", "rationale"],
+                        "required": ["rank", "question"],
                         "properties": {
                             "rank": {"type": "integer"},
                             "question": {"type": "string"},
-                            "rationale": {"type": "string"},
-                            "data_support": {"type": "array", "items": {"type": "string"}},
-                            "expected_test": {"type": "string"},
-                            "scope_keywords": {"type": "array", "items": {"type": "string"}},
                         },
                     },
                 },

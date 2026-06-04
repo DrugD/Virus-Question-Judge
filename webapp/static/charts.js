@@ -21,12 +21,11 @@ window.Charts = (function () {
     { fill: "rgba(132,204,22,0.18)",  stroke: "rgba(132,204,22,1)"  },
     { fill: "rgba(160,160,200,0.18)", stroke: "rgba(160,160,200,1)" },
   ];
-  const DIMS = ["match_strength", "required_elements_coverage", "acceptability", "data_grounding"];
+  const DIMS = ["match_strength", "required_elements_coverage", "acceptability"];
   const DIM_LABEL = {
     match_strength:             ["Match", "Strength"],
     required_elements_coverage: ["Required", "Elements"],
     acceptability:              ["Acceptability"],
-    data_grounding:             ["Data", "Grounding"],
   };
 
   function darkOpts(extra = {}) {

@@ -10,10 +10,6 @@ from pydantic import BaseModel, Field, field_validator, model_validator
 class CandidateQuestion(BaseModel):
     rank: int = Field(ge=1)
     question: str
-    rationale: str
-    data_support: list[str] = Field(default_factory=list)
-    expected_test: str
-    scope_keywords: list[str] = Field(default_factory=list)
 
     @field_validator("question")
     @classmethod
@@ -62,10 +58,6 @@ class AgentOutput(BaseModel):
         return {
             "agent_id": self.agent_id,
             "question": t.question,
-            "rationale": t.rationale,
-            "data_support": t.data_support,
-            "expected_test": t.expected_test,
-            "scope_keywords": t.scope_keywords,
         }
 
     def to_judge_payloads(self) -> list[dict[str, Any]]:
@@ -81,10 +73,6 @@ class AgentOutput(BaseModel):
                 "agent_id": self.agent_id,
                 "rank": q.rank,
                 "question": q.question,
-                "rationale": q.rationale,
-                "data_support": q.data_support,
-                "expected_test": q.expected_test,
-                "scope_keywords": q.scope_keywords,
             }
             for q in ordered
         ]

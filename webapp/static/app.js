@@ -163,15 +163,13 @@ document.getElementById("dl-candidate-template")?.addEventListener("click", e =>
   e.preventDefault();
   const tmpl = {
     agent_id: "user_uploaded_candidate",
-    workspace_id: "user_uploaded",
-    questions: [{
-      rank: 1,
-      question: "Does <X> drive <Y> in this dataset?",
-      rationale: "Two-to-four sentences citing specific files / fields ...",
-      data_support: ["data/foo.csv"],
-      expected_test: "How this is answerable from the data",
-      scope_keywords: ["3-8", "short", "keywords"],
-    }],
+    questions: [
+      { rank: 1, question: "Does <X> drive <Y> in this dataset?" },
+      { rank: 2, question: "How does <A> vary with <B>?" },
+      { rank: 3, question: "What explains <C> in the data?" },
+      { rank: 4, question: "Is <D> associated with <E>?" },
+      { rank: 5, question: "Which factors predict <F>?" },
+    ],
   };
   _download("candidate_template.json", JSON.stringify(tmpl, null, 2), "application/json");
 });
@@ -979,7 +977,9 @@ function _scoreBadges(r) {
 }
 
 function renderQuestions(grid, rows) {
-  const dims = ["match_strength", "required_elements_coverage", "acceptability", "data_grounding"];
+  const dims = Object.keys(state.rubricSpec?.weights || {
+    match_strength: 1, required_elements_coverage: 1, acceptability: 1,
+  });
   const dimLabels = state.rubricSpec?.dimension_labels || {};
   grid.innerHTML = rows.map(r => {
     if (r.ok === false) {
@@ -1476,7 +1476,7 @@ function _runCsv(rows, meta) {
     "candidate_rank", "candidate_question",
     "composite_score", "composite_score_raw", "passed",
     "matched_gold_id", "matched_centrality",
-    "match_strength", "required_elements_coverage", "acceptability", "data_grounding",
+    "match_strength", "required_elements_coverage", "acceptability",
     "is_winner",
   ];
   const lines = [headers.map(_csvCell).join(",")];
@@ -1510,7 +1510,7 @@ function _runCsv(rows, meta) {
         c.composite_score, c.composite_score_raw, c.passed,
         c.matched_gold_id, c.matched_centrality,
         c.scores?.match_strength, c.scores?.required_elements_coverage,
-        c.scores?.acceptability, c.scores?.data_grounding,
+        c.scores?.acceptability,
         (c.rank === winner) ? "true" : "false",
       ].map(_csvCell).join(","));
     });

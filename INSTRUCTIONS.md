@@ -38,16 +38,8 @@ A ranked list of candidate questions, **best first**. Schema (also in `info.json
 ```json
 {
   "agent_id": "<your model + harness identifier>",
-  "workspace_id": "user_uploaded",
   "questions": [
-    {
-      "rank": 1,
-      "question": "<one English sentence ending with '?'>",
-      "rationale": "<2-4 sentences linking the question to specific data evidence>",
-      "data_support": ["<actual file or feature names you read>", "..."],
-      "expected_test": "<how the question is answerable using this kind of data>",
-      "scope_keywords": ["<3-8 short keywords>"]
-    }
+    { "rank": 1, "question": "<one English sentence ending with '?'>" }
   ]
 }
 ```
@@ -55,9 +47,9 @@ A ranked list of candidate questions, **best first**. Schema (also in `info.json
 - You MUST provide **exactly 5 distinct candidates** (rank 1..5). Duplicates fail validation. The judge scores all 5 and reports:
   - **Pass@1** = 100% if `questions[0]` passes else 0%.
   - **Pass@5** = count-based score: each of your 5 candidates that passes adds a flat **+0.2** (pass_count / 5), independent of its rank. So 1 of 5 = 20%, 3 of 5 = 60%, all 5 = 100%.
-- Put your **strongest** answer at rank 1 (it drives Pass@1), but every candidate counts equally toward Pass@5 — make all 5 distinct and grounded.
+- Put your **strongest** answer at rank 1 (it drives Pass@1); every candidate counts equally toward Pass@5.
+- Each candidate is **just** `{rank, question}` — only the question text is scored. Do not add any other field.
 - Each `question` text must be a single sentence ending with `?`.
-- Each `data_support` entry must reference files or features that **actually exist** in the uploaded data (i.e., a path you actually read).
 
 ---
 
@@ -90,6 +82,6 @@ A question like *"Are there interesting patterns in the data?"* will score very 
 - [ ] `report/report.md` exists with the 5 sections above.
 - [ ] `agent_questions.json` exists, parses as JSON, conforms to the schema.
 - [ ] `questions[0].question` is a single sentence ending with `?`.
-- [ ] All `data_support` entries match real paths under `data/`.
+- [ ] Exactly 5 distinct candidates, each just `{rank, question}`.
 
 When both files are on disk and these checks pass, your run is complete; the judge pipeline will pick them up automatically.

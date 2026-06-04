@@ -19,10 +19,9 @@ from .judge_llm import JudgeLLM
 
 
 WEIGHTS: dict[str, float] = {
-    "match_strength":             0.40,
-    "required_elements_coverage": 0.30,
-    "acceptability":              0.20,
-    "data_grounding":             0.10,
+    "match_strength":             0.45,
+    "required_elements_coverage": 0.33,
+    "acceptability":              0.22,
 }
 SECONDARY_PENALTY = 0.85
 
@@ -30,7 +29,6 @@ DIMENSION_LABELS: dict[str, str] = {
     "match_strength":             "Match strength",
     "required_elements_coverage": "Required-element coverage",
     "acceptability":              "Acceptability vs unacceptable",
-    "data_grounding":             "Data grounding",
 }
 
 DIMENSION_DEFS: dict[str, str] = {
@@ -39,17 +37,10 @@ DIMENSION_DEFS: dict[str, str] = {
         "gold question (semantic alignment, not just keyword overlap).",
     "required_elements_coverage":
         "Of the matched gold's `required_elements`, how many are present in "
-        "the candidate (in question text or rationale). Coverage = round(present / total * 5).",
+        "the candidate question. Coverage = round(present / total * 5).",
     "acceptability":
         "Distance from the gold's acceptable / unacceptable variants. Closer to "
         "an `acceptable_variant` → higher; closer to an `unacceptable_variant` → lower.",
-    "data_grounding":
-        "Is the question DERIVED from analysing the data, or merely decorated "
-        "with data references? Surface name-dropping — quoting a filename, "
-        "column/variable name, accession, or figure label — does NOT count as "
-        "grounding. High scores require evidence the agent computed something "
-        "from the files: a statistic, distribution, count, or relationship that "
-        "motivates the question. Generic phrasing (e.g. 'this dataset') scores low.",
 }
 
 # Anchor descriptions for each integer 0..5 score, per dimension.
@@ -78,20 +69,6 @@ DIMENSION_ANCHORS: dict[str, dict[int, str]] = {
         3: "Mid-quality, leaning toward acceptable but generic.",
         4: "Close to one of the acceptable_variants.",
         5: "Matches an acceptable_variant in framing and specificity.",
-    },
-    "data_grounding": {
-        0: "No reference to any data feature.",
-        1: "Only vague mention of 'the data', OR merely repeats a file / column "
-           "/ accession / figure name with no derived insight (surface name-drop).",
-        2: "Names a real feature but treats it as a label only — no statistic, "
-           "count, or relationship derived from it.",
-        3: "Uses one concrete data feature with a derived observation (a count, "
-           "distribution, or relationship), not just its name.",
-        4: "Integrates multiple real features with derived statistics or "
-           "relationships that genuinely motivate the question.",
-        5: "Question is demonstrably derived from analysing the files — multiple "
-           "features + quantitative evidence + a relationship that could only "
-           "come from actually working the data, not name-dropping.",
     },
 }
 
@@ -133,9 +110,9 @@ question against a list of GOLD scientific questions.
 Process:
   1. Pick the gold question whose intent best matches the candidate (by
      semantics, not by keyword overlap alone). Output its `gold_question_id`.
-  2. Score 4 dimensions on integers 0..5 using ONLY the anchors below. For
+  2. Score 3 dimensions on integers 0..5 using ONLY the anchors below. For
      each dimension you MUST also write a one-sentence reasoning line
-     citing concrete elements from the candidate's question + rationale.
+     citing concrete elements from the candidate's question.
   3. Identify which of the matched gold's `acceptable_variants` (if any) the
      candidate is closest to, and which `unacceptable_variants` (if any) it
      dangerously resembles. Quote the exact variant text.
@@ -153,14 +130,12 @@ Reply with ONLY this JSON object, no prose outside it:
   "scores": {{
     "match_strength":             <int 0..5>,
     "required_elements_coverage": <int 0..5>,
-    "acceptability":              <int 0..5>,
-    "data_grounding":             <int 0..5>
+    "acceptability":              <int 0..5>
   }},
   "per_dimension_reasoning": {{
     "match_strength":             "<one sentence with concrete citation>",
     "required_elements_coverage": "<one sentence>",
-    "acceptability":              "<one sentence>",
-    "data_grounding":             "<one sentence>"
+    "acceptability":              "<one sentence>"
   }},
   "covered_required_elements":  [...],
   "missing_required_elements":  [...],
@@ -177,18 +152,10 @@ acceptable_variants, unacceptable_variants, centrality)
 =========================================================================
 {gold_block}
 
-AVAILABLE DATA FEATURES (file or column names the agent could ground in)
-========================================================================
-{features_block}
-
 CANDIDATE
 =========
 agent_id        : {agent_id}
 question        : {question}
-rationale       : {rationale}
-data_support    : {data_support}
-expected_test   : {expected_test}
-scope_keywords  : {scope_keywords}
 
 Return JSON only. Do not echo this prompt.
 """
@@ -227,21 +194,18 @@ def score_against_gold(
     judge: JudgeLLM,
     candidate: dict[str, Any],
     gold_questions: list[dict[str, Any]],
-    available_features: list[str],
+    available_features: list[str] | None = None,
     threshold: float = 0.6,
 ) -> GoldRubricResult:
+    # available_features is accepted for backwards-compat with callers but no
+    # longer fed to the judge: the candidate is now just {rank, question}, so
+    # there is no data_support to cross-check against feature names.
     gold_block = json.dumps(gold_questions, ensure_ascii=False, indent=2)
-    feats = "\n".join(f"- {f}" for f in available_features) or "- (none provided)"
 
     user = JUDGE_USER_TEMPLATE.format(
         gold_block=gold_block,
-        features_block=feats,
         agent_id=candidate.get("agent_id", ""),
         question=candidate.get("question", ""),
-        rationale=candidate.get("rationale", ""),
-        data_support=candidate.get("data_support", []),
-        expected_test=candidate.get("expected_test", ""),
-        scope_keywords=candidate.get("scope_keywords", []),
     )
 
     payload = judge.chat_json(JUDGE_SYSTEM_PROMPT, user)

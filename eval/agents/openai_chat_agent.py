@@ -213,22 +213,16 @@ _SYSTEM_PROMPT = textwrap.dedent("""\
             "agent_questions": {
               "agent_id": "<your model id>",
               "questions": [
-                {
-                  "rank": 1,
-                  "question": "<one English sentence ending with '?'>",
-                  "rationale": "<2-4 sentences linking to specific data evidence>",
-                  "data_support": ["<file or feature actually used>", "..."],
-                  "expected_test": "<how the question is answerable from this data>",
-                  "scope_keywords": ["<3-8 short keywords>"]
-                }
+                { "rank": 1, "question": "<one English sentence ending with '?'>" }
               ]
             }
           }
           <<</JSON>>>
 
-      If you cannot include the markers for any reason, emit ONLY the JSON
-      object — no markdown fence, no prose after it. Do NOT emit any text
-      after the JSON object.
+      Provide exactly 5 distinct candidates (rank 1..5); each candidate is just
+      {rank, question} — no other fields. If you cannot include the markers for
+      any reason, emit ONLY the JSON object — no markdown fence, no prose after
+      it. Do NOT emit any text after the JSON object.
     """).strip()
 
 
