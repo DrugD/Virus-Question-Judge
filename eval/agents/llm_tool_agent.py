@@ -378,12 +378,16 @@ def _write_debug(sandbox: Path, meta: dict, transcript: list[_Turn]) -> None:
         pass
 
 
+# Sentinel so the constructor can tell "temperature not passed" (→ use the
+# per-model class default) apart from an explicit temperature=None (→ omit).
+_UNSET = object()
+
+
 class LLMToolAgent(AgentRunner):
     """Multi-turn ReAct agent. Subclasses set `agent_id` + `model`."""
 
     agent_id: str = "llm-tool"
     model: str = "gpt-4.1"
-
     def __init__(
         self,
         workspace,
@@ -392,7 +396,7 @@ class LLMToolAgent(AgentRunner):
         agent_id: str | None = None,
         base_url: str | None = None,
         api_key_env: str | None = None,
-        temperature: float = 0.2,
+        temperature: float | None = _UNSET,
         max_tokens: int = 4096,
         timeout: int = 240,
         max_iters: int = _DEFAULT_MAX_ITERS,
@@ -418,7 +422,13 @@ class LLMToolAgent(AgentRunner):
             or getattr(type(self), "default_api_key_env", None)
             or "NEWAPI_KEY"
         )
-        self.temperature = temperature
+        # temperature: explicit kwarg wins; else a per-model class attribute
+        # `default_temperature` (set by _make for Bedrock models that reject the
+        # field → None means "omit"); else fall back to 0.2.
+        if temperature is not _UNSET:
+            self.temperature = temperature
+        else:
+            self.temperature = getattr(type(self), "default_temperature", 0.2)
         self.max_tokens = max_tokens
         self.timeout = timeout
         self.max_iters = max_iters
@@ -667,9 +677,8 @@ class LLMToolAgent(AgentRunner):
         last: BaseException | None = None
         for retry in range(_GATEWAY_5XX_MAX_RETRIES + 1):
             try:
-                return client.chat.completions.create(
+                kwargs = dict(
                     model=self.model,
-                    temperature=self.temperature,
                     max_tokens=self.max_tokens,
                     timeout=self.timeout,
                     messages=messages,
@@ -677,6 +686,13 @@ class LLMToolAgent(AgentRunner):
                     tool_choice="auto",
                     stream=False,
                 )
+                # Some Bedrock-hosted models (e.g. claude-opus-4-7) now reject
+                # `temperature` with "ValidationException: `temperature` is
+                # deprecated for this model." Omit the field when temperature
+                # is None so those models work; keep it for models that accept it.
+                if self.temperature is not None:
+                    kwargs["temperature"] = self.temperature
+                return client.chat.completions.create(**kwargs)
             except Exception as e:
                 last = e
                 if not _is_transient_gateway_error(e) or retry == _GATEWAY_5XX_MAX_RETRIES:
@@ -708,8 +724,8 @@ CLAUDE_HAI_TOOL = _make("claude-haiku-4-5",  "claude-haiku-4-5-20251001",    max
 # /v1/chat/completions ("use /v1/responses instead"). The generic tool loop is
 # chat-completions-based, so we use plain `gpt-5.5`, which supports tool calls.
 GPT_5_5_HIGH_TOOL   = _make("gpt-5.5-high",           "gpt-5.5",             max_tokens=4096)
-CLAUDE_OPUS_47_TOOL = _make("claude-code-opus-4-7",   "claude-opus-4-7",     max_tokens=4096)
-CLAUDE_SON_46_TOOL  = _make("claude-code-sonnet-4-6", "claude-sonnet-4-6",   max_tokens=4096)
+CLAUDE_OPUS_47_TOOL = _make("claude-code-opus-4-7",   "claude-opus-4-7",     max_tokens=4096, default_temperature=None)
+CLAUDE_SON_46_TOOL  = _make("claude-code-sonnet-4-6", "claude-sonnet-4-6",   max_tokens=4096, default_temperature=None)
 GEMINI_PRO_TOOL = _make("gemini-3.1-pro",    "gemini-3.1-pro-preview",       max_tokens=4096)
 GEMINI_FLAS_TOOL = _make("gemini-2.5-flash", "gemini-2.5-flash",             max_tokens=4096)
 GLM_5_TOOL      = _make("glm-5",             "glm-5",                         max_tokens=4096)
