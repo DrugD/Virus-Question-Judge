@@ -1,4 +1,4 @@
-/* Charts module — adapted to gold-rubric 4-dimension result schema.
+/* Charts module — adapted to gold-rubric 3-dimension result schema.
    Exposes:
      Charts.renderAll(rows, radarId, barsId, timingId)
      Charts.renderRadar(rows, canvasId)
