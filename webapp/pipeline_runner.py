@@ -219,6 +219,10 @@ def _pass_at_k_stats(
         "pass_at_1_value": 1.0 if pass_at_1 else 0.0,
         "pass_at_5": pass_count > 0,
         "pass_at_5_value": pass_at_5_value,
+        # hit = did this agent land at least ONE passing question among its 5?
+        # (run-level boolean; aggregate "hit rate" = mean of `hit` across runs.)
+        "hit": pass_count >= 1,
+        "hit_value": 1.0 if pass_count >= 1 else 0.0,
         # legacy aliases — kept so older clients / CSVs don't break
         "pass_at_k": pass_count > 0,
         "pass_at_k_value": pass_at_5_value,
@@ -659,6 +663,8 @@ class PipelineRunner:
                 "matched_gold_id": r.matched_gold_id,
                 "matched_gold_question": r.matched_gold_question,
                 "matched_centrality": r.matched_centrality,
+                "gold_matched": getattr(r, "gold_matched", True),
+                "is_open": getattr(r, "is_open", False),
                 "scores": r.scores,
                 # per-question reasoning — needed so the UI can render
                 # 4-dim reasoning + variants for EVERY candidate, not just
@@ -689,6 +695,8 @@ class PipelineRunner:
             "matched_gold_id": gold_result.matched_gold_id,
             "matched_gold_question": gold_result.matched_gold_question,
             "matched_centrality": gold_result.matched_centrality,
+            "gold_matched": getattr(gold_result, "gold_matched", True),
+            "is_open": getattr(gold_result, "is_open", False),
             "scores": gold_result.scores,
             "weights": gold_result.weights,
             "covered_required_elements": gold_result.covered_required_elements,
@@ -775,6 +783,8 @@ class PipelineRunner:
                 "matched_gold_id": r.matched_gold_id,
                 "matched_gold_question": r.matched_gold_question,
                 "matched_centrality": r.matched_centrality,
+                "gold_matched": getattr(r, "gold_matched", True),
+                "is_open": getattr(r, "is_open", False),
                 "scores": r.scores,
                 "per_dimension_reasoning": r.per_dimension_reasoning,
                 "closest_acceptable_variant": r.closest_acceptable_variant,
@@ -803,6 +813,8 @@ class PipelineRunner:
             "matched_gold_id": gold_result.matched_gold_id,
             "matched_gold_question": gold_result.matched_gold_question,
             "matched_centrality": gold_result.matched_centrality,
+            "gold_matched": getattr(gold_result, "gold_matched", True),
+            "is_open": getattr(gold_result, "is_open", False),
             "scores": gold_result.scores,
             "weights": gold_result.weights,
             "covered_required_elements": gold_result.covered_required_elements,

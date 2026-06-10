@@ -18,70 +18,85 @@ from typing import Any
 from .judge_llm import JudgeLLM
 
 
-WEIGHTS: dict[str, float] = {
-    "match_strength":             0.45,
-    "required_elements_coverage": 0.33,
-    "acceptability":              0.22,
+# =============================================================================
+# Closed-question rubric (candidate has a matching GOLD question).
+#
+# Two dimensions, point-based (NOT 0..5). User-designed anchors, rescaled so the
+# two maxima sum to 100 while preserving the original 2:1 ratio (40:20 → 67:33)
+# and the original 4-level structure.
+#
+#   1.1 语义对齐 / semantic_alignment        — max 67
+#   1.2 可接受度与错误控制 / acceptability    — max 33
+#
+# composite_score (0..1) = (semantic + acceptability) / 100.
+# =============================================================================
+
+# Max points per dimension (these sum to 100).
+DIMENSION_MAX: dict[str, int] = {
+    "semantic_alignment": 67,
+    "acceptability":      33,
 }
+# Back-compat alias: some downstream code references WEIGHTS. It now holds the
+# per-dimension MAX POINTS (not 0..1 fractions). composite is raw/100.
+WEIGHTS = DIMENSION_MAX
+TOTAL_MAX = sum(DIMENSION_MAX.values())            # 100
 SECONDARY_PENALTY = 0.85
 
 DIMENSION_LABELS: dict[str, str] = {
-    "match_strength":             "Match strength",
-    "required_elements_coverage": "Required-element coverage",
-    "acceptability":              "Acceptability vs unacceptable",
+    "semantic_alignment": "语义对齐 / Semantic alignment",
+    "acceptability":      "可接受度与错误控制 / Acceptability & error control",
 }
 
 DIMENSION_DEFS: dict[str, str] = {
-    "match_strength":
-        "How well the candidate question captures the *intent* of the matched "
-        "gold question (semantic alignment, not just keyword overlap).",
-    "required_elements_coverage":
-        "Of the matched gold's `required_elements`, how many are present in "
-        "the candidate question. Coverage = round(present / total * 5).",
+    "semantic_alignment":
+        "Does the candidate question reconstruct the matched gold question's "
+        "research object, scientific goal, and the relationship it asks about?",
     "acceptability":
-        "Distance from the gold's acceptable / unacceptable variants. Closer to "
-        "an `acceptable_variant` → higher; closer to an `unacceptable_variant` → lower.",
+        "Is the candidate a reasonable rewrite / acceptable_variant of the gold "
+        "(no unsupported extrapolation), or has it degraded toward an "
+        "unacceptable_variant / hallucination / paper-or-rawdata-unsupported content?",
 }
 
-# Anchor descriptions for each integer 0..5 score, per dimension.
-# These are shown to the judge IN-PROMPT and to the user in the rubric panel.
+# Allowed integer point values per dimension, each with its anchor description.
+# The judge MUST output one of these exact values per dimension.
 DIMENSION_ANCHORS: dict[str, dict[int, str]] = {
-    "match_strength": {
-        0: "Unrelated to any gold question.",
-        1: "Touches the same broad topic but a clearly different scientific question.",
-        2: "Same general theme but misses the matched gold's intent.",
-        3: "Captures part of the matched gold's intent; missing core framing.",
-        4: "Captures the matched gold's intent with minor omissions or rewording.",
-        5: "Faithfully captures the matched gold's intent at full scope.",
-    },
-    "required_elements_coverage": {
-        0: "None of the required elements present.",
-        1: "Roughly 1/5 of required elements present.",
-        2: "Roughly 2/5 of required elements present.",
-        3: "Roughly 3/5 of required elements present.",
-        4: "Roughly 4/5 of required elements present.",
-        5: "All required elements explicitly or substantively present.",
+    "semantic_alignment": {
+        67: "生成问题与 gold question 在研究对象、科学目标和问题关系上基本等价。",
+        42: "大方向正确，但问题关系或科学目标有明显遗漏。",
+        17: "只识别到论文主题，未准确还原核心科学问题。",
+        0:  "研究对象或任务类型错误。",
     },
     "acceptability": {
-        0: "Essentially identical to a listed unacceptable_variant.",
-        1: "Clearly closer to unacceptable than to acceptable.",
-        2: "Mid-quality but leans unacceptable.",
-        3: "Mid-quality, leaning toward acceptable but generic.",
-        4: "Close to one of the acceptable_variants.",
-        5: "Matches an acceptable_variant in framing and specificity.",
+        33: "属于 gold question 的合理改写或 acceptable variant，没有明显无依据扩展。",
+        20: "部分合理，但问题过泛、过细，或科学问题层级不够准确。",
+        8:  "接近 unacceptable variant，虽然相关但明显退化。",
+        0:  "完全无关、幻觉，或引入论文/Raw data 不支持的内容。",
     },
 }
+
+
+def _snap(dim: str, value: int) -> int:
+    """Snap a judge-returned score to the nearest allowed anchor value for dim."""
+    allowed = sorted(DIMENSION_ANCHORS[dim].keys())
+    try:
+        v = int(value)
+    except (TypeError, ValueError):
+        return 0
+    return min(allowed, key=lambda a: abs(a - v))
 
 
 def rubric_specification() -> dict[str, Any]:
     """Public dump of the rubric — used by /api/rubric_definitions."""
     return {
-        "weights":         WEIGHTS,
+        "kind":            "closed",           # closed = has matching gold
+        "dimension_max":   DIMENSION_MAX,
+        "total_max":       TOTAL_MAX,
+        "weights":         DIMENSION_MAX,       # back-compat alias (now = max points)
         "secondary_penalty": SECONDARY_PENALTY,
         "dimension_labels": DIMENSION_LABELS,
         "dimension_defs":   DIMENSION_DEFS,
         "dimension_anchors": {
-            d: [{"score": s, "anchor": txt} for s, txt in sorted(anchors.items())]
+            d: [{"score": s, "anchor": txt} for s, txt in sorted(anchors.items(), reverse=True)]
             for d, anchors in DIMENSION_ANCHORS.items()
         },
     }
@@ -96,9 +111,9 @@ def _build_anchor_table() -> str:
     publish to the user."""
     lines: list[str] = []
     for dim, anchors in DIMENSION_ANCHORS.items():
-        lines.append(f"\n## {dim} (weight {WEIGHTS[dim]:.2f}) — {DIMENSION_LABELS[dim]}")
+        lines.append(f"\n## {dim} (max {DIMENSION_MAX[dim]}) — {DIMENSION_LABELS[dim]}")
         lines.append(DIMENSION_DEFS[dim])
-        for s in sorted(anchors):
+        for s in sorted(anchors, reverse=True):
             lines.append(f"  - {s}: {anchors[s]}")
     return "\n".join(lines)
 
@@ -110,32 +125,33 @@ question against a list of GOLD scientific questions.
 Process:
   1. Pick the gold question whose intent best matches the candidate (by
      semantics, not by keyword overlap alone). Output its `gold_question_id`.
-  2. Score 3 dimensions on integers 0..5 using ONLY the anchors below. For
-     each dimension you MUST also write a one-sentence reasoning line
-     citing concrete elements from the candidate's question.
+     If NO gold question shares the candidate's research object / task at all,
+     set `gold_matched` to false and give semantic_alignment = 0.
+  2. Score 2 dimensions. For EACH dimension you MUST output exactly one of the
+     allowed point values below (no other numbers), plus a one-sentence
+     reasoning line citing concrete elements from the candidate's question.
   3. Identify which of the matched gold's `acceptable_variants` (if any) the
      candidate is closest to, and which `unacceptable_variants` (if any) it
      dangerously resembles. Quote the exact variant text.
   4. List covered_required_elements and missing_required_elements (subsets of
      the matched gold's required_elements).
 
-# Rubric scale (use these anchors verbatim)
+# Rubric scale (use these EXACT point values verbatim)
 {_build_anchor_table()}
 
 Reply with ONLY this JSON object, no prose outside it:
 
 {{
-  "matched_gold_id": "<id>",
+  "matched_gold_id": "<id or empty string>",
+  "gold_matched": true|false,
   "matched_centrality": "primary"|"secondary"|"unknown",
   "scores": {{
-    "match_strength":             <int 0..5>,
-    "required_elements_coverage": <int 0..5>,
-    "acceptability":              <int 0..5>
+    "semantic_alignment": <one of 67|42|17|0>,
+    "acceptability":      <one of 33|20|8|0>
   }},
   "per_dimension_reasoning": {{
-    "match_strength":             "<one sentence with concrete citation>",
-    "required_elements_coverage": "<one sentence>",
-    "acceptability":              "<one sentence>"
+    "semantic_alignment": "<one sentence with concrete citation>",
+    "acceptability":      "<one sentence>"
   }},
   "covered_required_elements":  [...],
   "missing_required_elements":  [...],
@@ -171,10 +187,12 @@ class GoldRubricResult:
     matched_gold_id: str
     matched_centrality: str
     matched_gold_question: str
-    scores: dict[str, int]                      # raw 0..5
+    scores: dict[str, int]                      # raw points per dimension
     composite_score: float                      # 0..1, after centrality penalty
-    composite_score_raw: float                  # 0..5
-    weights: dict[str, float]
+    composite_score_raw: float                  # 0..100 points (after penalty)
+    weights: dict[str, float]                   # per-dimension max points
+    gold_matched: bool = True                   # False → open-question fallback territory
+    is_open: bool = False                       # True when no gold matched the candidate
     per_dimension_reasoning: dict[str, str] = field(default_factory=dict)
     covered_required_elements: list[str] = field(default_factory=list)
     missing_required_elements: list[str] = field(default_factory=list)
@@ -197,9 +215,8 @@ def score_against_gold(
     available_features: list[str] | None = None,
     threshold: float = 0.6,
 ) -> GoldRubricResult:
-    # available_features is accepted for backwards-compat with callers but no
-    # longer fed to the judge: the candidate is now just {rank, question}, so
-    # there is no data_support to cross-check against feature names.
+    # available_features kept for backwards-compat with callers; not fed to the
+    # judge (candidate is just {rank, question}).
     gold_block = json.dumps(gold_questions, ensure_ascii=False, indent=2)
 
     user = JUDGE_USER_TEMPLATE.format(
@@ -221,17 +238,24 @@ def score_against_gold(
     ).lower()
 
     raw_scores = payload.get("scores", {}) or {}
-    scores = {k: max(0, min(5, int(raw_scores.get(k, 0)))) for k in WEIGHTS}
+    scores = {k: _snap(k, raw_scores.get(k, 0)) for k in DIMENSION_MAX}
 
-    weighted_raw = sum(WEIGHTS[k] * scores[k] for k in WEIGHTS)  # 0..5
-    composite = weighted_raw / 5.0
+    # gold_matched: explicit judge flag, else infer from semantic_alignment.
+    gold_matched = payload.get("gold_matched")
+    if gold_matched is None:
+        gold_matched = scores["semantic_alignment"] > 0
+    gold_matched = bool(gold_matched)
+    is_open = not gold_matched
+
+    points = sum(scores[k] for k in DIMENSION_MAX)          # 0..100
+    composite = points / float(TOTAL_MAX)                   # 0..1
     primary_avail = any((gq.get("centrality") or "").lower() == "primary" for gq in gold_questions)
     if centrality == "secondary" and primary_avail:
         composite *= SECONDARY_PENALTY
-        weighted_raw *= SECONDARY_PENALTY
+        points *= SECONDARY_PENALTY
 
     per_dim_reason = payload.get("per_dimension_reasoning") or {}
-    per_dim_reason = {k: str(per_dim_reason.get(k, "") or "") for k in WEIGHTS}
+    per_dim_reason = {k: str(per_dim_reason.get(k, "") or "") for k in DIMENSION_MAX}
 
     return GoldRubricResult(
         candidate=candidate,
@@ -240,8 +264,10 @@ def score_against_gold(
         matched_gold_question=matched_gq.get("question", ""),
         scores=scores,
         composite_score=composite,
-        composite_score_raw=weighted_raw,
-        weights=dict(WEIGHTS),
+        composite_score_raw=points,
+        weights=dict(DIMENSION_MAX),
+        gold_matched=gold_matched,
+        is_open=is_open,
         per_dimension_reasoning=per_dim_reason,
         covered_required_elements=list(payload.get("covered_required_elements", []) or []),
         missing_required_elements=list(payload.get("missing_required_elements", []) or []),

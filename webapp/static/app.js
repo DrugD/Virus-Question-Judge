@@ -873,7 +873,7 @@ function renderLeaderboard(tb, rows) {
         <tr class="failed-row">
           <td class="rank">#${i+1}</td>
           <td>${escapeHtml(r.agent_id)}</td>
-          <td colspan="5" class="muted" style="color:var(--bad);">✗ ${err}</td>
+          <td colspan="6" class="muted" style="color:var(--bad);">✗ ${err}</td>
           <td>${(r.agent_wall_time_s || 0).toFixed(1)}s</td>
           <td>${(r.judge_wall_time_s || 0).toFixed(1)}s</td>
         </tr>`;
@@ -889,6 +889,8 @@ function renderLeaderboard(tb, rows) {
     const k = r.candidate_count ?? 5;
     const avgComp = r.avg_composite ?? _computeAvg(r.all_candidate_scores, "composite_score");
     const avgRaw  = r.avg_raw       ?? _computeAvg(r.all_candidate_scores, "composite_score_raw");
+    const hitVal = r.hit ?? (np >= 1);
+    const hitCls = hitVal ? "pass-true" : "pass-false";
     const hitParts = [];
     hitParts.push(fh != null ? `first@rank ${fh}` : `<span class="muted">no hit</span>`);
     hitParts.push(`<span class="primary-tag">${ph}P</span>+<span class="secondary-tag">${sh}S</span>`);
@@ -899,7 +901,7 @@ function renderLeaderboard(tb, rows) {
 
     const subRow = all.length ? `
       <tr class="candidate-sub-row">
-        <td colspan="9">
+        <td colspan="10">
           <div class="leaderboard-candidates">
             ${all.map(c => _leaderboardCandidate(c, c.rank === winner)).join("")}
           </div>
@@ -912,6 +914,7 @@ function renderLeaderboard(tb, rows) {
         <td>${escapeHtml(r.agent_id)}</td>
         <td class="pk-cell"><span class="pk-pill ${p1Cls}">${(p1Val * 100).toFixed(0)}%</span></td>
         <td class="pk-cell"><span class="pk-pill ${p5Cls}">${(p5Val * 100).toFixed(1)}%</span></td>
+        <td class="pk-cell"><span class="pk-pill ${hitCls}">${hitVal ? "✓" : "✗"}</span></td>
         <td class="num">${avgComp.toFixed(3)}</td>
         <td class="num">${avgRaw.toFixed(2)}</td>
         <td class="hit-detail-cell">${hitParts.join(" · ")}</td>
@@ -978,7 +981,7 @@ function _scoreBadges(r) {
 
 function renderQuestions(grid, rows) {
   const dims = Object.keys(state.rubricSpec?.weights || {
-    match_strength: 1, required_elements_coverage: 1, acceptability: 1,
+    semantic_alignment: 1, acceptability: 1,
   });
   const dimLabels = state.rubricSpec?.dimension_labels || {};
   grid.innerHTML = rows.map(r => {
@@ -1346,16 +1349,16 @@ async function _renderDetailFromServer(uploadId, runId) {
     renderElements($("#detail-elements"), rows);
     Charts.renderRadar(rows.filter(r => r.ok !== false && r.composite_score != null), "detail-radar");
   } else if (live) {
-    $("#detail-leaderboard tbody").innerHTML = `<tr><td colspan="9" class="muted" style="text-align:center;padding:18px;">运行中，尚无 leaderboard 数据。看 ↑ 上方进度。</td></tr>`;
+    $("#detail-leaderboard tbody").innerHTML = `<tr><td colspan="10" class="muted" style="text-align:center;padding:18px;">运行中，尚无 leaderboard 数据。看 ↑ 上方进度。</td></tr>`;
     $("#detail-questions").innerHTML = `<div class="muted" style="padding:18px;">运行中…</div>`;
     $("#detail-elements").innerHTML = `<div class="muted" style="padding:18px;">运行中…</div>`;
   } else if (abandoned) {
     const msg = `这个 run 没有产出 leaderboard.json —— 多半是 server 重启时被中断了 (status=${escapeHtml(d.status || "?")})。事件日志里可能还有部分历史，但无法继续。`;
-    $("#detail-leaderboard tbody").innerHTML = `<tr><td colspan="9" class="muted" style="text-align:center;padding:18px;">${msg}</td></tr>`;
+    $("#detail-leaderboard tbody").innerHTML = `<tr><td colspan="10" class="muted" style="text-align:center;padding:18px;">${msg}</td></tr>`;
     $("#detail-questions").innerHTML = `<div class="muted" style="padding:18px;">${msg}</div>`;
     $("#detail-elements").innerHTML = `<div class="muted" style="padding:18px;">${msg}</div>`;
   } else {
-    $("#detail-leaderboard tbody").innerHTML = `<tr><td colspan="9" class="muted" style="text-align:center;padding:18px;">没有结果。</td></tr>`;
+    $("#detail-leaderboard tbody").innerHTML = `<tr><td colspan="10" class="muted" style="text-align:center;padding:18px;">没有结果。</td></tr>`;
     $("#detail-questions").innerHTML = "";
     $("#detail-elements").innerHTML = "";
   }
@@ -1475,8 +1478,8 @@ function _runCsv(rows, meta) {
     // per-candidate (per-question) metrics:
     "candidate_rank", "candidate_question",
     "composite_score", "composite_score_raw", "passed",
-    "matched_gold_id", "matched_centrality",
-    "match_strength", "required_elements_coverage", "acceptability",
+    "matched_gold_id", "matched_centrality", "gold_matched",
+    "semantic_alignment", "acceptability",
     "is_winner",
   ];
   const lines = [headers.map(_csvCell).join(",")];
@@ -1508,9 +1511,8 @@ function _runCsv(rows, meta) {
         "",
         c.rank, c.question,
         c.composite_score, c.composite_score_raw, c.passed,
-        c.matched_gold_id, c.matched_centrality,
-        c.scores?.match_strength, c.scores?.required_elements_coverage,
-        c.scores?.acceptability,
+        c.matched_gold_id, c.matched_centrality, c.gold_matched,
+        c.scores?.semantic_alignment, c.scores?.acceptability,
         (c.rank === winner) ? "true" : "false",
       ].map(_csvCell).join(","));
     });

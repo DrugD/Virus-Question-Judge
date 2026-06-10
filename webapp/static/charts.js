@@ -1,4 +1,4 @@
-/* Charts module — adapted to gold-rubric 3-dimension result schema.
+/* Charts module — adapted to gold-rubric 2-dimension (semantic_alignment + acceptability) result schema.
    Exposes:
      Charts.renderAll(rows, radarId, barsId, timingId)
      Charts.renderRadar(rows, canvasId)
@@ -21,12 +21,18 @@ window.Charts = (function () {
     { fill: "rgba(132,204,22,0.18)",  stroke: "rgba(132,204,22,1)"  },
     { fill: "rgba(160,160,200,0.18)", stroke: "rgba(160,160,200,1)" },
   ];
-  const DIMS = ["match_strength", "required_elements_coverage", "acceptability"];
+  const DIMS = ["semantic_alignment", "acceptability"];
   const DIM_LABEL = {
-    match_strength:             ["Match", "Strength"],
-    required_elements_coverage: ["Required", "Elements"],
-    acceptability:              ["Acceptability"],
+    semantic_alignment: ["语义对齐"],
+    acceptability:      ["可接受度"],
   };
+  // Per-dimension max points (must mirror gold_rubric_metric.DIMENSION_MAX).
+  // Scores are normalised to 0..1 (score / max) so charts share one scale.
+  const DIM_MAX = {
+    semantic_alignment: 67,
+    acceptability:      33,
+  };
+  const _norm = (r, k) => (r.scores?.[k] ?? 0) / (DIM_MAX[k] || 1);
 
   function darkOpts(extra = {}) {
     return Object.assign({
@@ -56,7 +62,7 @@ window.Charts = (function () {
       const c = PALETTE[i % PALETTE.length];
       return {
         label: r.agent_id,
-        data: DIMS.map(k => r.scores?.[k] ?? 0),
+        data: DIMS.map(k => _norm(r, k)),
         backgroundColor: c.fill,
         borderColor: c.stroke,
         borderWidth: 2,
@@ -69,10 +75,10 @@ window.Charts = (function () {
       options: darkOpts({
         scales: {
           r: {
-            beginAtZero: true, min: 0, max: 5,
+            beginAtZero: true, min: 0, max: 1,
             angleLines: { color: "#2a3140" },
             grid: { color: "#2a3140" },
-            ticks: { color: "#8a93a6", backdropColor: "transparent", stepSize: 1 },
+            ticks: { color: "#8a93a6", backdropColor: "transparent", stepSize: 0.2 },
             pointLabels: { color: "#cfd6e3", font: { size: 11 } },
           },
         },
@@ -89,7 +95,7 @@ window.Charts = (function () {
       const c = PALETTE[i % PALETTE.length];
       return {
         label: r.agent_id,
-        data: DIMS.map(k => r.scores?.[k] ?? 0),
+        data: DIMS.map(k => _norm(r, k)),
         backgroundColor: c.fill, borderColor: c.stroke, borderWidth: 2, borderRadius: 4,
       };
     });
@@ -99,7 +105,7 @@ window.Charts = (function () {
       options: darkOpts({
         scales: {
           x: { ticks: { color: "#cfd6e3" }, grid: { color: "#2a3140" } },
-          y: { beginAtZero: true, max: 5, ticks: { color: "#8a93a6", stepSize: 1 }, grid: { color: "#2a3140" } },
+          y: { beginAtZero: true, max: 1, ticks: { color: "#8a93a6", stepSize: 0.2 }, grid: { color: "#2a3140" } },
         },
       }),
     });
