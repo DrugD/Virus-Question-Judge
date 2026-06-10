@@ -171,8 +171,8 @@
           <summary>📐 评测标准 (2 维 · 满分 100) — judge 与你看到的是同一份</summary>
           <div id="rubric-spec" class="rubric-spec"></div>
           <p class="hint" style="margin-top:8px;">
-            composite = (Σ weight × score) / 5。若 matched gold 是 <code>secondary</code> 且
-            存在 <code>primary</code>，再 ×0.85。pass 阈值 <code id="rubric-threshold">0.6</code>。
+            composite = (语义对齐 + 可接受度) / 100（两维满分 67 + 33）。若 matched gold 是
+            <code>secondary</code> 且存在 <code>primary</code>，再 ×0.85。pass 阈值 <code id="rubric-threshold">0.6</code>。
           </p>
         </details>
       </div>

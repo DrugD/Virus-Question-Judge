@@ -490,8 +490,11 @@ function renderManifest(m, httpStatus) {
 function renderRubricSpec(spec) {
   const root = $("#rubric-spec");
   if (!root) return;
+  // `spec.weights` now holds each dimension's MAX POINTS (e.g. 67 / 33), not a
+  // 0..1 weight — so show it as "满分 N" and map the anchor scores onto the
+  // existing s-0..s-5 colour buckets by their share of the dimension max.
   const cards = Object.keys(spec.weights || {}).map(dim => {
-    const w = spec.weights[dim];
+    const maxPts = spec.weights[dim] || 0;
     const label = (spec.dimension_labels || {})[dim] || dim;
     const def   = (spec.dimension_defs   || {})[dim] || "";
     const anchors = (spec.dimension_anchors || {})[dim] || [];
@@ -499,14 +502,16 @@ function renderRubricSpec(spec) {
       <div class="rubric-card" data-dim="${dim}">
         <div class="rd-hd">
           <span class="name">${escapeHtml(label)}</span>
-          <span class="weight">w = ${w.toFixed(2)}</span>
+          <span class="weight">满分 ${maxPts}</span>
           <code class="muted" style="margin-left:auto;font-size:11px;">${dim}</code>
         </div>
         <div class="rd-def">${escapeHtml(def)}</div>
         <div class="rd-anchors">
-          ${anchors.map(a => `
-            <div class="rd-anchor"><span class="s s-${a.score}">${a.score}</span><span class="txt">${escapeHtml(a.anchor)}</span></div>
-          `).join("")}
+          ${anchors.map(a => {
+            const bucket = maxPts ? Math.round((a.score / maxPts) * 5) : 0;
+            return `
+            <div class="rd-anchor"><span class="s s-${bucket}">${a.score}</span><span class="txt">${escapeHtml(a.anchor)}</span></div>`;
+          }).join("")}
         </div>
       </div>`;
   }).join("");
