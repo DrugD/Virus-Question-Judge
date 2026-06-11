@@ -1,0 +1,10 @@
+{
+  "agent_id": "agent-strong",
+  "questions": [
+    {"rank": 1, "question": "Can exhaustive petabase-scale mining of public sequencing archives, using RdRP as the marker gene, uncover a large hidden RNA-virus diversity that is absent from curated viral reference databases?"},
+    {"rank": 2, "question": "By what order of magnitude does the number of RdRP-defined sequence OTUs recovered from public archives exceed the RNA viruses catalogued in existing curated reference databases?"},
+    {"rank": 3, "question": "How does the RdRP-defined sOTU diversity recovered here compare in scale to existing curated viral reference databases?"},
+    {"rank": 4, "question": "Which ecological niches contribute the most previously-unknown RdRP lineages in this archive-scale screen?"},
+    {"rank": 5, "question": "Do the recovered RdRP fragments form monophyletic clades distinct from known viral families?"}
+  ]
+}

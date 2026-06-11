@@ -136,6 +136,33 @@ PYTHONUTF8=1 .venv/Scripts/python.exe webapp/make_demo_gif.py
 
 > 真正跑评测需要 `.env` 里有有效的 `NEWAPI_KEY`(裁判 LLM 密钥)；若为占位符 `sk-xxx`，界面可浏览但 run 会失败。
 
+## 批量 judge-only 评测 / Batch judge-only
+
+`eval/batch_judge.py` 是网页版 "CANDIDATE · judge-only" 的**批量 / 无头**版:一条命令对
+**多个候选科学问题文件**(不同 agent 或手工设计)批量打分，**不调用任何 agent**。盲测数据
+走与网页版**完全相同**的脱敏代码(`hydrate_workspace` / `_desensitize_data`：文件拍平改名
+`1.ext`、递归解压嵌套包、`filename_map.json` 仅 judge 可见)，所以候选方无法靠引用暗示性
+文件名白拿 data_grounding 分。
+
+```bash
+PYTHONUTF8=1 .venv/Scripts/python.exe -m eval.batch_judge \
+  --data    data/rvmt_cell_2022 \          # 盲测数据：目录或 .zip
+  --gold    examples/batch_judge/gold.json \
+  --candidates examples/batch_judge/candidates \  # 每个 *.json 一个候选集
+  --out     batch_runs/my_eval \
+  --judge   gpt-5.5-high --concurrency 4
+
+# 不花 token 先验证脱敏 + 校验：加 --dry-run
+```
+
+- **可监控**：实时控制台 `[i/N]` 进度；持续写 `<out>/progress.json`(可另起进程 tail/poll)；
+  结束产出 `<out>/leaderboard.json` + `<out>/summary.md`。
+- **可续跑**：重跑自动跳过已完成候选(`--force` 强制重算)。
+- **宽松候选**：1..5 条问题、`rank` 可省、`questions` 可为纯字符串数组(适配手工设计)；
+  `--strict` 强制完整 Pass@5 契约。
+
+完整说明与样例见 [`examples/batch_judge/README.md`](examples/batch_judge/README.md)。
+
 ## Adding a new agent
 
 1. Subclass `eval.agents.base.AgentRunner`, set `agent_id`, implement `_invoke(self, sandbox)`.

@@ -1,0 +1,10 @@
+{
+  "agent_id": "agent-weak",
+  "questions": [
+    {"rank": 1, "question": "What is the average GC content of the sequences in this dataset?"},
+    {"rank": 2, "question": "Which file in the dataset is the largest?"},
+    {"rank": 3, "question": "How many rows does the main table have?"},
+    {"rank": 4, "question": "Are any of these viruses dangerous to humans?"},
+    {"rank": 5, "question": "What is the most common nucleotide overall?"}
+  ]
+}

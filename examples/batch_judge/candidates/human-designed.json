@@ -1,0 +1,7 @@
+{
+  "agent_id": "human-designed",
+  "questions": [
+    "Does mining public sequencing data at petabase scale, via RdRP, reveal RNA viruses missing from curated reference databases?",
+    "How many times larger is the RdRP-based sOTU catalogue than existing curated viral reference databases?"
+  ]
+}

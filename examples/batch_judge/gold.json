@@ -1,0 +1,42 @@
+{
+  "gold_scientific_questions": [
+    {
+      "gold_question_id": "GQ_001",
+      "centrality": "primary",
+      "question_type": "discovery",
+      "question": "Can petabase-scale mining of public sequencing data uncover a large hidden RNA-virus/RdRP diversity that is absent from curated viral reference databases?",
+      "required_elements": [
+        "petabase-scale public sequencing archive mining",
+        "RdRP as the marker gene",
+        "hidden / previously-unknown RNA-virus diversity",
+        "absence from curated viral reference databases"
+      ],
+      "acceptable_variants": [
+        "Does exhaustive mining of public sequence archives reveal RNA viruses (via RdRP) that current reference databases miss?",
+        "How much uncatalogued RdRP-defined RNA-virus diversity is hidden in petabase-scale public sequencing data?"
+      ],
+      "unacceptable_variants": [
+        "Which species in this dataset are pathogenic to humans?",
+        "What is the average GC content of the sequences in the files?"
+      ]
+    },
+    {
+      "gold_question_id": "GQ_002",
+      "centrality": "secondary",
+      "question_type": "comparison",
+      "question": "How does the diversity of newly recovered RdRP-defined sOTUs compare in scale to existing curated viral reference databases when public sequencing archives are exhaustively screened?",
+      "required_elements": [
+        "RdRP-defined sOTUs (sequence OTUs)",
+        "quantitative comparison of scale / magnitude",
+        "existing curated viral reference databases",
+        "exhaustive screening of public archives"
+      ],
+      "acceptable_variants": [
+        "By what factor does the count of RdRP-based sOTUs exceed the viruses catalogued in reference databases?"
+      ],
+      "unacceptable_variants": [
+        "Which sample has the most reads?"
+      ]
+    }
+  ]
+}
