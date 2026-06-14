@@ -11,8 +11,7 @@ A separate judge LLM will score your top-1 question against a hidden gold rubric
 | Path | Description | Read? |
 |---|---|---|
 | `data/` | Whatever the user uploaded. Could be tables, FASTA, JSON, images, PDFs, …. Make no assumption about schema — discover the structure by listing and sampling files. | ✅ |
-| `info.json` | Data-side metadata: file inventory, sizes, derived statistics. | ✅ |
-| `gold/` | Gold rubric used by the judge. **MUST NOT be opened.** | ❌ |
+| `INSTRUCTIONS.md` | This file. | ✅ |
 
 ---
 

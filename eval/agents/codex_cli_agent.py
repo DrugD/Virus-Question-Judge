@@ -123,7 +123,7 @@ class CodexCLIAgent(AgentRunner):
             "Read INSTRUCTIONS.md in the current working directory. Read the "
             "agent-visible files under data/. Produce exactly two files in the "
             "working directory: report/report.md and agent_questions.json "
-            "(schema in info.json). target_study/ does not exist in this "
+            "(schema in INSTRUCTIONS.md). target_study/ does not exist in this "
             "sandbox - do not look for it.\n\n"
             "CRITICAL: agent_questions.json MUST contain exactly 5 distinct "
             "candidate questions (rank 1..5, no duplicates). The judge scores "

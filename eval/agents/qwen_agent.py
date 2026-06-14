@@ -55,7 +55,7 @@ class QwenAgent(AgentRunner):
             EXACTLY one JSON object. The JSON must have these top-level keys:
 
               "report_md":       string, full markdown body of report/report.md
-              "agent_questions": object matching info.json#/agent_output_schema
+              "agent_questions": object matching the schema in INSTRUCTIONS.md
 
             Return only the JSON object. No prose outside it.
             """
@@ -94,7 +94,6 @@ def _bundle_workspace(sandbox: Path) -> str:
     for rel in (
         "INSTRUCTIONS.md",
         "checklist.json",
-        "info.json",
         "data/raw_data/README.md",
         "data/raw_data/blind_input_summary.json",
         "data/raw_data/runinfo_subset.tsv",

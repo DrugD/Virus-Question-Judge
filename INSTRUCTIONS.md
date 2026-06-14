@@ -11,9 +11,7 @@ A separate judge LLM will score your top-1 question against a hidden gold rubric
 | Path | Description | Read? |
 |---|---|---|
 | `data/` | Everything the user uploaded — could be tables, FASTA, JSON, images, PDFs, raw text, .docx, … Make **no assumption** about schema or filenames; discover structure by listing and sampling. | ✅ |
-| `info.json` | Auto-generated manifest: full file inventory, sizes, extension histogram, output contract. | ✅ |
 | `INSTRUCTIONS.md` | This file. | ✅ |
-| `gold/` | The judge's rubric. **MUST NOT be opened.** | ❌ |
 
 > The contents of `data/` are user-supplied and arbitrary. Do not hard-code any specific filename in your reasoning — list the directory first, then read what's actually there.
 
@@ -33,7 +31,7 @@ A short technical report (~300–600 words) with these sections:
 
 ### 2.2 `agent_questions.json`
 
-A ranked list of candidate questions, **best first**. Schema (also in `info.json.agent_output_schema`):
+A ranked list of candidate questions, **best first**. Schema:
 
 ```json
 {
@@ -71,7 +69,6 @@ A question like *"Are there interesting patterns in the data?"* will score very 
 
 - Do not fabricate filenames, statistics, fields, or features that aren't in the upload.
 - Do not propose questions that require wet-lab or extra-dataset experiments not derivable from what you can see.
-- Do not open `gold/`.
 - Do not generate generic placeholder questions hoping one hits — every candidate must be specifically grounded.
 - Do not assume a specific domain just because you happen to recognize the data; let the actual files dictate scope.
 

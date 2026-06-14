@@ -394,7 +394,7 @@ def hydrate_workspace(
 
     Layout:
       dst/INSTRUCTIONS.md         ← templates/INSTRUCTIONS_generic.md
-      dst/info.json               ← schema-less data manifest (sizes, ext hist)
+      dst/info.json               ← data manifest (sizes, ext hist) — NOT copied to agent sandbox
       dst/data/                   ← uploaded data, DESENSITIZED (renamed 1.ext…)
       dst/filename_map.json       ← {anonymised → original} (judge-only, not in sandbox)
       dst/gold/gold_questions.json  ← judge-only normalised gold
@@ -472,14 +472,14 @@ def hydrate_workspace(
 
 # patch the Workspace.materialize_agent_view to skip gold/ — already does so
 # because AGENT_VISIBLE in webapp's hydrated workspace is the same set the
-# library Workspace uses (INSTRUCTIONS.md, checklist.json, info.json,
+# library Workspace uses (INSTRUCTIONS.md, checklist.json,
 # data/raw_data). We need the agent to see `data/` not `data/raw_data/`,
 # so we use a slim per-webapp Workspace.
 
 class _WebWorkspace(Workspace):
-    """Same Workspace, but only copies INSTRUCTIONS / info / data/ to sandbox."""
+    """Same Workspace, but only copies INSTRUCTIONS / data/ to sandbox."""
 
-    AGENT_VISIBLE = ("INSTRUCTIONS.md", "info.json", "checklist.json", "data")
+    AGENT_VISIBLE = ("INSTRUCTIONS.md", "checklist.json", "data")
 
     def materialize_agent_view(self, dst: Path) -> Path:  # type: ignore[override]
         dst = Path(dst).resolve()

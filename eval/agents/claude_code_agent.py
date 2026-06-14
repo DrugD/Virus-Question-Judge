@@ -27,7 +27,7 @@ Routing & policy notes (gateway-specific):
     sandboxed working directory" and benchmark-formula text
     ("Pass@1 / Pass@5", "rank-i pass adds 1+w_i") even when the surrounding
     task is benign. The current prompt drops both — the schema/contract
-    details live in INSTRUCTIONS.md + info.json which the agent reads
+    details live in INSTRUCTIONS.md which the agent reads
     locally rather than in the user prompt that the classifier sees.
 
 Hangs:
@@ -55,7 +55,7 @@ _PROMPT = (
     "Then read the files under data/ (list the directory first). "
     "Write two output files in the current directory:\n"
     "  - report/report.md\n"
-    "  - agent_questions.json (schema in info.json)\n\n"
+    "  - agent_questions.json (schema in INSTRUCTIONS.md)\n\n"
     "agent_questions.json should list 5 distinct ranked entries (rank 1 to 5). "
     "Place your best entry at rank 1.\n\n"
     "Finish only after both files are saved."
