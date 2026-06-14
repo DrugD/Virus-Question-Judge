@@ -156,6 +156,16 @@ button.ghost.danger:hover { border-color: var(--bad); color: var(--bad); backgro
 .rubric-card .rd-anchor .s-5 { background: rgba(95,208,114,.18); color: var(--good); }
 .rubric-card .rd-anchor .txt { color: #cfd6e3; line-height: 1.45; }
 
+/* ---------- open rubric block (Step 3) + leaderboard rubric badge ---------- */
+.open-rubric-block { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--border); }
+.open-rubric-title { margin: 0 0 4px; font-size: 12.5px; color: var(--accent-2); }
+.open-rubric-block .rubric-card { border-left-color: var(--accent-2); }
+.open-rubric-block .rubric-card .rd-hd .weight { background: rgba(154,123,255,.12); color: var(--accent-2); border-color: rgba(154,123,255,.3); }
+.rubric-badge { display: inline-block; padding: 0 6px; border-radius: 999px; font-size: 9.5px; font-weight: 700; vertical-align: middle; border: 1px solid transparent; }
+.rubric-badge.rb-closed { background: rgba(108,193,255,.12); color: var(--accent); border-color: rgba(108,193,255,.3); }
+.rubric-badge.rb-open   { background: rgba(240,180,64,.14); color: var(--warn); border-color: rgba(240,180,64,.4); }
+
+
 /* ---------- per-dimension reasoning + variants in result cards ---------- */
 .judge-detail {
   display: grid; gap: 8px; margin-top: 12px;

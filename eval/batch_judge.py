@@ -77,7 +77,9 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 # Desensitization + Pass@k live in the webapp module; these imports pull in only
 # eval/ + stdlib (no FastAPI), so this stays usable headless.
-from webapp.pipeline_runner import hydrate_workspace, _pass_at_k_stats  # noqa: E402
+from webapp.pipeline_runner import (  # noqa: E402
+    hydrate_workspace, _pass_at_k_stats, build_data_digest, rescore_open_if_missed,
+)
 from webapp.gold_validator import validate_gold                         # noqa: E402
 from webapp.validator import validate_data_zip, DataValidationError     # noqa: E402
 
@@ -255,6 +257,7 @@ async def score_candidate(
     gold_questions: list[dict[str, Any]],
     cand: dict[str, Any],
     results_root: Path,
+    data_digest: str = "",
 ) -> dict[str, Any]:
     agent_id = cand["agent_id"]
     candidates = cand["candidates"]
@@ -277,6 +280,9 @@ async def score_candidate(
 
     started = time.time()
     candidate_results = await asyncio.gather(*[_score_one(c) for c in candidates])
+    # set-level routing: if the whole set missed gold (Hit=✗), re-score open.
+    candidate_results, rubric_kind = await rescore_open_if_missed(
+        judge, candidates, candidate_results, data_digest, threshold)
     judge_wall = time.time() - started
 
     best_idx = max(range(len(candidate_results)),
@@ -290,6 +296,7 @@ async def score_candidate(
          "composite_score": r.composite_score, "composite_score_raw": r.composite_score_raw,
          "passed": r.passed, "matched_gold_id": r.matched_gold_id,
          "matched_gold_question": r.matched_gold_question, "matched_centrality": r.matched_centrality,
+         "rubric_kind": getattr(r, "rubric_kind", "closed"),
          "scores": r.scores, "rationale": r.rationale,
          "per_dimension_reasoning": r.per_dimension_reasoning,
          "covered_required_elements": r.covered_required_elements,
@@ -304,7 +311,7 @@ async def score_candidate(
     pk = _pass_at_k_stats(candidates, candidate_results)
     return {
         "agent_id": agent_id, "candidate_id": cand["candidate_id"], "ok": True,
-        "run_dir": str(target),
+        "run_dir": str(target), "rubric_kind": rubric_kind,
         "composite_score": best.composite_score, "composite_score_raw": best.composite_score_raw,
         "passed": best.passed, "matched_gold_id": best.matched_gold_id,
         "matched_gold_question": best.matched_gold_question, "matched_centrality": best.matched_centrality,
@@ -339,19 +346,20 @@ def _write_summary(out: Path, rows: list[dict[str, Any]], judge_id: str) -> None
         f"- judge: `{judge_id}`",
         f"- candidates: {len(rows)} ({len(ok_rows)} scored, {len(rows) - len(ok_rows)} failed)",
         f"- generated: {time.strftime('%Y-%m-%d %H:%M:%S')}", "",
-        "| # | candidate | agent_id | avg_composite | best | pass@1 | pass@5 | pass_count | matched gold |",
-        "|---|---|---|---|---|---|---|---|---|",
+        "| # | candidate | agent_id | rubric | avg_composite | best | pass@1 | pass@5 | pass_count | matched gold |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
     for i, r in enumerate(ok_rows, 1):
         lines.append(
             f"| {i} | {r['candidate_id']} | {r['agent_id']} | "
+            f"{r.get('rubric_kind', 'closed')} | "
             f"{(r.get('avg_composite') or 0):.3f} | {(r.get('composite_score') or 0):.3f} | "
             f"{(r.get('pass_at_1_value') or 0):.1f} | {(r.get('pass_at_5_value') or 0):.2f} | "
             f"{r.get('pass_count', 0)}/{r.get('candidate_count', 0)} | "
             f"{r.get('matched_gold_id') or '—'} |")
     for r in rows:
         if not r.get("ok"):
-            lines.append(f"| — | {r.get('candidate_id')} | — | FAILED | | | | | {r.get('error','')} |")
+            lines.append(f"| — | {r.get('candidate_id')} | — | — | FAILED | | | | | {r.get('error','')} |")
     (out / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -388,6 +396,8 @@ async def main() -> int:
     print("[1/3] preparing workspace (desensitizing data) …", flush=True)
     ws_root, gold_questions, features = prepare_workspace(
         Path(args.data), Path(args.gold), out, args.reuse_workspace)
+    # data preview fed to the OPEN judge when a whole set misses gold (Hit=✗).
+    data_digest = build_data_digest(ws_root / "data")
 
     # 2. load candidates
     print("[2/3] loading candidates …", flush=True)
@@ -438,7 +448,7 @@ async def main() -> int:
         try:
             row = await score_candidate(
                 judge, sem, args.spacing, args.threshold, features,
-                gold_questions, cand, results_root)
+                gold_questions, cand, results_root, data_digest)
             rows.append(row)
             print(f"  [{i}/{len(ok_loaded)}] {cand['candidate_id']:<28} "
                   f"avg={row.get('avg_composite', 0):.3f} best={row.get('composite_score') or 0:.3f} "

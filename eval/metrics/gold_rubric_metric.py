@@ -193,6 +193,7 @@ class GoldRubricResult:
     weights: dict[str, float]                   # per-dimension max points
     gold_matched: bool = True                   # False → open-question fallback territory
     is_open: bool = False                       # True when no gold matched the candidate
+    rubric_kind: str = "closed"                 # "closed" (gold) | "open" (data-relative)
     per_dimension_reasoning: dict[str, str] = field(default_factory=dict)
     covered_required_elements: list[str] = field(default_factory=list)
     missing_required_elements: list[str] = field(default_factory=list)

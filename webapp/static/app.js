@@ -489,11 +489,17 @@ function renderManifest(m, httpStatus) {
 
 function renderRubricSpec(spec) {
   const root = $("#rubric-spec");
-  if (!root) return;
-  // `spec.weights` now holds each dimension's MAX POINTS (e.g. 67 / 33), not a
-  // 0..1 weight — so show it as "满分 N" and map the anchor scores onto the
-  // existing s-0..s-5 colour buckets by their share of the dimension max.
-  const cards = Object.keys(spec.weights || {}).map(dim => {
+  if (root) root.innerHTML = _rubricCards(spec);
+  // Open rubric (used when a whole candidate set misses gold) — separate panel.
+  const openRoot = $("#rubric-spec-open");
+  if (openRoot && spec.open) openRoot.innerHTML = _rubricCards(spec.open);
+}
+
+function _rubricCards(spec) {
+  // `spec.weights` holds each dimension's MAX POINTS (e.g. 67 / 33 or 50 / 50),
+  // not a 0..1 weight — so show it as "满分 N" and map the anchor scores onto
+  // the existing s-0..s-5 colour buckets by their share of the dimension max.
+  return Object.keys(spec.weights || {}).map(dim => {
     const maxPts = spec.weights[dim] || 0;
     const label = (spec.dimension_labels || {})[dim] || dim;
     const def   = (spec.dimension_defs   || {})[dim] || "";
@@ -515,7 +521,6 @@ function renderRubricSpec(spec) {
         </div>
       </div>`;
   }).join("");
-  root.innerHTML = cards;
 }
 
 /* ============ STEP 2 — agents ============ */
@@ -903,6 +908,10 @@ function renderLeaderboard(tb, rows) {
 
     const all = (r.all_candidate_scores || []).slice().sort((a, b) => a.rank - b.rank);
     const winner = r.best_candidate_rank;
+    const rubricKind = r.rubric_kind || "closed";
+    const rubricBadge = rubricKind === "open"
+      ? `<span class="rubric-badge rb-open" title="整集未命中 gold，按开放 rubric（数据匹配度+科学合理性）评分">开放</span>`
+      : `<span class="rubric-badge rb-closed" title="命中 gold，按闭合 rubric（语义对齐+可接受度）评分">闭合</span>`;
 
     const subRow = all.length ? `
       <tr class="candidate-sub-row">
@@ -916,7 +925,7 @@ function renderLeaderboard(tb, rows) {
     return `
       <tr class="agent-row">
         <td class="rank">#${i+1}</td>
-        <td>${escapeHtml(r.agent_id)}</td>
+        <td>${escapeHtml(r.agent_id)} ${rubricBadge}</td>
         <td class="pk-cell"><span class="pk-pill ${p1Cls}">${(p1Val * 100).toFixed(0)}%</span></td>
         <td class="pk-cell"><span class="pk-pill ${p5Cls}">${(p5Val * 100).toFixed(1)}%</span></td>
         <td class="pk-cell"><span class="pk-pill ${hitCls}">${hitVal ? "✓" : "✗"}</span></td>
@@ -1486,6 +1495,8 @@ function _runCsv(rows, meta) {
     "matched_gold_id", "matched_centrality", "gold_matched",
     "semantic_alignment", "acceptability",
     "is_winner",
+    // open-rubric fields (present only when a set missed gold):
+    "rubric_kind", "data_match", "soundness",
   ];
   const lines = [headers.map(_csvCell).join(",")];
   rows.forEach((r, i) => {
@@ -1494,7 +1505,7 @@ function _runCsv(rows, meta) {
         i + 1, r.agent_id,
         "", "", "", "", "", "", "", "", "",
         "", "", r.error,
-        "", "", "", "", "", "", "",
+        "", "", "", "", "", "", "", "", "",
         "", "", "", "", "",
       ].map(_csvCell).join(","));
       return;
@@ -1519,6 +1530,7 @@ function _runCsv(rows, meta) {
         c.matched_gold_id, c.matched_centrality, c.gold_matched,
         c.scores?.semantic_alignment, c.scores?.acceptability,
         (c.rank === winner) ? "true" : "false",
+        c.rubric_kind || "closed", c.scores?.data_match, c.scores?.soundness,
       ].map(_csvCell).join(","));
     });
   });

@@ -25,7 +25,7 @@ from typing import Any, AsyncIterator
 
 from eval.agents import REGISTRY as AGENT_REGISTRY
 from eval.agents.base import RunResult
-from eval.metrics import score_against_gold
+from eval.metrics import score_against_gold, score_open_question
 from eval.metrics.judge_llm import JudgeConfig, JudgeLLM
 from eval.utils import AgentOutput, Workspace
 
@@ -233,6 +233,87 @@ def _pass_at_k_stats(
         "avg_composite": avg_composite,
         "avg_raw": avg_raw,
     }
+
+
+def build_data_digest(data_dir: Path, max_files: int = 30, max_bytes: int = 800) -> str:
+    """Compact, bounded preview of the desensitized data — fed to the OPEN judge.
+
+    The open rubric's `data_match` dimension needs to know what the data
+    CONTAINS (columns, fields, structure) to judge whether it supports a
+    question. Only filenames are desensitized — content is the same the agent
+    saw — so previewing content here leaks nothing the agent didn't already get.
+
+    For each anonymised file we emit one line: `<name> (<ext>, <size>B): <preview>`
+    where preview is JSON top-level keys, or the first few non-empty text lines.
+    Binary / unreadable files get a `(binary)` note. Everything is bounded so the
+    digest can't blow up the judge prompt.
+    """
+    data_dir = Path(data_dir)
+    if not data_dir.is_dir():
+        return ""
+    files = sorted(p for p in data_dir.rglob("*") if p.is_file())
+    lines: list[str] = []
+    for p in files[:max_files]:
+        rel = p.relative_to(data_dir).as_posix()
+        try:
+            size = p.stat().st_size
+        except OSError:
+            size = 0
+        lines.append(f"- {rel} ({p.suffix.lower() or 'no-ext'}, {size}B): "
+                     f"{_preview_file(p, p.suffix.lower(), max_bytes)}")
+    if len(files) > max_files:
+        lines.append(f"... (+{len(files) - max_files} more files omitted)")
+    return "\n".join(lines)
+
+
+def _preview_file(p: Path, ext: str, max_bytes: int) -> str:
+    """One-line content preview of a single file (bounded, robust)."""
+    try:
+        raw = p.read_bytes()[: max(max_bytes * 4, 20000)]
+    except Exception:
+        return "(unreadable)"
+    if b"\x00" in raw[:1024]:
+        return "(binary, no preview)"
+    txt = raw.decode("utf-8", errors="replace")
+    if ext == ".json":
+        try:
+            obj = json.loads(txt)
+            if isinstance(obj, dict):
+                return "JSON object, keys: " + ", ".join(map(str, list(obj.keys())[:12]))
+            if isinstance(obj, list):
+                head = obj[0] if obj else None
+                if isinstance(head, dict):
+                    return (f"JSON array (len {len(obj)}); item keys: "
+                            + ", ".join(map(str, list(head.keys())[:12])))
+                return f"JSON array (len {len(obj)})"
+            return f"JSON {type(obj).__name__}"
+        except Exception:
+            pass  # truncated / invalid JSON → fall back to text snippet
+    snippet = " | ".join(ln.strip() for ln in txt.splitlines() if ln.strip())[:max_bytes]
+    return snippet or "(empty)"
+
+
+async def rescore_open_if_missed(
+    judge: Any,
+    candidates: list[dict[str, Any]],
+    closed_results: list[Any],
+    data_digest: str,
+    threshold: float,
+) -> tuple[list[Any], str]:
+    """Set-level rubric routing.
+
+    If ANY candidate passed the closed threshold (set-level Hit = ✓), keep the
+    closed results unchanged → ("closed"). Otherwise the whole set MISSED gold
+    (Hit = ✗): re-score every candidate with the OPEN rubric (data_match +
+    soundness, relative to the data) and return those → ("open").
+    """
+    if any(getattr(r, "passed", False) for r in closed_results):
+        return closed_results, "closed"
+    open_results = await asyncio.gather(*[
+        asyncio.to_thread(score_open_question, judge, c, data_digest, threshold)
+        for c in candidates
+    ])
+    return list(open_results), "open"
 
 
 @dataclass
@@ -639,6 +720,11 @@ class PipelineRunner:
             )
             for c in candidates
         ])
+        # set-level rubric routing: if the whole set missed gold (Hit=✗),
+        # re-score all candidates with the OPEN rubric instead of zeroing them.
+        data_digest = build_data_digest(Path(spec.workspace_root) / "data")
+        candidate_results, rubric_kind = await rescore_open_if_missed(
+            judge, candidates, candidate_results, data_digest, spec.threshold)
         # pick the candidate with the highest composite_score for the leaderboard
         # (treat None as -1 so failed-to-match candidates lose to any successful one)
         best_idx = max(
@@ -665,6 +751,7 @@ class PipelineRunner:
                 "matched_centrality": r.matched_centrality,
                 "gold_matched": getattr(r, "gold_matched", True),
                 "is_open": getattr(r, "is_open", False),
+                "rubric_kind": getattr(r, "rubric_kind", "closed"),
                 "scores": r.scores,
                 # per-question reasoning — needed so the UI can render
                 # 4-dim reasoning + variants for EVERY candidate, not just
@@ -697,6 +784,7 @@ class PipelineRunner:
             "matched_centrality": gold_result.matched_centrality,
             "gold_matched": getattr(gold_result, "gold_matched", True),
             "is_open": getattr(gold_result, "is_open", False),
+            "rubric_kind": rubric_kind,
             "scores": gold_result.scores,
             "weights": gold_result.weights,
             "covered_required_elements": gold_result.covered_required_elements,
@@ -763,6 +851,11 @@ class PipelineRunner:
             )
             for c in candidates
         ])
+        # set-level rubric routing (same as the agent path): whole set missed
+        # gold → re-score with the OPEN rubric.
+        data_digest = build_data_digest(Path(spec.workspace_root) / "data")
+        candidate_results, rubric_kind = await rescore_open_if_missed(
+            judge, candidates, candidate_results, data_digest, spec.threshold)
         best_idx = max(
             range(len(candidate_results)),
             key=lambda i: (candidate_results[i].composite_score if candidate_results[i].composite_score is not None else -1),
@@ -785,6 +878,7 @@ class PipelineRunner:
                 "matched_centrality": r.matched_centrality,
                 "gold_matched": getattr(r, "gold_matched", True),
                 "is_open": getattr(r, "is_open", False),
+                "rubric_kind": getattr(r, "rubric_kind", "closed"),
                 "scores": r.scores,
                 "per_dimension_reasoning": r.per_dimension_reasoning,
                 "closest_acceptable_variant": r.closest_acceptable_variant,
@@ -815,6 +909,7 @@ class PipelineRunner:
             "matched_centrality": gold_result.matched_centrality,
             "gold_matched": getattr(gold_result, "gold_matched", True),
             "is_open": getattr(gold_result, "is_open", False),
+            "rubric_kind": rubric_kind,
             "scores": gold_result.scores,
             "weights": gold_result.weights,
             "covered_required_elements": gold_result.covered_required_elements,

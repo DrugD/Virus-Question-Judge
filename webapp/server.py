@@ -37,6 +37,7 @@ from pydantic import BaseModel
 
 from eval.agents import REGISTRY as AGENT_REGISTRY, AGENT_META
 from eval.metrics.gold_rubric_metric import rubric_specification
+from eval.metrics.open_rubric_metric import open_rubric_specification
 from webapp.gold_validator import validate_gold
 from webapp.pipeline_runner import EventBus, PipelineRunner, RunSpec, hydrate_workspace
 from webapp.validator import DataValidationError, validate_data_zip
@@ -180,12 +181,16 @@ def _resolve_judge_config(judge_id: str | None) -> dict[str, Any]:
 
 @app.get("/api/rubric_definitions")
 def rubric_definitions() -> JSONResponse:
-    """Public rubric: every dimension's weight, definition, and 0..5 anchors.
+    """Public rubric: every dimension's weight, definition, and anchors.
 
     Both the judge LLM (in-prompt) and the UI rubric panel read from this so
-    they always show the same scale.
+    they always show the same scale. The closed (gold) rubric is at the top
+    level for backwards-compat; the OPEN rubric (used when a whole candidate set
+    misses gold) is nested under "open".
     """
-    return JSONResponse(rubric_specification())
+    spec = rubric_specification()
+    spec["open"] = open_rubric_specification()
+    return JSONResponse(spec)
 
 
 @app.delete("/api/runs")

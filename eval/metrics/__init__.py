@@ -11,6 +11,7 @@ one of those names is actually accessed.
 
 from .judge_llm import JudgeLLM
 from .gold_rubric_metric import GoldRubricResult, score_against_gold
+from .open_rubric_metric import open_rubric_specification, score_open_question
 
 __all__ = [
     "JudgeLLM",
@@ -18,6 +19,8 @@ __all__ = [
     "RubricCompositeMetric",
     "GoldRubricResult",
     "score_against_gold",
+    "open_rubric_specification",
+    "score_open_question",
 ]
 
 # name → submodule holding it; imported on first access so deepeval stays optional.

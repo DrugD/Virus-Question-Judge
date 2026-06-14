@@ -55,6 +55,11 @@ window.Charts = (function () {
   function renderRadar(rows, canvasId = "radar-canvas") {
     const el = document.getElementById(canvasId);
     if (!el || !rows.length) return;
+    // Radar/bars use the CLOSED dimensions; open-rubric rows have different
+    // dimensions (data_match/soundness) and would plot as misleading zeros, so
+    // exclude them. Open rows are read in the leaderboard + candidate detail.
+    rows = rows.filter(r => (r.rubric_kind || "closed") !== "open");
+    if (!rows.length) return;
     destroy(canvasId);
     const ctx = el.getContext("2d");
     const labels = DIMS.map(d => DIM_LABEL[d]);
@@ -89,6 +94,8 @@ window.Charts = (function () {
   function renderBars(rows, canvasId = "bars-canvas") {
     const el = document.getElementById(canvasId);
     if (!el || !rows.length) return;
+    rows = rows.filter(r => (r.rubric_kind || "closed") !== "open");
+    if (!rows.length) return;
     destroy(canvasId);
     const ctx = el.getContext("2d");
     const datasets = rows.map((r, i) => {
