@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Virus-Question-Judge · 版本记录 & 工程手册 (for LLM handoff)</title>
+<style>
+  :root{
+    --bg:#0b0e14; --surface:#11151f; --surface2:#171c28; --border:#222a39;
+    --text:#e6e9ef; --muted:#8a93a6; --accent:#6cc1ff; --accent2:#9a7bff;
+    --good:#5fd072; --warn:#f0b440; --bad:#ef5d61; --code:#cfe0ff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:14px/1.6 -apple-system,Segoe UI,Roboto,"Microsoft YaHei",sans-serif;}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 24px 96px;}
+  h1{font-size:24px;margin:0 0 4px;}
+  h2{font-size:18px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border);color:var(--accent);}
+  h3{font-size:15px;margin:20px 0 6px;color:var(--accent2);}
+  h4{font-size:13px;margin:14px 0 4px;color:var(--text);}
+  p,li{color:var(--text);}
+  .sub{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  code{font-family:ui-monospace,Menlo,Consolas,monospace;background:var(--surface2);
+    color:var(--code);padding:1px 5px;border-radius:4px;font-size:12.5px;}
+  pre{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);
+    border-radius:8px;padding:12px 14px;overflow:auto;font-size:12.5px;color:var(--code);}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12.5px;}
+  th,td{border:1px solid var(--border);padding:6px 9px;text-align:left;vertical-align:top;}
+  th{background:var(--surface2);color:var(--accent);font-weight:600;}
+  tr:nth-child(even) td{background:rgba(255,255,255,.015);}
+  .pill{display:inline-block;padding:0 7px;border-radius:999px;font-size:10.5px;font-weight:700;border:1px solid;}
+  .pill.closed{background:rgba(108,193,255,.12);color:var(--accent);border-color:rgba(108,193,255,.3);}
+  .pill.open{background:rgba(240,180,64,.14);color:var(--warn);border-color:rgba(240,180,64,.4);}
+  .pill.done{background:rgba(95,208,114,.14);color:var(--good);border-color:rgba(95,208,114,.4);}
+  .pill.todo{background:rgba(239,93,97,.12);color:var(--bad);border-color:rgba(239,93,97,.4);}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:12px 0;}
+  .note{border-left:3px solid var(--warn);background:rgba(240,180,64,.06);padding:10px 14px;border-radius:6px;margin:12px 0;}
+  .danger{border-left:3px solid var(--bad);background:rgba(239,93,97,.06);padding:10px 14px;border-radius:6px;margin:12px 0;}
+  .ok{border-left:3px solid var(--good);background:rgba(95,208,114,.06);padding:10px 14px;border-radius:6px;margin:12px 0;}
+  .muted{color:var(--muted);}
+  .toc a{color:var(--accent);text-decoration:none;}
+  .toc a:hover{text-decoration:underline;}
+  ul.tight{margin:6px 0;padding-left:20px;}
+  .kbd{font-family:ui-monospace,monospace;font-size:11px;color:var(--muted);}
+  .filetag{color:var(--accent);font-family:ui-monospace,monospace;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>🧬 Virus-Question-Judge — 版本记录 &amp; 工程手册</h1>
+<p class="sub">
+  本文件是面向 <strong>后续 LLM（Claude Code 等）</strong> 的交接文档：读完即可理解系统全貌、当前进度、关键约束，并直接接手研究。
+  最后更新对应提交 <code>3eb0c66</code>（分支 <code>sync-test</code>）。维护方式：<strong>每完成一个里程碑，追加一行版本表 + 在相应章节增量更新</strong>。
+</p>
+
+<div class="card toc">
+  <strong>目录</strong>
+  <ol>
+    <li><a href="#what">1. 系统是什么 / 评测流程</a></li>
+    <li><a href="#concepts">2. 核心概念（rubric / 指标 / 脱敏）</a></li>
+    <li><a href="#versions">3. 版本管理表（变更历史）</a></li>
+    <li><a href="#files">4. 文件地图（每个文件做什么）</a></li>
+    <li><a href="#run">5. 如何运行（webapp + batch CLI）</a></li>
+    <li><a href="#constraints">6. 硬约束（安全 / Windows / 同步）</a></li>
+    <li><a href="#pending">7. 待办与已知限制</a></li>
+    <li><a href="#handoff">8. 给下一个 LLM 的话</a></li>
+  </ol>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="what">1. 系统是什么 / 评测流程</h2>
+<p>
+  一个 <strong>基于 rubric 的科学问题（scientific question）LLM-judge 评测台</strong>。研究场景：给 agent 一份（脱敏的）研究数据，
+  让它读数据并提出 5 条科学问题；再用一个 <strong>judge LLM</strong> 按用户标注的 <strong>gold 评测标准</strong>给这些问题打分。
+  支持网页交互与无头批量两种入口。
+</p>
+<pre>上传 data + gold ──▶ 脱敏 data ──▶ [agent 读数据出 5 题] 或 [judge-only：直接吃用户上传的候选 JSON]
+                                         │
+                                         ▼
+                          judge 逐条按 rubric 打分（闭合 gold rubric）
+                                         │
+                       set-level Hit 判定（5 条里有没有任意一条过阈值 0.6）
+                              ├─ Hit=✓ → 保留闭合分数
+                              └─ Hit=✗ → 整组改判【开放 rubric】（相对数据评匹配度+合理程度）
+                                         │
+                                         ▼
+                     leaderboard / Pass@1 / Pass@5 / Hit / 雷达 / CSV 导出</pre>
+<p class="muted">服务端入口：<code>webapp.server:app</code>（FastAPI + uvicorn，默认端口 8000）。前端是纯静态 SPA（无构建步骤，改完静态文件浏览器硬刷即可）。</p>
+
+<!-- ============================================================ -->
+<h2 id="concepts">2. 核心概念</h2>
+
+<h3>2.1 两套 rubric</h3>
+<table>
+  <tr><th>rubric</th><th>触发</th><th>维度（满分）</th><th>composite</th><th>阈值</th></tr>
+  <tr>
+    <td><span class="pill closed">闭合 closed</span></td>
+    <td>候选命中/对齐某条 gold</td>
+    <td>语义对齐 <code>semantic_alignment</code> 67 + 可接受度 <code>acceptability</code> 33 = 100</td>
+    <td>(67分项+33分项)/100；secondary gold 且存在 primary 时 ×0.85</td>
+    <td>0.6</td>
+  </tr>
+  <tr>
+    <td><span class="pill open">开放 open</span></td>
+    <td><strong>整集 5 条都没命中（Hit=✗，pass_count==0）</strong></td>
+    <td>数据匹配度 <code>data_match</code> 50 + 科学合理性 <code>soundness</code> 50 = 100</td>
+    <td>(data_match+soundness)/100；无 centrality 惩罚</td>
+    <td>0.6</td>
+  </tr>
+</table>
+<p>
+  <strong>为什么要开放 rubric</strong>：闭合 rubric 下，未命中 gold 时 <code>semantic_alignment=0</code>，composite 上限仅 0.33，整组必挂——这是"惩罚未命中"而非"按开放科学问题自身价值评分"。
+  开放 rubric 改为相对<strong>原始数据</strong>评：① <code>data_match</code>=问题所涉对象/变量是否真实存在于数据、规模粒度是否足以研究（防刷分压舱维度）；② <code>soundness</code>=问题本身是否非平凡、逻辑自洽、可检验。
+</p>
+<p class="muted">两套 rubric 的锚点（4 档分值 + 文字）都集中在 <code>eval/metrics/gold_rubric_metric.py</code> 与 <code>eval/metrics/open_rubric_metric.py</code> 顶部常量，judge prompt 与 UI 面板都从这里取，永远同步。</p>
+
+<h3>2.2 指标：Hit ≠ Pass@1（务必分清）</h3>
+<table>
+  <tr><th>指标</th><th>定义</th><th>说明</th></tr>
+  <tr><td><strong>Pass@1</strong></td><td>仅看 rank-1 那一条是否过阈值（1.0/0.0）</td><td>对位置敏感，只认头名</td></tr>
+  <tr><td><strong>Pass@5</strong></td><td>计数式：<code>pass_count/5</code>（每过 1 条 +0.2）</td><td>与排名无关，看过了几条</td></tr>
+  <tr><td><strong>Hit 命中率</strong></td><td>5 条里<strong>至少 1 条</strong>过阈值即 ✓</td><td>对位置不敏感；<strong>开放 rubric 的触发条件就是 Hit=✗</strong></td></tr>
+  <tr><td>Avg Comp / Avg Raw</td><td>5 条 composite / raw 的均值</td><td>leaderboard 头条分</td></tr>
+</table>
+<p class="muted">例：rank-1 没过但 rank-3 过了 → Pass@1=0 而 Hit=✓。计算见 <code>webapp/pipeline_runner.py::_pass_at_k_stats</code>。</p>
+
+<h3>2.3 数据脱敏（desensitization）</h3>
+<p>
+  agent 可见的数据目录会被脱敏：目录拍平、每个文件改名为 <code>1.csv / 2.json / …</code>（只保留扩展名），嵌套压缩包递归展开后内部成员同样改名。
+  目的：防止 agent 靠 <code>43059586_RdRp_motif_collection.xlsx</code> 这类含义文件名"白嫖"分数。
+</p>
+<div class="danger">
+  <strong>安全不变量</strong>：原名映射 <code>filename_map.json</code> 只写在 <strong>qset 根目录（judge-only）</strong>，<strong>绝不能</strong>出现在 agent 可见的 <code>raw_no_name/</code> 或 workspace 的 <code>data/</code> 里——否则脱敏失效。
+  实现见 <code>webapp/pipeline_runner.py::_desensitize_data / _expand_archives_in_place / hydrate_workspace</code>。
+</div>
+<p class="muted">脱敏对分数的真实影响（实测，invertebrate_rna_virosphere_2016）：脱敏前 Pass@1≈0.75，脱敏后≈0.4 —— 说明脱敏确实切断了文件名泄漏。</p>
+
+<h3>2.4 候选 JSON 契约（AgentOutput）</h3>
+<pre>{
+  "agent_id": "&lt;label&gt;",
+  "questions": [ { "rank": 1, "question": "Does X drive Y in this dataset?" } ]   // 1..5 条，question 必须以 ? 结尾
+}</pre>
+<p class="muted">也兼容纯字符串数组 <code>"questions": ["...?"]</code>；<code>--strict</code> 强制 5 条互异、rank 1..5。</p>
+
+<!-- ============================================================ -->
+<h2 id="versions">3. 版本管理表（变更历史，新→旧）</h2>
+<table>
+  <tr><th>commit</th><th>主题</th><th>关键内容 / 为什么</th></tr>
+  <tr><td><code>3eb0c66</code></td><td><span class="pill done">Todo 2</span> open-rubric</td>
+    <td>整集未命中 gold（Hit=✗）时改用开放 2 维 rubric（data_match 50 + soundness 50）。新增 <code>open_rubric_metric.py</code>、<code>build_data_digest</code>、<code>rescore_open_if_missed</code>；UI 开放面板 + leaderboard 闭合/开放徽章 + CSV 列；雷达排除开放行。</td></tr>
+  <tr><td><code>d4b5478</code></td><td><span class="pill done">Todo 1</span> batch CLI 分发</td>
+    <td>把 batch_judge 打包成外部可零摩擦运行：<code>requirements-batch.txt</code>（切薄、去 deepeval/fastapi）、<code>.env.example</code>、<code>scripts/run_batch_judge.{sh,ps1}</code>、<code>examples/batch_judge/sample_data/</code>、<code>BATCH_JUDGE.md</code>；<code>eval/metrics/__init__.py</code> 懒加载 deepeval metric。</td></tr>
+  <tr><td><code>4d0ba91</code></td><td>batch judge-only 框架</td><td>新增 <code>eval/batch_judge.py</code>（多候选文件批量直评，脱敏、并发、leaderboard/summary/progress、resumable、dry-run）+ gold 审计。</td></tr>
+  <tr><td><code>0586924</code></td><td>UI 10 列对齐</td><td>插入 Hit 列后重排 leaderboard 的 nth-child CSS（9→10 列）+ 修 rubric 面板（weights→满分）。</td></tr>
+  <tr><td><code>b5ba126</code></td><td>2 维闭合评分 + Hit</td><td>闭合 rubric 定为 semantic 67 + acceptability 33 = 100；新增 Hit 命中率指标。</td></tr>
+  <tr><td><code>2f2c3d4</code>/<code>3ddbd80</code></td><td>简化候选/维度</td><td>候选简化为 <code>{rank, question}</code>；去掉 data_grounding 维度。</td></tr>
+  <tr><td><code>afbd162</code></td><td>judge 默认模型</td><td>默认 judge 改 <code>gpt-5.5-high</code>（Opus 4.7 在病毒学 prompt 上被内容过滤）。</td></tr>
+  <tr><td><code>b8cd7a3</code>/<code>ed46e95</code></td><td>脱敏修复</td><td>filename_map.json 移出 raw_no_name/；递归展开嵌套压缩包堵住文件名泄漏。</td></tr>
+  <tr><td><code>c2c82ed</code>/<code>32c49df</code></td><td>gateway/路由</td><td>judge 在 gateway content_filter 时快速失败；agent 经 gateway 路由（无本地 CLI）。</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="files">4. 文件地图</h2>
+
+<h3>后端 — 评测核心 <span class="filetag">eval/</span></h3>
+<table>
+  <tr><th>文件</th><th>作用</th></tr>
+  <tr><td><code>eval/metrics/gold_rubric_metric.py</code></td><td><strong>闭合 rubric</strong>：DIMENSION_MAX/anchors/judge prompt、<code>score_against_gold()</code>、<code>GoldRubricResult</code> 数据类（含 <code>rubric_kind</code> 字段，默认 "closed"）、<code>rubric_specification()</code>。</td></tr>
+  <tr><td><code>eval/metrics/open_rubric_metric.py</code></td><td><strong>开放 rubric</strong>（新）：OPEN_DIMENSION_MAX(50/50)/anchors、含 DATA CONTEXT 的 judge prompt、<code>score_open_question()</code>（复用 GoldRubricResult，标 rubric_kind="open"）、<code>open_rubric_specification()</code>。</td></tr>
+  <tr><td><code>eval/metrics/judge_llm.py</code></td><td><code>JudgeLLM.chat_json(system, user)</code> — judge 调用 + 重试 + content_filter 处理。</td></tr>
+  <tr><td><code>eval/metrics/__init__.py</code></td><td>急切导出无 deepeval 的符号（JudgeLLM/score_against_gold/score_open_question/open_rubric_specification）；用 PEP 562 <code>__getattr__</code> <strong>懒加载</strong> deepeval 支撑的 RubricDimensionMetric/RubricCompositeMetric。</td></tr>
+  <tr><td><code>eval/metrics/rubric_{dimension,composite}_metric.py</code></td><td>遗留 deepeval BaseMetric（当前评分路径不用，懒加载）。</td></tr>
+  <tr><td><code>eval/batch_judge.py</code></td><td><strong>无头批量 judge-only CLI</strong>：脱敏→校验→并发评分→open 路由→leaderboard.json/summary.md/progress.json。resumable、dry-run、strict。</td></tr>
+  <tr><td><code>eval/config.yaml</code></td><td>judge 配置：默认 <code>gpt-5.5-high</code>，<code>base_url=http://35.220.164.252:3888/v1</code>，<code>api_key_env=NEWAPI_KEY</code>（变量名，非密钥），threshold 0.6；<code>judge_options</code> 列可选模型。</td></tr>
+  <tr><td><code>eval/agents/</code></td><td>agent 适配器。注册表 id：<code>claude-code-opus-4-7, claude-code-sonnet-4-6, deepseek-v4-pro, gemini-2.5-flash, gemini-3.1-pro, glm-5, gpt-5.5-high, intern-s1, intern-s1-pro, intern-s2-preview</code>。</td></tr>
+  <tr><td><code>eval/rejudge.py / run_*.py</code></td><td>历史结果重评 / 流水线 / 系统化跑批脚本。</td></tr>
+</table>
+
+<h3>后端 — Web <span class="filetag">webapp/</span></h3>
+<table>
+  <tr><th>文件</th><th>作用</th></tr>
+  <tr><td><code>webapp/server.py</code></td><td>FastAPI 应用。关键端点 <code>/api/rubric_definitions</code>（顶层闭合 spec + 嵌套 <code>open</code>）、<code>/api/runs</code>、<code>/api/uploads</code>、<code>/api/agents</code>、<code>/api/judge_info</code>、SSE events。</td></tr>
+  <tr><td><code>webapp/pipeline_runner.py</code></td><td>编排核心。<code>hydrate_workspace</code>（脱敏+info.json）、<code>_desensitize_data</code>、<code>_pass_at_k_stats</code>、<strong>新增</strong> <code>build_data_digest</code>（喂开放 judge 的有界数据预览）、<code>rescore_open_if_missed</code>（按 Hit 整集路由）。两条评分路径：<code>_run_one_agent</code> 与 <code>_run_judge_only</code>。</td></tr>
+  <tr><td><code>webapp/validator.py / gold_validator.py</code></td><td>data zip 与 gold JSON 校验/归一化。</td></tr>
+  <tr><td><code>webapp/static/index.html</code></td><td>SPA 结构。Step3 含闭合 + 开放两个 rubric 面板（<code>#rubric-spec</code> / <code>#rubric-spec-open</code>）；leaderboard 10 列表头。</td></tr>
+  <tr><td><code>webapp/static/app.js</code></td><td>控制器。<code>renderRubricSpec</code>+<code>_rubricCards</code>（渲染两套 rubric）、<code>renderLeaderboard</code>（含闭合/开放徽章）、CSV 导出（含 rubric_kind/data_match/soundness 列）。</td></tr>
+  <tr><td><code>webapp/static/charts.js</code></td><td>Chart.js 雷达/分维/时间图。固定闭合 2 维；<strong>open 行被过滤</strong>不参与雷达/分维（维度不同，避免误显示 0）。</td></tr>
+  <tr><td><code>webapp/static/style.css</code></td><td>样式。leaderboard 按列 nth-child(1..10)；rubric 卡片/锚点；<code>.rubric-badge.rb-open/.rb-closed</code>。</td></tr>
+</table>
+
+<h3>分发 / 文档 / 样例</h3>
+<table>
+  <tr><th>文件</th><th>作用</th></tr>
+  <tr><td><code>BATCH_JUDGE.md</code></td><td>面向外部用户的 batch CLI 交付指南（输入格式/安装/dry-run/真跑/产出/FAQ）。</td></tr>
+  <tr><td><code>scripts/run_batch_judge.{sh,ps1}</code></td><td>一键 bootstrap：建 venv→装 requirements-batch→生成 .env→对样例 dry-run→打印真跑命令。</td></tr>
+  <tr><td><code>eval/requirements-batch.txt</code></td><td>切薄 headless 依赖（pydantic/pyyaml/dotenv/openai/anthropic；<strong>无</strong> deepeval/fastapi）。</td></tr>
+  <tr><td><code>.env.example</code></td><td><code>NEWAPI_KEY</code> 模板（gitignore 用 <code>!.env.example</code> 负向规则放行）。</td></tr>
+  <tr><td><code>examples/batch_judge/</code></td><td>样例：gold.json + 3 个候选 + <code>sample_data/</code>（微型committed数据，使 dry-run 自洽，因为 <code>data/</code> 被 gitignore）。</td></tr>
+  <tr><td><code>scripts/desensitize_raw_dirs.py</code></td><td>批量把 data/&lt;qset&gt;/raw/ 脱敏成 raw_no_name/。</td></tr>
+  <tr><td><code>GOLD_QUESTION_AUDIT.md / README.md</code></td><td>gold 审计说明 / 项目总览。</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="run">5. 如何运行</h2>
+
+<h4>网页端（交互评测）</h4>
+<pre>cd c:/Users/lk/Desktop/Virus
+PYTHONUTF8=1 .venv-win/Scripts/python.exe -m uvicorn webapp.server:app --host 127.0.0.1 --port 8000
+# 浏览器开 http://127.0.0.1:8000 ；改静态文件后 Ctrl+Shift+R 硬刷即可（无需重启）；改 .py 需重启</pre>
+
+<h4>批量 judge-only（无头 CLI）</h4>
+<pre># dry-run（不花 token，验证脱敏+校验+链路）
+PYTHONUTF8=1 .venv-win/Scripts/python.exe -m eval.batch_judge \
+  --data examples/batch_judge/sample_data --gold examples/batch_judge/gold.json \
+  --candidates examples/batch_judge/candidates --out batch_runs/_smoke --judge gpt-5.5-high --dry-run
+
+# 真跑（需 .env 里有有效 NEWAPI_KEY）：换成你自己的 data/gold/candidates，去掉 --dry-run</pre>
+<p class="muted">外部分发场景直接跑 <code>scripts/run_batch_judge.ps1</code>（Win）或 <code>bash scripts/run_batch_judge.sh</code>（*nix）。</p>
+
+<!-- ============================================================ -->
+<h2 id="constraints">6. 硬约束（动手前必读）</h2>
+<div class="danger">
+  <strong>密钥安全</strong>：API token（<code>NEWAPI_KEY</code> 等）只能存在 <code>.env</code>（已 gitignore），<strong>绝不</strong>写进源码或 config.yaml。config 里 <code>api_key_env</code> 存的是<strong>变量名</strong>不是密钥。曾在明文出现过的 token 应由用户轮换。
+</div>
+<div class="danger">
+  <strong>脱敏不变量</strong>：<code>filename_map.json</code> 永远 judge-only（qset 根），不得进 agent 可见目录。见 §2.3。
+</div>
+<div class="note">
+  <strong>Windows 环境</strong>：
+  <ul class="tight">
+    <li>所有 python 调用前置 <code>PYTHONUTF8=1</code>；用 <code>.venv-win/Scripts/python.exe</code>（基础解释器 Python 3.11；PATH 上的 <code>python</code> 是 Windows Store 占位 stub，不可用）。</li>
+    <li>bash 是 Git Bash（Unix 语法，<code>/dev/null</code>、正斜杠）。</li>
+    <li>git 偶发 <code>.git/index.lock: Invalid argument</code>（IDE/fsmonitor 持锁）：在<strong>同一条命令</strong>里 <code>rm -f .git/index.lock; git -c core.fsmonitor=false ...</code>。</li>
+    <li>本机 git 操作需禁用 sandbox（<code>dangerouslyDisableSandbox: true</code>）。</li>
+  </ul>
+</div>
+<div class="ok">
+  <strong>同步目标</strong>：推送到 <code>DrugD/Virus-Question-Judge</code> 的 <code>sync-test</code> 分支。提交信息以 <code>Co-Authored-By: Claude ...</code> 结尾。提交时只 stage 自己改的文件——<code>.claude/settings.json</code> 的改动是 harness 产生的，不要带上。
+</div>
+
+<!-- ============================================================ -->
+<h2 id="pending">7. 待办与已知限制</h2>
+<table>
+  <tr><th>项</th><th>状态</th><th>说明</th></tr>
+  <tr><td>开放 rubric 真 judge 验证</td><td><span class="pill todo">未做</span></td>
+    <td>当前仅用 fake judge 验证了整集路由与算分；<strong>尚未</strong>用真实 LLM 跑过开放 judge prompt，确认它稳定返回枚举分值 JSON。建议：造一组"全部偏离 gold"的候选跑一次 batch（需有效 NEWAPI_KEY）。</td></tr>
+  <tr><td>混合 rubric 雷达/分维图</td><td><span class="pill todo">受限</span></td>
+    <td>雷达/分维图固定闭合 2 维，open 行被过滤。彻底方案需按 rubric_kind 分组绘制或归一化两套维度。</td></tr>
+  <tr><td>闭合主流程</td><td><span class="pill done">稳定</span></td><td>Hit=✓ 的集合完全走原路径，open 改动对其零影响（回归安全）。</td></tr>
+  <tr><td>Todo 1 / Todo 2</td><td><span class="pill done">完成</span></td><td>均已实现、验证、推送 sync-test。</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="handoff">8. 给下一个 LLM 的话</h2>
+<div class="card">
+  <ul class="tight">
+    <li><strong>改 rubric 分数/锚点/措辞</strong>：只动 <code>eval/metrics/{gold,open}_rubric_metric.py</code> 顶部常量；judge prompt 与 UI 自动同步（UI 经 <code>/api/rubric_definitions</code> 取）。</li>
+    <li><strong>新加一条评分路径</strong>：注意有<strong>三处</strong>调用 <code>score_against_gold</code> + <code>rescore_open_if_missed</code> —— <code>_run_one_agent</code>、<code>_run_judge_only</code>（均在 pipeline_runner）、<code>score_candidate</code>（batch_judge）。改动要三处一致。</li>
+    <li><strong>结果行字段</strong>：闭合与开放都复用 <code>GoldRubricResult</code>，靠 <code>rubric_kind</code> 区分；<code>scores</code> 的 key 随 rubric 变（semantic_alignment/acceptability vs data_match/soundness）——前端取分时要看 rubric_kind。</li>
+    <li><strong>验证习惯</strong>：能用 <code>--dry-run</code> 和 fake judge 单测就别花 token；真 judge 跑批前先 dry-run 确认脱敏。</li>
+    <li><strong>动手前</strong>：确认是否需要进 worktree / 是否要推 sync-test；§6 的硬约束逐条遵守。</li>
+    <li><strong>更新本文件</strong>：完成里程碑后，往 §3 版本表加一行，并在相关章节增量更新；保持"读完即可接手"。</li>
+  </ul>
+</div>
+
+<p class="sub" style="margin-top:30px;">— 由 Claude (Opus 4.8) 在 Claude Code 中生成；对应 <code>sync-test@3eb0c66</code>。</p>
+
+</div>
+</body>
+</html>
