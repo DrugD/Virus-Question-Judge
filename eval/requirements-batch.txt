@@ -1,0 +1,14 @@
+# Minimal headless dependencies for the only-Question batch judge.
+#
+#   python -m eval.batch_judge ...
+#
+# This is the slim counterpart of eval/requirements.txt: it OMITS deepeval,
+# fastapi, uvicorn and python-multipart, none of which the batch judge needs
+# (the gold-rubric scoring path is deepeval-free; see eval/metrics/__init__.py).
+# Install this when you only want to run batch judge-only evaluations.
+
+pydantic>=2.6
+pyyaml>=6.0
+python-dotenv>=1.0
+openai>=1.40.0
+anthropic>=0.30.0

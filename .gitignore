@@ -40,6 +40,7 @@ __pycache__/
 # Secrets (do NOT commit)
 .env
 .env.*
+!.env.example
 
 # Virtual environment (too large / machine-specific)
 .venv/

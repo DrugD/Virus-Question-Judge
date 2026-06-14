@@ -1,0 +1,10 @@
+{
+  "study": "synthetic batch-judge demo (not real data)",
+  "samples": [
+    {"id": "liver_A", "tissue": "liver", "host": "rodent"},
+    {"id": "liver_B", "tissue": "liver", "host": "rodent"},
+    {"id": "gut_A", "tissue": "gut", "host": "rodent"},
+    {"id": "gut_B", "tissue": "gut", "host": "rodent"}
+  ],
+  "note": "Tiny placeholder so `--dry-run` can exercise desensitization end-to-end without shipping real (gitignored) data."
+}
