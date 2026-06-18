@@ -1,4 +1,4 @@
-/* Charts module — adapted to gold-rubric 2-dimension (semantic_alignment + acceptability) result schema.
+/* Charts module — adapted to gold-rubric single-dimension (semantic_alignment) result schema.
    Exposes:
      Charts.renderAll(rows, radarId, barsId, timingId)
      Charts.renderRadar(rows, canvasId)
@@ -21,16 +21,14 @@ window.Charts = (function () {
     { fill: "rgba(132,204,22,0.18)",  stroke: "rgba(132,204,22,1)"  },
     { fill: "rgba(160,160,200,0.18)", stroke: "rgba(160,160,200,1)" },
   ];
-  const DIMS = ["semantic_alignment", "acceptability"];
+  const DIMS = ["semantic_alignment"];
   const DIM_LABEL = {
     semantic_alignment: ["语义对齐"],
-    acceptability:      ["可接受度"],
   };
   // Per-dimension max points (must mirror gold_rubric_metric.DIMENSION_MAX).
   // Scores are normalised to 0..1 (score / max) so charts share one scale.
   const DIM_MAX = {
-    semantic_alignment: 67,
-    acceptability:      33,
+    semantic_alignment: 100,
   };
   const _norm = (r, k) => (r.scores?.[k] ?? 0) / (DIM_MAX[k] || 1);
 

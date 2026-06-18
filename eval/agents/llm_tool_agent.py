@@ -723,9 +723,11 @@ GPT_5_5_HIGH_TOOL   = _make("gpt-5.5-high",           "gpt-5.5",             max
 CLAUDE_OPUS_47_TOOL = _make("claude-code-opus-4-7",   "claude-opus-4-7",     max_tokens=4096, default_temperature=None)
 CLAUDE_SON_46_TOOL  = _make("claude-code-sonnet-4-6", "claude-sonnet-4-6",   max_tokens=4096, default_temperature=None)
 GEMINI_PRO_TOOL = _make("gemini-3.1-pro",    "gemini-3.1-pro-preview",       max_tokens=4096)
-GEMINI_FLAS_TOOL = _make("gemini-2.5-flash", "gemini-2.5-flash",             max_tokens=4096)
+GEMINI_FLAS_TOOL = _make("gemini-3.5-flash", "gemini-3.5-flash",             max_tokens=4096)
 GLM_5_TOOL      = _make("glm-5",             "glm-5",                         max_tokens=4096)
 DEEPSEEK_V4_PRO_TOOL = _make("deepseek-v4-pro", "deepseek-v4-pro",           max_tokens=4096)
+MINIMAX_M3_TOOL = _make("minimax-m3",        "MiniMax-M3",                    max_tokens=4096)
+QWEN37_MAX_TOOL = _make("qwen3.7-max",       "qwen3.7-max",                   max_tokens=4096)
 INTERN_VL3_14B_TOOL = _make("internvl3-14b", "opengvlab/internvl3-14b",       max_tokens=4096)
 INTERN_VL3_2B_TOOL  = _make("internvl3-2b",  "opengvlab/internvl3-2b",        max_tokens=4096)
 

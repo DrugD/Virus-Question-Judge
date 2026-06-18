@@ -1,10 +1,9 @@
-"""Open-question rubric — used when an agent's whole candidate set MISSES gold.
+"""Open-question rubric — used per-question when a candidate misses gold.
 
-When none of an agent's candidates hit any gold question (set-level Hit = ✗,
-i.e. ``pass_count == 0`` against the closed threshold), the questions are not
-"failed closed attempts" to be zeroed — they are open / exploratory proposals
-that deserve to be judged on their own merits. This module scores such a
-candidate on two dimensions, relative to the (desensitized) original data:
+When an individual candidate question does not match any gold question
+(gold_matched=False), it is scored with the open rubric on its own merits
+rather than receiving a zero. This module scores such a candidate on two
+dimensions, relative to the (desensitized) original data:
 
   data_match — does the proposed question actually fit THIS dataset?  (max 50)
   soundness  — is it a non-trivial, logically sound, testable question? (max 50)

@@ -280,7 +280,7 @@ async def score_candidate(
 
     started = time.time()
     candidate_results = await asyncio.gather(*[_score_one(c) for c in candidates])
-    # set-level routing: if the whole set missed gold (Hit=✗), re-score open.
+    # per-question routing: closed-failed questions get open rubric re-score.
     candidate_results, rubric_kind = await rescore_open_if_missed(
         judge, candidates, candidate_results, data_digest, threshold)
     judge_wall = time.time() - started

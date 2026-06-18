@@ -22,19 +22,16 @@ from .judge_llm import JudgeLLM
 # Closed-question rubric (candidate has a matching GOLD question).
 #
 # Two dimensions, point-based (NOT 0..5). User-designed anchors, rescaled so the
-# two maxima sum to 100 while preserving the original 2:1 ratio (40:20 → 67:33)
-# and the original 4-level structure.
+# Single dimension: semantic_alignment — max 100.
 #
-#   1.1 语义对齐 / semantic_alignment        — max 67
-#   1.2 可接受度与错误控制 / acceptability    — max 33
+#   1.1 语义对齐 / semantic_alignment        — max 100
 #
-# composite_score (0..1) = (semantic + acceptability) / 100.
+# composite_score (0..1) = semantic_alignment / 100.
 # =============================================================================
 
-# Max points per dimension (these sum to 100).
+# Max points per dimension (single dimension, sums to 100).
 DIMENSION_MAX: dict[str, int] = {
-    "semantic_alignment": 67,
-    "acceptability":      33,
+    "semantic_alignment": 100,
 }
 # Back-compat alias: some downstream code references WEIGHTS. It now holds the
 # per-dimension MAX POINTS (not 0..1 fractions). composite is raw/100.
@@ -44,33 +41,22 @@ SECONDARY_PENALTY = 0.85
 
 DIMENSION_LABELS: dict[str, str] = {
     "semantic_alignment": "语义对齐 / Semantic alignment",
-    "acceptability":      "可接受度与错误控制 / Acceptability & error control",
 }
 
 DIMENSION_DEFS: dict[str, str] = {
     "semantic_alignment":
         "Does the candidate question reconstruct the matched gold question's "
         "research object, scientific goal, and the relationship it asks about?",
-    "acceptability":
-        "Is the candidate a reasonable rewrite / acceptable_variant of the gold "
-        "(no unsupported extrapolation), or has it degraded toward an "
-        "unacceptable_variant / hallucination / paper-or-rawdata-unsupported content?",
 }
 
 # Allowed integer point values per dimension, each with its anchor description.
 # The judge MUST output one of these exact values per dimension.
 DIMENSION_ANCHORS: dict[str, dict[int, str]] = {
     "semantic_alignment": {
-        67: "生成问题与 gold question 在研究对象、科学目标和问题关系上基本等价。",
-        42: "大方向正确，但问题关系或科学目标有明显遗漏。",
-        17: "只识别到论文主题，未准确还原核心科学问题。",
-        0:  "研究对象或任务类型错误。",
-    },
-    "acceptability": {
-        33: "属于 gold question 的合理改写或 acceptable variant，没有明显无依据扩展。",
-        20: "部分合理，但问题过泛、过细，或科学问题层级不够准确。",
-        8:  "接近 unacceptable variant，虽然相关但明显退化。",
-        0:  "完全无关、幻觉，或引入论文/Raw data 不支持的内容。",
+        100: "生成问题与 gold question 在研究对象、科学目标和问题关系上基本等价。",
+        63:  "大方向正确，但问题关系或科学目标有明显遗漏。",
+        25:  "只识别到论文主题，未准确还原核心科学问题。",
+        0:   "研究对象或任务类型错误。",
     },
 }
 
@@ -127,9 +113,9 @@ Process:
      semantics, not by keyword overlap alone). Output its `gold_question_id`.
      If NO gold question shares the candidate's research object / task at all,
      set `gold_matched` to false and give semantic_alignment = 0.
-  2. Score 2 dimensions. For EACH dimension you MUST output exactly one of the
-     allowed point values below (no other numbers), plus a one-sentence
-     reasoning line citing concrete elements from the candidate's question.
+  2. Score 1 dimension. You MUST output exactly one of the allowed point values
+     below (no other numbers), plus a one-sentence reasoning line citing
+     concrete elements from the candidate's question.
   3. Identify which of the matched gold's `acceptable_variants` (if any) the
      candidate is closest to, and which `unacceptable_variants` (if any) it
      dangerously resembles. Quote the exact variant text.
@@ -146,12 +132,10 @@ Reply with ONLY this JSON object, no prose outside it:
   "gold_matched": true|false,
   "matched_centrality": "primary"|"secondary"|"unknown",
   "scores": {{
-    "semantic_alignment": <one of 67|42|17|0>,
-    "acceptability":      <one of 33|20|8|0>
+    "semantic_alignment": <one of 100|63|25|0>
   }},
   "per_dimension_reasoning": {{
-    "semantic_alignment": "<one sentence with concrete citation>",
-    "acceptability":      "<one sentence>"
+    "semantic_alignment": "<one sentence with concrete citation>"
   }},
   "covered_required_elements":  [...],
   "missing_required_elements":  [...],

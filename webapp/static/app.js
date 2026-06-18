@@ -995,7 +995,7 @@ function _scoreBadges(r) {
 
 function renderQuestions(grid, rows) {
   const dims = Object.keys(state.rubricSpec?.weights || {
-    semantic_alignment: 1, acceptability: 1,
+    semantic_alignment: 1,
   });
   const dimLabels = state.rubricSpec?.dimension_labels || {};
   grid.innerHTML = rows.map(r => {
@@ -1033,6 +1033,18 @@ function _renderCandidateBlock(c, agentRow, dims, dimLabels) {
   const passed = !!c.passed;
   const passCls = passed ? "pass-true" : "pass-false";
   const isWinner = c.rank === agentRow.best_candidate_rank;
+  const qRubricKind = c.rubric_kind || "closed";
+
+  // Pick dimensions based on THIS question's rubric_kind (not the agent-level one).
+  // closed → semantic_alignment; open → data_match + soundness.
+  const openDimLabels = {
+    data_match: "数据匹配度 / Data match",
+    soundness: "科学合理性 / Scientific soundness",
+  };
+  const qDims = qRubricKind === "open"
+    ? ["data_match", "soundness"]
+    : dims;
+  const qDimLabels = qRubricKind === "open" ? openDimLabels : dimLabels;
 
   // Per-candidate reasoning. Fall back to the agent-level (winner-only)
   // reasoning ONLY for the winner — old runs (pre per-candidate persistence)
@@ -1051,9 +1063,9 @@ function _renderCandidateBlock(c, agentRow, dims, dimLabels) {
     || (isWinner ? agentRow.rationale : null);
   const reasoningMissing = !hasOwnReasoning && !isWinner;
 
-  const reasoningBlock = dims.map(d => {
+  const reasoningBlock = qDims.map(d => {
     const score = sc[d] ?? 0;
-    const label = dimLabels[d] || d;
+    const label = qDimLabels[d] || d;
     const reason = perDim[d] || "—";
     return `
       <div class="dim-row">
@@ -1083,12 +1095,16 @@ function _renderCandidateBlock(c, agentRow, dims, dimLabels) {
       <div class="cand-head">
         <span class="rank-pill">rank ${c.rank}${isWinner ? ' · winner' : ''}</span>
         <span class="cand-pass ${passCls}">${passed ? '✓ pass' : '✗ fail'}</span>
+        <span class="rubric-badge rb-${qRubricKind}">${qRubricKind}</span>
         <span class="cand-metric"><span class="k">Composite</span><span class="v">${(c.composite_score ?? 0).toFixed(3)}</span></span>
         <span class="cand-metric"><span class="k">Raw</span><span class="v">${(c.composite_score_raw ?? 0).toFixed(2)} / 5</span></span>
         <span class="cand-metric"><span class="k">Matched</span><span class="v"><code>${escapeHtml(c.matched_gold_id || "-")}</code> <span class="cent ${c.matched_centrality}">${escapeHtml(c.matched_centrality || "-")}</span></span></span>
       </div>
       <p class="q">${escapeHtml(c.question || "")}</p>
-      ${matchedGold ? `<div class="muted" style="font-size:11px;margin:-4px 0 6px;">matched gold: ${escapeHtml(matchedGold)}</div>` : ""}
+      ${qRubricKind === "open"
+        ? `<div class="muted" style="font-size:11px;margin:-4px 0 6px;">未命中 gold question → 按开放 rubric (data_match + soundness) 评分</div>`
+        : (matchedGold ? `<div class="muted" style="font-size:11px;margin:-4px 0 6px;">matched gold: ${escapeHtml(matchedGold)}</div>` : "")
+      }
       <div class="judge-detail">
         <h5>per-dimension reasoning${reasoningMissing ? ' <span class="muted" style="font-weight:400;font-size:10.5px;">(旧版本评测未存储非冠军 candidate 的理由 · 重新评测可填充)</span>' : ''}</h5>
         ${reasoningBlock}
@@ -1493,7 +1509,7 @@ function _runCsv(rows, meta) {
     "candidate_rank", "candidate_question",
     "composite_score", "composite_score_raw", "passed",
     "matched_gold_id", "matched_centrality", "gold_matched",
-    "semantic_alignment", "acceptability",
+    "semantic_alignment",
     "is_winner",
     // open-rubric fields (present only when a set missed gold):
     "rubric_kind", "data_match", "soundness",
@@ -1528,7 +1544,7 @@ function _runCsv(rows, meta) {
         c.rank, c.question,
         c.composite_score, c.composite_score_raw, c.passed,
         c.matched_gold_id, c.matched_centrality, c.gold_matched,
-        c.scores?.semantic_alignment, c.scores?.acceptability,
+        c.scores?.semantic_alignment,
         (c.rank === winner) ? "true" : "false",
         c.rubric_kind || "closed", c.scores?.data_match, c.scores?.soundness,
       ].map(_csvCell).join(","));

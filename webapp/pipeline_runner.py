@@ -170,44 +170,42 @@ def _pass_at_k_stats(
 ) -> dict[str, Any]:
     """Compute Pass@1 / Pass@5 / first-hit-rank / primary-vs-secondary breakdown.
 
-    Pass@1 = 1.0 (100%) if rank-1 candidate passes else 0.0.
+    Pass@1 / Pass@5 / pass_count consider ALL rubric types (closed + open).
 
-    Pass@5 = COUNT-based score, normalised to [0, 1]:
-        pass_at_5_value = pass_count / 5
-    i.e. each of the 5 candidates that passes contributes a flat +0.2, with NO
-    rank weighting — all five questions right → 1.0, all five wrong → 0.0, one
-    right → 0.2, and so on. Rank position no longer changes the score; only how
-    many of the five candidates pass.
+    Hit only counts closed-rubric passes: a question whose final result has
+    rubric_kind="open" does NOT count toward Hit, even if it passed the open
+    threshold. Hit strictly measures alignment with gold questions.
 
-    Examples:
-        0 of 5 pass  → 0.0
-        1 of 5 pass  → 0.2
-        3 of 5 pass  → 0.6
-        all 5 pass   → 1.0
-
-    first_hit_rank = lowest rank whose candidate passed (None if no hit).
-    primary_hit_count = passed-and-matched-primary; secondary_hit_count likewise.
+    first_hit_rank = lowest rank whose candidate passed via closed rubric.
+    primary_hit_count = closed-passed and matched primary gold.
     """
     pairs = sorted(zip(candidates, candidate_results), key=lambda p: p[0].get("rank", 999))
+
+    # pass_count / pass_at_1 consider ALL rubric types (closed + open)
     pass_at_1 = bool(pairs and pairs[0][1].passed)
-    first_hit_rank = next((c.get("rank") for c, r in pairs if r.passed), None)
+    pass_count = sum(1 for _, r in pairs if r.passed)
+
+    def _is_closed_pass(r: Any) -> bool:
+        """True if this result passed via the closed rubric (actually hit gold)."""
+        return r.passed and getattr(r, "rubric_kind", "closed") != "open"
+
+    closed_hit_count = sum(1 for _, r in pairs if _is_closed_pass(r))
+    first_hit_rank = next(
+        (c.get("rank") for c, r in pairs if _is_closed_pass(r)),
+        None,
+    )
     primary_hits = sum(
-        1 for _, r in pairs if r.passed and r.matched_centrality == "primary"
+        1 for _, r in pairs
+        if _is_closed_pass(r) and r.matched_centrality == "primary"
     )
     secondary_hits = sum(
-        1 for _, r in pairs if r.passed and r.matched_centrality == "secondary"
+        1 for _, r in pairs
+        if _is_closed_pass(r) and r.matched_centrality == "secondary"
     )
-    pass_count = sum(1 for _, r in pairs if r.passed)
     k = len(pairs)
 
-    # Pass@5 count-based score: each passing candidate adds a flat +0.2 (= 1/5),
-    # independent of its rank. Denominator is fixed at 5 so the score is always
-    # on the same scale even if an agent emits fewer than 5 candidates (the
-    # schema validator enforces k=5 at the contract layer anyway).
     pass_at_5_value = min(pass_count, 5) / 5.0  # 0.0 .. 1.0
 
-    # Agent-level averages across the 5 candidates — the leaderboard headline
-    # number when you want a single "how good is this agent overall" score.
     composites = [r.composite_score for _, r in pairs if r.composite_score is not None]
     raws = [r.composite_score_raw for _, r in pairs if r.composite_score_raw is not None]
     avg_composite = (sum(composites) / len(composites)) if composites else 0.0
@@ -219,11 +217,9 @@ def _pass_at_k_stats(
         "pass_at_1_value": 1.0 if pass_at_1 else 0.0,
         "pass_at_5": pass_count > 0,
         "pass_at_5_value": pass_at_5_value,
-        # hit = did this agent land at least ONE passing question among its 5?
-        # (run-level boolean; aggregate "hit rate" = mean of `hit` across runs.)
-        "hit": pass_count >= 1,
-        "hit_value": 1.0 if pass_count >= 1 else 0.0,
-        # legacy aliases — kept so older clients / CSVs don't break
+        # hit = at least ONE closed-rubric (gold-matched) pass among 5?
+        "hit": closed_hit_count >= 1,
+        "hit_value": 1.0 if closed_hit_count >= 1 else 0.0,
         "pass_at_k": pass_count > 0,
         "pass_at_k_value": pass_at_5_value,
         "pass_count": pass_count,
@@ -300,20 +296,46 @@ async def rescore_open_if_missed(
     data_digest: str,
     threshold: float,
 ) -> tuple[list[Any], str]:
-    """Set-level rubric routing.
+    """Per-question rubric routing.
 
-    If ANY candidate passed the closed threshold (set-level Hit = ✓), keep the
-    closed results unchanged → ("closed"). Otherwise the whole set MISSED gold
-    (Hit = ✗): re-score every candidate with the OPEN rubric (data_match +
-    soundness, relative to the data) and return those → ("open").
+    Each candidate is individually evaluated:
+      - closed passed (composite >= threshold) → keep the closed result (hit gold)
+      - closed failed  → additionally score with OPEN rubric, take the HIGHER of
+        the two scores. The result is tagged rubric_kind="open" if the open score
+        wins, otherwise stays "closed".
+
+    Returns (final_results, rubric_kind) where rubric_kind is:
+      "closed" if ALL questions passed closed,
+      "open"   if ALL questions used open scores,
+      "mixed"  if some closed and some open.
     """
-    if any(getattr(r, "passed", False) for r in closed_results):
-        return closed_results, "closed"
+    final: list[Any] = list(closed_results)
+    failed_indices: list[int] = [
+        i for i, r in enumerate(closed_results) if not getattr(r, "passed", False)
+    ]
+
+    if not failed_indices:
+        return final, "closed"
+
+    # score the failed ones with open rubric
     open_results = await asyncio.gather(*[
-        asyncio.to_thread(score_open_question, judge, c, data_digest, threshold)
-        for c in candidates
+        asyncio.to_thread(score_open_question, judge, candidates[i], data_digest, threshold)
+        for i in failed_indices
     ])
-    return list(open_results), "open"
+
+    open_used = 0
+    for idx, open_r in zip(failed_indices, open_results):
+        closed_comp = getattr(closed_results[idx], "composite_score", 0) or 0
+        open_comp = getattr(open_r, "composite_score", 0) or 0
+        if open_comp > closed_comp:
+            final[idx] = open_r
+            open_used += 1
+
+    if open_used == 0:
+        return final, "closed"
+    if open_used == len(closed_results):
+        return final, "open"
+    return final, "mixed"
 
 
 @dataclass
@@ -720,8 +742,8 @@ class PipelineRunner:
             )
             for c in candidates
         ])
-        # set-level rubric routing: if the whole set missed gold (Hit=✗),
-        # re-score all candidates with the OPEN rubric instead of zeroing them.
+        # per-question rubric routing: each question that missed gold
+        # (gold_matched=False) gets re-scored with the OPEN rubric.
         data_digest = build_data_digest(Path(spec.workspace_root) / "data")
         candidate_results, rubric_kind = await rescore_open_if_missed(
             judge, candidates, candidate_results, data_digest, spec.threshold)
@@ -851,8 +873,7 @@ class PipelineRunner:
             )
             for c in candidates
         ])
-        # set-level rubric routing (same as the agent path): whole set missed
-        # gold → re-score with the OPEN rubric.
+        # per-question rubric routing: missed gold → open rubric.
         data_digest = build_data_digest(Path(spec.workspace_root) / "data")
         candidate_results, rubric_kind = await rescore_open_if_missed(
             judge, candidates, candidate_results, data_digest, spec.threshold)
